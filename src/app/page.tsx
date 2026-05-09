@@ -117,105 +117,6 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   );
 };
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md py-2 shadow-sm' : 'bg-transparent py-4'}`}>
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center group">
-          <img
-            src="/logo.png"
-            alt="Metro Retail Solutions Logo"
-            className={`h-20 md:h-32 w-auto transition-all duration-500 hover:scale-110 ${isScrolled ? 'h-16 md:h-24' : ''}`}
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = '/logo.png';
-            }}
-          />
-        </a>
-
-        {/* Contact Info Desktop */}
-        <div className={`hidden lg:flex items-center gap-8 xl:gap-12 ml-auto mr-12 text-[10px] xl:text-xs transition-colors ${isScrolled ? 'text-brand-dark' : 'text-white'}`}>
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Mail size={18} />
-            </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">EMAIL US ON</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">sales@metroretail.solutions</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Phone size={18} />
-            </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">WHATSAPPP ON</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Phone size={18} />
-            </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">CALL US</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">+971 25653070</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex items-center gap-6">
-          <button className="hidden md:block bg-brand-gold text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all shadow-lg active:scale-95 leading-none">
-            SPEAK TO OUR TEAM
-          </button>
-
-          <button className="flex flex-col gap-1.5 group cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            <div className={`w-10 h-0.5 transition-all group-hover:w-8 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-            <div className={`w-10 h-0.5 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-            <div className={`w-8 h-0.5 transition-all group-hover:w-10 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-brand-dark z-40 md:hidden flex flex-col items-center justify-center gap-12"
-          >
-            <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-10 right-10 text-white">
-              <X size={32} />
-            </button>
-            <div className="flex flex-col gap-8 text-center text-white">
-              <a href="#" className="text-4xl font-serif italic" onClick={() => setIsMobileMenuOpen(false)}>Expertise</a>
-              <a href="#projects" className="text-4xl font-serif italic" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</a>
-              <a href="#about" className="text-4xl font-serif italic" onClick={() => setIsMobileMenuOpen(false)}>Methods</a>
-              <a href="#contact" className="text-4xl font-serif italic" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
-            </div>
-          </motion.div>
-        )}
-
-      </AnimatePresence>
-    </nav>
-  );
-};
-
 const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -321,10 +222,10 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
 const AboutSection = () => {
   return (
     <section id="about" className="py-32 md:py-48 bg-white relative overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row items-center gap-20 lg:gap-32">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 justify-between">
           {/* Left Column: Editorial Content */}
-          <div className="lg:w-[55%] space-y-12">
+          <div className="lg:w-[40%] space-y-12">
             <div>
               <motion.span
                 initial={{ opacity: 0, y: -20 }}
@@ -391,14 +292,14 @@ const AboutSection = () => {
           </div>
 
           {/* Right Column: Image Composition */}
-          <div className="lg:w-[55%] flex items-start gap-6 md:gap-10">
+          <div className="lg:w-[55%] flex items-start gap-4 md:gap-6 mt-12 lg:mt-0">
             {/* Large Image */}
             <motion.div
               initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
               whileInView={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
               viewport={{ once: true }}
               transition={{ duration: 2, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex-1 relative aspect-[3/4] overflow-hidden rounded-sm shadow-2xl"
+              className="flex-1 relative aspect-[4/5] overflow-hidden rounded shadow-2xl"
             >
               <img
                 src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
@@ -413,7 +314,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
               viewport={{ once: true }}
               transition={{ duration: 2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="w-1/3 relative aspect-[3/4] overflow-hidden rounded-sm shadow-xl"
+              className="w-[45%] relative aspect-[4/5] overflow-hidden rounded shadow-xl translate-y-12"
             >
               <img
                 src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=2070&auto=format&fit=crop"
@@ -1335,7 +1236,6 @@ export default function Page() {
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 1 }}
       >
-        <Navbar />
         <Hero isLoaded={!isLoading} />
 
         {/* Content Wrapper for Sticky Reveal */}

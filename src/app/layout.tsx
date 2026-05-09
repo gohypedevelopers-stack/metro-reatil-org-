@@ -17,6 +17,7 @@ const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "700"], variable: "-
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: ["400"], variable: "--font-great-vibes" });
 
 import SmoothScroll from "../components/SmoothScroll";
+import { Navbar } from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "Metro Retail Solutions | Premium Interior Design & Fit-out",
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} antialiased`} suppressHydrationWarning>
         <SmoothScroll>
+          <Navbar />
           {children}
         </SmoothScroll>
       </body>
