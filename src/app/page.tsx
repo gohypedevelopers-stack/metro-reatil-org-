@@ -341,22 +341,25 @@ const AboutSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="text-brand-dark select-none mb-6 leading-[0.85]"
+                className="select-none mb-6 leading-[0.85]"
               >
                 <div
                   className="text-4xl md:text-6xl uppercase tracking-[0.05em] whitespace-nowrap"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
-                  <span
-                    className="font-normal"
-                    style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-                  >
-                    D
+                  <span className="text-brand-gold">
+                    <span
+                      className="font-normal"
+                      style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
+                    >
+                      D
+                    </span>
+                    esign
                   </span>
-                  esign with
+                  <span className="text-brand-dark"> with</span>
                 </div>
                 <div
-                  className="text-4xl md:text-6xl uppercase tracking-[0.05em] -mt-2 md:-mt-4"
+                  className="text-4xl md:text-6xl uppercase tracking-[0.05em] -mt-2 md:-mt-4 text-brand-dark"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   Intention
@@ -678,7 +681,7 @@ const SolutionsSection = () => {
   return (
     <section id="services" className="py-32 md:py-48 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-32 relative">
+        <div className="text-center mb-12 relative">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -686,9 +689,9 @@ const SolutionsSection = () => {
             className="inline-block"
           >
             <h2 className="relative text-brand-dark select-none leading-[0.85]">
-              {/* Animated "Tailored" */}
+              {/* Top Line: TAILORED (Gold) */}
               <div
-                className="text-4xl md:text-8xl uppercase tracking-[0.1em] whitespace-nowrap overflow-hidden flex justify-center"
+                className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {"TAILORED".split("").map((char, i) => (
@@ -698,17 +701,17 @@ const SolutionsSection = () => {
                       hidden: { y: "100%", opacity: 0 },
                       visible: { y: 0, opacity: 1 }
                     }}
-                    transition={{ duration: 0.8, delay: i * 0.05, ease: [0.215, 0.61, 0.355, 1] }}
+                    transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
                     className="inline-block"
                   >
-                    {char === " " ? "\u00A0" : char}
+                    {char}
                   </motion.span>
                 ))}
               </div>
 
-              {/* Animated "Solutions" */}
+              {/* Bottom Line: S (Cursive) + OLUTIONS (Black) */}
               <div
-                className="text-4xl md:text-8xl uppercase tracking-[0.1em] -mt-2 md:-mt-4 flex justify-center items-center"
+                className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 <motion.span
@@ -716,7 +719,7 @@ const SolutionsSection = () => {
                     hidden: { scale: 0, opacity: 0 },
                     visible: { scale: 1, opacity: 1 }
                   }}
-                  transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 1.2, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
                   className="font-normal"
                   style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
                 >
@@ -729,7 +732,7 @@ const SolutionsSection = () => {
                       hidden: { y: "100%", opacity: 0 },
                       visible: { y: 0, opacity: 1 }
                     }}
-                    transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                    transition={{ duration: 0.8, delay: 0.8 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
                     className="inline-block"
                   >
                     {char}
@@ -750,78 +753,158 @@ const SolutionsSection = () => {
   );
 };
 
+const ProjectItem = ({ project, index }: { project: any, index: number }) => {
+  const containerRef = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end center"]
+  });
+
+  // Balanced glide from off-screen into position
+  const xTranslate = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [index % 2 === 0 ? 600 : -600, 0]
+  );
+
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+
+  return (
+    <motion.div
+      ref={containerRef}
+      style={{ x: xTranslate, opacity }}
+      className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-32`}
+    >
+      {/* Image Side */}
+      <div className="w-full lg:w-7/12 relative group overflow-hidden rounded-sm shadow-2xl">
+        <div className="absolute inset-0 bg-brand-dark/20 group-hover:opacity-0 transition-opacity duration-700 z-10" />
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+          src={project.img}
+          alt={project.title}
+          className="w-full aspect-[16/10] object-cover"
+        />
+        {/* Floating Label */}
+        <div className="absolute top-8 left-8 z-20">
+          <span className="bg-white/90 backdrop-blur-md px-6 py-2 text-[10px] font-bold tracking-[0.3em] uppercase rounded-full">
+            {project.title.split("'")[0]}
+          </span>
+        </div>
+      </div>
+
+      {/* Text Side */}
+      <div className="w-full lg:w-5/12 flex flex-col items-start">
+        <span className="text-[100px] md:text-[160px] font-bold text-neutral-100/50 leading-none select-none">
+          {project.id}
+        </span>
+        <div className="relative -mt-12 md:-mt-24">
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-brand-dark mb-6 uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            {project.title}
+          </h3>
+          <p className="text-neutral-500 text-base md:text-lg leading-relaxed font-light max-w-md">
+            {project.desc}
+          </p>
+          <div className="pt-8">
+            <a href="#" className="inline-flex items-center gap-6 text-xs font-bold tracking-[0.3em] uppercase text-brand-gold group border-b border-brand-gold/20 pb-2 hover:border-brand-gold transition-all">
+              VIEW CASE STUDY
+              <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 const PortfolioSection = () => {
   const projects = [
     {
       id: "01",
       title: "ZINA'S LOUNGE",
       desc: "A boutique hospitality space designed with ontological precision, featuring bespoke lighting and material palettes that define a new standard in luxury.",
-      img: "https://images.unsplash.com/photo-1550966842-28c46522fc07?q=80&w=2071&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "02",
       title: "QUANTUM OFFICES",
       desc: "Transforming corporate environments into cognitive spaces that foster innovation and architectural synergy.",
-      img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop",
     },
     {
       id: "03",
       title: "THE ATRIUM CAFE",
       desc: "A fusion of traditional aesthetics and modern functionality, creating a harmonious environment for social interaction.",
-      img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2070&auto=format&fit=crop",
     }
   ];
 
   return (
-    <section id="projects" className="py-24 bg-white relative overflow-hidden">
+    <section id="projects" className="py-48 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="mb-20">
-          <span className="font-signature text-brand-gold text-5xl md:text-7xl block mb-2 opacity-80">
-            Selected
-          </span>
-          <h2 className="text-4xl md:text-7xl font-sans font-medium tracking-tight uppercase text-black leading-none">
-            PROJECTS
-          </h2>
+        <div className="text-center mb-48 relative">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            className="inline-block select-none leading-[0.85]"
+          >
+            {/* Top Line: S (Cursive) + ELECTED (Gold) */}
+            <div
+              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              <motion.span
+                variants={{
+                  hidden: { scale: 0, opacity: 0 },
+                  visible: { scale: 1, opacity: 1 }
+                }}
+                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="font-normal"
+                style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
+              >
+                S
+              </motion.span>
+              {"elected".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
+
+            {/* Bottom Line: PROJECTS (Black) */}
+            <div
+              className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {"PROJECTS".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
+          </motion.h2>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-64">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-24`}
-            >
-              {/* Image Side */}
-              <div className="w-full lg:w-7/12 relative group overflow-hidden">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="w-full aspect-[16/10] object-cover rounded-sm transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
-              </div>
-
-              {/* Text Side */}
-              <div className="w-full lg:w-5/12 flex flex-col items-start">
-                <span className="text-8xl md:text-[140px] font-sans font-thin text-black/5 leading-none mb-4 block select-none">
-                  {project.id}
-                </span>
-                <div className="relative -mt-12 md:-mt-20">
-                  <h3 className="text-3xl md:text-5xl font-sans font-bold tracking-tight text-black mb-6 uppercase">
-                    {project.title}
-                  </h3>
-                  <p className="text-brand-dark/70 text-sm md:text-base leading-relaxed mb-8 max-w-md">
-                    {project.desc}
-                  </p>
-                  <a href="#" className="inline-flex items-center gap-4 text-brand-gold font-bold text-xs uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-black hover:border-black transition-all group">
-                    View Case Study <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+            <ProjectItem key={project.id} project={project} index={index} />
           ))}
         </div>
       </div>
@@ -859,13 +942,64 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-20">
-          <span className="font-signature text-black text-6xl md:text-9xl block mb-0 leading-none">
-            What
-          </span>
-          <h2 className="text-4xl md:text-8xl font-sans font-light tracking-[0.1em] uppercase text-brand-gold -mt-4 md:-mt-8">
-            CUSTOMERS SAYS
-          </h2>
+        <div className="text-center mb-32 relative">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            className="inline-block select-none leading-[0.85]"
+          >
+            {/* Top Line: W (Cursive) + HAT (Gold) */}
+            <div
+              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              <motion.span
+                variants={{
+                  hidden: { scale: 0, opacity: 0 },
+                  visible: { scale: 1, opacity: 1 }
+                }}
+                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="font-normal"
+                style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
+              >
+                W
+              </motion.span>
+              {"hat".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
+
+            {/* Bottom Line: CUSTOMERS SAY (Black) */}
+            <div
+              className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {"CUSTOMERS SAY".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block whitespace-pre"
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </div>
+          </motion.h2>
         </div>
 
         <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-gold/30">
@@ -908,34 +1042,86 @@ const Testimonials = () => {
 
 const ClientsSection = () => {
   const clients = [
-    { name: "Wendy's", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Wendys_full_logo_2012.svg/640px-Wendys_full_logo_2012.svg.png" },
-    { name: "Popeyes", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Popeyes_logo.svg/1280px-Popeyes_logo.svg.png" },
-    { name: "Americana", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Americana_Group_logo.png" },
-    { name: "Subway", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Subway_2016_logo.svg/1280px-Subway_2016_logo.svg.png" },
-    { name: "Domino's", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/1200px-Domino%27s_pizza_logo.svg.png" },
-    { name: "Wingstop", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Wingstop_logo.svg/1200px-Wingstop_logo.svg.png" },
-    { name: "Baskin Robbins", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Baskin-Robbins_logo_2022.svg/1200px-Baskin-Robbins_logo_2022.svg.png" },
-    { name: "Dunkin'", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Dunkin%27_Donuts_logo.svg/1024px-Dunkin%27_Donuts_logo.svg.png" },
-    { name: "Subway", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Century_logo.svg/1200px-Century_logo.svg.png" },
-    { name: "Al Rumooz", logo: "https://mattermind.ae/wp-content/uploads/2023/06/al-rumooz.png" },
-    { name: "Seashell", logo: "https://mattermind.ae/wp-content/uploads/2023/06/seashell-logo.png" },
-    { name: "Coop", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Abu_Dhabi_Co-operative_Society_Logo.png" },
-    { name: "Huna", logo: "https://mattermind.ae/wp-content/uploads/2023/06/huna-logo-01.png" },
-    { name: "Galfar", logo: "https://mattermind.ae/wp-content/uploads/2023/06/galfar-logo.png" },
-    { name: "Gerard", logo: "https://mattermind.ae/wp-content/uploads/2023/06/gerard-logo.png" },
+    { name: "Client 01", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-01.png" },
+    { name: "Client 02", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-02.png" },
+    { name: "Americana", logo: "https://mattermind.ae/wp-content/themes/meiveda/images/americana-logo-1.png" },
+    { name: "Client 03", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-03.png" },
+    { name: "Client 04", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-04.png" },
+    { name: "Client 05", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-05.png" },
+    { name: "Client 07", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-07.png" },
+    { name: "Client 19", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-19.png" },
+    { name: "Client 21", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-21.png" },
+    { name: "CA Logo", logo: "https://mattermind.ae/wp-content/uploads/2024/12/ca-logo.png" },
+    { name: "Client 17", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-17.png" },
+    { name: "Client 18", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-18.png" },
+    { name: "Client 08", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-08.png" },
+    { name: "Client 13", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-13.png" },
+    { name: "Client 14", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-14.png" },
+
   ];
 
   return (
     <section className="py-24 bg-white relative overflow-hidden border-t border-brand-gold/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex justify-end mb-20">
-          <div className="text-right">
-            <span className="font-signature text-black text-6xl md:text-9xl block mb-0 leading-none">
-              Our
-            </span>
-            <h2 className="text-4xl md:text-8xl font-sans font-light tracking-[0.2em] uppercase text-brand-gold -mt-4 md:-mt-8">
-              CLIENTS
-            </h2>
+        <div className="flex justify-center mb-32 relative">
+          <div className="text-center">
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              className="inline-block select-none leading-[0.85]"
+            >
+              {/* Top Line: O (Cursive) + UR (Gold) */}
+              <div
+                className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                <motion.span
+                  variants={{
+                    hidden: { scale: 0, opacity: 0 },
+                    visible: { scale: 1, opacity: 1 }
+                  }}
+                  transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="font-normal"
+                  style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
+                >
+                  O
+                </motion.span>
+                {"ur".split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    variants={{
+                      hidden: { y: "100%", opacity: 0 },
+                      visible: { y: 0, opacity: 1 }
+                    }}
+                    transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Bottom Line: CLIENTS (Black) */}
+              <div
+                className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {"CLIENTS".split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    variants={{
+                      hidden: { y: "100%", opacity: 0 },
+                      visible: { y: 0, opacity: 1 }
+                    }}
+                    transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.h2>
           </div>
         </div>
 
@@ -952,7 +1138,7 @@ const ClientsSection = () => {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="max-w-full max-h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
+                className="max-w-full max-h-16 object-contain transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=f9f9f8&color=c29d59&size=128`;
                 }}
@@ -976,16 +1162,66 @@ const LatestProjectsSection = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div>
-            <span className="font-signature text-black text-6xl md:text-9xl block mb-0 leading-none">
-              Latest
-            </span>
-            <h2 className="text-4xl md:text-8xl font-sans font-light tracking-[0.2em] uppercase text-brand-gold -mt-4 md:-mt-8">
-              PROJECTS
-            </h2>
-          </div>
-          <a href="#" className="flex items-center gap-4 text-brand-gold font-medium border-b border-brand-gold pb-1 group hover:text-black hover:border-black transition-all">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 relative gap-12">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            className="inline-block select-none leading-[0.85]"
+          >
+            {/* Top Line: L (Cursive) + ATEST (Gold) */}
+            <div
+              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-start items-center"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              <motion.span
+                variants={{
+                  hidden: { scale: 0, opacity: 0 },
+                  visible: { scale: 1, opacity: 1 }
+                }}
+                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="font-normal"
+                style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
+              >
+                L
+              </motion.span>
+              {"atest".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
+
+            {/* Bottom Line: PROJECTS (Black) */}
+            <div
+              className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-start items-center text-black"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {"PROJECTS".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { y: "100%", opacity: 0 },
+                    visible: { y: 0, opacity: 1 }
+                  }}
+                  transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
+          </motion.h2>
+
+          <a href="#" className="flex items-center gap-4 text-brand-gold font-medium border-b border-brand-gold pb-1 group hover:text-black hover:border-black transition-all mb-4">
             View All Projects <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </a>
         </div>
