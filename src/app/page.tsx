@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useTransform, Variants } from 'motion/react';
 import {
   Menu,
   X,
@@ -25,8 +25,6 @@ import React, { useState, useEffect } from 'react';
 
 // --- Components ---
 
-
-
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const [step, setStep] = useState(0);
   const phrases = [
@@ -45,7 +43,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     return () => clearTimeout(timer);
   }, [step, onComplete]);
 
-  const containerVars = {
+  const containerVars: Variants = {
     initial: { opacity: 1 },
     animate: {
       opacity: 1,
@@ -56,11 +54,11 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     exit: {
       opacity: 0,
       y: -20,
-      transition: { duration: 0.5, ease: "easeInOut" }
+      transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] }
     }
   };
 
-  const wordVars = {
+  const wordVars: Variants = {
     initial: { y: 40, opacity: 0 },
     animate: {
       y: 0,
@@ -109,7 +107,6 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         </AnimatePresence>
       </div>
 
-      {/* Subtle progress line at bottom */}
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
