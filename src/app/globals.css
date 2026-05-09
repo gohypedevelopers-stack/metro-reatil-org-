@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", var(--font-playfair), ui-serif, Georgia, serif;
+  
+  --color-brand-gold: #c29d59;
+  --color-brand-dark: #121212;
+  
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+:root {
+  --brand-gold: #c29d59;
+  --brand-dark: #121212;
+}
+
+body {
+  background-color: white;
+  color: var(--brand-dark);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-signature {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-style: italic;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
