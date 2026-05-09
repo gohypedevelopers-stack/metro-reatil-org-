@@ -2,10 +2,12 @@
 
 @theme {
   --font-sans: "Inter", var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", var(--font-playfair), ui-serif, Georgia, serif;
+  --font-serif: "Cinzel", var(--font-cinzel), ui-serif, Georgia, serif;
+  --font-display: "Playfair Display", var(--font-playfair), ui-serif, Georgia, serif;
+  --font-script: "Great Vibes", var(--font-great-vibes), cursive;
   
-  --color-brand-gold: #c29d59;
-  --color-brand-dark: #121212;
+  --color-brand-gold: #f39c12;
+  --color-brand-dark: #0a0a0a;
   
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
@@ -16,8 +18,8 @@
 }
 
 :root {
-  --brand-gold: #c29d59;
-  --brand-dark: #121212;
+  --brand-gold: #f39c12;
+  --brand-dark: #2A1E17; /* Dark coffee color from image */
 }
 
 body {
@@ -34,5 +36,26 @@ body {
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
   }
 }
