@@ -366,7 +366,7 @@ const PortfolioSection = () => {
   return (
     <section id="projects" className="py-32 md:py-48 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-10">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -387,12 +387,12 @@ const PortfolioSection = () => {
               <span className="text-neutral-300 font-light italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution</span>
             </motion.h2>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-2 md:gap-4 w-full md:w-auto">
             {["All", "Commercial", "Residential", "F&B"].map((tab, i) => (
-              <button 
-                key={i} 
+              <button
+                key={i}
                 onClick={() => setActiveFilter(tab)}
-                className={`text-[10px] font-bold uppercase tracking-widest px-6 py-2 border rounded-full transition-all ${activeFilter === tab ? 'bg-brand-dark text-white border-brand-dark' : 'text-neutral-400 border-neutral-100 hover:border-brand-gold hover:text-brand-gold'}`}
+                className={`text-[9px] md:text-[10px] font-bold uppercase tracking-widest px-4 md:px-6 py-2 border rounded-full transition-all ${activeFilter === tab ? 'bg-brand-dark text-white border-brand-dark' : 'text-neutral-400 border-neutral-100 hover:border-brand-gold hover:text-brand-gold'}`}
               >
                 {tab}
               </button>
@@ -400,7 +400,7 @@ const PortfolioSection = () => {
           </div>
         </div>
 
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
         >
@@ -445,6 +445,8 @@ const PortfolioSection = () => {
 // --- Main App ---
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const testimonials = [
     {
       text: "I wanted to take a moment to express my gratitude for the exemplary effort and dedication that you and your team put into completing our project (Gerard Cafe at Adnoc station - Ajman) successfully and efficiently. Your attention to detail, creativity, and design truly shone through every step of the way.",
@@ -469,10 +471,17 @@ const Testimonials = () => {
     }
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-32 relative">
+        <div className="text-center mb-12 md:mb-32 relative">
           <motion.h2
             initial="hidden"
             whileInView="visible"
@@ -532,7 +541,8 @@ const Testimonials = () => {
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-gold/30">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 md:divide-x divide-brand-gold/30">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
@@ -540,7 +550,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="px-8 py-12 md:py-0 flex flex-col items-center md:items-start"
+              className="px-8 flex flex-col items-start"
             >
               {/* Quote Mark */}
               <div className="mb-6 opacity-10">
@@ -549,7 +559,7 @@ const Testimonials = () => {
                 </svg>
               </div>
 
-              <p className="text-brand-dark/80 text-sm leading-relaxed mb-12 text-center md:text-left h-full italic">
+              <p className="text-brand-dark/80 text-sm leading-relaxed mb-12 text-left h-full italic">
                 {t.text}
               </p>
 
@@ -564,6 +574,47 @@ const Testimonials = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+              className="px-6 py-8 flex flex-col items-center bg-neutral-50/50 rounded-lg border border-neutral-100"
+            >
+              <div className="mb-6 opacity-10">
+                <svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor" className="text-brand-gold">
+                  <path d="M0 30V15C0 6.71573 6.71573 0 15 0V7.5C10.8579 7.5 7.5 10.8579 7.5 15H15V30H0ZM25 30V15C25 6.71573 31.7157 0 40 0V7.5C35.8579 7.5 32.5 10.8579 32.5 15H40V30H25Z" />
+                </svg>
+              </div>
+              <p className="text-brand-dark/80 text-sm leading-relaxed mb-10 text-center italic">
+                {testimonials[currentIndex].text}
+              </p>
+              <div className="flex flex-col items-center gap-4 mt-auto w-full">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-gold/20 shrink-0">
+                  <img src={testimonials[currentIndex].photo} alt={testimonials[currentIndex].name} className="w-full h-full object-cover" />
+                </div>
+                <div className="text-center">
+                  <h5 className="text-brand-gold font-bold text-sm leading-tight">{testimonials[currentIndex].name}</h5>
+                  <p className="text-brand-dark/60 text-[10px] uppercase tracking-wider font-medium mt-1">{testimonials[currentIndex].role}</p>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+          <div className="flex justify-center gap-3 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-brand-gold w-6' : 'bg-brand-gold/20'}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
