@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+
 
 const SOLUTIONS = [
   {
@@ -31,7 +31,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +40,6 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  if (pathname === '/') return null;
 
   return (
     <>
@@ -54,7 +52,7 @@ export const Navbar = () => {
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
-          <a href="/home" className="flex items-center shrink-0">
+          <a href="/" className="flex items-center shrink-0">
             <img
               src="/logo.png"
               alt="Metro Retail"
@@ -64,8 +62,8 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            <a href="/home" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/home#about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>About</a>
+            <a href="/" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/#about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>About</a>
 
             <div
               className="relative py-2"
@@ -85,7 +83,7 @@ export const Navbar = () => {
               </button>
             </div>
 
-            <a href="/home#contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
+            <a href="/#contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
           </div>
 
           {/* Right Actions */}
@@ -129,7 +127,7 @@ export const Navbar = () => {
                   <p className="text-neutral-500 text-sm leading-relaxed pr-8">
                     Comprehensive design and build solutions tailored to elevate your spatial identity and functional performance.
                   </p>
-                  <a href="/home#services" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
+                  <a href="/#services" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
                     View All Services <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                   </a>
                 </div>
