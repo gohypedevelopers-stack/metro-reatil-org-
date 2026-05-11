@@ -28,103 +28,64 @@ import React, { useState, useEffect } from 'react';
 
 
 const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
   return (
-    <section
-      className="sticky top-0 h-screen flex items-center overflow-hidden bg-brand-dark z-0"
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        setMousePos({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
-        });
-        setIsHovering(true);
-      }}
-      onMouseLeave={() => setIsHovering(false)}
-    >
-      {/* Background Image - High quality interior fit-out */}
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
+      {/* Background with Subtle Zoom */}
       <motion.div
-        initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-        animate={isLoaded ? { opacity: 1, clipPath: 'inset(0 0 0% 0)' } : { opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop")' }}
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
+        transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute inset-0 z-0"
       >
-        {/* Static Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
-
-        {/* Dynamic Light Spot */}
-        <motion.div
-          className="absolute w-[150px] h-[150px] pointer-events-none z-10 rounded-full"
-          animate={{
-            x: mousePos.x - 75,
-            y: mousePos.y - 75,
-            opacity: isHovering ? 1 : 0
-          }}
-          transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
-          style={{
-            background: "rgba(255, 255, 255, 0.4)",
-            mixBlendMode: "overlay",
-            filter: "blur(35px)",
-          }}
-        />
-
-        {/* Subtle Reveal Mask */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            maskImage: isHovering
-              ? `radial-gradient(circle 80px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 100%)`
-              : 'none',
-            WebkitMaskImage: isHovering
-              ? `radial-gradient(circle 80px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 100%)`
-              : 'none',
-          }}
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <img
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop"
+          alt="Interior Design Process"
+          className="w-full h-full object-cover"
         />
       </motion.div>
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full relative z-10 flex flex-col items-center md:items-end justify-center md:justify-end h-full pb-24 text-center md:text-right">
-        <div className="max-w-5xl">
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="font-signature text-brand-gold text-4xl md:text-7xl mb-0 translate-y-4 md:translate-y-8 select-none"
-          >
-            Perfection is a
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
-            transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white text-5xl md:text-[140px] font-sans font-thin leading-none mb-4 tracking-tight uppercase"
-          >
-            STATE OF MIND
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 1.5, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white text-xs md:text-sm max-w-2xl ml-auto font-medium leading-relaxed opacity-90 drop-shadow-md"
-          >
-            Our expert team brings your vision to life, transforming interiors into environments that inspire and impress.
-          </motion.p>
-        </div>
-
-        {/* Bottom Link */}
+      <div className="relative z-20 text-center px-6 max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ duration: 1.5, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute bottom-12 left-6 md:left-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <a href="#about" className="flex items-center gap-3 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] group border-l-2 border-brand-gold pl-4 hover:border-white transition-all">
-            Find out more about us <ChevronRight size={16} className="text-white group-hover:translate-x-1 transition-transform" />
-          </a>
+          <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-8 block">
+            Crafting Exceptional Environments
+          </span>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-7xl lg:text-8xl mb-12 tracking-[-0.02em] leading-[0.95]"
+            style={{ fontFamily: 'var(--font-cinzel), serif' }}
+          >
+            <span className="text-white uppercase font-light">Architectural</span> <br />
+            <span className="text-brand-gold italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Design</span>
+          </motion.h1>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <a href="#projects" className="px-10 py-4 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full">
+              Explore Portfolio
+            </a>
+            <a href="#contact" className="text-white text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
+              Start a Conversation
+            </a>
+          </div>
         </motion.div>
       </div>
+
+      {/* Subtle Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isLoaded ? { opacity: 1 } : {}}
+        transition={{ delay: 2 }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+      >
+        <span className="text-white/30 text-[9px] uppercase tracking-[0.4em] rotate-90 origin-left translate-x-2">Scroll</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-brand-gold to-transparent" />
+      </motion.div>
     </section>
   );
 };
@@ -132,106 +93,74 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
 const AboutSection = () => {
   return (
     <section id="about" className="py-32 md:py-48 bg-white relative overflow-hidden">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 justify-between">
-          {/* Left Column: Editorial Content */}
-          <div className="lg:w-[40%] space-y-12">
-            <div>
-              <motion.span
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-12 block"
-              >
-                ABOUT US
-              </motion.span>
-
-              <motion.h2
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="select-none mb-6 leading-[0.85]"
-              >
-                <div
-                  className="text-4xl md:text-6xl uppercase tracking-[0.05em] whitespace-nowrap"
-                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  <span className="text-brand-gold">
-                    <span
-                      className="font-normal"
-                      style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-                    >
-                      D
-                    </span>
-                    esign
-                  </span>
-                  <span className="text-brand-dark"> with</span>
-                </div>
-                <div
-                  className="text-4xl md:text-6xl uppercase tracking-[0.05em] -mt-2 md:-mt-4 text-brand-dark"
-                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  Intention
-                </div>
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="text-neutral-500 text-sm md:text-base leading-relaxed max-w-md font-light"
-              >
-                At Metro Retail Solutions, we believe that interior design is not just about how a space looks – it's about how it makes you feel. We approach each project as a layered composition of light, form, and purpose, where clarity meets quiet beauty.
-              </motion.p>
-            </div>
-
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="relative">
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+              whileInView={{ opacity: 1, clipPath: 'inset(0 0% 0 0)' }}
               viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl"
             >
-              <a href="#" className="inline-flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-brand-dark border-b border-brand-dark/20 pb-2 group hover:border-brand-gold transition-all">
-                LEARN MORE
-                <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform duration-300" />
-              </a>
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                alt="Corporate Design Excellence"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-6 left-6">
+                <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-dark text-[8px] font-bold uppercase tracking-[0.2em] rounded-full shadow-sm">
+                  Case Study: Corporate HQ
+                </span>
+              </div>
             </motion.div>
+            <div className="absolute -bottom-12 -right-12 w-1/2 aspect-square bg-brand-dark p-8 hidden md:flex flex-col justify-end">
+              <span className="text-brand-gold text-4xl font-serif mb-4">01</span>
+              <p className="text-white text-xs font-light leading-relaxed">
+                Architecting the future of high-performance retail and corporate environments.
+              </p>
+            </div>
           </div>
 
-          {/* Right Column: Image Composition */}
-          <div className="lg:w-[55%] flex items-start gap-4 md:gap-6 mt-12 lg:mt-0">
-            {/* Large Image */}
-            <motion.div
-              initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-              whileInView={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
+          <div className="lg:pl-20">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 2, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex-1 relative aspect-[4/5] overflow-hidden rounded shadow-2xl"
+              className="text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-400 mb-8 block"
             >
-              <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-                alt="Organic Interior Design"
-                className="w-full h-full object-cover transition-all duration-1000 scale-110 hover:scale-100"
-              />
-            </motion.div>
-
-            {/* Smaller Image */}
-            <motion.div
-              initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-              whileInView={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
+              The Foundation
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="w-[45%] relative aspect-[4/5] overflow-hidden rounded shadow-xl translate-y-12"
+              transition={{ delay: 0.2 }}
+              className="text-4xl md:text-6xl text-brand-dark mb-10 leading-tight uppercase"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=2070&auto=format&fit=crop"
-                alt="Modern Interior Detail"
-                className="w-full h-full object-cover transition-all duration-1000"
-              />
-            </motion.div>
+              Defining the <br />
+              <span className="text-brand-gold font-light italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Interior Narrative</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="text-neutral-500 text-base md:text-lg font-light leading-relaxed mb-12"
+            >
+              At Metro Retail Solutions, we don't just build spaces; we architect experiences. Our approach to interior design is rooted in the fusion of brand identity and spatial ergonomics—ensuring every boutique, office, and lounge we create is as functional as it is visually arresting.
+            </motion.p>
+            <div className="grid grid-cols-2 gap-12">
+              <div>
+                <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4">Vision</h4>
+                <p className="text-neutral-400 text-xs leading-relaxed">To redefine the standard of luxury interiors across the GCC.</p>
+              </div>
+              <div>
+                <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4">Mission</h4>
+                <p className="text-neutral-400 text-xs leading-relaxed">Delivering turnkey excellence through innovation and artisan craft.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -241,322 +170,33 @@ const AboutSection = () => {
 
 const ProcessSection = () => {
   const steps = [
-    {
-      title: "CONCEPTION",
-      desc: "Interior design and furniture crafting",
-      icon: <Paintbrush className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
-    {
-      title: "RESEARCH",
-      desc: "Curating materials, furniture and accessories",
-      icon: <Coffee className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
-    {
-      title: "VISUALIZATION",
-      desc: "Developing realistic 3D models",
-      icon: <Monitor className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
-    {
-      title: "PLANNING",
-      desc: "Technical plans and construction details",
-      icon: <Home className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
-    {
-      title: "CONSTRUCTION",
-      desc: "Managing specialized and general labor",
-      icon: <HardHat className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
-    {
-      title: "COORDINATION",
-      desc: "Directing work and monitoring sites",
-      icon: <CheckCircle className="w-8 h-8 text-brand-gold" strokeWidth={1} />,
-    },
+    { title: "Consultation", desc: "Understanding your vision and spatial objectives." },
+    { title: "Strategy", desc: "Meticulous planning and material curation." },
+    { title: "Creation", desc: "Execution with uncompromising precision." },
+    { title: "Curatorship", desc: "Final refinement and seamless handover." }
   ];
 
   return (
-    <section className="bg-brand-dark relative overflow-hidden py-32 md:py-48">
-      {/* Abstract Background Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-gold/5 to-transparent pointer-events-none" />
-
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-24 items-start">
-          {/* Left Column: Content */}
-          <div className="lg:w-1/2">
-            <motion.span
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[10px] font-bold uppercase tracking-[0.4em] text-neutral-500 mb-12 block"
-            >
-              OUR METHODS
-            </motion.span>
-
-            <motion.h2
-              initial={{ opacity: 0, y: -30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-white select-none mb-20 leading-[0.85]"
-            >
-              <div
-                className="text-4xl md:text-6xl uppercase tracking-[0.05em] whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-cinzel), serif' }}
-              >
-                <span
-                  className="font-normal"
-                  style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-                >
-                  O
-                </span>
-                ur Design
-              </div>
-              <div
-                className="text-4xl md:text-6xl uppercase tracking-[0.05em] -mt-2 md:-mt-4"
-                style={{ fontFamily: 'var(--font-cinzel), serif' }}
-              >
-                Protocol
-              </div>
-            </motion.h2>
-
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
-              {steps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, delay: 0.6 + (index * 0.1), ease: [0.16, 1, 0.3, 1] }}
-                  className="group"
-                >
-                  <div className="flex items-start gap-6">
-                    <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-white/10 rounded-full group-hover:border-brand-gold group-hover:bg-brand-gold/5 transition-all duration-500">
-                      {step.icon}
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-white font-bold tracking-widest text-[11px] uppercase group-hover:text-brand-gold transition-colors">{step.title}</h4>
-                      <p className="text-neutral-500 text-[11px] leading-relaxed max-w-[180px] group-hover:text-neutral-300 transition-colors">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Featured Image */}
-          <motion.div
-            initial={{ opacity: 0, clipPath: 'inset(100% 0 0 0)' }}
-            whileInView={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }}
-            viewport={{ once: true }}
-            transition={{ duration: 2, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:w-1/2 w-full sticky top-32"
-          >
-            <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop"
-                alt="Architecture Studio"
-                className="w-full h-full object-cover transition-transform duration-[3s] hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60" />
-
-              {/* Floating Stat/Detail */}
-              <div className="absolute bottom-12 left-12 right-12 p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-sm">
-                <p className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.4em] mb-4">ESTABLISHED 2018</p>
-                <p className="text-white/80 text-xs leading-relaxed font-light italic">
-                  "Architecture should speak of its time and place, but yearn for timelessness."
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const ServiceCard = ({ solution, index }: { solution: any, index: number }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-      whileInView={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
-      viewport={{ once: true, amount: 0 }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      transition={{ duration: 1.5, delay: 0.1 + (index * 0.1), ease: [0.16, 1, 0.3, 1] }}
-      className="group cursor-pointer relative bg-white min-h-[550px] overflow-hidden rounded-sm shadow-sm hover:shadow-2xl transition-all duration-700"
-    >
-      {/* Image Container - Animates based on isHovered state */}
-      <motion.div
-        layout
-        className="absolute z-10 overflow-hidden rounded-sm"
-        animate={{
-          top: isHovered ? '32px' : '0px',
-          right: isHovered ? '32px' : '0px',
-          width: isHovered ? '50%' : '100%',
-          height: isHovered ? '35%' : '100%',
-          bottom: isHovered ? 'auto' : '0px',
-          left: isHovered ? '0px' : '0px',
-          x: isHovered ? '50%' : '0%', // Move to right side
-        }}
-        transition={{
-          duration: 0.8,
-          ease: [0.16, 1, 0.3, 1]
-        }}
-      >
-        <img
-          src={solution.img}
-          alt={solution.title}
-          className="w-full h-full object-cover"
-        />
-        <div className={`absolute inset-0 bg-black/10 transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-100'}`} />
-      </motion.div>
-
-      {/* Editorial Text - Fades in behind the image area */}
-      <div className="relative z-0 p-8 h-full flex flex-col justify-between h-[550px]">
-        <div className={`flex justify-between items-start transition-opacity duration-700 delay-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-          <span className="text-xs font-bold text-neutral-400 tracking-[0.3em] font-sans">
-            {solution.id}
-          </span>
-        </div>
-
-        <div className={`mt-auto space-y-6 transition-opacity duration-700 delay-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-          <h4
-            className="text-2xl md:text-3xl text-brand-dark leading-tight"
-            style={{ fontFamily: 'var(--font-cinzel), serif' }}
-          >
-            {solution.title}
-          </h4>
-          <p className="text-neutral-500 text-sm leading-relaxed max-w-[90%]">
-            {solution.desc}
-          </p>
-          <div className="flex justify-between items-center pt-8 border-t border-neutral-100">
-            <span className="text-neutral-400 text-[10px] font-bold tracking-[0.2em] uppercase">
-              {solution.price}
-            </span>
-            <div className={`w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center transition-all duration-500 ${isHovered ? 'bg-brand-dark text-white' : ''}`}>
-              <ArrowRight size={14} className={`transform transition-transform ${isHovered ? 'rotate-0' : '-rotate-45'}`} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Background Color Reveal */}
-      <div className={`absolute inset-0 bg-white transition-opacity duration-700 z-[-1] ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
-    </motion.div>
-  );
-};
-
-const SolutionsSection = () => {
-  const solutions = [
-    {
-      id: "01",
-      title: "INTERIOR DESIGN",
-      desc: "Full design package with plans, moodboards, and drawings – crafted for your lifestyle and spatial identity.",
-      price: "from 120 $/m²",
-      img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-    },
-    {
-      id: "02",
-      title: "INTERIOR FIT-OUT",
-      desc: "Execution of turnkey projects with precision and speed, transforming shells into sophisticated spaces.",
-      price: "from 450 $/m²",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
-    },
-    {
-      id: "03",
-      title: "ELECTRO-MECHANICAL",
-      desc: "Integrating invisible systems that power your space efficiently, from lighting to climate control.",
-      price: "custom quote",
-      img: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-      id: "04",
-      title: "JOINERY WORKS",
-      desc: "Bespoke furniture and woodwork crafted by artisans to fit your unique spatial requirements.",
-      price: "from 200 $/m²",
-      img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-      id: "05",
-      title: "LIGHTING",
-      desc: "Atmospheric and functional lighting design that defines the mood and highlights architectural details.",
-      price: "from 80 $/m²",
-      img: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=2070&auto=format&fit=crop"
-    },
-  ];
-
-  return (
-    <section id="services" className="py-32 md:py-48 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white border-y border-neutral-100">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-12 relative">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            className="inline-block"
-          >
-            <h2 className="relative text-brand-dark select-none leading-[0.85]">
-              {/* Top Line: TAILORED (Gold) */}
-              <div
-                className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
-                style={{ fontFamily: 'var(--font-cinzel), serif' }}
-              >
-                {"TAILORED".split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    variants={{
-                      hidden: { y: "100%", opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
-                    }}
-                    transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                    className="inline-block"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="relative"
+            >
+              <span className="text-neutral-100 font-serif text-8xl absolute -top-8 -left-4 z-0 select-none">
+                0{i + 1}
+              </span>
+              <div className="relative z-10 pt-10">
+                <h3 className="text-lg font-serif text-brand-dark mb-4 uppercase tracking-widest">{step.title}</h3>
+                <p className="text-neutral-400 text-sm font-light leading-relaxed">{step.desc}</p>
               </div>
-
-              {/* Bottom Line: S (Cursive) + OLUTIONS (Black) */}
-              <div
-                className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
-                style={{ fontFamily: 'var(--font-cinzel), serif' }}
-              >
-                <motion.span
-                  variants={{
-                    hidden: { scale: 0, opacity: 0 },
-                    visible: { scale: 1, opacity: 1 }
-                  }}
-                  transition={{ duration: 1.2, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  className="font-normal"
-                  style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-                >
-                  S
-                </motion.span>
-                {"olutions".split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    variants={{
-                      hidden: { y: "100%", opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
-                    }}
-                    transition={{ duration: 0.8, delay: 0.8 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                    className="inline-block"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </div>
-            </h2>
-          </motion.div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {solutions.map((solution, index) => (
-            <ServiceCard key={index} solution={solution} index={index} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -564,160 +204,199 @@ const SolutionsSection = () => {
   );
 };
 
-const ProjectItem = ({ project, index }: { project: any, index: number }) => {
-  const containerRef = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end center"]
-  });
 
-  // Balanced glide from off-screen into position
-  const xTranslate = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [index % 2 === 0 ? 600 : -600, 0]
-  );
-
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
-
-  return (
-    <motion.div
-      ref={containerRef}
-      style={{ x: xTranslate, opacity }}
-      className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-32`}
-    >
-      {/* Image Side */}
-      <div className="w-full lg:w-7/12 relative group overflow-hidden rounded-sm shadow-2xl">
-        <div className="absolute inset-0 bg-brand-dark/20 group-hover:opacity-0 transition-opacity duration-700 z-10" />
-        <motion.img
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          src={project.img}
-          alt={project.title}
-          className="w-full aspect-[16/10] object-cover"
-        />
-        {/* Floating Label */}
-        <div className="absolute top-8 left-8 z-20">
-          <span className="bg-white/90 backdrop-blur-md px-6 py-2 text-[10px] font-bold tracking-[0.3em] uppercase rounded-full">
-            {project.title.split("'")[0]}
-          </span>
-        </div>
-      </div>
-
-      {/* Text Side */}
-      <div className="w-full lg:w-5/12 flex flex-col items-start">
-        <span className="text-[100px] md:text-[160px] font-bold text-neutral-100/50 leading-none select-none">
-          {project.id}
-        </span>
-        <div className="relative -mt-12 md:-mt-24">
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-brand-dark mb-6 uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            {project.title}
-          </h3>
-          <p className="text-neutral-500 text-base md:text-lg leading-relaxed font-light max-w-md">
-            {project.desc}
-          </p>
-          <div className="pt-8">
-            <a href="#" className="inline-flex items-center gap-6 text-xs font-bold tracking-[0.3em] uppercase text-brand-gold group border-b border-brand-gold/20 pb-2 hover:border-brand-gold transition-all">
-              VIEW CASE STUDY
-              <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-const PortfolioSection = () => {
-  const projects = [
+const SolutionsSection = () => {
+  const categories = [
     {
-      id: "01",
-      title: "ZINA'S LOUNGE",
-      desc: "A boutique hospitality space designed with ontological precision, featuring bespoke lighting and material palettes that define a new standard in luxury.",
-      img: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=2070&auto=format&fit=crop",
+      title: "Retail Excellence",
+      desc: "Boutique storefronts and high-end retail environments.",
+      items: ["Concept Stores", "Flagship Fit-outs", "Display Systems", "Technical Lighting"],
+      img: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=2095&auto=format&fit=crop"
     },
     {
-      id: "02",
-      title: "QUANTUM OFFICES",
-      desc: "Transforming corporate environments into cognitive spaces that foster innovation and architectural synergy.",
-      img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop",
+      title: "Corporate Innovation",
+      desc: "High-performance office and commercial environments.",
+      items: ["Open Workspaces", "Executive Suites", "Acoustic Solutions", "Smart Boardrooms"],
+      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
     },
     {
-      id: "03",
-      title: "THE ATRIUM CAFE",
-      desc: "A fusion of traditional aesthetics and modern functionality, creating a harmonious environment for social interaction.",
-      img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2070&auto=format&fit=crop",
+      title: "Hospitality & F&B",
+      desc: "Luxury lounges and bespoke restaurant interiors.",
+      items: ["Bespoke Joinery", "Kitchen Systems", "Atmospheric Lighting", "Furniture Curation"],
+      img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop"
     }
   ];
 
   return (
-    <section id="projects" className="py-48 bg-white relative overflow-hidden">
+    <section id="services" className="py-32 md:py-48 bg-neutral-50">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-48 relative">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            className="inline-block select-none leading-[0.85]"
+        <div className="text-center mb-24">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 block"
           >
-            {/* Top Line: S (Cursive) + ELECTED (Gold) */}
-            <div
-              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              <motion.span
-                variants={{
-                  hidden: { scale: 0, opacity: 0 },
-                  visible: { scale: 1, opacity: 1 }
-                }}
-                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="font-normal"
-                style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-              >
-                S
-              </motion.span>
-              {"elected".split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  variants={{
-                    hidden: { y: "100%", opacity: 0 },
-                    visible: { y: 0, opacity: 1 }
-                  }}
-                  transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                  className="inline-block"
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </div>
-
-            {/* Bottom Line: PROJECTS (Black) */}
-            <div
-              className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              {"PROJECTS".split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  variants={{
-                    hidden: { y: "100%", opacity: 0 },
-                    visible: { y: 0, opacity: 1 }
-                  }}
-                  transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                  className="inline-block"
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </div>
+            Expertise
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl text-brand-dark uppercase tracking-tight"
+            style={{ fontFamily: 'var(--font-cinzel), serif' }}
+          >
+            Our Solutions
           </motion.h2>
         </div>
 
-        <div className="space-y-64">
-          {projects.map((project, index) => (
-            <ProjectItem key={project.id} project={project} index={index} />
+        <div className="grid lg:grid-cols-3 gap-10">
+          {categories.map((cat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-white p-10 md:p-12 shadow-sm hover:shadow-2xl transition-all duration-700 group border border-neutral-100 flex flex-col h-full"
+            >
+              <div className="aspect-video mb-10 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700 relative">
+                <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="px-2 py-1 bg-brand-dark/80 text-white text-[7px] font-bold uppercase tracking-widest">
+                    {i === 0 ? "Visualizing High-Traffic Flow" : i === 1 ? "Ergonomic System Integration" : "Material Curation Field"}
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-2xl font-serif text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">{cat.title}</h3>
+              <p className="text-neutral-400 text-sm mb-8 font-light">{cat.desc}</p>
+              <ul className="space-y-4 mb-12 flex-grow">
+                {cat.items.map((item, j) => (
+                  <li key={j} className="flex items-center gap-3 text-brand-dark text-xs font-medium border-b border-neutral-50 pb-2">
+                    <span className="w-1 h-1 bg-brand-gold rounded-full" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="#" className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-brand-dark group-hover:text-brand-gold transition-colors">
+                Discover More <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+              </a>
+            </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+const PortfolioSection = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const projects = [
+    {
+      id: "01",
+      category: "Retail",
+      title: "The Vogue Gallery",
+      desc: "A flagship retail experience designed for a premium luxury brand.",
+      img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop",
+    },
+    {
+      id: "02",
+      category: "Commercial",
+      title: "Axis Headquarters",
+      desc: "Transforming corporate environments into high-performance cognitive spaces.",
+      img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop",
+    },
+    {
+      id: "03",
+      category: "Hospitality",
+      title: "Zina's Lounge",
+      desc: "A boutique hospitality space designed with precision and luxury.",
+      img: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=2070&auto=format&fit=crop",
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-32 md:py-48 bg-white overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+          <div className="max-w-2xl">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 block"
+            >
+              Selected Works
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl text-brand-dark uppercase leading-tight"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Excellence in <br />
+              <span className="text-neutral-300 font-light italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution</span>
+            </motion.h2>
+          </div>
+          <div className="flex gap-4">
+            {["All", "Commercial", "Residential", "F&B"].map((tab, i) => (
+              <button 
+                key={i} 
+                onClick={() => setActiveFilter(tab)}
+                className={`text-[10px] font-bold uppercase tracking-widest px-6 py-2 border rounded-full transition-all ${activeFilter === tab ? 'bg-brand-dark text-white border-brand-dark' : 'text-neutral-400 border-neutral-100 hover:border-brand-gold hover:text-brand-gold'}`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+        >
+          <AnimatePresence mode="popLayout">
+            {(activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter)).map((project, index) => (
+              <motion.div
+                layout
+                key={project.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="group cursor-pointer"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-8 shadow-sm">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+                  <div className="absolute top-6 left-6">
+                    <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-[9px] font-bold uppercase tracking-widest text-brand-dark rounded-full w-fit">
+                      {project.category}
+                    </span>
+                  </div>
+                  <div className="absolute top-6 right-6">
+                    <span className="px-3 py-1 bg-brand-gold/90 text-white text-[7px] font-bold uppercase tracking-widest w-fit rounded-sm shadow-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
+                      Visual Insight: Architectural Curation
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-serif text-brand-dark mb-3 group-hover:text-brand-gold transition-colors uppercase tracking-wider">{project.title}</h3>
+                <p className="text-neutral-400 text-sm font-light leading-relaxed mb-6">{project.desc}</p>
+                <a href="#" className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-brand-dark border-b border-neutral-100 pb-1 group-hover:border-brand-gold group-hover:text-brand-gold transition-all">
+                  Case Study <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </a>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
@@ -964,10 +643,10 @@ const ClientsSection = () => {
 
 const LatestProjectsSection = () => {
   const projects = [
-    { name: "KFC", img: "https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?q=80&w=2067&auto=format&fit=crop" },
-    { name: "DOMINOS PIZZA", img: "https://images.unsplash.com/photo-1620174645265-05820da4ff20?q=80&w=2062&auto=format&fit=crop" },
+    { name: "ROLEX BOUTIQUE", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop" },
+    { name: "APPLE INNOVATION CENTER", img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop" },
+    { name: "MINIMALIST DESIGN STUDIO", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" },
     { name: "COSTA COFFEE", img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2074&auto=format&fit=crop" },
-    { name: "PAPA JOHNS", img: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=2070&auto=format&fit=crop" },
   ];
 
   return (
@@ -1065,83 +744,85 @@ const LatestProjectsSection = () => {
 };
 
 const PMCSection = () => {
+  const steps = [
+    { title: 'Project Strategy', desc: 'Comprehensive feasibility and fiscal planning.' },
+    { title: 'Procurement', desc: 'Direct sourcing from an elite global network of artisans.' },
+    { title: 'Technical Oversight', desc: 'Rigorous quality control and engineering precision.' }
+  ];
+
   return (
     <section id="pmc" className="py-32 md:py-48 bg-brand-dark text-white relative overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-center">
-          {/* Left: Text Content */}
-          <div className="lg:w-[45%]">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div>
             <motion.span
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold mb-8 block"
+              className="text-[10px] font-bold uppercase tracking-[0.6em] text-brand-gold mb-10 block"
             >
-              PROJECT MANAGEMENT
+              Consultancy Excellence
             </motion.span>
-
             <motion.h2
-              initial={{ opacity: 0, y: -30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-4xl md:text-5xl lg:text-6xl mb-10 uppercase tracking-[0.05em] leading-[1.1]"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              The Orchestration <br />
-              <span className="text-neutral-400 font-light italic normal-case" style={{ fontFamily: 'var(--font-playfair), serif' }}>of</span> Excellence
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="text-neutral-400 text-sm md:text-base leading-relaxed font-light mb-12"
-            >
-              Our Project Management Consultancy (PMC) services act as your dedicated representative, ensuring your vision is executed flawlessly. From meticulous planning and procurement to stringent quality control and handover, we manage the complexities so you don't have to.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-6"
-            >
-              {[
-                { title: 'Planning & Strategy', desc: 'Feasibility, timeline creation, and budget estimation.' },
-                { title: 'Procurement', desc: 'Tendering, contract management, and material sourcing.' },
-                { title: 'Execution Oversight', desc: 'On-site supervision, risk management, and quality control.' }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start group cursor-pointer border-b border-white/10 pb-6 hover:border-brand-gold transition-colors duration-500">
-                  <div className="text-brand-gold text-xs font-bold tracking-[0.2em] pt-1">0{i + 1}</div>
-                  <div>
-                    <h4 className="text-sm font-bold uppercase tracking-widest mb-2 group-hover:text-brand-gold transition-colors duration-500">{item.title}</h4>
-                    <p className="text-neutral-500 text-xs font-light">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Right: Image */}
-          <div className="lg:w-[55%] flex justify-end">
-            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full md:w-[90%] aspect-[3/4] overflow-hidden rounded-sm shadow-2xl"
+              className="text-4xl md:text-7xl mb-12 uppercase leading-tight"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop"
-                alt="PMC Blueprint"
-                className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105 opacity-80"
-              />
-            </motion.div>
+              The Science <br />
+              <span className="text-neutral-500 font-light italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Execution</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-neutral-400 text-base md:text-lg font-light leading-relaxed mb-16 max-w-xl"
+            >
+              Our Project Management Consultancy provides a singular point of accountability. we orchestrate every technical detail, ensuring your vision is realized without compromise.
+            </motion.p>
+
+            <div className="space-y-12">
+              {steps.map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group flex gap-8 pb-8 border-b border-white/5 hover:border-brand-gold transition-colors duration-500"
+                >
+                  <span className="text-brand-gold font-serif text-2xl opacity-50 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
+                  <div>
+                    <h4 className="text-white text-lg font-serif mb-2 uppercase tracking-widest">{step.title}</h4>
+                    <p className="text-neutral-500 text-sm font-light">{step.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 1.1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative aspect-square lg:aspect-[4/5] rounded-sm overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop"
+              alt="Engineering Precision"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+            />
+            <div className="absolute inset-0 bg-brand-dark/20" />
+            <div className="absolute top-10 right-10 flex flex-col items-end">
+              <span className="text-[9px] font-bold text-brand-gold uppercase tracking-[0.4em] mb-2">Technical Detail</span>
+              <div className="h-[1px] w-12 bg-brand-gold/50" />
+              <p className="text-white/60 text-[8px] mt-2 max-w-[120px] text-right leading-relaxed">
+                Meticulous blueprinting and engineering oversight for complex retail fit-outs.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -2,11 +2,34 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, X } from 'lucide-react';
+import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+
+const SOLUTIONS = [
+  {
+    category: "Design",
+    items: ["Interior Design", "3D Visualization", "Space Planning", "Moodboards"]
+  },
+  {
+    category: "Fit-Out",
+    items: ["Joinery Works", "Flooring", "Partition Systems", "Acoustic Solutions"]
+  },
+  {
+    category: "Systems",
+    items: ["Electro-Mechanical", "Lighting Design", "Wall Covering", "Automation"]
+  }
+];
+
+const PROJECTS = [
+  { name: "Retail", desc: "Showrooms and luxury boutiques" },
+  { name: "Commercial", desc: "Corporate offices and workspaces" },
+  { name: "Residential", desc: "Luxury villas and apartments" },
+  { name: "Hospitality", desc: "Restaurants, Cafes and Hotels" }
+];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -22,150 +45,178 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md py-1 shadow-sm' : 'bg-transparent py-2'}`}>
+      <nav
+        className={`fixed w-full z-[100] transition-all duration-500 ${isScrolled || activeMenu
+            ? 'bg-white/95 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
+            : 'bg-transparent py-6'
+          }`}
+        onMouseLeave={() => setActiveMenu(null)}
+      >
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="/" className="flex items-center group">
-          <img
-            src="/logo.png"
-            alt="Metro Retail Solutions Logo"
-            className={`h-12 md:h-16 w-auto transition-all duration-500 hover:scale-110 ${isScrolled ? 'h-10 md:h-12' : ''}`}
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = '/logo.png';
-            }}
-          />
-        </a>
+          {/* Logo */}
+          <a href="/home" className="flex items-center shrink-0">
+            <img
+              src="/logo.png"
+              alt="Metro Retail"
+              className={`h-10 md:h-12 w-auto transition-all duration-500 ${isScrolled || activeMenu ? 'brightness-100' : 'brightness-0 invert'}`}
+            />
+          </a>
 
-        {/* Contact Info Desktop */}
-        <div className={`hidden lg:flex items-center gap-8 xl:gap-12 ml-auto mr-12 text-[10px] xl:text-xs transition-colors ${isScrolled ? 'text-brand-dark' : 'text-white'}`}>
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Mail size={18} />
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+            <a href="/home" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/home#about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>About</a>
+
+            <div
+              className="relative py-2"
+              onMouseEnter={() => setActiveMenu('solutions')}
+            >
+              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+                Solutions <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
+              </button>
             </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">EMAIL US ON</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">sales@metroretail.solutions</p>
+
+            <div
+              className="relative py-2"
+              onMouseEnter={() => setActiveMenu('portfolio')}
+            >
+              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+                Portfolio <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`} />
+              </button>
             </div>
+
+            <a href="/home#contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Phone size={18} />
+          {/* Right Actions */}
+          <div className="flex items-center gap-8">
+            <div className={`hidden xl:flex flex-col items-end ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+              <span className="text-[9px] font-bold opacity-50 tracking-widest uppercase mb-1">Inquiries</span>
+              <a href="tel:+971542365212" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</a>
             </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">WHATSAPPP ON</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</p>
-            </div>
-          </div>
 
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-colors ${isScrolled ? 'border-brand-dark/10' : 'border-white/20'}`}>
-              <Phone size={18} />
-            </div>
-            <div>
-              <p className="opacity-60 uppercase font-bold text-[8px] mb-0.5 tracking-wider">CALL US</p>
-              <p className="font-semibold tracking-tight hover:text-brand-gold transition-colors">+971 25653070</p>
-            </div>
+            <button className={`hidden md:block px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${isScrolled || activeMenu
+                ? 'bg-brand-gold text-white hover:bg-brand-dark'
+                : 'bg-white text-brand-dark hover:bg-brand-gold hover:text-white'
+              }`}>
+              Contact Us
+            </button>
+
+            {/* Mobile Toggle */}
+            <button
+              className="lg:hidden flex flex-col gap-1.5"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <div className={`w-8 h-0.5 transition-all ${isScrolled || activeMenu ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={`w-6 h-0.5 ml-auto transition-all ${isScrolled || activeMenu ? 'bg-brand-dark' : 'bg-white'}`} />
+            </button>
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex items-center gap-6">
-          <button className="hidden md:block bg-brand-gold text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all shadow-lg active:scale-95 leading-none">
-            SPEAK TO OUR TEAM
-          </button>
+        {/* Mega Menu Dropdowns */}
+        <AnimatePresence>
+          {activeMenu === 'solutions' && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-xl py-16"
+            >
+              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-4 gap-12">
+                <div className="col-span-1 border-r border-neutral-100">
+                  <h3 className="text-2xl font-serif text-brand-dark mb-6">Our Expertise</h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed pr-8">
+                    Comprehensive design and build solutions tailored to elevate your spatial identity and functional performance.
+                  </p>
+                  <a href="/home#services" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
+                    View All Services <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+                  </a>
+                </div>
+                {SOLUTIONS.map((cat, i) => (
+                  <div key={i} className="col-span-1">
+                    <h4 className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-8">{cat.category}</h4>
+                    <ul className="space-y-4">
+                      {cat.items.map((item, j) => (
+                        <li key={j}>
+                          <a href="#" className="text-brand-dark hover:text-brand-gold text-sm transition-colors block py-1">{item}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
-          <button className="flex flex-col gap-1.5 group cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            <div className={`w-10 h-0.5 transition-all group-hover:w-8 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-            <div className={`w-10 h-0.5 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-            <div className={`w-8 h-0.5 transition-all group-hover:w-10 ${isScrolled ? 'bg-brand-dark' : 'bg-white'}`} />
-          </button>
-        </div>
-      </div>
-    </nav>
+          {activeMenu === 'portfolio' && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-xl py-16"
+            >
+              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-4 gap-12">
+                <div className="col-span-1 border-r border-neutral-100">
+                  <h3 className="text-2xl font-serif text-brand-dark mb-6">Selected Works</h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed pr-8">
+                    Discover how we transform visions into remarkable realities across various sectors in the GCC.
+                  </p>
+                </div>
+                <div className="col-span-3 grid grid-cols-2 gap-8">
+                  {PROJECTS.map((proj, i) => (
+                    <a key={i} href="#" className="group p-6 border border-neutral-50 hover:border-brand-gold/20 hover:bg-neutral-50 transition-all rounded-sm flex justify-between items-center">
+                      <div>
+                        <h4 className="text-brand-dark font-bold text-sm uppercase tracking-wider mb-1 group-hover:text-brand-gold transition-colors">{proj.name}</h4>
+                        <p className="text-neutral-400 text-xs">{proj.desc}</p>
+                      </div>
+                      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ArrowRight size={16} className="text-brand-gold" />
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 bg-[#EBE9E1] z-[100] flex flex-col justify-center overflow-y-auto"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: "tween", duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 bg-white z-[150] lg:hidden p-8 flex flex-col"
           >
-            <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-8 right-8 md:top-12 md:right-12 text-brand-dark hover:text-brand-gold transition-colors z-[110]">
-              <X size={40} strokeWidth={1} />
-            </button>
+            <div className="flex justify-between items-center mb-16">
+              <img src="/logo.png" alt="Metro Retail" className="h-10" />
+              <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[10px] font-bold uppercase tracking-widest border border-brand-dark/10 px-6 py-2 rounded-full">Close</button>
+            </div>
 
-            <div className="max-w-[1400px] mx-auto w-full px-8 md:px-16 py-20 flex flex-col md:flex-row gap-16 md:gap-32">
-              {/* Left Column - Main Links */}
-              <div className="flex flex-col gap-6 md:gap-8 md:w-1/2 pt-4">
-                {['HOME', 'ABOUT US', 'SERVICES', 'BLOG', 'PROJECTS', 'CONTACT US'].map((item) => (
-                  <a
-                    key={item}
-                    href={item === 'HOME' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-4xl md:text-5xl lg:text-6xl font-sans font-light tracking-[0.1em] text-neutral-500 hover:text-brand-dark transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                ))}
+            <div className="flex flex-col gap-8">
+              {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
+                <a key={item} href="#" className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition-colors">{item}</a>
+              ))}
+            </div>
+
+            <div className="mt-auto pt-12 border-t border-neutral-100 space-y-6">
+              <div className="flex items-center gap-4 text-brand-dark">
+                <Phone size={18} className="text-brand-gold" />
+                <span className="font-bold">+971 54 236 5212</span>
               </div>
-
-              {/* Right Column - Info */}
-              <div className="md:w-1/2 flex flex-col gap-12 pt-6">
-                {/* Our Services */}
-                <div>
-                  <h4 className="text-brand-gold font-bold uppercase tracking-widest text-sm md:text-base mb-6">OUR SERVICES</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 text-neutral-500 text-sm md:text-base font-light">
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Interior Design</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Flooring</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Interior Fit-Out</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Wall Covering</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Electro-Mechanical</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Office Furniture</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Raised Flooring</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Educational Furniture</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Joinery Works</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Acoustic</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Lighting</span>
-                    <span className="hover:text-brand-dark cursor-pointer transition-colors">Partition</span>
-                  </div>
-                </div>
-
-                {/* Contact */}
-                <div>
-                  <h4 className="text-brand-gold font-bold uppercase tracking-widest text-sm md:text-base mb-6">CONTACT</h4>
-                  <div className="space-y-4 text-neutral-500 text-sm md:text-base font-light">
-                    <div className="flex gap-4 items-start">
-                      <MapPin size={18} className="text-brand-gold mt-1 shrink-0" strokeWidth={1.5} />
-                      <div className="leading-relaxed">
-                        <p>Metro Retail Solutions LLC</p>
-                        <p>Office No: 3 Building: C 130</p>
-                        <p>Akhayil St. Mohamed Bin Zayed City</p>
-                        <p>ME-9 - Abu Dhabi, UAE</p>
-                      </div>
-                    </div>
-                    <div className="flex gap-4 items-center">
-                      <Mail size={18} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                      <a href="mailto:sales@metroretail.solutions" className="hover:text-brand-dark transition-colors">sales@metroretail.solutions</a>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-12">
-                      <div className="flex gap-4 items-center">
-                        <Phone size={18} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                        <a href="tel:+971542365212" className="hover:text-brand-dark transition-colors">+971 54 236 5212</a>
-                      </div>
-                      <div className="flex gap-4 items-center">
-                        <Phone size={18} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                        <a href="tel:+97125653070" className="hover:text-brand-dark transition-colors">+971 25653070</a>
-                      </div>
-                    </div>
-                    <div className="flex gap-4 items-center">
-                      <Phone size={18} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                      <a href="tel:+971502525180" className="hover:text-brand-dark transition-colors">+971 50 2525 180</a>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-center gap-4 text-brand-dark">
+                <Mail size={18} className="text-brand-gold" />
+                <span className="font-bold">sales@metroretail.solutions</span>
+              </div>
+              <div className="flex gap-6 pt-4">
+                <Instagram size={20} className="text-neutral-400" />
+                <Linkedin size={20} className="text-neutral-400" />
+                <Facebook size={20} className="text-neutral-400" />
               </div>
             </div>
           </motion.div>
