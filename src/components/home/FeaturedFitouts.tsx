@@ -41,7 +41,7 @@ const FeaturedFitouts = () => {
           </div>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-0 space-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((p, i) => (
             <motion.div
               layout
@@ -49,15 +49,29 @@ const FeaturedFitouts = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="relative group overflow-hidden break-inside-avoid"
+              className="relative group overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[4/5] border-[0.5px] border-white/5"
             >
-              <img src={p.img} alt={p.name} className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors" />
-              <div className="absolute bottom-6 right-6">
-                <div className="bg-black/60 backdrop-blur-md px-6 py-3 flex items-center gap-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className="text-white text-[10px] font-bold uppercase tracking-widest">{p.name}</span>
-                  <ArrowRight size={14} className="text-brand-gold" />
-                </div>
+              <img 
+                src={p.img} 
+                alt={p.name} 
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors duration-500" />
+              
+              {/* Luxury Overlay */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="text-[8px] font-bold text-brand-gold uppercase tracking-[0.4em] mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                  {p.category}
+                </span>
+                <h3 className="text-xl md:text-2xl text-white font-serif uppercase tracking-tight mb-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                  {p.name}
+                </h3>
+                <div className="w-12 h-[1px] bg-brand-gold translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-150" />
+              </div>
+
+              {/* View Project Link */}
+              <div className="absolute top-8 right-8 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-white/20">
+                <ArrowRight size={16} className="text-white" />
               </div>
             </motion.div>
           ))}

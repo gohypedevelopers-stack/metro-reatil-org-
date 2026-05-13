@@ -8,9 +8,12 @@ const CustomCursor = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { damping: 25, stiffness: 250 };
+  const springConfig = { damping: 30, stiffness: 150 };
+  const scaleSpringConfig = { damping: 40, stiffness: 120 };
+  
   const x = useSpring(cursorX, springConfig);
   const y = useSpring(cursorY, springConfig);
+  const scale = useSpring(isHovering ? 2.5 : 1, scaleSpringConfig);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -41,12 +44,11 @@ const CustomCursor = () => {
         y: y,
         translateX: '-50%',
         translateY: '-50%',
-        scale: isHovering ? 2.5 : 1,
+        scale: scale,
         backgroundColor: isHovering ? 'rgba(243, 156, 18, 0.1)' : 'transparent',
       }}
-      transition={{ type: 'spring', damping: 20, stiffness: 300, mass: 0.5 }}
     >
-      <div className={`w-1 h-1 bg-brand-gold rounded-full transition-transform duration-300 ${isHovering ? 'scale-0' : 'scale-100'}`} />
+      <div className={`w-1 h-1 bg-brand-gold rounded-full transition-transform duration-700 ${isHovering ? 'scale-0' : 'scale-100'}`} />
     </motion.div>
   );
 };

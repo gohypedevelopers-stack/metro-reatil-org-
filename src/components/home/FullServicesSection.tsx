@@ -34,7 +34,7 @@ const FullServicesSection = () => {
               transition={{ delay: i * 0.05 }}
               className="group"
             >
-              <span className="text-neutral-100 text-4xl font-serif mb-4 block group-hover:text-brand-gold/20 transition-colors">0{i+1}</span>
+              <span className="text-neutral-100 text-4xl font-serif mb-4 block group-hover:text-brand-gold/20 transition-colors">{i + 1}</span>
               <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform">{s}</h4>
             </motion.div>
           ))}
