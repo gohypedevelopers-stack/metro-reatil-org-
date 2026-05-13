@@ -18,6 +18,8 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: ["400"], variable: 
 
 import SmoothScroll from "../components/SmoothScroll";
 import { Navbar } from "../components/Navbar";
+import CustomCursor from "../components/CustomCursor";
+import ScrollProgress from "../components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "Metro Retail Solutions | Premium Interior Design & Fit-out",
@@ -32,6 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} antialiased`} suppressHydrationWarning>
+        <CustomCursor />
+        <ScrollProgress />
         <SmoothScroll>
           <Navbar />
           {children}
