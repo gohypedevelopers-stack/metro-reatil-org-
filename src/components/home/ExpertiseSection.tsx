@@ -6,10 +6,10 @@ import { HardHat, Paintbrush, Building2, CheckCircle } from 'lucide-react';
 
 const ExpertiseSection = () => {
   const expertise = [
-    { title: "Technical Precision", desc: "Our engineering team ensures every measurement is perfect.", icon: <HardHat className="w-8 h-8 text-brand-gold" /> },
-    { title: "Creative Vision", desc: "Award-winning designers who push the boundaries of retail.", icon: <Paintbrush className="w-8 h-8 text-brand-gold" /> },
-    { title: "Global Sourcing", desc: "Access to elite materials and artisans worldwide.", icon: <Building2 className="w-8 h-8 text-brand-gold" /> },
-    { title: "Turnkey Execution", desc: "Seamless project management from start to finish.", icon: <CheckCircle className="w-8 h-8 text-brand-gold" /> }
+    { title: "Retail-First Design", desc: "Specialized layouts for fashion, lifestyle, and high-end retail brands.", icon: <Paintbrush className="w-8 h-8 text-brand-gold" /> },
+    { title: "In-House Manufacturing", desc: "Custom furniture and joinery produced in our own specialized facilities.", icon: <Building2 className="w-8 h-8 text-brand-gold" /> },
+    { title: "Turnkey Execution", desc: "Complete setup from tiling to fire safety, ready for product placement.", icon: <CheckCircle className="w-8 h-8 text-brand-gold" /> },
+    { title: "Technical Excellence", desc: "Integrated AC, electrical, and civil works managed by one elite team.", icon: <HardHat className="w-8 h-8 text-brand-gold" /> }
   ];
 
   return (

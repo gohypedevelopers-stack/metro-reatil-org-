@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
 
@@ -28,9 +29,14 @@ const PROJECTS = [
 ];
 
 export const Navbar = () => {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isSolid = !isHome || isScrolled || activeMenu;
 
 
   useEffect(() => {
@@ -44,7 +50,7 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full z-[100] transition-all duration-500 ${isScrolled || activeMenu
+        className={`fixed w-full z-[100] transition-all duration-500 ${isSolid
             ? 'bg-white/95 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
             : 'bg-transparent py-6'
           }`}
@@ -56,20 +62,20 @@ export const Navbar = () => {
             <img
               src="/logo.png"
               alt="Metro Retail"
-              className={`h-10 md:h-12 w-auto transition-all duration-500 ${isScrolled || activeMenu ? 'brightness-100' : 'brightness-0 invert'}`}
+              className={`h-10 md:h-12 w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
             />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            <a href="/" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/#about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>About</a>
+            <a href="/" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>About</a>
 
             <div
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('solutions')}
             >
-              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Solutions <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
               </button>
             </div>
@@ -78,22 +84,22 @@ export const Navbar = () => {
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('portfolio')}
             >
-              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Portfolio <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`} />
               </button>
             </div>
 
-            <a href="/#contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
+            <a href="/contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center gap-8">
-            <div className={`hidden xl:flex flex-col items-end ${isScrolled || activeMenu ? 'text-brand-dark' : 'text-white'}`}>
+            <div className={`hidden xl:flex flex-col items-end ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
               <span className="text-[9px] font-bold opacity-50 tracking-widest uppercase mb-1">Inquiries</span>
               <a href="tel:+971542365212" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</a>
             </div>
 
-            <button className={`hidden md:block px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${isScrolled || activeMenu
+            <button className={`hidden md:block px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${isSolid
                 ? 'bg-brand-gold text-white hover:bg-brand-dark'
                 : 'bg-white text-brand-dark hover:bg-brand-gold hover:text-white'
               }`}>
@@ -105,8 +111,8 @@ export const Navbar = () => {
               className="lg:hidden flex flex-col gap-1.5"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <div className={`w-8 h-0.5 transition-all ${isScrolled || activeMenu ? 'bg-brand-dark' : 'bg-white'}`} />
-              <div className={`w-6 h-0.5 ml-auto transition-all ${isScrolled || activeMenu ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={`w-8 h-0.5 transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={`w-6 h-0.5 ml-auto transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
             </button>
           </div>
         </div>
@@ -127,7 +133,7 @@ export const Navbar = () => {
                   <p className="text-neutral-500 text-sm leading-relaxed pr-8">
                     Comprehensive design and build solutions tailored to elevate your spatial identity and functional performance.
                   </p>
-                  <a href="/#services" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
+                  <a href="/solutions" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
                     View All Services <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                   </a>
                 </div>
@@ -137,7 +143,7 @@ export const Navbar = () => {
                     <ul className="space-y-4">
                       {cat.items.map((item, j) => (
                         <li key={j}>
-                          <a href="#" className="text-brand-dark hover:text-brand-gold text-sm transition-colors block py-1">{item}</a>
+                          <a href="/solutions" className="text-brand-dark hover:text-brand-gold text-sm transition-colors block py-1">{item}</a>
                         </li>
                       ))}
                     </ul>
@@ -164,7 +170,7 @@ export const Navbar = () => {
                 </div>
                 <div className="col-span-3 grid grid-cols-2 gap-8">
                   {PROJECTS.map((proj, i) => (
-                    <a key={i} href="#" className="group p-6 border border-neutral-50 hover:border-brand-gold/20 hover:bg-neutral-50 transition-all rounded-sm flex justify-between items-center">
+                    <a key={i} href="/portfolio" className="group p-6 border border-neutral-50 hover:border-brand-gold/20 hover:bg-neutral-50 transition-all rounded-sm flex justify-between items-center">
                       <div>
                         <h4 className="text-brand-dark font-bold text-sm uppercase tracking-wider mb-1 group-hover:text-brand-gold transition-colors">{proj.name}</h4>
                         <p className="text-neutral-400 text-xs">{proj.desc}</p>
@@ -198,7 +204,7 @@ export const Navbar = () => {
 
             <div className="flex flex-col gap-8">
               {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
-                <a key={item} href="#" className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition-colors">{item}</a>
+                <a key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition-colors">{item}</a>
               ))}
             </div>
 

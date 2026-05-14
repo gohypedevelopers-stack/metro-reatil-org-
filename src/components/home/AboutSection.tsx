@@ -74,7 +74,7 @@ const AboutSection = () => {
               className="space-y-8"
             >
               <p className="text-neutral-500 text-lg font-light leading-relaxed">
-                At Metro Retail Solutions, we don't just build spaces; we architect experiences. Our approach to interior design is rooted in the fusion of brand identity and spatial ergonomics—ensuring every boutique, office, and lounge we create is as functional as it is visually arresting.
+                At Metro Retail Solutions, we specialize in end-to-end retail space execution. From mall boutiques to high-street setups and airport retail, we provide a complete turnkey solution. Our goal is simple: to deliver a space so complete that your brand only needs to place its products and start operations immediately.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">

@@ -45,7 +45,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
-              {"Architectural".split("").map((char, i) => (
+              {"Retail Fit-Out".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   initial={{ y: "100%" }}
@@ -58,7 +58,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
               ))}
             </div>
             <div className="overflow-hidden block">
-              {"Retail Design".split("").map((char, i) => (
+              {"Turnkey Excellence".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   initial={{ y: "100%" }}
@@ -76,12 +76,12 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-12">
             <Magnetic>
-              <a href="#projects" className="px-12 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="px-12 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="#contact" className="text-white text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
+              <a href="/contact" className="text-white text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
                 Start a Conversation
               </a>
             </Magnetic>

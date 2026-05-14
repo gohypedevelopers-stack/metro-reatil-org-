@@ -18,6 +18,7 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: ["400"], variable: 
 
 import SmoothScroll from "../components/SmoothScroll";
 import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 import CustomCursor from "../components/CustomCursor";
 import ScrollProgress from "../components/ScrollProgress";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>

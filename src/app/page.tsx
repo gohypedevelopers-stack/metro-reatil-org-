@@ -15,7 +15,7 @@ import FullServicesSection from '../components/home/FullServicesSection';
 import Testimonials from '../components/home/Testimonials';
 import WhatsAppCTA from '../components/home/WhatsAppCTA';
 import AboutSummary from '../components/home/AboutSummary';
-import Footer from '../components/home/Footer';
+// import Footer from '../components/home/Footer'; // Removed as it is now in RootLayout
 
 export default function Page() {
   const [hasMounted, setHasMounted] = useState(false);
@@ -55,7 +55,6 @@ export default function Page() {
 
         <WhatsAppCTA />
         <AboutSummary />
-        <Footer />
       </div>
     </div>
   );

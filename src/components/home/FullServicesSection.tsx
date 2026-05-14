@@ -5,9 +5,9 @@ import React from 'react';
 
 const FullServicesSection = () => {
   const allServices = [
-    "Commercial Fit-out", "Retail Design", "Joinery & Millwork", "MEP Solutions",
-    "Project Management", "3D Rendering", "Civil Works", "Glass & Metal Work",
-    "Flooring Solutions", "Lighting Design", "Kitchen Equipment", "Acoustic Solutions"
+    "Retail Store Design", "Mall Store Fit-Outs", "High-Street Retail Setup", "Airport Retail Spaces",
+    "Furniture Manufacturing", "In-House Joinery", "AC & HVAC Work", "Fire Safety Systems",
+    "Tiling & Civil Work", "End-to-End Turnkey Solutions", "MEP Engineering", "Project Management"
   ];
 
   return (
