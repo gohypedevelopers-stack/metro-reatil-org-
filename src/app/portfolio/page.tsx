@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Filter } from 'lucide-react';
+import { ArrowRight, Filter, ChevronRight } from 'lucide-react';
 
 const CATEGORIES = ["All", "Mall Stores", "High-Street", "Airport Retail", "Boutiques"];
 
@@ -33,6 +33,7 @@ const PROJECTS = [
     category: "Boutiques",
     location: "Galleria Mall, Abu Dhabi",
     image: "https://images.unsplash.com/photo-1550966842-2849a2220822?auto=format&fit=crop&q=80",
+    desc: "Bespoke interior design and execution for a luxury couture brand."
   },
   {
     title: "Zenith Offices",
@@ -66,16 +67,16 @@ export default function PortfolioPage() {
               </p>
             </div>
             
-            {/* Filter */}
-            <div className="flex flex-wrap gap-4 pb-2">
+            {/* Filter - Sharpened */}
+            <div className="flex flex-wrap gap-2 pb-2">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${
+                  className={`px-8 py-4 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 border ${
                     filter === cat 
-                    ? 'bg-brand-dark text-white' 
-                    : 'bg-neutral-50 text-neutral-400 hover:bg-neutral-100'
+                    ? 'bg-brand-dark text-white border-brand-dark' 
+                    : 'bg-transparent text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
                   }`}
                 >
                   {cat}
@@ -91,38 +92,45 @@ export default function PortfolioPage() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <motion.div 
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((proj) => (
+              {filteredProjects.map((proj, index) => (
                 <motion.div
                   key={proj.title}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-6">
+                  <div className="relative aspect-[4/5] overflow-hidden mb-8">
                     <img 
                       src={proj.image} 
                       alt={proj.title} 
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center scale-50 group-hover:scale-100 transition-transform duration-500">
-                        <ArrowRight className="text-brand-gold" size={24} />
+                    {/* Sharpened Overlay */}
+                    <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12">
+                      <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                        <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-2 block">{proj.category}</span>
+                        <h3 className="text-2xl font-serif text-white mb-6">{proj.title}</h3>
+                        <div className="w-12 h-[1px] bg-white/30 mb-6" />
+                        <button className="flex items-center gap-4 text-white text-[10px] font-bold uppercase tracking-widest">
+                          View Project <ChevronRight size={14} />
+                        </button>
                       </div>
                     </div>
-                    <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest text-brand-dark">
+                    {/* Category Tag - Sharpened */}
+                    <div className="absolute top-0 right-0 bg-white px-6 py-3 text-[9px] font-bold uppercase tracking-widest text-brand-dark group-hover:opacity-0 transition-opacity">
                       {proj.category}
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-start">
-                      <h3 className="text-xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors">{proj.title}</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="text-xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors duration-500">{proj.title}</h3>
                       <span className="text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location}</span>
                     </div>
                     <p className="text-neutral-500 text-sm font-light leading-relaxed line-clamp-2">
@@ -142,19 +150,19 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Stats Banner */}
+      {/* Stats Banner - Sharpened */}
       <section className="py-32 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {[
               { label: "Retail Spaces", value: "85+" },
               { label: "Corporate Offices", value: "120+" },
               { label: "Luxury Residences", value: "40+" },
               { label: "Hospitality Outlets", value: "25+" }
             ].map((stat, i) => (
-              <div key={i}>
-                <div className="text-4xl font-serif text-brand-dark mb-2">{stat.value}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-brand-gold">{stat.label}</div>
+              <div key={i} className="text-left border-l border-neutral-200 pl-8">
+                <div className="text-5xl font-serif text-brand-dark mb-4">{stat.value}</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-loose">{stat.label}</div>
               </div>
             ))}
           </div>

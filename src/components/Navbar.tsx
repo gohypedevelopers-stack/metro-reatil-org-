@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 
 
 const SOLUTIONS = [
@@ -51,8 +51,8 @@ export const Navbar = () => {
     <>
       <nav
         className={`fixed w-full z-[100] transition-all duration-500 ${isSolid
-            ? 'bg-white/95 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
-            : 'bg-transparent py-6'
+            ? 'bg-white/98 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
+            : 'bg-transparent py-8'
           }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
@@ -62,20 +62,20 @@ export const Navbar = () => {
             <img
               src="/logo.png"
               alt="Metro Retail"
-              className={`h-10 md:h-12 w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
+              className={`h-8 md:h-10 w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
             />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            <a href="/" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/about" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>About</a>
+          <div className="hidden lg:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
+            <a href="/" className={`text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/about" className={`text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>About</a>
 
             <div
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('solutions')}
             >
-              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <button className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Solutions <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
               </button>
             </div>
@@ -84,71 +84,74 @@ export const Navbar = () => {
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('portfolio')}
             >
-              <button className={`flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <button className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Portfolio <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`} />
               </button>
             </div>
 
-            <a href="/contact" className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
+            <a href="/contact" className={`text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center gap-8">
             <div className={`hidden xl:flex flex-col items-end ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-              <span className="text-[9px] font-bold opacity-50 tracking-widest uppercase mb-1">Inquiries</span>
+              <span className="text-[8px] font-bold opacity-40 tracking-[0.3em] uppercase mb-1">Direct Line</span>
               <a href="tel:+971542365212" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</a>
             </div>
 
-            <button className={`hidden md:block px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${isSolid
-                ? 'bg-brand-gold text-white hover:bg-brand-dark'
-                : 'bg-white text-brand-dark hover:bg-brand-gold hover:text-white'
+            <a href="/contact" className={`hidden md:block px-10 py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
+                ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
+                : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
               }`}>
-              Contact Us
-            </button>
+              Request Quote
+            </a>
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden flex flex-col gap-1.5"
+              className="lg:hidden flex flex-col gap-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <div className={`w-8 h-0.5 transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
-              <div className={`w-6 h-0.5 ml-auto transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={`w-8 h-[1px] transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={`w-5 h-[1px] ml-auto transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
             </button>
           </div>
         </div>
 
-        {/* Mega Menu Dropdowns */}
+        {/* Mega Menu Dropdowns - Sharpened */}
         <AnimatePresence>
           {activeMenu === 'solutions' && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-xl py-16"
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-2xl py-20"
             >
-              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-4 gap-12">
-                <div className="col-span-1 border-r border-neutral-100">
-                  <h3 className="text-2xl font-serif text-brand-dark mb-6">Our Expertise</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed pr-8">
+              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-12 gap-16">
+                <div className="col-span-4 border-r border-neutral-100 pr-16">
+                  <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-6 block">Capabilities</span>
+                  <h3 className="text-4xl font-serif text-brand-dark mb-8 leading-tight">Engineering <br />Future Spaces</h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed mb-10 font-light">
                     Comprehensive design and build solutions tailored to elevate your spatial identity and functional performance.
                   </p>
-                  <a href="/solutions" className="inline-flex items-center gap-4 text-brand-gold text-[10px] font-bold uppercase tracking-widest mt-8 group">
-                    View All Services <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+                  <a href="/solutions" className="inline-flex items-center gap-4 text-brand-dark text-[10px] font-bold uppercase tracking-[0.3em] group border-b border-brand-dark pb-1">
+                    Explore All <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
                   </a>
                 </div>
-                {SOLUTIONS.map((cat, i) => (
-                  <div key={i} className="col-span-1">
-                    <h4 className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-8">{cat.category}</h4>
-                    <ul className="space-y-4">
-                      {cat.items.map((item, j) => (
-                        <li key={j}>
-                          <a href="/solutions" className="text-brand-dark hover:text-brand-gold text-sm transition-colors block py-1">{item}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <div className="col-span-8 grid grid-cols-3 gap-12">
+                  {SOLUTIONS.map((cat, i) => (
+                    <div key={i}>
+                      <h4 className="text-brand-dark text-[10px] font-bold uppercase tracking-[0.3em] mb-10 border-b border-neutral-100 pb-4">{cat.category}</h4>
+                      <ul className="space-y-6">
+                        {cat.items.map((item, j) => (
+                          <li key={j}>
+                            <a href="/solutions" className="text-neutral-400 hover:text-brand-gold text-[11px] font-bold uppercase tracking-widest transition-colors block">{item}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           )}
@@ -158,26 +161,28 @@ export const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-xl py-16"
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-2xl py-20"
             >
-              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-4 gap-12">
-                <div className="col-span-1 border-r border-neutral-100">
-                  <h3 className="text-2xl font-serif text-brand-dark mb-6">Selected Works</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed pr-8">
+              <div className="max-w-[1600px] mx-auto px-12 grid grid-cols-12 gap-16">
+                <div className="col-span-4 border-r border-neutral-100 pr-16">
+                  <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-6 block">Portfolio</span>
+                  <h3 className="text-4xl font-serif text-brand-dark mb-8 leading-tight">Selected <br />Achievements</h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed mb-10 font-light">
                     Discover how we transform visions into remarkable realities across various sectors in the GCC.
                   </p>
+                  <a href="/portfolio" className="inline-flex items-center gap-4 text-brand-dark text-[10px] font-bold uppercase tracking-[0.3em] group border-b border-brand-dark pb-1">
+                    View Portfolio <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
+                  </a>
                 </div>
-                <div className="col-span-3 grid grid-cols-2 gap-8">
+                <div className="col-span-8 grid grid-cols-2 gap-6">
                   {PROJECTS.map((proj, i) => (
-                    <a key={i} href="/portfolio" className="group p-6 border border-neutral-50 hover:border-brand-gold/20 hover:bg-neutral-50 transition-all rounded-sm flex justify-between items-center">
+                    <a key={i} href="/portfolio" className="group p-8 border border-neutral-100 hover:border-brand-gold/30 hover:bg-neutral-50 transition-all duration-500 flex justify-between items-center">
                       <div>
-                        <h4 className="text-brand-dark font-bold text-sm uppercase tracking-wider mb-1 group-hover:text-brand-gold transition-colors">{proj.name}</h4>
-                        <p className="text-neutral-400 text-xs">{proj.desc}</p>
+                        <h4 className="text-brand-dark font-bold text-[11px] uppercase tracking-[0.2em] mb-2 group-hover:text-brand-gold transition-colors">{proj.name}</h4>
+                        <p className="text-neutral-400 text-[11px] font-light">{proj.desc}</p>
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight size={16} className="text-brand-gold" />
-                      </div>
+                      <ChevronRight size={18} className="text-neutral-200 group-hover:text-brand-gold group-hover:translate-x-2 transition-all" />
                     </a>
                   ))}
                 </div>
@@ -187,42 +192,57 @@ export const Navbar = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Sharpened */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: "tween", duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 bg-white z-[150] lg:hidden p-8 flex flex-col"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-brand-dark/60 backdrop-blur-sm z-[150] lg:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="flex justify-between items-center mb-16">
-              <img src="/logo.png" alt="Metro Retail" className="h-10" />
-              <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[10px] font-bold uppercase tracking-widest border border-brand-dark/10 px-6 py-2 rounded-full">Close</button>
-            </div>
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: "tween", duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute right-0 top-0 w-[85%] h-full bg-white p-12 flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-24">
+                <img src="/logo.png" alt="Metro Retail" className="h-8" />
+                <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-6 py-3">Close</button>
+              </div>
 
-            <div className="flex flex-col gap-8">
-              {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
-                <a key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition-colors">{item}</a>
-              ))}
-            </div>
+              <div className="flex flex-col gap-10">
+                {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
+                  <a 
+                    key={item} 
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                    className="text-5xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between group"
+                  >
+                    {item}
+                    <ChevronRight size={24} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-brand-gold" />
+                  </a>
+                ))}
+              </div>
 
-            <div className="mt-auto pt-12 border-t border-neutral-100 space-y-6">
-              <div className="flex items-center gap-4 text-brand-dark">
-                <Phone size={18} className="text-brand-gold" />
-                <span className="font-bold">+971 54 236 5212</span>
+              <div className="mt-auto pt-16 border-t border-neutral-100 space-y-8">
+                <div className="flex flex-col gap-2">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-neutral-400">Get in touch</span>
+                  <a href="tel:+971542365212" className="text-xl font-bold text-brand-dark">+971 54 236 5212</a>
+                  <a href="mailto:info@metroretail.ae" className="text-sm text-neutral-500">info@metroretail.ae</a>
+                </div>
+                <div className="flex gap-8">
+                  {[Instagram, Linkedin, Facebook].map((Icon, i) => (
+                    <a key={i} href="#" className="text-neutral-400 hover:text-brand-gold transition-colors">
+                      <Icon size={20} />
+                    </a>
+                  ))}
+                </div>
               </div>
-              <div className="flex items-center gap-4 text-brand-dark">
-                <Mail size={18} className="text-brand-gold" />
-                <span className="font-bold">sales@metroretail.solutions</span>
-              </div>
-              <div className="flex gap-6 pt-4">
-                <Instagram size={20} className="text-neutral-400" />
-                <Linkedin size={20} className="text-neutral-400" />
-                <Facebook size={20} className="text-neutral-400" />
-              </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

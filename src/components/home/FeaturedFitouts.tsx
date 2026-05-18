@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const FeaturedFitouts = () => {
   const [activeFilter, setActiveFilter] = useState('ALL');
-  
+
   const projects = [
     { name: "ROLEX BOUTIQUE", category: "RETAIL", img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop" },
     { name: "ZEN RESIDENCE", category: "RESIDENTIAL", img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" },
@@ -51,13 +51,13 @@ const FeaturedFitouts = () => {
               exit={{ opacity: 0 }}
               className="relative group overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[4/5] border-[0.5px] border-white/5"
             >
-              <img 
-                src={p.img} 
-                alt={p.name} 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" 
+              <img
+                src={p.img}
+                alt={p.name}
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors duration-500" />
-              
+
               {/* Luxury Overlay */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-[8px] font-bold text-brand-gold uppercase tracking-[0.4em] mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
