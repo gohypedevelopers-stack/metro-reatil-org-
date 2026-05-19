@@ -5,7 +5,7 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-32 md:py-48 bg-[#fdfdfb] relative overflow-hidden">
+    <section id="about" className="pt-4 pb-20 md:pt-6 md:pb-32 bg-[#fdfdfb] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="relative order-2 lg:order-1">
@@ -25,9 +25,9 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-brand-dark/10" />
               </div>
             </motion.div>
-            
+
             {/* Circular Text Badge */}
-            <motion.div 
+            <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute -top-4 -right-4 w-32 h-32 hidden md:block"
@@ -60,11 +60,11 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-5xl md:text-7xl text-brand-dark mb-12 leading-[1.1] uppercase font-light"
+              className="text-4xl md:text-6xl text-brand-dark mb-12 leading-[1.1] uppercase font-light"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Designing <br />
-              <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Tomorrow's Spaces</span>
+              <span className="text-brand-gold italic font-normal block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Tomorrow's Spaces</span>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ const AboutSection = () => {
               <p className="text-neutral-500 text-lg font-light leading-relaxed">
                 At Metro Retail Solutions, we specialize in end-to-end retail space execution. From mall boutiques to high-street setups and airport retail, we provide a complete turnkey solution. Our goal is simple: to deliver a space so complete that your brand only needs to place its products and start operations immediately.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
                 <div className="group">
                   <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">

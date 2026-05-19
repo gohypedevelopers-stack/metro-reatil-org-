@@ -5,7 +5,7 @@ import React from 'react';
 
 const AboutSummary = () => {
   return (
-    <section className="py-32 bg-brand-dark text-white overflow-hidden">
+    <section className="py-20 bg-brand-dark text-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <motion.div
@@ -15,8 +15,8 @@ const AboutSummary = () => {
             className="relative"
           >
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-8 block">Our Legacy</span>
-            <h2 className="text-4xl md:text-6xl font-serif mb-12 uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Precision in Every <br /> <span className="text-neutral-500 italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
+            <h2 className="text-4xl md:text-6xl font-serif mb-12 uppercase leading-tight text-white" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Precision in Every <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
             </h2>
             <div className="space-y-8 text-neutral-400 font-light leading-relaxed text-lg">
               <p>
@@ -42,9 +42,9 @@ const AboutSummary = () => {
                   viewport={{ once: true }}
                   className="aspect-[3/4] overflow-hidden rounded-sm relative z-10"
                 >
-                  <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" 
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                     alt="Founder"
                   />
                 </motion.div>

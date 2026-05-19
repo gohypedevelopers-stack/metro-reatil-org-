@@ -35,7 +35,7 @@ const ServicesSlider = () => {
   ];
 
   return (
-    <section id="services-slider" className="py-32 bg-white overflow-hidden">
+    <section id="services-slider" className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-wrap justify-center gap-4 md:gap-12 mb-20">
           {services.map((s, i) => (

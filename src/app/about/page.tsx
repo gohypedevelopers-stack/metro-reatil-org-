@@ -31,7 +31,7 @@ const VALUES = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-white pt-32">
+    <div className="bg-white pt-20">
       {/* Hero Section - Cinematic */}
       <section className="relative h-[70vh] flex items-center overflow-hidden bg-brand-dark">
         <motion.div 
@@ -61,10 +61,11 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="text-5xl md:text-8xl font-serif text-white mb-10 leading-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-10 leading-tight uppercase"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              The End-to-End <br />
-              <span className="italic text-brand-gold">Retail Partner</span>
+              THE END-TO-END <br />
+              <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -83,7 +84,9 @@ export default function AboutPage() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
             <div className="lg:col-span-6">
-              <h2 className="text-5xl font-serif text-brand-dark mb-12">Building Spaces That Define Brands</h2>
+              <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                BUILDING SPACES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+              </h2>
               <div className="space-y-8 mb-16">
                 <p className="text-neutral-500 text-lg leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
@@ -124,8 +127,9 @@ export default function AboutPage() {
       <section className="py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-32">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Our Values</span>
-            <h2 className="text-5xl font-serif text-brand-dark mb-8">The Principles of Metro</h2>
+            <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              THE PRINCIPLES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
+            </h2>
             <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
           </div>
 
@@ -148,7 +152,9 @@ export default function AboutPage() {
         </div>
         
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
-          <h2 className="text-5xl md:text-7xl font-serif text-white mb-10">Ready to Start?</h2>
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            READY TO COLLABORATE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
+          </h2>
           <p className="text-neutral-400 text-xl font-light max-w-2xl mx-auto mb-16">
             Let's collaborate to build a space that defines your brand and exceeds your operational expectations.
           </p>

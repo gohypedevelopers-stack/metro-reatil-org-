@@ -38,7 +38,7 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-12 md:mb-32 relative">
           <motion.h2
@@ -47,51 +47,40 @@ const Testimonials = () => {
             viewport={{ once: true, amount: 0.5 }}
             className="inline-block select-none leading-[0.85]"
           >
-            {/* Top Line: W (Cursive) + HAT (Gold) */}
+            {/* Top Line: WHAT OUR CLIENTS (Black) */}
             <div
-              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-gold flex justify-center items-center"
+              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              <motion.span
-                variants={{
-                  hidden: { scale: 0, opacity: 0 },
-                  visible: { scale: 1, opacity: 1 }
-                }}
-                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="font-normal"
-                style={{ fontFamily: 'var(--font-great-vibes), cursive', textTransform: 'none' }}
-              >
-                W
-              </motion.span>
-              {"hat".split("").map((char, i) => (
+              {"WHAT OUR CLIENTS".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   variants={{
                     hidden: { y: "100%", opacity: 0 },
                     visible: { y: 0, opacity: 1 }
                   }}
-                  transition={{ duration: 0.8, delay: 0.3 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                  className="inline-block"
+                  transition={{ duration: 0.8, delay: 0.2 + (i * 0.04), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block whitespace-pre"
                 >
-                  {char}
+                  {char === " " ? "\u00A0" : char}
                 </motion.span>
               ))}
             </div>
 
-            {/* Bottom Line: CUSTOMERS SAY (Black) */}
+            {/* Bottom Line: Say About Us (Gold, Italic) */}
             <div
-              className="text-4xl md:text-8xl uppercase tracking-tight -mt-1 md:-mt-2 flex justify-center items-center text-black"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center whitespace-nowrap"
+              style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
             >
-              {"CUSTOMERS SAY".split("").map((char, i) => (
+              {"Say About Us".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   variants={{
                     hidden: { y: "100%", opacity: 0 },
                     visible: { y: 0, opacity: 1 }
                   }}
-                  transition={{ duration: 0.8, delay: 0.7 + (i * 0.05), ease: [0.215, 0.61, 0.355, 1] }}
-                  className="inline-block whitespace-pre"
+                  transition={{ duration: 0.8, delay: 0.8 + (i * 0.04), ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block whitespace-pre font-normal"
                 >
                   {char === " " ? "\u00A0" : char}
                 </motion.span>

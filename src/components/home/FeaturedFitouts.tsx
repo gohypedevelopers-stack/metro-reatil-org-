@@ -19,11 +19,11 @@ const FeaturedFitouts = () => {
   const filtered = activeFilter === 'ALL' ? projects : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Explore Our Featured <br /> <span className="text-brand-gold italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Fitout Makeovers</span>
+            EXPLORE OUR FEATURED <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Fitout Makeovers</span>
           </h2>
           <div className="flex justify-center gap-8 md:gap-12 flex-wrap">
             {['ALL', 'RESIDENTIAL', 'OFFICE', 'RETAIL', 'F&B'].map((f) => (

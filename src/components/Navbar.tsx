@@ -51,8 +51,8 @@ export const Navbar = () => {
     <>
       <nav
         className={`fixed w-full z-[100] transition-all duration-500 ${isSolid
-            ? 'bg-white/98 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
-            : 'bg-transparent py-8'
+          ? 'bg-white/98 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
+          : 'bg-transparent py-8'
           }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
@@ -62,7 +62,7 @@ export const Navbar = () => {
             <img
               src="/logo.png"
               alt="Metro Retail"
-              className={`h-8 md:h-10 w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
+              className={`h-[30px] md:h-[30px] w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
             />
           </a>
 
@@ -96,12 +96,12 @@ export const Navbar = () => {
           <div className="flex items-center gap-8">
             <div className={`hidden xl:flex flex-col items-end ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
               <span className="text-[8px] font-bold opacity-40 tracking-[0.3em] uppercase mb-1">Direct Line</span>
-              <a href="tel:+971542365212" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+971 54 236 5212</a>
+              <a href="tel:+919999999999" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+91 XXXXX XXXXX</a>
             </div>
 
             <a href="/contact" className={`hidden md:block px-10 py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
-                ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
-                : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
+              ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
+              : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
               }`}>
               Request Quote
             </a>
@@ -211,15 +211,15 @@ export const Navbar = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-24">
-                <img src="/logo.png" alt="Metro Retail" className="h-8" />
+                <img src="/logo.png" alt="Metro Retail" className="h-[30px] w-auto" />
                 <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-6 py-3">Close</button>
               </div>
 
               <div className="flex flex-col gap-10">
                 {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
-                  <a 
-                    key={item} 
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                  <a
+                    key={item}
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                     className="text-5xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between group"
                   >
                     {item}
@@ -231,7 +231,7 @@ export const Navbar = () => {
               <div className="mt-auto pt-16 border-t border-neutral-100 space-y-8">
                 <div className="flex flex-col gap-2">
                   <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-neutral-400">Get in touch</span>
-                  <a href="tel:+971542365212" className="text-xl font-bold text-brand-dark">+971 54 236 5212</a>
+                  <a href="tel:+919999999999" className="text-xl font-bold text-brand-dark">+91 XXXXX XXXXX</a>
                   <a href="mailto:info@metroretail.ae" className="text-sm text-neutral-500">info@metroretail.ae</a>
                 </div>
                 <div className="flex gap-8">

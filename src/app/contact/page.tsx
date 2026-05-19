@@ -7,12 +7,12 @@ import { Mail, Phone, MapPin, Clock, ArrowRight, Instagram, Linkedin, Facebook, 
 const CONTACT_INFO = [
   {
     title: "Visit Our Headquarters",
-    details: ["Industrial Area 2,", "Sharjah, United Arab Emirates"],
+    details: ["XYZ Industrial Area,", "India"],
     icon: MapPin
   },
   {
     title: "Direct Inquiries",
-    details: ["+971 54 236 5212", "info@metroretail.ae"],
+    details: ["+91 XXXXX XXXXX", "info@metroretail.ae"],
     icon: Phone
   },
   {
@@ -24,14 +24,13 @@ const CONTACT_INFO = [
 
 export default function ContactPage() {
   return (
-    <div className="bg-white pt-32">
+    <div className="bg-white pt-20">
       {/* Header */}
       <section className="py-24 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Get In Touch</span>
-            <h1 className="text-5xl md:text-7xl font-serif text-brand-dark mb-8 leading-tight">
-              Let's Discuss Your <span className="italic text-brand-gold">Next Project</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              LET'S DISCUSS YOUR <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Next Project</span>
             </h1>
             <p className="text-neutral-500 text-lg font-light leading-relaxed">
               Whether you have a specific project in mind or just want to learn more about our services, we're here to help.
@@ -46,7 +45,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
             {/* Contact Form - Sharpened */}
             <div className="lg:col-span-7">
-              <h2 className="text-4xl font-serif text-brand-dark mb-16">Send us a message</h2>
+              <h2 className="text-3xl font-serif text-brand-dark mb-16 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Send us a message</h2>
               <form className="space-y-12" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="space-y-4">
@@ -72,7 +71,7 @@ export default function ContactPage() {
                     <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Phone Number</label>
                     <input 
                       type="tel" 
-                      placeholder="+971 -- --- ----" 
+                      placeholder="+91 XXXXX XXXXX" 
                       className="w-full bg-transparent border-b border-neutral-200 py-4 outline-none focus:border-brand-gold transition-colors text-base font-light"
                     />
                   </div>
@@ -106,7 +105,7 @@ export default function ContactPage() {
             {/* Contact Sidebar - Sharpened */}
             <div className="lg:col-span-5 space-y-24">
               <div className="bg-neutral-50 p-12 border border-neutral-100">
-                <h2 className="text-3xl font-serif text-brand-dark mb-12">Information</h2>
+                <h2 className="text-2xl font-serif text-brand-dark mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Information</h2>
                 <div className="space-y-12">
                   {CONTACT_INFO.map((info, i) => (
                     <div key={i} className="flex gap-8">

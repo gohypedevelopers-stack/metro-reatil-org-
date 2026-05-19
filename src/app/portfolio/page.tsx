@@ -10,37 +10,44 @@ const PROJECTS = [
   {
     title: "Vogue Boutique",
     category: "Mall Stores",
-    location: "Dubai Mall, UAE",
+    location: "Mumbai Mall, India",
     image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80",
     desc: "A high-end fashion boutique featuring custom joinery and integrated lighting systems."
   },
   {
     title: "Urban Travel Luggage",
     category: "Airport Retail",
-    location: "DXB Terminal 3, UAE",
+    location: "BOM Airport, India",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80",
     desc: "Specialized airport retail fit-out for a global luggage brand with high-security display systems."
   },
   {
     title: "Elegance Apparel",
     category: "High-Street",
-    location: "Jumeirah Road, Dubai",
+    location: "XYZ Street, India",
     image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80",
     desc: "Turnkey execution for a lifestyle brand, including full civil and MEP works."
   },
   {
     title: "Classic Couture",
     category: "Boutiques",
-    location: "Galleria Mall, Abu Dhabi",
-    image: "https://images.unsplash.com/photo-1550966842-2849a2220822?auto=format&fit=crop&q=80",
+    location: "XYZ Galleria, India",
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop",
     desc: "Bespoke interior design and execution for a luxury couture brand."
   },
   {
     title: "Zenith Offices",
     category: "Commercial",
-    location: "DIFC, Dubai",
+    location: "XYZ Business District, India",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80",
     desc: "Minimalist executive suite with panoramic views and seamless tech integration."
+  },
+  {
+    title: "Luxe Department Store",
+    category: "Mall Stores",
+    location: "Luxe Mall, India",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
+    desc: "An ultra-modern concept store for a high-end luxury brand featuring custom brass detailing and premium finishes."
   }
 ];
 
@@ -52,15 +59,14 @@ export default function PortfolioPage() {
     : PROJECTS.filter(p => p.category === filter);
 
   return (
-    <div className="bg-white pt-32">
+    <div className="bg-white pt-20">
       {/* Header */}
       <section className="py-24 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-end gap-12">
             <div className="max-w-2xl">
-              <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Our Portfolio</span>
-              <h1 className="text-5xl md:text-7xl font-serif text-brand-dark mb-8 leading-tight">
-                Selected <span className="italic text-brand-gold">Works</span>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                SELECTED <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Works Showcase</span>
               </h1>
               <p className="text-neutral-500 text-lg font-light leading-relaxed">
                 A showcase of our commitment to excellence across retail, commercial, and residential sectors.

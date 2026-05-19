@@ -5,19 +5,12 @@ import React from 'react';
 
 const ManufacturingSection = () => {
   return (
-    <section className="py-32 bg-[#f9f9f8]">
+    <section className="py-20 bg-[#f9f9f8]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-8 block"
-            >
-              Artisanal Craftsmanship
-            </motion.span>
-            <h2 className="text-5xl md:text-7xl font-serif text-brand-dark mb-10 uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Visit Our In-House <br /> <span className="text-brand-gold italic" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
+            <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-10 uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12 max-w-xl">
               India's Most trusted Fitout and In-house manufacturing specialist. Our 20,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.

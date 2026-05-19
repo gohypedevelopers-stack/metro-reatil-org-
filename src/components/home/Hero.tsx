@@ -15,9 +15,9 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-black/60 z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-          alt="Luxury Interior" 
+        <img
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+          alt="Luxury Interior"
           className="w-full h-full object-cover"
         />
         <video
@@ -45,31 +45,35 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
-              {"Retail Fit-Out".split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ y: "100%" }}
-                  animate={isLoaded ? { y: 0 } : {}}
-                  transition={{ duration: 1, delay: 0.8 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
-                  className="inline-block text-white uppercase font-light"
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+              <span className="whitespace-nowrap">
+                {"Retail Fit-Out".split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ y: "100%" }}
+                    animate={isLoaded ? { y: 0 } : {}}
+                    transition={{ duration: 1, delay: 0.8 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
+                    className="inline-block text-white uppercase font-light"
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+              </span>
             </div>
             <div className="overflow-hidden block">
-              {"Turnkey Excellence".split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ y: "100%" }}
-                  animate={isLoaded ? { y: 0 } : {}}
-                  transition={{ duration: 1, delay: 1.2 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
-                  className="inline-block text-brand-gold italic"
-                  style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+              <span className="whitespace-nowrap">
+                {"Turnkey Excellence".split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ y: "100%" }}
+                    animate={isLoaded ? { y: 0 } : {}}
+                    transition={{ duration: 1, delay: 1.2 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
+                    className="inline-block text-brand-gold italic text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal"
+                    style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+              </span>
             </div>
           </motion.h1>
 

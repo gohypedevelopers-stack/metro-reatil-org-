@@ -13,12 +13,11 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-20">
-          <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 block">Our Core</span>
           <h2 className="text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Expertise
+            OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
