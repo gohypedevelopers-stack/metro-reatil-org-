@@ -37,12 +37,12 @@ const ServicesSlider = () => {
   return (
     <section id="services-slider" className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-12 mb-20">
+        <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-14 md:mb-20">
           {services.map((s, i) => (
             <button
               key={i}
               onClick={() => setActiveTab(i)}
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-300 hover:text-neutral-500'}`}
+              className={`text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.4em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-300 hover:text-neutral-500'}`}
             >
               {s.title}
               {activeTab === i && (
@@ -59,13 +59,13 @@ const ServicesSlider = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="grid lg:grid-cols-2 gap-20 items-center"
+            className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
           >
             <div className="aspect-[16/10] overflow-hidden rounded-sm shadow-2xl">
               <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
             </div>
             <div className="lg:pl-10">
-              <h3 className="text-4xl md:text-5xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-6 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 {services[activeTab].title}
               </h3>
               <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12">

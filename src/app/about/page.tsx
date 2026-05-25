@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section - Cinematic */}
-      <section className="relative h-[70vh] flex items-center overflow-hidden bg-brand-dark">
+      <section className="relative min-h-[620px] md:h-[70vh] flex items-center overflow-hidden bg-brand-dark">
         <motion.div 
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -61,7 +61,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-10 leading-tight uppercase"
+              className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 md:mb-10 leading-tight uppercase"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               THE END-TO-END <br />
@@ -71,7 +71,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-neutral-300 text-xl font-light leading-relaxed max-w-xl"
+              className="text-neutral-300 text-base md:text-xl font-light leading-relaxed max-w-xl"
             >
               Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
             </motion.p>
@@ -80,14 +80,14 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section - Sharpened */}
-      <section className="py-48 border-b border-neutral-100">
+      <section className="py-20 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-24 items-center">
             <div className="lg:col-span-6">
-              <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 BUILDING SPACES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-8 mb-16">
+              <div className="space-y-6 md:space-y-8 mb-12 md:mb-16">
                 <p className="text-neutral-500 text-lg leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
                 </p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
                     <div className="text-4xl font-serif text-brand-dark mb-2">{stat.value}</div>
@@ -124,10 +124,10 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section - Sharpened */}
-      <section className="py-48 bg-neutral-50">
+      <section className="py-20 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center max-w-2xl mx-auto mb-32">
-            <h2 className="text-4xl md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
+            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               THE PRINCIPLES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
             {VALUES.map((val, i) => (
-              <div key={i} className="bg-white p-16 hover:bg-neutral-50 transition-colors duration-500 group">
+              <div key={i} className="bg-white p-8 md:p-12 lg:p-16 hover:bg-neutral-50 transition-colors duration-500 group">
                 <val.icon className="text-brand-gold mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
                 <h3 className="text-2xl font-serif text-brand-dark mb-6">{val.title}</h3>
                 <p className="text-neutral-500 text-base font-light leading-relaxed">{val.desc}</p>
@@ -146,21 +146,21 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section - Sharpened */}
-      <section className="py-48 bg-brand-dark relative overflow-hidden">
+      <section className="py-20 md:py-32 lg:py-48 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-gold blur-[200px] -translate-y-1/2 translate-x-1/2" />
         </div>
         
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-serif text-white mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             READY TO COLLABORATE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
           </h2>
-          <p className="text-neutral-400 text-xl font-light max-w-2xl mx-auto mb-16">
+          <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-10 md:mb-16">
             Let's collaborate to build a space that defines your brand and exceeds your operational expectations.
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center gap-8 px-16 py-6 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
+            className="inline-flex items-center justify-center gap-4 md:gap-8 px-8 md:px-16 py-5 md:py-6 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.25em] md:tracking-[0.4em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
           >
             Get in Touch <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </a>

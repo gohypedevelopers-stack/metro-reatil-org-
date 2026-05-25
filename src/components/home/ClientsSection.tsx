@@ -26,17 +26,17 @@ const ClientsSection = () => {
   return (
     <section className="pt-16 pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex justify-center mb-32 relative">
+        <div className="flex justify-center mb-16 md:mb-32 relative">
           <div className="text-center">
             <motion.h2
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
-              className="inline-block select-none leading-[0.85]"
+              className="inline-block select-none leading-[0.95] md:leading-[0.85] mobile-heading-balance"
             >
               {/* Top Line: OUR CLIENTS (Black) */}
               <div
-                className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4"
+                className="text-3xl sm:text-4xl md:text-6xl uppercase tracking-[0.06em] md:tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4 flex-wrap"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {"OUR CLIENTS".split("").map((char, i) => (
@@ -56,7 +56,7 @@ const ClientsSection = () => {
 
               {/* Bottom Line: Strategic Partnerships (Gold, Italic) */}
               <div
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center whitespace-nowrap"
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center flex-wrap"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 {"Strategic Partnerships".split("").map((char, i) => (
@@ -78,17 +78,17 @@ const ClientsSection = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-hidden border-y border-brand-dark/5 py-12 bg-white flex">
+      <div className="w-full overflow-hidden border-y border-brand-dark/5 py-8 md:py-12 bg-white flex">
         <div className="flex w-max animate-marquee">
           {[...clients, ...clients].map((client, index) => (
             <div
               key={index}
-              className="flex shrink-0 items-center justify-center px-12 md:px-20 group h-24"
+              className="flex shrink-0 items-center justify-center px-8 md:px-20 group h-20 md:h-24"
             >
               <img
                 src={client.logo}
                 alt={client.name}
-                className="w-auto h-16 object-contain transition-all duration-500 group-hover:scale-110"
+                className="w-auto h-12 md:h-16 object-contain transition-all duration-500 group-hover:scale-110"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=f9f9f8&color=c29d59&size=128`;
                 }}

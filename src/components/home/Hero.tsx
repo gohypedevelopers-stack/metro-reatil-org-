@@ -6,7 +6,7 @@ import Magnetic from '../Magnetic';
 
 const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
+    <section className="relative min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden bg-brand-dark">
       {/* Background with Subtle Zoom */}
       <motion.div
         initial={{ scale: 1.1, opacity: 0 }}
@@ -41,11 +41,11 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
             Crafting Exceptional Environments
           </span>
           <motion.h1
-            className="text-4xl md:text-7xl lg:text-8xl mb-12 tracking-[-0.02em] leading-[0.95]"
+            className="text-[2.45rem] xs:text-5xl md:text-7xl lg:text-8xl mb-10 md:mb-12 leading-[0.98] md:leading-[0.95]"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
-              <span className="whitespace-nowrap">
+              <span className="whitespace-nowrap text-balance">
                 {"Retail Fit-Out".split("").map((char, i) => (
                   <motion.span
                     key={i}
@@ -60,7 +60,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
               </span>
             </div>
             <div className="overflow-hidden block">
-              <span className="whitespace-nowrap">
+              <span className="whitespace-nowrap text-balance">
                 {"Turnkey Excellence".split("").map((char, i) => (
                   <motion.span
                     key={i}
@@ -78,9 +78,9 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           </motion.h1>
 
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
             <Magnetic>
-              <a href="/portfolio" className="px-12 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="px-8 md:px-12 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>

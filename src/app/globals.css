@@ -26,6 +26,7 @@ body {
   background-color: white;
   color: var(--brand-dark);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 .font-signature {
@@ -75,4 +76,27 @@ body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+@layer utilities {
+  .mobile-heading-balance {
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 639px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .whitespace-nowrap {
+    white-space: normal !important;
+  }
+
+  .mobile-heading-balance br {
+    display: none;
+  }
 }

@@ -35,14 +35,14 @@ export default function SolutionsPage() {
   return (
     <div className="bg-white pt-20">
       {/* Header */}
-      <section className="py-24 bg-neutral-50 border-b border-neutral-100">
+      <section className="py-16 md:py-24 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase"
+              className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               ENGINEERING EXCELLENCE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Into Every Square Meter</span>
@@ -60,8 +60,8 @@ export default function SolutionsPage() {
       </section>
 
       {/* Solutions Grid */}
-      <section className="py-32">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 space-y-48">
+      <section className="py-20 md:py-32">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 space-y-24 lg:space-y-48">
           {SOLUTIONS_DETAIL.map((sol, i) => (
             <motion.div
               key={sol.id}
@@ -107,7 +107,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Expertise Banner - Sharpened */}
-      <section className="py-32 bg-brand-dark relative overflow-hidden">
+      <section className="py-20 md:py-32 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full border-[100px] border-white/20 scale-150 rotate-12" />
         </div>
@@ -119,7 +119,7 @@ export default function SolutionsPage() {
                 Our private production facilities allow us to maintain total control over quality, timelines, and costs for all custom elements, from joinery to technical components.
               </p>
             </div>
-            <a href="/about" className="px-12 py-5 border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500 whitespace-nowrap">
+            <a href="/about" className="w-full sm:w-auto text-center px-8 md:px-12 py-5 border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500">
               Learn More About Our Facility
             </a>
           </div>

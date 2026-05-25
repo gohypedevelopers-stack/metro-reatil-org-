@@ -61,11 +61,11 @@ export default function PortfolioPage() {
   return (
     <div className="bg-white pt-20">
       {/* Header */}
-      <section className="py-24 border-b border-neutral-100">
+      <section className="py-16 md:py-24 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 md:gap-12">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h1 className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 SELECTED <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Works Showcase</span>
               </h1>
               <p className="text-neutral-500 text-lg font-light leading-relaxed">
@@ -74,12 +74,12 @@ export default function PortfolioPage() {
             </div>
             
             {/* Filter - Sharpened */}
-            <div className="flex flex-wrap gap-2 pb-2">
+            <div className="flex flex-wrap gap-2 pb-2 w-full md:w-auto">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-8 py-4 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 border ${
+                  className={`px-4 sm:px-6 md:px-8 py-3 md:py-4 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 border ${
                     filter === cat 
                     ? 'bg-brand-dark text-white border-brand-dark' 
                     : 'bg-transparent text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
@@ -94,11 +94,11 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <motion.div 
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((proj, index) => (
@@ -118,7 +118,7 @@ export default function PortfolioPage() {
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                     {/* Sharpened Overlay */}
-                    <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12">
+                    <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-12">
                       <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                         <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-2 block">{proj.category}</span>
                         <h3 className="text-2xl font-serif text-white mb-6">{proj.title}</h3>
@@ -135,7 +135,7 @@ export default function PortfolioPage() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="flex justify-between items-baseline">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2">
                       <h3 className="text-xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors duration-500">{proj.title}</h3>
                       <span className="text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location}</span>
                     </div>
@@ -157,9 +157,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Stats Banner - Sharpened */}
-      <section className="py-32 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-20 md:py-32 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
               { label: "Retail Spaces", value: "85+" },
               { label: "Corporate Offices", value: "120+" },

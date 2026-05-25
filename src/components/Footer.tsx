@@ -5,9 +5,9 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ChevronRight } from
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-32 border-t border-neutral-100">
+    <footer className="bg-white py-16 md:py-24 lg:py-32 border-t border-neutral-100">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-24 mb-16 md:mb-24 lg:mb-32">
           <div className="lg:col-span-4">
             <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-12" />
             <p className="text-neutral-500 text-sm font-light leading-relaxed mb-10 max-w-sm">
@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-dark mb-10 border-b border-neutral-100 pb-4">Newsletter</h4>
             <p className="text-neutral-400 text-sm font-light mb-10 font-light">Join our circle for exclusive design insights and architectural project updates.</p>
-            <div className="flex border-b border-neutral-200 focus-within:border-brand-gold transition-colors pb-3">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 border-b border-neutral-200 focus-within:border-brand-gold transition-colors pb-3">
               <input
                 type="email"
                 placeholder="EMAIL ADDRESS"
@@ -66,9 +66,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center text-[9px] font-bold uppercase tracking-[0.5em] text-neutral-400">
+        <div className="pt-10 md:pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-400 leading-relaxed">
           <p>© 2026 Metro Retail Solutions. All Rights Reserved.</p>
-          <div className="flex gap-12 mt-8 md:mt-0">
+          <div className="flex gap-8 md:gap-12 mt-8 md:mt-0">
             <a href="#" className="hover:text-brand-dark transition-colors">Privacy</a>
             <a href="#" className="hover:text-brand-dark transition-colors">Terms</a>
           </div>

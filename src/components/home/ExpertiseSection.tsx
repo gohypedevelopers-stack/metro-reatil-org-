@@ -16,11 +16,11 @@ const ExpertiseSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {expertise.map((e, i) => (
             <motion.div
               key={i}
@@ -28,7 +28,7 @@ const ExpertiseSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-12 border border-neutral-100 hover:border-brand-gold transition-colors group text-center"
+              className="p-8 md:p-12 border border-neutral-100 hover:border-brand-gold transition-colors group text-center"
             >
               <div className="mb-8 flex justify-center group-hover:scale-110 transition-transform">{e.icon}</div>
               <h3 className="text-lg font-serif text-brand-dark mb-4 uppercase tracking-widest">{e.title}</h3>

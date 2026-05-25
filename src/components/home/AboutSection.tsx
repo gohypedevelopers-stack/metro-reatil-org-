@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="pt-4 pb-20 md:pt-6 md:pb-32 bg-[#fdfdfb] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
           <div className="relative order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -60,7 +60,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-4xl md:text-6xl text-brand-dark mb-12 leading-[1.1] uppercase font-light"
+              className="mobile-heading-balance text-4xl md:text-6xl text-brand-dark mb-8 md:mb-12 leading-[1.1] uppercase font-light"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Designing <br />
@@ -77,7 +77,7 @@ const AboutSection = () => {
                 At Metro Retail Solutions, we specialize in end-to-end retail space execution. From mall boutiques to high-street setups and airport retail, we provide a complete turnkey solution. Our goal is simple: to deliver a space so complete that your brand only needs to place its products and start operations immediately.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-8">
                 <div className="group">
                   <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
                     <span className="w-2 h-2 bg-brand-gold rounded-full group-hover:scale-150 transition-transform" />

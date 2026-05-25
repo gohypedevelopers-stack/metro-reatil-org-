@@ -45,11 +45,11 @@ const Testimonials = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            className="inline-block select-none leading-[0.85]"
+            className="inline-block select-none leading-[0.95] md:leading-[0.85] mobile-heading-balance"
           >
             {/* Top Line: WHAT OUR CLIENTS (Black) */}
             <div
-              className="text-4xl md:text-6xl uppercase tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl uppercase tracking-[0.06em] md:tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4 flex-wrap"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {"WHAT OUR CLIENTS".split("").map((char, i) => (
@@ -69,7 +69,7 @@ const Testimonials = () => {
 
             {/* Bottom Line: Say About Us (Gold, Italic) */}
             <div
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center flex-wrap"
               style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
             >
               {"Say About Us".split("").map((char, i) => (
@@ -133,7 +133,7 @@ const Testimonials = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="px-6 py-8 flex flex-col items-center bg-neutral-50/50 rounded-lg border border-neutral-100"
+              className="px-5 sm:px-6 py-8 flex flex-col items-center bg-neutral-50/50 rounded-lg border border-neutral-100"
             >
               <div className="mb-6 opacity-10">
                 <svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor" className="text-brand-gold">

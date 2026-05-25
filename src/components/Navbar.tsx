@@ -51,12 +51,12 @@ export const Navbar = () => {
     <>
       <nav
         className={`fixed w-full z-[100] transition-all duration-500 ${isSolid
-          ? 'bg-white/98 backdrop-blur-md py-4 border-b border-neutral-100 shadow-sm'
-          : 'bg-transparent py-8'
+          ? 'bg-white/98 backdrop-blur-md py-3 md:py-4 border-b border-neutral-100 shadow-sm'
+          : 'bg-transparent py-5 md:py-8'
           }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
+        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center shrink-0">
             <img
@@ -93,7 +93,7 @@ export const Navbar = () => {
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 md:gap-8">
             <div className={`hidden xl:flex flex-col items-end ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
               <span className="text-[8px] font-bold opacity-40 tracking-[0.3em] uppercase mb-1">Direct Line</span>
               <a href="tel:+919999999999" className="text-xs font-bold tracking-tight hover:text-brand-gold transition-colors">+91 XXXXX XXXXX</a>
@@ -207,20 +207,20 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: "tween", duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute right-0 top-0 w-[85%] h-full bg-white p-12 flex flex-col"
+              className="absolute right-0 top-0 w-[min(90vw,420px)] h-full bg-white p-6 sm:p-10 md:p-12 flex flex-col overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-center mb-24">
+              <div className="flex justify-between items-center gap-4 mb-12 sm:mb-20 md:mb-24">
                 <img src="/logo.png" alt="Metro Retail" className="h-[30px] w-auto" />
-                <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-6 py-3">Close</button>
+                <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-5 py-3">Close</button>
               </div>
 
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
                 {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
                   <a
                     key={item}
                     href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                    className="text-5xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between group"
+                    className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 group"
                   >
                     {item}
                     <ChevronRight size={24} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-brand-gold" />
@@ -228,7 +228,7 @@ export const Navbar = () => {
                 ))}
               </div>
 
-              <div className="mt-auto pt-16 border-t border-neutral-100 space-y-8">
+              <div className="mt-auto pt-10 sm:pt-16 border-t border-neutral-100 space-y-8">
                 <div className="flex flex-col gap-2">
                   <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-neutral-400">Get in touch</span>
                   <a href="tel:+919999999999" className="text-xl font-bold text-brand-dark">+91 XXXXX XXXXX</a>

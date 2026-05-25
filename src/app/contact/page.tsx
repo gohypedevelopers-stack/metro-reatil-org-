@@ -26,10 +26,10 @@ export default function ContactPage() {
   return (
     <div className="bg-white pt-20">
       {/* Header */}
-      <section className="py-24 bg-neutral-50 border-b border-neutral-100">
+      <section className="py-16 md:py-24 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h1 className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               LET'S DISCUSS YOUR <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Next Project</span>
             </h1>
             <p className="text-neutral-500 text-lg font-light leading-relaxed">
@@ -40,14 +40,14 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-32">
+      <section className="py-20 md:py-32">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             {/* Contact Form - Sharpened */}
             <div className="lg:col-span-7">
-              <h2 className="text-3xl font-serif text-brand-dark mb-16 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Send us a message</h2>
-              <form className="space-y-12" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <h2 className="text-2xl md:text-3xl font-serif text-brand-dark mb-10 md:mb-16 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Send us a message</h2>
+              <form className="space-y-10 md:space-y-12" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
                   <div className="space-y-4">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Full Name</label>
                     <input 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
                   <div className="space-y-4">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Phone Number</label>
                     <input 
@@ -96,19 +96,19 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button className="px-12 py-6 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-brand-gold transition-all duration-500 flex items-center gap-8 group">
+                <button className="w-full sm:w-auto justify-center px-8 md:px-12 py-5 md:py-6 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-[0.25em] md:tracking-[0.4em] hover:bg-brand-gold transition-all duration-500 flex items-center gap-4 md:gap-8 group">
                   Submit Inquiry <ChevronRight size={16} className="group-hover:translate-x-2 transition-transform" />
                 </button>
               </form>
             </div>
 
             {/* Contact Sidebar - Sharpened */}
-            <div className="lg:col-span-5 space-y-24">
-              <div className="bg-neutral-50 p-12 border border-neutral-100">
+            <div className="lg:col-span-5 space-y-10 md:space-y-16 lg:space-y-24">
+              <div className="bg-neutral-50 p-6 sm:p-8 md:p-12 border border-neutral-100">
                 <h2 className="text-2xl font-serif text-brand-dark mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Information</h2>
                 <div className="space-y-12">
                   {CONTACT_INFO.map((info, i) => (
-                    <div key={i} className="flex gap-8">
+                    <div key={i} className="flex gap-5 md:gap-8">
                       <div className="w-12 h-12 bg-white flex items-center justify-center shrink-0 border border-neutral-200">
                         <info.icon size={20} className="text-brand-gold" />
                       </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="p-12 bg-brand-dark text-white relative overflow-hidden">
+              <div className="p-6 sm:p-8 md:p-12 bg-brand-dark text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 blur-3xl -translate-y-1/2 translate-x-1/2" />
                 <h3 className="text-xl font-serif mb-6">Social Connect</h3>
                 <p className="text-neutral-400 text-sm mb-8 leading-relaxed font-light">Follow us for the latest project updates and design inspiration.</p>
@@ -141,7 +141,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section className="h-[600px] w-full bg-neutral-100 grayscale hover:grayscale-0 transition-all duration-1000 border-t border-neutral-200">
+      <section className="h-[360px] md:h-[600px] w-full bg-neutral-100 grayscale hover:grayscale-0 transition-all duration-1000 border-t border-neutral-200">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.0143899753!2d55.263884843359375!3d25.320448000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5f5f5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sIndustrial%20Area%202%2C%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sae!4v1715690000000!5m2!1sen!2sae" 
           width="100%" 

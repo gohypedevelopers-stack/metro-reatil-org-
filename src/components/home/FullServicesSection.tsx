@@ -38,9 +38,9 @@ const FullServicesSection = () => {
       onMouseMove={handleMouseMove}
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 md:mb-20 gap-8 md:gap-10">
           <div>
-            <h2 className="text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
           </div>
@@ -48,7 +48,7 @@ const FullServicesSection = () => {
             Get a Custom Quote
           </a>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-16">
           {allServices.map((s, i) => (
             <motion.div
               key={i}
@@ -60,7 +60,7 @@ const FullServicesSection = () => {
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <span className="text-neutral-300 text-4xl font-serif mb-4 block group-hover:text-brand-gold transition-colors duration-500">{i + 1}</span>
+              <span className="text-neutral-300 text-3xl md:text-4xl font-serif mb-3 md:mb-4 block group-hover:text-brand-gold transition-colors duration-500">{i + 1}</span>
               <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform duration-500">{s}</h4>
             </motion.div>
           ))}
