@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, AnimatePresence } from 'motion/react';
-import React, { useState } from 'react';
+import { motion } from 'motion/react';
+import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600", // Retail Store Design
@@ -19,24 +20,23 @@ const SERVICE_IMAGES = [
 ];
 
 const FullServicesSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setMousePos({ x: e.clientX, y: e.clientY });
-  };
-
-  const allServices = [
-    "Retail Store Design", "Mall Store Fit-Outs", "High-Street Retail Setup", "Airport Retail Spaces",
-    "Furniture Manufacturing", "In-House Joinery", "AC & HVAC Work", "Fire Safety Systems",
-    "Tiling & Civil Work", "End-to-End Turnkey Solutions", "MEP Engineering", "Project Management"
+  const services = [
+    { title: "Retail Store Design", image: SERVICE_IMAGES[0], id: "retail-design" },
+    { title: "Mall Store Fit-Outs", image: SERVICE_IMAGES[1], id: "turnkey-execution" },
+    { title: "High-Street Retail Setup", image: SERVICE_IMAGES[2], id: "turnkey-execution" },
+    { title: "Airport Retail Spaces", image: SERVICE_IMAGES[3], id: "retail-design" },
+    { title: "Furniture Manufacturing", image: SERVICE_IMAGES[4], id: "bespoke-joinery" },
+    { title: "In-House Joinery", image: SERVICE_IMAGES[5], id: "bespoke-joinery" },
+    { title: "AC & HVAC Work", image: SERVICE_IMAGES[6], id: "technical-infrastructure" },
+    { title: "Fire Safety Systems", image: SERVICE_IMAGES[7], id: "technical-infrastructure" },
+    { title: "Tiling & Civil Work", image: SERVICE_IMAGES[8], id: "turnkey-execution" },
+    { title: "End-to-End Turnkey Solutions", image: SERVICE_IMAGES[9], id: "turnkey-execution" },
+    { title: "MEP Engineering", image: SERVICE_IMAGES[10], id: "technical-infrastructure" },
+    { title: "Project Management", image: SERVICE_IMAGES[11], id: "turnkey-execution" }
   ];
 
   return (
-    <section 
-      className="py-20 bg-white border-y border-neutral-100 relative overflow-hidden"
-      onMouseMove={handleMouseMove}
-    >
+    <section className="py-20 bg-white border-y border-neutral-100 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 md:mb-20 gap-8 md:gap-10">
           <div>
@@ -44,58 +44,55 @@ const FullServicesSection = () => {
               OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
           </div>
-          <a href="#contact" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-all">
+          <a href="/contact" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-all">
             Get a Custom Quote
           </a>
         </div>
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-16">
-          {allServices.map((s, i) => (
-            <motion.div
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-x-12 md:gap-y-16">
+          {services.map((s, i) => (
+            <motion.a
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              href={`/solutions/${s.id}`}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group"
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: i * 0.05 }}
+              className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
             >
-              <span className="text-neutral-300 text-3xl md:text-4xl font-serif mb-3 md:mb-4 block group-hover:text-brand-gold transition-colors duration-500">{i + 1}</span>
-              <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform duration-500">{s}</h4>
-            </motion.div>
+              {/* Image Container */}
+              <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
+                
+                {/* Number Overlay */}
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+
+                {/* Hover Indicator */}
+                <div className="absolute bottom-4 right-4 bg-brand-dark text-white p-2 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                  <ArrowUpRight size={14} className="text-brand-gold" />
+                </div>
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col flex-grow">
+                <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.15em] leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                  {s.title}
+                </h4>
+                <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
+                  Learn More <span>→</span>
+                </p>
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>
-
-      {/* Floating Cursor Image Follow */}
-      <AnimatePresence>
-        {hoveredIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.6, rotate: -5 }}
-            animate={{ 
-              opacity: 1, 
-              scale: 1, 
-              rotate: 0,
-              x: mousePos.x + 25, 
-              y: mousePos.y + 25 
-            }}
-            exit={{ opacity: 0, scale: 0.6, rotate: 5 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 220, 
-              damping: 22,
-              mass: 0.6
-            }}
-            className="fixed top-0 left-0 w-72 h-48 pointer-events-none z-50 overflow-hidden shadow-2xl border border-white/20"
-          >
-            <img 
-              src={SERVICE_IMAGES[hoveredIndex]} 
-              alt="Service Preview" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
+import { ChevronDown, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 
 
 const SOLUTIONS = [
@@ -35,6 +35,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const isSolid = !isHome || isScrolled || activeMenu;
 
@@ -76,7 +77,7 @@ export const Navbar = () => {
               onMouseEnter={() => setActiveMenu('solutions')}
             >
               <button className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Solutions <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
+                Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
               </button>
             </div>
 
@@ -216,28 +217,85 @@ export const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-                {['Home', 'About', 'Solutions', 'Portfolio', 'Contact'].map((item) => (
+                {[
+                  { name: 'Home', href: '/' },
+                  { name: 'Portfolio', href: '/portfolio' },
+                  { name: 'Residential', href: '/portfolio/residential' },
+                  { name: 'Commercial', href: '/portfolio/office' },
+                  { name: 'F&B', href: '/portfolio/f-and-b' },
+                  { name: 'Services', href: '/solutions' }
+                ].map((item) => (
                   <a
-                    key={item}
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                    className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 group"
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 group"
                   >
-                    {item}
-                    <ChevronRight size={24} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-brand-gold" />
+                    {item.name}
+                    <ChevronRight size={20} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-brand-gold" />
                   </a>
                 ))}
+
+                {/* Collapsible More Section */}
+                <div className="border-t border-neutral-100 pt-4">
+                  <button
+                    onClick={() => setIsMoreOpen(!isMoreOpen)}
+                    className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between w-full text-left"
+                  >
+                    <span>More</span>
+                    <ChevronDown size={20} className={`transition-transform duration-300 ${isMoreOpen ? 'rotate-180 text-brand-gold' : 'text-neutral-400'}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isMoreOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden pl-4 mt-4 flex flex-col gap-4"
+                      >
+                        {[
+                          { name: 'Blog', href: '#' },
+                          { name: 'Careers', href: '#' },
+                          { name: 'Contact Information', href: '/contact' }
+                        ].map((subItem) => (
+                          <a
+                            key={subItem.name}
+                            href={subItem.href}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setIsMoreOpen(false);
+                            }}
+                            className="text-sm font-bold tracking-[0.2em] uppercase text-neutral-400 hover:text-brand-gold transition-colors"
+                          >
+                            {subItem.name}
+                          </a>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
 
-              <div className="mt-auto pt-10 sm:pt-16 border-t border-neutral-100 space-y-8">
+              {/* Dedicated Contact Us Button & Info */}
+              <div className="mt-auto pt-8 border-t border-neutral-100 space-y-6">
+                <a
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] bg-brand-dark text-white hover:bg-brand-gold transition-all duration-300 border border-brand-dark hover:border-brand-gold"
+                >
+                  Contact Us
+                </a>
+
                 <div className="flex flex-col gap-2">
                   <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-neutral-400">Get in touch</span>
-                  <a href="tel:+919999999999" className="text-xl font-bold text-brand-dark">+91 XXXXX XXXXX</a>
-                  <a href="mailto:info@metroretail.ae" className="text-sm text-neutral-500">info@metroretail.ae</a>
+                  <a href="tel:+919999999999" className="text-lg font-bold text-brand-dark">+91 XXXXX XXXXX</a>
+                  <a href="mailto:info@metroretail.ae" className="text-xs text-neutral-500">info@metroretail.ae</a>
                 </div>
-                <div className="flex gap-8">
+                <div className="flex gap-6">
                   {[Instagram, Linkedin, Facebook].map((Icon, i) => (
                     <a key={i} href="#" className="text-neutral-400 hover:text-brand-gold transition-colors">
-                      <Icon size={20} />
+                      <Icon size={18} />
                     </a>
                   ))}
                 </div>
