@@ -79,7 +79,7 @@ const ServicesSlider = () => {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+              <a href="/contact" className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
                 Learn More <ArrowRight size={14} />
               </a>
             </div>

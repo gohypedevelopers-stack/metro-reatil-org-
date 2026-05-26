@@ -181,138 +181,104 @@ export default function ServiceDetailPage() {
 
   return (
     <div className="bg-white pt-20">
-      {/* Hero Banner */}
-      <section className="relative h-[60vh] min-h-[450px] overflow-hidden flex items-center bg-brand-dark">
+      {/* 1. Common Hero Banner */}
+      <section className="relative h-[55vh] min-h-[400px] overflow-hidden flex items-center bg-brand-dark">
         <img
-          src={data.heroImage}
-          alt={data.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-35 scale-105"
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600"
+          alt="Metro Services"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-brand-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-brand-dark/60" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl text-left">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Metro Services</span>
+            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block">Metro Professional Services</span>
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              {data.title}
+              Our Services
             </h1>
             <p
-              className="text-neutral-200 text-lg md:text-xl font-light max-w-2xl leading-relaxed"
+              className="text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              {data.tagline}
+              Exceptional design, in-house joinery manufacturing, turnkey execution, and certified engineering systems.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Description & Credentials Section */}
-      <section className="py-20 md:py-28 bg-neutral-50/50">
+      {/* 2. Second Section: Dynamic Service Content (Split Image & Content) */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
-            {/* Context */}
-            <div className="lg:col-span-7 space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            {/* Left Column: Specific Service Image */}
+            <div className="lg:col-span-6 relative aspect-[16/11] overflow-hidden group shadow-2xl rounded-sm">
+              <img
+                src={data.heroImage}
+                alt={data.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
+              />
+              <div className="absolute inset-0 bg-brand-dark/15 group-hover:bg-transparent transition-colors duration-500" />
+            </div>
+
+            {/* Right Column: Specific Service Content */}
+            <div className="lg:col-span-6 space-y-8">
+              <div className="space-y-3">
+                <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
+                <h2 
+                  className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight"
+                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
+                >
+                  {data.title}
+                </h2>
+                <p 
+                  className="text-neutral-400 text-lg md:text-xl font-light italic"
+                  style={{ fontFamily: 'var(--font-playfair), serif' }}
+                >
+                  {data.tagline}
+                </p>
+              </div>
               <div className="w-16 h-[2px] bg-brand-gold" />
-              <h2 className="text-3xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Delivering Excellence in Execution
-              </h2>
               <p className="text-neutral-500 text-lg leading-relaxed font-light">
                 {data.desc}
               </p>
-              <div className="pt-6">
-                <a
-                  href="/contact"
-                  className="px-10 py-5 bg-brand-dark text-white text-[9px] font-bold uppercase tracking-[0.3em] hover:bg-brand-gold hover:text-brand-dark transition-all duration-500 shadow-md inline-block"
-                >
-                  Consult Our Technical Team
-                </a>
+
+              {/* Stats / Credentials Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+                {data.stats.map((stat, i) => {
+                  const Icon = stat.icon;
+                  return (
+                    <div key={i} className="flex flex-col p-5 bg-neutral-50/50 border border-neutral-100 rounded-sm">
+                      <div className="text-brand-gold mb-3">
+                        <Icon size={20} strokeWidth={1.5} />
+                      </div>
+                      <div className="text-xl font-serif text-brand-dark leading-tight">{stat.value}</div>
+                      <div className="text-[9px] font-bold uppercase tracking-wider text-neutral-400 mt-1">{stat.label}</div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-
-            {/* Stats Column */}
-            <div className="lg:col-span-5 grid grid-cols-1 gap-6">
-              <h3 className="text-neutral-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Technical Credentials</h3>
-              {data.stats.map((stat, i) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={i} className="flex items-center gap-6 p-6 bg-white border border-neutral-100 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-neutral-50 flex items-center justify-center text-brand-gold">
-                      <Icon size={24} strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <div className="text-2xl font-serif text-brand-dark leading-tight">{stat.value}</div>
-                      <div className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mt-1">{stat.label}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
           </div>
         </div>
       </section>
 
-      {/* Subcategories (More Categories) Section */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">Categories</span>
-            <h2 className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Explore Specialized Solutions
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {data.subcategories.map((sub, i) => (
-              <motion.a
-                key={i}
-                href={sub.link}
-                whileHover={{ y: -8 }}
-                className="group block bg-white border border-neutral-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={sub.image}
-                    alt={sub.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-750"
-                  />
-                  <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors" />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-lg font-serif text-brand-dark group-hover:text-brand-gold transition-colors duration-300 uppercase mb-3">
-                    {sub.title}
-                  </h3>
-                  <p className="text-neutral-400 text-xs font-light leading-relaxed mb-6">
-                    {sub.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-brand-dark text-[9px] font-bold uppercase tracking-widest">
-                    View Showcase <ArrowRight size={12} className="group-hover:translate-x-2 transition-transform" />
-                  </span>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Image Gallery Section */}
-      <section id="gallery" className="py-20 md:py-28 bg-neutral-50/50">
+      {/* 3. Delivered Project Gallery Section */}
+      <section id="gallery" className="py-20 md:py-28 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="flex justify-between items-end mb-16">
             <div>
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
               <h2 className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Delivered Project Gallery
+                {data.title} Project Gallery
               </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.gallery.map((img, i) => (
-              <div key={i} className="relative group aspect-square overflow-hidden bg-neutral-200">
+              <div key={i} className="relative group aspect-square overflow-hidden bg-neutral-200 shadow-sm rounded-sm">
                 <img
                   src={img}
                   alt={`Delivered project ${i + 1}`}
@@ -325,12 +291,8 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Looping navigation: complete range of services at the bottom of dynamic solutions page */}
+      {/* 4. Complete Range of Services (Looping Section) */}
       <div className="relative border-t border-neutral-100 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 pt-16 text-center">
-          <span className="text-neutral-400 text-[10px] font-bold uppercase tracking-[0.3em] block mb-2">Continue Exploring</span>
-          <p className="text-neutral-400 text-sm font-serif italic mb-2">Loop back into our core capabilities below</p>
-        </div>
         <FullServicesSection />
       </div>
     </div>

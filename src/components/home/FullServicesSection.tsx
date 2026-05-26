@@ -5,34 +5,44 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const SERVICE_IMAGES = [
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600", // Retail Store Design
-  "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=600", // Mall Store Fit-Outs
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600", // High-Street Retail Setup
-  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600", // Airport Retail Spaces
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600", // Furniture Manufacturing
-  "https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80&w=600", // In-House Joinery
-  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600", // AC & HVAC Work
-  "https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?auto=format&fit=crop&q=80&w=600", // Fire Safety Systems
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", // Tiling & Civil Work
-  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600", // End-to-End Turnkey Solutions
-  "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600", // MEP Engineering
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"  // Project Management
+  // DESIGN
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600", // Interior Design
+  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=600", // 3D Visualization
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600", // Space Planning
+  "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600", // Moodboards
+  
+  // FIT-OUT
+  "https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80&w=600", // Joinery Works
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", // Flooring
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", // Partition Systems
+  "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80&w=600", // Acoustic Solutions
+  
+  // SYSTEMS
+  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600", // Electro-Mechanical
+  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600", // Lighting Design
+  "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=600", // Wall Covering
+  "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600"  // Automation
 ];
 
 const FullServicesSection = () => {
   const services = [
-    { title: "Retail Store Design", image: SERVICE_IMAGES[0], id: "retail-design" },
-    { title: "Mall Store Fit-Outs", image: SERVICE_IMAGES[1], id: "turnkey-execution" },
-    { title: "High-Street Retail Setup", image: SERVICE_IMAGES[2], id: "turnkey-execution" },
-    { title: "Airport Retail Spaces", image: SERVICE_IMAGES[3], id: "retail-design" },
-    { title: "Furniture Manufacturing", image: SERVICE_IMAGES[4], id: "bespoke-joinery" },
-    { title: "In-House Joinery", image: SERVICE_IMAGES[5], id: "bespoke-joinery" },
-    { title: "AC & HVAC Work", image: SERVICE_IMAGES[6], id: "technical-infrastructure" },
-    { title: "Fire Safety Systems", image: SERVICE_IMAGES[7], id: "technical-infrastructure" },
-    { title: "Tiling & Civil Work", image: SERVICE_IMAGES[8], id: "turnkey-execution" },
-    { title: "End-to-End Turnkey Solutions", image: SERVICE_IMAGES[9], id: "turnkey-execution" },
-    { title: "MEP Engineering", image: SERVICE_IMAGES[10], id: "technical-infrastructure" },
-    { title: "Project Management", image: SERVICE_IMAGES[11], id: "turnkey-execution" }
+    // DESIGN
+    { title: "Interior Design", image: SERVICE_IMAGES[0], category: "DESIGN", id: "retail-design" },
+    { title: "3D Visualization", image: SERVICE_IMAGES[1], category: "DESIGN", id: "retail-design" },
+    { title: "Space Planning", image: SERVICE_IMAGES[2], category: "DESIGN", id: "retail-design" },
+    { title: "Moodboards", image: SERVICE_IMAGES[3], category: "DESIGN", id: "retail-design" },
+    
+    // FIT-OUT
+    { title: "Joinery Works", image: SERVICE_IMAGES[4], category: "FIT-OUT", id: "bespoke-joinery" },
+    { title: "Flooring", image: SERVICE_IMAGES[5], category: "FIT-OUT", id: "turnkey-execution" },
+    { title: "Partition Systems", image: SERVICE_IMAGES[6], category: "FIT-OUT", id: "turnkey-execution" },
+    { title: "Acoustic Solutions", image: SERVICE_IMAGES[7], category: "FIT-OUT", id: "turnkey-execution" },
+    
+    // SYSTEMS
+    { title: "Electro-Mechanical", image: SERVICE_IMAGES[8], category: "SYSTEMS", id: "technical-infrastructure" },
+    { title: "Lighting Design", image: SERVICE_IMAGES[9], category: "SYSTEMS", id: "technical-infrastructure" },
+    { title: "Wall Covering", image: SERVICE_IMAGES[10], category: "SYSTEMS", id: "turnkey-execution" },
+    { title: "Automation", image: SERVICE_IMAGES[11], category: "SYSTEMS", id: "technical-infrastructure" }
   ];
 
   return (
@@ -69,9 +79,9 @@ const FullServicesSection = () => {
                 />
                 <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
                 
-                {/* Number Overlay */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
-                  {String(i + 1).padStart(2, '0')}
+                {/* Category Tag Overlay */}
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
+                  {s.category}
                 </div>
 
                 {/* Hover Indicator */}
@@ -82,10 +92,13 @@ const FullServicesSection = () => {
 
               {/* Text Info */}
               <div className="flex flex-col flex-grow">
+                <span className="text-[7.5px] font-bold text-brand-gold uppercase tracking-[0.3em] mb-1.5">
+                  Service Sector
+                </span>
                 <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.15em] leading-snug group-hover:text-brand-gold transition-colors duration-300">
                   {s.title}
                 </h4>
-                <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
+                <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2.5 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
                   Learn More <span>→</span>
                 </p>
               </div>
