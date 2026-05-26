@@ -36,7 +36,7 @@ const FeaturedFitouts = () => {
   }, []);
 
   useEffect(() => {
-    if (filtered.length <= 1) return;
+    if (filtered.length <= 3) return; // Only play carousel autoplay if we have more than 3 items!
 
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % filtered.length);
@@ -88,18 +88,14 @@ const FeaturedFitouts = () => {
           </div>
         </div>
 
-        {/* Carousel Grid Container */}
+        {/* Carousel / Grid Container */}
         <div className="relative w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <AnimatePresence mode="popLayout" initial={false}>
-              {visibleItems.map((project, idx) => (
-                <motion.a
-                  key={project.slug + '-' + idx}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95, x: 50 }}
-                  animate={{ opacity: 1, scale: 1, x: 0 }}
-                  exit={{ opacity: 0, scale: 0.95, x: -50 }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          {filtered.length <= 3 ? (
+            /* Static Grid (3 or fewer items) */
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {filtered.map((project) => (
+                <a
+                  key={project.slug}
                   href={`/featured-fitouts/${project.slug}`}
                   className="relative group block aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden border border-neutral-100 shadow-lg rounded-sm text-left bg-neutral-900"
                 >
@@ -123,14 +119,51 @@ const FeaturedFitouts = () => {
                   <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 border border-white/20">
                     <ArrowRight size={16} className="text-white" />
                   </div>
-                </motion.a>
+                </a>
               ))}
-            </AnimatePresence>
-          </div>
-
-          {/* Slide Arrow Navigation Controls */}
-          {filtered.length > currentCount && (
+            </div>
+          ) : (
+            /* Sliding Carousel (more than 3 items) */
             <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <AnimatePresence mode="popLayout" initial={false}>
+                  {visibleItems.map((project, idx) => (
+                    <motion.a
+                      key={project.slug + '-' + idx}
+                      layout
+                      initial={{ opacity: 0, scale: 0.95, x: 50 }}
+                      animate={{ opacity: 1, scale: 1, x: 0 }}
+                      exit={{ opacity: 0, scale: 0.95, x: -50 }}
+                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                      href={`/featured-fitouts/${project.slug}`}
+                      className="relative group block aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden border border-neutral-100 shadow-lg rounded-sm text-left bg-neutral-900"
+                    >
+                      <img
+                        src={project.img}
+                        alt={project.name}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1200ms] group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                        <span className="text-[9px] font-bold text-brand-gold uppercase tracking-[0.4em] mb-2.5">
+                          {project.category}
+                        </span>
+                        <h3 className="text-xl sm:text-2xl text-white font-serif uppercase tracking-tight mb-4 leading-tight">
+                          {project.name}
+                        </h3>
+                        <div className="w-12 h-[1px] bg-brand-gold group-hover:w-20 transition-all duration-500" />
+                      </div>
+
+                      <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 border border-white/20">
+                        <ArrowRight size={16} className="text-white" />
+                      </div>
+                    </motion.a>
+                  ))}
+                </AnimatePresence>
+              </div>
+
+              {/* Slide Arrow Navigation Controls */}
               <button
                 type="button"
                 onClick={showPrevious}
@@ -152,7 +185,7 @@ const FeaturedFitouts = () => {
         </div>
 
         {/* Navigation Indicator Dots */}
-        {filtered.length > currentCount && (
+        {filtered.length > 3 && (
           <div className="mt-12 flex items-center justify-center gap-3">
             {Array.from({ length: filtered.length }).map((_, index) => {
               const isActive = index === activeIndex;
