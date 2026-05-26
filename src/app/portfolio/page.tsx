@@ -74,60 +74,89 @@ export default function PortfolioPage() {
 
   return (
     <div className="bg-white pt-20">
-      {/* Header & Filter Controls */}
-      <section className="py-16 md:py-24 border-b border-neutral-100 bg-neutral-50/50">
+
+      {/* ── Hero Banner ── */}
+      <section className="relative h-[60vh] min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+          alt="Metro Portfolio"
+          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl text-left">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block"
+            >
+              Metro Portfolio
+            </span>
+            <h1
+              className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 uppercase tracking-tight"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Selected <br />
+              <span
+                className="text-brand-gold italic font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Works Showcase
+              </span>
+            </h1>
+            <p
+              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
+              A showcase of our commitment to excellence across commercial, residential, and F&B sectors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Filter Controls ── */}
+      <section className="py-10 md:py-14 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="flex flex-col gap-10">
-            {/* Header Content */}
-            <div className="max-w-2xl">
-              <h1 className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-6 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                SELECTED <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Works Showcase</span>
-              </h1>
-              <p className="text-neutral-500 text-lg font-light leading-relaxed">
-                A showcase of our commitment to excellence across commercial, residential, and F&B sectors.
-              </p>
-            </div>
-            
-            {/* Main Sector Filters */}
-            <div className="flex flex-col gap-8">
-              <div className="flex flex-wrap gap-3 pb-2 w-full border-b border-neutral-200/60 pb-6">
-                {MAIN_CATEGORIES.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setFilter(cat)}
-                    className={`px-6 sm:px-8 py-3 md:py-3.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${
-                      filter === cat 
-                      ? 'bg-brand-dark text-white border-brand-dark shadow-md' 
+          <div className="flex flex-col gap-6">
+
+            {/* Main Sector Pills */}
+            <div className="flex flex-wrap gap-3 border-b border-neutral-100 pb-6">
+              {MAIN_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setFilter(cat)}
+                  className={`px-6 sm:px-8 py-3 md:py-3.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${
+                    filter === cat
+                      ? 'bg-brand-dark text-white border-brand-dark shadow-md'
                       : 'bg-white text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Dynamic Subcategory Points */}
+            {filter !== "All" && SUB_CATEGORIES[filter] && (
+              <div className="flex flex-wrap gap-2.5 items-center">
+                <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-wider text-neutral-400 mr-2">
+                  <Filter size={10} className="text-brand-gold" /> Filter Points:
+                </div>
+                {SUB_CATEGORIES[filter].map((sub) => (
+                  <button
+                    key={sub}
+                    onClick={() => setSubFilter(sub)}
+                    className={`px-4 py-2 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${
+                      subFilter === sub
+                        ? 'bg-brand-gold text-white border-brand-gold shadow-sm'
+                        : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
                     }`}
                   >
-                    {cat}
+                    {sub}
                   </button>
                 ))}
               </div>
+            )}
 
-              {/* Dynamic Secondary "Points" (Subcategories) */}
-              {filter !== "All" && SUB_CATEGORIES[filter] && (
-                <div className="flex flex-wrap gap-2.5 items-center">
-                  <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-wider text-neutral-400 mr-2">
-                    <Filter size={10} className="text-brand-gold" /> Filter Points:
-                  </div>
-                  {SUB_CATEGORIES[filter].map((sub) => (
-                    <button
-                      key={sub}
-                      onClick={() => setSubFilter(sub)}
-                      className={`px-4 py-2 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${
-                        subFilter === sub 
-                        ? 'bg-brand-gold text-white border-brand-gold shadow-sm' 
-                        : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
-                      }`}
-                    >
-                      {sub}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </section>
