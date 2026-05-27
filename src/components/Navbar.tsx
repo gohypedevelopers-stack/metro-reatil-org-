@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 
 
+const MOBILE_NAV_LINKS = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/solutions' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Contact', href: '/contact' }
+];
+
 const SOLUTIONS = [
   {
     category: "Design",
@@ -217,14 +225,7 @@ export const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-                {[
-                  { name: 'Home', href: '/' },
-                  { name: 'Portfolio', href: '/portfolio' },
-                  { name: 'Residential', href: '/portfolio/residential' },
-                  { name: 'Commercial', href: '/portfolio/office' },
-                  { name: 'F&B', href: '/portfolio/f-and-b' },
-                  { name: 'Services', href: '/solutions' }
-                ].map((item) => (
+                {MOBILE_NAV_LINKS.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}

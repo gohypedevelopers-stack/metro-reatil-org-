@@ -85,7 +85,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               {project.name}
             </h1>
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 space-y-6">
             <p
               className="mb-5 text-lg font-light italic leading-relaxed text-neutral-500"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -96,6 +96,47 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             <p className="text-sm font-light leading-relaxed text-neutral-500 md:text-base">
               {project.description}
             </p>
+
+            {/* Turnkey Fit-out Execution Specifications Card */}
+            {(project.executionTime || project.scopeOfWork) && (
+              <div className="bg-neutral-50 border border-neutral-100 p-6 rounded-sm mt-8 space-y-5">
+                <div className="flex items-center gap-2 pb-3 border-b border-neutral-200">
+                  <span className="w-1.5 h-6 bg-brand-gold rounded-sm animate-pulse" />
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-brand-dark">
+                    Turnkey Execution Specs
+                  </h3>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 text-left">
+                  {project.executionTime && (
+                    <div>
+                      <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">Timeframe</span>
+                      <span className="text-xs font-serif uppercase text-brand-dark font-bold">{project.executionTime}</span>
+                    </div>
+                  )}
+                  {project.projectScale && (
+                    <div>
+                      <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">Physical Scale</span>
+                      <span className="text-xs font-serif uppercase text-brand-dark font-bold">{project.projectScale}</span>
+                    </div>
+                  )}
+                </div>
+
+                {project.scopeOfWork && (
+                  <div>
+                    <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-2.5">Scope of Execution Works</span>
+                    <ul className="space-y-2">
+                      {project.scopeOfWork.map((scope, sIdx) => (
+                        <li key={sIdx} className="flex items-center gap-2.5 text-xs text-neutral-600">
+                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full" />
+                          <span>{scope}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>

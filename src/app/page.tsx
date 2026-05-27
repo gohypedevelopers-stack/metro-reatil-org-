@@ -14,7 +14,7 @@ import ManufacturingSection from '../components/home/ManufacturingSection';
 import FullServicesSection from '../components/home/FullServicesSection';
 import Testimonials from '../components/home/Testimonials';
 import WhatsAppCTA from '../components/home/WhatsAppCTA';
-import AboutSummary from '../components/home/AboutSummary';
+import ExecutionProcess from '../components/home/ExecutionProcess';
 // import Footer from '../components/home/Footer'; // Removed as it is now in RootLayout
 
 export default function Page() {
@@ -34,6 +34,7 @@ export default function Page() {
       {/* Content Wrapper for Sticky Reveal */}
       <div className="relative z-10 bg-white">
         <AboutSection />
+        <ExecutionProcess />
 
         <ServicesSlider />
         <FeaturedFitouts />
@@ -54,7 +55,6 @@ export default function Page() {
         />
 
         <WhatsAppCTA />
-        <AboutSummary />
       </div>
     </div>
   );

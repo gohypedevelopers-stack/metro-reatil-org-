@@ -63,8 +63,8 @@ const AboutSection = () => {
               className="mobile-heading-balance text-4xl md:text-6xl text-brand-dark mb-8 md:mb-12 leading-[1.1] uppercase font-light"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              Designing <br />
-              <span className="text-brand-gold italic font-normal block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Tomorrow's Spaces</span>
+              Executing <br />
+              <span className="text-brand-gold italic font-normal block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const AboutSection = () => {
               className="space-y-8"
             >
               <p className="text-neutral-500 text-lg font-light leading-relaxed">
-                At Metro Retail Solutions, we specialize in end-to-end retail space execution. From mall boutiques to high-street setups and airport retail, we provide a complete turnkey solution. Our goal is simple: to deliver a space so complete that your brand only needs to place its products and start operations immediately.
+                At Metro Retail Solutions, we are master builders of turnkey physical environments. More than just design, our focus is absolute execution: transforming raw shell-and-core spaces into fully operational, premium brand showcases. By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke joinery fabrication—under a single command, we guarantee a flawless handover.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-8">
@@ -90,10 +90,10 @@ const AboutSection = () => {
                 <div className="group">
                   <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
                     <span className="w-2 h-2 bg-brand-gold rounded-full group-hover:scale-150 transition-transform" />
-                    Mission
+                    Execution Mission
                   </h4>
                   <p className="text-neutral-400 text-sm leading-relaxed border-l border-neutral-100 pl-4">
-                    Delivering turnkey excellence through innovation and artisan craft.
+                    Delivering high-performance, structurally certified commercial spaces on time and on budget.
                   </p>
                 </div>
               </div>

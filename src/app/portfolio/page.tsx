@@ -107,7 +107,7 @@ export default function PortfolioPage() {
               className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              A showcase of our commitment to excellence across commercial, residential, and F&B sectors.
+              A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke joinery execution.
             </p>
           </div>
         </div>
@@ -188,10 +188,17 @@ export default function PortfolioPage() {
                       />
                       
                       {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10">
+                      <div className="absolute inset-0 bg-brand-dark/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10">
                         <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                           <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.3em] mb-2 block">{proj.subcategory || "OVERVIEW"}</span>
-                          <h3 className="text-2xl text-white font-serif uppercase tracking-tight mb-6 leading-snug">{proj.name}</h3>
+                          <h3 className="text-2xl text-white font-serif uppercase tracking-tight mb-2 leading-snug">{proj.name}</h3>
+                          
+                          {proj.executionTime && (
+                            <span className="text-white/70 text-[8px] uppercase tracking-[0.15em] block mb-4 font-bold">
+                              Executed: <span className="text-brand-gold">{proj.executionTime}</span> • Scale: {proj.projectScale}
+                            </span>
+                          )}
+
                           <div className="w-12 h-[1px] bg-white/30 mb-6" />
                           <button className="flex items-center gap-4 text-white text-[9px] font-bold uppercase tracking-widest">
                             Explore Detailed Views ({proj.gallery.length}) <ChevronRight size={14} className="text-brand-gold" />
@@ -216,6 +223,20 @@ export default function PortfolioPage() {
                     <p className="text-neutral-500 text-sm font-light leading-relaxed line-clamp-2">
                       {proj.intro}
                     </p>
+                    {proj.scopeOfWork && (
+                      <div className="flex flex-wrap gap-1.5 pt-1 border-t border-neutral-100">
+                        {proj.scopeOfWork.slice(0, 3).map((scope, sIdx) => (
+                          <span key={sIdx} className="bg-neutral-50 text-neutral-400 border border-neutral-100 text-[7.5px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm">
+                            {scope}
+                          </span>
+                        ))}
+                        {proj.scopeOfWork.length > 3 && (
+                          <span className="text-[7.5px] text-brand-gold font-bold uppercase tracking-widest self-center pl-1">
+                            +{proj.scopeOfWork.length - 3} More
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}

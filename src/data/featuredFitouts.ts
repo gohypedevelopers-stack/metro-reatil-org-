@@ -8,6 +8,9 @@ export type FeaturedFitout = {
   gallery: string[];
   subcategory?: string;
   location?: string;
+  executionTime?: string;
+  scopeOfWork?: string[];
+  projectScale?: string;
 };
 
 export const featuredFitouts: FeaturedFitout[] = [
@@ -32,6 +35,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "45 Days",
+    projectScale: "2,800 Sq.Ft",
+    scopeOfWork: [
+      "Shell & Core Civil Works",
+      "Bespoke Glass Frontage",
+      "In-House Premium Joinery",
+      "HVAC & Fire Safety Integration",
+      "Luxury Wall Fabric & Texturing",
+      "Security Alarm Systems Setup"
+    ]
   },
   {
     slug: "zen-residence",
@@ -54,6 +67,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "60 Days",
+    projectScale: "5,400 Sq.Ft",
+    scopeOfWork: [
+      "Custom Majlis Seating Joinery",
+      "Double-Height Ceiling Civil Work",
+      "Ambient Lighting Controls",
+      "Handmade Wooden Partition Walls",
+      "Premium Marble Flooring",
+      "Full HVAC Distribution Modifications"
+    ]
   },
   {
     slug: "metro-headquarters",
@@ -76,6 +99,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "75 Days",
+    projectScale: "12,000 Sq.Ft",
+    scopeOfWork: [
+      "High-Acoustic Glass Partitions",
+      "Structural Server Racks & Data Cabling",
+      "Integrated Linear Ceiling Lighting",
+      "Bespoke Executive Boardroom Joinery",
+      "Multi-Zone HVAC Engineering",
+      "Fire Detection & Suppression Systems"
+    ]
   },
   {
     slug: "noir-brasserie",
@@ -98,6 +131,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "50 Days",
+    projectScale: "4,100 Sq.Ft",
+    scopeOfWork: [
+      "Commercial Grade Kitchen Plumbing",
+      "Specialized Grease Trap Civil Installation",
+      "In-House Leather Booth Joinery",
+      "Custom Overhead Steel Racks",
+      "High-Capacity Kitchen Hood Exhausts",
+      "Dimmable Scenographic Lighting"
+    ]
   },
   {
     slug: "apple-innovation",
@@ -120,6 +163,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "40 Days",
+    projectScale: "3,200 Sq.Ft",
+    scopeOfWork: [
+      "Ultra-White Corian Display Desks",
+      "Integrated Smart Power Grids",
+      "Seamless Microcement Flooring",
+      "High-Lux Architectural Lighting",
+      "Acoustic Ceiling Treatments",
+      "Mall Fire Marshall Certifications"
+    ]
   },
   {
     slug: "lumina-cafe",
@@ -142,6 +195,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "35 Days",
+    projectScale: "1,800 Sq.Ft",
+    scopeOfWork: [
+      "Custom Timber Countertop Fabrication",
+      "Exposed Brick Wall Cladding",
+      "Low-Noise HVAC Ducting",
+      "Espresso Machine High-Load Circuits",
+      "Steel Glass Window Framing",
+      "Epoxy Resin Floor Overlay"
+    ]
   },
   {
     slug: "aurora-penthouse",
@@ -164,6 +227,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "70 Days",
+    projectScale: "6,200 Sq.Ft",
+    scopeOfWork: [
+      "Custom Backlit TV Wall Console",
+      "Imported Greek Marble Floors",
+      "Automated Curtain Civil Niches",
+      "Luxury False Ceiling Installation",
+      "HVAC Diffuser Redirection",
+      "Handmade Wooden Wardrobes"
+    ]
   },
   {
     slug: "nexus-boardroom",
@@ -186,6 +259,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "30 Days",
+    projectScale: "1,500 Sq.Ft",
+    scopeOfWork: [
+      "Custom 16-Seat Mahogany Board Table",
+      "Double-Glazed Soundproof Glass Walls",
+      "Acoustic Fabric Wall Panels",
+      "Under-Floor Cable Routing System",
+      "Smart Projection AV Integration",
+      "Dimmable Architectural Spotlights"
+    ]
   },
   {
     slug: "nova-clinic",
@@ -208,6 +291,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "55 Days",
+    projectScale: "3,800 Sq.Ft",
+    scopeOfWork: [
+      "Sanitary Grade Solid Countertops",
+      "Curved Gypsum Partition Walls",
+      "Clinical Water Supply Plumbing",
+      "HEPA Air Filtration MEP Setup",
+      "Bespoke Backlit Vanity Mirrors",
+      "Healthcare Authority Approvals Support"
+    ]
   },
   {
     slug: "iron-gym",
@@ -230,6 +323,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "45 Days",
+    projectScale: "7,500 Sq.Ft",
+    scopeOfWork: [
+      "Acoustic Rubber Underlayment Flooring",
+      "Overhead Heavy-Duty Steel Joists",
+      "High-Volume Air Extraction Ducts",
+      "Locker Room Showers & Plumbing",
+      "Unbreakable Glass Mirror Walls",
+      "Sound-Isolated Spinning Studios"
+    ]
   },
   {
     slug: "sleek-salon",
@@ -252,6 +355,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "25 Days",
+    projectScale: "1,200 Sq.Ft",
+    scopeOfWork: [
+      "Rosewood Feature Wall Veneers",
+      "Integrated Hair Basin Plumbing Grids",
+      "Custom Hydraulic Vanity Stations",
+      "Specialized Task Spotlighting",
+      "Ventilation & Odor Mitigation Fans",
+      "Premium Tile Backsplash Civil Work"
+    ]
   },
   {
     slug: "culinary-kitchen",
@@ -274,6 +387,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "20 Days",
+    projectScale: "650 Sq.Ft",
+    scopeOfWork: [
+      "Solid Oak Furniture Joinery",
+      "Heavy Marble Island Leveling",
+      "Concealed Gas & Induction Circuits",
+      "Task-Specific Led Cabinet Strips",
+      "Water Supply & Waste Line Plumbing",
+      "Anti-Fingerprint Veneer Finishing"
+    ]
   },
   {
     slug: "marble-bathroom",
@@ -296,6 +419,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "18 Days",
+    projectScale: "400 Sq.Ft",
+    scopeOfWork: [
+      "Bookmatched Marble Wall Cladding",
+      "Waterproof Epoxy Grouting",
+      "Concealed Shower Valve Piping",
+      "Floating Vanity Framing Joinery",
+      "Thermostatic Under-Floor Heating",
+      "Anti-Fog Heated Mirror Controls"
+    ]
   },
   {
     slug: "walkin-wardrobe",
@@ -318,6 +451,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1558882224-cca166733360?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "22 Days",
+    projectScale: "900 Sq.Ft",
+    scopeOfWork: [
+      "Bespoke Wardrobe Internal Joinery",
+      "Integrated Sensor LED Strips",
+      "Premium Velvet Drawer Lining",
+      "Glass-Front Cabinet Fabrication",
+      "Central Island Console Carpentry",
+      "Acoustic Suede Wall Panels"
+    ]
   },
   {
     slug: "bathroom-vanities",
@@ -340,6 +483,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "12 Days",
+    projectScale: "250 Sq.Ft",
+    scopeOfWork: [
+      "Floating Oak Cabinet Carpentry",
+      "Absolute Black Granite Fabrication",
+      "Concealed Waste Drainage Plumbing",
+      "Warm Halo Mirror Backlighting",
+      "Rust-Proof Structural Wall Hangs",
+      "Premium Hardware Installation"
+    ]
   },
   {
     slug: "airport-kiosk",
@@ -362,6 +515,16 @@ export const featuredFitouts: FeaturedFitout[] = [
       "https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop",
     ],
+    executionTime: "15 Days",
+    projectScale: "450 Sq.Ft",
+    scopeOfWork: [
+      "Aviation-Grade Fire-Retardant Panels",
+      "Toughened Security Glass Cases",
+      "Prefabricated Modular Steel Framing",
+      "Nighttime Rapid On-Site Assembly",
+      "Autonomous Electrical Fuse Boxes",
+      "LED Perimeter Product Illuminations"
+    ]
   }
 ];
 

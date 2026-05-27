@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Award, Users, Target, CheckCircle2, ChevronRight } from 'lucide-react';
+import AboutSummary from '../../components/home/AboutSummary';
 
 const STATS = [
   { label: "Years Excellence", value: "15+" },
@@ -122,6 +123,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Legacy and Visionary Section */}
+      <AboutSummary />
 
       {/* Values Section - Sharpened */}
       <section className="py-20 md:py-32 lg:py-48 bg-neutral-50">
