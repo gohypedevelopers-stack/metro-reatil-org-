@@ -113,7 +113,7 @@ export const featuredFitouts: FeaturedFitout[] = [
   {
     slug: "noir-brasserie",
     name: "NOIR BRASSERIE",
-    category: "F&B",
+    category: "RETAIL",
     subcategory: "F & B",
     location: "Khalidiyah Mall, Abu Dhabi",
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
@@ -177,7 +177,7 @@ export const featuredFitouts: FeaturedFitout[] = [
   {
     slug: "lumina-cafe",
     name: "LUMINA CAFE",
-    category: "F&B",
+    category: "RETAIL",
     subcategory: "F & B",
     location: "Lumina Cafe, Abu Dhabi",
     img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2074&auto=format&fit=crop",

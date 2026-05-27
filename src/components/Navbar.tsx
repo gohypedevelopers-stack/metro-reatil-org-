@@ -17,15 +17,30 @@ const MOBILE_NAV_LINKS = [
 const SOLUTIONS = [
   {
     category: "Design",
-    items: ["Interior Design", "3D Visualization", "Space Planning", "Moodboards"]
+    items: [
+      { name: "Interior Design", href: "/solutions/retail-design" },
+      { name: "3D Visualization", href: "/solutions/retail-design" },
+      { name: "Space Planning", href: "/solutions/retail-design" },
+      { name: "Moodboards", href: "/solutions/retail-design" }
+    ]
   },
   {
     category: "Fit-Out",
-    items: ["Joinery Works", "Flooring", "Partition Systems", "Acoustic Solutions"]
+    items: [
+      { name: "Joinery Works", href: "/solutions/bespoke-joinery" },
+      { name: "Flooring", href: "/solutions/turnkey-execution" },
+      { name: "Partition Systems", href: "/solutions/turnkey-execution" },
+      { name: "Acoustic Solutions", href: "/solutions/turnkey-execution" }
+    ]
   },
   {
     category: "Systems",
-    items: ["Electro-Mechanical", "Lighting Design", "Wall Covering", "Automation"]
+    items: [
+      { name: "Electro-Mechanical", href: "/solutions/technical-infrastructure" },
+      { name: "Lighting Design", href: "/solutions/technical-infrastructure" },
+      { name: "Wall Covering", href: "/solutions/turnkey-execution" },
+      { name: "Automation", href: "/solutions/technical-infrastructure" }
+    ]
   }
 ];
 
@@ -84,9 +99,9 @@ export const Navbar = () => {
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('solutions')}
             >
-              <button className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/solutions" className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'solutions' ? 'rotate-180' : ''}`} />
-              </button>
+              </a>
             </div>
 
             <div
@@ -154,7 +169,7 @@ export const Navbar = () => {
                       <ul className="space-y-6">
                         {cat.items.map((item, j) => (
                           <li key={j}>
-                            <a href="/solutions" className="text-neutral-400 hover:text-brand-gold text-[11px] font-bold uppercase tracking-widest transition-colors block">{item}</a>
+                            <a href={item.href} className="text-neutral-400 hover:text-brand-gold text-[11px] font-bold uppercase tracking-widest transition-colors block">{item.name}</a>
                           </li>
                         ))}
                       </ul>

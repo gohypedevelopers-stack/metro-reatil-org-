@@ -77,7 +77,7 @@ export default function SubcategoryDetailPage() {
   const defaultData = {
     title: `${subcategory.replace('-', ' ').toUpperCase()} Projects`,
     intro: "A Showcase of High-End Turnkey Fit-out Executions",
-    description: "Explore our masterfully crafted solutions designed to deliver premium aesthetics and rigorous functional performance across retail, F&B, commercial, and residential sectors.",
+    description: "Explore our masterfully crafted solutions designed to deliver premium aesthetics and rigorous functional performance across retail, commercial, and residential sectors.",
     gallery: [
       "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800",

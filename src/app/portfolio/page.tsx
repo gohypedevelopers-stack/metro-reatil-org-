@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronRight, Filter } from 'lucide-react';
 import { featuredFitouts } from '../../data/featuredFitouts';
 
-const MAIN_CATEGORIES = ["All", "Commercial", "Residential", "F&B"];
+const MAIN_CATEGORIES = ["All", "Commercial", "Residential", "Retail"];
 
 const SUB_CATEGORIES: Record<string, string[]> = {
   "Residential": [
@@ -29,10 +29,10 @@ const SUB_CATEGORIES: Record<string, string[]> = {
     "GYMS",
     "SALONS"
   ],
-  "F&B": [
+  "Retail": [
     "OVERVIEW",
-    "F & B",
     "RETAIL",
+    "F & B",
     "KIOSKS"
   ]
 };
@@ -42,7 +42,7 @@ const getPortfolioSector = (category: string): string => {
   const catUpper = category.toUpperCase();
   if (catUpper === "OFFICE") return "Commercial";
   if (catUpper === "RESIDENTIAL") return "Residential";
-  if (catUpper === "RETAIL" || catUpper === "F&B") return "F&B";
+  if (catUpper === "RETAIL" || catUpper === "F&B") return "Retail";
   return category;
 };
 

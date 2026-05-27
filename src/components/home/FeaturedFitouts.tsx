@@ -75,7 +75,7 @@ const FeaturedFitouts = () => {
             From raw shell & core structures to fully completed, brand-operational retail spaces.
           </p>
           <div className="flex justify-center gap-x-6 gap-y-4 md:gap-12 flex-wrap">
-            {['ALL', 'RESIDENTIAL', 'OFFICE', 'RETAIL', 'F&B'].map((filter) => (
+            {['ALL', 'RESIDENTIAL', 'OFFICE', 'RETAIL'].map((filter) => (
               <button
                 key={filter}
                 type="button"

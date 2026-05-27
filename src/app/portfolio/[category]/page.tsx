@@ -85,15 +85,27 @@ const CATEGORY_DETAILS: Record<string, {
     ]
   },
   "retail": {
-    title: "Retail Outlets & Boutiques",
-    tagline: "High-Traffic Luxury Sales Environments",
-    desc: "Leading turnkey visual layouts approved by all major GCC shopping complexes. We construct stunning facades and layouts matching strict airport, mall, and street safety mandates.",
+    title: "Retail & F&B Outlets",
+    tagline: "High-Traffic Luxury Sales & Dining Environments",
+    desc: "Leading turnkey visual layouts approved by all major GCC shopping complexes and municipal authorities. We construct stunning facades, boutiques, cafes, and custom dining lounges matching strict safety and design mandates.",
     subcategories: [
       {
         title: "Mall Boutiques",
         slug: "mall-boutiques",
         image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=800",
         desc: "Immersive luxury showrooms featuring custom brass details and safety panels."
+      },
+      {
+        title: "Dining Halls",
+        slug: "dining-halls",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+        desc: "Atmospheric dining rooms, custom leather banquettes, and specialized lighting systems."
+      },
+      {
+        title: "Bar Counters",
+        slug: "bar-counters",
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
+        desc: "Masterfully manufactured joinery setups with brass fixtures and high-end marble tops."
       },
       {
         title: "High-Street Outlets",
@@ -106,31 +118,6 @@ const CATEGORY_DETAILS: Record<string, {
         slug: "airport-kiosks",
         image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800",
         desc: "Highly-secure, specialized, lightweight, airport boutique modules."
-      }
-    ]
-  },
-  "f-and-b": {
-    title: "Food & Beverage Venues",
-    tagline: "Atmospheric Dining & Lounge Interiors",
-    desc: "Pairing high-end dining aesthetics with highly functional commercial kitchens. We build custom-cast bars, premium acoustic features, and grease-trap plumbing systems.",
-    subcategories: [
-      {
-        title: "Dining Halls",
-        slug: "dining-halls",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
-        desc: "Atmospheric seating configurations, custom leather banquettes, and feature lighting."
-      },
-      {
-        title: "Bar Counters",
-        slug: "bar-counters",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
-        desc: "Masterfully manufactured joinery setups with brass fixtures and high-end marble tops."
-      },
-      {
-        title: "Cafes & lounges",
-        slug: "cafes",
-        image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
-        desc: "Chic open floor lounges matching boutique dining parameters."
       }
     ]
   }

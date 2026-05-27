@@ -2,34 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, PencilRuler, Hammer, Settings, Layout, Lightbulb, Box, ChevronRight } from 'lucide-react';
-
-const SOLUTIONS_DETAIL = [
-  {
-    id: "design",
-    title: "Retail Design & Planning",
-    desc: "End-to-end execution for retail spaces. We design layouts specifically for fashion, luggage, and lifestyle brands, optimizing for both customer flow and brand impact.",
-    icon: PencilRuler,
-    features: ["Mall Store Design", "High-Street Layouts", "Airport Retail Planning", "3D Brand Visualization"],
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80"
-  },
-  {
-    id: "fitout",
-    title: "Turnkey Execution",
-    desc: "Our USP is a move-in ready space. We handle tiling, civil work, and furniture manufacturing in-house, ensuring your store is ready for products immediately.",
-    icon: Hammer,
-    features: ["Furniture Manufacturing", "Tiling & Civil Work", "Joinery & Millwork", "Turnkey Handover"],
-    image: "https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80"
-  },
-  {
-    id: "systems",
-    title: "Technical Infrastructure",
-    desc: "Complete MEP solutions integrated into your retail space. From specialized AC ducting to certified fire safety systems.",
-    icon: Settings,
-    features: ["AC & HVAC Work", "Fire Safety Systems", "Electrical Engineering", "Security Systems"],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80"
-  }
-];
+import FullServicesSection from '../../components/home/FullServicesSection';
 
 export default function SolutionsPage() {
   return (
@@ -59,52 +32,8 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 space-y-24 lg:space-y-48">
-          {SOLUTIONS_DETAIL.map((sol, i) => (
-            <motion.div
-              key={sol.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className={`flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-24 items-center ${i % 2 === 1 ? 'lg:direction-rtl' : ''}`}
-            >
-              <div className={`lg:col-span-5 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <div className="w-16 h-[1px] bg-brand-gold mb-8" />
-                <sol.icon className="text-brand-gold mb-8" size={40} strokeWidth={1} />
-                <h2 className="text-3xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{sol.title}</h2>
-                <p className="text-neutral-500 text-lg leading-relaxed mb-12 font-light">{sol.desc}</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 mb-12">
-                  {sol.features.map((feat, j) => (
-                    <div key={j} className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-widest text-neutral-600">
-                      <div className="w-1 h-1 bg-brand-gold" />
-                      {feat}
-                    </div>
-                  ))}
-                </div>
-
-                <a href="/contact" className="inline-flex items-center gap-6 text-brand-dark text-[10px] font-bold uppercase tracking-[0.3em] group border-b border-transparent hover:border-brand-gold transition-all pb-2">
-                  Inquire Now <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
-                </a>
-              </div>
-
-              <div className={`lg:col-span-7 w-full ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="aspect-[16/9] lg:aspect-[4/3] overflow-hidden group relative">
-                  <img
-                    src={sol.image}
-                    alt={sol.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      {/* Complete Range of Services */}
+      <FullServicesSection />
 
       {/* Expertise Banner - Sharpened */}
       <section className="py-20 md:py-32 bg-brand-dark relative overflow-hidden">

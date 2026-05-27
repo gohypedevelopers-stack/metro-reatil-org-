@@ -74,16 +74,37 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
       <section className="py-16 md:py-24">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
-            <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold">
-              {project.category}
-            </span>
-            <h1
-              className="text-4xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-6xl lg:text-7xl"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+          <div className="lg:col-span-7 space-y-8">
+            {/* Interactive Main Project Image */}
+            <button
+              type="button"
+              onClick={() => setActiveImageIndex(0)}
+              className="w-full relative aspect-[16/10] overflow-hidden bg-neutral-100 group border border-neutral-100 shadow-xl rounded-sm cursor-pointer block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-left"
             >
-              {project.name}
-            </h1>
+              <img
+                src={project.img}
+                alt={project.name}
+                className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-[1200ms] ease-out"
+              />
+              <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
+              
+              {/* Tap to View Overlay */}
+              <div className="absolute bottom-4 right-4 bg-brand-dark/80 backdrop-blur-md px-3.5 py-2 text-[9px] font-bold uppercase tracking-widest text-brand-gold border border-brand-gold/20 shadow-lg group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+                Click to Expand Detailed View ⤢
+              </div>
+            </button>
+
+            <div>
+              <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold">
+                {project.category}
+              </span>
+              <h1
+                className="text-4xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-6xl lg:text-7xl"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {project.name}
+              </h1>
+            </div>
           </div>
           <div className="lg:col-span-5 space-y-6">
             <p
