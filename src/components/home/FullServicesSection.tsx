@@ -12,7 +12,7 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600", // Moodboards
   
   // FIT-OUT
-  "https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80&w=600", // Joinery Works
+  "/images/phase_02_prefabrication.png", // Joinery Works
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", // Flooring
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", // Partition Systems
   "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80&w=600", // Acoustic Solutions

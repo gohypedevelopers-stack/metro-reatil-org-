@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { featuredFitouts } from '../../data/featuredFitouts';
 
+const filterCategories = ['RESIDENTIAL', 'OFFICE', 'RETAIL'];
+
 const FeaturedFitouts = () => {
   const [activeFilter, setActiveFilter] = useState('ALL');
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,8 +14,10 @@ const FeaturedFitouts = () => {
   const [mounted, setMounted] = useState(false);
 
   const filtered = activeFilter === 'ALL'
-    ? featuredFitouts
-    : featuredFitouts.filter((project) => project.category === activeFilter);
+    ? filterCategories.flatMap((category) =>
+        featuredFitouts.filter((project) => project.category === category).slice(0, 3)
+      )
+    : featuredFitouts.filter((project) => project.category === activeFilter).slice(0, 3);
 
   useEffect(() => {
     setActiveIndex(0);
@@ -36,7 +40,7 @@ const FeaturedFitouts = () => {
   }, []);
 
   useEffect(() => {
-    if (filtered.length <= 3) return; // Only play carousel autoplay if we have more than 3 items!
+    if (filtered.length <= 3) return;
 
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % filtered.length);
@@ -75,7 +79,7 @@ const FeaturedFitouts = () => {
             From raw shell & core structures to fully completed, brand-operational retail spaces.
           </p>
           <div className="flex justify-center gap-x-6 gap-y-4 md:gap-12 flex-wrap">
-            {['ALL', 'RESIDENTIAL', 'OFFICE', 'RETAIL'].map((filter) => (
+            {['ALL', ...filterCategories].map((filter) => (
               <button
                 key={filter}
                 type="button"
@@ -94,7 +98,6 @@ const FeaturedFitouts = () => {
         {/* Carousel / Grid Container */}
         <div className="relative w-full">
           {filtered.length <= 3 ? (
-            /* Static Grid (3 or fewer items) */
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filtered.map((project) => (
                 <a
@@ -126,7 +129,6 @@ const FeaturedFitouts = () => {
               ))}
             </div>
           ) : (
-            /* Sliding Carousel (more than 3 items) */
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <AnimatePresence mode="popLayout" initial={false}>
@@ -166,7 +168,6 @@ const FeaturedFitouts = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Slide Arrow Navigation Controls */}
               <button
                 type="button"
                 onClick={showPrevious}
@@ -187,7 +188,6 @@ const FeaturedFitouts = () => {
           )}
         </div>
 
-        {/* Navigation Indicator Dots */}
         {filtered.length > 3 && (
           <div className="mt-12 flex items-center justify-center gap-3">
             {Array.from({ length: filtered.length }).map((_, index) => {
