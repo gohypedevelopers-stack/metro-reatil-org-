@@ -47,8 +47,7 @@ const SOLUTIONS = [
 const PROJECTS = [
   { name: "Retail", desc: "Showrooms and luxury boutiques" },
   { name: "Commercial", desc: "Corporate offices and workspaces" },
-  { name: "Residential", desc: "Luxury villas and apartments" },
-  { name: "Hospitality", desc: "Restaurants, Cafes and Hotels" }
+  { name: "Residential", desc: "Luxury villas and apartments" }
 ];
 
 export const Navbar = () => {
@@ -108,9 +107,9 @@ export const Navbar = () => {
               className="relative py-2"
               onMouseEnter={() => setActiveMenu('portfolio')}
             >
-              <button className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/portfolio" className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Portfolio <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`} />
-              </button>
+              </a>
             </div>
 
             <a href="/contact" className={`text-[10px] font-bold tracking-[0.4em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Contact</a>
@@ -199,9 +198,9 @@ export const Navbar = () => {
                     View Portfolio <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
                   </a>
                 </div>
-                <div className="col-span-8 grid grid-cols-2 gap-6">
+                <div className="col-span-8 flex flex-col gap-4">
                   {PROJECTS.map((proj, i) => (
-                    <a key={i} href="/portfolio" className="group p-8 border border-neutral-100 hover:border-brand-gold/30 hover:bg-neutral-50 transition-all duration-500 flex justify-between items-center">
+                    <a key={i} href={`/portfolio?filter=${proj.name.toLowerCase()}`} className="group p-8 border border-neutral-100 hover:border-brand-gold/30 hover:bg-neutral-50 transition-all duration-500 flex justify-between items-center">
                       <div>
                         <h4 className="text-brand-dark font-bold text-[11px] uppercase tracking-[0.2em] mb-2 group-hover:text-brand-gold transition-colors">{proj.name}</h4>
                         <p className="text-neutral-400 text-[11px] font-light">{proj.desc}</p>

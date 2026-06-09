@@ -50,6 +50,20 @@ export default function PortfolioPage() {
   const [filter, setFilter] = useState("All");
   const [subFilter, setSubFilter] = useState("OVERVIEW");
 
+  // Read filter from URL on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialFilter = urlParams.get('filter');
+      if (initialFilter) {
+        const matched = MAIN_CATEGORIES.find(c => c.toLowerCase() === initialFilter.toLowerCase());
+        if (matched) {
+          setFilter(matched);
+        }
+      }
+    }
+  }, []);
+
   // Reset sub-filter when main filter changes
   useEffect(() => {
     setSubFilter("OVERVIEW");
@@ -114,17 +128,17 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── Filter Controls ── */}
-      <section className="py-10 md:py-14 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
+      <section className="py-4 md:py-6 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-8">
 
             {/* Main Sector Pills */}
-            <div className="flex flex-wrap gap-3 border-b border-neutral-100 pb-6">
+            <div className="flex flex-wrap gap-3">
               {MAIN_CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 sm:px-8 py-3 md:py-3.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${
+                  className={`px-6 sm:px-8 py-2 md:py-2.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${
                     filter === cat
                       ? 'bg-brand-dark text-white border-brand-dark shadow-md'
                       : 'bg-white text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
@@ -137,7 +151,7 @@ export default function PortfolioPage() {
 
             {/* Dynamic Subcategory Points */}
             {filter !== "All" && SUB_CATEGORIES[filter] && (
-              <div className="flex flex-wrap gap-2.5 items-center">
+              <div className="flex flex-wrap gap-2.5 items-center lg:border-l lg:border-neutral-200 lg:pl-8">
                 <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-wider text-neutral-400 mr-2">
                   <Filter size={10} className="text-brand-gold" /> Filter Points:
                 </div>
@@ -145,7 +159,7 @@ export default function PortfolioPage() {
                   <button
                     key={sub}
                     onClick={() => setSubFilter(sub)}
-                    className={`px-4 py-2 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${
+                    className={`px-4 py-1.5 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${
                       subFilter === sub
                         ? 'bg-brand-gold text-white border-brand-gold shadow-sm'
                         : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
