@@ -71,7 +71,7 @@ export default function PortfolioPage() {
 
   const filteredProjects = featuredFitouts.filter(proj => {
     const sector = getPortfolioSector(proj.category);
-    
+
     // 1. Filter by main sector
     if (filter !== "All") {
       if (sector.toLowerCase() !== filter.toLowerCase()) return false;
@@ -138,11 +138,10 @@ export default function PortfolioPage() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 sm:px-8 py-2 md:py-2.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${
-                    filter === cat
-                      ? 'bg-brand-dark text-white border-brand-dark shadow-md'
-                      : 'bg-white text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
-                  }`}
+                  className={`px-6 sm:px-8 py-2 md:py-2.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${filter === cat
+                    ? 'bg-brand-dark text-white border-brand-dark shadow-md'
+                    : 'bg-white text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -159,11 +158,10 @@ export default function PortfolioPage() {
                   <button
                     key={sub}
                     onClick={() => setSubFilter(sub)}
-                    className={`px-4 py-1.5 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${
-                      subFilter === sub
-                        ? 'bg-brand-gold text-white border-brand-gold shadow-sm'
-                        : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
-                    }`}
+                    className={`px-4 py-1.5 text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border ${subFilter === sub
+                      ? 'bg-brand-gold text-white border-brand-gold shadow-sm'
+                      : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
+                      }`}
                   >
                     {sub}
                   </button>
@@ -178,7 +176,7 @@ export default function PortfolioPage() {
       {/* Projects Grid */}
       <section className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12"
           >
@@ -195,18 +193,18 @@ export default function PortfolioPage() {
                 >
                   <a href={`/featured-fitouts/${proj.slug}`} className="block">
                     <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-neutral-100 cursor-pointer">
-                      <img 
-                        src={proj.img} 
-                        alt={proj.name} 
+                      <img
+                        src={proj.img}
+                        alt={proj.name}
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                       />
-                      
+
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-brand-dark/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10">
                         <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                           <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.3em] mb-2 block">{proj.subcategory || "OVERVIEW"}</span>
                           <h3 className="text-2xl text-white font-serif uppercase tracking-tight mb-2 leading-snug">{proj.name}</h3>
-                          
+
                           {proj.executionTime && (
                             <span className="text-white/70 text-[8px] uppercase tracking-[0.15em] block mb-4 font-bold">
                               Executed: <span className="text-brand-gold">{proj.executionTime}</span> • Scale: {proj.projectScale}
@@ -215,18 +213,18 @@ export default function PortfolioPage() {
 
                           <div className="w-12 h-[1px] bg-white/30 mb-6" />
                           <button className="flex items-center gap-4 text-white text-[9px] font-bold uppercase tracking-widest">
-                            Explore Detailed Views ({proj.gallery.length}) <ChevronRight size={14} className="text-brand-gold" />
+                            Explore Detailed Views <ChevronRight size={14} className="text-brand-gold" />
                           </button>
                         </div>
                       </div>
-                      
+
                       {/* Subcategory Tag */}
                       <div className="absolute top-0 right-0 bg-white px-5 py-2.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark group-hover:opacity-0 transition-opacity duration-300">
                         {proj.subcategory || "OVERVIEW"}
                       </div>
                     </div>
                   </a>
-                  
+
                   <div className="space-y-3">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2">
                       <a href={`/featured-fitouts/${proj.slug}`} className="block">
@@ -237,26 +235,12 @@ export default function PortfolioPage() {
                     <p className="text-neutral-500 text-sm font-light leading-relaxed line-clamp-2">
                       {proj.intro}
                     </p>
-                    {proj.scopeOfWork && (
-                      <div className="flex flex-wrap gap-1.5 pt-1 border-t border-neutral-100">
-                        {proj.scopeOfWork.slice(0, 3).map((scope, sIdx) => (
-                          <span key={sIdx} className="bg-neutral-50 text-neutral-400 border border-neutral-100 text-[7.5px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm">
-                            {scope}
-                          </span>
-                        ))}
-                        {proj.scopeOfWork.length > 3 && (
-                          <span className="text-[7.5px] text-brand-gold font-bold uppercase tracking-widest self-center pl-1">
-                            +{proj.scopeOfWork.length - 3} More
-                          </span>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </motion.div>
-          
+
           {filteredProjects.length === 0 && (
             <div className="py-32 text-center max-w-md mx-auto border border-dashed border-neutral-200 rounded-lg p-10 bg-neutral-50/50">
               <p className="text-neutral-400 font-serif text-xl italic mb-3">Custom executions coming soon.</p>

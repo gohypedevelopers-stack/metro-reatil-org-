@@ -25,6 +25,11 @@ const ManufacturingSection = () => {
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Master Artisans</span>
               </div>
             </div>
+            <div className="mt-12">
+              <a href="/manufacturing" className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+                Learn More
+              </a>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             <div className="space-y-6">

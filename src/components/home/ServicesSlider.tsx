@@ -12,25 +12,29 @@ const ServicesSlider = () => {
       title: "Carpentry & Joinery",
       desc: "Our state-of-the-art joinery facility delivers bespoke wooden solutions with artisan precision.",
       features: ["Custom Furniture", "Wall Paneling", "High-End Cabinetry", "Premium Wood Finishes"],
-      img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop",
+      link: "/solutions/bespoke-joinery"
     },
     {
       title: "Turnkey Fit-out",
       desc: "Comprehensive project management from shell-and-core to final handover.",
       features: ["Spatial Planning", "Material Sourcing", "On-site Supervision", "Quality Assurance"],
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+      link: "/solutions/turnkey-execution"
     },
     {
       title: "MEP Services",
       desc: "Precision engineering for electrical, plumbing, and mechanical systems.",
       features: ["HVAC Systems", "Electrical Engineering", "Fire Safety Systems", "Smart Automation"],
-      img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
+      link: "/solutions/technical-infrastructure"
     },
     {
       title: "Design Hub",
       desc: "Where creative vision meets technical feasibility.",
       features: ["3D Visualization", "Mood Boards", "Technical Drafting", "Concept Development"],
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop",
+      link: "/solutions/retail-design"
     }
   ];
 
@@ -79,7 +83,7 @@ const ServicesSlider = () => {
                   </li>
                 ))}
               </ul>
-              <a href="/contact" className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+              <a href={services[activeTab].link} className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
                 Learn More <ArrowRight size={14} />
               </a>
             </div>

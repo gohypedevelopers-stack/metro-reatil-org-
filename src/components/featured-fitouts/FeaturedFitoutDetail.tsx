@@ -87,7 +87,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-[1200ms] ease-out"
               />
               <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
-              
+
               {/* Tap to View Overlay */}
               <div className="absolute bottom-4 right-4 bg-brand-dark/80 backdrop-blur-md px-3.5 py-2 text-[9px] font-bold uppercase tracking-widest text-brand-gold border border-brand-gold/20 shadow-lg group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
                 Click to Expand Detailed View ⤢
@@ -127,7 +127,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                     Turnkey Execution Specs
                   </h3>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4 text-left">
                   {project.executionTime && (
                     <div>
@@ -170,7 +170,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 Project Photos
               </span>
               <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
-                10 Detailed Views
+                Detailed Views
               </h2>
             </div>
             <p className="max-w-xl text-sm font-light leading-relaxed text-neutral-500">
@@ -317,9 +317,8 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                       type="button"
                       onClick={() => setActiveImageIndex(index)}
                       aria-label={`Show image ${index + 1}`}
-                      className={`h-12 w-16 shrink-0 overflow-hidden border transition-all ${
-                        index === activeImageIndex ? 'border-white opacity-100' : 'border-white/20 opacity-45 hover:opacity-80'
-                      }`}
+                      className={`h-12 w-16 shrink-0 overflow-hidden border transition-all ${index === activeImageIndex ? 'border-white opacity-100' : 'border-white/20 opacity-45 hover:opacity-80'
+                        }`}
                     >
                       <img src={image} alt="" className="h-full w-full object-cover" />
                     </button>

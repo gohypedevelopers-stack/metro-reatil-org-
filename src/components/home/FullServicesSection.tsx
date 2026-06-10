@@ -27,22 +27,22 @@ const SERVICE_IMAGES = [
 const FullServicesSection = () => {
   const services = [
     // DESIGN
-    { title: "Interior Design", image: SERVICE_IMAGES[0], category: "DESIGN", id: "retail-design" },
-    { title: "3D Visualization", image: SERVICE_IMAGES[1], category: "DESIGN", id: "retail-design" },
-    { title: "Space Planning", image: SERVICE_IMAGES[2], category: "DESIGN", id: "retail-design" },
-    { title: "Moodboards", image: SERVICE_IMAGES[3], category: "DESIGN", id: "retail-design" },
+    { title: "Interior Design", image: SERVICE_IMAGES[0], category: "DESIGN", id: "interior-design" },
+    { title: "3D Visualization", image: SERVICE_IMAGES[1], category: "DESIGN", id: "3d-visualization" },
+    { title: "Space Planning", image: SERVICE_IMAGES[2], category: "DESIGN", id: "space-planning" },
+    { title: "Moodboards", image: SERVICE_IMAGES[3], category: "DESIGN", id: "moodboards" },
     
     // FIT-OUT
-    { title: "Joinery Works", image: SERVICE_IMAGES[4], category: "FIT-OUT", id: "bespoke-joinery" },
-    { title: "Flooring", image: SERVICE_IMAGES[5], category: "FIT-OUT", id: "turnkey-execution" },
-    { title: "Partition Systems", image: SERVICE_IMAGES[6], category: "FIT-OUT", id: "turnkey-execution" },
-    { title: "Acoustic Solutions", image: SERVICE_IMAGES[7], category: "FIT-OUT", id: "turnkey-execution" },
+    { title: "Joinery Works", image: SERVICE_IMAGES[4], category: "FIT-OUT", id: "joinery-works" },
+    { title: "Flooring", image: SERVICE_IMAGES[5], category: "FIT-OUT", id: "flooring" },
+    { title: "Partition Systems", image: SERVICE_IMAGES[6], category: "FIT-OUT", id: "partition-systems" },
+    { title: "Acoustic Solutions", image: SERVICE_IMAGES[7], category: "FIT-OUT", id: "acoustic-solutions" },
     
     // SYSTEMS
-    { title: "Electro-Mechanical", image: SERVICE_IMAGES[8], category: "SYSTEMS", id: "technical-infrastructure" },
-    { title: "Lighting Design", image: SERVICE_IMAGES[9], category: "SYSTEMS", id: "technical-infrastructure" },
-    { title: "Wall Covering", image: SERVICE_IMAGES[10], category: "SYSTEMS", id: "turnkey-execution" },
-    { title: "Automation", image: SERVICE_IMAGES[11], category: "SYSTEMS", id: "technical-infrastructure" }
+    { title: "Electro-Mechanical", image: SERVICE_IMAGES[8], category: "SYSTEMS", id: "electro-mechanical" },
+    { title: "Lighting Design", image: SERVICE_IMAGES[9], category: "SYSTEMS", id: "lighting-design" },
+    { title: "Wall Covering", image: SERVICE_IMAGES[10], category: "SYSTEMS", id: "wall-covering" },
+    { title: "Automation", image: SERVICE_IMAGES[11], category: "SYSTEMS", id: "automation" }
   ];
 
   return (
@@ -63,7 +63,7 @@ const FullServicesSection = () => {
           {services.map((s, i) => (
             <motion.a
               key={i}
-              href={`/solutions/${s.id}`}
+              href={`/services/${s.id}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}

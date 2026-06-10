@@ -18,28 +18,28 @@ const SOLUTIONS = [
   {
     category: "Design",
     items: [
-      { name: "Interior Design", href: "/solutions/retail-design" },
-      { name: "3D Visualization", href: "/solutions/retail-design" },
-      { name: "Space Planning", href: "/solutions/retail-design" },
-      { name: "Moodboards", href: "/solutions/retail-design" }
+      { name: "Interior Design", href: "/services/interior-design" },
+      { name: "3D Visualization", href: "/services/3d-visualization" },
+      { name: "Space Planning", href: "/services/space-planning" },
+      { name: "Moodboards", href: "/services/moodboards" }
     ]
   },
   {
     category: "Fit-Out",
     items: [
-      { name: "Joinery Works", href: "/solutions/bespoke-joinery" },
-      { name: "Flooring", href: "/solutions/turnkey-execution" },
-      { name: "Partition Systems", href: "/solutions/turnkey-execution" },
-      { name: "Acoustic Solutions", href: "/solutions/turnkey-execution" }
+      { name: "Joinery Works", href: "/services/joinery-works" },
+      { name: "Flooring", href: "/services/flooring" },
+      { name: "Partition Systems", href: "/services/partition-systems" },
+      { name: "Acoustic Solutions", href: "/services/acoustic-solutions" }
     ]
   },
   {
     category: "Systems",
     items: [
-      { name: "Electro-Mechanical", href: "/solutions/technical-infrastructure" },
-      { name: "Lighting Design", href: "/solutions/technical-infrastructure" },
-      { name: "Wall Covering", href: "/solutions/turnkey-execution" },
-      { name: "Automation", href: "/solutions/technical-infrastructure" }
+      { name: "Electro-Mechanical", href: "/services/electro-mechanical" },
+      { name: "Lighting Design", href: "/services/lighting-design" },
+      { name: "Wall Covering", href: "/services/wall-covering" },
+      { name: "Automation", href: "/services/automation" }
     ]
   }
 ];
