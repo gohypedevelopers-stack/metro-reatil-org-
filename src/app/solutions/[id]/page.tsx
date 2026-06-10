@@ -22,10 +22,10 @@ const SERVICES_DATA: Record<string, {
 }> = {
   // ORIGINAL CATEGORIES (From ServicesSlider)
   "bespoke-joinery": {
-    title: "Bespoke Joinery & Carpentry",
+    title: "Carpentry & Joinery",
     tagline: "High-End Woodwork & Custom Millwork Manufactured In-House",
     heroImage: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop",
-    desc: "Our private state-of-the-art production facilities allow us to maintain total control over quality, timelines, and costs for all custom wood elements. From luxury corporate bar counters to residential kitchens and bespoke vanity spaces, we bring premium craftsmanship to the GCC region.",
+    desc: "Metro's Carpentry & Joinery division is built around a single principle: that truly exceptional woodwork can only come from total in-house control. We operate a private, state-of-the-art manufacturing facility where every piece of custom furniture, every bespoke counter, and every intricate millwork detail is produced by our own master craftsmen. From luxury corporate bar counters and reception desks to residential kitchens and bespoke vanity spaces, our work is defined by uncompromising quality and artisan precision, delivered consistently across every project in the GCC region.",
     stats: [
       { label: "Years of Experience", value: "12+ Years", icon: Award },
       { label: "Custom Projects Delivered", value: "340+", icon: CheckCircle2 },
@@ -65,10 +65,10 @@ const SERVICES_DATA: Record<string, {
     ]
   },
   "retail-design": {
-    title: "Retail Design & Spatial Planning",
-    tagline: "Immersive & Brand-Aligned Spatial Layouts",
+    title: "Design Hub",
+    tagline: "Where Creative Vision Meets Technical Feasibility",
     heroImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop",
-    desc: "End-to-end execution and design for shopping mall boutiques, standalone street setups, and airport kiosks. We map the ideal path to purchase by pairing optimized visual merchandising with detailed 3D spatial planning.",
+    desc: "The Metro Design Hub is where ideas are born, tested, and perfected before a single nail is driven. Our studio brings together interior architects, 3D visualization specialists, and spatial planners under one roof to ensure every design decision is both creatively inspiring and technically executable. From immersive concept moodboards and photorealistic renders to detailed 2D/3D spatial layouts, we produce the complete design blueprint that guides every downstream process, reducing costly changes and ensuring your vision is realised exactly as imagined.",
     stats: [
       { label: "Boutiques Designed", value: "185+", icon: Award },
       { label: "Design Approvals", value: "100%", icon: CheckCircle2 },
@@ -101,10 +101,10 @@ const SERVICES_DATA: Record<string, {
     ]
   },
   "turnkey-execution": {
-    title: "Turnkey Execution & Fit-outs",
+    title: "Turnkey Fit-out",
     tagline: "Seamless Transition from Shell Core to Handover",
     heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
-    desc: "We manage every single phase of your space construction in-house: tiling, custom partitions, plastering, decorative plaster, bespoke joinery installation, and painting. Avoid multi-vendor coordination headaches.",
+    desc: "The Metro Turnkey Fit-out service eliminates the complexity and risk of managing multiple contractors across a single project. We take full ownership of every construction phase — from the very first structural wall to the final coat of paint and lighting commissioning. Our integrated team handles tiling, custom partitions, plastering, bespoke joinery installation, flooring, and painting under a single, accountable contract. This unified approach guarantees seamless coordination, protects your budget from unexpected delays, and delivers a consistently flawless result, on time, every time.",
     stats: [
       { label: "Space Completed", value: "2.8M Sq.Ft.", icon: Award },
       { label: "Turnkey Handovers", value: "220+ Stores", icon: CheckCircle2 },
@@ -137,10 +137,10 @@ const SERVICES_DATA: Record<string, {
     ]
   },
   "technical-infrastructure": {
-    title: "Technical Infrastructure & MEP",
-    tagline: "Rigorous Mechanical, Electrical, and Plumbing Systems",
+    title: "MEP Services",
+    tagline: "Precision Engineering for Electrical, Plumbing & Mechanical Systems",
     heroImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
-    desc: "A beautiful interior requires flawless infrastructure. We deliver certified MEP engineering including custom HVAC ducting, smoke management, structural wiring, backup energy systems, and high-spec lighting design.",
+    desc: "A truly beautiful interior is only as good as its invisible infrastructure. Metro's MEP Services division provides the certified, precision-engineered mechanical, electrical, and plumbing backbone that makes every space safe, compliant, and performant. Our in-house engineers design and install custom HVAC ducting, high-capacity electrical distribution, fire suppression systems, smart automation cabling, and full plumbing networks. We manage all regulatory submissions and authority approvals, from Civil Defense to DEWA, ensuring a fully certified, zero-defect technical handover.",
     stats: [
       { label: "HVAC Installed", value: "48,000 TR", icon: Award },
       { label: "Civil Defense Cleared", value: "100%", icon: CheckCircle2 },
