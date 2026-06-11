@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import React from 'react';
 import { HardHat, Paintbrush, Building2, CheckCircle } from 'lucide-react';
+import { CircularTestimonials } from '../ui/circular-testimonials';
 
 const ExpertiseSection = () => {
   const expertise = [
@@ -12,15 +13,24 @@ const ExpertiseSection = () => {
     { title: "Technical Excellence", desc: "Integrated AC, electrical, and civil works managed by one elite team.", icon: <HardHat className="w-8 h-8 text-brand-gold" /> }
   ];
 
+  const carouselTestimonials = expertise.map(e => ({
+    name: e.title,
+    quote: e.desc,
+    designation: "EXPERTISE",
+    icon: e.icon
+  }));
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 md:mb-20">
           <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {expertise.map((e, i) => (
             <motion.div
               key={i}
@@ -36,12 +46,31 @@ const ExpertiseSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Mobile Circular Carousel */}
+        <div className="block md:hidden w-full overflow-hidden">
+          <CircularTestimonials
+            testimonials={carouselTestimonials}
+            autoplay={true}
+            colors={{
+              name: "#111111",
+              designation: "#f39c12", // brand-gold
+              testimony: "#666666",
+              arrowBackground: "#111111", // brand-dark
+              arrowForeground: "#ffffff",
+              arrowHoverBackground: "#f39c12", // brand-gold
+            }}
+            fontSizes={{
+              name: "1.25rem",
+              designation: "0.75rem",
+              quote: "1rem",
+            }}
+          />
+        </div>
+
       </div>
     </section>
   );
 };
-
-
-
 
 export default ExpertiseSection;

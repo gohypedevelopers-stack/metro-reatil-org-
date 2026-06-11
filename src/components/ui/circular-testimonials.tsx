@@ -13,13 +13,16 @@ export interface Testimonial {
   quote: string;
   name: string;
   designation: string;
-  src: string;
+  src?: string;
+  icon?: React.ReactNode;
 }
 interface Colors {
   name?: string;
   designation?: string;
   testimony?: string;
   arrowBackground?: string;
+  prevArrowBackground?: string;
+  nextArrowBackground?: string;
   arrowForeground?: string;
   arrowHoverBackground?: string;
 }
@@ -57,6 +60,8 @@ export const CircularTestimonials = ({
   const colorDesignation = colors.designation ?? "#6b7280";
   const colorTestimony = colors.testimony ?? "#4b5563";
   const colorArrowBg = colors.arrowBackground ?? "#141414";
+  const colorPrevArrowBg = colors.prevArrowBackground ?? colorArrowBg;
+  const colorNextArrowBg = colors.nextArrowBackground ?? colorArrowBg;
   const colorArrowFg = colors.arrowForeground ?? "#f1f1f7";
   const colorArrowHoverBg = colors.arrowHoverBackground ?? "#00a6fb";
   const fontSizeName = fontSizes.name ?? "1.5rem";
@@ -77,6 +82,7 @@ export const CircularTestimonials = ({
     () => testimonials[activeIndex],
     [activeIndex, testimonials]
   );
+  const isIconMode = useMemo(() => testimonials.some(t => !t.src), [testimonials]);
 
   // Responsive gap calculation
   useEffect(() => {
@@ -181,75 +187,89 @@ export const CircularTestimonials = ({
         {/* Images */}
         <div className="image-container" ref={imageContainerRef}>
           {testimonials.map((testimonial, index) => (
-            <img
-              key={testimonial.src}
-              src={testimonial.src}
-              alt={testimonial.name}
-              className="testimonial-image"
-              data-index={index}
-              style={getImageStyle(index)}
-            />
+            testimonial.src ? (
+              <img
+                key={testimonial.src || index}
+                src={testimonial.src}
+                alt={testimonial.name}
+                className="testimonial-image"
+                data-index={index}
+                style={getImageStyle(index)}
+              />
+            ) : (
+              <div
+                key={index}
+                className="testimonial-image flex flex-col items-center justify-center bg-white border border-neutral-100 p-6 md:p-8 text-center"
+                style={getImageStyle(index)}
+              >
+                <div className="mb-6 scale-125">{testimonial.icon}</div>
+                <h3 className="text-lg font-serif text-brand-dark mb-4 uppercase tracking-widest">{testimonial.name}</h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed">{testimonial.quote}</p>
+              </div>
+            )
           ))}
         </div>
         {/* Content */}
-        <div className="testimonial-content">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              variants={quoteVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            >
-              <h3
-                className="name font-serif uppercase tracking-widest"
-                style={{ color: colorName, fontSize: fontSizeName }}
+        <div className={`testimonial-content ${isIconMode ? 'justify-center items-center' : ''}`}>
+          {!isIconMode && (
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                variants={quoteVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                {activeTestimonial.name}
-              </h3>
-              <p
-                className="designation font-bold tracking-[0.1em]"
-                style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
-              >
-                {activeTestimonial.designation}
-              </p>
-              <motion.p
-                className="quote"
-                style={{ color: colorTestimony, fontSize: fontSizeQuote }}
-              >
-                {activeTestimonial.quote.split(" ").map((word, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{
-                      filter: "blur(10px)",
-                      opacity: 0,
-                      y: 5,
-                    }}
-                    animate={{
-                      filter: "blur(0px)",
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.22,
-                      ease: "easeInOut",
-                      delay: 0.025 * i,
-                    }}
-                    style={{ display: "inline-block" }}
-                  >
-                    {word}&nbsp;
-                  </motion.span>
-                ))}
-              </motion.p>
-            </motion.div>
-          </AnimatePresence>
-          <div className="arrow-buttons">
+                <h3
+                  className="name font-serif uppercase tracking-widest"
+                  style={{ color: colorName, fontSize: fontSizeName }}
+                >
+                  {activeTestimonial.name}
+                </h3>
+                <p
+                  className="designation font-bold tracking-[0.1em]"
+                  style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
+                >
+                  {activeTestimonial.designation}
+                </p>
+                <motion.p
+                  className="quote"
+                  style={{ color: colorTestimony, fontSize: fontSizeQuote }}
+                >
+                  {activeTestimonial.quote.split(" ").map((word, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{
+                        filter: "blur(10px)",
+                        opacity: 0,
+                        y: 5,
+                      }}
+                      animate={{
+                        filter: "blur(0px)",
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition={{
+                        duration: 0.22,
+                        ease: "easeInOut",
+                        delay: 0.025 * i,
+                      }}
+                      style={{ display: "inline-block" }}
+                    >
+                      {word}&nbsp;
+                    </motion.span>
+                  ))}
+                </motion.p>
+              </motion.div>
+            </AnimatePresence>
+          )}
+          <div className={`arrow-buttons ${isIconMode ? '!pt-8' : ''}`}>
             <button
               className="arrow-button prev-button"
               onClick={handlePrev}
               style={{
-                backgroundColor: hoverPrev ? colorArrowHoverBg : colorArrowBg,
+                backgroundColor: hoverPrev ? colorArrowHoverBg : colorPrevArrowBg,
               }}
               onMouseEnter={() => setHoverPrev(true)}
               onMouseLeave={() => setHoverPrev(false)}
@@ -261,7 +281,7 @@ export const CircularTestimonials = ({
               className="arrow-button next-button"
               onClick={handleNext}
               style={{
-                backgroundColor: hoverNext ? colorArrowHoverBg : colorArrowBg,
+                backgroundColor: hoverNext ? colorArrowHoverBg : colorNextArrowBg,
               }}
               onMouseEnter={() => setHoverNext(true)}
               onMouseLeave={() => setHoverNext(false)}

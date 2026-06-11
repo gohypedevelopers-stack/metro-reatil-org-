@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 
 const SERVICE_IMAGES = [
   // DESIGN
@@ -59,7 +60,8 @@ const FullServicesSection = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-x-12 md:gap-y-16">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
           {services.map((s, i) => (
             <motion.a
               key={i}
@@ -104,6 +106,55 @@ const FullServicesSection = () => {
               </div>
             </motion.a>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="block md:hidden">
+          <Carousel opts={{ align: "start" }} className="w-full">
+            <CarouselContent>
+              {services.map((s, i) => (
+                <CarouselItem key={i} className="basis-[85%] pl-6">
+                  <a
+                    href={`/services/${s.id}`}
+                    className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
+                  >
+                    {/* Image Container */}
+                    <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
+                      <img
+                        src={s.image}
+                        alt={s.title}
+                        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      />
+                      <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
+
+                      {/* Category Tag Overlay */}
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
+                        {s.category}
+                      </div>
+
+                      {/* Hover Indicator */}
+                      <div className="absolute bottom-4 right-4 bg-brand-dark text-white p-2 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                        <ArrowUpRight size={14} className="text-brand-gold" />
+                      </div>
+                    </div>
+
+                    {/* Text Info */}
+                    <div className="flex flex-col flex-grow">
+                      <span className="text-[7.5px] font-bold text-brand-gold uppercase tracking-[0.3em] mb-1.5">
+                        Service Sector
+                      </span>
+                      <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.15em] leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                        {s.title}
+                      </h4>
+                      <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2.5 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
+                        Learn More <span>→</span>
+                      </p>
+                    </div>
+                  </a>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </section>
