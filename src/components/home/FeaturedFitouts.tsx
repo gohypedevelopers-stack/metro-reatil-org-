@@ -17,7 +17,7 @@ const FeaturedFitouts = () => {
     ? filterCategories.flatMap((category) =>
         featuredFitouts.filter((project) => project.category === category).slice(0, 3)
       )
-    : featuredFitouts.filter((project) => project.category === activeFilter).slice(0, 3);
+    : featuredFitouts.filter((project) => project.category === activeFilter);
 
   useEffect(() => {
     setActiveIndex(0);
@@ -39,15 +39,18 @@ const FeaturedFitouts = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const currentCount = mounted ? visibleCount : 3;
+  const shouldShowCarousel = filtered.length > currentCount;
+
   useEffect(() => {
-    if (filtered.length <= 3) return;
+    if (!shouldShowCarousel) return;
 
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % filtered.length);
     }, 5000);
 
     return () => window.clearInterval(timer);
-  }, [filtered.length]);
+  }, [filtered.length, shouldShowCarousel]);
 
   const showPrevious = () => {
     setActiveIndex((current) => (current - 1 + filtered.length) % filtered.length);
@@ -57,7 +60,6 @@ const FeaturedFitouts = () => {
     setActiveIndex((current) => (current + 1) % filtered.length);
   };
 
-  const currentCount = mounted ? visibleCount : 3;
   const visibleItems = [];
   if (filtered.length > 0) {
     for (let i = 0; i < Math.min(currentCount, filtered.length); i++) {
@@ -75,9 +77,7 @@ const FeaturedFitouts = () => {
           <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
           </h2>
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-neutral-400 max-w-xl mx-auto mb-10 md:mb-12">
-            From raw shell & core structures to fully completed, brand-operational retail spaces.
-          </p>
+          
           <div className="flex justify-center gap-x-6 gap-y-4 md:gap-12 flex-wrap">
             {['ALL', ...filterCategories].map((filter) => (
               <button
@@ -97,7 +97,7 @@ const FeaturedFitouts = () => {
 
         {/* Carousel / Grid Container */}
         <div className="relative w-full">
-          {filtered.length <= 3 ? (
+          {!shouldShowCarousel ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filtered.map((project) => (
                 <a
@@ -188,7 +188,7 @@ const FeaturedFitouts = () => {
           )}
         </div>
 
-        {filtered.length > 3 && (
+        {shouldShowCarousel && (
           <div className="mt-12 flex items-center justify-center gap-3">
             {Array.from({ length: filtered.length }).map((_, index) => {
               const isActive = index === activeIndex;

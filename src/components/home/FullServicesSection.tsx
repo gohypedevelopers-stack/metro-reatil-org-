@@ -10,13 +10,13 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=600", // 3D Visualization
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600", // Space Planning
   "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600", // Moodboards
-  
+
   // FIT-OUT
   "/images/phase_02_prefabrication.png", // Joinery Works
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", // Flooring
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", // Partition Systems
   "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80&w=600", // Acoustic Solutions
-  
+
   // SYSTEMS
   "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600", // Electro-Mechanical
   "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600", // Lighting Design
@@ -31,13 +31,13 @@ const FullServicesSection = () => {
     { title: "3D Visualization", image: SERVICE_IMAGES[1], category: "DESIGN", id: "3d-visualization" },
     { title: "Space Planning", image: SERVICE_IMAGES[2], category: "DESIGN", id: "space-planning" },
     { title: "Moodboards", image: SERVICE_IMAGES[3], category: "DESIGN", id: "moodboards" },
-    
+
     // FIT-OUT
     { title: "Joinery Works", image: SERVICE_IMAGES[4], category: "FIT-OUT", id: "joinery-works" },
     { title: "Flooring", image: SERVICE_IMAGES[5], category: "FIT-OUT", id: "flooring" },
     { title: "Partition Systems", image: SERVICE_IMAGES[6], category: "FIT-OUT", id: "partition-systems" },
     { title: "Acoustic Solutions", image: SERVICE_IMAGES[7], category: "FIT-OUT", id: "acoustic-solutions" },
-    
+
     // SYSTEMS
     { title: "Electro-Mechanical", image: SERVICE_IMAGES[8], category: "SYSTEMS", id: "electro-mechanical" },
     { title: "Lighting Design", image: SERVICE_IMAGES[9], category: "SYSTEMS", id: "lighting-design" },
@@ -78,7 +78,7 @@ const FullServicesSection = () => {
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
-                
+
                 {/* Category Tag Overlay */}
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
                   {s.category}

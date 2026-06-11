@@ -15,7 +15,7 @@ const ManufacturingSection = () => {
             <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12 max-w-xl">
               India's Most trusted Fitout and In-house manufacturing specialist. Our 20,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
             </p>
-            <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid grid-cols-2 gap-8 md:gap-12">
               <div>
                 <span className="text-4xl font-serif text-brand-gold mb-2 block">20K+</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Square Feet</span>

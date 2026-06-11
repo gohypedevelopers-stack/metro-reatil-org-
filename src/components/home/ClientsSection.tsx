@@ -79,18 +79,20 @@ const ClientsSection = () => {
       </div>
 
       <div className="w-full overflow-hidden border-y border-brand-dark/5 py-8 md:py-12 bg-white flex">
-        <div className="flex w-max animate-marquee">
+        <div className="flex w-max animate-marquee hover-pause">
           {[...clients, ...clients].map((client, index) => (
             <div
               key={index}
               className="flex shrink-0 items-center justify-center px-8 md:px-20 group h-20 md:h-24"
             >
               <img
-                src={client.logo}
+                src={`https://web.archive.org/web/2/${client.logo}`}
                 alt={client.name}
                 className="w-auto h-12 md:h-16 object-contain transition-all duration-500 group-hover:scale-110"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=f9f9f8&color=c29d59&size=128`;
+                  if (e.currentTarget.parentElement) {
+                    e.currentTarget.parentElement.style.display = 'none';
+                  }
                 }}
               />
             </div>
