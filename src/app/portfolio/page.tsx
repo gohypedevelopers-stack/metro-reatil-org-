@@ -255,16 +255,16 @@ export default function PortfolioPage() {
       {/* Stats Banner */}
       <section className="py-20 md:py-32 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-12">
             {[
               { label: "Retail Spaces", value: "85+" },
               { label: "Corporate Offices", value: "120+" },
               { label: "Luxury Residences", value: "40+" },
               { label: "Hospitality Outlets", value: "25+" }
             ].map((stat, i) => (
-              <div key={i} className="text-left border-l border-neutral-200 pl-8">
-                <div className="text-5xl font-serif text-brand-dark mb-4">{stat.value}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-loose">{stat.label}</div>
+              <div key={i} className="text-left border-l border-neutral-200 pl-2 sm:pl-4 md:pl-8">
+                <div className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-dark mb-2 md:mb-4">{stat.value}</div>
+                <div className="text-[7px] sm:text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-tight md:leading-loose">{stat.label}</div>
               </div>
             ))}
           </div>
