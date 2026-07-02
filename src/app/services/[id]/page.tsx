@@ -188,7 +188,7 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* FULL SERVICES */}
-      <FullServicesSection />
+      <FullServicesSection forceCarousel={true} />
 
       {/* JOINERY TEAM SECTION */}
       <JoineryTeamSection />

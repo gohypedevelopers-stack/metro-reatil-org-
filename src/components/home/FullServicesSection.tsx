@@ -3,7 +3,8 @@
 import { motion } from 'motion/react';
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '../ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const SERVICE_IMAGES = [
   // DESIGN
@@ -25,7 +26,24 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600"  // Automation
 ];
 
-const FullServicesSection = () => {
+const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolean }) => {
+  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
   const services = [
     { title: "Fitout", image: "https://halo.ae/images/services_r2/retail_cafes_pantry_fitout.webp", category: "FITOUT EXECUTION", id: "fitout" },
     { title: "Carpentry", image: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp", category: "bespoke carpentry", id: "carpentry" },
@@ -72,6 +90,7 @@ const FullServicesSection = () => {
         </div>
 
         {/* Desktop Grid */}
+        {!forceCarousel && (
         <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
           {services.map((s, i) => (
             <motion.a
@@ -118,13 +137,19 @@ const FullServicesSection = () => {
             </motion.a>
           ))}
         </div>
+        )}
 
-        {/* Mobile Carousel */}
-        <div className="block md:hidden">
-          <Carousel opts={{ align: "start" }} className="w-full">
+        {/* Mobile/Forced Carousel */}
+        <div className={forceCarousel ? "block" : "block md:hidden"}>
+          <Carousel 
+            setApi={setApi}
+            opts={{ align: "start", loop: true }} 
+            plugins={[plugin.current]}
+            className="w-full"
+          >
             <CarouselContent>
               {services.map((s, i) => (
-                <CarouselItem key={i} className="basis-[85%] pl-6">
+                <CarouselItem key={i} className={`pl-6 ${forceCarousel ? 'basis-full sm:basis-1/2 md:basis-1/3' : 'basis-[85%]'}`}>
                   <a
                     href={`/services/${s.id}`}
                     className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
@@ -166,6 +191,18 @@ const FullServicesSection = () => {
               ))}
             </CarouselContent>
           </Carousel>
+          
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-10">
+            {Array.from({ length: count }).map((_, idx) => (
+              <button
+                key={idx}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${current === idx ? 'bg-brand-gold w-6' : 'bg-neutral-200 w-1.5 hover:bg-neutral-300'}`}
+                onClick={() => api?.scrollTo(idx)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

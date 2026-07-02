@@ -306,7 +306,7 @@ export default function ServicesPage() {
 
 
       {/* Complete Range of Services */}
-      <FullServicesSection />
+      <FullServicesSection forceCarousel={true} />
     </div>
   );
 }
