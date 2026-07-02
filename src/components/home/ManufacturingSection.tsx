@@ -1,7 +1,32 @@
 "use client";
 
-import { motion } from 'motion/react';
-import React from 'react';
+import { motion, useInView } from 'motion/react';
+import React, { useEffect, useState, useRef } from 'react';
+
+const CountUp = ({ end, suffix = "", duration = 2 }: { end: number, suffix?: string, duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() => {
+    if (isInView) {
+      let startTime: number;
+      const animateCount = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+        // Use easeOutQuad for smoother counting
+        const easeProgress = 1 - (1 - progress) * (1 - progress);
+        setCount(Math.floor(easeProgress * end));
+        if (progress < 1) {
+          requestAnimationFrame(animateCount);
+        }
+      };
+      requestAnimationFrame(animateCount);
+    }
+  }, [isInView, end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+};
 
 const ManufacturingSection = () => {
   return (
@@ -13,15 +38,19 @@ const ManufacturingSection = () => {
               VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12 max-w-xl">
-              India's Most trusted Fitout and In-house manufacturing specialist. Our 20,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
+              India's Most trusted Fitout and In-house manufacturing specialist. Our 9,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
             </p>
-            <div className="grid grid-cols-2 gap-8 md:gap-12">
+            <div className="grid grid-cols-3 gap-6 md:gap-8">
               <div>
-                <span className="text-4xl font-serif text-brand-gold mb-2 block">20K+</span>
+                <span className="text-4xl font-serif text-brand-gold mb-2 block"><CountUp end={28} suffix="+" /></span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Years of Experience</span>
+              </div>
+              <div>
+                <span className="text-4xl font-serif text-brand-gold mb-2 block"><CountUp end={9} suffix="K+" /></span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Square Feet</span>
               </div>
               <div>
-                <span className="text-4xl font-serif text-brand-gold mb-2 block">100+</span>
+                <span className="text-4xl font-serif text-brand-gold mb-2 block"><CountUp end={100} suffix="+" /></span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Master Artisans</span>
               </div>
             </div>

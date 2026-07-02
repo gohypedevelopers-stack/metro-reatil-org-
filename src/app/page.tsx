@@ -29,12 +29,16 @@ export default function Page() {
   return (
     <div className="font-sans">
       <Hero isLoaded={true} />
-      <ClientsSection />
-
+      <AboutSection />
       {/* Content Wrapper for Sticky Reveal */}
       <div className="relative z-10 bg-white">
-        <AboutSection />
         <ExecutionProcess />
+
+
+
+
+
+        <ExpertiseSection />
 
         <ServicesSlider />
         <FeaturedFitouts />
@@ -45,7 +49,8 @@ export default function Page() {
         />
 
         <ManufacturingSection />
-        <ExpertiseSection />
+        <ClientsSection />
+
         <FullServicesSection />
         <Testimonials />
 

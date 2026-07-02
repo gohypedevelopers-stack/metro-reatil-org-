@@ -1,4 +1,5 @@
-"use client";
+const fs = require('fs');
+const content = `"use client";
 
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
@@ -70,7 +71,7 @@ const SERVICES_LINKS = [
 ];
 
 const STYLES_LINKS = [
-  { name: 'ALL STYLES', href: '/design-styles' },
+  { name: 'ALL STYLES', href: '#' },
   { name: 'CONTEMPORARY', href: '#' },
   { name: 'MINIMALIST', href: '#' },
   { name: 'NEOCLASSICAL', href: '#' },
@@ -86,9 +87,9 @@ const STYLES_LINKS = [
 
 const MORE_LINKS = [
   { name: 'ABOUT US', href: '/about' },
-  { name: 'BLOG', href: '/blog' },
-  { name: 'CAREERS', href: '/careers' },
-  { name: 'FOR DESIGNERS & ARCHITECTS', href: '/for-designers-architects' },
+  { name: 'BLOG', href: '#' },
+  { name: 'CAREERS', href: '#' },
+  { name: 'FOR DESIGNERS & ARCHITECTS', href: '#' },
   { name: 'PROCUREMENT', href: '#' },
   { name: 'CONTACT', href: '/contact' }
 ];
@@ -124,7 +125,7 @@ export const Navbar = () => {
         {/* Left Side Links */}
         <div className="col-span-8 p-12 lg:p-20 flex flex-col justify-center">
           <h3 className="text-2xl md:text-3xl font-bold tracking-widest uppercase mb-16">{title}</h3>
-          <div className={`grid grid-cols-${cols} gap-y-6 gap-x-12`}>
+          <div className={\`grid grid-cols-\${cols} gap-y-6 gap-x-12\`}>
             {links.map((link, idx) => (
               <a key={idx} href={link.href} className="text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-500 hover:text-brand-gold transition-colors block border-b border-neutral-100 pb-3">
                 {link.name}
@@ -152,10 +153,10 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full z-[100] transition-all duration-500 ${isSolid
+        className={\`fixed w-full z-[100] transition-all duration-500 \${isSolid
           ? 'bg-white/98 backdrop-blur-md py-3 md:py-4 border-b border-neutral-100 shadow-sm'
           : 'bg-transparent py-5 md:py-8'
-          }`}
+          }\`}
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 flex justify-between items-center">
@@ -164,58 +165,58 @@ export const Navbar = () => {
             <img
               src="/logo.png"
               alt="Metro Retail"
-              className={`h-[30px] md:h-[30px] w-auto transition-all duration-500 ${isSolid ? 'brightness-100' : 'brightness-0 invert'}`}
+              className={\`h-[30px] md:h-[30px] w-auto transition-all duration-500 \${isSolid ? 'brightness-100' : 'brightness-0 invert'}\`}
             />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-            <a href="/" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/portfolio" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
+            <a href="/" className={\`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>Home</a>
+            <a href="/portfolio" className={\`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>Portfolio</a>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('residential')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Residential <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'residential' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                Residential <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'residential' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('commercial')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Commercial <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'commercial' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                Commercial <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'commercial' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('retail')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Retail & F&B <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'retail' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                Retail & F&B <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'retail' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('services')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'services' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                Services <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'services' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('styles')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Styles <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'styles' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                Styles <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'styles' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('more')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                More <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'more' ? 'rotate-180' : ''}`} />
+              <a href="#" className={\`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold \${isSolid ? 'text-brand-dark' : 'text-white'}\`}>
+                More <ChevronDown size={14} className={\`transition-transform duration-300 \${activeMenu === 'more' ? 'rotate-180' : ''}\`} />
               </a>
             </div>
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center gap-4 md:gap-8">
-            <a href="/contact" className={`hidden md:block px-10 py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
+            <a href="/contact" className={\`hidden md:block px-10 py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border \${isSolid
               ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
               : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
-              }`}>
+              }\`}>
               Request Quote
             </a>
 
@@ -224,8 +225,8 @@ export const Navbar = () => {
               className="lg:hidden flex flex-col gap-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <div className={`w-8 h-[1px] transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
-              <div className={`w-5 h-[1px] ml-auto transition-all ${isSolid ? 'bg-brand-dark' : 'bg-white'}`} />
+              <div className={\`w-8 h-[1px] transition-all \${isSolid ? 'bg-brand-dark' : 'bg-white'}\`} />
+              <div className={\`w-5 h-[1px] ml-auto transition-all \${isSolid ? 'bg-brand-dark' : 'bg-white'}\`} />
             </button>
           </div>
         </div>
@@ -285,3 +286,6 @@ export const Navbar = () => {
     </>
   );
 };
+`;
+
+fs.writeFileSync('src/components/Navbar.tsx', content, 'utf8');

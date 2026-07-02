@@ -9,44 +9,49 @@ const ServicesSlider = () => {
   
   const services = [
     {
-      title: "Carpentry & Joinery",
-      desc: "Our state-of-the-art joinery facility delivers bespoke wooden solutions with artisan precision.",
+      title: "Carpentry & Carpentry",
+      desc: "Our state-of-the-art carpentry facility delivers bespoke wooden solutions with artisan precision.",
       features: ["Custom Furniture", "Wall Paneling", "High-End Cabinetry", "Premium Wood Finishes"],
       img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop",
-      link: "/solutions/bespoke-joinery"
+      link: "/services/bespoke-carpentry"
     },
     {
       title: "Turnkey Fit-out",
       desc: "Comprehensive project management from shell-and-core to final handover.",
       features: ["Spatial Planning", "Material Sourcing", "On-site Supervision", "Quality Assurance"],
       img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
-      link: "/solutions/turnkey-execution"
+      link: "/services/turnkey-execution"
     },
     {
       title: "MEP Services",
       desc: "Precision engineering for electrical, plumbing, and mechanical systems.",
       features: ["HVAC Systems", "Electrical Engineering", "Fire Safety Systems", "Smart Automation"],
       img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
-      link: "/solutions/technical-infrastructure"
+      link: "/services/technical-infrastructure"
     },
     {
       title: "Design Hub",
       desc: "Where creative vision meets technical feasibility.",
       features: ["3D Visualization", "Mood Boards", "Technical Drafting", "Concept Development"],
       img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop",
-      link: "/solutions/retail-design"
+      link: "/services/retail-design"
     }
   ];
 
   return (
     <section id="services-slider" className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
+          </h2>
+        </div>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-14 md:mb-20">
           {services.map((s, i) => (
             <button
               key={i}
               onClick={() => setActiveTab(i)}
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.4em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-300 hover:text-neutral-500'}`}
+              className={`text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.4em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
             >
               {s.title}
               {activeTab === i && (

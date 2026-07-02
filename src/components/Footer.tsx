@@ -5,21 +5,21 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ChevronRight, Messa
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-16 md:py-24 lg:py-32 border-t border-neutral-100">
+    <footer className="bg-brand-dark text-white py-16 md:py-24 lg:py-32 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 mb-16 md:mb-24 lg:mb-32">
           
           {/* Brand Info */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8" />
-              <p className="text-neutral-500 text-sm font-light leading-relaxed mb-8 max-w-sm">
-                Pioneering excellence in retail and commercial fit-outs across the GCC. We deliver turnkey environments through architectural precision, bespoke joinery, and technical MEP mastery.
+              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert" />
+              <p className="text-neutral-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
+                Pioneering excellence in retail and commercial fit-outs across the GCC. We deliver turnkey environments through architectural precision, bespoke carpentry, and technical MEP mastery.
               </p>
             </div>
             <div className="flex gap-6 mt-4">
               {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="text-brand-dark/30 hover:text-brand-gold transition-colors duration-500">
+                <a key={i} href="#" className="text-white/40 hover:text-brand-gold transition-colors duration-500">
                   <Icon size={18} />
                 </a>
               ))}
@@ -28,7 +28,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-dark mb-8 border-b border-neutral-100 pb-4">Quick Links</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Home', href: '/' },
@@ -49,13 +49,13 @@ const Footer = () => {
 
           {/* Services */}
           <div className="lg:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-dark mb-8 border-b border-neutral-100 pb-4">Services</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Services</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Retail Design', href: '/solutions/retail-design' },
-                { name: 'Turnkey Execution', href: '/solutions/turnkey-execution' },
-                { name: 'MEP Infrastructure', href: '/solutions/technical-infrastructure' },
-                { name: 'Bespoke Joinery', href: '/solutions/bespoke-joinery' }
+                { name: 'Retail Design', href: '/services/retail-design' },
+                { name: 'Turnkey Execution', href: '/services/turnkey-execution' },
+                { name: 'MEP Infrastructure', href: '/services/technical-infrastructure' },
+                { name: 'Bespoke Carpentry', href: '/services/bespoke-carpentry' }
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.href} className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-brand-gold transition-all duration-300">
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Contact Details */}
           <div className="lg:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-dark mb-8 border-b border-neutral-100 pb-4">Contact Info</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Contact Info</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-3 group">
                 <MapPin size={15} className="text-brand-gold shrink-0 mt-0.5" />
@@ -78,13 +78,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone size={15} className="text-brand-gold shrink-0" />
-                <a href="tel:+919999999999" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-brand-dark transition-colors">
+                <a href="tel:+919999999999" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-white transition-colors">
                   +91 XXXXX XXXXX
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail size={15} className="text-brand-gold shrink-0" />
-                <a href="mailto:info@metroretail.ae" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-brand-dark transition-colors lowercase">
+                <a href="mailto:info@metroretail.ae" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-white transition-colors lowercase">
                   info@metroretail.ae
                 </a>
               </li>
@@ -93,7 +93,7 @@ const Footer = () => {
                   href="https://wa.me/919999999999"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-brand-gold text-brand-gold text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-brand-gold text-brand-gold text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300"
                 >
                   <MessageCircle size={12} /> WhatsApp Us
                 </a>
@@ -103,15 +103,15 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="lg:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-dark mb-8 border-b border-neutral-100 pb-4">Newsletter</h4>
-            <p className="text-neutral-400 text-[11px] font-light mb-6 font-light leading-relaxed">Join our circle for exclusive design insights and architectural project updates.</p>
-            <div className="flex border-b border-neutral-200 focus-within:border-brand-gold transition-colors pb-2">
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Newsletter</h4>
+            <p className="text-neutral-400 text-[11px] font-light mb-6 leading-relaxed">Join our circle for exclusive design insights and architectural project updates.</p>
+            <div className="flex border-b border-white/20 focus-within:border-brand-gold transition-colors pb-2">
               <input
                 type="email"
                 placeholder="EMAIL ADDRESS"
-                className="bg-transparent text-[9px] font-bold tracking-[0.1em] w-full outline-none placeholder:text-neutral-300 text-brand-dark"
+                className="bg-transparent text-[9px] font-bold tracking-[0.1em] w-full outline-none placeholder:text-neutral-600 text-white"
               />
-              <button className="text-brand-dark hover:text-brand-gold transition-colors">
+              <button className="text-white/50 hover:text-brand-gold transition-colors">
                 <ChevronRight size={16} />
               </button>
             </div>
@@ -120,11 +120,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-10 md:pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-400 leading-relaxed">
+        <div className="pt-10 md:pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
           <p>© 2026 Metro Retail Solutions. All Rights Reserved.</p>
           <div className="flex gap-8 md:gap-12 mt-8 md:mt-0">
-            <a href="#" className="hover:text-brand-dark transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-dark transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -27,12 +27,12 @@ const PROCESS_PHASES = [
   {
     phase: "02",
     title: "Off-Site Prefabrication",
-    subtitle: "State-of-the-Art Joinery Manufacture",
+    subtitle: "State-of-the-Art Carpentry Manufacture",
     icon: <Hammer className="w-6 h-6" />,
     img: "/images/phase_02_prefabrication.png",
-    desc: "Parallel to site preparations, our private 20,000 sq.ft state-of-the-art joinery workshop begins manufacturing bespoke elements. Master artisans fabricate custom wooden panels, luxury store counters, specialized showcases, and metal racks using precision German machinery. This offsite prefabrication slashes on-site construction timelines by over 45%.",
+    desc: "Parallel to site preparations, our private 9,000 sq.ft state-of-the-art carpentry workshop begins manufacturing bespoke elements. Master artisans fabricate custom wooden panels, luxury store counters, specialized showcases, and metal racks using precision German machinery. This offsite prefabrication slashes on-site construction timelines by over 45%.",
     highlights: [
-      "20,000 sq.ft private joinery unit",
+      "9,000 sq.ft private carpentry unit",
       "Premium FSC lumber & custom veneer selection",
       "Heavy metalwork & custom brass detailing",
       "Pre-assembly testing & quality vetting"

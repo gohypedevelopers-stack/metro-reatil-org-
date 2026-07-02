@@ -23,7 +23,7 @@ const AboutSummary = () => {
                 Metro Retail Solutions has established itself as a beacon of excellence in the Middle East's fit-out industry. We don't just execute blueprints; we understand the commercial pulse of retail and the ergonomic needs of modern workplaces.
               </p>
               <p>
-                Our journey is defined by a commitment to quality that transcends standard industry practices. From our 20,000 sq.ft state-of-the-art joinery to our elite team of on-site engineers, every element of our operation is tuned to deliver turnkey perfection.
+                Our journey is defined by a commitment to quality that transcends standard industry practices. From our 9,000 sq.ft state-of-the-art carpentry to our elite team of on-site engineers, every element of our operation is tuned to deliver turnkey perfection.
               </p>
             </div>
           </motion.div>

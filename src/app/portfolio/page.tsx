@@ -121,7 +121,7 @@ export default function PortfolioPage() {
               className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke joinery execution.
+              A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke carpentry execution.
             </p>
           </div>
         </div>

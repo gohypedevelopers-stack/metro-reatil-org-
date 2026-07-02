@@ -12,23 +12,14 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
         initial={{ scale: 1.1, opacity: 0 }}
         animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
         transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-brand-dark"
       >
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="absolute inset-0 bg-black/40 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-          alt="Luxury Interior"
-          className="w-full h-full object-cover"
+          src="/mall_hero.png"
+          alt="Luxury Mall Retail Interior"
+          className="w-full h-full object-cover object-center"
         />
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-detail-with-glass-and-steel-43444-large.mp4" type="video/mp4" />
-        </video>
       </motion.div>
 
       <div className="relative z-20 text-center px-6 max-w-5xl">

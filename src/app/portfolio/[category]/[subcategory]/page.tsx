@@ -26,7 +26,7 @@ const SUBCATEGORY_DETAILS: Record<string, {
   "kitchens": {
     title: "Luxury Kitchen Makeovers",
     intro: "Highly Functional Modular Masterpieces with Premium Timber and Stones",
-    description: "Our bespoke kitchen systems are engineered in our high-end joinery facilities. Built using custom internal steel frame drawers, premium soft-close mechanisms, large marble slabs, and custom cabinet fronts that blend style with capacity.",
+    description: "Our bespoke kitchen systems are engineered in our high-end carpentry facilities. Built using custom internal steel frame drawers, premium soft-close mechanisms, large marble slabs, and custom cabinet fronts that blend style with capacity.",
     gallery: [
       "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=800",

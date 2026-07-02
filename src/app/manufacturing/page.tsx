@@ -60,7 +60,7 @@ const ManufacturingPage = () => {
               className="text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Our 20,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
+              Our 9,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
             </p>
           </div>
         </div>
@@ -76,14 +76,14 @@ const ManufacturingPage = () => {
                 Craftsmanship at Scale
               </h2>
               <p className="text-neutral-500 text-lg leading-relaxed font-light mb-8">
-                Having our own manufacturing facility allows us to maintain strict quality control, optimize production timelines, and deliver bespoke joinery that perfectly matches the design intent. We eliminate third-party dependencies to ensure your project is completed flawlessly.
+                Having our own manufacturing facility allows us to maintain strict quality control, optimize production timelines, and deliver bespoke carpentry that perfectly matches the design intent. We eliminate third-party dependencies to ensure your project is completed flawlessly.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={24} className="text-brand-gold shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-2">20,000 Sq.Ft</h4>
+                    <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-2">9,000 Sq.Ft</h4>
                     <p className="text-neutral-400 text-xs font-light">Dedicated production floor</p>
                   </div>
                 </div>
@@ -92,6 +92,13 @@ const ManufacturingPage = () => {
                   <div>
                     <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-2">100+ Artisans</h4>
                     <p className="text-neutral-400 text-xs font-light">Master craftsmen & technicians</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 sm:col-span-2">
+                  <CheckCircle2 size={24} className="text-brand-gold shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-2">45-Day Delivery</h4>
+                    <p className="text-neutral-400 text-xs font-light">Pan-India coverage from East to West</p>
                   </div>
                 </div>
               </div>

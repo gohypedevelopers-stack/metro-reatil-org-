@@ -8,7 +8,7 @@ import { CircularTestimonials } from '../ui/circular-testimonials';
 const ExpertiseSection = () => {
   const expertise = [
     { title: "Retail-First Design", desc: "Specialized layouts for fashion, lifestyle, and high-end retail brands.", icon: <Paintbrush className="w-8 h-8 text-brand-gold" /> },
-    { title: "In-House Manufacturing", desc: "Custom furniture and joinery produced in our own specialized facilities.", icon: <Building2 className="w-8 h-8 text-brand-gold" /> },
+    { title: "In-House Manufacturing", desc: "Custom furniture and carpentry produced in our own specialized facilities.", icon: <Building2 className="w-8 h-8 text-brand-gold" /> },
     { title: "Turnkey Execution", desc: "Complete setup from tiling to fire safety, ready for product placement.", icon: <CheckCircle className="w-8 h-8 text-brand-gold" /> },
     { title: "Technical Excellence", desc: "Integrated AC, electrical, and civil works managed by one elite team.", icon: <HardHat className="w-8 h-8 text-brand-gold" /> }
   ];

@@ -13,12 +13,12 @@ const services = [
     href: "/services/fitout",
   },
   {
-    id: "joinery",
-    title: "Joinery",
-    description: "Joinery delivered with precise execution and authority-ready planning.",
-    image: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_joinery_leather_designs.webp",
-    tags: ["Bespoke Joinery", "Home"],
-    href: "/services/joinery",
+    id: "carpentry",
+    title: "Carpentry",
+    description: "Carpentry delivered with precise execution and authority-ready planning.",
+    image: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp",
+    tags: ["Bespoke Carpentry", "Home"],
+    href: "/services/carpentry",
   },
   {
     id: "kitchens",

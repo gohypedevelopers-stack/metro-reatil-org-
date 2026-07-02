@@ -4,6 +4,7 @@ import React from 'react';
 import { useParams } from 'next/navigation';
 import { CheckCircle2, ChevronRight, PenTool, Award, ShieldCheck } from 'lucide-react';
 import FullServicesSection from '../../../components/home/FullServicesSection';
+import JoineryTeamSection from '../../../components/services/JoineryTeamSection';
 
 import { SUBCATEGORY_DATA } from './data';
 
@@ -188,6 +189,9 @@ export default function SubcategoryDetailPage() {
 
       {/* FULL SERVICES */}
       <FullServicesSection />
+
+      {/* JOINERY TEAM SECTION */}
+      <JoineryTeamSection />
     </div>
   );
 }

@@ -13,7 +13,7 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600", // Moodboards
 
   // FIT-OUT
-  "/images/phase_02_prefabrication.png", // Joinery Works
+  "/images/phase_02_prefabrication.png", // Carpentry Works
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", // Flooring
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", // Partition Systems
   "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80&w=600", // Acoustic Solutions
@@ -28,7 +28,7 @@ const SERVICE_IMAGES = [
 const FullServicesSection = () => {
   const services = [
     { title: "Fitout", image: "https://halo.ae/images/services_r2/retail_cafes_pantry_fitout.webp", category: "FITOUT EXECUTION", id: "fitout" },
-    { title: "Joinery", image: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_joinery_leather_designs.webp", category: "BESPOKE JOINERY", id: "joinery" },
+    { title: "Carpentry", image: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp", category: "bespoke carpentry", id: "carpentry" },
     { title: "Kitchens & Wardrobes", image: "https://halo.ae/images/services_r2/kitchen_surfaces.webp", category: "KITCHEN WARDROBE", id: "kitchens" },
     { title: "Decorative Paints", image: "https://halo.ae/images/services_r2/services_decorative_paint_brick_finishes_feature_wall_brick.webp", category: "DECORATIVE FINISHES", id: "decorative-paints" },
     { title: "Microcement", image: "https://halo.ae/images/services_r2/microcement-1.jpg", category: "MICROCEMENT FINISHES", id: "microcement" },

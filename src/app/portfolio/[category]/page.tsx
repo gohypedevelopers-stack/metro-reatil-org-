@@ -31,7 +31,7 @@ const CATEGORY_DETAILS: Record<string, {
         title: "Kitchens",
         slug: "kitchens",
         image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
-        desc: "Smart modern luxury kitchens featuring bespoke modular joinery and integrated hardware."
+        desc: "Smart modern luxury kitchens featuring bespoke modular carpentry and integrated hardware."
       },
       {
         title: "Wardrobes & Closets",
@@ -105,7 +105,7 @@ const CATEGORY_DETAILS: Record<string, {
         title: "Bar Counters",
         slug: "bar-counters",
         image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
-        desc: "Masterfully manufactured joinery setups with brass fixtures and high-end marble tops."
+        desc: "Masterfully manufactured carpentry setups with brass fixtures and high-end marble tops."
       },
       {
         title: "High-Street Outlets",

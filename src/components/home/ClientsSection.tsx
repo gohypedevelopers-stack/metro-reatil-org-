@@ -26,7 +26,7 @@ const ClientsSection = () => {
   return (
     <section className="pt-16 pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex justify-center mb-16 md:mb-32 relative">
+        <div className="flex justify-center mb-8 relative">
           <div className="text-center">
             <motion.h2
               initial="hidden"
@@ -55,7 +55,7 @@ const ClientsSection = () => {
               </div>
 
               {/* Bottom Line: Strategic Partnerships (Gold, Italic) */}
-              <div
+              {/* <div
                 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center flex-wrap"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
@@ -72,7 +72,7 @@ const ClientsSection = () => {
                     {char === " " ? "\u00A0" : char}
                   </motion.span>
                 ))}
-              </div>
+              </div> */}
             </motion.h2>
           </div>
         </div>

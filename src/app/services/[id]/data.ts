@@ -95,17 +95,17 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     ],
     gallery: ["https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80"]
   },
-  "joinery-works": {
-    title: "Custom Joinery Works",
+  "carpentry-works": {
+    title: "Custom Carpentry Works",
     tagline: "Precision Woodcraft Manufactured In-House",
     heroImage: "/images/phase_02_prefabrication.png",
     desc: [
-      "Our private, state-of-the-art joinery facility enables us to produce highly bespoke, premium wood products without relying on third-party vendors. From complex curved reception desks to intricate acoustic wall paneling and custom commercial cabinetry, our master artisans deliver flawless finishes that elevate the entire interior.",
+      "Our private, state-of-the-art carpentry facility enables us to produce highly bespoke, premium wood products without relying on third-party vendors. From complex curved reception desks to intricate acoustic wall paneling and custom commercial cabinetry, our master artisans deliver flawless finishes that elevate the entire interior.",
       "Operating our own manufacturing unit allows us to maintain absolute control over quality, material sourcing, and project timelines. We utilize advanced 5-axis CNC machinery paired with traditional hand-finishing techniques. This hybrid approach allows us to execute highly complex geometric designs with millimeter precision while retaining the warmth of artisan craftsmanship.",
-      "We source only premium, sustainable materials, including exotic solid woods, high-density MDF, and rare imported veneers. Our joinery services cover everything from high-end residential kitchen installations to heavy-duty commercial bar counters and bespoke architectural millwork, all rigorously tested for durability before leaving our factory floor."
+      "We source only premium, sustainable materials, including exotic solid woods, high-density MDF, and rare imported veneers. Our carpentry services cover everything from high-end residential kitchen installations to heavy-duty commercial bar counters and bespoke architectural millwork, all rigorously tested for durability before leaving our factory floor."
     ],
     stats: [
-      { label: "In-House Facility", value: "20,000 Sq.Ft", icon: Award },
+      { label: "In-House Facility", value: "9,000 Sq.Ft", icon: Award },
       { label: "Master Craftsmen", value: "100+", icon: CheckCircle2 },
       { label: "Quality Control", value: "Multi-Stage", icon: ShieldCheck }
     ],
@@ -263,18 +263,18 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Fitout and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Fitout with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
     gallery: ["https://halo.ae/images/services_r2/retail_cafes_pantry_fitout.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
   },
-  "joinery": {
-    title: "Joinery",
-    tagline: "Premium Joinery Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_joinery_leather_designs.webp",
-    desc: ["Our expert Joinery services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Joinery, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+  "carpentry": {
+    title: "Carpentry",
+    tagline: "Premium Carpentry Services in Dubai",
+    heroImage: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp",
+    desc: ["Our expert Carpentry services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Carpentry, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award },
       { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
       { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Joinery and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Joinery with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_joinery_leather_designs.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Carpentry and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Carpentry with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
   },
   "kitchens-wardrobes": {
     title: "Kitchens & Wardrobes",

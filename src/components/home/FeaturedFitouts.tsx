@@ -5,10 +5,10 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { featuredFitouts } from '../../data/featuredFitouts';
 
-const filterCategories = ['RESIDENTIAL', 'OFFICE', 'RETAIL'];
+const filterCategories = ['RETAIL', 'OFFICE', 'RESIDENTIAL'];
 
 const FeaturedFitouts = () => {
-  const [activeFilter, setActiveFilter] = useState('ALL');
+  const [activeFilter, setActiveFilter] = useState('RETAIL');
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
   const [mounted, setMounted] = useState(false);
@@ -73,7 +73,7 @@ const FeaturedFitouts = () => {
   return (
     <section id="featured-fitouts" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
-        <div className="text-center mb-14 md:mb-20">
+        <div className="text-center mb-8 md:mb-10">
           <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
           </h2>
@@ -84,7 +84,7 @@ const FeaturedFitouts = () => {
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative pb-2 ${activeFilter === filter ? 'text-brand-dark' : 'text-neutral-300 hover:text-neutral-500'}`}
+                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative pb-2 ${activeFilter === filter ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
               >
                 {filter}
                 {activeFilter === filter && (

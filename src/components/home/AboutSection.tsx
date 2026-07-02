@@ -5,53 +5,19 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="pt-4 pb-20 md:pt-6 md:pb-32 bg-[#fdfdfb] relative overflow-hidden">
+    <section id="about" className="pt-20 pb-20 md:pt-32 md:pb-32 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
-          <div className="relative order-2 lg:order-1">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="aspect-square rounded-full overflow-hidden border-[1px] border-brand-gold/20 p-4"
-            >
-              <div className="w-full h-full rounded-full overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
-                  alt="Corporate Design Excellence"
-                  className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-[2s]"
-                />
-                <div className="absolute inset-0 bg-brand-dark/10" />
-              </div>
-            </motion.div>
-
-            {/* Circular Text Badge */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-4 -right-4 w-32 h-32 hidden md:block"
-            >
-              <svg viewBox="0 0 100 100" className="w-full h-full fill-brand-gold">
-                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                <text className="text-[8px] uppercase tracking-[0.2em] font-bold">
-                  <textPath xlinkHref="#circlePath">
-                    Metro Retail Solutions • Excellence • Innovation •
-                  </textPath>
-                </text>
-              </svg>
-            </motion.div>
-          </div>
-
-          <div className="lg:pl-12 order-1 lg:order-2">
+        {/* Top Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
+          <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-4 mb-8"
+              className="inline-flex items-center gap-4 mb-6"
             >
-              <span className="w-12 h-[1px] bg-brand-gold" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold">
+              <span className="w-16 h-[1px] bg-brand-gold" />
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-gold">
                 The Foundation
               </span>
             </motion.div>
@@ -60,40 +26,81 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mobile-heading-balance text-4xl md:text-6xl text-brand-dark mb-8 md:mb-12 leading-[1.1] uppercase font-light"
+              className="text-5xl md:text-7xl lg:text-8xl text-brand-dark leading-[1] uppercase font-light tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Executing <br />
-              <span className="text-brand-gold italic font-normal block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
+              <span className="text-brand-gold italic font-normal block mt-2 text-4xl sm:text-5xl md:text-7xl lg:text-8xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
             </motion.h2>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          {/* Left Column - Image */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="aspect-[4/5] rounded-tl-[100px] rounded-br-[100px] overflow-hidden relative shadow-2xl">
+              <img
+                src="/high_res_mall_hero.png"
+                alt="Retail Design Excellence"
+                className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[2s] ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent mix-blend-multiply" />
+            </div>
+            {/* Decorative Element */}
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 border-l-2 border-b-2 border-brand-gold/30 hidden md:block rounded-bl-[40px]" />
+          </motion.div>
+
+          {/* Right Column - Text & Stats */}
+          <div className="lg:col-span-7 lg:pt-12">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="space-y-8"
+              transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <p className="text-neutral-500 text-lg font-light leading-relaxed">
-                At Metro Retail Solutions, we are master builders of turnkey physical environments. More than just design, our focus is absolute execution: transforming raw shell-and-core spaces into fully operational, premium brand showcases. By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke joinery fabrication—under a single command, we guarantee a flawless handover.
+              <p className="text-neutral-600 text-xl md:text-2xl font-light leading-relaxed mb-12" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                At Metro Retail Solutions, we are master builders of turnkey physical environments. More than just design, our focus is absolute execution: transforming raw shell-and-core spaces into fully operational, premium brand showcases.
               </p>
+              
+              <p className="text-neutral-500 text-base md:text-lg font-light leading-relaxed mb-12">
+                By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke carpentry fabrication—under a single command, we guarantee a flawless handover.
+              </p>
+              
+              <div className="w-full h-[1px] bg-neutral-200 mb-12" />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-8">
-                <div className="group">
-                  <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-brand-gold rounded-full group-hover:scale-150 transition-transform" />
+              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
+                <div className="relative pl-6">
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-brand-gold to-transparent" />
+                  <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-3">
                     Vision
                   </h4>
-                  <p className="text-neutral-400 text-sm leading-relaxed border-l border-neutral-100 pl-4">
+                  <p className="text-neutral-500 text-sm leading-relaxed">
                     To redefine the standard of luxury interiors across the GCC and beyond.
                   </p>
                 </div>
-                <div className="group">
-                  <h4 className="text-brand-dark font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-brand-gold rounded-full group-hover:scale-150 transition-transform" />
+                <div className="relative pl-6">
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-brand-gold to-transparent" />
+                  <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-3">
                     Execution Mission
                   </h4>
-                  <p className="text-neutral-400 text-sm leading-relaxed border-l border-neutral-100 pl-4">
+                  <p className="text-neutral-500 text-sm leading-relaxed">
                     Delivering high-performance, structurally certified commercial spaces on time and on budget.
+                  </p>
+                </div>
+                <div className="relative pl-6 sm:col-span-2 xl:col-span-1">
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-brand-gold to-transparent" />
+                  <h4 className="text-brand-dark font-bold text-sm uppercase tracking-widest mb-3">
+                    Rapid Delivery
+                  </h4>
+                  <p className="text-neutral-500 text-sm leading-relaxed">
+                    Delivering projects within 45 days, providing comprehensive coverage across pan-India from East to West.
                   </p>
                 </div>
               </div>

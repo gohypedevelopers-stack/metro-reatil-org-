@@ -11,4 +11,6 @@ const nextConfig: NextConfig = {
   },
 };
 
+// later we will remove that
+
 export default nextConfig;

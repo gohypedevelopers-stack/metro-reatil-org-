@@ -22,7 +22,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     location: "Marina Mall, Abu Dhabi",
     img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2074&auto=format&fit=crop",
     intro: "Luxury boutique fitout with refined display architecture and premium retail detailing.",
-    description: "A curated retail environment built around brand presence, refined customer movement, high-impact lighting, and precise joinery finishes.",
+    description: "A curated retail environment built around brand presence, refined customer movement, high-impact lighting, and precise carpentry finishes.",
     gallery: [
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=1400&auto=format&fit=crop",
@@ -40,7 +40,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     scopeOfWork: [
       "Shell & Core Civil Works",
       "Bespoke Glass Frontage",
-      "In-House Premium Joinery",
+      "In-House Premium Carpentry",
       "HVAC & Fire Safety Integration",
       "Luxury Wall Fabric & Texturing",
       "Security Alarm Systems Setup"
@@ -70,7 +70,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     executionTime: "60 Days",
     projectScale: "5,400 Sq.Ft",
     scopeOfWork: [
-      "Custom Majlis Seating Joinery",
+      "Custom Majlis Seating Carpentry",
       "Double-Height Ceiling Civil Work",
       "Ambient Lighting Controls",
       "Handmade Wooden Partition Walls",
@@ -105,7 +105,7 @@ export const featuredFitouts: FeaturedFitout[] = [
       "High-Acoustic Glass Partitions",
       "Structural Server Racks & Data Cabling",
       "Integrated Linear Ceiling Lighting",
-      "Bespoke Executive Boardroom Joinery",
+      "Bespoke Executive Boardroom Carpentry",
       "Multi-Zone HVAC Engineering",
       "Fire Detection & Suppression Systems"
     ]
@@ -136,7 +136,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     scopeOfWork: [
       "Commercial Grade Kitchen Plumbing",
       "Specialized Grease Trap Civil Installation",
-      "In-House Leather Booth Joinery",
+      "In-House Leather Booth Carpentry",
       "Custom Overhead Steel Racks",
       "High-Capacity Kitchen Hood Exhausts",
       "Dimmable Scenographic Lighting"
@@ -278,7 +278,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     location: "Healthcare City, Dubai",
     img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2074&auto=format&fit=crop",
     intro: "A luxurious aesthetic and clinical sanctuary built with seamless sanitary surfaces.",
-    description: "A premier dermatological center featuring custom curved joinery, premium marble details, and calming indirect ambient lighting zones.",
+    description: "A premier dermatological center featuring custom curved carpentry, premium marble details, and calming indirect ambient lighting zones.",
     gallery: [
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1400&auto=format&fit=crop",
@@ -390,7 +390,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     executionTime: "20 Days",
     projectScale: "650 Sq.Ft",
     scopeOfWork: [
-      "Solid Oak Furniture Joinery",
+      "Solid Oak Furniture Carpentry",
       "Heavy Marble Island Leveling",
       "Concealed Gas & Induction Circuits",
       "Task-Specific Led Cabinet Strips",
@@ -425,7 +425,7 @@ export const featuredFitouts: FeaturedFitout[] = [
       "Bookmatched Marble Wall Cladding",
       "Waterproof Epoxy Grouting",
       "Concealed Shower Valve Piping",
-      "Floating Vanity Framing Joinery",
+      "Floating Vanity Framing Carpentry",
       "Thermostatic Under-Floor Heating",
       "Anti-Fog Heated Mirror Controls"
     ]
@@ -454,7 +454,7 @@ export const featuredFitouts: FeaturedFitout[] = [
     executionTime: "22 Days",
     projectScale: "900 Sq.Ft",
     scopeOfWork: [
-      "Bespoke Wardrobe Internal Joinery",
+      "Bespoke Wardrobe Internal Carpentry",
       "Integrated Sensor LED Strips",
       "Premium Velvet Drawer Lining",
       "Glass-Front Cabinet Fabrication",
