@@ -251,328 +251,278 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   }
 ,
   "fitout": {
-    title: "Fitout",
-    tagline: "Premium Fitout Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/retail_cafes_pantry_fitout.webp",
-    desc: ["Our expert Fitout services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Fitout, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Complete Your Fitout Project?",
+    tagline: "Premium Ready to Complete Your Fitout Project? Services",
+    heroImage: "https://halo.ae/images/intro-image.png?w=3840&q=75",
+    desc: ["Book a free fitout consultation and let our experts transform your space. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete fitout execution.","At Metro Retail Interiors, fitout is more than construction — it is a seamless orchestration of engineering, craftsmanship, and design execution. Our certified teams deliver end-to-end fitout with unmatched precision, from demolition to final finishing. We manage every element — structural works, MEP, joinery, flooring, ceilings, glazing, and decorative finishes — ensuring consistency, quality, and perfect alignment with the design intent.","Precision structural modifications to reconfigure layouts for residential and commercial spaces."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Fitout and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Fitout with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/retail_cafes_pantry_fitout.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Complete Your Fitout Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Complete Your Fitout Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/fitout_dubai_r2/structural.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/wall-partitions-2.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/flooring.jpg?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/lighting.webp?w=3840&q=75"]
   },
   "carpentry": {
-    title: "Carpentry",
-    tagline: "Premium Carpentry Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp",
-    desc: ["Our expert Carpentry services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Carpentry, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Bespoke In-House Joinery",
+    tagline: "Premium Bespoke In-House Joinery Services",
+    heroImage: "https://halo.ae/images/joinery_r2/Living-Room31-copy.jpg",
+    desc: ["Book a free joinery consultation and let our craftsmen assess your requirements. We'll provide detailed designs and transparent pricing for your custom joinery project","Introducing the Metro Retail SIGNATURE range of Luxury Wardrobes, Kitchens, Cabinets, Vanities and Wall Panels","Custom bar counters and vanity units crafted for function and style."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Carpentry and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Carpentry with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/design_styles_ultra_luxury_high_end_bespoke_carpentry_leather_designs.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Bespoke In-House Joinery and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Bespoke In-House Joinery with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/joinery_r2/services_joinery_tv_units_vaneer_cladding.webp","https://halo.ae/images/joinery_r2/polished_plasters.webp","https://halo.ae/images/joinery_r2/services_kitchens_integrated_lighting.webp","https://halo.ae/images/joinery_r2/services_joinery_tv_units_floaring_unites_and_marble_accents.webp"]
   },
   "kitchens-wardrobes": {
-    title: "Kitchens & Wardrobes",
-    tagline: "Premium Kitchens & Wardrobes Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/kitchen_surfaces.webp",
-    desc: ["Our expert Kitchens & Wardrobes services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Kitchens & Wardrobes, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Build Your Kitchens & Wardrobes?",
+    tagline: "Premium Ready to Build Your Kitchens & Wardrobes? Services",
+    heroImage: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen1_HALO.webp?w=3840&q=75",
+    desc: ["Book a free joinery consultation and let our craftsmen design custom kitchens and wardrobes. We'll provide a detailed proposal with in-house manufacturing and transparent pricing.","From elegant European-style wardrobes to modern functional kitchens, Metro Retail Interiors combines custom joinery, intelligent space planning, and high-quality materials to create beautiful, durable, and fully integrated storage and cooking solutions.","Bespoke kitchen cabinets designed and manufactured in our Al Quoz joinery facility with premium materials."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Kitchens & Wardrobes and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Kitchens & Wardrobes with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/kitchen_surfaces.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Build Your Kitchens & Wardrobes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Build Your Kitchens & Wardrobes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen2_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen3_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen4_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen5_HALO.webp?w=3840&q=75"]
   },
   "decorative-paint": {
-    title: "Decorative Paints",
-    tagline: "Premium Decorative Paints Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_decorative_paint_brick_finishes_feature_wall_brick.webp",
-    desc: ["Our expert Decorative Paints services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Decorative Paints, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready To Transform Your Walls With Premium Decorative Finishes",
+    tagline: "Premium Ready To Transform Your Walls With Premium Decorative Finishes Services",
+    heroImage: "https://halo.ae/images/decorative_paint/finishes/marmorino.png?w=3840&q=75",
+    desc: ["Book a free consultation and let our decorative specialists assess your space. We'll provide expert recommendations and transparent pricing for your decorative finishing project.","Transform your walls into works of art with Metro Retail's high-end decorative finishes — texture paints, Venetian plasters, microcement, metallic finishes, stone effects, and more.","Executed by trained artisans, our finishes bring depth, warmth, and luxury to any space."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Decorative Paints and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Decorative Paints with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_decorative_paint_brick_finishes_feature_wall_brick.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready To Transform Your Walls With Premium Decorative Finishes and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready To Transform Your Walls With Premium Decorative Finishes with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/textured_venetian.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp?w=3840&q=75"]
   },
   "microcement": {
-    title: "Microcement",
-    tagline: "Premium Microcement Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/microcement-1.jpg",
-    desc: ["Our expert Microcement services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Microcement, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Apply Microcement?",
+    tagline: "Premium Ready to Apply Microcement? Services",
+    heroImage: "https://halo.ae/images/H-Living10.jpg?w=3840&q=75",
+    desc: ["Book a free microcement consultation and let our specialists create seamless surfaces. We'll provide a detailed proposal with modern finishes and transparent pricing for microcement applications.","At Metro Retail, we provide one of the UAE's most extensive and advanced ranges of decorative microcement and seamless surface coatings. Our applications are;","We Have 50 Specialist Applicators50 Specialist Applicators10 Years Experience100 Shades and FinishesEU Standard Protocols"],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Microcement and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Microcement with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/microcement-1.jpg","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Microcement? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Microcement? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/decorative_paint/commercial/corporate_spaces_2.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint/commercial/corporate_spaces_1.png?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_002.webp?w=3840&q=75"]
   },
-  "terrazzo-floors": {
-    title: "Terrazzo Floors",
-    tagline: "Premium Terrazzo Floors Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/terrazzo.png",
-    desc: ["Our expert Terrazzo Floors services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Terrazzo Floors, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+  "terrazzo": {
+    title: "Ready to Install Terrazzo?",
+    tagline: "Premium Ready to Install Terrazzo? Services",
+    heroImage: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp?w=828&q=75",
+    desc: ["Book a free terrazzo consultation and let our craftsmen create timeless floors. We'll provide a detailed proposal with custom patterns and transparent pricing for terrazzo installations.","We create durable, decorative terrazzo floors with stunning aggregates, colours, and finishes. Perfect for luxury homes, restaurants, and retail spaces. Our terrazzo installations combine timeless elegance with modern durability.","Choose from our range of terrazzo options to create stunning floors, countertops, and feature walls that match your design vision."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Terrazzo Floors and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Terrazzo Floors with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/terrazzo.png","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Terrazzo? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Terrazzo? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/terrazzo_dubai_r2/retail.webp?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/office-1.webp?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/Office28-copy-2.jpg?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/bedroom.webp?w=3840&q=75"]
   },
   "landscaping-pools": {
-    title: "Landscaping & Pools",
-    tagline: "Premium Landscaping & Pools Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/pool_19.webp",
-    desc: ["Our expert Landscaping & Pools services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Landscaping & Pools, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Create Your Landscape & Pool?",
+    tagline: "Premium Ready to Create Your Landscape & Pool? Services",
+    heroImage: "https://halo.ae/images/landscaping_pools_dubai_r2/ALP1_HALO.webp?w=3840&q=75",
+    desc: ["Book a free landscaping consultation and let our experts design outdoor paradises. We'll provide a detailed proposal with pools, gardens, and transparent pricing for outdoor living.","From outdoor seating areas to custom pools, pergolas, and lush greenery, Metro Retail designs and builds outdoor spaces for modern living in . Transform your outdoor areas into beautiful, functional extensions of your home.","Custom Pools tailored for reliable and high-quality landscaping & pools execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Landscaping & Pools and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Landscaping & Pools with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/pool_19.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Create Your Landscape & Pool? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Create Your Landscape & Pool? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/landscaping_pools_dubai_r2/ALP2_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP3_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP4_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP5_HALO.webp?w=3840&q=75"]
   },
   "automation": {
-    title: "Automation",
-    tagline: "Premium Automation Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_automation_dubai_ac_and_climate_control.webp",
-    desc: ["Our expert Automation services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Automation, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Automate Your Smart Home?",
+    tagline: "Premium Ready to Automate Your Smart Home? Services",
+    heroImage: "https://halo.ae/images/automation_dubai_r2/lighting_control.webp?w=3840&q=75",
+    desc: ["Book a free automation consultation and let our experts design your smart systems. We'll provide a detailed proposal with integrated solutions and transparent pricing for home automation.","Smart home automation for lighting, AC, speakers, curtains, and security — integrated neatly into your fitout. Control your entire home with ease and convenience through advanced automation systems.","Lighting Control tailored for reliable and high-quality home automation execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Automation and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Automation with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_automation_dubai_ac_and_climate_control.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Automate Your Smart Home? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Automate Your Smart Home? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/automation_dubai_r2/smarthome.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/audio_visual.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/curtains_blings.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/security_system.webp?w=3840&q=75"]
   },
   "stretch-ceiling": {
-    title: "Stretch Ceiling",
-    tagline: "Premium Stretch Ceiling Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_stretch_ceiling_custom_designs.webp",
-    desc: ["Our expert Stretch Ceiling services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Stretch Ceiling, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install Stretch Ceilings?",
+    tagline: "Premium Ready to Install Stretch Ceilings? Services",
+    heroImage: "https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_1.jpg?w=3840&q=75",
+    desc: ["Book a free stretch ceiling consultation and let our specialists create modern overhead solutions. We'll provide a detailed proposal with innovative designs and transparent pricing.","Stylish, modern, and perfect for feature ceilings, backlit effects, and moisture resistance. Stretch ceilings offer a sleek, seamless finish that transforms any space with elegance and functionality.","Feature Ceilings tailored for reliable and high-quality stretch ceiling execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Stretch Ceiling and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Stretch Ceiling with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_stretch_ceiling_custom_designs.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Stretch Ceilings? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Stretch Ceilings? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_2.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_3.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_4.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_5.jpg?w=3840&q=75"]
   },
   "halo-shield": {
-    title: "Halo Shield",
-    tagline: "Premium Halo Shield Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_halo_shield_thermal_coating.webp",
-    desc: ["Our expert Halo Shield services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Halo Shield, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield.",
+    tagline: "Premium UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. Services",
+    heroImage: "https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&q=75",
+    desc: ["Engineering-led property protection designed for heavy rains, extreme heat, humidity, movement — built for million-dirham properties across the UAE.","Our clients include Property Owners, Interior Designers, Consultants and Contractors","From luxury villas on Palm Jumeirah to exclusive estates in Emirates Hills — our engineering team delivers precision waterproofing for discerning homeowners."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Halo Shield and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Halo Shield with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_halo_shield_thermal_coating.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/khaleej-times.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/business-insider.png?w=3840&q=75"]
   },
   "property-inspection": {
-    title: "Property Inspection",
-    tagline: "Premium Property Inspection Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_property_audits_pre_purchase_inspections.webp",
-    desc: ["Our expert Property Inspection services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Property Inspection, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE",
+    tagline: "Premium Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE Services",
+    heroImage: "https://halo.ae/images/property_inspection_dubai_r2/local-insights.jpg?w=3840&q=75",
+    desc: ["Certified property inspection engineers","Find hidden property issues before you buy, accept handover, or move in. Metro Retail's certified inspectors deliver a detailed property inspection and photo-backed snagging report covering structural, MEP, HVAC, waterproofing, finishing, and safety defects.","We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession. Our comprehensive 300-point inspection ensures you know exactly what you're buying and helps you avoid costly surprises."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Property Inspection and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Property Inspection with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_property_audits_pre_purchase_inspections.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/khaleej-times.png?w=3840&q=75","https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&q=75"]
   },
   "mep-hvac": {
-    title: "MEP & HVAC",
-    tagline: "Premium MEP & HVAC Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_mep_hvac_hvac_installations.webp",
-    desc: ["Our expert MEP & HVAC services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in MEP & HVAC, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install MEP & HVAC?",
+    tagline: "Premium Ready to Install MEP & HVAC? Services",
+    heroImage: "https://halo.ae/images/mep_hvac_dubai_r2/electrical.webp?w=3840&q=75",
+    desc: ["Book a free MEP consultation and let our DEWA-certified engineers design your systems. We'll provide a detailed proposal with technical solutions and transparent pricing for MEP works.","Certified mechanical, electrical, plumbing, and air conditioning works — from rewiring to full MEP installations. Our certified engineers ensure all systems meet Municipality and DEWA standards.","Electrical Works tailored for reliable and high-quality mep & hvac execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for MEP & HVAC and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the MEP & HVAC with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_mep_hvac_hvac_installations.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install MEP & HVAC? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install MEP & HVAC? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/mep_hvac_dubai_r2/plumbing_systems.jpg?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_hvac_installations.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_mechanical_systems.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/system_upgrades.jpg?w=3840&q=75"]
   },
   "project-management": {
-    title: "Project Management",
-    tagline: "Premium Project Management Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_project_management_communication.webp",
-    desc: ["Our expert Project Management services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Project Management, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Manage Your Project?",
+    tagline: "Premium Ready to Manage Your Project? Services",
+    heroImage: "https://halo.ae/images/project_management_dubai_r2/services_project_management_timeline_management.webp?w=3840&q=75",
+    desc: ["Book a free project management consultation and let our experts coordinate your renovation. We'll provide a detailed proposal with timelines, milestones, and transparent pricing.","Dedicated project managers oversee quality, timelines, subcontractors, inspections, and coordination. Ensure your project runs smoothly from start to finish with our professional project management services.","Timeline Management tailored for reliable and high-quality project management execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Project Management and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Project Management with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_project_management_communication.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Manage Your Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Manage Your Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/project_management_dubai_r2/services_project_management_quality_control.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_subcontractor_coordination.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_regular_inspections.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_communication.webp?w=3840&q=75"]
   },
   "venetian-plasters": {
-    title: "Venetian Plasters",
-    tagline: "Premium Venetian Plasters Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/textured_venetian.webp",
-    desc: ["Our expert Venetian Plasters services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Venetian Plasters, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Apply Venetian Plasters?",
+    tagline: "Premium Ready to Apply Venetian Plasters? Services",
+    heroImage: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg?w=3840&q=75",
+    desc: ["Book a free Venetian plaster consultation and let our artisans create luxury finishes. We'll provide a detailed proposal with premium techniques and transparent pricing for elegant walls.","Metro Retail's artisans apply authentic Venetian plasters including polished plaster, Marmorino, Travertino, and satin & matte finishes using traditional Italian-style application techniques for luxurious wall finishes.","Polished Plaster tailored for reliable and high-quality venetian plasters execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Venetian Plasters and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Venetian Plasters with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/textured_venetian.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Venetian Plasters? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Venetian Plasters? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/decorative_paint_venetian_plasters_r2/marmorino.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/travertino.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/satin_finish.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/matt_venetian_plaster.jpg?w=3840&q=75"]
   },
   "feature-walls": {
-    title: "Feature Walls",
-    tagline: "Premium Feature Walls Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_decorative_paint_feature_walls_metallic_feature_walls.webp",
-    desc: ["Our expert Feature Walls services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Feature Walls, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Create Feature Walls",
+    tagline: "Premium Create Feature Walls Services",
+    heroImage: "https://halo.ae/images/decorative_paint_feature_walls_r2/concrete_textures.jpg?w=3840&q=75",
+    desc: ["Book a free feature wall consultation and let our experts design stunning focal points. We'll provide a detailed proposal with creative solutions and transparent pricing for your walls.","Create stunning focal points with Metro Retail's custom feature walls. From artistic textures to bold accent walls and statement finishes, we design and execute feature walls that transform your space.","Textured Feature Walls tailored for reliable and high-quality feature walls execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Feature Walls and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Feature Walls with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_decorative_paint_feature_walls_metallic_feature_walls.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Create Feature Walls and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Create Feature Walls with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/decorative_paint_feature_walls_r2/geometric_walls.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/metallic_textures.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/feature-walls-2.png?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg?w=3840&q=75"]
   },
   "artistic-finishes": {
-    title: "Artistic Finishes",
-    tagline: "Premium Artistic Finishes Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/artistic_patterns.webp",
-    desc: ["Our expert Artistic Finishes services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Artistic Finishes, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Apply Artistic Finishes?",
+    tagline: "Premium Ready to Apply Artistic Finishes? Services",
+    heroImage: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg?w=3840&q=75",
+    desc: ["Book a free finishes consultation and let our artisans create unique textures. We'll provide a detailed proposal with decorative techniques and transparent pricing for artistic walls.","Transform your walls into works of art with Metro Retail's artistic decorative finishes. From metallic effects to faux finishes and custom textures, we create unique surfaces that elevate your interior design to extraordinary levels.","Metallic Finishes tailored for reliable and high-quality artistic finishes execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Artistic Finishes and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Artistic Finishes with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/artistic_patterns.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Artistic Finishes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Artistic Finishes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg?w=3840&q=75"]
   },
-  "custom-furniture": {
-    title: "Custom Furniture",
-    tagline: "Premium Custom Furniture Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_customized_furniture_dubai_ceiling_works_and_lighting.webp",
-    desc: ["Our expert Custom Furniture services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Custom Furniture, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+  "customised-furniture": {
+    title: "Ready to Create Your Custom Furniture?",
+    tagline: "Premium Ready to Create Your Custom Furniture? Services",
+    heroImage: "https://halo.ae/images/customised_furniture_dubai_r2/tv-units-3.webp?w=3840&q=75",
+    desc: ["Book a free furniture consultation and let our craftsmen design bespoke pieces. We'll provide a detailed proposal with custom joinery and transparent pricing for your furniture project.","Metro Retail Interiors designs and manufactures bespoke furniture including sofas, tables, consoles, beds, benches, shelving, and more — all tailored to your style and space requirements. Every piece is custom-made in our Al Quoz joinery facility using premium materials and expert craftsmanship.","Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Custom Furniture and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Custom Furniture with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_customized_furniture_dubai_ceiling_works_and_lighting.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/customised_furniture_dubai_r2/Door3.jpg?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/sofa.png?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/customized_table.png?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/customized-bed.png?w=3840&q=75"]
   },
   "air-quality": {
-    title: "Air Quality",
-    tagline: "Premium Air Quality Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_air_quality_hvac_cleaning_and_maintenance.webp",
-    desc: ["Our expert Air Quality services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Air Quality, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Improve Your Air Quality?",
+    tagline: "Premium Ready to Improve Your Air Quality? Services",
+    heroImage: "https://halo.ae/images/air_quality_dubai_r2/envirobiotics_family.png?w=3840&q=75",
+    desc: ["Book a free air quality consultation and let our experts assess your space. We'll provide a detailed proposal with ventilation solutions and transparent pricing for healthier indoor.","Metro Retail provides advanced air purification, mold removal, environmental probiotics, HVAC cleaning, and humidity control solutions to ensure healthy indoor environments for your home or business.","Advanced air purification systems for healthier indoor environments in homes and offices."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Air Quality and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Air Quality with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_air_quality_hvac_cleaning_and_maintenance.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Improve Your Air Quality? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Improve Your Air Quality? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/air_quality_dubai_r2/all_products.jpg?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/mold_removal.webp?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/probiotics.jpg?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/mep_maintenance.jpg?w=3840&q=75"]
   },
   "contracting": {
-    title: "Contracting",
-    tagline: "Premium Contracting Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_contracting_dubai_structural_engineering_and_design.webp",
-    desc: ["Our expert Contracting services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Contracting, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Complete Your Contracting Project?",
+    tagline: "Premium Ready to Complete Your Contracting Project? Services",
+    heroImage: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp?w=3840&q=75",
+    desc: ["Book a free contracting consultation and let our experts manage your project. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete execution.","Expert structural work, additions, modifications, extensions, and G+1 construction with full authority-approved engineering and compliance.","G+1 Construction tailored for reliable and high-quality contracting execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Contracting and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Contracting with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_contracting_dubai_structural_engineering_and_design.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Complete Your Contracting Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Complete Your Contracting Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_structural_additions_and_extensions.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_authority_approvals_and_permits.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_foundation_and_structural_work.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_building_modifications.webp?w=3840&q=75"]
   },
   "window-glazing": {
-    title: "Window Glazing",
-    tagline: "Premium Window Glazing Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_window_glazing_sliding_window_systems.webp",
-    desc: ["Our expert Window Glazing services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Window Glazing, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install Window Glazing?",
+    tagline: "Premium Ready to Install Window Glazing? Services",
+    heroImage: "https://halo.ae/images/window_glazing_dubai_r2/window-glazing.jpg?w=3840&q=75",
+    desc: ["Book a free glazing consultation and let our specialists install energy-efficient windows. We'll provide a detailed proposal with quality materials and transparent pricing.","Expert window installation, replacement, low-E glass, sliding systems, folding doors, and thermal performance upgrades for residential and commercial properties.","Window installation & replacement tailored for reliable and high-quality window glazing execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Window Glazing and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Window Glazing with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_window_glazing_sliding_window_systems.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Window Glazing? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Window Glazing? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/sliding_windows.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/foldable_doors.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/thermal_window.jpg?w=3840&q=75"]
   },
   "tile-installation": {
-    title: "Tile Installation",
-    tagline: "Premium Tile Installation Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_tile_installation_ceramic_tile_installation.webp",
-    desc: ["Our expert Tile Installation services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Tile Installation, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install Premium Tiles?",
+    tagline: "Premium Ready to Install Premium Tiles? Services",
+    heroImage: "https://halo.ae/images/tile_installation_dubai_r2/porcellain.jpg?w=3840&q=75",
+    desc: ["Book a free tile consultation and let our specialists install precision flooring and walls. We'll provide a detailed proposal with quality materials and transparent pricing.","Professional installation of porcelain, ceramic, marble, mosaic, outdoor tiles, and large-format slabs with precision and quality craftsmanship.","Porcelain Tile Installation tailored for reliable and high-quality tile installation execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Tile Installation and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Tile Installation with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_tile_installation_ceramic_tile_installation.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Premium Tiles? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Premium Tiles? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/tile_installation_dubai_r2/12.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/marble_tile.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/mosaic_tile.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg?w=3840&q=75"]
   },
   "marble-installation": {
-    title: "Marble Installation",
-    tagline: "Premium Marble Installation Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_tile_installation_marble_tile_installation.webp",
-    desc: ["Our expert Marble Installation services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Marble Installation, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install Marble Finishes?",
+    tagline: "Premium Ready to Install Marble Finishes? Services",
+    heroImage: "https://halo.ae/images/marble_installation_dubai_r2/marble_cutting.jpg?w=3840&q=75",
+    desc: ["Book a free marble consultation and let our specialists install premium stone. We'll provide a detailed proposal with luxury materials and transparent pricing for marble installations.","Expert cutting, polishing, installation, cladding, and repair of natural stones including marble, granite, and premium materials.","Marble Cutting & Fabrication tailored for reliable and high-quality marble installation execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Marble Installation and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Marble Installation with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_tile_installation_marble_tile_installation.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Marble Finishes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Marble Finishes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/marble_installation_dubai_r2/marble_polishing.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_floor_installation.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_cladding.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_countertop.jpg?w=3840&q=75"]
   },
   "gypsum-works": {
-    title: "Gypsum Works",
-    tagline: "Premium Gypsum Works Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/gypsum_partitions.webp",
-    desc: ["Our expert Gypsum Works services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Gypsum Works, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Install Gypsum Works?",
+    tagline: "Premium Ready to Install Gypsum Works? Services",
+    heroImage: "https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg?w=3840&q=75",
+    desc: ["Book a free gypsum consultation and let our craftsmen create custom ceilings and partitions. We'll provide a detailed proposal with precision work and transparent pricing for gypsum installations.","Expert false ceilings, partitions, bulkheads, coves, niches, and detailed gypsum design for residential and commercial spaces.","False Ceiling Installation tailored for reliable and high-quality gypsum works execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Gypsum Works and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Gypsum Works with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/gypsum_partitions.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Gypsum Works? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Gypsum Works? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/gypsum_works_dubai_r2/gypsum_partitions.jpg?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/gypsum_bulkheads.jpg?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_gypsum_niches_and_features.webp?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp?w=3840&q=75"]
   },
   "property-audits": {
-    title: "Property Audits",
-    tagline: "Premium Property Audits Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_property_audits_technical_audits.webp",
-    desc: ["Our expert Property Audits services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Property Audits, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Audit Your Property?",
+    tagline: "Premium Ready to Audit Your Property? Services",
+    heroImage: "https://halo.ae/images/property_audits_dubai_r2/residential_outdoor_living_pool_decking_and_water_features.webp?w=3840&q=75",
+    desc: ["Book a free property audit and let our engineers assess your space. We'll provide a detailed inspection report with recommendations and transparent pricing for audit services.","Comprehensive technical audits for ongoing projects, renovation oversight, and quality verification to ensure your project meets the highest standards.","Technical Audits tailored for reliable and high-quality property audits execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Property Audits and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Property Audits with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_property_audits_technical_audits.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Audit Your Property? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Audit Your Property? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/property_audits_dubai_r2/terrazzo.png?w=3840&q=75","https://halo.ae/images/property_audits_dubai_r2/wardrobes_06.webp?w=3840&q=75","https://halo.ae/images/property_audits_dubai_r2/services_property_audits_technical_audits.webp?w=3840&q=75","https://halo.ae/images/property_audits_dubai_r2/services_property_audits_ongoing_project_audits.webp?w=3840&q=75"]
   },
   "authority-approvals": {
-    title: "Authority Approvals",
-    tagline: "Premium Authority Approvals Services in Dubai",
-    heroImage: "https://halo.ae/images/services_r2/services_authority_approvals_utility_connections.webp",
-    desc: ["Our expert Authority Approvals services are designed to transform your spaces with precision and style. We focus on delivering high-end aesthetics, everyday functionality, and unmatched quality. Every project is meticulously planned and executed by our specialized team.","With extensive experience in Authority Approvals, we ensure that all our materials and installations meet the highest industry standards. From residential villas to commercial spaces, we provide tailored solutions that align perfectly with your vision.","We manage the entire process seamlessly from initial concept through to final execution and handover, guaranteeing a flawless result that exceeds expectations."],
+    title: "Ready to Get Your Authority Approvals?",
+    tagline: "Premium Ready to Get Your Authority Approvals? Services",
+    heroImage: "https://halo.ae/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp?w=3840&q=75",
+    desc: ["Book a free approvals consultation and let our DM-certified engineers handle your permits. We'll provide a detailed proposal with timelines and transparent pricing for all authority submissions.","Navigating 's regulatory landscape requires expertise and precision. Metro Retail Interiors handles all drawings, submissions, and NOCs for Municipality, Development Authority (DDA), RERA, Civil Defense, and utilities. Whether you're opening an F&B venue, renovating a commercial space, or developing a residential project, we ensure full compliance and timely approvals so your project moves forward without delays.","Municipality Approvals tailored for reliable and high-quality authority approvals execution."],
     stats: [
-      { label: "Projects Completed", value: "300+", icon: Award },
-      { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 },
-      { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Authority Approvals and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Authority Approvals with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/services_r2/services_authority_approvals_utility_connections.webp","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80","https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"]
-  },
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Get Your Authority Approvals? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Get Your Authority Approvals? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: ["https://halo.ae/images/authority_approvals_dubai_r2/dda_approvals.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/rera_approvals.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/civil_defence_noc_approval.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/utility_connection.jpg?w=3840&q=75"]
+  }
 };
