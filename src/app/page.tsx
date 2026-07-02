@@ -44,7 +44,7 @@ export default function Page() {
         <FeaturedFitouts />
 
         <VideoSeparator
-          src="https://assets.mixkit.co/videos/preview/mixkit-mechanical-arm-working-in-a-factory-40337-large.mp4"
+          src="/only_shows_mrs_as_per_the_logo.mp4"
           title="Engineered to Perfection"
         />
 

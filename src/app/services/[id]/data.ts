@@ -259,7 +259,104 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Complete Your Fitout Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Complete Your Fitout Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/intro-image.png?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/structural.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/wall-partitions-2.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/flooring.jpg?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/lighting.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/hvac.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/drainage.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/electrical.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/smarthome.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/window-glazing.jpg?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/01-2.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/feature-walls-2.png?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/final-handover.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/fitout_dubai_r2/Kitchen13.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/structural.webp",
+            title: "Structural Modifications",
+            description: "Precision structural modifications to reconfigure layouts for residential and commercial spaces.",
+            tags: [
+                "LoadBearingWalls",
+                "SlabOpenings",
+                "ColumnWrapping"
+            ],
+            bullets: [
+                "Structural modification contractor",
+                "Load bearing wall removal villa",
+                "Luxury apartment structural alteration"
+            ],
+            buttonText: "STRUCTURAL MODIFICATIONS →"
+        },
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/lighting.webp",
+            title: "Ceiling works and lighting",
+            description: "Complete ceiling solutions with integrated lighting for refined interiors.",
+            tags: [
+                "FalseCeilings",
+                "CofferedCeilings",
+                "LEDIntegration"
+            ],
+            bullets: [
+                "False ceiling installation",
+                "Luxury coffered ceiling design villa",
+                "LED ceiling light integration contractor"
+            ],
+            buttonText: "CEILING WORKS AND LIGHTING →"
+        },
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/hvac.webp",
+            title: "Full MEP and HVAC",
+            description: "Full MEP and HVAC coordination by DEWA certified engineers for peak performance.",
+            tags: [
+                "Ductwork",
+                "ChillerSystems",
+                "FireSafety"
+            ],
+            bullets: [
+                "MEP contractor fitout",
+                "HVAC ductwork installation villa",
+                "DEWA certified MEP engineer"
+            ],
+            buttonText: "FULL MEP AND HVAC →"
+        },
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/drainage.webp",
+            title: "Plumbing Drainage",
+            description: "Professional plumbing and drainage installation to meet all authority standards.",
+            tags: [
+                "CopperPiping",
+                "PPRPiping",
+                "DrainageSystems"
+            ],
+            bullets: [
+                "Plumbing contractor fitout",
+                "Luxury bathroom plumbing installation",
+                "Drainage system upgrade villa"
+            ],
+            buttonText: "PLUMBING DRAINAGE →"
+        },
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/electrical.webp",
+            title: "Electrical rewiring",
+            description: "Complete electrical rewiring and DB upgrades by DEWA certified engineers.",
+            tags: [
+                "DBUpgrades",
+                "CircuitInstallation",
+                "DEWACompliance"
+            ],
+            bullets: [
+                "Electrical rewiring contractor",
+                "DEWA approved electrical upgrade villa",
+                "Distribution board upgrade apartment"
+            ],
+            buttonText: "ELECTRICAL REWIRING →"
+        },
+        {
+            img: "https://halo.ae/images/fitout_dubai_r2/smarthome.webp",
+            title: "Smart home integration",
+            description: "Modern smart home systems for automated lighting, security, and climate control.",
+            tags: [
+                "LightingAutomation",
+                "SecuritySystems",
+                "AVSystems"
+            ],
+            bullets: [
+                "Smart home automation",
+                "Luxury home automation system villa",
+                "KNX smart lighting installation"
+            ],
+            buttonText: "SMART HOME INTEGRATION →"
+        }
+    ]
   },
   "carpentry": {
     title: "Bespoke In-House Joinery",
@@ -270,7 +367,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Bespoke In-House Joinery and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Bespoke In-House Joinery with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/joinery_r2/Living-Room31-copy.jpg","https://halo.ae/images/joinery_r2/services_joinery_tv_units_vaneer_cladding.webp","https://halo.ae/images/joinery_r2/polished_plasters.webp","https://halo.ae/images/joinery_r2/services_kitchens_integrated_lighting.webp","https://halo.ae/images/joinery_r2/services_joinery_tv_units_floaring_unites_and_marble_accents.webp","https://halo.ae/images/joinery/HALO-intro-section.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/HALO-bar-counter.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/feature-walls-2.png?w=3840&q=75","https://halo.ae/images/joinery_r2/Kitchen11-1.jpg?w=3840&q=75","https://halo.ae/images/joinery_r2/services_joinery_office_furniture_executing_desks.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/reception-desk-4.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/HALO-residential-furniture.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/tv-units-3.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/HALO-wall-panels.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/services_joinery_wardrobes_walkin_wardrobes.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/wood-ceilings-5.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/Door3.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J1.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/JOI19.webp?w=3840&q=75","https://halo.ae/images/joinery-portraits/JOI20.webp?w=3840&q=75","https://halo.ae/images/joinery-portraits/J4.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J5.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J6.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J8.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J10.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J11.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J12.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J13.jpg?w=3840&q=75","https://halo.ae/images/joinery-portraits/J14.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/custom-joinery-dining.jpg"]
+    gallery: ["https://halo.ae/images/joinery_r2/services_joinery_tv_units_vaneer_cladding.webp","https://halo.ae/images/joinery_r2/polished_plasters.webp","https://halo.ae/images/joinery_r2/services_kitchens_integrated_lighting.webp","https://halo.ae/images/joinery_r2/services_joinery_tv_units_floaring_unites_and_marble_accents.webp","https://halo.ae/images/joinery/HALO-intro-section.webp?w=3840&q=75","https://halo.ae/images/joinery_r2/HALO-bar-counter.webp?w=3840&q=75"]
   },
   "kitchens-wardrobes": {
     title: "Ready to Build Your Kitchens & Wardrobes?",
@@ -281,7 +378,56 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Build Your Kitchens & Wardrobes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Build Your Kitchens & Wardrobes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen1_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen2_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen3_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen4_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen5_HALO.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/wardrobes_01.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/wardrobes_02.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/wardrobes_03.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/wardrobes_04.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_kitch_cabinets.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_built_in_appliances.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_quartz_granite_and_marble_countertops.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_backsplash_installation.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_soft_closing_hardware.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_integrated_lighting.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_island_and_breakfast_counters.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_plumbing_and_electrical.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_walkin_wardrobes.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_builtin_wardrobes.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/residential_wardrobes_glass_wardrobes.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/residential_wardrobes_led_shelving.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/residential_wardrobes_show_racks.webp?w=3840&q=75","https://halo.ae/images/kitchens_wardrobes_dubai_r2/residential_wardrobes_accessory_organizers.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/LUXURY-MANSION1-copy.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_built_in_appliances.webp",
+            title: "Built-in Appliances",
+            description: "Seamless integration of premium appliances including ovens, dishwashers, and refrigerators.",
+            tags: [],
+            bullets: [],
+            buttonText: "BUILT-IN APPLIANCES →"
+        },
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_backsplash_installation.webp",
+            title: "Backsplash Installation",
+            description: "Beautiful backsplash designs using tiles, marble, or decorative materials.",
+            tags: [],
+            bullets: [],
+            buttonText: "BACKSPLASH INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_soft_closing_hardware.webp",
+            title: "Soft-Closing Hardware",
+            description: "Premium German and Italian hardware with soft-closing drawers and doors.",
+            tags: [],
+            bullets: [],
+            buttonText: "SOFT-CLOSING HARDWARE →"
+        },
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_integrated_lighting.webp",
+            title: "Integrated Lighting",
+            description: "LED lighting integrated into cabinets, drawers, and under-counter areas.",
+            tags: [],
+            bullets: [],
+            buttonText: "INTEGRATED LIGHTING →"
+        },
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_island_and_breakfast_counters.webp",
+            title: "Island and Breakfast Counters",
+            description: "Custom-designed kitchen islands and breakfast counters for functional and social spaces.",
+            tags: [],
+            bullets: [],
+            buttonText: "ISLAND AND BREAKFAST COUNTERS →"
+        },
+        {
+            img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_walkin_wardrobes.webp",
+            title: "Walk-in Wardrobes",
+            description: "Spacious walk-in wardrobe systems with custom shelving, hanging areas, and storage solutions.",
+            tags: [],
+            bullets: [],
+            buttonText: "WALK-IN WARDROBES →"
+        }
+    ]
   },
   "decorative-paint": {
     title: "Ready To Transform Your Walls With Premium Decorative Finishes",
@@ -292,7 +438,104 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready To Transform Your Walls With Premium Decorative Finishes and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready To Transform Your Walls With Premium Decorative Finishes with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/decorative_paint/finishes/marmorino.png?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/textured_venetian.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/custom_stencils.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/soft_pearl.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/artistic_patterns.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/terrazzo.png?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/microcement.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_r2/resin_floors.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
+            title: "Texture Paints",
+            description: "Luxury textured finishes with depth, movement, and visual character for premium interiors.",
+            tags: [
+                "SandTexture",
+                "StuccoFinish",
+                "KnockdownTexture"
+            ],
+            bullets: [
+                "Texture paint application",
+                "Luxury sand texture wall finish villa",
+                "Stucco wall finish contractor UAE"
+            ],
+            buttonText: "TEXTURE PAINTS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/textured_venetian.webp",
+            title: "Venetian Plasters",
+            description: "Smooth polished plaster finishes that bring timeless Italian elegance to any space.",
+            tags: [
+                "MarmoPlaster",
+                "PolishedPlaster",
+                "TadelaktFinish"
+            ],
+            bullets: [
+                "Venetian plaster wall finish",
+                "Italian polished plaster villa",
+                "Luxury tadelakt finish contractor UAE"
+            ],
+            buttonText: "VENETIAN PLASTERS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
+            title: "Feature Walls",
+            description: "Statement feature walls designed to anchor and elevate residential and commercial interiors.",
+            tags: [
+                "AccentWall",
+                "StatementWall",
+                "FocalPoint"
+            ],
+            bullets: [
+                "Decorative feature wall",
+                "Luxury accent wall design villa",
+                "Statement feature wall contractor UAE"
+            ],
+            buttonText: "FEATURE WALLS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp",
+            title: "Limewash",
+            description: "Soft matte limewash finishes with natural tone variation and warmth for organic aesthetics.",
+            tags: [
+                "LimewashPaint",
+                "MatteLime",
+                "NaturalFinish"
+            ],
+            bullets: [
+                "Limewash wall paint",
+                "Matte limewash finish villa",
+                "Natural limewash application contractor UAE"
+            ],
+            buttonText: "LIMEWASH →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
+            title: "Brick Finish",
+            description: "Decorative brick-effect finishes that add raw texture and urban charm to interiors.",
+            tags: [
+                "ExposedBrick",
+                "FauxBrick",
+                "IndustrialFinish"
+            ],
+            bullets: [
+                "Decorative brick wall finish",
+                "Faux brick effect wall villa",
+                "Exposed brick finish contractor UAE"
+            ],
+            buttonText: "BRICK FINISH →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_r2/custom_stencils.webp",
+            title: "Stencil Painting",
+            description: "Custom stencil patterns for artistic walls with precise repeat detailing and visual impact.",
+            tags: [
+                "GeometricStencil",
+                "MoroccanPattern",
+                "DamaskStencil"
+            ],
+            bullets: [
+                "Custom stencil painting",
+                "Moroccan pattern wall stencil villa",
+                "Decorative stencil painter contractor UAE"
+            ],
+            buttonText: "STENCIL PAINTING →"
+        }
+    ]
   },
   "microcement": {
     title: "Ready to Apply Microcement?",
@@ -303,7 +546,56 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Microcement? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Microcement? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/H-Living10.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint/commercial/corporate_spaces_2.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint/commercial/corporate_spaces_1.png?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_office_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bathrooms_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bathrooms_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bathrooms_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bathrooms_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_gym_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_gym_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_gym_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_gym_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_living%26dining_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_living%26dining_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_living%26dining_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_living%26dining_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_luxury_salon_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_luxury_salon_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_luxury_salon_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_luxury_salon_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_terrace_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_terrace_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_terrace_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_terrace_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_warehouse_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_warehouse_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_warehouse_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_warehouse_004.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bedrooms_001.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bedrooms_002.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bedrooms_003.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement_bedrooms_004.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/microcement_dubai_r2/microcement-1.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/H-Living10.jpg?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint/commercial/corporate_spaces_2.jpg?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint/commercial/corporate_spaces_1.png?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_001.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_002.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_003.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        }
+    ]
   },
   "terrazzo": {
     title: "Ready to Install Terrazzo?",
@@ -314,7 +606,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Terrazzo? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Terrazzo? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/terrazzo_dubai_r2/showroom.webp?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/retail.webp?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/office-1.webp?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/Office28-copy-2.jpg?w=828&q=75","https://halo.ae/images/terrazzo_dubai_r2/bedroom.webp?w=3840&q=75","https://halo.ae/images/terrazzo_dubai_r2/terazzo-counters.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_dubai_r2/showroom.webp?w=3840&q=75","https://halo.ae/images/terrazzo_dubai_r2/retail.webp?w=3840&q=75","https://halo.ae/images/terrazzo_dubai_r2/office-1.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/terrazzo_dubai_r2/terazzo-general.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/bedroom.webp",
+            title: "Terrazzo Floors",
+            description: "Terrazzo Floors tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "TerrazzoFlooring",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "TERRAZZO FLOORS →"
+        },
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/terazzo-counters.jpg",
+            title: "Terrazzo Counters",
+            description: "Terrazzo Counters tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "TerrazzoCountertops",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "TERRAZZO COUNTERS →"
+        },
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp",
+            title: "Custom Aggregates",
+            description: "Custom Aggregates tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "AggregateDesign",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "CUSTOM AGGREGATES →"
+        },
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/retail.webp",
+            title: "Color Options",
+            description: "Color Options tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "ColorCustomization",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "COLOR OPTIONS →"
+        },
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp",
+            title: "Polished Finishes",
+            description: "Polished Finishes tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "PolishedSurfaces",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "POLISHED FINISHES →"
+        },
+        {
+            img: "https://halo.ae/images/terrazzo_dubai_r2/office-1.webp",
+            title: "Commercial Applications",
+            description: "Commercial Applications tailored for reliable and high-quality terrazzo floors execution.",
+            tags: [
+                "CommercialFitout",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "COMMERCIAL APPLICATIONS →"
+        }
+    ]
   },
   "landscaping-pools": {
     title: "Ready to Create Your Landscape & Pool?",
@@ -325,7 +684,52 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Create Your Landscape & Pool? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Create Your Landscape & Pool? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/landscaping_pools_dubai_r2/ALP1_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP2_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP3_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP4_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP5_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP6_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP7_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP8_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP9_HALO-1.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP10_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP11_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP12_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP13_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP14_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP15_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP16_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP17_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP18_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP19_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP20_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP21_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP22_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP23_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP24_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP25_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP26_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP27_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/ALP28_HALO.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_06.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_05.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_07.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_13.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_04.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_17.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/landscaping_pools_dubai_r2/pool_13.webp"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_06.webp",
+            title: "Custom Pools",
+            description: "Custom Pools tailored for reliable and high-quality landscaping \\u0026 pools execution.",
+            tags: [
+                "PoolDesign",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "CUSTOM POOLS →"
+        },
+        {
+            img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_05.webp",
+            title: "Outdoor Seating Areas",
+            description: "Outdoor Seating Areas tailored for reliable and high-quality landscaping \\u0026 pools execution.",
+            tags: [
+                "OutdoorLiving",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "OUTDOOR SEATING AREAS →"
+        },
+        {
+            img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_13.webp",
+            title: "Garden Design",
+            description: "Garden Design tailored for reliable and high-quality landscaping \\u0026 pools execution.",
+            tags: [
+                "LandscapeDesign",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "GARDEN DESIGN →"
+        },
+        {
+            img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_04.webp",
+            title: "Outdoor Kitchens",
+            description: "Outdoor Kitchens tailored for reliable and high-quality landscaping \\u0026 pools execution.",
+            tags: [
+                "OutdoorKitchens",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "OUTDOOR KITCHENS →"
+        }
+    ]
   },
   "automation": {
     title: "Ready to Automate Your Smart Home?",
@@ -336,7 +740,41 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Automate Your Smart Home? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Automate Your Smart Home? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/automation_dubai_r2/lighting_control.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/smarthome.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/audio_visual.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/curtains_blings.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/security_system.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/smart_integration.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/automation_dubai_r2/smarthome.webp"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/automation_dubai_r2/lighting_control.webp",
+            title: "Lighting Control",
+            description: "Lighting Control tailored for reliable and high-quality home automation execution.",
+            tags: [
+                "LightingControl",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "LIGHTING CONTROL →"
+        },
+        {
+            img: "https://halo.ae/images/automation_dubai_r2/security_system.webp",
+            title: "Security Systems",
+            description: "Security Systems tailored for reliable and high-quality home automation execution.",
+            tags: [
+                "SecurityAutomation",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "SECURITY SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/automation_dubai_r2/smart_integration.webp",
+            title: "Smart Integration",
+            description: "Smart Integration tailored for reliable and high-quality home automation execution.",
+            tags: [
+                "SmartIntegration",
+                "Offices"
+            ],
+            bullets: [],
+            buttonText: "SMART INTEGRATION →"
+        }
+    ]
   },
   "stretch-ceiling": {
     title: "Ready to Install Stretch Ceilings?",
@@ -347,7 +785,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Stretch Ceilings? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Stretch Ceilings? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_1.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_2.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_3.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_4.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_5.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_6.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_7.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_8.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_9.jpg?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/stretch_ceiling_last.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/featured_stretch_ceilings.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling_backlit.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/moisture_resistance.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/custom-ceilings.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/quick-installation.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling-maintenance.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/stretch_ceiling_dubai_r2/wood-ceilings-5.webp"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/featured_stretch_ceilings.webp",
+            title: "Feature Ceilings",
+            description: "Feature Ceilings tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "FeatureCeilings",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "FEATURE CEILINGS →"
+        },
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling_backlit.webp",
+            title: "Backlit Effects",
+            description: "Backlit Effects tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "BacklitCeilings",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "BACKLIT EFFECTS →"
+        },
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/moisture_resistance.webp",
+            title: "Moisture Resistance",
+            description: "Moisture Resistance tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "MoistureResistantCeilings",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "MOISTURE RESISTANCE →"
+        },
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/custom-ceilings.webp",
+            title: "Custom Designs",
+            description: "Custom Designs tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "CustomCeilingDesign",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "CUSTOM DESIGNS →"
+        },
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/quick-installation.webp",
+            title: "Quick Installation",
+            description: "Quick Installation tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "FastTrackFitout",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "QUICK INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling-maintenance.webp",
+            title: "Easy Maintenance",
+            description: "Easy Maintenance tailored for reliable and high-quality stretch ceiling execution.",
+            tags: [
+                "LowMaintenanceCeilings",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "EASY MAINTENANCE →"
+        }
+    ]
   },
   "halo-shield": {
     title: "UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield.",
@@ -358,7 +863,56 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/khaleej-times.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/business-insider.png?w=3840&q=75","https://halo.ae/images/halo-shield/work/01_1.webp","https://halo.ae/images/halo-shield/work/05-4.webp","https://halo.ae/images/halo-shield/work/downtown-rooftop.webp","https://halo.ae/images/halo-shield/work/villa-spray.webp","https://halo.ae/images/halo-shield/work/13_1.webp","https://halo.ae/images/halo-shield/work/20.webp","https://halo.ae/images/halo-shield/work/05_2.webp","https://halo.ae/images/halo-shield/work/22.webp","https://halo.ae/images/halo-shield/work/30.webp","https://halo.ae/images/halo-shield/work/02_2.webp","https://halo.ae/images/halo-shield/work/05_1.webp","https://halo.ae/images/halo-shield/work/29.webp","https://halo.ae/images/halo-shield/work/03-2.webp","https://halo.ae/images/halo-shield/work/05_3.webp","https://halo.ae/images/halo-shield/work/25.webp","https://halo.ae/images/halo-shield/work/07-2.webp","https://halo.ae/images/halo-shield/work/10.webp","https://halo.ae/images/halo-shield/work/52.webp","https://halo.ae/images/halo-shield/work/14.webp","https://halo.ae/images/halo-shield/work/06-2.webp","https://halo.ae/images/halo-shield/work/01-3.webp","https://halo.ae/images/halo-shield/work/13.webp","https://halo.ae/images/halo-shield/hero-bg.jpg","https://halo.ae/images/halo-shield/coatings/01.webp","https://halo.ae/images/halo-shield/coatings/02.webp","https://halo.ae/images/halo-shield/coatings/03.webp","https://halo.ae/images/halo-shield/coatings/04.webp","https://halo.ae/images/halo-shield/coatings/05.webp","https://halo.ae/images/halo-shield/coatings/06.webp","https://halo.ae/images/halo-shield/coatings/07.webp"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/halo-shield/press/khaleej-times.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/halo-shield/press/business-insider.png?w=3840&amp;q=75",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        },
+        {
+            img: "https://halo.ae/images/halo-shield/work/01_1.webp",
+            title: "",
+            description: "",
+            tags: [],
+            bullets: [],
+            buttonText: "VIEW DETAILS →"
+        }
+    ]
   },
   "property-inspection": {
     title: "Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE",
@@ -369,7 +923,104 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/property_inspection_dubai_r2/local-insights.jpg?w=3840&q=75","https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/khaleej-times.png?w=3840&q=75","https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&q=75","https://halo.ae/images/halo-shield/press/business-insider.png?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/living_and_dining_08.webp?w=3840&q=75","https://halo.ae/images/haloinspection/govt-of-dubai.png?w=3840&q=75","https://halo.ae/images/haloinspection/cpi.png?w=3840&q=75","https://halo.ae/images/haloinspection/official-vendor.png?w=3840&q=75","https://halo.ae/images/haloinspection/land-department.png?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/professional-inspection-1.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/detailed assesment-1.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/technical-testing.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/ai-powered-detection.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/quality-inspection.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/expert-analysis.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/local-insights-1.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/same-day-reports.jpg?w=3840&q=75","https://halo.ae/images/property_inspection_dubai_r2/comprehensive-review.jpg?w=3840&q=75","https://halo.ae/images/haloinspection/audience-residential-buyers.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/moisture-meter.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/endoscope-inspection-camera.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/handheld-tds-tester.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/digital-anemometer.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/hammer.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/torch.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/mini-temperature-humidity-meter.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/mobile-application.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/socket-tester.webp?w=3840&q=75","https://halo.ae/images/haloinspection/tools/voltage-pen.webp?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/8.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/11.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/16.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/17.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/22.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/3.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/2.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/1.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/13.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/7.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/6.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/5.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/23.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/19.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/14.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/12.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/9.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/15.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/20.jpg?w=3840&q=75","https://halo.ae/images/property-inspection/lurking-clean/21.jpg?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-2.jpg?w=828&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=828&q=75","https://halo.ae/images/projects_r2/wip_1.jpg?w=828&q=75","https://halo.ae/images/projects_r2/wip_2.jpg?w=828&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/blog/aa2518-f5fcdffde31c434a8a38b00a83bab274mv2.webp?w=3840&q=75","https://halo.ae/images/blog/property-snagging-inspection.jpg?w=3840&q=75"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/professional-inspection-1.jpg",
+            title: "Professional Inspection",
+            description: "On-site professional property inspection for handover and resale checks.",
+            tags: [
+                "PropertyInspection",
+                "VillaInspection",
+                "OfficeInspectionUAE"
+            ],
+            bullets: [
+                "Professional villa inspection",
+                "Office property inspection UAE",
+                "Bedroom and living room inspection"
+            ],
+            buttonText: "PROFESSIONAL INSPECTION →"
+        },
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/detailed assesment-1.jpg",
+            title: "Detailed Assessment",
+            description: "Detailed visual and technical assessment to identify defects before move-in.",
+            tags: [
+                "Snagging",
+                "ApartmentInspection",
+                "BedroomInspection"
+            ],
+            bullets: [
+                "Apartment detailed assessment",
+                "Bedroom defect assessment UAE",
+                "Pre-handover villa inspection"
+            ],
+            buttonText: "DETAILED ASSESSMENT →"
+        },
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/technical-testing.jpg",
+            title: "Technical Testing",
+            description: "Detailed MEP and HVAC systems inspection for compliance and performance verification.",
+            tags: [
+                "DuctInspection",
+                "PlumbingAudit",
+                "ElectricalTesting"
+            ],
+            bullets: [
+                "MEP inspection service",
+                "HVAC performance testing villa",
+                "Plumbing pressure test contractor UAE"
+            ],
+            buttonText: "TECHNICAL TESTING →"
+        },
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/ai-powered-detection.jpg",
+            title: "AI-Powered Detection",
+            description: "AI-assisted detection workflow for faster and more accurate defect discovery.",
+            tags: [
+                "AIDetection",
+                "VillaInspection",
+                "ApartmentInspection"
+            ],
+            bullets: [
+                "AI villa defect detection",
+                "Smart apartment inspection UAE",
+                "Technology-driven office snagging"
+            ],
+            buttonText: "AI-POWERED DETECTION →"
+        },
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/quality-inspection.jpg",
+            title: "Quality Inspection",
+            description: "Quality-focused inspection process aligned with practical handover standards.",
+            tags: [
+                "QualityInspection",
+                "KitchenInspection",
+                "BathroomInspectionUAE"
+            ],
+            bullets: [
+                "Kitchen and bathroom inspection",
+                "Villa quality audit UAE",
+                "Handover quality check for apartments"
+            ],
+            buttonText: "QUALITY INSPECTION →"
+        },
+        {
+            img: "https://halo.ae/images/property_inspection_dubai_r2/expert-analysis.jpg",
+            title: "Expert Analysis",
+            description: "Expert-led analysis with actionable recommendations for property owners and buyers.",
+            tags: [
+                "ExpertInspection",
+                "PenthouseInspection",
+                "TownhouseInspectionUAE"
+            ],
+            bullets: [
+                "Expert villa inspection analysis",
+                "Office and retail inspection experts UAE",
+                "Property risk assessment for penthouses"
+            ],
+            buttonText: "EXPERT ANALYSIS →"
+        }
+    ]
   },
   "mep-hvac": {
     title: "Ready to Install MEP & HVAC?",
@@ -380,7 +1031,63 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install MEP & HVAC? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install MEP & HVAC? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/mep_hvac_dubai_r2/electrical.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/plumbing_systems.jpg?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_hvac_installations.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_mechanical_systems.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/system_upgrades.jpg?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/mep_maintenance.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/mep_hvac_dubai_r2/mep_maintenance.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/mep_hvac_dubai_r2/electrical.webp",
+            title: "Electrical Works",
+            description: "Electrical Works tailored for reliable and high-quality mep \\u0026 hvac execution.",
+            tags: [
+                "ElectricalSystems",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "ELECTRICAL WORKS →"
+        },
+        {
+            img: "https://halo.ae/images/mep_hvac_dubai_r2/plumbing_systems.jpg",
+            title: "Plumbing Systems",
+            description: "Plumbing Systems tailored for reliable and high-quality mep \\u0026 hvac execution.",
+            tags: [
+                "PlumbingSystems",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "PLUMBING SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_hvac_installations.webp",
+            title: "HVAC Installation",
+            description: "HVAC Installation tailored for reliable and high-quality mep \\u0026 hvac execution.",
+            tags: [
+                "HVACInstallation",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "HVAC INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_mechanical_systems.webp",
+            title: "Mechanical Systems",
+            description: "Mechanical Systems tailored for reliable and high-quality mep \\u0026 hvac execution.",
+            tags: [
+                "MechanicalSystems",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "MECHANICAL SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/mep_hvac_dubai_r2/system_upgrades.jpg",
+            title: "System Upgrades",
+            description: "System Upgrades tailored for reliable and high-quality mep \\u0026 hvac execution.",
+            tags: [
+                "MEPUpgrades",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "SYSTEM UPGRADES →"
+        }
+    ]
   },
   "project-management": {
     title: "Ready to Manage Your Project?",
@@ -391,7 +1098,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Manage Your Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Manage Your Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/project_management_dubai_r2/services_project_management_timeline_management.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_quality_control.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_subcontractor_coordination.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_regular_inspections.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_communication.webp?w=3840&q=75","https://halo.ae/images/project_management_dubai_r2/services_project_management_budget_management.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/LUXURY-MANSION1-copy.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_timeline_management.webp",
+            title: "Timeline Management",
+            description: "Timeline Management tailored for reliable and high-quality project management execution.",
+            tags: [
+                "ScheduleControl",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "TIMELINE MANAGEMENT →"
+        },
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_quality_control.webp",
+            title: "Quality Control",
+            description: "Quality Control tailored for reliable and high-quality project management execution.",
+            tags: [
+                "QualityControl",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "QUALITY CONTROL →"
+        },
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_subcontractor_coordination.webp",
+            title: "Subcontractor Coordination",
+            description: "Subcontractor Coordination tailored for reliable and high-quality project management execution.",
+            tags: [
+                "SubcontractorCoordination",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "SUBCONTRACTOR COORDINATION →"
+        },
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_regular_inspections.webp",
+            title: "Regular Inspections",
+            description: "Regular Inspections tailored for reliable and high-quality project management execution.",
+            tags: [
+                "SiteInspections",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "REGULAR INSPECTIONS →"
+        },
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_communication.webp",
+            title: "Communication",
+            description: "Communication tailored for reliable and high-quality project management execution.",
+            tags: [
+                "StakeholderCommunication",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "COMMUNICATION →"
+        },
+        {
+            img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_budget_management.webp",
+            title: "Budget Management",
+            description: "Budget Management tailored for reliable and high-quality project management execution.",
+            tags: [
+                "CostControl",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "BUDGET MANAGEMENT →"
+        }
+    ]
   },
   "venetian-plasters": {
     title: "Ready to Apply Venetian Plasters?",
@@ -402,7 +1176,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Venetian Plasters? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Venetian Plasters? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/marmorino.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/travertino.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/satin_finish.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/matt_venetian_plaster.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_venetian_plasters_r2/venetian_plaster_hero.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg",
+            title: "Polished Plaster",
+            description: "Polished Plaster tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "POLISHED PLASTER →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/marmorino.jpg",
+            title: "Marmorino",
+            description: "Marmorino tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "VenetianPlaster",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "MARMORINO →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/travertino.jpg",
+            title: "Travertino",
+            description: "Travertino tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "VenetianPlaster",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "TRAVERTINO →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/satin_finish.jpg",
+            title: "Satin Finish",
+            description: "Satin Finish tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "VenetianPlaster",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "SATIN FINISH →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/matt_venetian_plaster.jpg",
+            title: "Matte Finish",
+            description: "Matte Finish tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "VenetianPlaster",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "MATTE FINISH →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp",
+            title: "Textured Venetian",
+            description: "Textured Venetian tailored for reliable and high-quality venetian plasters execution.",
+            tags: [
+                "VenetianPlaster",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "TEXTURED VENETIAN →"
+        }
+    ]
   },
   "feature-walls": {
     title: "Create Feature Walls",
@@ -413,7 +1254,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Create Feature Walls and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Create Feature Walls with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/decorative_paint_feature_walls_r2/concrete_textures.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/geometric_walls.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/metallic_textures.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/feature-walls-2.png?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/artistic_murals.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_feature_walls_r2/texture_paint_hero.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
+            title: "Textured Feature Walls",
+            description: "Textured Feature Walls tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "TEXTURED FEATURE WALLS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/geometric_walls.jpg",
+            title: "Geometric Patterns",
+            description: "Geometric Patterns tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "FeatureWalls",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "GEOMETRIC PATTERNS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/metallic_textures.jpg",
+            title: "Metallic Feature Walls",
+            description: "Metallic Feature Walls tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "METALLIC FEATURE WALLS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/feature-walls-2.png",
+            title: "Wood Effect Walls",
+            description: "Wood Effect Walls tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "BespokeJoinery",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "WOOD EFFECT WALLS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg",
+            title: "Stone Effect Walls",
+            description: "Stone Effect Walls tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "MarbleWorks",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "STONE EFFECT WALLS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_feature_walls_r2/artistic_murals.jpg",
+            title: "Artistic Murals",
+            description: "Artistic Murals tailored for reliable and high-quality feature walls execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Retail"
+            ],
+            bullets: [],
+            buttonText: "ARTISTIC MURALS →"
+        }
+    ]
   },
   "artistic-finishes": {
     title: "Ready to Apply Artistic Finishes?",
@@ -424,7 +1332,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Apply Artistic Finishes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Apply Artistic Finishes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/statement_surfaces.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/decorative_paint_artistic_finishes_r2/artistic_finish_hero.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
+            title: "Metallic Finishes",
+            description: "Metallic Finishes tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "METALLIC FINISHES →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg",
+            title: "Faux Finishes",
+            description: "Faux Finishes tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "FAUX FINISHES →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg",
+            title: "Decorative Plasters",
+            description: "Decorative Plasters tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "DECORATIVE PLASTERS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg",
+            title: "Custom Textures",
+            description: "Custom Textures tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "CUSTOM TEXTURES →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg",
+            title: "Artistic Patterns",
+            description: "Artistic Patterns tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "DecorativeFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "ARTISTIC PATTERNS →"
+        },
+        {
+            img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/statement_surfaces.jpg",
+            title: "Statement Surfaces",
+            description: "Statement Surfaces tailored for reliable and high-quality artistic finishes execution.",
+            tags: [
+                "ArtisticFinishes",
+                "Home"
+            ],
+            bullets: [],
+            buttonText: "STATEMENT SURFACES →"
+        }
+    ]
   },
   "customised-furniture": {
     title: "Ready to Create Your Custom Furniture?",
@@ -435,7 +1410,88 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/customised_furniture_dubai_r2/tv-units-3.webp?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/Door3.jpg?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/sofa.png?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/customized_table.png?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/customized-bed.png?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/customized-bench.png?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/customised_furniture_dubai_r2/LD2_HALO-1.webp"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/customised_furniture_dubai_r2/tv-units-3.webp",
+            title: "Customized Consoles",
+            description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
+            tags: [
+                "CustomConsoles",
+                "BespokeFurniture",
+                "ConsoleDesign"
+            ],
+            bullets: [
+                "Bespoke console table makers in UAE",
+                "Premium custom console tables",
+                "Modern luxury console tables UAE"
+            ],
+            buttonText: "CUSTOMIZED CONSOLES →"
+        },
+        {
+            img: "https://halo.ae/images/customised_furniture_dubai_r2/Door3.jpg",
+            title: "Customized Doors",
+            description: "Customized Door design crafted for luxury, security, style and a perfect fit for your home.",
+            tags: [
+                "CustomDoors",
+                "BespokeFurniture",
+                "DoorDesign"
+            ],
+            bullets: [
+                "Bespoke Door makers in UAE",
+                "Premium custom made doors",
+                "Modern luxury doors UAE"
+            ],
+            buttonText: "CUSTOMIZED DOORS →"
+        },
+        {
+            img: "https://halo.ae/images/customised_furniture_dubai_r2/sofa.png",
+            title: "Customized Sofas",
+            description: "Customized sofa design crafted for comfort, style, and a perfect fit for your living space.",
+            tags: [
+                "CustomSofas",
+                "BespokeFurniture",
+                "SofaDesign"
+            ],
+            bullets: [
+                "Bespoke sofa makers in UAE",
+                "Premium custom made sofas",
+                "Modern luxury sofas UAE"
+            ],
+            buttonText: "CUSTOMIZED SOFAS →"
+        },
+        {
+            img: "https://halo.ae/images/customised_furniture_dubai_r2/customized_table.png",
+            title: "Customized Tables",
+            description: "Customized table design crafted for durability, elegance, and a perfect fit for your living or workspace.",
+            tags: [
+                "CustomTables",
+                "BespokeFurniture",
+                "TableDesign"
+            ],
+            bullets: [
+                "Bespoke table makers in UAE",
+                "Premium custom made tables",
+                "Modern luxury tables UAE"
+            ],
+            buttonText: "CUSTOMIZED TABLES →"
+        },
+        {
+            img: "https://halo.ae/images/customised_furniture_dubai_r2/customized-bed.png",
+            title: "Customized Beds",
+            description: "Custom table installation tailored for precision, durability, and high-quality customised furniture execution.",
+            tags: [
+                "CustomTables",
+                "BespokeFurniture",
+                "TableDesign"
+            ],
+            bullets: [
+                "Bespoke table installation services in UAE",
+                "Premium custom table makers and installers",
+                "Luxury custom dining and office tables UAE"
+            ],
+            buttonText: "CUSTOMIZED BEDS →"
+        }
+    ]
   },
   "air-quality": {
     title: "Ready to Improve Your Air Quality?",
@@ -446,7 +1502,96 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Improve Your Air Quality? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Improve Your Air Quality? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/air_quality_dubai_r2/envirobiotics_family.png?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/all_products.jpg?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/mold_removal.webp?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/probiotics.jpg?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/mep_maintenance.jpg?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/humidity_control.webp?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/services_air_quality_air_quality_testing_and_assessment.webp?w=3840&q=75","https://halo.ae/images/air-quality/biologic-mini.jpg?w=3840&q=75","https://halo.ae/images/air-quality/biotica_800.jpg?w=3840&q=75","https://halo.ae/images/air-quality/BA2080.jpg?w=3840&q=75","https://halo.ae/images/air-quality/EBPF-18.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/air_quality_dubai_r2/envirobiotics_family.png"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/air_quality_dubai_r2/all_products.jpg",
+            title: "Air Purification systems",
+            description: "Advanced air purification systems for healthier indoor environments in homes and offices.",
+            tags: [
+                "HEPAFilters",
+                "UVPurifiers",
+                "ActivatedCarbon"
+            ],
+            bullets: [
+                "HEPA air purification system",
+                "UV air purifier installation villa",
+                "Commercial air purification system UAE"
+            ],
+            buttonText: "AIR PURIFICATION SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/air_quality_dubai_r2/probiotics.jpg",
+            title: "Environment Probiotics",
+            description: "Bio-based environmental probiotic solutions for long-term microbial air and surface protection.",
+            tags: [
+                "ProbioticCleaning",
+                "BiofilmPrevention",
+                "MicrobialBalance"
+            ],
+            bullets: [
+                "Environmental probiotics air treatment",
+                "Probiotic cleaning system villa",
+                "Biofilm prevention solution UAE"
+            ],
+            buttonText: "ENVIRONMENT PROBIOTICS →"
+        },
+        {
+            img: "https://halo.ae/images/air_quality_dubai_r2/humidity_control.webp",
+            title: "Humidity control solutions",
+            description: "Precision humidity control systems to prevent condensation, mold, and discomfort in interiors.",
+            tags: [
+                "Dehumidifiers",
+                "VaporBarriers",
+                "HumidistatControl"
+            ],
+            bullets: [
+                "Dehumidification system installation",
+                "Humidity control solution villa",
+                "Vapor barrier moisture control UAE"
+            ],
+            buttonText: "HUMIDITY CONTROL SOLUTIONS →"
+        },
+        {
+            img: "https://halo.ae/images/air_quality_dubai_r2/services_air_quality_air_quality_testing_and_assessment.webp",
+            title: "Air quality testing and assessment",
+            description: "Certified indoor air quality testing and environmental assessment for homes and commercial spaces.",
+            tags: [
+                "IAQMonitoring",
+                "ParticulateTesting",
+                "VOCAnalysis"
+            ],
+            bullets: [
+                "Indoor air quality testing",
+                "IAQ assessment luxury villa",
+                "VOC air quality analysis UAE"
+            ],
+            buttonText: "AIR QUALITY TESTING AND ASSESSMENT →"
+        },
+        {
+            img: "https://halo.ae/images/air-quality/biologic-mini.jpg",
+            title: "BioLogic Mini",
+            description: "Cordless probiotic air and surface purifier with battery operation and USB recharging.",
+            tags: [
+                "AirPurifier",
+                "IndoorAirQuality",
+                ""
+            ],
+            bullets: [],
+            buttonText: "BIOLOGIC MINI →"
+        },
+        {
+            img: "https://halo.ae/images/air-quality/BA2080.jpg",
+            title: "BA2080",
+            description: "Advanced probiotic purifier with HEPA filtration for whole-home air quality coverage.",
+            tags: [
+                "HEPAFilter",
+                "MoldControl",
+                "Interiors"
+            ],
+            bullets: [],
+            buttonText: "BA2080 →"
+        }
+    ]
   },
   "contracting": {
     title: "Ready to Complete Your Contracting Project?",
@@ -457,7 +1602,30 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Complete Your Contracting Project? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Complete Your Contracting Project? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_structural_additions_and_extensions.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_authority_approvals_and_permits.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_foundation_and_structural_work.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_building_modifications.webp?w=3840&q=75","https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_structural_engineering_and_design.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/LUXURY-MANSION1-copy.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp",
+            title: "G+1 Construction",
+            description: "G+1 Construction tailored for reliable and high-quality contracting execution.",
+            tags: [
+                "GPlusOneConstruction",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "G+1 CONSTRUCTION →"
+        },
+        {
+            img: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_building_modifications.webp",
+            title: "Building Modifications",
+            description: "Building Modifications tailored for reliable and high-quality contracting execution.",
+            tags: [
+                "BuildingModifications",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "BUILDING MODIFICATIONS →"
+        }
+    ]
   },
   "window-glazing": {
     title: "Ready to Install Window Glazing?",
@@ -468,7 +1636,52 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Window Glazing? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Window Glazing? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/window_glazing_dubai_r2/window-glazing.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/sliding_windows.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/foldable_doors.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/thermal_window.jpg?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/window_repair.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/window_glazing_dubai_r2/window-glazing.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp",
+            title: "Low-e solutions",
+            description: "Low-e solutions tailored for reliable and high-quality window glazing execution.",
+            tags: [
+                "LowEGlazing",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "LOW-E SOLUTIONS →"
+        },
+        {
+            img: "https://halo.ae/images/window_glazing_dubai_r2/sliding_windows.jpg",
+            title: "Sliding window systems",
+            description: "Sliding window systems tailored for reliable and high-quality window glazing execution.",
+            tags: [
+                "SlidingSystems",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "SLIDING WINDOW SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/window_glazing_dubai_r2/foldable_doors.jpg",
+            title: "Folding doors and Bi fold systems",
+            description: "Folding doors and Bi fold systems tailored for reliable and high-quality window glazing execution.",
+            tags: [
+                "BiFoldSystems",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "FOLDING DOORS AND BI FOLD SYSTEMS →"
+        },
+        {
+            img: "https://halo.ae/images/window_glazing_dubai_r2/thermal_window.jpg",
+            title: "Thermal performance upgrades",
+            description: "Thermal performance upgrades tailored for reliable and high-quality window glazing execution.",
+            tags: [
+                "ThermalPerformance",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "THERMAL PERFORMANCE UPGRADES →"
+        }
+    ]
   },
   "tile-installation": {
     title: "Ready to Install Premium Tiles?",
@@ -479,18 +1692,74 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Premium Tiles? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Premium Tiles? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/tile_installation_dubai_r2/porcellain.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/12.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/marble_tile.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/mosaic_tile.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/large-slab-tile.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/tile_installation_dubai_r2/large-slab-tiles-hero.webp"]
-  },
-  "marble-installation": {
-    title: "Ready to Install Marble Finishes?",
-    tagline: "Premium Ready to Install Marble Finishes? Services",
-    heroImage: "https://halo.ae/images/marble_installation_dubai_r2/marble_cutting.jpg?w=3840&q=75",
-    desc: ["Book a free marble consultation and let our specialists install premium stone. We'll provide a detailed proposal with luxury materials and transparent pricing for marble installations.","Expert cutting, polishing, installation, cladding, and repair of natural stones including marble, granite, and premium materials.","Marble Cutting & Fabrication tailored for reliable and high-quality marble installation execution."],
-    stats: [
-      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
-    ],
-    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Marble Finishes? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Marble Finishes? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/marble_installation_dubai_r2/marble_cutting.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_polishing.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_floor_installation.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_cladding.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_countertop.jpg?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/services_marble_installations_marble_repair_and_restoration.webp?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/marble_installation_dubai_r2/marble_polishing_hero.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/porcellain.jpg",
+            title: "Porcelain Tile Installation",
+            description: "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "PorcelainTiles",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "PORCELAIN TILE INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/12.jpg",
+            title: "Ceramic Tile Installation",
+            description: "Ceramic Tile Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "CeramicTiles",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "CERAMIC TILE INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/marble_tile.jpg",
+            title: "Marble Tile Installation",
+            description: "Marble Tile Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "MarbleTiles",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "MARBLE TILE INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/mosaic_tile.jpg",
+            title: "Mosaic Tile Installation",
+            description: "Mosaic Tile Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "MosaicTiles",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "MOSAIC TILE INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg",
+            title: "Outdoor Tile Installation",
+            description: "Outdoor Tile Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "OutdoorTiles",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "OUTDOOR TILE INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/tile_installation_dubai_r2/large-slab-tile.jpg",
+            title: "Large-Format Slab Installation",
+            description: "Large-Format Slab Installation tailored for reliable and high-quality tile installation execution.",
+            tags: [
+                "LargeFormatSlabs",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "LARGE-FORMAT SLAB INSTALLATION →"
+        }
+    ]
   },
   "gypsum-works": {
     title: "Ready to Install Gypsum Works?",
@@ -501,7 +1770,108 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Install Gypsum Works? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Install Gypsum Works? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/gypsum_partitions.jpg?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/gypsum_bulkheads.jpg?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_gypsum_niches_and_features.webp?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/gypsum_restoration.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
+            title: "False Ceiling Installation",
+            description: "False Ceiling Installation tailored for reliable and high-quality gypsum works execution.",
+            tags: [
+                "FalseCeilings",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "FALSE CEILING INSTALLATION →"
+        },
+        {
+            img: "https://halo.ae/images/gypsum_works_dubai_r2/gypsum_partitions.jpg",
+            title: "Gypsum Partitions",
+            description: "Gypsum Partitions tailored for reliable and high-quality gypsum works execution.",
+            tags: [
+                "GypsumPartitions",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "GYPSUM PARTITIONS →"
+        },
+        {
+            img: "https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp",
+            title: "Detailed Gypsum Design",
+            description: "Detailed Gypsum Design tailored for reliable and high-quality gypsum works execution.",
+            tags: [
+                "GypsumDetailing",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "DETAILED GYPSUM DESIGN →"
+        }
+    ]
+  },
+  "property-audits": {
+    title: "Ready to Audit Your Property?",
+    tagline: "Premium Ready to Audit Your Property? Services",
+    heroImage: "https://halo.ae/images/property_audits_dubai_r2/residential_outdoor_living_pool_decking_and_water_features.webp?w=3840&q=75",
+    desc: ["Book a free property audit and let our engineers assess your space. We'll provide a detailed inspection report with recommendations and transparent pricing for audit services.","Comprehensive technical audits for ongoing projects, renovation oversight, and quality verification to ensure your project meets the highest standards.","Technical Audits tailored for reliable and high-quality property audits execution."],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+    ],
+    process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Audit Your Property? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Audit Your Property? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
+    gallery: [
+        {
+            img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_technical_audits.webp",
+            title: "Technical Audits",
+            description: "Technical Audits tailored for reliable and high-quality property audits execution.",
+            tags: [
+                "TechnicalAudits",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "TECHNICAL AUDITS →"
+        },
+        {
+            img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_ongoing_project_audits.webp",
+            title: "Ongoing Project Audits",
+            description: "Ongoing Project Audits tailored for reliable and high-quality property audits execution.",
+            tags: [
+                "ProjectAudits",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "ONGOING PROJECT AUDITS →"
+        },
+        {
+            img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_renovation_oversight.webp",
+            title: "Renovation Oversight",
+            description: "Renovation Oversight tailored for reliable and high-quality property audits execution.",
+            tags: [
+                "RenovationOversight",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "RENOVATION OVERSIGHT →"
+        },
+        {
+            img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_pre_purchase_inspections.webp",
+            title: "Pre-Purchase Inspections",
+            description: "Pre-Purchase Inspections tailored for reliable and high-quality property audits execution.",
+            tags: [
+                "PrePurchaseInspection",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "PRE-PURCHASE INSPECTIONS →"
+        },
+        {
+            img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_compliance_audits.webp",
+            title: "Compliance Audits",
+            description: "Compliance Audits tailored for reliable and high-quality property audits execution.",
+            tags: [
+                "ComplianceAudits",
+                "AllSectors"
+            ],
+            bullets: [],
+            buttonText: "COMPLIANCE AUDITS →"
+        }
+    ]
   },
   "authority-approvals": {
     title: "Ready to Get Your Authority Approvals?",
@@ -512,6 +1882,62 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
     process: [{"step":"Initial Consultation","desc":"Understanding your specific requirements for Ready to Get Your Authority Approvals? and assessing the space."},{"step":"Design & Planning","desc":"Developing tailored solutions, material selection, and precise technical planning."},{"step":"Execution Phase","desc":"Our expert technicians install and implement the Ready to Get Your Authority Approvals? with meticulous attention to detail."},{"step":"Final Handover","desc":"Comprehensive quality checks and final handover to ensure absolute perfection."}],
-    gallery: ["https://halo.ae/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/dda_approvals.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/rera_approvals.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/civil_defence_noc_approval.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/utility_connection.jpg?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/f_and_b_licensing.jpg?w=3840&q=75","https://halo.ae/images/joinery/joinery-intro.webp?w=3840&q=75","https://halo.ae/images/decorative_page.jpg?w=3840&q=75","https://halo.ae/images/terrazzo_preview.jpg?w=3840&q=75","https://halo.ae/images/microcement_preview.jpg?w=3840&q=75","https://halo.ae/images/services_previews/smart_automation.webp?w=3840&q=75","https://halo.ae/images/services_previews/stetch_ceiling_1.webp?w=3840&q=75","https://halo.ae/images/services_previews/MEP and HVAC.webp?w=3840&q=75","https://halo.ae/images/services_previews/gypsum_work.webp?w=3840&q=75","https://halo.ae/images/services_previews/tile_installation.webp?w=3840&q=75","https://halo.ae/images/services_previews/marble_installation_v2.png?w=3840&q=75","https://halo.ae/images/services_previews/customized_furniture.webp?w=3840&q=75","https://halo.ae/images/services_previews/contracting.webp?w=3840&q=75","https://halo.ae/images/services_previews/window_glazing.webp?w=3840&q=75","https://halo.ae/images/Halo-Property-Inspection-3.jpg?w=3840&q=75","https://halo.ae/images/services_previews/halo_shield.webp?w=3840&q=75","https://halo.ae/images/services_previews/air_quality.webp?w=3840&q=75","https://halo.ae/images/services_previews/authority_approval.webp?w=3840&q=75","https://halo.ae/images/services_previews/project_management.webp?w=3840&q=75","https://halo.ae/images/authority_approvals_dubai_r2/rera_approvals.jpg"]
+    gallery: [
+        {
+            img: "https://halo.ae/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp",
+            title: "Municipality Approvals",
+            description: "Municipality Approvals tailored for reliable and high-quality authority approvals execution.",
+            tags: [
+                "Municipality",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "MUNICIPALITY APPROVALS →"
+        },
+        {
+            img: "https://halo.ae/images/authority_approvals_dubai_r2/dda_approvals.jpg",
+            title: "DDA Approvals",
+            description: "DDA Approvals tailored for reliable and high-quality authority approvals execution.",
+            tags: [
+                "DDAApprovals",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "DDA APPROVALS →"
+        },
+        {
+            img: "https://halo.ae/images/authority_approvals_dubai_r2/rera_approvals.jpg",
+            title: "RERA Approvals",
+            description: "RERA Approvals tailored for reliable and high-quality authority approvals execution.",
+            tags: [
+                "RERAApprovals",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "RERA APPROVALS →"
+        },
+        {
+            img: "https://halo.ae/images/authority_approvals_dubai_r2/civil_defence_noc_approval.jpg",
+            title: "Civil Defense NOCs",
+            description: "Civil Defense NOCs tailored for reliable and high-quality authority approvals execution.",
+            tags: [
+                "CivilDefenseNOC",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "CIVIL DEFENSE NOCS →"
+        },
+        {
+            img: "https://halo.ae/images/authority_approvals_dubai_r2/utility_connection.jpg",
+            title: "Utility Connections",
+            description: "Utility Connections tailored for reliable and high-quality authority approvals execution.",
+            tags: [
+                "UtilityConnections",
+                "Commercial"
+            ],
+            bullets: [],
+            buttonText: "UTILITY CONNECTIONS →"
+        }
+    ]
   }
 };

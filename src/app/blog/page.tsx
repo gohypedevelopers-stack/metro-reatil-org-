@@ -87,14 +87,14 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Insights & <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Inspiration</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
             Expert advice, design trends, and project insights from Metro Retail Solutions' leading fitout and joinery specialists.
           </p>
         </div>
       </section>
 
       {/* Blog Listing Section */}
-      <section className="py-24 bg-white text-gray-900">
+      <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
           <div className="mb-16">
             <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8 text-center md:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -104,11 +104,11 @@ export default function BlogPage() {
             {/* Search */}
             <div className="max-w-2xl mx-auto md:mx-0 mb-10">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
                 <input 
                   type="search" 
                   placeholder="Search articles..." 
-                  className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E8A020] focus:ring-1 focus:ring-[#E8A020] transition-all bg-gray-50 text-lg"
+                  className="w-full pl-12 pr-4 py-4 rounded-sm border border-neutral-200 focus:outline-none focus:border-[#E8A020] focus:ring-1 focus:ring-brand-gold transition-all bg-neutral-50 text-lg"
                 />
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function BlogPage() {
                 <button 
                   key={filter}
                   className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                    i === 0 ? 'bg-[#E8A020] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+                    i === 0 ? 'bg-brand-gold text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-gray-200 hover:text-brand-dark'
                   }`}
                 >
                   {filter}
@@ -131,7 +131,7 @@ export default function BlogPage() {
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
+              <article key={post.id} className="bg-white rounded-sm overflow-hidden border border-neutral-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
                 <Link href={`/blog/${post.slug}`} className="relative h-64 overflow-hidden block shrink-0">
                   <Image
                     src={post.image}
@@ -139,14 +139,14 @@ export default function BlogPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-[#E8A020] uppercase tracking-wider shadow-sm">
+                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-brand-gold uppercase tracking-wider shadow-sm">
                     {post.category}
                   </span>
                 </Link>
                 <div className="p-8 flex flex-col grow">
-                  <div className="flex items-center text-sm text-gray-500 mb-4 font-medium">
+                  <div className="flex items-center text-sm text-neutral-500 mb-4 font-medium">
                     <span>{post.date}</span>
-                    <span className="mx-2 text-gray-300">•</span>
+                    <span className="mx-2 text-neutral-300">•</span>
                     <span>{post.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-4 group-hover:text-brand-gold transition-colors leading-snug" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -154,10 +154,10 @@ export default function BlogPage() {
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                  <p className="text-neutral-600 leading-relaxed mb-6 flex-grow">
                     {post.excerpt}
                   </p>
-                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-[#E8A020] font-bold text-sm uppercase tracking-wider group/link mt-auto">
+                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-brand-gold font-bold text-sm uppercase tracking-wider group/link mt-auto">
                     Read More 
                     <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -167,16 +167,16 @@ export default function BlogPage() {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center items-center gap-2 pt-8 border-t border-gray-100">
-            <button className="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+          <div className="flex justify-center items-center gap-2 pt-8 border-t border-neutral-100">
+            <button className="p-2 rounded-sm text-neutral-400 hover:bg-neutral-100 hover:text-brand-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
               <ChevronLeft size={24} />
             </button>
             <div className="flex gap-2">
-              <button className="w-10 h-10 rounded-lg bg-[#E8A020] text-white font-bold flex items-center justify-center">1</button>
-              <button className="w-10 h-10 rounded-lg hover:bg-gray-100 text-gray-600 font-medium flex items-center justify-center transition-colors">2</button>
-              <button className="w-10 h-10 rounded-lg hover:bg-gray-100 text-gray-600 font-medium flex items-center justify-center transition-colors">3</button>
+              <button className="w-10 h-10 rounded-sm bg-brand-gold text-white font-bold flex items-center justify-center">1</button>
+              <button className="w-10 h-10 rounded-sm hover:bg-neutral-100 text-neutral-600 font-medium flex items-center justify-center transition-colors">2</button>
+              <button className="w-10 h-10 rounded-sm hover:bg-neutral-100 text-neutral-600 font-medium flex items-center justify-center transition-colors">3</button>
             </div>
-            <button className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors">
+            <button className="p-2 rounded-sm text-neutral-600 hover:bg-neutral-100 hover:text-brand-dark transition-colors">
               <ChevronRight size={24} />
             </button>
           </div>
@@ -184,20 +184,20 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100 text-center">
+      <section className="py-24 bg-neutral-50 border-t border-neutral-100 text-center">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Ready to Transform <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Space?</span>
             </h2>
-            <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+            <p className="text-neutral-600 text-lg mb-10 leading-relaxed">
               Book a free site visit and let our experts assess your space. We'll provide a detailed consultation and transparent quote for your property transformation project.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#E8A020] hover:bg-[#d6931d] text-white font-semibold rounded-lg transition-colors shadow-sm">
+              <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm">
                 WhatsApp Now
               </a>
-              <Link href="/contact" className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 font-semibold rounded-lg transition-colors shadow-sm">
+              <Link href="/contact" className="px-8 py-4 bg-white hover:bg-neutral-50 text-brand-dark border border-neutral-200 font-semibold rounded-sm transition-colors shadow-sm">
                 Book a Free Consultation
               </Link>
             </div>

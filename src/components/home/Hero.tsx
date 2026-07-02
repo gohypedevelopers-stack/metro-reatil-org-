@@ -16,7 +16,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
       >
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img
-          src="/mall_hero.png"
+          src="https://i.postimg.cc/3w1KpGk1/heidi-fin-2TLREZi7BUg-unsplash.jpg"
           alt="Luxury Mall Retail Interior"
           className="w-full h-full object-cover object-center"
         />

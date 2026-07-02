@@ -115,14 +115,14 @@ export default function CareersPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Team</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
             Future openings at Metro Retail Solutions will be posted soon. Explore the teams behind our premium fitout, joinery and interior design work.
           </p>
         </div>
       </section>
 
       {/* Why Join Us */}
-      <section className="py-24 bg-[#0a0a0a] text-white">
+      <section className="py-24 bg-brand-dark text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
             <div className="md:w-1/2">
@@ -131,7 +131,7 @@ export default function CareersPage() {
               </h2>
             </div>
             <div className="md:w-1/2">
-              <p className="text-gray-400 text-lg">
+              <p className="text-neutral-400 text-lg">
                 At Metro Retail Solutions, our team brings together designers, project managers, engineers, craftsmen and operations specialists working across high-end spaces.
               </p>
             </div>
@@ -139,12 +139,12 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-colors group">
-                <div className="w-14 h-14 bg-[#E8A020]/20 rounded-full flex items-center justify-center mb-6 text-[#E8A020] group-hover:scale-110 transition-transform">
+              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:bg-white/10 transition-colors group">
+                <div className="w-14 h-14 bg-brand-gold/20 rounded-sm flex items-center justify-center mb-6 text-brand-gold group-hover:scale-110 transition-transform">
                   <benefit.icon size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{benefit.title}</h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-neutral-400 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -154,7 +154,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Roles */}
-      <section className="py-24 bg-gray-50 text-gray-900" id="open-positions">
+      <section className="py-24 bg-neutral-50 text-brand-dark" id="open-positions">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
             <div className="md:w-1/2">
@@ -163,22 +163,22 @@ export default function CareersPage() {
               </h2>
             </div>
             <div className="md:w-1/2">
-              <p className="text-gray-600 text-lg">
+              <p className="text-neutral-600 text-lg">
                 We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, joinery and project delivery teams.
               </p>
             </div>
           </div>
 
           {/* Banner */}
-          <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+          <div className="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
             <div>
-              <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-sm font-semibold rounded-full mb-4">
+              <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-sm font-semibold rounded-sm mb-4">
                 No live vacancies yet
               </span>
-              <h3 className="text-2xl font-bold font-serif mb-2">Current openings will be announced soon.</h3>
-              <p className="text-gray-600">Until then, you can review the types of roles we usually hire for and send your CV for future consideration.</p>
+              <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Current openings will be announced soon.</h3>
+              <p className="text-neutral-600">Until then, you can review the types of roles we usually hire for and send your CV for future consideration.</p>
             </div>
-            <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="shrink-0 px-8 py-4 bg-[#E8A020] hover:bg-[#d6931d] text-white font-semibold rounded-lg transition-colors">
+            <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="shrink-0 px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
               Send Your CV
             </a>
           </div>
@@ -186,19 +186,19 @@ export default function CareersPage() {
           {/* Filters & Search */}
           <div className="flex flex-col lg:flex-row gap-6 justify-between items-center mb-12">
             <div className="relative w-full lg:w-96">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
               <input 
                 type="search" 
                 placeholder="Search career areas..." 
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E8A020] focus:ring-1 focus:ring-[#E8A020] transition-all bg-white"
+                className="w-full pl-12 pr-4 py-3 rounded-sm border border-neutral-200 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all bg-white"
               />
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {['All', 'Design', 'Projects', 'Operations', 'Joinery', 'Engineering', 'Procurement', 'Sales', 'Admin'].map((filter, i) => (
                 <button 
                   key={filter}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                    i === 0 ? 'bg-[#E8A020] text-white' : 'bg-white border border-gray-200 text-gray-600 hover:border-[#E8A020] hover:text-[#E8A020]'
+                  className={`px-5 py-2 rounded-sm text-sm font-medium transition-colors ${
+                    i === 0 ? 'bg-brand-gold text-white' : 'bg-white border border-neutral-200 text-neutral-600 hover:border-brand-gold hover:text-brand-gold'
                   }`}
                 >
                   {filter}
@@ -210,16 +210,16 @@ export default function CareersPage() {
           {/* Roles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {roles.map((role, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:border-[#E8A020]/30 group">
+              <div key={index} className="bg-white p-6 rounded-sm border border-neutral-100 shadow-sm hover:shadow-md transition-all hover:border-brand-gold/30 group">
                 <div className="flex justify-between items-start mb-6 text-sm font-medium">
-                  <span className="text-[#E8A020] bg-[#E8A020]/10 px-3 py-1 rounded-full">{role.category}</span>
-                  <span className="text-gray-400">{role.location}</span>
+                  <span className="text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-sm">{role.category}</span>
+                  <span className="text-neutral-400">{role.location}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 font-serif group-hover:text-[#E8A020] transition-colors">{role.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                <h3 className="text-xl font-bold mb-3 font-serif tracking-wide uppercase group-hover:text-brand-gold transition-colors">{role.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
                   {role.description}
                 </p>
-                <div className="text-sm font-semibold text-gray-400 pt-4 border-t border-gray-100">
+                <div className="text-sm font-semibold text-neutral-400 pt-4 border-t border-neutral-100">
                   Roles coming soon
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function CareersPage() {
       </section>
 
       {/* Hiring Process */}
-      <section className="py-24 bg-white text-gray-900">
+      <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
             <div className="md:w-1/2">
@@ -238,7 +238,7 @@ export default function CareersPage() {
               </h2>
             </div>
             <div className="md:w-1/2">
-              <p className="text-gray-600 text-lg">
+              <p className="text-neutral-600 text-lg">
                 While current roles are being prepared, here is the process candidates can expect once openings are published.
               </p>
             </div>
@@ -247,11 +247,11 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="text-5xl md:text-7xl font-bold text-gray-100 mb-6 font-serif">
+                <div className="text-5xl md:text-7xl font-bold text-neutral-100 mb-6 font-serif tracking-wide uppercase">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold mb-4 font-serif text-gray-900">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4 font-serif tracking-wide uppercase text-brand-dark">{step.title}</h3>
+                <p className="text-neutral-600 leading-relaxed">
                   {step.desc}
                 </p>
               </div>
@@ -261,11 +261,11 @@ export default function CareersPage() {
       </section>
 
       {/* Speculative Application */}
-      <section className="py-24 bg-[#0a0a0a] text-white">
+      <section className="py-24 bg-brand-dark text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
-              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+              <div className="relative aspect-[4/3] w-full rounded-sm overflow-hidden">
                 <Image
                   src="/images/phase_03_installation.png"
                   alt="Metro Retail Solutions Team at work"
@@ -278,22 +278,22 @@ export default function CareersPage() {
               <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Send a Speculative <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Application</span>
               </h2>
-              <p className="text-gray-400 text-lg mb-10 leading-relaxed">
+              <p className="text-neutral-400 text-lg mb-10 leading-relaxed">
                 If your experience fits Metro Retail Solutions, send your CV and portfolio for future roles in design, project delivery, joinery, engineering, operations or support teams.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-8 mb-12">
                 <div>
-                  <h3 className="text-[#E8A020] font-semibold mb-2">Email Us</h3>
-                  <a href="mailto:careers@metroretailsolutions.com" className="text-xl font-serif hover:text-[#E8A020] transition-colors">careers@metroretailsolutions.com</a>
+                  <h3 className="text-brand-gold font-semibold mb-2">Email Us</h3>
+                  <a href="mailto:careers@metroretailsolutions.com" className="text-xl font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">careers@metroretailsolutions.com</a>
                 </div>
                 <div>
-                  <h3 className="text-[#E8A020] font-semibold mb-2">Call Us</h3>
-                  <a href="tel:+97100000000" className="text-xl font-serif hover:text-[#E8A020] transition-colors">+971 (0) 4 123 4567</a>
+                  <h3 className="text-brand-gold font-semibold mb-2">Call Us</h3>
+                  <a href="tel:+97100000000" className="text-xl font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">+971 (0) 4 123 4567</a>
                 </div>
               </div>
 
-              <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="inline-block px-8 py-4 bg-[#E8A020] hover:bg-[#d6931d] text-white font-semibold rounded-lg transition-colors">
+              <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
                 Send Your CV
               </a>
             </div>
@@ -302,19 +302,19 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#E8A020] text-white text-center">
+      <section className="py-20 bg-brand-gold text-white text-center">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold font-serif tracking-wide uppercase mb-6">
             Ready to Discuss a Project?
           </h2>
           <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
             For project enquiries, book a site visit with our fitout and joinery specialists.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#E8A020] hover:bg-gray-50 font-semibold rounded-lg transition-colors">
+            <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
               WhatsApp Now
             </a>
-            <Link href="/contact" className="px-8 py-4 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-lg transition-colors border border-white/20">
+            <Link href="/contact" className="px-8 py-4 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-sm transition-colors border border-white/20">
               Book a Free Consultation
             </Link>
           </div>

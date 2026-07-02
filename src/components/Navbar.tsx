@@ -36,11 +36,17 @@ const COMMERCIAL_LINKS = [
   { name: 'SALONS', href: '#' }
 ];
 
-const RETAIL_FB_LINKS = [
+const RETAIL_LINKS = [
   { name: 'OVERVIEW', href: '#' },
-  { name: 'F & B', href: '#' },
   { name: 'RETAIL', href: '#' },
   { name: 'KIOSKS', href: '#' }
+];
+
+const FB_LINKS = [
+  { name: 'OVERVIEW', href: '#' },
+  { name: 'F & B', href: '#' },
+  { name: 'CAFES', href: '#' },
+  { name: 'RESTAURANTS', href: '#' }
 ];
 
 const SERVICES_LINKS = [
@@ -88,8 +94,6 @@ const MORE_LINKS = [
   { name: 'ABOUT US', href: '/about' },
   { name: 'BLOG', href: '/blog' },
   { name: 'CAREERS', href: '/careers' },
-  { name: 'FOR DESIGNERS & ARCHITECTS', href: '/for-designers-architects' },
-  { name: 'PROCUREMENT', href: '#' },
   { name: 'CONTACT', href: '/contact' }
 ];
 
@@ -173,32 +177,38 @@ export const Navbar = () => {
             <a href="/" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
             <a href="/portfolio" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('residential')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Residential <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'residential' ? 'rotate-180' : ''}`} />
+            <div className="relative py-2" onMouseEnter={() => setActiveMenu('retail')}>
+              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+                Retail <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'retail' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('commercial')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/portfolio?filter=Commercial" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Commercial <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'commercial' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('retail')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                Retail & F&B <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'retail' ? 'rotate-180' : ''}`} />
+            <div className="relative py-2" onMouseEnter={() => setActiveMenu('fb')}>
+              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+                F&B <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'fb' ? 'rotate-180' : ''}`} />
+              </a>
+            </div>
+
+            <div className="relative py-2" onMouseEnter={() => setActiveMenu('residential')}>
+              <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+                Residential <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'residential' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('services')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/services" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'services' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('styles')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/design-styles" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Styles <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'styles' ? 'rotate-180' : ''}`} />
               </a>
             </div>
@@ -232,9 +242,10 @@ export const Navbar = () => {
 
         {/* Mega Menu Dropdowns */}
         <AnimatePresence>
-          {activeMenu === 'residential' && renderDropdownContent('RESIDENTIAL', RESIDENTIAL_LINKS, 2)}
+          {activeMenu === 'retail' && renderDropdownContent('RETAIL', RETAIL_LINKS, 1)}
           {activeMenu === 'commercial' && renderDropdownContent('COMMERCIAL', COMMERCIAL_LINKS, 1)}
-          {activeMenu === 'retail' && renderDropdownContent('RETAIL & F&B', RETAIL_FB_LINKS, 1)}
+          {activeMenu === 'fb' && renderDropdownContent('F&B', FB_LINKS, 1)}
+          {activeMenu === 'residential' && renderDropdownContent('RESIDENTIAL', RESIDENTIAL_LINKS, 2)}
           {activeMenu === 'services' && renderDropdownContent('SERVICES', SERVICES_LINKS, 3)}
           {activeMenu === 'styles' && renderDropdownContent('STYLES', STYLES_LINKS, 2)}
           {activeMenu === 'more' && renderDropdownContent('MORE', MORE_LINKS, 1, true)}

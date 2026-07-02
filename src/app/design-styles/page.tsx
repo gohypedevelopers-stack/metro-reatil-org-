@@ -108,17 +108,17 @@ export default function DesignStylesPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Discover Your Perfect <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Design Style</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed mb-8">
             Book a free design consultation and let our experts help you choose the perfect style for your space. We'll create a tailored design proposal that reflects your brand.
           </p>
-          <Link href="/contact" className="inline-block px-8 py-4 bg-[#E8A020] hover:bg-[#d6931d] text-white font-bold uppercase tracking-widest text-sm rounded-sm transition-colors shadow-lg">
+          <Link href="/contact" className="inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm transition-colors shadow-lg">
             Book Consultation
           </Link>
         </div>
       </section>
 
       {/* Intro Section */}
-      <section className="py-24 bg-gray-50 border-b border-gray-100">
+      <section className="py-24 bg-neutral-50 border-b border-neutral-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
@@ -126,11 +126,11 @@ export default function DesignStylesPage() {
                 Every Style <br />
                 <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executed to Perfection</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-neutral-600 leading-relaxed">
                 From warm Mediterranean venues to ultra-luxury modern retail spaces, Metro Retail Solutions is trusted to bring every design style to life with accuracy and finesse. Explore our portfolio of executed styles and discover the perfect aesthetic for your next project.
               </p>
             </div>
-            <div className="lg:w-1/2 w-full relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="lg:w-1/2 w-full relative h-[400px] rounded-sm overflow-hidden shadow-2xl">
               <Image
                 src="/images/phase_02_prefabrication.png"
                 alt="Execution to perfection"
@@ -153,7 +153,7 @@ export default function DesignStylesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {styles.map((style, index) => (
-              <div key={index} className="group relative h-96 rounded-2xl overflow-hidden block bg-gray-900 cursor-pointer">
+              <div key={index} className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer">
                 <Image
                   src={style.image}
                   alt={style.name}
@@ -166,7 +166,7 @@ export default function DesignStylesPage() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                     {style.name}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto overflow-hidden">
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto overflow-hidden">
                     {style.description}
                   </p>
                   
@@ -185,7 +185,7 @@ export default function DesignStylesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100 overflow-hidden">
+      <section className="py-24 bg-neutral-50 border-t border-neutral-100 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -196,22 +196,22 @@ export default function DesignStylesPage() {
           {/* Simple Grid (as a proxy for slider for responsiveness) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testi, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
-                <Quote className="absolute top-6 right-6 text-gray-100 w-12 h-12 rotate-180" />
+              <div key={index} className="bg-white p-8 rounded-sm shadow-sm border border-neutral-100 relative">
+                <Quote className="absolute top-6 right-6 text-neutral-100 w-12 h-12 rotate-180" />
                 
                 {/* Google-style Header */}
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-[#E8A020] rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold text-xl">
                     {testi.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">{testi.name}</h4>
-                    <p className="text-xs text-gray-500 font-medium">Google Review</p>
+                    <h4 className="font-bold text-brand-dark">{testi.name}</h4>
+                    <p className="text-xs text-neutral-500 font-medium">Google Review</p>
                   </div>
                 </div>
 
                 {/* Stars */}
-                <div className="flex text-[#E8A020] mb-6 gap-1">
+                <div className="flex text-brand-gold mb-6 gap-1">
                   <Star size={16} fill="currentColor" />
                   <Star size={16} fill="currentColor" />
                   <Star size={16} fill="currentColor" />
@@ -220,7 +220,7 @@ export default function DesignStylesPage() {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600 leading-relaxed text-sm mb-4 relative z-10">
+                <p className="text-neutral-600 leading-relaxed text-sm mb-4 relative z-10">
                   "{testi.review}"
                 </p>
                 

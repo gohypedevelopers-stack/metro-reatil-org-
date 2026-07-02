@@ -46,6 +46,98 @@ const getPortfolioSector = (category: string): string => {
   return category;
 };
 
+const CompanyProfile = () => {
+  return (
+    <section className="py-16 md:py-24 bg-neutral-50 border-b border-neutral-200">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          Metro Retail Solutions
+        </h2>
+        <p className="text-neutral-600 text-lg md:text-xl font-light leading-relaxed mb-12">
+          We are a turnkey fit-out company handling complete MEP, civil, and interior works, with over 25+ years of experience and having in-house manufacturing of complete modular fixtures (wooden, metal, powder coat units, etc.).
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Under One Roof */}
+          <div>
+            <h3 className="text-brand-dark font-bold mb-4 tracking-widest uppercase text-sm border-b border-neutral-200 pb-2">
+              Under One Roof
+            </h3>
+            <ul className="space-y-3 text-neutral-600">
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Complete setup of Metal Work including laser machines
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Complete setup of Wooden Work
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Complete setup of Paint Work
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Complete setup of Powder Coating Work
+              </li>
+            </ul>
+          </div>
+
+          {/* Core Services */}
+          <div>
+            <h3 className="text-brand-dark font-bold mb-4 tracking-widest uppercase text-sm border-b border-neutral-200 pb-2">
+              Core Capabilities
+            </h3>
+            <ul className="space-y-3 text-neutral-600">
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Retail Fixtures & Turnkey Solutions
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Custom Furniture & 3D Signages
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                Display Counters & POP Displays
+              </li>
+              <li className="flex items-start">
+                <span className="text-brand-gold mr-2 font-bold">✓</span>
+                LIT / Non-LIT Branding & Acrylics
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 bg-white p-8 border border-neutral-100 shadow-sm rounded-sm">
+          <h3 className="text-brand-dark font-bold uppercase tracking-widest text-xs mb-4 text-center">
+            Our Manufacturing Facility & Team
+          </h3>
+          <p className="text-neutral-500 text-center leading-relaxed text-sm">
+            Based in Delhi and Greater Noida, our state-of-the-art facilities are equipped with the latest machinery. 
+            Our highly skilled technical manpower—including carpenters, painters, electricians, and welders—works across 
+            multiple shifts 24x7 to ensure client satisfaction and timely delivery.
+          </p>
+        </div>
+
+        <div className="mt-16 text-center">
+          <h3 className="text-brand-dark font-bold uppercase tracking-[0.2em] text-xs mb-8">
+            Trusted By Renowned Brands
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            {['Safari', 'Uppercase', 'IT Luggage', 'Peach Mode', 'Cashify', 'Van Heusen'].map(brand => (
+              <span key={brand} className="px-6 py-3 bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider rounded-sm">
+                {brand}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
 export default function PortfolioPage() {
   const [filter, setFilter] = useState("All");
   const [subFilter, setSubFilter] = useState("OVERVIEW");
@@ -126,6 +218,9 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Company Profile Section ── */}
+      <CompanyProfile />
 
       {/* ── Filter Controls ── */}
       <section className="py-4 md:py-6 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
