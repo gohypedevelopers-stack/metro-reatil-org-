@@ -38,12 +38,7 @@ const COMMERCIAL_LINKS = [
 
 const RETAIL_LINKS = [
   { name: 'OVERVIEW', href: '#' },
-  { name: 'RETAIL', href: '#' },
-  { name: 'KIOSKS', href: '#' }
-];
-
-const FB_LINKS = [
-  { name: 'OVERVIEW', href: '#' },
+  { name: 'KIOSKS', href: '#' },
   { name: 'F & B', href: '#' },
   { name: 'CAFES', href: '#' },
   { name: 'RESTAURANTS', href: '#' }
@@ -116,7 +111,7 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const renderDropdownContent = (title, links, cols = 2, showExplore = false) => (
+  const renderDropdownContent = (title, links, cols = 2, showExplore = false, imageSrc = "https://images.unsplash.com/photo-1600607688969-a5bfcd64bd40?q=80&w=2000&auto=format&fit=crop") => (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -144,7 +139,7 @@ export const Navbar = () => {
         {/* Right Side Image Placeholder */}
         <div className="col-span-4 bg-neutral-100 relative overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1600607688969-a5bfcd64bd40?q=80&w=2000&auto=format&fit=crop" 
+            src={imageSrc} 
             alt={title} 
             className="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" 
           />
@@ -173,7 +168,7 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
+          <div className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 whitespace-nowrap">
             <a href="/" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
             <a href="/portfolio" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
 
@@ -189,11 +184,7 @@ export const Navbar = () => {
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('fb')}>
-              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
-                F&B <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'fb' ? 'rotate-180' : ''}`} />
-              </a>
-            </div>
+
 
             <div className="relative py-2" onMouseEnter={() => setActiveMenu('residential')}>
               <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
@@ -242,13 +233,12 @@ export const Navbar = () => {
 
         {/* Mega Menu Dropdowns */}
         <AnimatePresence>
-          {activeMenu === 'retail' && renderDropdownContent('RETAIL', RETAIL_LINKS, 1)}
-          {activeMenu === 'commercial' && renderDropdownContent('COMMERCIAL', COMMERCIAL_LINKS, 1)}
-          {activeMenu === 'fb' && renderDropdownContent('F&B', FB_LINKS, 1)}
-          {activeMenu === 'residential' && renderDropdownContent('RESIDENTIAL', RESIDENTIAL_LINKS, 2)}
-          {activeMenu === 'services' && renderDropdownContent('SERVICES', SERVICES_LINKS, 3)}
-          {activeMenu === 'styles' && renderDropdownContent('STYLES', STYLES_LINKS, 2)}
-          {activeMenu === 'more' && renderDropdownContent('MORE', MORE_LINKS, 1, true)}
+          {activeMenu === 'retail' && renderDropdownContent('RETAIL', RETAIL_LINKS, 1, false, "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2000&auto=format&fit=crop")}
+          {activeMenu === 'commercial' && renderDropdownContent('COMMERCIAL', COMMERCIAL_LINKS, 1, false, "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop")}
+          {activeMenu === 'residential' && renderDropdownContent('RESIDENTIAL', RESIDENTIAL_LINKS, 2, false, "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop")}
+          {activeMenu === 'services' && renderDropdownContent('SERVICES', SERVICES_LINKS, 3, false, "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop")}
+          {activeMenu === 'styles' && renderDropdownContent('STYLES', STYLES_LINKS, 2, false, "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop")}
+          {activeMenu === 'more' && renderDropdownContent('MORE', MORE_LINKS, 1, true, "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop")}
         </AnimatePresence>
       </nav>
 

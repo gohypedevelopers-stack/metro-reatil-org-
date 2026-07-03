@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { CheckCircle2, ChevronRight, PenTool, Award, ShieldCheck } from 'lucide-react';
 import FullServicesSection from '../../../components/home/FullServicesSection';
@@ -171,67 +172,104 @@ export default function SubcategoryDetailPage() {
             {data.gallery.map((item, i) => {
               const isObject = typeof item === 'object';
               const img = isObject ? item.img : item;
-              const description = isObject ? item.description : undefined;
-              const tags = isObject ? item.tags : [];
-              const bullets = isObject ? item.bullets : [];
-              const buttonText = isObject ? item.buttonText : 'VIEW DETAILS →';
+              const title = isObject && item.title ? item.title : `${data.title} Expertise`;
+              const description = isObject && item.description ? item.description : "Premium execution delivered with absolute precision, high-quality materials, and unmatched craftsmanship.";
+              const tags = isObject && item.tags && item.tags.length > 0 ? item.tags : ["Premium Quality", "Expert Execution"];
+              const bullets = isObject && item.bullets && item.bullets.length > 0 ? item.bullets : ["Turnkey bespoke solutions", "In-house master craftsmen"];
+              const buttonText = isObject && item.buttonText ? item.buttonText : 'VIEW DETAILS →';
 
               return (
-                <div key={i} className="relative aspect-[4/5] overflow-hidden group border border-neutral-800">
-                  <img
-                    src={img}
-                    alt={`Project ${i + 1}`}
-                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/25 group-hover:bg-black/70 transition-colors duration-500" />
-                  
-                  {/* Default simple button when no hover data is available */}
-                  {!isObject && (
-                    <div className="absolute bottom-5 left-5 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                      <span className="bg-white/90 backdrop-blur-sm px-4 py-2 text-[9px] font-bold uppercase tracking-widest text-brand-dark">
-                        View Details
-                      </span>
-                    </div>
-                  )}
+                item.slug ? (
+                  <Link href={`/services/${id}/${item.slug}`} key={i} className="relative aspect-[4/5] overflow-hidden group border border-neutral-800 block cursor-pointer">
+                    <img
+                      src={img}
+                      alt={title}
+                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    {/* Dark Gradient Overlay for readability on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-white">
-                    {description && (
-                      <p className="text-sm md:text-base font-medium mb-3 leading-snug">
+                    {/* Hover Content */}
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+                      
+                      <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                        {title}
+                      </h3>
+                      
+                      <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
                         {description}
                       </p>
-                    )}
-                    
-                    {tags && tags.length > 0 && (
+                      
                       <div className="flex flex-wrap gap-2 mb-4">
                         {tags.map((tag, idx) => (
-                          <span key={idx} className="border border-white/30 bg-white/10 px-2 py-1 text-[11px] font-semibold">
+                          <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
                             {tag}
                           </span>
                         ))}
                       </div>
-                    )}
 
-                    {bullets && bullets.length > 0 && (
-                      <ul className="mb-6 space-y-1">
+                      <ul className="mb-6 space-y-1.5">
                         {bullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-center text-xs font-bold text-white">
-                            <span className="mr-2 w-[3px] h-[3px] bg-white rounded-full flex-shrink-0" />
+                          <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
+                            <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
                             {bullet}
                           </li>
                         ))}
                       </ul>
-                    )}
-                    
-                    {isObject && (
+                      
                       <div className="self-end mt-2">
-                        <span className="bg-neutral-900/90 backdrop-blur-sm px-4 py-3 text-[10px] font-bold uppercase tracking-widest transition-colors border border-white/10 cursor-pointer">
+                        <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
                           {buttonText}
                         </span>
                       </div>
-                    )}
+                    </div>
+                  </Link>
+                ) : (
+                  <div key={i} className="relative aspect-[4/5] overflow-hidden group border border-neutral-800">
+                    <img
+                      src={img}
+                      alt={title}
+                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    {/* Dark Gradient Overlay for readability on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    {/* Hover Content */}
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+                      
+                      <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                        {title}
+                      </h3>
+                      
+                      <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
+                        {description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {tags.map((tag, idx) => (
+                          <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <ul className="mb-6 space-y-1.5">
+                        {bullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
+                            <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <div className="self-end mt-2">
+                        <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
+                          {buttonText}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )
               );
             })}
           </div>

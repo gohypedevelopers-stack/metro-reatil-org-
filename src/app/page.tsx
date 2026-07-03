@@ -55,7 +55,7 @@ export default function Page() {
         <Testimonials />
 
         <VideoSeparator
-          src="https://assets.mixkit.co/videos/preview/mixkit-workers-in-a-factory-producing-parts-40338-large.mp4"
+          src="/no_do_not_use_this_white_logo.mp4"
           title="Excellence in Every Detail"
         />
 

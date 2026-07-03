@@ -31,9 +31,10 @@ const SUB_CATEGORIES: Record<string, string[]> = {
   ],
   "Retail": [
     "OVERVIEW",
-    "RETAIL",
+    "KIOSKS",
     "F & B",
-    "KIOSKS"
+    "CAFES",
+    "RESTAURANTS"
   ]
 };
 
