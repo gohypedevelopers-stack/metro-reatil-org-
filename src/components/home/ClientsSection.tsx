@@ -4,24 +4,22 @@ import { motion } from 'motion/react';
 import React from 'react';
 
 const ClientsSection = () => {
-  const clients = [
-    { name: "Client 01", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-01.png" },
-    { name: "Client 02", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-02.png" },
-    { name: "Americana", logo: "https://mattermind.ae/wp-content/themes/meiveda/images/americana-logo-1.png" },
-    { name: "Client 03", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-03.png" },
-    { name: "Client 04", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-04.png" },
-    { name: "Client 05", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-05.png" },
-    { name: "Client 07", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-07.png" },
-    { name: "Client 19", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-19.png" },
-    { name: "Client 21", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-21.png" },
-    { name: "CA Logo", logo: "https://mattermind.ae/wp-content/uploads/2024/12/ca-logo.png" },
-    { name: "Client 17", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-17.png" },
-    { name: "Client 18", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-18.png" },
-    { name: "Client 08", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-08.png" },
-    { name: "Client 13", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-13.png" },
-    { name: "Client 14", logo: "https://mattermind.ae/wp-content/themes/meiveda/mattermind/images/client-logo-14.png" },
-
+  const baseClients = [
+    { name: "Wendy's", logo: "/logos/Wendys-logo.png" },
+    { name: "Biba", logo: "/logos/biba logo.png" },
+    { name: "Raymond", logo: "/logos/raymond .png" },
+    { name: "Red Tape", logo: "/logos/red-tape-logo-png_seeklogo-304782.png" },
+    { name: "Client 1", logo: "/logos/images (1).jpg" },
+    { name: "Client 2", logo: "/logos/images (1).png" },
+    { name: "Client 3", logo: "/logos/images (2).jpg" },
+    { name: "Client 4", logo: "/logos/images.jpg" },
+    { name: "Client 5", logo: "/logos/images.png" },
   ];
+
+  // Repeat the array a few times so the first half is guaranteed to be wider than the screen
+  const repeatedClients = [...baseClients, ...baseClients, ...baseClients];
+  // Duplicate for the marquee effect (first half translates to -50% to show the second half)
+  const displayClients = [...repeatedClients, ...repeatedClients];
 
   return (
     <section className="pt-16 pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
@@ -53,26 +51,6 @@ const ClientsSection = () => {
                   </motion.span>
                 ))}
               </div>
-
-              {/* Bottom Line: Strategic Partnerships (Gold, Italic) */}
-              {/* <div
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-gold italic flex justify-center items-center flex-wrap"
-                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
-              >
-                {"Strategic Partnerships".split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    variants={{
-                      hidden: { y: "100%", opacity: 0 },
-                      visible: { y: 0, opacity: 1 }
-                    }}
-                    transition={{ duration: 0.8, delay: 0.8 + (i * 0.04), ease: [0.215, 0.61, 0.355, 1] }}
-                    className="inline-block whitespace-pre font-normal"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-              </div> */}
             </motion.h2>
           </div>
         </div>
@@ -80,13 +58,13 @@ const ClientsSection = () => {
 
       <div className="w-full overflow-hidden border-y border-brand-dark/5 py-8 md:py-12 bg-white flex">
         <div className="flex w-max animate-marquee hover-pause">
-          {[...clients, ...clients].map((client, index) => (
+          {displayClients.map((client, index) => (
             <div
               key={index}
               className="flex shrink-0 items-center justify-center px-8 md:px-20 group h-20 md:h-24"
             >
               <img
-                src={`https://web.archive.org/web/2/${client.logo}`}
+                src={encodeURI(client.logo)}
                 alt={client.name}
                 className="w-auto h-12 md:h-16 object-contain transition-all duration-500 group-hover:scale-110"
                 onError={(e) => {

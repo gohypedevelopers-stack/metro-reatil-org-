@@ -115,8 +115,8 @@ const CompanyProfile = () => {
             Our Manufacturing Facility & Team
           </h3>
           <p className="text-neutral-500 text-center leading-relaxed text-sm">
-            Based in Delhi and Greater Noida, our state-of-the-art facilities are equipped with the latest machinery. 
-            Our highly skilled technical manpower—including carpenters, painters, electricians, and welders—works across 
+            Based in Delhi and Greater Noida, our state-of-the-art facilities are equipped with the latest machinery.
+            Our highly skilled technical manpower—including carpenters, painters, electricians, and welders—works across
             multiple shifts 24x7 to ensure client satisfaction and timely delivery.
           </p>
         </div>
