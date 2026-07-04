@@ -212,11 +212,11 @@ export default function ServicesPage() {
 
       {/* Intro Section */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-16 max-w-[1800px]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
             
             {/* Image Section (Left) */}
-            <div className="lg:col-span-7 order-2 lg:order-1">
+            <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <Image
                   src="https://halo.ae/images/LUXURY-MANSION1-copy.jpg"
@@ -228,8 +228,8 @@ export default function ServicesPage() {
             </div>
 
             {/* Text Section (Right) */}
-            <div className="lg:col-span-5 order-1 lg:order-2 lg:pr-8">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Complete Turnkey Fitout
               </h2>
               <div className="text-neutral-400 italic text-xl sm:text-2xl mb-8 font-light" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>

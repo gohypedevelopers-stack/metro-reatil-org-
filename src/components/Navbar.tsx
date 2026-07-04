@@ -117,21 +117,21 @@ export const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 w-full bg-white text-brand-dark border-b border-neutral-100 shadow-2xl"
+      className="absolute top-full left-0 w-full bg-white text-brand-dark border-b border-neutral-100 shadow-2xl max-h-[calc(100vh-110px)] overflow-y-auto"
     >
-      <div className="max-w-[1600px] mx-auto grid grid-cols-12 min-h-[400px]">
+      <div className="max-w-[1600px] mx-auto grid grid-cols-12 min-h-[300px]">
         {/* Left Side Links */}
-        <div className="col-span-8 p-12 lg:p-20 flex flex-col justify-center">
-          <h3 className="text-2xl md:text-3xl font-bold tracking-widest uppercase mb-16">{title}</h3>
-          <div className={`grid grid-cols-${cols} gap-y-6 gap-x-12`}>
+        <div className="col-span-8 py-8 px-12 lg:py-10 lg:px-16 flex flex-col justify-center">
+          <h3 className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-6 lg:mb-8">{title}</h3>
+          <div className={`grid grid-cols-${cols} gap-y-3.5 lg:gap-y-4 gap-x-8 lg:gap-x-12`}>
             {links.map((link, idx) => (
-              <a key={idx} href={link.href} className="text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-500 hover:text-brand-gold transition-colors block border-b border-neutral-100 pb-3">
+              <a key={idx} href={link.href} className="text-[10px] lg:text-[11px] font-bold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-neutral-500 hover:text-brand-gold transition-colors block border-b border-neutral-100 pb-2">
                 {link.name}
               </a>
             ))}
           </div>
           {showExplore && (
-            <a href="#" className="mt-12 inline-flex items-center gap-4 text-[11px] font-bold tracking-[0.3em] uppercase text-brand-dark hover:text-brand-gold transition-colors">
+            <a href="#" className="mt-6 lg:mt-8 inline-flex items-center gap-4 text-[11px] font-bold tracking-[0.3em] uppercase text-brand-dark hover:text-brand-gold transition-colors">
               EXPLORE MORE <ChevronRight size={14} />
             </a>
           )}
@@ -157,7 +157,7 @@ export const Navbar = () => {
           }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
-        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 md:px-12 flex justify-between items-center">
+        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8 xl:px-12 flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center shrink-0">
             <img
@@ -168,52 +168,52 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 whitespace-nowrap">
-            <a href="/" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/portfolio" className={`text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
+          <div className="hidden lg:flex flex-1 justify-center items-center gap-3 xl:gap-6 2xl:gap-8 whitespace-nowrap">
+            <a href="/" className={`shrink-0 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/portfolio" className={`shrink-0 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('retail')}>
-              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('retail')}>
+              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Retail <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'retail' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('commercial')}>
-              <a href="/portfolio?filter=Commercial" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('commercial')}>
+              <a href="/portfolio?filter=Commercial" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Commercial <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'commercial' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
 
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('residential')}>
-              <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('residential')}>
+              <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Residential <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'residential' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('services')}>
-              <a href="/services" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('services')}>
+              <a href="/services" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'services' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('styles')}>
-              <a href="/design-styles" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('styles')}>
+              <a href="/design-styles" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Styles <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'styles' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
-            <div className="relative py-2" onMouseEnter={() => setActiveMenu('more')}>
-              <a href="#" className={`flex items-center gap-1 text-[10px] font-bold tracking-[0.2em] xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+            <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('more')}>
+              <a href="#" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 More <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'more' ? 'rotate-180' : ''}`} />
               </a>
             </div>
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4 md:gap-8">
-            <a href="/contact" className={`hidden md:block px-10 py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
+          <div className="flex items-center gap-4 md:gap-8 shrink-0">
+            <a href="/contact" className={`hidden md:block shrink-0 px-6 py-3 xl:px-10 xl:py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
               ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
               : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
               }`}>
