@@ -41,10 +41,16 @@ const ManufacturingPage = () => {
     <div className="bg-white pt-20">
       {/* Hero Section */}
       <section className="relative h-[55vh] min-h-[400px] overflow-hidden flex items-center bg-brand-dark">
-        <img
+        <motion.img
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.25 }}
+          transition={{
+            opacity: { duration: 1.8, ease: "easeOut" },
+            scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
+          }}
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600"
           alt="In-House Manufacturing"
-          className="absolute inset-0 w-full h-full object-cover opacity-25 scale-105"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-brand-dark/60" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">

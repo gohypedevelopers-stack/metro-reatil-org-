@@ -30,16 +30,80 @@ const VALUES = [
   }
 ];
 
+function AnimatedCounter({ value }: { value: string }) {
+  const [count, setCount] = React.useState(0);
+  const elementRef = React.useRef<HTMLSpanElement>(null);
+  const hasAnimatedRef = React.useRef(false);
+
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ''), 10) || 0;
+  const suffix = value.replace(/[0-9]/g, '');
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
+          
+          let start = 0;
+          const end = numericValue;
+          const duration = 3000; // 3 seconds
+          const startTime = performance.now();
+
+          const updateCount = (currentTime: number) => {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            
+            // Easing: easeOutCubic (slower and extremely smooth deceleration)
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const currentValue = Math.floor(easeProgress * (end - start) + start);
+
+            setCount(currentValue);
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCount);
+            } else {
+              setCount(end);
+            }
+          };
+
+          requestAnimationFrame(updateCount);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [numericValue]);
+
+  return (
+    <span ref={elementRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 export default function AboutPage() {
   return (
-    <div className="bg-white pt-20">
+    <div className="bg-white pt-[54px] md:pt-[62px]">
       {/* Hero Section - Cinematic */}
       <section className="relative min-h-[620px] md:h-[70vh] flex items-center overflow-hidden bg-brand-dark">
         <motion.div 
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2.5, ease: "easeOut" }}
-          className="absolute inset-0 opacity-50"
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.5 }}
+          transition={{
+            opacity: { duration: 1.8, ease: "easeOut" },
+            scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
+          }}
+          className="absolute inset-0"
         >
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
@@ -62,17 +126,16 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 md:mb-10 leading-tight uppercase"
+              className="mobile-heading-balance text-[22px] md:text-6xl lg:text-7xl font-serif text-white mb-8 md:mb-10 leading-tight uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              THE END-TO-END <br />
-              <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
+              THE END-TO-END <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-neutral-300 text-base md:text-xl font-light leading-relaxed max-w-xl"
+              className="text-neutral-300 text-base font-light leading-relaxed max-w-xl"
             >
               Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
             </motion.p>
@@ -83,24 +146,26 @@ export default function AboutPage() {
       {/* Philosophy Section - Sharpened */}
       <section className="py-20 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
             <div className="lg:col-span-6">
-              <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                BUILDING SPACES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+              <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                BUILDING SPACES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-6 md:space-y-8 mb-12 md:mb-16">
-                <p className="text-neutral-500 text-lg leading-relaxed font-light">
+              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-16">
+                <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
                 </p>
-                <p className="text-neutral-500 text-lg leading-relaxed font-light">
+                <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Our USP is total operational readiness. We handle in-house manufacturing, MEP works, and full civil execution. When we hand over the keys, you only need to bring your products.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
+              <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
-                    <div className="text-4xl font-serif text-brand-dark mb-2">{stat.value}</div>
+                    <div className="text-4xl font-serif text-brand-dark mb-2">
+                      <AnimatedCounter value={stat.value} />
+                    </div>
                     <div className="text-[10px] font-bold uppercase tracking-widest text-brand-gold">{stat.label}</div>
                   </div>
                 ))}
@@ -119,6 +184,18 @@ export default function AboutPage() {
                 <h3 className="text-xl font-serif mb-4 italic">"Precision is our standard."</h3>
                 <p className="text-neutral-400 text-sm font-light leading-relaxed">Every joint, finish, and installation is a testament to our commitment to architectural excellence.</p>
               </div>
+
+              {/* Stats displayed below the image on mobile */}
+              <div className="grid grid-cols-4 gap-2 mt-12 lg:hidden">
+                {STATS.map((stat, i) => (
+                  <div key={i} className="border-l border-neutral-200 pl-3">
+                    <div className="text-2xl font-serif text-brand-dark mb-1">
+                      <AnimatedCounter value={stat.value} />
+                    </div>
+                    <div className="text-[8px] font-bold uppercase tracking-wider text-brand-gold leading-tight">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -131,8 +208,8 @@ export default function AboutPage() {
       <section className="py-20 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              THE PRINCIPLES <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
+            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              THE PRINCIPLES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
           </div>

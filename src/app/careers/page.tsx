@@ -1,44 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TrendingUp, BookOpen, Users, Building, ShieldCheck, Cpu, Search } from "lucide-react";
+import CareerForm from "@/components/careers/CareerForm";
+import CareersGrid from "@/components/careers/CareersGrid";
+import BenefitsSection from "@/components/careers/BenefitsSection";
 
 export const metadata = {
   title: "Careers | Metro Retail Solutions",
   description: "Join the Metro Retail Solutions team. Explore career opportunities in interior design, project management, operations, and more.",
 };
-
-const benefits = [
-  {
-    title: "Career Growth",
-    description: "Clear pathways for advancement and professional development opportunities within a growing company.",
-    icon: TrendingUp,
-  },
-  {
-    title: "Training & Development",
-    description: "Access to training programs and skill development to help you excel in your role.",
-    icon: BookOpen,
-  },
-  {
-    title: "Collaborative Culture",
-    description: "Work alongside industry experts in a supportive, team-oriented environment.",
-    icon: Users,
-  },
-  {
-    title: "Prestigious Projects",
-    description: "Work on high-profile residential, commercial, and retail projects across premier locations.",
-    icon: Building,
-  },
-  {
-    title: "Competitive Benefits",
-    description: "Attractive salary packages with comprehensive benefits including health insurance and annual leave.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Modern Facility",
-    description: "Work with the latest equipment and technologies in our state-of-the-art manufacturing facility.",
-    icon: Cpu,
-  },
-];
 
 const roles = [
   {
@@ -60,10 +29,10 @@ const roles = [
     description: "Site supervision, quality checks, subcontractor coordination, health and safety, handover support and daily execution.",
   },
   {
-    category: "Joinery",
+    category: "Carpentry",
     location: "Factory",
-    title: "Joinery & Manufacturing",
-    description: "Factory and installation roles for bespoke joinery, cabinetry, CNC production, finishing, and technical shop drawings.",
+    title: "Carpentry & Manufacturing",
+    description: "Factory and installation roles for bespoke carpentry, cabinetry, CNC production, finishing, and technical shop drawings.",
   },
   {
     category: "Engineering",
@@ -122,41 +91,12 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-24 bg-brand-dark text-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Build Your Career <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>With Us</span>
-              </h2>
-            </div>
-            <div className="md:w-1/2">
-              <p className="text-neutral-400 text-lg">
-                At Metro Retail Solutions, our team brings together designers, project managers, engineers, craftsmen and operations specialists working across high-end spaces.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:bg-white/10 transition-colors group">
-                <div className="w-14 h-14 bg-brand-gold/20 rounded-sm flex items-center justify-center mb-6 text-brand-gold group-hover:scale-110 transition-transform">
-                  <benefit.icon size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{benefit.title}</h3>
-                <p className="text-neutral-400 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BenefitsSection />
 
       {/* Open Roles */}
       <section className="py-24 bg-neutral-50 text-brand-dark" id="open-positions">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
+          <div className="flex flex-col md:flex-row gap-12 items-start md:items-end mb-16">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Careers Will Be <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
@@ -164,7 +104,7 @@ export default function CareersPage() {
             </div>
             <div className="md:w-1/2">
               <p className="text-neutral-600 text-lg">
-                We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, joinery and project delivery teams.
+                We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, carpentry and project delivery teams.
               </p>
             </div>
           </div>
@@ -178,60 +118,19 @@ export default function CareersPage() {
               <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Current openings will be announced soon.</h3>
               <p className="text-neutral-600">Until then, you can review the types of roles we usually hire for and send your CV for future consideration.</p>
             </div>
-            <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="shrink-0 px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
-              Send Your CV
+            <a href="#apply" className="shrink-0 px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
+              Apply Now
             </a>
           </div>
 
-          {/* Filters & Search */}
-          <div className="flex flex-col lg:flex-row gap-6 justify-between items-center mb-12">
-            <div className="relative w-full lg:w-96">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
-              <input 
-                type="search" 
-                placeholder="Search career areas..." 
-                className="w-full pl-12 pr-4 py-3 rounded-sm border border-neutral-200 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all bg-white"
-              />
-            </div>
-            <div className="flex flex-wrap justify-center gap-2">
-              {['All', 'Design', 'Projects', 'Operations', 'Joinery', 'Engineering', 'Procurement', 'Sales', 'Admin'].map((filter, i) => (
-                <button 
-                  key={filter}
-                  className={`px-5 py-2 rounded-sm text-sm font-medium transition-colors ${
-                    i === 0 ? 'bg-brand-gold text-white' : 'bg-white border border-neutral-200 text-neutral-600 hover:border-brand-gold hover:text-brand-gold'
-                  }`}
-                >
-                  {filter}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Roles Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {roles.map((role, index) => (
-              <div key={index} className="bg-white p-6 rounded-sm border border-neutral-100 shadow-sm hover:shadow-md transition-all hover:border-brand-gold/30 group">
-                <div className="flex justify-between items-start mb-6 text-sm font-medium">
-                  <span className="text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-sm">{role.category}</span>
-                  <span className="text-neutral-400">{role.location}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 font-serif tracking-wide uppercase group-hover:text-brand-gold transition-colors">{role.title}</h3>
-                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
-                  {role.description}
-                </p>
-                <div className="text-sm font-semibold text-neutral-400 pt-4 border-t border-neutral-100">
-                  Roles coming soon
-                </div>
-              </div>
-            ))}
-          </div>
+          <CareersGrid initialRoles={roles} />
         </div>
       </section>
 
       {/* Hiring Process */}
       <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
+          <div className="flex flex-col md:flex-row gap-12 items-start md:items-end mb-16">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Our Hiring <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
@@ -261,41 +160,51 @@ export default function CareersPage() {
       </section>
 
       {/* Speculative Application */}
-      <section className="py-24 bg-brand-dark text-white">
+      <section className="py-24 bg-brand-dark text-white" id="apply">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="w-full lg:w-1/2">
-              <div className="relative aspect-[4/3] w-full rounded-sm overflow-hidden">
-                <Image
-                  src="/images/phase_03_installation.png"
-                  alt="Metro Retail Solutions Team at work"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2">
+          <div className="flex flex-col lg:flex-row items-start gap-16">
+            <div className="w-full lg:w-1/2 lg:sticky lg:top-32">
               <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Send a Speculative <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Application</span>
+                Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
               </h2>
-              <p className="text-neutral-400 text-lg mb-10 leading-relaxed">
-                If your experience fits Metro Retail Solutions, send your CV and portfolio for future roles in design, project delivery, joinery, engineering, operations or support teams.
+              <p className="text-neutral-400 text-base mb-8 leading-relaxed">
+                If your experience aligns with Metro Retail Solutions, submit your profile here. We hire exceptional designers, detail-oriented project managers, expert carpenters, and technical engineers.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-8 mb-12">
-                <div>
-                  <h3 className="text-brand-gold font-semibold mb-2">Email Us</h3>
-                  <a href="mailto:careers@metroretailsolutions.com" className="text-xl font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">careers@metroretailsolutions.com</a>
+              <div className="space-y-6 mb-10">
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center text-brand-gold shrink-0 mt-0.5 font-sans font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Private CNC & Manufacturing Workshop</h4>
+                    <p className="text-neutral-400 text-xs mt-1">State-of-the-art machinery and in-house wood fabrication.</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-brand-gold font-semibold mb-2">Call Us</h3>
-                  <a href="tel:+97100000000" className="text-xl font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">+971 (0) 4 123 4567</a>
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center text-brand-gold shrink-0 mt-0.5 font-sans font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">Turnkey Authority-Ready Operations</h4>
+                    <p className="text-neutral-400 text-xs mt-1">Full compliance, structural, civil & MEP team under one roof.</p>
+                  </div>
                 </div>
               </div>
 
-              <a href="mailto:careers@metroretailsolutions.com?subject=Future career opportunities at Metro Retail Solutions" className="inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
-                Send Your CV
-              </a>
+              <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-8">
+                <div>
+                  <h3 className="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-1.5">Direct Careers Email</h3>
+                  <a href="mailto:careers@metroretailsolutions.com" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">careers@metroretailsolutions.com</a>
+                </div>
+                <div>
+                  <h3 className="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-1.5">Careers Hotline</h3>
+                  <a href="tel:+97100000000" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors">+971 (0) 4 123 4567</a>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <CareerForm />
             </div>
           </div>
         </div>

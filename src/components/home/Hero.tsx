@@ -9,9 +9,12 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
     <section className="relative min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden bg-brand-dark">
       {/* Background with Subtle Zoom */}
       <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
+        initial={{ scale: 1.15, opacity: 0 }}
         animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
-        transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+        transition={{
+          opacity: { duration: 1.8, ease: "easeOut" },
+          scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
+        }}
         className="absolute inset-0 z-0 bg-brand-dark"
       >
         <div className="absolute inset-0 bg-black/40 z-10" />

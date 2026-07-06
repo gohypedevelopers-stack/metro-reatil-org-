@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white py-16 md:py-24 lg:py-32 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 mb-16 md:mb-24 lg:mb-32">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 mb-16 md:mb-24 lg:mb-32">
           
           {/* Brand Info */}
-          <div className="lg:col-span-4 flex flex-col justify-between">
+          <div className="col-span-2 lg:col-span-4 flex flex-col justify-between">
             <div>
               <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert" />
               <p className="text-neutral-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Quick Links</h4>
             <ul className="space-y-4">
               {[
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Services</h4>
             <ul className="space-y-4">
               {[
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Contact Info</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-3 group">
@@ -102,7 +102,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Newsletter</h4>
             <p className="text-neutral-400 text-[11px] font-light mb-6 leading-relaxed">Join our circle for exclusive design insights and architectural project updates.</p>
             <div className="flex border-b border-white/20 focus-within:border-brand-gold transition-colors pb-2">

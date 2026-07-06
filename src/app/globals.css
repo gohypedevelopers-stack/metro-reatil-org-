@@ -94,10 +94,6 @@ body {
     overflow-x: hidden;
   }
 
-  .whitespace-nowrap {
-    white-space: normal !important;
-  }
-
   .mobile-heading-balance br {
     display: none;
   }

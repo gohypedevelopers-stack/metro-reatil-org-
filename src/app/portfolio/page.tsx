@@ -184,10 +184,16 @@ export default function PortfolioPage() {
 
       {/* ── Hero Banner ── */}
       <section className="relative h-[60vh] min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
-        <img
+        <motion.img
+          initial={{ scale: 1.15, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.3 }}
+          transition={{
+            opacity: { duration: 1.8, ease: "easeOut" },
+            scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
+          }}
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
           alt="Metro Portfolio"
-          className="absolute inset-0 w-full h-full object-cover opacity-30 scale-105"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 

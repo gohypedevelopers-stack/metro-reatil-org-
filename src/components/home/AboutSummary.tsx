@@ -15,10 +15,10 @@ const AboutSummary = () => {
             className="relative"
           >
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-brand-gold mb-8 block">Our Legacy</span>
-            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Precision in Every <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
+            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Precision in Every <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
             </h2>
-            <div className="space-y-6 md:space-y-8 text-neutral-400 font-light leading-relaxed text-base md:text-lg">
+            <div className="space-y-6 md:space-y-8 text-neutral-400 font-light leading-relaxed text-base">
               <p>
                 Metro Retail Solutions has established itself as a beacon of excellence in the Middle East's fit-out industry. We don't just execute blueprints; we understand the commercial pulse of retail and the ergonomic needs of modern workplaces.
               </p>
