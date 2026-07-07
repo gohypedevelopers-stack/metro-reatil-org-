@@ -161,16 +161,16 @@ const ExecutionProcess = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
-          <div>
-            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block">
+        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-16 md:mb-24 gap-8 md:gap-12">
+          <div className="flex flex-col items-center md:items-start">
+            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center md:text-left">
               Rigorous Execution Blueprint
             </span>
-            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-center md:text-left text-4xl md:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
             </h2>
           </div>
-          <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-md">
+          <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-md text-center md:text-left">
             We handle everything from bare concrete to brand loading. Our rigorous 4-phase execution eliminates multi-vendor friction and guarantees flawless commercial Handover.
           </p>
         </div>

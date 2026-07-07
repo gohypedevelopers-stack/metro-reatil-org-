@@ -121,12 +121,12 @@ export default function DesignStylesPage() {
       <section className="py-24 bg-neutral-50 border-b border-neutral-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <div className="lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Every Style <br />
                 <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executed to Perfection</span>
               </h2>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="text-lg text-neutral-600 leading-relaxed text-center lg:text-left">
                 From warm Mediterranean venues to ultra-luxury modern retail spaces, Metro Retail Solutions is trusted to bring every design style to life with accuracy and finesse. Explore our portfolio of executed styles and discover the perfect aesthetic for your next project.
               </p>
             </div>

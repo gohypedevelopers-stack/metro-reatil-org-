@@ -33,14 +33,14 @@ const ManufacturingSection = () => {
     <section className="py-20 bg-[#f9f9f8]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
-          <div>
-            <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-8 md:mb-10 uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h2 className="mobile-heading-balance text-center lg:text-left text-4xl md:text-6xl font-serif text-brand-dark mb-8 md:mb-10 uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12 max-w-xl">
+            <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12 max-w-xl text-center lg:text-left">
               India's Most trusted Fitout and In-house manufacturing specialist. Our 9,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
             </p>
-            <div className="grid grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-3 gap-6 md:gap-8 text-center lg:text-left w-full">
               <div>
                 <span className="text-4xl font-serif text-brand-gold mb-2 block"><CountUp end={28} suffix="+" /></span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Years of Experience</span>
@@ -54,7 +54,7 @@ const ManufacturingSection = () => {
                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">Master Artisans</span>
               </div>
             </div>
-            <div className="mt-12">
+            <div className="mt-12 self-center lg:self-auto">
               <a href="/manufacturing" className="inline-flex items-center gap-4 px-8 py-4 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
                 Learn More
               </a>
