@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'cms.metroretailsolutions.in',
+      },
+      {
+        protocol: 'https',
         hostname: 'halo.ae',
       },
       {
