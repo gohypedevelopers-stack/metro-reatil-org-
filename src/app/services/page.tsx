@@ -228,17 +228,17 @@ export default function ServicesPage() {
             </div>
 
             {/* Text Section (Right) */}
-            <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8">
-              <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Complete Turnkey Fitout
               </h2>
-              <div className="text-neutral-400 italic text-xl sm:text-2xl mb-8 font-light" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
+              <div className="text-neutral-400 italic text-xl sm:text-2xl mb-8 font-light text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
                 & Interior Transformation
               </div>
 
               <div className="w-12 h-[2px] bg-brand-gold mb-8"></div>
 
-              <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg">
+              <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg text-center lg:text-left">
                 Halo Interiors offers a comprehensive suite of services designed to cover every stage of property improvement — from initial inspection to the final coat of paint. Browse our full range of services for residential, commercial, and F&B spaces.
               </p>
             </div>

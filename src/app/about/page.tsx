@@ -147,11 +147,11 @@ export default function AboutPage() {
       <section className="py-20 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
-            <div className="lg:col-span-6">
-              <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                BUILDING SPACES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+            <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                BUILDING SPACES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-0 lg:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-16">
+              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
                 </p>
@@ -186,9 +186,9 @@ export default function AboutPage() {
               </div>
 
               {/* Stats displayed below the image on mobile */}
-              <div className="grid grid-cols-4 gap-2 mt-12 lg:hidden">
+              <div className="grid grid-cols-4 gap-2 mt-12 lg:hidden text-center">
                 {STATS.map((stat, i) => (
-                  <div key={i} className="border-l border-neutral-200 pl-3">
+                  <div key={i} className="flex flex-col items-center">
                     <div className="text-2xl font-serif text-brand-dark mb-1">
                       <AnimatedCounter value={stat.value} />
                     </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
             {VALUES.map((val, i) => (
-              <div key={i} className="bg-white p-8 md:p-12 lg:p-16 hover:bg-neutral-50 transition-colors duration-500 group">
+              <div key={i} className="bg-white p-8 md:p-12 lg:p-16 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-center text-center md:items-start md:text-left">
                 <val.icon className="text-brand-gold mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
                 <h3 className="text-2xl font-serif text-brand-dark mb-6">{val.title}</h3>
                 <p className="text-neutral-500 text-base font-light leading-relaxed">{val.desc}</p>

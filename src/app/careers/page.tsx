@@ -96,14 +96,14 @@ export default function CareersPage() {
       {/* Open Roles */}
       <section className="py-24 bg-neutral-50 text-brand-dark" id="open-positions">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-start md:items-end mb-16">
-            <div className="md:w-1/2">
+          <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
+            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
               <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Careers Will Be <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
               </h2>
             </div>
-            <div className="md:w-1/2">
-              <p className="text-neutral-600 text-lg">
+            <div className="w-full md:w-1/2">
+              <p className="text-neutral-600 text-lg text-center md:text-left">
                 We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, carpentry and project delivery teams.
               </p>
             </div>
@@ -130,27 +130,27 @@ export default function CareersPage() {
       {/* Hiring Process */}
       <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-start md:items-end mb-16">
-            <div className="md:w-1/2">
+          <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
+            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
               <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Our Hiring <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
               </h2>
             </div>
-            <div className="md:w-1/2">
-              <p className="text-neutral-600 text-lg">
+            <div className="w-full md:w-1/2">
+              <p className="text-neutral-600 text-lg text-center md:text-left">
                 While current roles are being prepared, here is the process candidates can expect once openings are published.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
             {processSteps.map((step, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative flex flex-col items-center md:items-start">
                 <div className="text-5xl md:text-7xl font-bold text-neutral-100 mb-6 font-serif tracking-wide uppercase">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold mb-4 font-serif tracking-wide uppercase text-brand-dark">{step.title}</h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-neutral-600 leading-relaxed text-center md:text-left">
                   {step.desc}
                 </p>
               </div>
