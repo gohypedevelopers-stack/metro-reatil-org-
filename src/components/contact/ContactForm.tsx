@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { CheckCircle, ChevronRight, Loader2 } from "lucide-react";
@@ -130,8 +130,48 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
     e.preventDefault();
     if (!validate()) return;
     setStatus("loading");
-    await new Promise((r) => setTimeout(r, 2000));
-    setStatus("success");
+    
+    const formId = process.env.NEXT_PUBLIC_WP_CONTACT_FORM_ID;
+    const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL?.replace('/graphql', '');
+    
+    if (!formId || !apiUrl) {
+      console.warn("Contact form ID or API URL is missing in environment variables.");
+      // Fallback for development if env variables are not set yet
+      await new Promise((r) => setTimeout(r, 2000));
+      setStatus("success");
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append("_wpcf7_unit_tag", `wpcf7-f${formId}-p1-o1`);
+      formData.append("fullName", form.name);
+      formData.append("emailAddress", form.email);
+      formData.append("phoneNumber", form.phone);
+      formData.append("companyName", form.company);
+      formData.append("serviceType", form.service);
+      formData.append("budgetRange", form.budget);
+      formData.append("projectMessage", form.message);
+
+      const res = await fetch(`${apiUrl}/wp-json/contact-form-7/v1/contact-forms/${formId}/feedback`, {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      
+      if (data.status === "mail_sent" || res.ok) {
+        setStatus("success");
+      } else {
+        console.error("Form submission error:", data);
+        setStatus("idle");
+        alert(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission failed:", error);
+      setStatus("idle");
+      alert("Something went wrong. Please try again.");
+    }
   }
 
   if (status === "success") {
