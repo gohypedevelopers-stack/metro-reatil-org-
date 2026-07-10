@@ -192,16 +192,24 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
             </CarouselContent>
           </Carousel>
           
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-10">
-            {Array.from({ length: count }).map((_, idx) => (
-              <button
-                key={idx}
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`h-1.5 rounded-full transition-all duration-300 ${current === idx ? 'bg-brand-gold w-6' : 'bg-neutral-200 w-1.5 hover:bg-neutral-300'}`}
-                onClick={() => api?.scrollTo(idx)}
-              />
-            ))}
+          {/* Pagination Dots - Mapped to 5 dots for clean UI */}
+          <div className="flex justify-center gap-2.5 mt-10">
+            {Array.from({ length: 5 }).map((_, idx) => {
+              const activeDotIndex = count > 0 ? Math.min(Math.floor((current / count) * 5), 4) : 0;
+              return (
+                <button
+                  key={idx}
+                  aria-label={`Go to slide group ${idx + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${activeDotIndex === idx ? 'bg-brand-gold w-6' : 'bg-neutral-200 w-1.5 hover:bg-neutral-300'}`}
+                  onClick={() => {
+                    if (api && count > 0) {
+                      const slideIndex = Math.floor((idx / 5) * count);
+                      api.scrollTo(slideIndex);
+                    }
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
