@@ -213,7 +213,7 @@ export const Navbar = () => {
 
           {/* Right Actions */}
           <div className="flex items-center gap-4 md:gap-8 shrink-0">
-            <a href="/contact" className={`hidden md:block shrink-0 px-6 py-3 xl:px-10 xl:py-4 text-[9px] font-bold uppercase tracking-[0.3em] transition-all duration-500 border ${isSolid
+            <a href="/contact" className={`hidden md:block shrink-0 px-5 py-2.5 xl:px-6 xl:py-3 text-[9px] font-bold uppercase tracking-[0.25em] transition-all duration-500 border ${isSolid
               ? 'bg-brand-dark text-white border-brand-dark hover:bg-brand-gold hover:border-brand-gold'
               : 'bg-white text-brand-dark border-white hover:bg-transparent hover:text-white'
               }`}>
