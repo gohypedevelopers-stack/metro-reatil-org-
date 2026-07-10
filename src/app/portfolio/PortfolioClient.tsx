@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useSearchParams } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Filter } from 'lucide-react';
 import { FeaturedFitout } from '../../data/featuredFitouts';
 
@@ -214,27 +215,95 @@ function CountUpNumber({ end, duration = 1500 }: CountUpNumberProps) {
 }
 
 export default function PortfolioClient({ initialProjects }: { initialProjects: FeaturedFitout[] }) {
+  const searchParams = useSearchParams();
+  const filterParam = searchParams.get('filter');
+  const subFilterParam = searchParams.get('subFilter');
+
   const [filter, setFilter] = useState("All");
   const [subFilter, setSubFilter] = useState("OVERVIEW");
 
-  // Read filter from URL on mount
-  useEffect(() => {
+  const handleFilterChange = (cat: string) => {
+    setFilter(cat);
+    setSubFilter("OVERVIEW");
+    
     if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      const initialFilter = urlParams.get('filter');
-      if (initialFilter) {
-        const matched = MAIN_CATEGORIES.find(c => c.toLowerCase() === initialFilter.toLowerCase());
-        if (matched) {
-          setFilter(matched);
+      const params = new URLSearchParams(window.location.search);
+      if (cat === "All") {
+        params.delete("filter");
+      } else {
+        params.set("filter", cat);
+      }
+      params.delete("subFilter");
+      const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+      window.history.pushState({}, '', newUrl);
+    }
+  };
+
+  const handleSubFilterChange = (sub: string) => {
+    setSubFilter(sub);
+    
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (sub === "OVERVIEW") {
+        params.delete("subFilter");
+      } else {
+        params.set("subFilter", sub);
+      }
+      const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+      window.history.pushState({}, '', newUrl);
+    }
+  };
+
+  // Sync state with URL search params reactively
+  useEffect(() => {
+    let matchedFilter = "All";
+    if (filterParam) {
+      const matched = MAIN_CATEGORIES.find(c => c.toLowerCase() === filterParam.toLowerCase());
+      if (matched) {
+        matchedFilter = matched;
+        setFilter(matched);
+      } else {
+        setFilter("All");
+      }
+    } else {
+      setFilter("All");
+    }
+
+    if (subFilterParam && matchedFilter !== "All") {
+      const subCats = SUB_CATEGORIES[matchedFilter];
+      if (subCats) {
+        const matchedSub = subCats.find(s => s.toLowerCase() === subFilterParam.toLowerCase());
+        if (matchedSub) {
+          setSubFilter(matchedSub);
+          return;
         }
       }
     }
-  }, []);
-
-  // Reset sub-filter when main filter changes
-  useEffect(() => {
     setSubFilter("OVERVIEW");
-  }, [filter]);
+  }, [filterParam, subFilterParam]);
+
+  // Scroll to filter section when filter changes from the URL (navbar navigation)
+  useEffect(() => {
+    if (filterParam && filterParam.toLowerCase() !== 'all') {
+      const scrollToSection = () => {
+        const element = document.getElementById('filter-section');
+        if (element) {
+          const navbarHeight = 100; // Offset for fixed navbar + breathing room
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      // Try scrolling after a short delay to allow layout and lenis to settle
+      const timer = setTimeout(scrollToSection, 400);
+      return () => clearTimeout(timer);
+    }
+  }, [filterParam, subFilterParam]);
 
   const filteredProjects = initialProjects.filter(proj => {
     const sector = getPortfolioSector(proj.category);
@@ -304,7 +373,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       <CompanyProfile />
 
       {/* ── Filter Controls ── */}
-      <section className="py-2.5 md:py-6 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
+      <section id="filter-section" className="py-2.5 md:py-6 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-8">
 
@@ -313,7 +382,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               {MAIN_CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setFilter(cat)}
+                  onClick={() => handleFilterChange(cat)}
                   className={`px-3 sm:px-8 py-1.5 md:py-2.5 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border shrink-0 ${filter === cat
                     ? 'bg-brand-dark text-white border-brand-dark shadow-md'
                     : 'bg-white text-neutral-400 border-neutral-200 hover:border-brand-gold hover:text-brand-dark'
@@ -333,7 +402,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                 {SUB_CATEGORIES[filter].map((sub) => (
                   <button
                     key={sub}
-                    onClick={() => setSubFilter(sub)}
+                    onClick={() => handleSubFilterChange(sub)}
                     className={`px-3 py-1 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full border shrink-0 ${subFilter === sub
                       ? 'bg-brand-gold text-white border-brand-gold shadow-sm'
                       : 'bg-white text-neutral-500 border-neutral-200 hover:border-brand-gold/60 hover:text-brand-dark'
