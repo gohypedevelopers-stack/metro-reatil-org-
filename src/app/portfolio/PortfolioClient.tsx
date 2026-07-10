@@ -51,7 +51,7 @@ const getPortfolioSector = (category: string): string => {
 
 const CompanyProfile = () => {
   return (
-    <section className="pt-16 pb-8 md:pt-24 md:pb-12 bg-neutral-50 border-b border-neutral-200">
+    <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-neutral-50 border-b border-neutral-200">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
           Metro Retail Solutions
@@ -219,8 +219,21 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
   const filterParam = searchParams.get('filter');
   const subFilterParam = searchParams.get('subFilter');
 
-  const [filter, setFilter] = useState("All");
-  const [subFilter, setSubFilter] = useState("OVERVIEW");
+  const [filter, setFilter] = useState<string>(() => {
+    if (!filterParam) return "All";
+    const matched = MAIN_CATEGORIES.find(c => c.toLowerCase() === filterParam.toLowerCase());
+    return matched ?? "All";
+  });
+
+  const [subFilter, setSubFilter] = useState<string>(() => {
+    if (!subFilterParam || !filterParam) return "OVERVIEW";
+    const matchedCat = MAIN_CATEGORIES.find(c => c.toLowerCase() === filterParam.toLowerCase());
+    if (!matchedCat || matchedCat === "All") return "OVERVIEW";
+    const subCats = SUB_CATEGORIES[matchedCat];
+    if (!subCats) return "OVERVIEW";
+    const matchedSub = subCats.find(s => s.toLowerCase() === subFilterParam.toLowerCase());
+    return matchedSub ?? "OVERVIEW";
+  });
 
   const scrollToFilterSection = () => {
     if (typeof window !== 'undefined') {
@@ -308,6 +321,25 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       return () => clearTimeout(timer);
     }
   }, [filterParam, subFilterParam]);
+
+  // On initial mount: if URL has #filter-section hash (e.g. "Back to Portfolio" from detail page),
+  // scroll to it with proper navbar offset
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash === '#filter-section') {
+      const timer = setTimeout(() => {
+        const element = document.getElementById('filter-section');
+        if (element) {
+          const navbarHeight = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          // Remove hash from URL without reload to keep it clean
+          window.history.replaceState({}, '', window.location.pathname + window.location.search);
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const filteredProjects = initialProjects.filter(proj => {
     const sector = getPortfolioSector(proj.category);
