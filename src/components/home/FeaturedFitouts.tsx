@@ -12,6 +12,10 @@ const FeaturedFitouts = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
   const [mounted, setMounted] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   const filtered = activeFilter === 'ALL'
     ? filterCategories.flatMap((category) =>
@@ -58,6 +62,29 @@ const FeaturedFitouts = () => {
 
   const showNext = () => {
     setActiveIndex((current) => (current + 1) % filtered.length);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      showNext();
+    }
+    if (isRightSwipe) {
+      showPrevious();
+    }
   };
 
   const visibleItems = [];
@@ -130,7 +157,12 @@ const FeaturedFitouts = () => {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <div 
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 touch-pan-y"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
                 <AnimatePresence mode="popLayout" initial={false}>
                   {visibleItems.map((project, idx) => (
                     <motion.a
