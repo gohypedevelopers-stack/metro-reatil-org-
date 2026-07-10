@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { CheckCircle, ChevronRight, Loader2, ChevronDown } from "lucide-react";
 
 const SERVICE_OPTIONS = [
@@ -8,18 +8,18 @@ const SERVICE_OPTIONS = [
   "Office Fitout",
   "Airport Retail",
   "Mall Boutique",
-  "Hospitality Fitout",
+  "Hospitality",
   "MEP Works",
-  "In-House Manufacturing",
-  "Full Turnkey Solution",
+  "Manufacturing",
+  "Turnkey Solution",
 ];
 
 const BUDGET_OPTIONS = [
-  "Under AED 100,000",
-  "AED 100,000 - 500,000",
-  "AED 500,000 - 1,000,000",
-  "AED 1,000,000 - 5,000,000",
-  "Above AED 5,000,000",
+  "Under AED 100k",
+  "AED 100k - 500k",
+  "AED 500k - 1M",
+  "AED 1M - 5M",
+  "Above AED 5M",
   "To Be Discussed",
 ];
 
@@ -57,7 +57,7 @@ function InputField({
     <div className="relative">
       <label
         htmlFor={id}
-        className={`block text-[9px] font-bold uppercase tracking-[0.25em] mb-3 ${
+        className={`block text-[8px] md:text-[9px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] mb-1.5 md:mb-3 ${
           dark ? "text-brand-gold" : "text-neutral-400"
         }`}
       >
@@ -65,7 +65,85 @@ function InputField({
       </label>
       {children}
       {error && (
-        <p className="mt-1.5 text-[10px] text-red-400 font-light">{error}</p>
+        <p className="mt-1 text-[9px] md:text-[10px] text-red-400 font-light">{error}</p>
+      )}
+    </div>
+  );
+}
+
+interface CustomSelectProps {
+  value: string;
+  options: string[];
+  placeholder: string;
+  onChange: (value: string) => void;
+  dark?: boolean;
+  align?: "left" | "right";
+}
+
+function CustomSelect({
+  value,
+  options,
+  placeholder,
+  onChange,
+  dark,
+  align = "left",
+}: CustomSelectProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div ref={containerRef} className="relative w-full">
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-full bg-transparent border-b py-2.5 md:py-4 outline-none text-[11px] md:text-sm font-light transition-all duration-300 flex items-center justify-between cursor-pointer ${
+          dark
+            ? "text-white border-white/15 hover:border-white/30"
+            : "text-brand-dark border-neutral-200"
+        } ${isOpen ? "border-brand-gold" : ""}`}
+      >
+        <span className={value ? "" : dark ? "text-neutral-600" : "text-neutral-300"}>
+          {value || placeholder}
+        </span>
+        <ChevronDown size={16} strokeWidth={1.5} className={dark ? "text-white/40" : "text-neutral-400"} />
+      </div>
+
+      {isOpen && (
+        <div
+          className={`absolute mt-1 w-max min-w-full z-50 border shadow-lg py-1.5 animate-in fade-in slide-in-from-top-1 duration-200 ${
+            align === "right" ? "right-0" : "left-0"
+          } ${
+            dark
+              ? "bg-[#0d0d0d] border-white/10 text-white"
+              : "bg-white border-neutral-200 text-brand-dark"
+          }`}
+        >
+          {options.map((opt) => (
+            <div
+              key={opt}
+              onClick={() => {
+                onChange(opt);
+                setIsOpen(false);
+              }}
+              className={`px-4 py-2 text-[10px] md:text-xs font-light cursor-pointer transition-colors ${
+                dark
+                  ? "hover:bg-white/5 text-neutral-300 hover:text-white"
+                  : "hover:bg-neutral-100 text-neutral-600 hover:text-brand-dark"
+              }`}
+            >
+              {opt}
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
@@ -85,8 +163,8 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
   const [focused, setFocused] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-  const inputClass = (field: string) =>
-    `w-full bg-transparent border-b py-4 outline-none text-base font-light transition-all duration-300 ${
+  const inputClass = (field: string, sizeClass = "text-sm md:text-base") =>
+    `w-full bg-transparent border-b py-2.5 md:py-4 outline-none ${sizeClass} font-light transition-all duration-300 ${
       dark
         ? "placeholder:text-neutral-600 text-white"
         : "placeholder:text-neutral-300 text-brand-dark"
@@ -99,6 +177,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
         ? "border-white/15 hover:border-white/30"
         : "border-neutral-200"
     }`;
+
 
   function validate(): boolean {
     const newErrors: FormErrors = {};
@@ -205,10 +284,10 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
   }
 
   return (
-    <form className="space-y-10 md:space-y-12" onSubmit={handleSubmit} noValidate>
+    <form className="space-y-6 md:space-y-12" onSubmit={handleSubmit} noValidate>
 
       {/* Row 1 - Name & Email */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+      <div className="grid grid-cols-2 gap-4 md:gap-12">
         <InputField label="Full Name *" id="name" error={errors.name} dark={dark}>
           <input
             id="name"
@@ -227,7 +306,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
             id="email"
             name="email"
             type="email"
-            placeholder="jane@yourcompany.com"
+            placeholder="jane@company.com"
             value={form.email}
             onChange={handleChange}
             onFocus={() => setFocused("email")}
@@ -238,7 +317,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       </div>
 
       {/* Row 2 - Phone & Company */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+      <div className="grid grid-cols-2 gap-4 md:gap-12">
         <InputField label="Phone Number" id="phone" error={errors.phone} dark={dark}>
           <input
             id="phone"
@@ -257,7 +336,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
             id="company"
             name="company"
             type="text"
-            placeholder="Your Company Name"
+            placeholder="Company Name"
             value={form.company}
             onChange={handleChange}
             onFocus={() => setFocused("company")}
@@ -268,50 +347,26 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       </div>
 
       {/* Row 3 - Service & Budget */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+      <div className="grid grid-cols-2 gap-4 md:gap-12">
         <InputField label="Service Required" id="service" dark={dark}>
-          <div className="relative w-full">
-            <select
-              id="service"
-              name="service"
-              value={form.service}
-              onChange={handleChange}
-              onFocus={() => setFocused("service")}
-              onBlur={() => setFocused(null)}
-              className={`${inputClass("service")} appearance-none cursor-pointer pr-8`}
-              style={{ colorScheme: dark ? "dark" : "light" }}
-            >
-              <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select a service.</option>
-              {SERVICE_OPTIONS.map((opt) => (
-                <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
-              ))}
-            </select>
-            <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 flex items-center pr-1">
-              <ChevronDown size={18} strokeWidth={1.5} className={dark ? "text-white/40" : "text-neutral-400"} />
-            </div>
-          </div>
+          <CustomSelect
+            value={form.service}
+            options={SERVICE_OPTIONS}
+            placeholder="Select service"
+            onChange={(val) => setForm((prev) => ({ ...prev, service: val }))}
+            dark={dark}
+            align="left"
+          />
         </InputField>
         <InputField label="Estimated Budget" id="budget" dark={dark}>
-          <div className="relative w-full">
-            <select
-              id="budget"
-              name="budget"
-              value={form.budget}
-              onChange={handleChange}
-              onFocus={() => setFocused("budget")}
-              onBlur={() => setFocused(null)}
-              className={`${inputClass("budget")} appearance-none cursor-pointer pr-8`}
-              style={{ colorScheme: dark ? "dark" : "light" }}
-            >
-              <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select budget range.</option>
-              {BUDGET_OPTIONS.map((opt) => (
-                <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
-              ))}
-            </select>
-            <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 flex items-center pr-1">
-              <ChevronDown size={18} strokeWidth={1.5} className={dark ? "text-white/40" : "text-neutral-400"} />
-            </div>
-          </div>
+          <CustomSelect
+            value={form.budget}
+            options={BUDGET_OPTIONS}
+            placeholder="Select budget"
+            onChange={(val) => setForm((prev) => ({ ...prev, budget: val }))}
+            dark={dark}
+            align="right"
+          />
         </InputField>
       </div>
 
@@ -326,16 +381,16 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
           onChange={handleChange}
           onFocus={() => setFocused("message")}
           onBlur={() => setFocused(null)}
-          className={`${inputClass("message")} resize-none`}
+          className={`${inputClass("message")} resize-none h-20 md:h-32`}
         />
       </InputField>
 
       {/* Submit */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-2">
+      <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-6 pt-2 text-center sm:text-left">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="group flex items-center gap-4 px-10 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="group flex items-center justify-center gap-4 px-8 py-3 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-brand-dark transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed w-full sm:w-auto"
         >
           {status === "loading" ? (
             <>
