@@ -359,7 +359,12 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
   });
 
   return (
-    <div className="bg-brand-dark pt-20">
+    <motion.div
+      className="bg-brand-dark pt-20"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+    >
 
       {/* ── Hero Banner ── */}
       <section className="relative h-[60vh] min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
@@ -553,6 +558,6 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
