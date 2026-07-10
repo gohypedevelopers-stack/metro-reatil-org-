@@ -10,6 +10,15 @@ type FeaturedFitoutDetailProps = {
   suggestedProjects: FeaturedFitout[];
 };
 
+// Maps raw project category to portfolio filter param (must match MAIN_CATEGORIES in PortfolioClient)
+const getCategoryFilter = (category: string): string => {
+  const cat = (category || '').toUpperCase();
+  if (cat === 'OFFICE' || cat === 'COMMERCIAL') return 'Commercial';
+  if (cat === 'RESIDENTIAL') return 'Residential';
+  if (cat === 'RETAIL' || cat === 'F&B') return 'Retail';
+  return 'All';
+};
+
 const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDetailProps) => {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const activeImage = activeImageIndex === null ? null : project.gallery[activeImageIndex];
@@ -89,10 +98,10 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       <section className="border-b border-neutral-100 bg-neutral-50 py-8">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 px-6 md:px-12">
           <a
-            href="/#featured-fitouts"
+            href={`/portfolio?filter=${getCategoryFilter(project.category)}#filter-section`}
             className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-neutral-400 transition-colors hover:text-brand-dark"
           >
-            <ArrowLeft size={14} /> Back to featured
+            <ArrowLeft size={14} /> Back to Portfolio
           </a>
           <span className="hidden text-[10px] font-bold uppercase tracking-[0.25em] text-brand-gold sm:block">
             Metro / Featured Fitouts / {project.slug}
@@ -101,7 +110,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-end">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7 space-y-8">
             {/* Interactive Main Project Image */}
             <button
