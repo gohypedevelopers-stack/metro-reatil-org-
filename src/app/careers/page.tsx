@@ -118,7 +118,7 @@ export default function CareersPage() {
               <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Current openings will be announced soon.</h3>
               <p className="text-neutral-600">Until then, you can review the types of roles we usually hire for and send your CV for future consideration.</p>
             </div>
-            <a href="#apply" className="shrink-0 px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
+            <a href="#apply" className="shrink-0 px-8 py-3 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
               Apply Now
             </a>
           </div>
@@ -220,10 +220,10 @@ export default function CareersPage() {
             For project enquiries, book a site visit with our fitout and joinery specialists.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
+            <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
               WhatsApp Now
             </a>
-            <Link href="/contact" className="px-8 py-4 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-sm transition-colors border border-white/20">
+            <Link href="/contact" className="px-8 py-3 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-sm transition-colors border border-white/20">
               Book a Free Consultation
             </Link>
           </div>

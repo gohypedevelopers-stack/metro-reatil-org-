@@ -241,7 +241,7 @@ export default function AboutPage() {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center justify-center gap-4 md:gap-8 px-8 md:px-16 py-5 md:py-6 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.25em] md:tracking-[0.4em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
+            className="inline-flex items-center justify-center gap-3 md:gap-4 px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
           >
             Get in Touch <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </a>
