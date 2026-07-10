@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import { Mail, Phone, MapPin, Clock, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Instagram, Linkedin, Facebook, ChevronRight } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
 
 const CONTACT_INFO = [
   {
     title: "Headquarters",
-    details: ["Industrial Area 2,", "Sharjah, UAE"],
+    details: ["F-1, SITE-5 KASNA, E 147,", "Surajpur Site V, Greater Noida (U.P.)"],
     icon: MapPin,
-    link: null,
+    link: "https://www.google.com/maps/search/?api=1&query=F-1,+SITE-5+KASNA,+Greater+Noida,+Uttar+Pradesh+201312",
   },
   {
     title: "Call Us",
@@ -33,12 +33,12 @@ const CONTACT_INFO = [
 
 export default function ContactPage() {
   return (
-    <div className="bg-white pt-20">
+    <div className="bg-brand-dark pt-20">
 
       {/* Page Header */}
       <section className="py-16 md:py-24 bg-brand-dark border-b border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block">
               Get In Touch
             </span>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 Next Project
               </span>
             </h1>
-            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-xl">
+            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-xl mx-auto md:mx-0">
               Whether you have a specific project in mind or just want to learn more about our services, we are here to help.
             </p>
           </div>
@@ -63,15 +63,15 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 md:py-32">
+      <section className="pt-10 pb-20 md:py-32 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
 
             {/* Form Column */}
             <div className="lg:col-span-7">
-              <div className="bg-brand-dark p-8 md:p-12">
+              <div className="bg-brand-dark p-5 md:p-12">
                 <h2
-                  className="text-2xl md:text-3xl font-serif text-white mb-10 md:mb-16 uppercase tracking-tight"
+                  className="text-2xl md:text-3xl font-serif text-white mb-10 md:mb-16 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Send Us a Message
@@ -84,26 +84,26 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
 
               {/* Info Cards */}
-              <div className="bg-neutral-50 p-8 md:p-12 border border-neutral-100">
+              <div className="bg-neutral-50 px-4 py-8 md:p-12 border border-neutral-100">
                 <h2
-                  className="text-xl font-serif text-brand-dark mb-10 uppercase tracking-tight"
+                  className="text-xl font-serif text-brand-dark mb-10 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Contact Information
                 </h2>
-                <div className="space-y-10">
+                <div className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 md:gap-x-8 gap-y-6 lg:gap-y-0 lg:space-y-10">
                   {CONTACT_INFO.map((info, i) => {
                     const Inner = (
-                      <div className="flex gap-5 md:gap-8 group">
-                        <div className="w-11 h-11 bg-white border border-neutral-200 flex items-center justify-center shrink-0 group-hover:border-brand-gold group-hover:bg-brand-gold/5 transition-all duration-300">
-                          <info.icon size={18} className="text-brand-gold" />
+                      <div className="flex items-start text-left gap-2 md:gap-4 group">
+                        <div className="w-8 h-8 md:w-11 md:h-11 bg-white border border-neutral-200 flex items-center justify-center shrink-0 group-hover:border-brand-gold group-hover:bg-brand-gold/5 transition-all duration-300">
+                          <info.icon className="text-brand-gold w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
                         </div>
                         <div>
-                          <h4 className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-dark mb-2">
+                          <h4 className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-brand-dark mb-1 md:mb-2">
                             {info.title}
                           </h4>
                           {info.details.map((line, j) => (
-                            <p key={j} className="text-neutral-500 font-light text-sm leading-relaxed">{line}</p>
+                            <p key={j} className="text-neutral-500 font-light text-[9px] md:text-sm leading-relaxed">{line}</p>
                           ))}
                         </div>
                       </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
               </div>
 
               {/* Social Connect */}
-              <div className="p-8 md:p-12 bg-brand-dark text-white relative overflow-hidden">
+              <div className="px-4 py-8 md:p-12 bg-brand-dark text-white relative overflow-hidden text-center md:text-left flex flex-col items-center md:items-start">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-brand-gold/10 blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                 <h3
                   className="text-xl font-serif mb-4 uppercase tracking-tight"
@@ -129,7 +129,7 @@ export default function ContactPage() {
                 <p className="text-neutral-400 text-sm mb-8 leading-relaxed font-light">
                   Stay updated with our latest project deliveries, design innovations, and behind-the-scenes craftsmanship.
                 </p>
-                <div className="flex gap-3">
+                <div className="flex gap-3 justify-center md:justify-start">
                   {[
                     { Icon: Instagram, href: "#", label: "Instagram" },
                     { Icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -148,7 +148,7 @@ export default function ContactPage() {
               </div>
 
               {/* Quick note */}
-              <div className="border-l-2 border-brand-gold pl-6 py-1">
+              <div className="border-t-2 sm:border-t-0 sm:border-l-2 border-brand-gold pt-4 sm:pt-1 pl-0 sm:pl-6 text-center sm:text-left border-l-0 sm:border-l-2">
                 <p className="text-xs text-neutral-500 font-light leading-relaxed">
                   For urgent timelines or immediate discussions, please call us directly. Our project consultants are available during business hours.
                 </p>
@@ -159,18 +159,37 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="h-[360px] md:h-[500px] w-full bg-neutral-100 grayscale hover:grayscale-0 transition-all duration-1000 border-t border-neutral-200">
+      {/* Map Section with Floating Address Card */}
+      <section className="relative h-[450px] md:h-[550px] w-full border-t border-neutral-200">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.0143899753!2d55.263884843359375!3d25.320448000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5f5f5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sIndustrial%20Area%202%2C%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sae!4v1715690000000!5m2!1sen!2sae"
+          src="https://maps.google.com/maps?q=F-1,%20SITE-5%20KASNA,%20Greater%20Noida,%20Uttar%20Pradesh%20201312&t=&z=14&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"
+          className="grayscale hover:grayscale-0 transition-all duration-1000"
           referrerPolicy="no-referrer-when-downgrade"
           title="Metro Retail Solutions Office Location"
         />
+
+        {/* Floating Address Card - Top Right, Match Map light/gray theme */}
+        <div className="absolute top-2 right-2 left-2 md:left-auto md:top-4 md:right-4 md:bottom-auto bg-white/95 text-brand-dark p-6 md:p-8 max-w-sm border border-neutral-200 shadow-2xl backdrop-blur-md">
+          <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.3em] block mb-3">Our Workshop</span>
+          <h4 className="text-lg font-serif mb-2 uppercase tracking-wide text-brand-dark">Metro Retail Solutions</h4>
+          <p className="text-neutral-600 text-xs font-light leading-relaxed mb-6">
+            F-1, SITE-5 KASNA, E 147,<br />
+            Surajpur Site V, Greater Noida (U.P.)
+          </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=F-1,+SITE-5+KASNA,+Greater+Noida,+Uttar+Pradesh+201312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 w-full py-3 bg-brand-gold text-brand-dark text-[10px] font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all duration-500"
+          >
+            Get Directions <ChevronRight size={14} />
+          </a>
+        </div>
       </section>
 
     </div>
