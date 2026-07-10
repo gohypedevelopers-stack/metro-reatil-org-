@@ -74,7 +74,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
             <Magnetic>
-              <a href="/portfolio" className="px-8 md:px-12 py-5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
