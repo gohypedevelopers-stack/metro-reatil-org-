@@ -107,7 +107,7 @@ export default function SubcategoryDetailPage() {
 
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
+                className="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
               >
                 Request a Consultation <ChevronRight size={14} />
               </a>
