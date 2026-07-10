@@ -14,6 +14,34 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const activeImage = activeImageIndex === null ? null : project.gallery[activeImageIndex];
 
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      showNext();
+    }
+    if (isRightSwipe) {
+      showPrevious();
+    }
+  };
+
   const showPrevious = () => {
     setActiveImageIndex((current) => {
       if (current === null) return current;
@@ -260,6 +288,9 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             role="dialog"
             aria-modal="true"
             aria-label={`${project.name} image viewer`}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div className="absolute inset-0 opacity-25">
               <img src={activeImage} alt="" className="h-full w-full object-cover blur-sm" />
@@ -319,7 +350,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                   {activeImageIndex + 1} / {project.gallery.length}
                 </div>
 
-                <div className="mt-4 flex justify-center gap-2 overflow-x-auto px-2 pb-2">
+                <div className="mt-4 flex justify-center gap-2 overflow-x-auto px-2 pb-2" data-lenis-prevent>
                   {project.gallery.map((image, index) => (
                     <button
                       key={`${project.slug}-thumb-${index}`}
