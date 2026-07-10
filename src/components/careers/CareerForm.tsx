@@ -1,7 +1,95 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Upload, Check, Loader2, AlertCircle, ChevronDown } from 'lucide-react';
+
+const DEPARTMENT_OPTIONS = [
+  { value: "Design", label: "Design & 3D Art" },
+  { value: "Projects", label: "Project Management" },
+  { value: "Operations", label: "Site Operations" },
+  { value: "Carpentry", label: "Carpentry & Manufacturing" },
+  { value: "Engineering", label: "MEP & Engineering" },
+  { value: "Procurement", label: "Procurement & Estimation" },
+  { value: "Sales", label: "Sales & Client Relations" },
+  { value: "Admin", label: "Administration & Finance" },
+  { value: "Other", label: "Other (Please specify)" },
+];
+
+const EXPERIENCE_OPTIONS = [
+  { value: "Fresher", label: "Entry Level / Graduate" },
+  { value: "1-3 Years", label: "1 - 3 Years" },
+  { value: "3-5 Years", label: "3 - 5 Years" },
+  { value: "5+ Years", label: "5+ Years (Senior)" },
+];
+
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface CustomSelectProps {
+  value: string;
+  options: Option[];
+  onChange: (value: string) => void;
+  align?: "left" | "right";
+}
+
+function CustomSelect({
+  value,
+  options,
+  onChange,
+  align = "left",
+}: CustomSelectProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const currentLabel = options.find((opt) => opt.value === value)?.label || value;
+
+  return (
+    <div ref={containerRef} className="relative w-full">
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-full bg-neutral-900 border border-white/10 text-white py-2.5 pl-3 pr-8 outline-none transition-all text-xs md:text-sm font-light rounded-sm flex items-center justify-between cursor-pointer ${
+          isOpen ? "border-brand-gold" : "hover:border-white/20"
+        }`}
+      >
+        <span>{currentLabel}</span>
+        <ChevronDown size={15} strokeWidth={1.5} className="text-white/40" />
+      </div>
+
+      {isOpen && (
+        <div
+          className={`absolute mt-1 w-max min-w-full z-50 bg-[#0d0d0d] border border-white/10 text-white rounded-sm shadow-lg py-1.5 animate-in fade-in slide-in-from-top-1 duration-200 ${
+            align === "right" ? "right-0" : "left-0"
+          }`}
+        >
+          {options.map((opt) => (
+            <div
+              key={opt.value}
+              onClick={() => {
+                onChange(opt.value);
+                setIsOpen(false);
+              }}
+              className="px-4 py-2 text-[10px] md:text-xs font-light cursor-pointer hover:bg-white/5 text-neutral-300 hover:text-white transition-colors"
+            >
+              {opt.label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function CareerForm() {
   const [formData, setFormData] = useState({
@@ -179,15 +267,15 @@ export default function CareerForm() {
   }
 
   return (
-    <div className="bg-white/5 border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-md rounded-sm">
+    <div className="bg-white/5 border border-white/10 p-4 sm:p-8 lg:p-10 backdrop-blur-md rounded-sm">
       <h3 className="text-xl md:text-2xl font-serif text-brand-gold uppercase tracking-wider mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
         Submit Your Application
       </h3>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* Full Name */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Full Name *</label>
+        <div className="space-y-1.5 md:space-y-2">
+          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Full Name *</label>
           <input
             type="text"
             name="fullName"
@@ -195,14 +283,14 @@ export default function CareerForm() {
             value={formData.fullName}
             onChange={handleInputChange}
             placeholder="John Doe"
-            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm"
+            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm"
           />
         </div>
 
         {/* Email & Phone */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Email Address *</label>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-1.5 md:space-y-2">
+            <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Email *</label>
             <input
               type="email"
               name="email"
@@ -210,11 +298,11 @@ export default function CareerForm() {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="john@example.com"
-              className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm"
+              className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm"
             />
           </div>
-          <div className="space-y-2">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Phone Number *</label>
+          <div className="space-y-1.5 md:space-y-2">
+            <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Phone *</label>
             <input
               type="tel"
               name="phone"
@@ -222,102 +310,77 @@ export default function CareerForm() {
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="+971 XX XXX XXXX"
-              className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm"
+              className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm"
             />
           </div>
         </div>
 
         {/* Department & Experience */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Department / Role Area *</label>
-            <div className="relative w-full">
-              <select
-                name="department"
-                value={formData.department}
-                onChange={handleInputChange}
-                className="w-full bg-neutral-900 border border-white/10 text-white py-3 pl-4 pr-10 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
-              >
-                <option value="Design">Design & 3D Art</option>
-                <option value="Projects">Project Management</option>
-                <option value="Operations">Site Operations</option>
-                <option value="Carpentry">Carpentry & Manufacturing</option>
-                <option value="Engineering">MEP & Engineering</option>
-                <option value="Procurement">Procurement & Estimation</option>
-                <option value="Sales">Sales & Client Relations</option>
-                <option value="Admin">Administration & Finance</option>
-                <option value="Other">Other (Please specify)</option>
-              </select>
-              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
-                <ChevronDown size={16} strokeWidth={1.5} className="text-white/40" />
-              </div>
-            </div>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-1.5 md:space-y-2">
+            <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Department *</label>
+            <CustomSelect
+              value={formData.department}
+              options={DEPARTMENT_OPTIONS}
+              onChange={(val) => setFormData((prev) => ({ ...prev, department: val }))}
+              align="left"
+            />
 
             {formData.department === 'Other' && (
-              <div className="space-y-2 mt-4">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Specify Department *</label>
+              <div className="space-y-1.5 md:space-y-2 mt-4">
+                <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Specify Department *</label>
                 <input
                   type="text"
                   name="customDepartment"
                   required
                   value={customDepartment}
                   onChange={(e) => setCustomDepartment(e.target.value)}
-                  placeholder="e.g. Graphic Designer, IT Support"
-                  className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm animate-in fade-in slide-in-from-top-2 duration-300"
+                  placeholder="e.g. Designer"
+                  className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm animate-in fade-in slide-in-from-top-2 duration-300"
                 />
               </div>
             )}
           </div>
-          <div className="space-y-2">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Experience Level *</label>
-            <div className="relative w-full">
-              <select
-                name="experience"
-                value={formData.experience}
-                onChange={handleInputChange}
-                className="w-full bg-neutral-900 border border-white/10 text-white py-3 pl-4 pr-10 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
-              >
-                <option value="Fresher">Entry Level / Graduate</option>
-                <option value="1-3 Years">1 - 3 Years</option>
-                <option value="3-5 Years">3 - 5 Years</option>
-                <option value="5+ Years">5+ Years (Senior)</option>
-              </select>
-              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
-                <ChevronDown size={16} strokeWidth={1.5} className="text-white/40" />
-              </div>
-            </div>
+          <div className="space-y-1.5 md:space-y-2">
+            <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Experience *</label>
+            <CustomSelect
+              value={formData.experience}
+              options={EXPERIENCE_OPTIONS}
+              onChange={(val) => setFormData((prev) => ({ ...prev, experience: val }))}
+              align="right"
+            />
           </div>
         </div>
 
         {/* Portfolio URL */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Portfolio Link (Optional)</label>
+        <div className="space-y-1.5 md:space-y-2">
+          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Portfolio Link (Optional)</label>
           <input
             type="url"
             name="portfolioUrl"
             value={formData.portfolioUrl}
             onChange={handleInputChange}
             placeholder="https://behance.net/username or Google Drive link"
-            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm"
+            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm"
           />
         </div>
 
         {/* Cover Letter */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Brief Introduction / Message</label>
+        <div className="space-y-1.5 md:space-y-2">
+          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Brief Introduction / Message</label>
           <textarea
             name="coverLetter"
             rows={4}
             value={formData.coverLetter}
             onChange={handleInputChange}
-            placeholder="Tell us a little bit about yourself and why you'd like to join Metro..."
-            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-3 px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-sm font-light rounded-sm resize-none"
+            placeholder="Tell us a little bit about yourself..."
+            className="w-full bg-white/5 border border-white/10 text-white placeholder-neutral-500 py-2.5 px-3 md:py-3 md:px-4 outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-xs md:text-sm font-light rounded-sm resize-none h-20 md:h-32"
           />
         </div>
 
         {/* File Drag and Drop Zone */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Attach CV / Resume *</label>
+        <div className="space-y-1.5 md:space-y-2">
+          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider md:tracking-widest text-neutral-400">Attach CV / Resume *</label>
           <div
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
@@ -371,7 +434,7 @@ export default function CareerForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 bg-brand-gold hover:bg-yellow-600 disabled:bg-neutral-700 text-white text-[10px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-3 rounded-sm"
+          className="w-full py-3 bg-brand-gold hover:bg-yellow-600 disabled:bg-neutral-700 text-white text-[10px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-3 rounded-sm"
         >
           {isSubmitting ? (
             <>
