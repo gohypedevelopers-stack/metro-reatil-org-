@@ -93,7 +93,8 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 Click to Expand Detailed View ⤢
               </div>
             </button>
-
+          </div>
+          <div className="lg:col-span-5 space-y-6">
             <div>
               <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold">
                 {project.category}
@@ -105,8 +106,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 {project.name}
               </h1>
             </div>
-          </div>
-          <div className="lg:col-span-5 space-y-6">
+            
             <p
               className="mb-5 text-lg font-light italic leading-relaxed text-neutral-500"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -178,25 +178,34 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {project.gallery.map((image, index) => (
-              <button
-                key={`${project.slug}-gallery-${index}`}
-                type="button"
-                onClick={() => setActiveImageIndex(index)}
-                className="group relative aspect-[4/3] overflow-hidden bg-neutral-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
-              >
-                <img
-                  src={image}
-                  alt={`${project.name} view ${index + 1}`}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <span className="absolute bottom-3 left-3 bg-white/95 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.3em] text-brand-dark shadow-sm">
-                  View {String(index + 1).padStart(2, '0')}
-                </span>
-              </button>
-            ))}
-          </div>
+          {project.gallery && project.gallery.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {project.gallery.map((image, index) => (
+                <button
+                  key={`${project.slug}-gallery-${index}`}
+                  type="button"
+                  onClick={() => setActiveImageIndex(index)}
+                  className="group relative aspect-[4/3] overflow-hidden bg-neutral-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                >
+                  <img
+                    src={image}
+                    alt={`${project.name} view ${index + 1}`}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute bottom-3 left-3 bg-white/95 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.3em] text-brand-dark shadow-sm">
+                    View {String(index + 1).padStart(2, '0')}
+                  </span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="flex w-full flex-col items-center justify-center rounded-sm border border-dashed border-neutral-300 bg-neutral-100/50 py-24 text-center">
+              <span className="mb-2 text-2xl">📸</span>
+              <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+                No Gallery Images Uploaded
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

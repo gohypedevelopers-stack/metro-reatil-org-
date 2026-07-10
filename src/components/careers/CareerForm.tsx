@@ -99,9 +99,44 @@ export default function CareerForm() {
 
     // Simulate API call to submit the form
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      // Reset form
+      const formId = process.env.NEXT_PUBLIC_WP_CAREER_FORM_ID;
+      const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL?.replace('/graphql', '');
+      
+      if (!formId || !apiUrl) {
+        console.warn("Career form ID or API URL is missing in environment variables.");
+        // Fallback for development if env variables are not set yet
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        setSubmitStatus('success');
+      } else {
+        const submitData = new FormData();
+        submitData.append("_wpcf7_unit_tag", `wpcf7-f${formId}-p1-o1`);
+        submitData.append("fullName", formData.fullName);
+        submitData.append("emailAddress", formData.email);
+        submitData.append("phoneNumber", formData.phone);
+        submitData.append("department", formData.department === 'Other' ? customDepartment : formData.department);
+        submitData.append("experience", formData.experience);
+        submitData.append("portfolioUrl", formData.portfolioUrl);
+        submitData.append("coverLetter", formData.coverLetter);
+        submitData.append("cv", file);
+
+        const res = await fetch(`${apiUrl}/wp-json/contact-form-7/v1/contact-forms/${formId}/feedback`, {
+          method: "POST",
+          body: submitData,
+        });
+
+        const data = await res.json();
+        
+        if (data.status === "mail_sent" || res.ok) {
+          setSubmitStatus('success');
+        } else {
+          console.error("Form submission error:", data);
+          setSubmitStatus('error');
+          setErrorMessage(data.message || 'Something went wrong. Please try again.');
+          return;
+        }
+      }
+
+      // Reset form on success
       setFormData({
         fullName: '',
         email: '',

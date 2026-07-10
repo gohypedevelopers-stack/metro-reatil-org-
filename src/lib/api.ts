@@ -21,8 +21,8 @@ export async function fetchAPI(
         query,
         variables,
       }),
-      // Revalidate cache every hour, or adjust as needed
-      next: { revalidate: 3600 },
+      // Revalidate cache every hour, or adjust as needed (set to 0 for development)
+      next: { revalidate: 0 },
     });
 
     const json = await res.json();
