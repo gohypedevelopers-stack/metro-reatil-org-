@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ChevronRight, Messa
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-dark text-white py-16 md:py-24 lg:py-32 border-t border-white/5">
+    <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 mb-16 md:mb-24 lg:mb-32">
           
@@ -72,9 +72,14 @@ const Footer = () => {
             <ul className="space-y-5">
               <li className="flex items-start gap-3 group">
                 <MapPin size={15} className="text-brand-gold shrink-0 mt-0.5" />
-                <span className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest leading-relaxed">
-                  Metro Hub, <br />Dubai, UAE
-                </span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=F-1,+SITE-5+KASNA,+Greater+Noida,+Uttar+Pradesh+201312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest leading-relaxed hover:text-white transition-colors"
+                >
+                  F-1, SITE-5 KASNA, <br />Greater Noida (U.P.)
+                </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone size={15} className="text-brand-gold shrink-0" />
@@ -93,7 +98,7 @@ const Footer = () => {
                   href="https://wa.me/919999999999"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-brand-gold text-brand-gold text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-brand-gold text-brand-gold text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 whitespace-nowrap"
                 >
                   <MessageCircle size={12} /> WhatsApp Us
                 </a>
