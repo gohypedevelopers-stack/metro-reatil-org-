@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { fetchAPI } from '../../lib/api';
 import { GET_ALL_PROJECTS_QUERY, mapWordPressProjectToFitout } from '../../lib/queries';
 import { featuredFitouts, FeaturedFitout } from '../../data/featuredFitouts';
@@ -11,7 +12,10 @@ export default async function PortfolioPage() {
     const nodes = data?.projects?.nodes;
 
     if (nodes && nodes.length > 0) {
-      projects = nodes.map(mapWordPressProjectToFitout);
+      const wpProjects = nodes.map(mapWordPressProjectToFitout);
+      const wpSlugs = new Set(wpProjects.map(p => p.slug.toLowerCase()));
+      const filteredStatic = featuredFitouts.filter(p => !wpSlugs.has(p.slug.toLowerCase()));
+      projects = [...wpProjects, ...filteredStatic];
     } else {
       // Fallback if WordPress projects are not found or setup is incomplete
       console.log("No projects found from WordPress API. Falling back to static data.");
@@ -23,6 +27,8 @@ export default async function PortfolioPage() {
   }
 
   return (
-    <PortfolioClient initialProjects={projects} />
+    <Suspense fallback={<div className="min-h-screen bg-brand-dark pt-32 text-center text-white">Loading...</div>}>
+      <PortfolioClient initialProjects={projects} />
+    </Suspense>
   );
 }
