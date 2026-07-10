@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import type { FeaturedFitout } from '../../data/featuredFitouts';
 
@@ -24,6 +24,52 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
   const router = useRouter();
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const [isNavigatingBack, setIsNavigatingBack] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el || !project.gallery || project.gallery.length <= 1) return;
+
+    let intervalId: NodeJS.Timeout;
+
+    const startAutoScroll = () => {
+      intervalId = setInterval(() => {
+        const cardButton = el.querySelector('button');
+        const cardWidth = cardButton ? cardButton.clientWidth : (el.clientWidth * 0.3);
+        const gap = 12; // gap-3 = 12px
+        const scrollStep = cardWidth + gap;
+        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+
+        if (el.scrollLeft >= maxScrollLeft - 15) {
+          el.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          el.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        }
+      }, 3500);
+    };
+
+    startAutoScroll();
+
+    const pauseScroll = () => clearInterval(intervalId);
+    const resumeScroll = () => {
+      clearInterval(intervalId);
+      startAutoScroll();
+    };
+
+    el.addEventListener('mouseenter', pauseScroll);
+    el.addEventListener('mouseleave', resumeScroll);
+    el.addEventListener('touchstart', pauseScroll, { passive: true });
+    el.addEventListener('touchend', resumeScroll, { passive: true });
+
+    return () => {
+      clearInterval(intervalId);
+      el.removeEventListener('mouseenter', pauseScroll);
+      el.removeEventListener('mouseleave', resumeScroll);
+      el.removeEventListener('touchstart', pauseScroll);
+      el.removeEventListener('touchend', resumeScroll);
+    };
+  }, [project.gallery]);
+
   const activeImage = activeImageIndex === null ? null : project.gallery[activeImageIndex];
 
   const handleBackClick = () => {
@@ -246,24 +292,25 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
         </div>
       </section>
 
-      <section className="bg-neutral-50/60 py-12 md:py-16">
+      <section className="bg-neutral-50/60 py-6 md:py-10">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-          <div className="mb-4 flex flex-col items-center justify-between gap-3 border-b border-neutral-200 pb-4 md:flex-row md:items-end md:text-left">
+          <div className="mb-2 flex flex-col items-center justify-between gap-2 border-b border-neutral-200 pb-2 md:flex-row md:items-end md:text-left">
             <div className="text-center md:text-left">
-              <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-400">
+              <span className="mb-1 block text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-400">
                 Project Photos
               </span>
               <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
                 Detailed Views
               </h2>
             </div>
-            <p className="whitespace-nowrap text-sm font-light leading-relaxed text-neutral-500 text-center md:text-left">
+            <p className="whitespace-nowrap text-[10px] sm:text-sm font-light leading-relaxed text-neutral-500 text-center md:text-left">
               Swipe through project images or open the full gallery.
             </p>
           </div>
 
           {project.gallery && project.gallery.length > 0 ? (
             <div
+              ref={carouselRef}
               className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
@@ -280,9 +327,6 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition-colors duration-300" />
-                  <span className="absolute bottom-3 left-3 bg-white/95 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.3em] text-brand-dark shadow-sm">
-                    View {String(index + 1).padStart(2, '0')}
-                  </span>
                 </button>
               ))}
             </div>
@@ -297,7 +341,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
           {/* View All button — below carousel */}
           {project.gallery && project.gallery.length > 0 && (
-            <div className="mt-6 flex justify-center">
+            <div className="mt-3 flex justify-center">
               <button
                 type="button"
                 onClick={() => setActiveImageIndex(0)}
