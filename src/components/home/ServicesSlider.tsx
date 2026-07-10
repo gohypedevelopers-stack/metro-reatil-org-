@@ -6,6 +6,33 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const ServicesSlider = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      setActiveTab((prev) => (prev + 1) % services.length);
+    }
+    if (isRightSwipe) {
+      setActiveTab((prev) => (prev - 1 + services.length) % services.length);
+    }
+  };
   
   const services = [
     {
@@ -61,39 +88,46 @@ const ServicesSlider = () => {
           ))}
         </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
-          >
-            <div className="aspect-[16/10] overflow-hidden rounded-sm shadow-2xl">
-              <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
-            </div>
-            <div className="lg:pl-10">
-              <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-6 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                {services[activeTab].title}
-              </h3>
-              <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12">
-                {services[activeTab].desc}
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-                {services[activeTab].features.map((f, j) => (
-                  <li key={j} className="flex items-center gap-4 text-brand-dark text-xs font-bold uppercase tracking-widest">
-                    <CheckCircle size={16} className="text-brand-gold" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a href={services[activeTab].link} className="inline-flex items-center gap-4 px-8 py-3 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
-                Learn More <ArrowRight size={14} />
-              </a>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          className="touch-pan-y"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+            >
+              <div className="aspect-[16/10] overflow-hidden rounded-sm shadow-2xl">
+                <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
+              </div>
+              <div className="lg:pl-10">
+                <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-6 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                  {services[activeTab].title}
+                </h3>
+                <p className="text-neutral-500 text-lg font-light leading-relaxed mb-12">
+                  {services[activeTab].desc}
+                </p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                  {services[activeTab].features.map((f, j) => (
+                    <li key={j} className="flex items-center gap-4 text-brand-dark text-xs font-bold uppercase tracking-widest">
+                      <CheckCircle size={16} className="text-brand-gold" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a href={services[activeTab].link} className="inline-flex items-center gap-4 px-8 py-3 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+                  Learn More <ArrowRight size={14} />
+                </a>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );
