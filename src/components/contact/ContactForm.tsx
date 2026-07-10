@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
-import { CheckCircle, ChevronRight, Loader2 } from "lucide-react";
+import { CheckCircle, ChevronRight, Loader2, ChevronDown } from "lucide-react";
 
 const SERVICE_OPTIONS = [
   "Retail Fitout",
@@ -230,38 +230,48 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       {/* Row 3 - Service & Budget */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
         <InputField label="Service Required" id="service" dark={dark}>
-          <select
-            id="service"
-            name="service"
-            value={form.service}
-            onChange={handleChange}
-            onFocus={() => setFocused("service")}
-            onBlur={() => setFocused(null)}
-            className={`${inputClass("service")} appearance-none cursor-pointer`}
-            style={{ colorScheme: dark ? "dark" : "light" }}
-          >
-            <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select a service.</option>
-            {SERVICE_OPTIONS.map((opt) => (
-              <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
-            ))}
-          </select>
+          <div className="relative w-full">
+            <select
+              id="service"
+              name="service"
+              value={form.service}
+              onChange={handleChange}
+              onFocus={() => setFocused("service")}
+              onBlur={() => setFocused(null)}
+              className={`${inputClass("service")} appearance-none cursor-pointer pr-8`}
+              style={{ colorScheme: dark ? "dark" : "light" }}
+            >
+              <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select a service.</option>
+              {SERVICE_OPTIONS.map((opt) => (
+                <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 flex items-center pr-1">
+              <ChevronDown size={18} strokeWidth={1.5} className={dark ? "text-white/40" : "text-neutral-400"} />
+            </div>
+          </div>
         </InputField>
         <InputField label="Estimated Budget" id="budget" dark={dark}>
-          <select
-            id="budget"
-            name="budget"
-            value={form.budget}
-            onChange={handleChange}
-            onFocus={() => setFocused("budget")}
-            onBlur={() => setFocused(null)}
-            className={`${inputClass("budget")} appearance-none cursor-pointer`}
-            style={{ colorScheme: dark ? "dark" : "light" }}
-          >
-            <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select budget range.</option>
-            {BUDGET_OPTIONS.map((opt) => (
-              <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
-            ))}
-          </select>
+          <div className="relative w-full">
+            <select
+              id="budget"
+              name="budget"
+              value={form.budget}
+              onChange={handleChange}
+              onFocus={() => setFocused("budget")}
+              onBlur={() => setFocused(null)}
+              className={`${inputClass("budget")} appearance-none cursor-pointer pr-8`}
+              style={{ colorScheme: dark ? "dark" : "light" }}
+            >
+              <option value="" style={{ background: dark ? "#0a0a0a" : "#fff" }}>Select budget range.</option>
+              {BUDGET_OPTIONS.map((opt) => (
+                <option key={opt} value={opt} style={{ background: dark ? "#0a0a0a" : "#fff" }}>{opt}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 flex items-center pr-1">
+              <ChevronDown size={18} strokeWidth={1.5} className={dark ? "text-white/40" : "text-neutral-400"} />
+            </div>
+          </div>
         </InputField>
       </div>
 

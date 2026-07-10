@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { Upload, Check, Loader2, AlertCircle } from 'lucide-react';
+import { Upload, Check, Loader2, AlertCircle, ChevronDown } from 'lucide-react';
 
 export default function CareerForm() {
   const [formData, setFormData] = useState({
@@ -196,22 +196,27 @@ export default function CareerForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Department / Role Area *</label>
-            <select
-              name="department"
-              value={formData.department}
-              onChange={handleInputChange}
-              className="w-full bg-neutral-900 border border-white/10 text-white py-3 px-4 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
-            >
-              <option value="Design">Design & 3D Art</option>
-              <option value="Projects">Project Management</option>
-              <option value="Operations">Site Operations</option>
-              <option value="Carpentry">Carpentry & Manufacturing</option>
-              <option value="Engineering">MEP & Engineering</option>
-              <option value="Procurement">Procurement & Estimation</option>
-              <option value="Sales">Sales & Client Relations</option>
-              <option value="Admin">Administration & Finance</option>
-              <option value="Other">Other (Please specify)</option>
-            </select>
+            <div className="relative w-full">
+              <select
+                name="department"
+                value={formData.department}
+                onChange={handleInputChange}
+                className="w-full bg-neutral-900 border border-white/10 text-white py-3 pl-4 pr-10 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
+              >
+                <option value="Design">Design & 3D Art</option>
+                <option value="Projects">Project Management</option>
+                <option value="Operations">Site Operations</option>
+                <option value="Carpentry">Carpentry & Manufacturing</option>
+                <option value="Engineering">MEP & Engineering</option>
+                <option value="Procurement">Procurement & Estimation</option>
+                <option value="Sales">Sales & Client Relations</option>
+                <option value="Admin">Administration & Finance</option>
+                <option value="Other">Other (Please specify)</option>
+              </select>
+              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+                <ChevronDown size={16} strokeWidth={1.5} className="text-white/40" />
+              </div>
+            </div>
 
             {formData.department === 'Other' && (
               <div className="space-y-2 mt-4">
@@ -230,17 +235,22 @@ export default function CareerForm() {
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Experience Level *</label>
-            <select
-              name="experience"
-              value={formData.experience}
-              onChange={handleInputChange}
-              className="w-full bg-neutral-900 border border-white/10 text-white py-3 px-4 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
-            >
-              <option value="Fresher">Entry Level / Graduate</option>
-              <option value="1-3 Years">1 - 3 Years</option>
-              <option value="3-5 Years">3 - 5 Years</option>
-              <option value="5+ Years">5+ Years (Senior)</option>
-            </select>
+            <div className="relative w-full">
+              <select
+                name="experience"
+                value={formData.experience}
+                onChange={handleInputChange}
+                className="w-full bg-neutral-900 border border-white/10 text-white py-3 pl-4 pr-10 outline-none focus:border-brand-gold transition-all text-sm font-light rounded-sm appearance-none cursor-pointer"
+              >
+                <option value="Fresher">Entry Level / Graduate</option>
+                <option value="1-3 Years">1 - 3 Years</option>
+                <option value="3-5 Years">3 - 5 Years</option>
+                <option value="5+ Years">5+ Years (Senior)</option>
+              </select>
+              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+                <ChevronDown size={16} strokeWidth={1.5} className="text-white/40" />
+              </div>
+            </div>
           </div>
         </div>
 
