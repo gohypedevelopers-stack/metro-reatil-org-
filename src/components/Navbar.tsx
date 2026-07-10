@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 
 const MOBILE_NAV_LINKS = [
@@ -14,34 +14,34 @@ const MOBILE_NAV_LINKS = [
 ];
 
 const RESIDENTIAL_LINKS = [
-  { name: 'OVERVIEW', href: '#' },
-  { name: 'LIVING & DINING', href: '#' },
-  { name: 'BEDROOMS', href: '#' },
-  { name: 'KITCHENS', href: '#' },
-  { name: 'BATHROOMS', href: '#' },
-  { name: 'WALK-IN WARDROBES', href: '#' },
-  { name: 'VANITIES', href: '#' },
-  { name: 'BAR UNITS', href: '#' },
-  { name: 'HOME OFFICE', href: '#' },
-  { name: 'FAMILY LOUNGE / MAJLIS', href: '#' },
-  { name: 'KIDS ROOMS', href: '#' },
-  { name: 'OUTDOOR LIVING', href: '#' }
+  { name: 'OVERVIEW', href: '/portfolio?filter=Residential' },
+  { name: 'LIVING & DINING', href: '/portfolio?filter=Residential&subFilter=LIVING%20%26%20DINING' },
+  { name: 'BEDROOMS', href: '/portfolio?filter=Residential&subFilter=BEDROOMS' },
+  { name: 'KITCHENS', href: '/portfolio?filter=Residential&subFilter=KITCHENS' },
+  { name: 'BATHROOMS', href: '/portfolio?filter=Residential&subFilter=BATHROOMS' },
+  { name: 'WALK-IN WARDROBES', href: '/portfolio?filter=Residential&subFilter=WALK-IN%20WARDROBES' },
+  { name: 'VANITIES', href: '/portfolio?filter=Residential&subFilter=VANITIES' },
+  { name: 'BAR UNITS', href: '/portfolio?filter=Residential&subFilter=BAR%20UNITS' },
+  { name: 'HOME OFFICE', href: '/portfolio?filter=Residential&subFilter=HOME%20OFFICE' },
+  { name: 'FAMILY LOUNGE / MAJLIS', href: '/portfolio?filter=Residential&subFilter=FAMILY%20LOUNGE%20%2F%20MAJLIS' },
+  { name: 'KIDS ROOMS', href: '/portfolio?filter=Residential&subFilter=KIDS%20ROOMS' },
+  { name: 'OUTDOOR LIVING', href: '/portfolio?filter=Residential&subFilter=OUTDOOR%20LIVING' }
 ];
 
 const COMMERCIAL_LINKS = [
-  { name: 'OVERVIEW', href: '#' },
-  { name: 'OFFICES', href: '#' },
-  { name: 'CLINICS', href: '#' },
-  { name: 'GYMS', href: '#' },
-  { name: 'SALONS', href: '#' }
+  { name: 'OVERVIEW', href: '/portfolio?filter=Commercial' },
+  { name: 'OFFICES', href: '/portfolio?filter=Commercial&subFilter=OFFICES' },
+  { name: 'CLINICS', href: '/portfolio?filter=Commercial&subFilter=CLINICS' },
+  { name: 'GYMS', href: '/portfolio?filter=Commercial&subFilter=GYMS' },
+  { name: 'SALONS', href: '/portfolio?filter=Commercial&subFilter=SALONS' }
 ];
 
 const RETAIL_LINKS = [
-  { name: 'OVERVIEW', href: '#' },
-  { name: 'KIOSKS', href: '#' },
-  { name: 'F & B', href: '#' },
-  { name: 'CAFES', href: '#' },
-  { name: 'RESTAURANTS', href: '#' }
+  { name: 'OVERVIEW', href: '/portfolio?filter=Retail' },
+  { name: 'KIOSKS', href: '/portfolio?filter=Retail&subFilter=KIOSKS' },
+  { name: 'F & B', href: '/portfolio?filter=Retail&subFilter=F%20%26%20B' },
+  { name: 'CAFES', href: '/portfolio?filter=Retail&subFilter=CAFES' },
+  { name: 'RESTAURANTS', href: '/portfolio?filter=Retail&subFilter=RESTAURANTS' }
 ];
 
 const SERVICES_LINKS = [
