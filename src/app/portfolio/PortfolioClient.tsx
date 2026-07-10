@@ -222,6 +222,22 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
   const [filter, setFilter] = useState("All");
   const [subFilter, setSubFilter] = useState("OVERVIEW");
 
+  const scrollToFilterSection = () => {
+    if (typeof window !== 'undefined') {
+      const element = document.getElementById('filter-section');
+      if (element) {
+        const navbarHeight = 100; // Offset for fixed navbar + breathing room
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   const handleFilterChange = (cat: string) => {
     setFilter(cat);
     setSubFilter("OVERVIEW");
@@ -236,6 +252,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       params.delete("subFilter");
       const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
       window.history.pushState({}, '', newUrl);
+      scrollToFilterSection();
     }
   };
 
@@ -251,6 +268,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       }
       const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
       window.history.pushState({}, '', newUrl);
+      scrollToFilterSection();
     }
   };
 
@@ -285,22 +303,8 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
   // Scroll to filter section when filter changes from the URL (navbar navigation)
   useEffect(() => {
     if (filterParam && filterParam.toLowerCase() !== 'all') {
-      const scrollToSection = () => {
-        const element = document.getElementById('filter-section');
-        if (element) {
-          const navbarHeight = 100; // Offset for fixed navbar + breathing room
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      };
-
       // Try scrolling after a short delay to allow layout and lenis to settle
-      const timer = setTimeout(scrollToSection, 400);
+      const timer = setTimeout(scrollToFilterSection, 400);
       return () => clearTimeout(timer);
     }
   }, [filterParam, subFilterParam]);
