@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import type { FeaturedFitout } from '../../data/featuredFitouts';
 
 type FeaturedFitoutDetailProps = {
@@ -20,8 +21,19 @@ const getCategoryFilter = (category: string): string => {
 };
 
 const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDetailProps) => {
+  const router = useRouter();
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+  const [isNavigatingBack, setIsNavigatingBack] = useState(false);
   const activeImage = activeImageIndex === null ? null : project.gallery[activeImageIndex];
+
+  const handleBackClick = () => {
+    const targetUrl = `/portfolio?filter=${getCategoryFilter(project.category)}#filter-section`;
+    setIsNavigatingBack(true);
+    // Let the fade-out animation play (350ms), then navigate
+    setTimeout(() => {
+      router.push(targetUrl);
+    }, 350);
+  };
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -94,24 +106,55 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
   }, [activeImageIndex, project.gallery.length]);
 
   return (
-    <main className="bg-white pt-20">
-      <section className="border-b border-neutral-100 bg-neutral-50 py-8">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 px-6 md:px-12">
-          <a
-            href={`/portfolio?filter=${getCategoryFilter(project.category)}#filter-section`}
+    <motion.main
+      className="bg-white pt-14"
+      animate={{ opacity: isNavigatingBack ? 0 : 1 }}
+      transition={{ duration: 0.35, ease: 'easeInOut' }}
+    >
+      {/* Desktop-only breadcrumb bar */}
+      <section className="hidden lg:flex border-b border-neutral-100 bg-neutral-50 py-3">
+        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-6 md:px-12">
+          <button
+            onClick={handleBackClick}
             className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-neutral-400 transition-colors hover:text-brand-dark"
           >
             <ArrowLeft size={14} /> Back to Portfolio
-          </a>
+          </button>
           <span className="hidden text-[10px] font-bold uppercase tracking-[0.25em] text-brand-gold sm:block">
             Metro / Featured Fitouts / {project.slug}
           </span>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="pb-8 md:pb-12">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
-          <div className="lg:col-span-7 space-y-8">
+
+          {/* ── Mobile-only Title + Back Button (shows above image on mobile) ── */}
+          <div className="block lg:hidden pt-5 space-y-4">
+            {/* Back button — left aligned */}
+            <div className="text-left">
+              <button
+                onClick={handleBackClick}
+                className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 hover:text-brand-dark transition-colors"
+              >
+                <ArrowLeft size={12} /> Back to Portfolio
+              </button>
+            </div>
+            {/* Category + Title — centered */}
+            <div className="text-center">
+              <span className="block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-2">
+                {project.category}
+              </span>
+              <h1
+                className="text-4xl font-serif uppercase leading-tight tracking-tight text-brand-dark"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {project.name}
+              </h1>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 lg:sticky lg:top-[84px] lg:self-start space-y-8">
             {/* Interactive Main Project Image */}
             <button
               type="button"
@@ -131,8 +174,9 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               </div>
             </button>
           </div>
-          <div className="lg:col-span-5 space-y-6">
-            <div>
+          <div className="lg:col-span-5 space-y-6 pt-0 md:pt-0 lg:pt-8 xl:pt-12 text-center lg:text-left">
+            {/* Desktop-only title (hidden on mobile, shown on lg+) */}
+            <div className="hidden lg:block">
               <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold">
                 {project.category}
               </span>
@@ -150,7 +194,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             >
               {project.intro}
             </p>
-            <div className="mb-5 h-[2px] w-16 bg-brand-gold" />
+            <div className="mb-5 h-[2px] w-16 bg-brand-gold mx-auto lg:mx-0" />
             <p className="text-sm font-light leading-relaxed text-neutral-500 md:text-base">
               {project.description}
             </p>
@@ -158,14 +202,16 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             {/* Turnkey Fit-out Execution Specifications Card */}
             {(project.executionTime || project.scopeOfWork) && (
               <div className="bg-neutral-50 border border-neutral-100 p-6 rounded-sm mt-8 space-y-5">
-                <div className="flex items-center gap-2 pb-3 border-b border-neutral-200">
+                {/* Header */}
+                <div className="flex items-center justify-center lg:justify-start gap-2 pb-3 border-b border-neutral-200">
                   <span className="w-1.5 h-6 bg-brand-gold rounded-sm animate-pulse" />
                   <h3 className="text-xs font-bold uppercase tracking-widest text-brand-dark">
                     Turnkey Execution Specs
                   </h3>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 text-left">
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-4 text-center lg:text-left">
                   {project.executionTime && (
                     <div>
                       <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">Timeframe</span>
@@ -180,13 +226,14 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                   )}
                 </div>
 
+                {/* Scope list */}
                 {project.scopeOfWork && (
                   <div>
-                    <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-2.5">Scope of Execution Works</span>
+                    <span className="text-[8px] font-bold uppercase tracking-widest text-neutral-400 block mb-2.5 text-center lg:text-left">Scope of Execution Works</span>
                     <ul className="space-y-2">
                       {project.scopeOfWork.map((scope, sIdx) => (
-                        <li key={sIdx} className="flex items-center gap-2.5 text-xs text-neutral-600">
-                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full" />
+                        <li key={sIdx} className="flex items-center justify-center lg:justify-start gap-2.5 text-xs text-neutral-600">
+                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full shrink-0" />
                           <span>{scope}</span>
                         </li>
                       ))}
@@ -201,8 +248,8 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
       <section className="bg-neutral-50/60 py-12 md:py-16">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-          <div className="mb-8 flex flex-col justify-between gap-4 border-b border-neutral-200 pb-6 md:flex-row md:items-end">
-            <div>
+          <div className="mb-4 flex flex-col items-center justify-between gap-3 border-b border-neutral-200 pb-4 md:flex-row md:items-end md:text-left">
+            <div className="text-center md:text-left">
               <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-400">
                 Project Photos
               </span>
@@ -210,25 +257,29 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 Detailed Views
               </h2>
             </div>
-            <p className="max-w-xl text-sm font-light leading-relaxed text-neutral-500">
-              Select any project image to view it in a focused gallery with navigation and thumbnails.
+            <p className="whitespace-nowrap text-sm font-light leading-relaxed text-neutral-500 text-center md:text-left">
+              Swipe through project images or open the full gallery.
             </p>
           </div>
 
           {project.gallery && project.gallery.length > 0 ? (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {project.gallery.map((image, index) => (
                 <button
                   key={`${project.slug}-gallery-${index}`}
                   type="button"
                   onClick={() => setActiveImageIndex(index)}
-                  className="group relative aspect-[4/3] overflow-hidden bg-neutral-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                  className="group relative shrink-0 w-[75vw] sm:w-[45vw] md:w-[32vw] lg:w-[28vw] xl:w-[22vw] aspect-[4/3] overflow-hidden bg-neutral-200 snap-start outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                 >
                   <img
                     src={image}
                     alt={`${project.name} view ${index + 1}`}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition-colors duration-300" />
                   <span className="absolute bottom-3 left-3 bg-white/95 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.3em] text-brand-dark shadow-sm">
                     View {String(index + 1).padStart(2, '0')}
                   </span>
@@ -241,6 +292,19 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">
                 No Gallery Images Uploaded
               </p>
+            </div>
+          )}
+
+          {/* View All button — below carousel */}
+          {project.gallery && project.gallery.length > 0 && (
+            <div className="mt-6 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setActiveImageIndex(0)}
+                className="inline-flex items-center gap-2 border border-brand-dark px-6 py-2.5 text-[9px] font-bold uppercase tracking-widest text-brand-dark transition-all hover:bg-brand-dark hover:text-white"
+              >
+                View All ({project.gallery.length})
+              </button>
             </div>
           )}
         </div>
@@ -378,7 +442,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
           </motion.div>
         )}
       </AnimatePresence>
-    </main>
+    </motion.main>
   );
 };
 
