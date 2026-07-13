@@ -276,24 +276,24 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Hover Content */}
-                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
-                  <p className="text-white text-base md:text-lg font-medium mb-4 leading-snug">
+                <div className="absolute inset-x-0 top-0 bottom-[72px] p-5 md:p-6 flex flex-col justify-end translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
+                  <p className="text-neutral-200 text-[13px] md:text-sm font-light mb-3 leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-12">
+                  <div className="flex flex-wrap gap-1.5">
                     {service.tags.map((tag, i) => (
-                      <span key={i} className="px-3 py-1.5 border border-white/40 bg-black/40 text-white text-[11px] md:text-xs font-bold tracking-wide">
+                      <span key={i} className="px-2 py-1 border border-white/20 bg-black/50 text-white text-[9px] font-bold uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Bottom Right Title / Button */}
-                <div className="absolute bottom-4 right-4 bg-[#222222] text-white px-5 py-3 flex items-center gap-2 transition-all duration-300 z-20 group-hover:bg-[#111111]">
-                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest">{service.title}</span>
-                  <ChevronRight size={14} className="text-white opacity-80 group-hover:translate-x-1 group-hover:text-brand-gold transition-all duration-300" />
+                {/* Bottom Title / Button */}
+                <div className="absolute bottom-4 left-4 right-4 h-12 bg-[#222222] text-white px-4 flex items-center justify-between transition-all duration-300 z-20 group-hover:bg-[#111111]">
+                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest truncate mr-2">{service.title}</span>
+                  <ChevronRight size={14} className="text-white opacity-80 shrink-0 group-hover:translate-x-1 group-hover:text-brand-gold transition-all duration-300" />
                 </div>
               </Link>
             ))}
