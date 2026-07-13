@@ -114,11 +114,11 @@ export default function AboutPage() {
         </motion.div>
         
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 w-full">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.span 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block"
+              className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block text-center"
             >
               Retail Excellence
             </motion.span>
@@ -126,16 +126,16 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="mobile-heading-balance text-[22px] md:text-6xl lg:text-7xl font-serif text-white mb-8 md:mb-10 leading-tight uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal"
+              className="mobile-heading-balance text-[22px] md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase tracking-tighter xs:tracking-tight md:tracking-normal text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              THE END-TO-END <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
+              THE END-TO-END{" "}<span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-neutral-300 text-base font-light leading-relaxed max-w-xl"
+              className="text-neutral-300 text-base font-light leading-relaxed max-w-xl mx-auto text-center"
             >
               Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
             </motion.p>
@@ -148,8 +148,8 @@ export default function AboutPage() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
             <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                BUILDING SPACES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-0 lg:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-5xl lg:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
               <div className="space-y-6 md:space-y-8 mb-0 lg:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 <img 
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
                   alt="Craftsmanship" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  className="w-full h-full object-cover transition-all duration-1000"
                 />
               </div>
               <div className="absolute -bottom-12 -left-12 bg-brand-dark p-12 text-white max-w-xs hidden xl:block shadow-2xl">
@@ -208,8 +208,8 @@ export default function AboutPage() {
       <section className="py-20 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              THE PRINCIPLES <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
+            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              THE PRINCIPLES <span className="text-brand-gold italic ml-2 text-[22px] md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
           </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
         
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
           <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            READY TO COLLABORATE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
+            READY TO COLLABORATE <span className="text-brand-gold italic ml-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
           </h2>
           <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-10 md:mb-16">
             Let's collaborate to build a space that defines your brand and exceeds your operational expectations.

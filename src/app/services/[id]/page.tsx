@@ -16,28 +16,28 @@ export default function SubcategoryDetailPage() {
   const data = SUBCATEGORY_DATA[id] || SUBCATEGORY_DATA["interior-design"];
 
   return (
-    <div className="bg-white pt-20">
+    <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative h-[55vh] min-h-[380px] flex items-end pb-16 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[60vh] flex flex-col justify-end pt-32 md:pt-40 pb-16 bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
           className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full">
-          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center gap-2">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center">
+          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
             <PenTool size={12} /> Specialized Capability
           </span>
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-serif text-white uppercase tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-lg md:text-xl font-light italic mt-4 border-l-2 border-brand-gold pl-5 max-w-2xl"
+            className="text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}
@@ -184,7 +184,7 @@ export default function SubcategoryDetailPage() {
                     <img
                       src={img}
                       alt={title}
-                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     {/* Dark Gradient Overlay for readability on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -229,7 +229,7 @@ export default function SubcategoryDetailPage() {
                     <img
                       src={img}
                       alt={title}
-                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     {/* Dark Gradient Overlay for readability on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

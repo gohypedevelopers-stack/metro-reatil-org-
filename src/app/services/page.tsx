@@ -199,11 +199,11 @@ export default function ServicesPage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
-          <div className="max-w-3xl text-white">
-            <h1 className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight uppercase" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Complete Fitout <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>& Interior Transformation</span>
+          <div className="max-w-3xl mx-auto text-white text-center">
+            <h1 className="mobile-heading-balance text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase text-center" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Complete Fitout{" "}<span className="text-brand-gold italic font-normal normal-case whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>& Interior Transformation</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mx-auto text-center">
               Book a free consultation and let our experts assess your project requirements. We'll provide a comprehensive proposal with transparent timelines and pricing for your transformation.
             </p>
           </div>
@@ -219,7 +219,7 @@ export default function ServicesPage() {
             <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="https://halo.ae/images/LUXURY-MANSION1-copy.jpg"
+                  src="/images/LUXURY-MANSION1-copy.jpg"
                   alt="Fitout Services Dubai"
                   fill
                   className="object-cover"
@@ -254,7 +254,7 @@ export default function ServicesPage() {
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Services We <br /> <span className="text-brand-gold italic block mt-2 text-2xl sm:text-4xl md:text-5xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Offer</span>
+              Services We <span className="text-brand-gold italic text-2xl sm:text-4xl md:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Offer</span>
             </h2>
           </div>
 

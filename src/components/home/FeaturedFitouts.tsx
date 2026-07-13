@@ -135,7 +135,7 @@ const FeaturedFitouts = () => {
                   <img
                     src={project.img}
                     alt={project.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1200ms] group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -178,7 +178,7 @@ const FeaturedFitouts = () => {
                       <img
                         src={project.img}
                         alt={project.name}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1200ms] group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 

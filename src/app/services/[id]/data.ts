@@ -25,8 +25,8 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     gallery: [
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1560185009-dddecae3c5a8?auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80"
     ]
   },
   "3d-visualization": {
@@ -137,7 +137,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { step: "Precision Laying", desc: "Expert application of specialized adhesives, seamless grouting, or advanced click-lock floating systems." },
       { step: "Surface Polishing", desc: "Final sealing, mechanical buffing, or protective lacquering for maximum longevity and shine." }
     ],
-    gallery: ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80"]
+    gallery: ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80"]
   },
   "partition-systems": {
     title: "Partition Systems",
@@ -181,7 +181,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       { step: "Structural Isolation", desc: "Decoupling walls and ceilings using resilient channels to prevent structural vibration transfer." },
       { step: "Post-Installation Testing", desc: "Verifying decibel drops and acoustic clarity against the initial engineering targets." }
     ],
-    gallery: ["https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&q=80"]
+    gallery: ["https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80", "https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&q=80"]
   },
   "electro-mechanical": {
     title: "Electro-Mechanical (MEP)",
@@ -253,7 +253,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "fitout": {
     title: "Ready to Complete Your Fitout Project?",
     tagline: "Premium Ready to Complete Your Fitout Project? Services",
-    heroImage: "https://halo.ae/images/intro-image.png?w=3840&q=75",
+    heroImage: "/images/intro-image.png",
     desc: ["Book a free fitout consultation and let our experts transform your space. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete fitout execution.", "At Metro Retail Interiors, fitout is more than construction — it is a seamless orchestration of engineering, craftsmanship, and design execution. Our certified teams deliver end-to-end fitout with unmatched precision, from demolition to final finishing. We manage every element — structural works, MEP, joinery, flooring, ceilings, glazing, and decorative finishes — ensuring consistency, quality, and perfect alignment with the design intent.", "Precision structural modifications to reconfigure layouts for residential and commercial spaces."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -261,7 +261,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Complete Your Fitout Project? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Complete Your Fitout Project? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/structural.webp",
+        img: "/images/fitout_dubai_r2/structural.webp",
         title: "Structural Modifications",
         description: "Precision structural modifications to reconfigure layouts for residential and commercial spaces.",
         tags: [
@@ -277,7 +277,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "STRUCTURAL MODIFICATIONS →"
       },
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/lighting.webp",
+        img: "/images/fitout_dubai_r2/lighting.webp",
         title: "Ceiling works and lighting",
         description: "Complete ceiling solutions with integrated lighting for refined interiors.",
         tags: [
@@ -293,7 +293,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CEILING WORKS AND LIGHTING →"
       },
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/hvac.webp",
+        img: "/images/fitout_dubai_r2/hvac.webp",
         title: "Full MEP and HVAC",
         description: "Full MEP and HVAC coordination by DEWA certified engineers for peak performance.",
         tags: [
@@ -309,7 +309,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FULL MEP AND HVAC →"
       },
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/drainage.webp",
+        img: "/images/fitout_dubai_r2/drainage.webp",
         title: "Plumbing Drainage",
         description: "Professional plumbing and drainage installation to meet all authority standards.",
         tags: [
@@ -325,7 +325,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PLUMBING DRAINAGE →"
       },
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/electrical.webp",
+        img: "/images/fitout_dubai_r2/electrical.webp",
         title: "Electrical rewiring",
         description: "Complete electrical rewiring and DB upgrades by DEWA certified engineers.",
         tags: [
@@ -341,7 +341,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ELECTRICAL REWIRING →"
       },
       {
-        img: "https://halo.ae/images/fitout_dubai_r2/smarthome.webp",
+        img: "/images/fitout_dubai_r2/smarthome.webp",
         title: "Smart home integration",
         description: "Modern smart home systems for automated lighting, security, and climate control.",
         tags: [
@@ -361,7 +361,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "carpentry": {
     title: "Bespoke In-House Joinery",
     tagline: "Premium Bespoke In-House Joinery Services",
-    heroImage: "https://halo.ae/images/joinery_r2/Living-Room31-copy.jpg",
+    heroImage: "/images/joinery_r2/Living-Room31-copy.jpg",
     desc: ["Book a free joinery consultation and let our craftsmen assess your requirements. We'll provide detailed designs and transparent pricing for your custom joinery project", "Introducing the Metro Retail SIGNATURE range of Luxury Wardrobes, Kitchens, Cabinets, Vanities and Wall Panels", "Custom bar counters and vanity units crafted for function and style."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -370,7 +370,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     gallery: [
       {
         slug: "bar-counters-vanities",
-        img: "https://halo.ae/images/joinery_r2/HALO-bar-counter.webp?w=3840&q=75",
+        img: "/images/joinery_r2/HALO-bar-counter.webp",
         title: "Bar counters & vanities",
         description: "Custom bar counters and vanity units crafted for function and style.",
         tags: ["Bar Counters", "Vanities", "Home Bar"],
@@ -379,7 +379,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "feature-walls",
-        img: "https://halo.ae/images/joinery_r2/feature-walls-2.png?w=3840&q=75",
+        img: "/images/joinery_r2/feature-walls-2.png",
         title: "Feature walls",
         description: "Bespoke feature wall joinery that adds depth and character.",
         tags: ["Slatted Walls", "Accent Walls", "Textured Panels"],
@@ -388,7 +388,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "kitchens",
-        img: "https://halo.ae/images/joinery_r2/Kitchen11-1.jpg?w=3840&q=75",
+        img: "/images/joinery_r2/Kitchen11-1.jpg",
         title: "Kitchens",
         description: "Tailor-made kitchens with smart storage and premium finishes.",
         tags: ["Modular Kitchens", "Luxury Kitchens", "Custom Cabinets"],
@@ -397,7 +397,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "office-furniture",
-        img: "https://halo.ae/images/joinery_r2/services_joinery_office_furniture_executing_desks.webp?w=3840&q=75",
+        img: "/images/joinery_r2/services_joinery_office_furniture_executing_desks.webp",
         title: "Office furniture",
         description: "Custom office furniture designed for productivity and durability.",
         tags: ["Desks", "Workstations", "Ergonomic Furniture"],
@@ -406,7 +406,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "reception-desks",
-        img: "https://halo.ae/images/joinery_r2/reception-desk-4.webp?w=3840&q=75",
+        img: "/images/joinery_r2/reception-desk-4.webp",
         title: "Reception desks",
         description: "Custom reception desks built to elevate first impressions.",
         tags: ["Modern Reception", "Marble Counters", "Custom Desks"],
@@ -415,7 +415,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "residential-furniture",
-        img: "https://halo.ae/images/joinery_r2/HALO-residential-furniture.webp?w=3840&q=75",
+        img: "/images/joinery_r2/HALO-residential-furniture.webp",
         title: "Residential furniture",
         description: "Made-to-measure residential furniture for elegant everyday living.",
         tags: ["Sofas", "Dining Tables", "Bedroom Furniture"],
@@ -424,7 +424,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "tv-units",
-        img: "https://halo.ae/images/joinery_r2/tv-units-3.webp?w=3840&q=75",
+        img: "/images/joinery_r2/tv-units-3.webp",
         title: "Tv-units",
         description: "Custom TV units with integrated storage and clean detailing.",
         tags: ["Media Consoles", "Floating TV Units", "Entertainment Units"],
@@ -433,7 +433,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "wall-panels",
-        img: "https://halo.ae/images/joinery_r2/HALO-wall-panels.webp?w=3840&q=75",
+        img: "/images/joinery_r2/HALO-wall-panels.webp",
         title: "Wall panels",
         description: "Decorative wall panels crafted to enhance interiors with texture.",
         tags: ["Acoustic Panels", "Decorative Panels", "3D Wall Panels"],
@@ -442,7 +442,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "wardrobes",
-        img: "https://halo.ae/images/joinery_r2/services_joinery_wardrobes_walkin_wardrobes.webp?w=3840&q=75",
+        img: "/images/joinery_r2/services_joinery_wardrobes_walkin_wardrobes.webp",
         title: "Wardrobes",
         description: "Walk-in wardrobes, built-in closets, and dressing rooms tailored to your storage needs.",
         tags: ["Walk In Wardrobes", "Built In Closets", "Dressing Rooms"],
@@ -451,7 +451,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "wood-ceilings",
-        img: "https://halo.ae/images/joinery_r2/wood-ceilings-5.webp?w=3840&q=75",
+        img: "/images/joinery_r2/wood-ceilings-5.webp",
         title: "Wood ceilings",
         description: "Precision wood ceiling systems for warmth and visual impact.",
         tags: ["Coffered Ceilings", "Slatted Ceilings", "Carved Ceilings"],
@@ -463,7 +463,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "kitchens-wardrobes": {
     title: "Ready to Build Your Kitchens & Wardrobes?",
     tagline: "Premium Ready to Build Your Kitchens & Wardrobes? Services",
-    heroImage: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/Kitchen1_HALO.webp?w=3840&q=75",
+    heroImage: "/images/kitchens_wardrobes_dubai_r2/Kitchen1_HALO.webp",
     desc: ["Book a free joinery consultation and let our craftsmen design custom kitchens and wardrobes. We'll provide a detailed proposal with in-house manufacturing and transparent pricing.", "From elegant European-style wardrobes to modern functional kitchens, Metro Retail Interiors combines custom joinery, intelligent space planning, and high-quality materials to create beautiful, durable, and fully integrated storage and cooking solutions.", "Bespoke kitchen cabinets designed and manufactured in our Al Quoz joinery facility with premium materials."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -471,7 +471,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Build Your Kitchens & Wardrobes? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Build Your Kitchens & Wardrobes? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_built_in_appliances.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_built_in_appliances.webp",
         title: "Built-in Appliances",
         description: "Seamless integration of premium appliances including ovens, dishwashers, and refrigerators.",
         tags: [],
@@ -479,7 +479,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "BUILT-IN APPLIANCES →"
       },
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_backsplash_installation.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_backsplash_installation.webp",
         title: "Backsplash Installation",
         description: "Beautiful backsplash designs using tiles, marble, or decorative materials.",
         tags: [],
@@ -487,7 +487,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "BACKSPLASH INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_soft_closing_hardware.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_soft_closing_hardware.webp",
         title: "Soft-Closing Hardware",
         description: "Premium German and Italian hardware with soft-closing drawers and doors.",
         tags: [],
@@ -495,7 +495,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SOFT-CLOSING HARDWARE →"
       },
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_integrated_lighting.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_integrated_lighting.webp",
         title: "Integrated Lighting",
         description: "LED lighting integrated into cabinets, drawers, and under-counter areas.",
         tags: [],
@@ -503,7 +503,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "INTEGRATED LIGHTING →"
       },
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_kitchens_island_and_breakfast_counters.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_island_and_breakfast_counters.webp",
         title: "Island and Breakfast Counters",
         description: "Custom-designed kitchen islands and breakfast counters for functional and social spaces.",
         tags: [],
@@ -511,7 +511,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ISLAND AND BREAKFAST COUNTERS →"
       },
       {
-        img: "https://halo.ae/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_walkin_wardrobes.webp",
+        img: "/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_walkin_wardrobes.webp",
         title: "Walk-in Wardrobes",
         description: "Spacious walk-in wardrobe systems with custom shelving, hanging areas, and storage solutions.",
         tags: [],
@@ -523,7 +523,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "decorative-paint": {
     title: "Ready To Transform Your Walls With Premium Decorative Finishes",
     tagline: "Premium Ready To Transform Your Walls With Premium Decorative Finishes Services",
-    heroImage: "https://halo.ae/images/decorative_paint/finishes/marmorino.png?w=3840&q=75",
+    heroImage: "/images/decorative_paint/finishes/marmorino.png",
     desc: ["Book a free consultation and let our decorative specialists assess your space. We'll provide expert recommendations and transparent pricing for your decorative finishing project.", "Transform your walls into works of art with Metro Retail's high-end decorative finishes — texture paints, Venetian plasters, microcement, metallic finishes, stone effects, and more.", "Executed by trained artisans, our finishes bring depth, warmth, and luxury to any space."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -532,7 +532,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     gallery: [
       {
         slug: "texture-paints",
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
         title: "Texture Paints",
         description: "Luxury textured finishes with depth, movement, and visual character for premium interiors.",
         tags: [
@@ -549,7 +549,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "venetian-plasters",
-        img: "https://halo.ae/images/decorative_paint_r2/textured_venetian.webp",
+        img: "/images/decorative_paint_r2/textured_venetian.webp",
         title: "Venetian Plasters",
         description: "Smooth polished plaster finishes that bring timeless Italian elegance to any space.",
         tags: [
@@ -566,7 +566,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "feature-walls-paint",
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
         title: "Feature Walls",
         description: "Statement feature walls designed to anchor and elevate residential and commercial interiors.",
         tags: [
@@ -583,7 +583,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "limewash",
-        img: "https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp",
+        img: "/images/decorative_paint_r2/colored_lime_wash.webp",
         title: "Limewash",
         description: "Soft matte limewash finishes with natural tone variation and warmth for organic aesthetics.",
         tags: [
@@ -600,7 +600,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "brick-finish",
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
         title: "Brick Finish",
         description: "Decorative brick-effect finishes that add raw texture and urban charm to interiors.",
         tags: [
@@ -617,7 +617,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "stencil-painting",
-        img: "https://halo.ae/images/decorative_paint_r2/custom_stencils.webp",
+        img: "/images/decorative_paint_r2/custom_stencils.webp",
         title: "Stencil Painting",
         description: "Custom stencil patterns for artistic walls with precise repeat detailing and visual impact.",
         tags: [
@@ -634,7 +634,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "pearl-finish",
-        img: "https://halo.ae/images/decorative_paint_r2/soft_pearl.webp",
+        img: "/images/decorative_paint_r2/soft_pearl.webp",
         title: "Pearl Finish",
         description: "Subtle pearl sheen that creates elegant light play and sophistication on walls.",
         tags: ["Pearl Sheen", "Iridescent Finish", "Shimmer Coat"],
@@ -643,7 +643,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       },
       {
         slug: "artistic-finishes",
-        img: "https://halo.ae/images/decorative_paint_r2/artistic_patterns.webp",
+        img: "/images/decorative_paint_r2/artistic_patterns.webp",
         title: "Artistic Finishes",
         description: "Bespoke decorative finishes crafted by artisan painters for unique premium interiors.",
         tags: ["Hand Painted", "Faux Finish", "Artisan Craft"],
@@ -655,7 +655,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "microcement": {
     title: "Ready to Apply Microcement?",
     tagline: "Premium Ready to Apply Microcement? Services",
-    heroImage: "https://halo.ae/images/H-Living10.jpg?w=3840&q=75",
+    heroImage: "/images/H-Living10.jpg",
     desc: ["Book a free microcement consultation and let our specialists create seamless surfaces. We'll provide a detailed proposal with modern finishes and transparent pricing for microcement applications.", "At Metro Retail, we provide one of the UAE's most extensive and advanced ranges of decorative microcement and seamless surface coatings. Our applications are;", "We Have 50 Specialist Applicators50 Specialist Applicators10 Years Experience100 Shades and FinishesEU Standard Protocols"],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -663,7 +663,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Apply Microcement? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Apply Microcement? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/H-Living10.jpg?w=3840&amp;q=75",
+        img: "/images/H-Living10.jpg",
         title: "",
         description: "",
         tags: [],
@@ -671,7 +671,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint/commercial/corporate_spaces_2.jpg?w=3840&amp;q=75",
+        img: "/images/decorative_paint/commercial/corporate_spaces_2.jpg",
         title: "",
         description: "",
         tags: [],
@@ -679,7 +679,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint/commercial/corporate_spaces_1.png?w=3840&amp;q=75",
+        img: "/images/decorative_paint/commercial/corporate_spaces_1.png",
         title: "",
         description: "",
         tags: [],
@@ -687,7 +687,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_001.webp?w=3840&amp;q=75",
+        img: "/images/microcement_dubai_r2/microcement_office_001.webp",
         title: "",
         description: "",
         tags: [],
@@ -695,7 +695,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_002.webp?w=3840&amp;q=75",
+        img: "/images/microcement_dubai_r2/microcement_office_002.webp",
         title: "",
         description: "",
         tags: [],
@@ -703,7 +703,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/microcement_dubai_r2/microcement_office_003.webp?w=3840&amp;q=75",
+        img: "/images/microcement_dubai_r2/microcement_office_003.webp",
         title: "",
         description: "",
         tags: [],
@@ -715,7 +715,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "terrazzo": {
     title: "Ready to Install Terrazzo?",
     tagline: "Premium Ready to Install Terrazzo? Services",
-    heroImage: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp?w=828&q=75",
+    heroImage: "/images/terrazzo_dubai_r2/showroom.webp",
     desc: ["Book a free terrazzo consultation and let our craftsmen create timeless floors. We'll provide a detailed proposal with custom patterns and transparent pricing for terrazzo installations.", "We create durable, decorative terrazzo floors with stunning aggregates, colours, and finishes. Perfect for luxury homes, restaurants, and retail spaces. Our terrazzo installations combine timeless elegance with modern durability.", "Choose from our range of terrazzo options to create stunning floors, countertops, and feature walls that match your design vision."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -723,7 +723,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Terrazzo? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Terrazzo? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/bedroom.webp",
+        img: "/images/terrazzo_dubai_r2/bedroom.webp",
         title: "Terrazzo Floors",
         description: "Terrazzo Floors tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -734,7 +734,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TERRAZZO FLOORS →"
       },
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/terazzo-counters.jpg",
+        img: "/images/terrazzo_dubai_r2/terazzo-counters.jpg",
         title: "Terrazzo Counters",
         description: "Terrazzo Counters tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -745,7 +745,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TERRAZZO COUNTERS →"
       },
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp",
+        img: "/images/terrazzo_dubai_r2/showroom.webp",
         title: "Custom Aggregates",
         description: "Custom Aggregates tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -756,7 +756,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOM AGGREGATES →"
       },
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/retail.webp",
+        img: "/images/terrazzo_dubai_r2/retail.webp",
         title: "Color Options",
         description: "Color Options tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -767,7 +767,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "COLOR OPTIONS →"
       },
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/showroom.webp",
+        img: "/images/terrazzo_dubai_r2/showroom.webp",
         title: "Polished Finishes",
         description: "Polished Finishes tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -778,7 +778,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "POLISHED FINISHES →"
       },
       {
-        img: "https://halo.ae/images/terrazzo_dubai_r2/office-1.webp",
+        img: "/images/terrazzo_dubai_r2/office-1.webp",
         title: "Commercial Applications",
         description: "Commercial Applications tailored for reliable and high-quality terrazzo floors execution.",
         tags: [
@@ -793,7 +793,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "landscaping-pools": {
     title: "Ready to Create Your Landscape & Pool?",
     tagline: "Premium Ready to Create Your Landscape & Pool? Services",
-    heroImage: "https://halo.ae/images/landscaping_pools_dubai_r2/ALP1_HALO.webp?w=3840&q=75",
+    heroImage: "/images/landscaping_pools_dubai_r2/ALP1_HALO.webp",
     desc: ["Book a free landscaping consultation and let our experts design outdoor paradises. We'll provide a detailed proposal with pools, gardens, and transparent pricing for outdoor living.", "From outdoor seating areas to custom pools, pergolas, and lush greenery, Metro Retail designs and builds outdoor spaces for modern living in . Transform your outdoor areas into beautiful, functional extensions of your home.", "Custom Pools tailored for reliable and high-quality landscaping & pools execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -801,7 +801,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Create Your Landscape & Pool? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Create Your Landscape & Pool? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_06.webp",
+        img: "/images/landscaping_pools_dubai_r2/pool_06.webp",
         title: "Custom Pools",
         description: "Custom Pools tailored for reliable and high-quality landscaping \\u0026 pools execution.",
         tags: [
@@ -812,7 +812,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOM POOLS →"
       },
       {
-        img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_05.webp",
+        img: "/images/landscaping_pools_dubai_r2/pool_05.webp",
         title: "Outdoor Seating Areas",
         description: "Outdoor Seating Areas tailored for reliable and high-quality landscaping \\u0026 pools execution.",
         tags: [
@@ -823,7 +823,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "OUTDOOR SEATING AREAS →"
       },
       {
-        img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_13.webp",
+        img: "/images/landscaping_pools_dubai_r2/pool_13.webp",
         title: "Garden Design",
         description: "Garden Design tailored for reliable and high-quality landscaping \\u0026 pools execution.",
         tags: [
@@ -834,7 +834,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "GARDEN DESIGN →"
       },
       {
-        img: "https://halo.ae/images/landscaping_pools_dubai_r2/pool_04.webp",
+        img: "/images/landscaping_pools_dubai_r2/pool_04.webp",
         title: "Outdoor Kitchens",
         description: "Outdoor Kitchens tailored for reliable and high-quality landscaping \\u0026 pools execution.",
         tags: [
@@ -849,7 +849,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "automation": {
     title: "Ready to Automate Your Smart Home?",
     tagline: "Premium Ready to Automate Your Smart Home? Services",
-    heroImage: "https://halo.ae/images/automation_dubai_r2/lighting_control.webp?w=3840&q=75",
+    heroImage: "/images/automation_dubai_r2/lighting_control.webp",
     desc: ["Book a free automation consultation and let our experts design your smart systems. We'll provide a detailed proposal with integrated solutions and transparent pricing for home automation.", "Smart home automation for lighting, AC, speakers, curtains, and security — integrated neatly into your fitout. Control your entire home with ease and convenience through advanced automation systems.", "Lighting Control tailored for reliable and high-quality home automation execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -857,7 +857,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Automate Your Smart Home? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Automate Your Smart Home? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/automation_dubai_r2/lighting_control.webp",
+        img: "/images/automation_dubai_r2/lighting_control.webp",
         title: "Lighting Control",
         description: "Lighting Control tailored for reliable and high-quality home automation execution.",
         tags: [
@@ -868,7 +868,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "LIGHTING CONTROL →"
       },
       {
-        img: "https://halo.ae/images/automation_dubai_r2/security_system.webp",
+        img: "/images/automation_dubai_r2/security_system.webp",
         title: "Security Systems",
         description: "Security Systems tailored for reliable and high-quality home automation execution.",
         tags: [
@@ -879,7 +879,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SECURITY SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/automation_dubai_r2/smart_integration.webp",
+        img: "/images/automation_dubai_r2/smart_integration.webp",
         title: "Smart Integration",
         description: "Smart Integration tailored for reliable and high-quality home automation execution.",
         tags: [
@@ -894,7 +894,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "stretch-ceiling": {
     title: "Ready to Install Stretch Ceilings?",
     tagline: "Premium Ready to Install Stretch Ceilings? Services",
-    heroImage: "https://halo.ae/images/stretch_ceiling_dubai_r2/streitch_ceiling_1.jpg?w=3840&q=75",
+    heroImage: "/images/stretch_ceiling_dubai_r2/streitch_ceiling_1.jpg",
     desc: ["Book a free stretch ceiling consultation and let our specialists create modern overhead solutions. We'll provide a detailed proposal with innovative designs and transparent pricing.", "Stylish, modern, and perfect for feature ceilings, backlit effects, and moisture resistance. Stretch ceilings offer a sleek, seamless finish that transforms any space with elegance and functionality.", "Feature Ceilings tailored for reliable and high-quality stretch ceiling execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -902,7 +902,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Stretch Ceilings? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Stretch Ceilings? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/featured_stretch_ceilings.webp",
+        img: "/images/stretch_ceiling_dubai_r2/featured_stretch_ceilings.webp",
         title: "Feature Ceilings",
         description: "Feature Ceilings tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -913,7 +913,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FEATURE CEILINGS →"
       },
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling_backlit.webp",
+        img: "/images/stretch_ceiling_dubai_r2/ceiling_backlit.webp",
         title: "Backlit Effects",
         description: "Backlit Effects tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -924,7 +924,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "BACKLIT EFFECTS →"
       },
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/moisture_resistance.webp",
+        img: "/images/stretch_ceiling_dubai_r2/moisture_resistance.webp",
         title: "Moisture Resistance",
         description: "Moisture Resistance tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -935,7 +935,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MOISTURE RESISTANCE →"
       },
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/custom-ceilings.webp",
+        img: "/images/stretch_ceiling_dubai_r2/custom-ceilings.webp",
         title: "Custom Designs",
         description: "Custom Designs tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -946,7 +946,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOM DESIGNS →"
       },
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/quick-installation.webp",
+        img: "/images/stretch_ceiling_dubai_r2/quick-installation.webp",
         title: "Quick Installation",
         description: "Quick Installation tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -957,7 +957,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "QUICK INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/stretch_ceiling_dubai_r2/ceiling-maintenance.webp",
+        img: "/images/stretch_ceiling_dubai_r2/ceiling-maintenance.webp",
         title: "Easy Maintenance",
         description: "Easy Maintenance tailored for reliable and high-quality stretch ceiling execution.",
         tags: [
@@ -972,7 +972,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "halo-shield": {
     title: "UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield.",
     tagline: "Premium UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. Services",
-    heroImage: "https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&q=75",
+    heroImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800",
     desc: ["Engineering-led property protection designed for heavy rains, extreme heat, humidity, movement — built for million-dirham properties across the UAE.", "Our clients include Property Owners, Interior Designers, Consultants and Contractors", "From luxury villas on Palm Jumeirah to exclusive estates in Emirates Hills — our engineering team delivers precision waterproofing for discerning homeowners."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -980,7 +980,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/halo-shield/press/gulf-today.webp?w=3840&amp;q=75",
+        img: "https://images.unsplash.com/photo-1595841696660-181c4fd3587e?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -988,7 +988,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/halo-shield/press/gulf-news.webp?w=3840&amp;q=75",
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -996,7 +996,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/halo-shield/press/khaleej-times.webp?w=3840&amp;q=75",
+        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -1004,7 +1004,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/halo-shield/press/yahoo-news.webp?w=3840&amp;q=75",
+        img: "https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -1012,7 +1012,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/halo-shield/press/business-insider.png?w=3840&amp;q=75",
+        img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -1020,7 +1020,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "VIEW DETAILS →"
       },
       {
-        img: "https://halo.ae/images/halo-shield/work/01_1.webp",
+        img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800",
         title: "",
         description: "",
         tags: [],
@@ -1032,7 +1032,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "property-inspection": {
     title: "Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE",
     tagline: "Premium Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE Services",
-    heroImage: "https://halo.ae/images/property_inspection_dubai_r2/local-insights.jpg?w=3840&q=75",
+    heroImage: "/images/property_inspection_dubai_r2/local-insights.jpg",
     desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Metro Retail's certified inspectors deliver a detailed property inspection and photo-backed snagging report covering structural, MEP, HVAC, waterproofing, finishing, and safety defects.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession. Our comprehensive 300-point inspection ensures you know exactly what you're buying and helps you avoid costly surprises."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1040,7 +1040,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/professional-inspection-1.jpg",
+        img: "/images/property_inspection_dubai_r2/professional-inspection-1.jpg",
         title: "Professional Inspection",
         description: "On-site professional property inspection for handover and resale checks.",
         tags: [
@@ -1056,7 +1056,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PROFESSIONAL INSPECTION →"
       },
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/detailed assesment-1.jpg",
+        img: "/images/property_inspection_dubai_r2/detailed%20assesment-1.jpg",
         title: "Detailed Assessment",
         description: "Detailed visual and technical assessment to identify defects before move-in.",
         tags: [
@@ -1072,7 +1072,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "DETAILED ASSESSMENT →"
       },
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/technical-testing.jpg",
+        img: "/images/property_inspection_dubai_r2/technical-testing.jpg",
         title: "Technical Testing",
         description: "Detailed MEP and HVAC systems inspection for compliance and performance verification.",
         tags: [
@@ -1088,7 +1088,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TECHNICAL TESTING →"
       },
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/ai-powered-detection.jpg",
+        img: "/images/property_inspection_dubai_r2/ai-powered-detection.jpg",
         title: "AI-Powered Detection",
         description: "AI-assisted detection workflow for faster and more accurate defect discovery.",
         tags: [
@@ -1104,7 +1104,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "AI-POWERED DETECTION →"
       },
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/quality-inspection.jpg",
+        img: "/images/property_inspection_dubai_r2/quality-inspection.jpg",
         title: "Quality Inspection",
         description: "Quality-focused inspection process aligned with practical handover standards.",
         tags: [
@@ -1120,7 +1120,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "QUALITY INSPECTION →"
       },
       {
-        img: "https://halo.ae/images/property_inspection_dubai_r2/expert-analysis.jpg",
+        img: "/images/property_inspection_dubai_r2/expert-analysis.jpg",
         title: "Expert Analysis",
         description: "Expert-led analysis with actionable recommendations for property owners and buyers.",
         tags: [
@@ -1140,7 +1140,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "mep-hvac": {
     title: "Ready to Install MEP & HVAC?",
     tagline: "Premium Ready to Install MEP & HVAC? Services",
-    heroImage: "https://halo.ae/images/mep_hvac_dubai_r2/electrical.webp?w=3840&q=75",
+    heroImage: "/images/mep_hvac_dubai_r2/electrical.webp",
     desc: ["Book a free MEP consultation and let our DEWA-certified engineers design your systems. We'll provide a detailed proposal with technical solutions and transparent pricing for MEP works.", "Certified mechanical, electrical, plumbing, and air conditioning works — from rewiring to full MEP installations. Our certified engineers ensure all systems meet Municipality and DEWA standards.", "Electrical Works tailored for reliable and high-quality mep & hvac execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1148,7 +1148,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install MEP & HVAC? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install MEP & HVAC? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/mep_hvac_dubai_r2/electrical.webp",
+        img: "/images/mep_hvac_dubai_r2/electrical.webp",
         title: "Electrical Works",
         description: "Electrical Works tailored for reliable and high-quality mep \\u0026 hvac execution.",
         tags: [
@@ -1159,7 +1159,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ELECTRICAL WORKS →"
       },
       {
-        img: "https://halo.ae/images/mep_hvac_dubai_r2/plumbing_systems.jpg",
+        img: "/images/mep_hvac_dubai_r2/plumbing_systems.jpg",
         title: "Plumbing Systems",
         description: "Plumbing Systems tailored for reliable and high-quality mep \\u0026 hvac execution.",
         tags: [
@@ -1170,7 +1170,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PLUMBING SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_hvac_installations.webp",
+        img: "/images/mep_hvac_dubai_r2/services_mep_hvac_hvac_installations.webp",
         title: "HVAC Installation",
         description: "HVAC Installation tailored for reliable and high-quality mep \\u0026 hvac execution.",
         tags: [
@@ -1181,7 +1181,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "HVAC INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/mep_hvac_dubai_r2/services_mep_hvac_mechanical_systems.webp",
+        img: "/images/mep_hvac_dubai_r2/services_mep_hvac_mechanical_systems.webp",
         title: "Mechanical Systems",
         description: "Mechanical Systems tailored for reliable and high-quality mep \\u0026 hvac execution.",
         tags: [
@@ -1192,7 +1192,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MECHANICAL SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/mep_hvac_dubai_r2/system_upgrades.jpg",
+        img: "/images/mep_hvac_dubai_r2/system_upgrades.jpg",
         title: "System Upgrades",
         description: "System Upgrades tailored for reliable and high-quality mep \\u0026 hvac execution.",
         tags: [
@@ -1207,7 +1207,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "project-management": {
     title: "Ready to Manage Your Project?",
     tagline: "Premium Ready to Manage Your Project? Services",
-    heroImage: "https://halo.ae/images/project_management_dubai_r2/services_project_management_timeline_management.webp?w=3840&q=75",
+    heroImage: "/images/project_management_dubai_r2/services_project_management_timeline_management.webp",
     desc: ["Book a free project management consultation and let our experts coordinate your renovation. We'll provide a detailed proposal with timelines, milestones, and transparent pricing.", "Dedicated project managers oversee quality, timelines, subcontractors, inspections, and coordination. Ensure your project runs smoothly from start to finish with our professional project management services.", "Timeline Management tailored for reliable and high-quality project management execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1215,7 +1215,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Manage Your Project? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Manage Your Project? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_timeline_management.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_timeline_management.webp",
         title: "Timeline Management",
         description: "Timeline Management tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1226,7 +1226,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TIMELINE MANAGEMENT →"
       },
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_quality_control.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_quality_control.webp",
         title: "Quality Control",
         description: "Quality Control tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1237,7 +1237,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "QUALITY CONTROL →"
       },
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_subcontractor_coordination.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_subcontractor_coordination.webp",
         title: "Subcontractor Coordination",
         description: "Subcontractor Coordination tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1248,7 +1248,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SUBCONTRACTOR COORDINATION →"
       },
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_regular_inspections.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_regular_inspections.webp",
         title: "Regular Inspections",
         description: "Regular Inspections tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1259,7 +1259,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "REGULAR INSPECTIONS →"
       },
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_communication.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_communication.webp",
         title: "Communication",
         description: "Communication tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1270,7 +1270,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "COMMUNICATION →"
       },
       {
-        img: "https://halo.ae/images/project_management_dubai_r2/services_project_management_budget_management.webp",
+        img: "/images/project_management_dubai_r2/services_project_management_budget_management.webp",
         title: "Budget Management",
         description: "Budget Management tailored for reliable and high-quality project management execution.",
         tags: [
@@ -1285,7 +1285,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "venetian-plasters": {
     title: "Ready to Apply Venetian Plasters?",
     tagline: "Premium Ready to Apply Venetian Plasters? Services",
-    heroImage: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg?w=3840&q=75",
+    heroImage: "/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg",
     desc: ["Book a free Venetian plaster consultation and let our artisans create luxury finishes. We'll provide a detailed proposal with premium techniques and transparent pricing for elegant walls.", "Metro Retail's artisans apply authentic Venetian plasters including polished plaster, Marmorino, Travertino, and satin & matte finishes using traditional Italian-style application techniques for luxurious wall finishes.", "Polished Plaster tailored for reliable and high-quality venetian plasters execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1293,7 +1293,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Apply Venetian Plasters? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Apply Venetian Plasters? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg",
+        img: "/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg",
         title: "Polished Plaster",
         description: "Polished Plaster tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1304,7 +1304,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "POLISHED PLASTER →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/marmorino.jpg",
+        img: "/images/decorative_paint_venetian_plasters_r2/marmorino.jpg",
         title: "Marmorino",
         description: "Marmorino tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1315,7 +1315,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MARMORINO →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/travertino.jpg",
+        img: "/images/decorative_paint_venetian_plasters_r2/travertino.jpg",
         title: "Travertino",
         description: "Travertino tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1326,7 +1326,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TRAVERTINO →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/satin_finish.jpg",
+        img: "/images/decorative_paint_venetian_plasters_r2/satin_finish.jpg",
         title: "Satin Finish",
         description: "Satin Finish tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1337,7 +1337,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SATIN FINISH →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/matt_venetian_plaster.jpg",
+        img: "/images/decorative_paint_venetian_plasters_r2/matt_venetian_plaster.jpg",
         title: "Matte Finish",
         description: "Matte Finish tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1348,7 +1348,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MATTE FINISH →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp",
+        img: "/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp",
         title: "Textured Venetian",
         description: "Textured Venetian tailored for reliable and high-quality venetian plasters execution.",
         tags: [
@@ -1363,7 +1363,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "feature-walls": {
     title: "Create Feature Walls",
     tagline: "Premium Create Feature Walls Services",
-    heroImage: "https://halo.ae/images/decorative_paint_feature_walls_r2/concrete_textures.jpg?w=3840&q=75",
+    heroImage: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
     desc: ["Book a free feature wall consultation and let our experts design stunning focal points. We'll provide a detailed proposal with creative solutions and transparent pricing for your walls.", "Create stunning focal points with Metro Retail's custom feature walls. From artistic textures to bold accent walls and statement finishes, we design and execute feature walls that transform your space.", "Textured Feature Walls tailored for reliable and high-quality feature walls execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1371,7 +1371,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Create Feature Walls and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Create Feature Walls with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
+        img: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
         title: "Textured Feature Walls",
         description: "Textured Feature Walls tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1382,7 +1382,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TEXTURED FEATURE WALLS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/geometric_walls.jpg",
+        img: "/images/decorative_paint_feature_walls_r2/geometric_walls.jpg",
         title: "Geometric Patterns",
         description: "Geometric Patterns tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1393,7 +1393,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "GEOMETRIC PATTERNS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/metallic_textures.jpg",
+        img: "/images/decorative_paint_feature_walls_r2/metallic_textures.jpg",
         title: "Metallic Feature Walls",
         description: "Metallic Feature Walls tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1404,7 +1404,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "METALLIC FEATURE WALLS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/feature-walls-2.png",
+        img: "/images/decorative_paint_feature_walls_r2/feature-walls-2.png",
         title: "Wood Effect Walls",
         description: "Wood Effect Walls tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1415,7 +1415,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "WOOD EFFECT WALLS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg",
+        img: "/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg",
         title: "Stone Effect Walls",
         description: "Stone Effect Walls tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1426,7 +1426,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "STONE EFFECT WALLS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_feature_walls_r2/artistic_murals.jpg",
+        img: "/images/decorative_paint_feature_walls_r2/artistic_murals.jpg",
         title: "Artistic Murals",
         description: "Artistic Murals tailored for reliable and high-quality feature walls execution.",
         tags: [
@@ -1441,7 +1441,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "artistic-finishes": {
     title: "Ready to Apply Artistic Finishes?",
     tagline: "Premium Ready to Apply Artistic Finishes? Services",
-    heroImage: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg?w=3840&q=75",
+    heroImage: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
     desc: ["Book a free finishes consultation and let our artisans create unique textures. We'll provide a detailed proposal with decorative techniques and transparent pricing for artistic walls.", "Transform your walls into works of art with Metro Retail's artistic decorative finishes. From metallic effects to faux finishes and custom textures, we create unique surfaces that elevate your interior design to extraordinary levels.", "Metallic Finishes tailored for reliable and high-quality artistic finishes execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1449,7 +1449,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Apply Artistic Finishes? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Apply Artistic Finishes? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
         title: "Metallic Finishes",
         description: "Metallic Finishes tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1460,7 +1460,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "METALLIC FINISHES →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg",
         title: "Faux Finishes",
         description: "Faux Finishes tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1471,7 +1471,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FAUX FINISHES →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg",
         title: "Decorative Plasters",
         description: "Decorative Plasters tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1482,7 +1482,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "DECORATIVE PLASTERS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg",
         title: "Custom Textures",
         description: "Custom Textures tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1493,7 +1493,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOM TEXTURES →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg",
         title: "Artistic Patterns",
         description: "Artistic Patterns tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1504,7 +1504,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ARTISTIC PATTERNS →"
       },
       {
-        img: "https://halo.ae/images/decorative_paint_artistic_finishes_r2/statement_surfaces.jpg",
+        img: "/images/decorative_paint_artistic_finishes_r2/statement_surfaces.jpg",
         title: "Statement Surfaces",
         description: "Statement Surfaces tailored for reliable and high-quality artistic finishes execution.",
         tags: [
@@ -1519,7 +1519,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "customised-furniture": {
     title: "Ready to Create Your Custom Furniture?",
     tagline: "Premium Ready to Create Your Custom Furniture? Services",
-    heroImage: "https://halo.ae/images/customised_furniture_dubai_r2/tv-units-3.webp?w=3840&q=75",
+    heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
     desc: ["Book a free furniture consultation and let our craftsmen design bespoke pieces. We'll provide a detailed proposal with custom joinery and transparent pricing for your furniture project.", "Metro Retail Interiors designs and manufactures bespoke furniture including sofas, tables, consoles, beds, benches, shelving, and more — all tailored to your style and space requirements. Every piece is custom-made in our Al Quoz joinery facility using premium materials and expert craftsmanship.", "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1527,7 +1527,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/customised_furniture_dubai_r2/tv-units-3.webp",
+        img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
         title: "Customized Consoles",
         description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
         tags: [
@@ -1543,7 +1543,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED CONSOLES →"
       },
       {
-        img: "https://halo.ae/images/customised_furniture_dubai_r2/Door3.jpg",
+        img: "/images/customised_furniture_dubai_r2/Door3.jpg",
         title: "Customized Doors",
         description: "Customized Door design crafted for luxury, security, style and a perfect fit for your home.",
         tags: [
@@ -1559,7 +1559,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED DOORS →"
       },
       {
-        img: "https://halo.ae/images/customised_furniture_dubai_r2/sofa.png",
+        img: "/images/customised_furniture_dubai_r2/sofa.png",
         title: "Customized Sofas",
         description: "Customized sofa design crafted for comfort, style, and a perfect fit for your living space.",
         tags: [
@@ -1575,7 +1575,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED SOFAS →"
       },
       {
-        img: "https://halo.ae/images/customised_furniture_dubai_r2/customized_table.png",
+        img: "/images/customised_furniture_dubai_r2/customized_table.png",
         title: "Customized Tables",
         description: "Customized table design crafted for durability, elegance, and a perfect fit for your living or workspace.",
         tags: [
@@ -1591,7 +1591,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED TABLES →"
       },
       {
-        img: "https://halo.ae/images/customised_furniture_dubai_r2/customized-bed.png",
+        img: "/images/customised_furniture_dubai_r2/customized-bed.png",
         title: "Customized Beds",
         description: "Custom table installation tailored for precision, durability, and high-quality customised furniture execution.",
         tags: [
@@ -1611,7 +1611,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "air-quality": {
     title: "Ready to Improve Your Air Quality?",
     tagline: "Premium Ready to Improve Your Air Quality? Services",
-    heroImage: "https://halo.ae/images/air_quality_dubai_r2/envirobiotics_family.png?w=3840&q=75",
+    heroImage: "/images/air_quality_dubai_r2/envirobiotics_family.png",
     desc: ["Book a free air quality consultation and let our experts assess your space. We'll provide a detailed proposal with ventilation solutions and transparent pricing for healthier indoor.", "Metro Retail provides advanced air purification, mold removal, environmental probiotics, HVAC cleaning, and humidity control solutions to ensure healthy indoor environments for your home or business.", "Advanced air purification systems for healthier indoor environments in homes and offices."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1619,7 +1619,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Improve Your Air Quality? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Improve Your Air Quality? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/air_quality_dubai_r2/all_products.jpg",
+        img: "/images/air_quality_dubai_r2/all_products.jpg",
         title: "Air Purification systems",
         description: "Advanced air purification systems for healthier indoor environments in homes and offices.",
         tags: [
@@ -1635,7 +1635,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "AIR PURIFICATION SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/air_quality_dubai_r2/probiotics.jpg",
+        img: "/images/air_quality_dubai_r2/probiotics.jpg",
         title: "Environment Probiotics",
         description: "Bio-based environmental probiotic solutions for long-term microbial air and surface protection.",
         tags: [
@@ -1651,7 +1651,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ENVIRONMENT PROBIOTICS →"
       },
       {
-        img: "https://halo.ae/images/air_quality_dubai_r2/humidity_control.webp",
+        img: "/images/air_quality_dubai_r2/humidity_control.webp",
         title: "Humidity control solutions",
         description: "Precision humidity control systems to prevent condensation, mold, and discomfort in interiors.",
         tags: [
@@ -1667,7 +1667,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "HUMIDITY CONTROL SOLUTIONS →"
       },
       {
-        img: "https://halo.ae/images/air_quality_dubai_r2/services_air_quality_air_quality_testing_and_assessment.webp",
+        img: "/images/air_quality_dubai_r2/services_air_quality_air_quality_testing_and_assessment.webp",
         title: "Air quality testing and assessment",
         description: "Certified indoor air quality testing and environmental assessment for homes and commercial spaces.",
         tags: [
@@ -1683,7 +1683,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "AIR QUALITY TESTING AND ASSESSMENT →"
       },
       {
-        img: "https://halo.ae/images/air-quality/biologic-mini.jpg",
+        img: "/images/air-quality/biologic-mini.jpg",
         title: "BioLogic Mini",
         description: "Cordless probiotic air and surface purifier with battery operation and USB recharging.",
         tags: [
@@ -1695,7 +1695,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "BIOLOGIC MINI →"
       },
       {
-        img: "https://halo.ae/images/air-quality/BA2080.jpg",
+        img: "/images/air-quality/BA2080.jpg",
         title: "BA2080",
         description: "Advanced probiotic purifier with HEPA filtration for whole-home air quality coverage.",
         tags: [
@@ -1711,7 +1711,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "contracting": {
     title: "Ready to Complete Your Contracting Project?",
     tagline: "Premium Ready to Complete Your Contracting Project? Services",
-    heroImage: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp?w=3840&q=75",
+    heroImage: "/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp",
     desc: ["Book a free contracting consultation and let our experts manage your project. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete execution.", "Expert structural work, additions, modifications, extensions, and G+1 construction with full authority-approved engineering and compliance.", "G+1 Construction tailored for reliable and high-quality contracting execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1719,7 +1719,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Complete Your Contracting Project? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Complete Your Contracting Project? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp",
+        img: "/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp",
         title: "G+1 Construction",
         description: "G+1 Construction tailored for reliable and high-quality contracting execution.",
         tags: [
@@ -1730,7 +1730,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "G+1 CONSTRUCTION →"
       },
       {
-        img: "https://halo.ae/images/contracting_dubai_r2/services_contracting_dubai_building_modifications.webp",
+        img: "/images/contracting_dubai_r2/services_contracting_dubai_building_modifications.webp",
         title: "Building Modifications",
         description: "Building Modifications tailored for reliable and high-quality contracting execution.",
         tags: [
@@ -1745,7 +1745,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "window-glazing": {
     title: "Ready to Install Window Glazing?",
     tagline: "Premium Ready to Install Window Glazing? Services",
-    heroImage: "https://halo.ae/images/window_glazing_dubai_r2/window-glazing.jpg?w=3840&q=75",
+    heroImage: "/images/window_glazing_dubai_r2/window-glazing.jpg",
     desc: ["Book a free glazing consultation and let our specialists install energy-efficient windows. We'll provide a detailed proposal with quality materials and transparent pricing.", "Expert window installation, replacement, low-E glass, sliding systems, folding doors, and thermal performance upgrades for residential and commercial properties.", "Window installation & replacement tailored for reliable and high-quality window glazing execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1753,7 +1753,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Window Glazing? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Window Glazing? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp",
+        img: "/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp",
         title: "Low-e solutions",
         description: "Low-e solutions tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1764,7 +1764,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "LOW-E SOLUTIONS →"
       },
       {
-        img: "https://halo.ae/images/window_glazing_dubai_r2/sliding_windows.jpg",
+        img: "/images/window_glazing_dubai_r2/sliding_windows.jpg",
         title: "Sliding window systems",
         description: "Sliding window systems tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1775,7 +1775,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SLIDING WINDOW SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/window_glazing_dubai_r2/foldable_doors.jpg",
+        img: "/images/window_glazing_dubai_r2/foldable_doors.jpg",
         title: "Folding doors and Bi fold systems",
         description: "Folding doors and Bi fold systems tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1786,7 +1786,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FOLDING DOORS AND BI FOLD SYSTEMS →"
       },
       {
-        img: "https://halo.ae/images/window_glazing_dubai_r2/thermal_window.jpg",
+        img: "/images/window_glazing_dubai_r2/thermal_window.jpg",
         title: "Thermal performance upgrades",
         description: "Thermal performance upgrades tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1801,7 +1801,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "tile-installation": {
     title: "Ready to Install Premium Tiles?",
     tagline: "Premium Ready to Install Premium Tiles? Services",
-    heroImage: "https://halo.ae/images/tile_installation_dubai_r2/porcellain.jpg?w=3840&q=75",
+    heroImage: "/images/tile_installation_dubai_r2/porcellain.jpg",
     desc: ["Book a free tile consultation and let our specialists install precision flooring and walls. We'll provide a detailed proposal with quality materials and transparent pricing.", "Professional installation of porcelain, ceramic, marble, mosaic, outdoor tiles, and large-format slabs with precision and quality craftsmanship.", "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1809,7 +1809,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Premium Tiles? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Premium Tiles? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/porcellain.jpg",
+        img: "/images/tile_installation_dubai_r2/porcellain.jpg",
         title: "Porcelain Tile Installation",
         description: "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1820,7 +1820,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PORCELAIN TILE INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/12.jpg",
+        img: "/images/tile_installation_dubai_r2/12.jpg",
         title: "Ceramic Tile Installation",
         description: "Ceramic Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1831,7 +1831,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CERAMIC TILE INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/marble_tile.jpg",
+        img: "/images/tile_installation_dubai_r2/marble_tile.jpg",
         title: "Marble Tile Installation",
         description: "Marble Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1842,7 +1842,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MARBLE TILE INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/mosaic_tile.jpg",
+        img: "/images/tile_installation_dubai_r2/mosaic_tile.jpg",
         title: "Mosaic Tile Installation",
         description: "Mosaic Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1853,7 +1853,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MOSAIC TILE INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg",
+        img: "/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg",
         title: "Outdoor Tile Installation",
         description: "Outdoor Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1864,7 +1864,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "OUTDOOR TILE INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/tile_installation_dubai_r2/large-slab-tile.jpg",
+        img: "/images/tile_installation_dubai_r2/large-slab-tile.jpg",
         title: "Large-Format Slab Installation",
         description: "Large-Format Slab Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1879,7 +1879,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "gypsum-works": {
     title: "Ready to Install Gypsum Works?",
     tagline: "Premium Ready to Install Gypsum Works? Services",
-    heroImage: "https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg?w=3840&q=75",
+    heroImage: "/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
     desc: ["Book a free gypsum consultation and let our craftsmen create custom ceilings and partitions. We'll provide a detailed proposal with precision work and transparent pricing for gypsum installations.", "Expert false ceilings, partitions, bulkheads, coves, niches, and detailed gypsum design for residential and commercial spaces.", "False Ceiling Installation tailored for reliable and high-quality gypsum works execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1887,7 +1887,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Gypsum Works? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Gypsum Works? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
+        img: "/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
         title: "False Ceiling Installation",
         description: "False Ceiling Installation tailored for reliable and high-quality gypsum works execution.",
         tags: [
@@ -1898,7 +1898,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FALSE CEILING INSTALLATION →"
       },
       {
-        img: "https://halo.ae/images/gypsum_works_dubai_r2/gypsum_partitions.jpg",
+        img: "/images/gypsum_works_dubai_r2/gypsum_partitions.jpg",
         title: "Gypsum Partitions",
         description: "Gypsum Partitions tailored for reliable and high-quality gypsum works execution.",
         tags: [
@@ -1909,7 +1909,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "GYPSUM PARTITIONS →"
       },
       {
-        img: "https://halo.ae/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp",
+        img: "/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp",
         title: "Detailed Gypsum Design",
         description: "Detailed Gypsum Design tailored for reliable and high-quality gypsum works execution.",
         tags: [
@@ -1924,7 +1924,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "property-audits": {
     title: "Ready to Audit Your Property?",
     tagline: "Premium Ready to Audit Your Property? Services",
-    heroImage: "https://halo.ae/images/property_audits_dubai_r2/residential_outdoor_living_pool_decking_and_water_features.webp?w=3840&q=75",
+    heroImage: "/images/property_audits_dubai_r2/residential_outdoor_living_pool_decking_and_water_features.webp",
     desc: ["Book a free property audit and let our engineers assess your space. We'll provide a detailed inspection report with recommendations and transparent pricing for audit services.", "Comprehensive technical audits for ongoing projects, renovation oversight, and quality verification to ensure your project meets the highest standards.", "Technical Audits tailored for reliable and high-quality property audits execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1932,7 +1932,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Audit Your Property? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Audit Your Property? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_technical_audits.webp",
+        img: "/images/property_audits_dubai_r2/services_property_audits_technical_audits.webp",
         title: "Technical Audits",
         description: "Technical Audits tailored for reliable and high-quality property audits execution.",
         tags: [
@@ -1943,7 +1943,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "TECHNICAL AUDITS →"
       },
       {
-        img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_ongoing_project_audits.webp",
+        img: "/images/property_audits_dubai_r2/services_property_audits_ongoing_project_audits.webp",
         title: "Ongoing Project Audits",
         description: "Ongoing Project Audits tailored for reliable and high-quality property audits execution.",
         tags: [
@@ -1954,7 +1954,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "ONGOING PROJECT AUDITS →"
       },
       {
-        img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_renovation_oversight.webp",
+        img: "/images/property_audits_dubai_r2/services_property_audits_renovation_oversight.webp",
         title: "Renovation Oversight",
         description: "Renovation Oversight tailored for reliable and high-quality property audits execution.",
         tags: [
@@ -1965,7 +1965,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "RENOVATION OVERSIGHT →"
       },
       {
-        img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_pre_purchase_inspections.webp",
+        img: "/images/property_audits_dubai_r2/services_property_audits_pre_purchase_inspections.webp",
         title: "Pre-Purchase Inspections",
         description: "Pre-Purchase Inspections tailored for reliable and high-quality property audits execution.",
         tags: [
@@ -1976,7 +1976,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PRE-PURCHASE INSPECTIONS →"
       },
       {
-        img: "https://halo.ae/images/property_audits_dubai_r2/services_property_audits_compliance_audits.webp",
+        img: "/images/property_audits_dubai_r2/services_property_audits_compliance_audits.webp",
         title: "Compliance Audits",
         description: "Compliance Audits tailored for reliable and high-quality property audits execution.",
         tags: [
@@ -1991,7 +1991,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "authority-approvals": {
     title: "Ready to Get Your Authority Approvals?",
     tagline: "Premium Ready to Get Your Authority Approvals? Services",
-    heroImage: "https://halo.ae/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp?w=3840&q=75",
+    heroImage: "/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp",
     desc: ["Book a free approvals consultation and let our DM-certified engineers handle your permits. We'll provide a detailed proposal with timelines and transparent pricing for all authority submissions.", "Navigating 's regulatory landscape requires expertise and precision. Metro Retail Interiors handles all drawings, submissions, and NOCs for Municipality, Development Authority (DDA), RERA, Civil Defense, and utilities. Whether you're opening an F&B venue, renovating a commercial space, or developing a residential project, we ensure full compliance and timely approvals so your project moves forward without delays.", "Municipality Approvals tailored for reliable and high-quality authority approvals execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1999,7 +1999,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Get Your Authority Approvals? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Get Your Authority Approvals? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "https://halo.ae/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp",
+        img: "/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp",
         title: "Municipality Approvals",
         description: "Municipality Approvals tailored for reliable and high-quality authority approvals execution.",
         tags: [
@@ -2010,7 +2010,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MUNICIPALITY APPROVALS →"
       },
       {
-        img: "https://halo.ae/images/authority_approvals_dubai_r2/dda_approvals.jpg",
+        img: "/images/authority_approvals_dubai_r2/dda_approvals.jpg",
         title: "DDA Approvals",
         description: "DDA Approvals tailored for reliable and high-quality authority approvals execution.",
         tags: [
@@ -2021,7 +2021,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "DDA APPROVALS →"
       },
       {
-        img: "https://halo.ae/images/authority_approvals_dubai_r2/rera_approvals.jpg",
+        img: "/images/authority_approvals_dubai_r2/rera_approvals.jpg",
         title: "RERA Approvals",
         description: "RERA Approvals tailored for reliable and high-quality authority approvals execution.",
         tags: [
@@ -2032,7 +2032,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "RERA APPROVALS →"
       },
       {
-        img: "https://halo.ae/images/authority_approvals_dubai_r2/civil_defence_noc_approval.jpg",
+        img: "/images/authority_approvals_dubai_r2/civil_defence_noc_approval.jpg",
         title: "Civil Defense NOCs",
         description: "Civil Defense NOCs tailored for reliable and high-quality authority approvals execution.",
         tags: [
@@ -2043,7 +2043,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CIVIL DEFENSE NOCS →"
       },
       {
-        img: "https://halo.ae/images/authority_approvals_dubai_r2/utility_connection.jpg",
+        img: "/images/authority_approvals_dubai_r2/utility_connection.jpg",
         title: "Utility Connections",
         description: "Utility Connections tailored for reliable and high-quality authority approvals execution.",
         tags: [
@@ -2061,54 +2061,54 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "wood-ceilings": {
     title: "Ready to Install Wood Ceilings?",
     tagline: "Book a free wood ceiling consultation and let our craftsmen create stunning overhead features. We'll provide a detailed proposal with custom designs and transparent pricing.",
-    heroImage: "https://halo.ae/images/joinery_wood_ceilings_r2/veneer_panels.jpg",
+    heroImage: "/images/joinery_wood_ceilings_r2/veneer_panels.jpg",
     contentTitle: "Premium Custom Wood Ceilings for Luxury Interiors",
     contentDesc: "Wood ceilings add warmth, depth, and architectural character to any space. Halo Interiors designs and manufactures bespoke wood ceiling systems in our in-house joinery facility, ensuring perfect alignment, clean detailing, and flawless installation. Whether for a villa, office, restaurant, or majlis, we craft statement ceilings that elevate your interiors.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/wood-ceilings-5.webp?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/wood-ceilings-5.webp",
         title: "Slatted Wood Ceilings",
         description: "Slatted Wood Ceilings tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Ceiling Systems", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/grooved_timber_ceilings.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/grooved_timber_ceilings.jpg",
         title: "Grooved Timber Ceilings",
         description: "Grooved Timber Ceilings tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Ceiling Systems", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/veneer_panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/veneer_panels.jpg?w=3840&q=75",
         title: "Veneer Panels with Concealed Joints",
         description: "Veneer Panels with Concealed Joints tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/Accoustic_wood_ceilings.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/Accoustic_wood_ceilings.jpg",
         title: "Acoustic Wood Ceilings",
         description: "Acoustic Wood Ceilings tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Ceiling Systems", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/coffered_ceiling.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/coffered_ceiling.jpg",
         title: "Coffered Ceilings",
         description: "Coffered Ceilings tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Ceiling Systems", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/floating_wood_panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/floating_wood_panels.jpg",
         title: "Floating & Suspended Wood Panels",
         description: "Floating & Suspended Wood Panels tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/integrated_light_wood_ceiling.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/integrated_light_wood_ceiling.jpg",
         title: "Integrated Lighting Ceilings",
         description: "Integrated Lighting Ceilings tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Lighting Design", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wood_ceilings_r2/curved_ceiling.jpg?w=3840&q=75",
+        img: "/images/joinery_wood_ceilings_r2/curved_ceiling.jpg",
         title: "Custom Patterns & Curved Designs",
         description: "Custom Patterns & Curved Designs tailored for reliable and high-quality wood ceilings execution.",
         tags: ["Ceiling Systems", "Commercial"]
@@ -2118,42 +2118,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "wardrobes": {
     title: "Ready to Transform Your Wardrobes?",
     tagline: "Book a free wardrobe consultation and let our experts assess your space. We'll provide a detailed proposal with custom walk-in wardrobes and transparent pricing for your storage solutions.",
-    heroImage: "https://halo.ae/images/wardrobes_r2/Ward8_HALO.webp",
+    heroImage: "/images/wardrobes_r2/Ward8_HALO.webp",
     contentTitle: "Bespoke Walk-In Wardrobes Made to Fit Your Lifestyle",
     contentDesc: "A walk-in wardrobe should be functional, elegant, and meticulously organized. Halo designs and manufactures custom wardrobe systems tailored to your needs.",
     gallery: [
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward1_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward1_HALO.webp",
         title: "Custom Wardrobes",
         description: "Custom Wardrobes tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward2_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward2_HALO.webp",
         title: "Walk-in Wardrobes",
         description: "Walk-in Wardrobes tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward3_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward3_HALO.webp",
         title: "Wardrobe Design",
         description: "Wardrobe Design tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward4_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward4_HALO.webp",
         title: "Wardrobe Solutions",
         description: "Wardrobe Solutions tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward5_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward5_HALO.webp",
         title: "Wardrobe Interiors",
         description: "Wardrobe Interiors tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/wardrobes_r2/Ward6_HALO.webp?w=3840&q=75",
+        img: "/images/wardrobes_r2/Ward6_HALO.webp",
         title: "Bespoke Wardrobes",
         description: "Bespoke Wardrobes tailored for reliable and high-quality residential execution.",
         tags: ["Custom Furniture", "Home"]
@@ -2163,42 +2163,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "wall-panels": {
     title: "Ready to Install Wall Panels?",
     tagline: "Book a free wall panel consultation and let our craftsmen create elegant wall treatments. We'll provide a detailed proposal with custom designs and transparent pricing.",
-    heroImage: "https://halo.ae/images/joinery_wall_panels_r2/fabric_panels.jpg",
+    heroImage: "/images/joinery_wall_panels_r2/fabric_panels.jpg",
     contentTitle: "Custom Wall Panels & Decorative Cladding",
     contentDesc: "Transform your walls with Halo's custom wall panels. From fluted wood panels and veneer cladding to fabric panels and PU-painted designs, we create stunning feature walls for living rooms, bedrooms, lobbies, and offices. All panels are precision-crafted in our Al Quoz joinery facility.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/fluted wood panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/fluted%20wood%20panels.jpg",
         title: "Fluted Wood Panels",
         description: "Fluted Wood Panels tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/veneer_panels-1.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/veneer_panels-1.jpg",
         title: "Veneer Panels",
         description: "Veneer Panels tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/geometric_designs_wood_panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/geometric_designs_wood_panels.jpg",
         title: "Groove Lines & Geometric Designs",
         description: "Groove Lines & Geometric Designs tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/fabric_panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/fabric_panels.jpg?w=3840&q=75",
         title: "Fabric Panels",
         description: "Fabric Panels tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/pu_painted_wall_panels.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/pu_painted_wall_panels.jpg",
         title: "PU-Painted Wall Panels",
         description: "PU-Painted Wall Panels tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
       },
       {
-        img: "https://halo.ae/images/joinery_wall_panels_r2/classic_molding.jpg?w=3840&q=75",
+        img: "/images/joinery_wall_panels_r2/classic_molding.jpg",
         title: "Classic Molding & Wainscoting",
         description: "Classic Molding & Wainscoting tailored for reliable and high-quality wall panels execution.",
         tags: ["Bespoke Joinery", "Commercial"]
@@ -2208,42 +2208,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "tv-units": {
     title: "Ready to Build Your TV Units?",
     tagline: "Book a free TV unit consultation and let our craftsmen design custom entertainment centers. We'll provide a detailed proposal with integrated solutions and transparent pricing.",
-    heroImage: "https://halo.ae/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg",
+    heroImage: "/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg",
     contentTitle: "Custom TV Units & Media Walls",
     contentDesc: "Halo creates stunning custom TV units and media walls with veneer cladding, PU-painted finishes, LED backlighting, integrated shelving, concealed wiring, and floating designs. Every unit is custom-built to your specifications in our joinery facility.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/services_joinery_tv_units_vaneer_cladding.webp?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/services_joinery_tv_units_vaneer_cladding.webp",
         title: "Veneer Cladding",
         description: "Veneer Cladding tailored for reliable and high-quality tv units execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/bed_headboards-1.jpg?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/bed_headboards-1.jpg",
         title: "PU-Painted Finishes",
         description: "PU-Painted Finishes tailored for reliable and high-quality tv units execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg?w=3840&q=75",
         title: "LED Backlighting",
         description: "LED Backlighting tailored for reliable and high-quality tv units execution.",
         tags: ["Lighting Design", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/services_joinery_tv_units_integrated_shelving.webp?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/services_joinery_tv_units_integrated_shelving.webp",
         title: "Integrated Shelving",
         description: "Integrated Shelving tailored for reliable and high-quality tv units execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/concealed_wiring.jpg?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/concealed_wiring.jpg",
         title: "Concealed Wiring",
         description: "Concealed Wiring tailored for reliable and high-quality tv units execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_tv_units_r2/floating_tv_unit.jpg?w=3840&q=75",
+        img: "/images/joinery_tv_units_r2/floating_tv_unit.jpg",
         title: "Floating Units & Marble Accents",
         description: "Floating Units & Marble Accents tailored for reliable and high-quality tv units execution.",
         tags: ["Marble Works", "Home"]
@@ -2253,42 +2253,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "residential-furniture": {
     title: "Ready to Create Your Residential Furniture?",
     tagline: "Book a free furniture consultation and let our craftsmen design bespoke home pieces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
-    heroImage: "https://halo.ae/images/joinery_residential_furniture_r2/shelving.jpg",
+    heroImage: "/images/joinery_residential_furniture_r2/shelving.jpg",
     contentTitle: "Bespoke Residential Furniture Crafted for Your Home",
     contentDesc: "Halo designs and manufactures custom residential furniture including bed frames & headboards, custom consoles, dining tables & benches, sideboards, shelving units, and coffee tables. Every piece is tailored to your style and space.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/bed_headboards.jpg?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/bed_headboards.jpg",
         title: "Bed Frames & Headboards",
         description: "Bed Frames & Headboards tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/consoles.jpg?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/consoles.jpg",
         title: "Custom Consoles",
         description: "Custom Consoles tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/dining_tables.jpg?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/dining_tables.jpg",
         title: "Dining Tables & Benches",
         description: "Dining Tables & Benches tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/services_joinery_residential_furniture_sideboards_and_credenzas.webp?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/services_joinery_residential_furniture_sideboards_and_credenzas.webp",
         title: "Sideboards & Credenzas",
         description: "Sideboards & Credenzas tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/shelving.jpg?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/shelving.jpg?w=3840&q=75",
         title: "Shelving Units",
         description: "Shelving Units tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
       },
       {
-        img: "https://halo.ae/images/joinery_residential_furniture_r2/coffee_table.jpg?w=3840&q=75",
+        img: "/images/joinery_residential_furniture_r2/coffee_table.jpg",
         title: "Coffee Tables & Storage Units",
         description: "Coffee Tables & Storage Units tailored for reliable and high-quality residential furniture execution.",
         tags: ["Custom Furniture", "Home"]
@@ -2298,42 +2298,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "reception-desks": {
     title: "Ready to Create Your Bespoke Reception Desk?",
     tagline: "Book a free consultation for custom reception desks. We'll design and manufacture impressive reception counters that make a lasting first impression.",
-    heroImage: "https://halo.ae/images/joinery_reception_desks_r2/reception_counter.jpg",
+    heroImage: "/images/joinery_reception_desks_r2/reception_counter.jpg",
     contentTitle: "Custom Reception Desks Crafted in Al Quoz",
     contentDesc: "Custom reception desks designed and manufactured in our in-house joinery facility. From corporate offices to luxury hotels, we create reception counters that make powerful first impressions. Every desk is crafted with premium materials, integrated technology, and flawless finishes to reflect your brand identity.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/reception_counter.jpg?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/reception_counter.jpg?w=3840&q=75",
         title: "Corporate Reception Desks",
         description: "Corporate Reception Desks tailored for reliable and high-quality reception desks execution.",
         tags: ["Bespoke Joinery", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/reception-desk-4.webp?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/reception-desk-4.webp",
         title: "Hotel Reception Counters",
         description: "Hotel Reception Counters tailored for reliable and high-quality reception desks execution.",
         tags: ["Custom Furniture", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/medical_reception_desk.jpg?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/medical_reception_desk.jpg",
         title: "Medical Reception Desks",
         description: "Medical Reception Desks tailored for reliable and high-quality reception desks execution.",
         tags: ["Bespoke Joinery", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/store_counters.jpg?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/store_counters.jpg",
         title: "Retail Reception Counters",
         description: "Retail Reception Counters tailored for reliable and high-quality reception desks execution.",
         tags: ["Custom Furniture", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/curved_reception_desk.jpg?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/curved_reception_desk.jpg",
         title: "Curved Reception Desks",
         description: "Curved Reception Desks tailored for reliable and high-quality reception desks execution.",
         tags: ["Bespoke Joinery", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_reception_desks_r2/backlit-reception-desk.jpg?w=3840&q=75",
+        img: "/images/joinery_reception_desks_r2/backlit-reception-desk.jpg",
         title: "Backlit Reception Desks",
         description: "Backlit Reception Desks tailored for reliable and high-quality reception desks execution.",
         tags: ["Lighting Design", "Offices"]
@@ -2343,42 +2343,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "office-furniture": {
     title: "Ready to Create Your Office Furniture?",
     tagline: "Book a free office furniture consultation and let our craftsmen design functional workspaces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
-    heroImage: "https://halo.ae/images/joinery_office_furniture_r2/conference_tables.jpg",
+    heroImage: "/images/joinery_office_furniture_r2/conference_tables.jpg",
     contentTitle: "Custom Office Furniture for Professional Spaces",
     contentDesc: "Halo creates bespoke office furniture including workstations, executive desks, filing cabinets, reception counters, conference tables, and storage walls. Designed for functionality and style, manufactured in our joinery facility.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/executive_workspace.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/executive_workspace.jpg",
         title: "Workstations",
         description: "Workstations tailored for reliable and high-quality office furniture execution.",
         tags: ["Custom Furniture", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/executive_desks.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/executive_desks.jpg",
         title: "Executive Desks",
         description: "Executive Desks tailored for reliable and high-quality office furniture execution.",
         tags: ["Bespoke Joinery", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/filling_cabinets.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/filling_cabinets.jpg",
         title: "Filing Cabinets",
         description: "Filing Cabinets tailored for reliable and high-quality office furniture execution.",
         tags: ["Bespoke Joinery", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/reception_counter.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/reception_counter.jpg",
         title: "Reception Counters",
         description: "Reception Counters tailored for reliable and high-quality office furniture execution.",
         tags: ["Custom Furniture", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/conference_tables.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/conference_tables.jpg?w=3840&q=75",
         title: "Conference Tables",
         description: "Conference Tables tailored for reliable and high-quality office furniture execution.",
         tags: ["Custom Furniture", "Offices"]
       },
       {
-        img: "https://halo.ae/images/joinery_office_furniture_r2/storage_walls.jpg?w=3840&q=75",
+        img: "/images/joinery_office_furniture_r2/storage_walls.jpg",
         title: "Storage Walls & Acoustic Paneling",
         description: "Storage Walls & Acoustic Paneling tailored for reliable and high-quality office furniture execution.",
         tags: ["Bespoke Joinery", "Offices"]
@@ -2388,42 +2388,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "kitchens": {
     title: "Ready to Transform Your Kitchens?",
     tagline: "Book a free kitchen design consultation and let our experts assess your space. We'll provide a detailed proposal with custom joinery and transparent pricing for your kitchen renovation.",
-    heroImage: "https://halo.ae/images/kitchens_r2/kitchen_12.webp?w=3840&q=75",
+    heroImage: "/images/kitchens_r2/kitchen_12.webp",
     contentTitle: "Custom Luxury Kitchens Built With Precision & Durability",
     contentDesc: "Your kitchen should be beautiful, functional, and built to last. Halo designs and manufactures custom kitchens in our in-house joinery facility, integrating premium materials, appliances, and intelligent storage.",
     gallery: [
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen1_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen1_HALO.webp",
         title: "Modern Kitchen Design",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen2_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen2_HALO.webp",
         title: "Contemporary Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen3_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen3_HALO.webp",
         title: "Bespoke Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen4_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen4_HALO.webp",
         title: "Luxury Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen5_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen5_HALO.webp",
         title: "Minimalist Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "https://halo.ae/images/kitchens_r2/Kitchen6_HALO.webp?w=3840&q=75",
+        img: "/images/kitchens_r2/Kitchen6_HALO.webp",
         title: "Classic Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
@@ -2433,42 +2433,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "feature-walls": {
     title: "Ready to Create Your Statement Feature Wall?",
     tagline: "Book a free consultation for custom feature walls. We'll design and manufacture stunning accent walls with premium materials, textures, and integrated lighting.",
-    heroImage: "https://halo.ae/images/LUXURY-MANSION1-copy.jpg",
+    heroImage: "/images/LUXURY-MANSION1-copy.jpg",
     contentTitle: "Bespoke Feature Walls Crafted in Al Quoz",
     contentDesc: "Custom feature walls designed and manufactured in our in-house joinery facility. From fluted wood panels to geometric designs, we create statement walls that transform spaces. Every feature wall is crafted with premium materials, precision engineering, and integrated lighting for maximum impact.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_fluted_wood_panels.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_fluted_wood_panels.webp",
         title: "Fluted Wood Panels",
         description: "Fluted Wood Panels tailored for reliable and high-quality feature walls execution.",
         tags: ["Bespoke Joinery", "Retail"]
       },
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_geometric_patterns.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_geometric_patterns.webp",
         title: "Geometric Patterns",
         description: "Geometric Patterns tailored for reliable and high-quality feature walls execution.",
         tags: ["Feature Walls", "Retail"]
       },
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_slatted_wood_walls.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_slatted_wood_walls.webp",
         title: "Slatted Wood Walls",
         description: "Slatted Wood Walls tailored for reliable and high-quality feature walls execution.",
         tags: ["Bespoke Joinery", "Retail"]
       },
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_backlit_feature_walls.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_backlit_feature_walls.webp",
         title: "Backlit Feature Walls",
         description: "Backlit Feature Walls tailored for reliable and high-quality feature walls execution.",
         tags: ["Lighting Design", "Retail"]
       },
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_veneer_feature_walls.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_veneer_feature_walls.webp",
         title: "Veneer Feature Walls",
         description: "Veneer Feature Walls tailored for reliable and high-quality feature walls execution.",
         tags: ["Decorative Finishes", "Retail"]
       },
       {
-        img: "https://halo.ae/images/joinery_feature_walls_r2/services_joinery_feature_walls_mixed_material_walls.webp?w=3840&q=75",
+        img: "/images/joinery_feature_walls_r2/services_joinery_feature_walls_mixed_material_walls.webp",
         title: "Mixed Material Walls",
         description: "Mixed Material Walls tailored for reliable and high-quality feature walls execution.",
         tags: ["Feature Walls", "Retail"]
@@ -2478,42 +2478,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "bar-counters-vanities": {
     title: "Ready to Create Your Custom Bar or Vanity?",
     tagline: "Book a free consultation for custom bar counters and vanities. We'll design and manufacture premium joinery pieces with integrated lighting and luxury finishes.",
-    heroImage: "https://halo.ae/images/LUXURY-MANSION1-copy.jpg",
+    heroImage: "/images/LUXURY-MANSION1-copy.jpg",
     contentTitle: "Bespoke Bar Counters & Vanities Crafted in Al Quoz",
     contentDesc: "Custom bar counters and bathroom vanities designed and manufactured in our in-house joinery facility. From luxury home bars to elegant bathroom vanities, we create statement pieces with premium materials, integrated lighting, and flawless finishes. Every piece is crafted to your exact specifications.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/bar_counters.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/bar_counters.jpg",
         title: "Home Bar Counters",
         description: "Home Bar Counters tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/residential_vanities_waterproof_finishes.webp?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/residential_vanities_waterproof_finishes.webp",
         title: "Bathroom Vanities",
         description: "Bathroom Vanities tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/commercial_bar_counters.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/commercial_bar_counters.jpg",
         title: "Commercial Bar Counters",
         description: "Commercial Bar Counters tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/powder_room_vanities.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/powder_room_vanities.jpg",
         title: "Powder Room Vanities",
         description: "Powder Room Vanities tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/wet_bar_units.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/wet_bar_units.jpg",
         title: "Wet Bar Units",
         description: "Wet Bar Units tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/custom_counter_tops.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/custom_counter_tops.jpg",
         title: "Custom Countertops",
         description: "Custom Countertops tailored for reliable and high-quality bar counters & vanities execution.",
         tags: ["Bespoke Joinery", "Hospitality"]
@@ -2523,22 +2523,22 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "default": {
     title: "Ready to Create Your Custom Space?",
     tagline: "Book a free consultation today. We'll design and manufacture premium bespoke pieces with flawless finishes.",
-    heroImage: "https://halo.ae/images/joinery/HALO-intro-section.webp?w=3840&q=75",
+    heroImage: "/images/joinery/HALO-intro-section.webp",
     contentTitle: "Bespoke Solutions Crafted in Al Quoz",
     contentDesc: "Custom pieces designed and manufactured in our in-house joinery facility. We create statement pieces with premium materials, integrated lighting, and flawless finishes. Every piece is crafted to your exact specifications.",
     gallery: [
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/bar_counters.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/bar_counters.jpg",
         title: "Premium Installation",
         tags: ["Bespoke Joinery", "Quality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/commercial_bar_counters.jpg?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/commercial_bar_counters.jpg",
         title: "Expert Craftsmanship",
         tags: ["Bespoke Joinery", "Quality"]
       },
       {
-        img: "https://halo.ae/images/joinery_bar_counters_vanities_r2/residential_vanities_waterproof_finishes.webp?w=3840&q=75",
+        img: "/images/joinery_bar_counters_vanities_r2/residential_vanities_waterproof_finishes.webp",
         title: "Flawless Finishes",
         tags: ["Bespoke Joinery", "Quality"]
       }
@@ -2550,12 +2550,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "texture-paints": {
     title: "Ready to Add Texture to Your Walls?",
     tagline: "Book a free consultation and let our specialists design luxury textured finishes. We'll provide transparent pricing and timeline.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
+    heroImage: "/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
     contentTitle: "Luxury Textured Finishes",
     contentDesc: "Add depth, movement, and visual character to premium interiors with our luxury textured finishes.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
         title: "Texture Paints",
         tags: ["Sand Texture", "Stucco Finish"]
       }
@@ -2564,12 +2564,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "venetian-plasters": {
     title: "Ready to Apply Venetian Plaster?",
     tagline: "Book a free consultation to explore smooth polished plaster finishes that bring timeless Italian elegance.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/textured_venetian.webp",
+    heroImage: "/images/decorative_paint_r2/textured_venetian.webp",
     contentTitle: "Timeless Italian Elegance",
     contentDesc: "Smooth polished plaster finishes that bring timeless Italian elegance to any space.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/textured_venetian.webp",
+        img: "/images/decorative_paint_r2/textured_venetian.webp",
         title: "Venetian Plasters",
         tags: ["Marmo Plaster", "Polished Plaster"]
       }
@@ -2578,12 +2578,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "feature-walls-paint": {
     title: "Ready to Create a Feature Wall?",
     tagline: "Book a free consultation for statement feature walls designed to anchor and elevate your interiors.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
+    heroImage: "/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
     contentTitle: "Statement Feature Walls",
     contentDesc: "Statement feature walls designed to anchor and elevate residential and commercial interiors.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
         title: "Feature Walls",
         tags: ["Accent Wall", "Statement Wall"]
       }
@@ -2592,12 +2592,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "limewash": {
     title: "Ready to Apply Limewash?",
     tagline: "Book a free consultation for soft matte limewash finishes with natural tone variation.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp",
+    heroImage: "/images/decorative_paint_r2/colored_lime_wash.webp",
     contentTitle: "Soft Matte Limewash Finishes",
     contentDesc: "Soft matte limewash finishes with natural tone variation and warmth for organic aesthetics.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/colored_lime_wash.webp",
+        img: "/images/decorative_paint_r2/colored_lime_wash.webp",
         title: "Limewash",
         tags: ["Limewash Paint", "Matte Lime"]
       }
@@ -2606,12 +2606,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "brick-finish": {
     title: "Ready for a Brick Finish?",
     tagline: "Book a free consultation for decorative brick-effect finishes.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
+    heroImage: "/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
     contentTitle: "Decorative Brick-Effect Finishes",
     contentDesc: "Decorative brick-effect finishes that add raw texture and urban charm to interiors.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
+        img: "/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
         title: "Brick Finish",
         tags: ["Exposed Brick", "Faux Brick"]
       }
@@ -2620,12 +2620,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "stencil-painting": {
     title: "Ready for Stencil Painting?",
     tagline: "Book a free consultation for custom stencil patterns for artistic walls.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/custom_stencils.webp",
+    heroImage: "/images/decorative_paint_r2/custom_stencils.webp",
     contentTitle: "Custom Stencil Patterns",
     contentDesc: "Custom stencil patterns for artistic walls with precise repeat detailing and visual impact.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/custom_stencils.webp",
+        img: "/images/decorative_paint_r2/custom_stencils.webp",
         title: "Stencil Painting",
         tags: ["Geometric Stencil", "Moroccan Pattern"]
       }
@@ -2634,12 +2634,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "pearl-finish": {
     title: "Ready for a Pearl Finish?",
     tagline: "Book a free consultation for subtle pearl sheen finishes.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/soft_pearl.webp",
+    heroImage: "/images/decorative_paint_r2/soft_pearl.webp",
     contentTitle: "Subtle Pearl Sheen",
     contentDesc: "Subtle pearl sheen that creates elegant light play and sophistication on walls.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/soft_pearl.webp",
+        img: "/images/decorative_paint_r2/soft_pearl.webp",
         title: "Pearl Finish",
         tags: ["Pearl Sheen", "Iridescent Finish"]
       }
@@ -2648,12 +2648,12 @@ Object.assign(NESTED_SERVICE_DATA, {
   "artistic-finishes": {
     title: "Ready for Artistic Finishes?",
     tagline: "Book a free consultation for bespoke decorative finishes crafted by artisan painters.",
-    heroImage: "https://halo.ae/images/decorative_paint_r2/artistic_patterns.webp",
+    heroImage: "/images/decorative_paint_r2/artistic_patterns.webp",
     contentTitle: "Bespoke Decorative Finishes",
     contentDesc: "Bespoke decorative finishes crafted by artisan painters for unique premium interiors.",
     gallery: [
       {
-        img: "https://halo.ae/images/decorative_paint_r2/artistic_patterns.webp",
+        img: "/images/decorative_paint_r2/artistic_patterns.webp",
         title: "Artistic Finishes",
         tags: ["Hand Painted", "Faux Finish"]
       }

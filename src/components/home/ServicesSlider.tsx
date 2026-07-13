@@ -70,7 +70,7 @@ const ServicesSlider = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
+            OUR CORE <span className="text-brand-gold italic font-normal ml-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-14 md:mb-20">

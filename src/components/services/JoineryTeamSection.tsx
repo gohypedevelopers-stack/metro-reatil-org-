@@ -4,7 +4,7 @@ import React from 'react';
 
 const JoineryTeamSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-white border-t border-neutral-100">
+    <section className="pt-12 md:pt-16 pb-20 md:pb-28 bg-white border-t border-neutral-100">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2
@@ -23,9 +23,9 @@ const JoineryTeamSection = () => {
           {/* Card 1 */}
           <div className="relative group overflow-hidden bg-neutral-900 border-b md:border-b-0 md:border-r border-neutral-200 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/J1.jpg" 
+              src="/images/joinery/J1_metro.png" 
               alt="Joinery craftsmanship" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
             
@@ -36,22 +36,22 @@ const JoineryTeamSection = () => {
             </div>
             
             <div className="absolute top-8 right-8 text-right">
-               <span className="text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-white/30 px-3 py-1.5 backdrop-blur-sm">
-                 THE HALO JOURNEY | 2024 FEATURE
+               <span className="text-white text-[9px] md:text-[10px] font-bold uppercase tracking-[0.5em] border border-white/30 px-3 py-1.5 backdrop-blur-sm">
+                 THE METRO JOURNEY | 2026 FEATURE
                </span>
             </div>
             
             <div className="absolute bottom-8 left-8">
-               <span className="text-white/50 font-serif text-xl tracking-widest uppercase">HALO <br/><span className="text-[10px] font-sans tracking-[0.3em]">INTERIORS LLC</span></span>
+               <span className="text-white/50 font-serif text-xl tracking-widest uppercase">METRO <br/><span className="text-[10px] font-sans tracking-[0.3em]">RETAIL LLC</span></span>
             </div>
           </div>
 
           {/* Card 2 */}
           <div className="relative group overflow-hidden bg-neutral-900 border-b md:border-b-0 md:border-r border-neutral-200 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/JOI19.webp" 
+              src="/images/joinery/JOI19_metro.png" 
               alt="Curated Craft" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
             
@@ -80,23 +80,23 @@ const JoineryTeamSection = () => {
                <span className="text-white text-sm md:text-base font-serif italic block mb-1">
                  Dubai's New Creative Wave
                </span>
-               <span className="text-white/50 font-serif text-2xl tracking-widest uppercase">HALO</span>
+               <span className="text-white/50 font-serif text-2xl tracking-widest uppercase">METRO</span>
             </div>
           </div>
 
           {/* Card 3 */}
           <div className="relative group overflow-hidden bg-neutral-900 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/JOI20.webp" 
+              src="/images/joinery/JOI20_metro.png" 
               alt="Precision and Pattern" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
             
             <div className="absolute top-1/2 left-8 right-8 -translate-y-1/2 text-center">
               <h3 className="text-xl md:text-2xl text-white font-serif tracking-tight uppercase mb-4">
                 PRECISION AND PATTERN:<br/>
-                <span className="italic text-brand-gold capitalize">The HALO Collective</span>
+                <span className="italic text-brand-gold capitalize">The METRO Collective</span>
               </h3>
               <p className="text-white/80 text-sm md:text-base font-serif italic">
                 Master artisans redefining surfaces<br/>for modern spaces.
@@ -111,9 +111,9 @@ const JoineryTeamSection = () => {
           {/* Card 4 */}
           <div className="relative group overflow-hidden bg-neutral-900 border-b md:border-b-0 md:border-r border-neutral-200 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/J4.jpg" 
+              src="/images/joinery/J4_metro.png" 
               alt="Joinery workshop detail" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
             
@@ -124,16 +124,16 @@ const JoineryTeamSection = () => {
             </div>
             
             <div className="absolute bottom-8 left-8">
-               <span className="text-white/50 font-serif text-xl tracking-widest uppercase">HALO <br/><span className="text-[10px] font-sans tracking-[0.3em]">CRAFTSMANSHIP</span></span>
+               <span className="text-white/50 font-serif text-xl tracking-widest uppercase">METRO <br/><span className="text-[10px] font-sans tracking-[0.3em]">CRAFTSMANSHIP</span></span>
             </div>
           </div>
 
           {/* Card 5 */}
           <div className="relative group overflow-hidden bg-neutral-900 border-b md:border-b-0 md:border-r border-neutral-200 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/J5.jpg" 
+              src="/images/joinery/J5_metro.png" 
               alt="Joinery precision" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
             
@@ -147,9 +147,9 @@ const JoineryTeamSection = () => {
           {/* Card 6 */}
           <div className="relative group overflow-hidden bg-neutral-900 aspect-[4/5] md:aspect-auto md:h-[600px]">
             <img 
-              src="https://halo.ae/images/joinery-portraits/J6.jpg" 
+              src="/images/joinery/J6_metro.png" 
               alt="Joinery tools" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1500ms]"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1500ms]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
             
@@ -163,7 +163,7 @@ const JoineryTeamSection = () => {
                <span className="text-white text-sm md:text-base font-serif italic block mb-1">
                  Behind the scenes
                </span>
-               <span className="text-white/50 font-serif text-2xl tracking-widest uppercase">HALO</span>
+               <span className="text-white/50 font-serif text-2xl tracking-widest uppercase">METRO</span>
             </div>
           </div>
         </div>

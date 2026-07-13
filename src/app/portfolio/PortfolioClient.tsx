@@ -382,26 +382,26 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
-          <div className="max-w-4xl mx-auto md:mx-0 text-center md:text-left">
+          <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block"
             >
               Metro Portfolio
             </span>
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 uppercase tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              Selected <br />
+              Selected{" "}
               <span
-                className="text-brand-gold italic font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                className="text-brand-gold italic font-normal normal-case"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Works Showcase
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto md:mx-0"
+              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke carpentry execution.
@@ -482,7 +482,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                       <img
                         src={proj.img}
                         alt={proj.name}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                       />
 
                       {/* Hover Overlay */}

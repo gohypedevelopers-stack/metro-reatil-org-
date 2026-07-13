@@ -44,7 +44,7 @@ const AboutSummary = () => {
                 >
                   <img
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                    className="w-full h-full object-cover transition-all duration-1000"
                     alt="Founder"
                   />
                 </motion.div>

@@ -1,71 +1,305 @@
 "use client";
 
-import { motion } from 'motion/react';
-import React from 'react';
-import { HardHat, Paintbrush, Building2, CheckCircle } from 'lucide-react';
-import { CircularTestimonials } from '../ui/circular-testimonials';
+import { motion, AnimatePresence } from 'motion/react';
+import React, { useState, useRef } from 'react';
+import { HardHat, Paintbrush, Building2, CheckCircle, ChevronUp, ChevronDown } from 'lucide-react';
 
-const ExpertiseSection = () => {
-  const expertise = [
-    { title: "Retail-First Design", desc: "Specialized layouts for fashion, lifestyle, and high-end retail brands.", icon: <Paintbrush className="w-8 h-8 text-brand-gold" /> },
-    { title: "In-House Manufacturing", desc: "Custom furniture and carpentry produced in our own specialized facilities.", icon: <Building2 className="w-8 h-8 text-brand-gold" /> },
-    { title: "Turnkey Execution", desc: "Complete setup from tiling to fire safety, ready for product placement.", icon: <CheckCircle className="w-8 h-8 text-brand-gold" /> },
-    { title: "Technical Excellence", desc: "Integrated AC, electrical, and civil works managed by one elite team.", icon: <HardHat className="w-8 h-8 text-brand-gold" /> }
-  ];
+const expertise = [
+  {
+    title: "Retail-First Design",
+    desc: "Specialized layouts for fashion, lifestyle, and high-end retail brands that drive footfall and conversion.",
+    icon: <Paintbrush className="w-10 h-10" style={{ color: '#E8A020' }} />,
+    num: "01",
+  },
+  {
+    title: "In-House Manufacturing",
+    desc: "Custom furniture and carpentry produced in our own 9,000 sq.ft specialized facilities with master artisans.",
+    icon: <Building2 className="w-10 h-10" style={{ color: '#E8A020' }} />,
+    num: "02",
+  },
+  {
+    title: "Turnkey Execution",
+    desc: "Complete setup from tiling to fire safety, handed over ready for product placement — on time, every time.",
+    icon: <CheckCircle className="w-10 h-10" style={{ color: '#E8A020' }} />,
+    num: "03",
+  },
+  {
+    title: "Technical Excellence",
+    desc: "Integrated AC, electrical, and civil works designed and managed by one elite multi-discipline team.",
+    icon: <HardHat className="w-10 h-10" style={{ color: '#E8A020' }} />,
+    num: "04",
+  },
+];
 
-  const carouselTestimonials = expertise.map(e => ({
-    name: e.title,
-    quote: e.desc,
-    designation: "EXPERTISE",
-    icon: e.icon
-  }));
+/* ─── Vertical Slider (desktop) ─── */
+const VerticalSlider = () => {
+  const [active, setActive] = useState(0);
+  const [dir, setDir]       = useState<1 | -1>(1); // 1 = down, -1 = up
+
+  const go = (next: number, direction: 1 | -1) => {
+    setDir(direction);
+    setActive((next + expertise.length) % expertise.length);
+  };
+
+  const variants = {
+    enter:  (d: number) => ({ y: d > 0 ?  60 : -60, opacity: 0 }),
+    center: ()          => ({ y: 0,                   opacity: 1 }),
+    exit:   (d: number) => ({ y: d > 0 ? -60 :  60,  opacity: 0 }),
+  };
+
+  const card = expertise[active];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR CORE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
-          </h2>
-        </div>
-        
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {expertise.map((e, i) => (
+    <div className="flex gap-8 items-stretch h-full">
+
+      {/* Side dot/step indicators */}
+      <div className="flex flex-col items-center justify-center gap-3 py-4">
+        {expertise.map((e, i) => (
+          <button
+            key={i}
+            onClick={() => go(i, i > active ? 1 : -1)}
+            className="group flex flex-col items-center gap-1"
+            aria-label={`Go to ${e.title}`}
+          >
+            <div
+              className="rounded-full transition-all duration-500"
+              style={{
+                width:  '8px',
+                height: i === active ? '32px' : '8px',
+                backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.25)',
+              }}
+            />
+          </button>
+        ))}
+      </div>
+
+      {/* Card + controls column */}
+      <div className="flex-1 flex flex-col gap-4">
+        {/* Up arrow */}
+        <button
+          onClick={() => go(active - 1, -1)}
+          className="self-start flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
+          style={{ borderColor: 'rgba(232,160,32,0.4)', color: '#E8A020' }}
+          aria-label="Previous"
+        >
+          <ChevronUp size={18} />
+        </button>
+
+        {/* Animated card */}
+        <div className="flex-1 overflow-hidden" style={{ minHeight: '320px' }}>
+          <AnimatePresence mode="wait" custom={dir}>
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-8 md:p-12 border border-neutral-100 hover:border-brand-gold transition-colors group text-center"
+              key={active}
+              custom={dir}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="h-full rounded-2xl p-10 flex flex-col justify-between"
+              style={{
+                backgroundColor: '#2A1E17',
+                border: '1px solid rgba(232,160,32,0.2)',
+                minHeight: '320px',
+              }}
             >
-              <div className="mb-8 flex justify-center group-hover:scale-110 transition-transform">{e.icon}</div>
-              <h3 className="text-lg font-serif text-brand-dark mb-4 uppercase tracking-widest">{e.title}</h3>
-              <p className="text-neutral-400 text-sm font-light leading-relaxed">{e.desc}</p>
+              {/* top: number + icon */}
+              <div className="flex items-start justify-between">
+                <span
+                  className="text-6xl font-serif leading-none select-none"
+                  style={{ color: 'rgba(232,160,32,0.15)', fontFamily: 'var(--font-cinzel), serif' }}
+                >
+                  {card.num}
+                </span>
+                <div
+                  className="p-3 rounded-full"
+                  style={{ backgroundColor: 'rgba(232,160,32,0.1)', boxShadow: '0 0 0 1px rgba(232,160,32,0.25)' }}
+                >
+                  {card.icon}
+                </div>
+              </div>
+
+              {/* bottom: divider + title + desc */}
+              <div>
+                <div className="w-10 h-[1px] mb-5" style={{ backgroundColor: '#E8A020' }} />
+                <h3
+                  className="text-xl uppercase tracking-widest mb-4 font-serif"
+                  style={{ color: '#ffffff', fontFamily: 'var(--font-cinzel), serif' }}
+                >
+                  {card.title}
+                </h3>
+                <p className="text-sm font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  {card.desc}
+                </p>
+              </div>
             </motion.div>
-          ))}
+          </AnimatePresence>
         </div>
 
-        {/* Mobile Circular Carousel */}
-        <div className="block md:hidden w-full overflow-hidden">
-          <CircularTestimonials
-            testimonials={carouselTestimonials}
-            autoplay={true}
-            colors={{
-              name: "#111111",
-              designation: "#f39c12", // brand-gold
-              testimony: "#666666",
-              arrowBackground: "#111111", // brand-dark
-              arrowForeground: "#ffffff",
-              arrowHoverBackground: "#f39c12", // brand-gold
+        {/* Down arrow */}
+        <button
+          onClick={() => go(active + 1, 1)}
+          className="self-start flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
+          style={{ borderColor: 'rgba(232,160,32,0.4)', color: '#E8A020' }}
+          aria-label="Next"
+        >
+          <ChevronDown size={18} />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+/* ─── Mobile Horizontal Swipe Slider ─── */
+const MobileSlider = () => {
+  const [active, setActive] = useState(0);
+  const [dir, setDir]       = useState<1 | -1>(1);
+  const touchStartX         = useRef<number>(0);
+  const touchStartY         = useRef<number>(0);
+
+  const go = (next: number, direction: 1 | -1) => {
+    setDir(direction);
+    setActive((next + expertise.length) % expertise.length);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = Math.abs(e.changedTouches[0].clientY - touchStartY.current);
+    if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+      dx < 0 ? go(active + 1, 1) : go(active - 1, -1);
+    }
+  };
+
+  const variants = {
+    enter:  (d: number) => ({ x: d > 0 ?  60 : -60, opacity: 0 }),
+    center: ()          => ({ x: 0,                   opacity: 1 }),
+    exit:   (d: number) => ({ x: d > 0 ? -60 :  60,  opacity: 0 }),
+  };
+
+  const card = expertise[active];
+
+  return (
+    <div className="relative w-full select-none">
+      <div className="overflow-hidden" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{ touchAction: 'pan-y' }}>
+        <AnimatePresence mode="wait" custom={dir}>
+          <motion.div
+            key={active}
+            custom={dir}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            className="flex flex-col items-center text-center rounded-2xl shadow-2xl px-8 py-12 mx-2"
+            style={{ backgroundColor: '#2A1E17', border: '1px solid rgba(232,160,32,0.25)' }}
+          >
+            <div className="mb-6 p-4 rounded-full" style={{ backgroundColor: 'rgba(232,160,32,0.12)', boxShadow: '0 0 0 1px rgba(232,160,32,0.3)' }}>
+              {card.icon}
+            </div>
+            <div className="w-8 h-[1px] mb-5" style={{ backgroundColor: '#E8A020' }} />
+            <h3 className="text-base font-serif uppercase tracking-widest mb-4" style={{ fontFamily: 'var(--font-cinzel), serif', color: '#ffffff' }}>
+              {card.title}
+            </h3>
+            <p className="text-sm font-light leading-relaxed max-w-[260px]" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              {card.desc}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* dots */}
+      <div className="flex items-center justify-center gap-2 mt-8">
+        {expertise.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => go(i, i > active ? 1 : -1)}
+            className="rounded-full transition-all duration-300"
+            style={{
+              width:  i === active ? '24px' : '8px',
+              height: '8px',
+              backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.3)',
             }}
-            fontSizes={{
-              name: "1.25rem",
-              designation: "0.75rem",
-              quote: "1rem",
-            }}
+            aria-label={`Go to slide ${i + 1}`}
           />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+/* ─── Main Section ─── */
+const ExpertiseSection = () => {
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+
+        {/* ── Desktop / Laptop: split layout ── */}
+        <div className="hidden md:grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+          {/* Left: heading block */}
+          <div className="flex flex-col justify-center">
+            <span
+              className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6"
+              style={{ color: '#E8A020' }}
+            >
+              What Sets Us Apart
+            </span>
+            <h2
+              className="text-5xl lg:text-6xl xl:text-7xl font-serif text-brand-dark uppercase leading-tight mb-8"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              OUR CORE <br />
+              <span
+                className="block mt-2"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
+              >
+                <em>Technical Expertise</em>
+              </span>
+            </h2>
+            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-md">
+              Three decades of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
+            </p>
+
+            {/* progress bar */}
+            <div className="mt-10 space-y-3">
+              {expertise.map((e, i) => (
+                <div key={i} className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold"
+                  style={{ color: '#2A1E17', opacity: 0.35 }}>
+                  <span>{e.num}</span>
+                  <span>{e.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: vertical slider */}
+          <div style={{ minHeight: '420px' }}>
+            <VerticalSlider />
+          </div>
+        </div>
+
+        {/* ── Mobile: heading + horizontal slider ── */}
+        <div className="block md:hidden">
+          <div className="text-center mb-12">
+            <h2
+              className="text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              OUR CORE <br />
+              <span
+                className="block mt-2 text-3xl"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
+              >
+                <em>Technical Expertise</em>
+              </span>
+            </h2>
+          </div>
+          <MobileSlider />
         </div>
 
       </div>

@@ -95,7 +95,7 @@ export default function DesignStylesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-28 md:pt-36">
         <Image
           src="/wide_mall_hero.png"
           alt="Interior Design Styles"
@@ -105,7 +105,7 @@ export default function DesignStylesPage() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Discover Your Perfect <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Design Style</span>
           </h1>
           <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed mb-8">
@@ -123,8 +123,7 @@ export default function DesignStylesPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
               <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Every Style <br />
-                <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executed to Perfection</span>
+                Every Style <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executed to Perfection</span>
               </h2>
               <p className="text-lg text-neutral-600 leading-relaxed text-center lg:text-left">
                 From warm Mediterranean venues to ultra-luxury modern retail spaces, Metro Retail Solutions is trusted to bring every design style to life with accuracy and finesse. Explore our portfolio of executed styles and discover the perfect aesthetic for your next project.

@@ -38,24 +38,23 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="py-16 md:py-24 bg-brand-dark border-b border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+          <div className="max-w-3xl mx-auto text-center">
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block">
               Get In Touch
             </span>
             <h1
-              className="mobile-heading-balance text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight uppercase"
+              className="mobile-heading-balance text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase"
               style={{ fontFamily: "var(--font-cinzel), serif" }}
             >
               {"LET'S DISCUSS YOUR "}
-              <br className="hidden md:block" />
               <span
-                className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap font-normal"
+                className="text-brand-gold italic font-normal normal-case whitespace-nowrap"
                 style={{ fontFamily: "var(--font-playfair), serif", textTransform: "none" }}
               >
                 Next Project
               </span>
             </h1>
-            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-xl mx-auto md:mx-0">
+            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-xl mx-auto text-center">
               Whether you have a specific project in mind or just want to learn more about our services, we are here to help.
             </p>
           </div>
@@ -168,7 +167,7 @@ export default function ContactPage() {
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"
-          className="grayscale hover:grayscale-0 transition-all duration-1000"
+          className="transition-all duration-1000"
           referrerPolicy="no-referrer-when-downgrade"
           title="Metro Retail Solutions Office Location"
         />

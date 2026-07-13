@@ -48,10 +48,10 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
     { title: "Fitout", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600", category: "FITOUT EXECUTION", id: "fitout" },
     { title: "Carpentry", image: "https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&q=80&w=600", category: "bespoke carpentry", id: "carpentry" },
     { title: "Kitchens & Wardrobes", image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600", category: "KITCHEN WARDROBE", id: "kitchens" },
-    { title: "Decorative Paints", image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80&w=600", category: "DECORATIVE FINISHES", id: "decorative-paints" },
+    { title: "Decorative Paints", image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80&w=600", category: "DECORATIVE FINISHES", id: "decorative-paint" },
     { title: "Microcement", image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=600", category: "MICROCEMENT FINISHES", id: "microcement" },
     { title: "Terrazzo Floors", image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=600", category: "TERRAZZO CRAFT", id: "terrazzo" },
-    { title: "Landscaping & Pools", image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=600", category: "LANDSCAPE POOLS", id: "landscaping" },
+    { title: "Landscaping & Pools", image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=600", category: "LANDSCAPE POOLS", id: "landscaping-pools" },
     { title: "Automation", image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=600", category: "SMART AUTOMATION", id: "automation" },
     { title: "Stretch Ceiling", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600", category: "CEILING SYSTEMS", id: "stretch-ceiling" },
     { title: "Halo Shield", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600", category: "THERMAL PROTECTION", id: "halo-shield" },
@@ -61,7 +61,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
     { title: "Venetian Plasters", image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=600", category: "VENETIAN PLASTER", id: "venetian-plasters" },
     { title: "Feature Walls", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=600", category: "FEATURE WALLS", id: "feature-walls" },
     { title: "Artistic Finishes", image: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=600", category: "ARTISTIC FINISHES", id: "artistic-finishes" },
-    { title: "Custom Furniture", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600", category: "CUSTOM FURNITURE", id: "custom-furniture" },
+    { title: "Custom Furniture", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600", category: "CUSTOM FURNITURE", id: "customised-furniture" },
     { title: "Air Quality", image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=600", category: "AIR QUALITY SYSTEMS", id: "air-quality" },
     { title: "Contracting", image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600", category: "GENERAL CONTRACTING", id: "contracting" },
     { title: "Window Glazing", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600", category: "WINDOW GLAZING", id: "window-glazing" },
@@ -73,7 +73,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
   ];
 
   return (
-    <section className="py-20 bg-white border-y border-neutral-100 relative overflow-hidden">
+    <section className="pt-20 pb-10 bg-white border-y border-neutral-100 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-14 md:mb-20 gap-8 md:gap-10">
           <div className="flex flex-col items-center md:items-start">
@@ -107,7 +107,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
                 <img
                   src={s.image}
                   alt={s.title}
-                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
 
@@ -147,7 +147,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
             plugins={[plugin.current]}
             className="w-full"
           >
-            <CarouselContent>
+            <CarouselContent className="py-10 -my-10">
               {services.map((s, i) => (
                 <CarouselItem key={i} className={`pl-6 ${forceCarousel ? 'basis-full sm:basis-1/2 md:basis-1/3' : 'basis-[85%]'}`}>
                   <a
@@ -159,7 +159,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
                       <img
                         src={s.image}
                         alt={s.title}
-                        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                       />
                       <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
 

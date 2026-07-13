@@ -79,7 +79,7 @@ const CATEGORY_DETAILS: Record<string, {
       {
         title: "Reception & Lounges",
         slug: "reception",
-        image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
         desc: "Stunning brand entryways with custom marble desks and feature lights."
       }
     ]
@@ -134,22 +134,22 @@ export default function CategoryLandingPage() {
       {/* Dynamic Header */}
       <section className="py-20 md:py-28 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="max-w-3xl text-left">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Metro Portfolio</span>
+          <div className="max-w-3xl text-center mx-auto">
+            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center">Metro Portfolio</span>
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-8 leading-tight uppercase"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark mb-4 leading-tight uppercase text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
             </h1>
             <p
-              className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed mb-6"
+              className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed mb-6 text-center mx-auto max-w-2xl"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               {data.tagline}
             </p>
             <div className="w-16 h-[2px] bg-brand-gold my-8" />
-            <p className="text-neutral-500 text-base font-light leading-relaxed">
+            <p className="text-neutral-500 text-base font-light leading-relaxed text-center mx-auto max-w-2xl">
               {data.desc}
             </p>
           </div>

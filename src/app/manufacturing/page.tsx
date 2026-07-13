@@ -54,16 +54,16 @@ const ManufacturingPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-brand-dark/60" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
-          <div className="max-w-4xl text-left">
-            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block">Our Facility</span>
+          <div className="max-w-4xl text-center mx-auto">
+            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center">Our Facility</span>
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 uppercase tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1] text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               In-House Manufacturing
             </h1>
             <p
-              className="text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed"
+              className="text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Our 9,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
@@ -166,7 +166,7 @@ const ManufacturingPage = () => {
                 <img
                   src={img}
                   alt={`Factory view ${i + 1}`}
-                  className="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-80 group-hover:opacity-100"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
             ))}

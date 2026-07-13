@@ -210,7 +210,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               <img
                 src={project.img}
                 alt={project.name}
-                className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-[1200ms] ease-out"
+                className="w-full h-full object-cover group-hover:scale-[1.02] transition-all duration-[1200ms] ease-out"
               />
               <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
 
@@ -379,7 +379,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                   <img
                     src={suggested.img}
                     alt={suggested.name}
-                    className="h-full w-full object-cover grayscale-[20%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-brand-dark/10 transition-colors group-hover:bg-brand-dark/30" />
                 </div>

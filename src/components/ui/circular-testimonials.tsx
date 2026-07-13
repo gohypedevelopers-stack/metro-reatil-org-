@@ -298,6 +298,7 @@ export const CircularTestimonials = ({
           max-width: 56rem;
           padding: 2rem;
           margin: 0 auto;
+          touch-action: pan-y;
         }
         .testimonial-grid {
           display: grid;
@@ -308,6 +309,7 @@ export const CircularTestimonials = ({
           width: 100%;
           height: 20rem;
           perspective: 1000px;
+          touch-action: pan-y;
         }
         .testimonial-image {
           position: absolute;
@@ -316,6 +318,7 @@ export const CircularTestimonials = ({
           object-fit: cover;
           border-radius: 1.5rem;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          touch-action: pan-y;
         }
         .testimonial-content {
           display: flex;

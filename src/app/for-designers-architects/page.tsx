@@ -64,7 +64,7 @@ export default function DesignersArchitectsPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Ready to Partner With <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro?</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
@@ -77,8 +77,7 @@ export default function DesignersArchitectsPage() {
       <section className="py-24 bg-white text-gray-900 text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Flawless Execution <br className="hidden md:block" />
-            <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>for Interior Designers & Architects</span>
+            Flawless Execution <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>for Interior Designers & Architects</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Metro Retail Solutions is the trusted execution partner for interior designers and architects. With approved engineers, in-house manufacturing, MEP coordination, and technical expertise, we bring your design vision to life with precision and quality. From concept to completion, we handle the complex technical execution while you focus on design.

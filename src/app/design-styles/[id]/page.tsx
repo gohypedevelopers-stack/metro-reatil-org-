@@ -23,18 +23,18 @@ export default function DesignStyleDetailPage() {
           className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full">
-          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center gap-2">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center">
+          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
             <PenTool size={12} /> Design Execution Style
           </span>
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-serif text-white uppercase tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-lg md:text-xl font-light italic mt-4 border-l-2 border-brand-gold pl-5 max-w-2xl"
+            className="text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}
@@ -171,7 +171,7 @@ export default function DesignStyleDetailPage() {
                 <img
                   src={imgUrl}
                   alt={`${data.title} Example`}
-                  className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
             ))}

@@ -91,7 +91,7 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
         <img 
           src={phase.img} 
           alt={phase.title} 
-          className="w-full h-full object-cover grayscale opacity-40 hover:opacity-75 hover:scale-105 transition-all duration-[1500ms]"
+          className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-[1500ms]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent" />
         
