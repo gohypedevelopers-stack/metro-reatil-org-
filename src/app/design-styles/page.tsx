@@ -153,7 +153,7 @@ export default function DesignStylesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {styles.map((style, index) => (
-              <div key={index} className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer">
+              <div key={index} id={style.name.toLowerCase().replace(/\s+/g, '-')} className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer">
                 <Image
                   src={style.image}
                   alt={style.name}
