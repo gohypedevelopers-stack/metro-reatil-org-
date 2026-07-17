@@ -16,7 +16,7 @@ export default function DesignStyleDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[60vh] flex flex-col justify-end pt-32 md:pt-40 pb-16 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[35vh] flex flex-col items-center justify-center pt-16 bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
@@ -114,6 +114,59 @@ export default function DesignStyleDetailPage() {
         </div>
       </section>
 
+      {/* PAGE INTRO SECTION */}
+      {data.pageIntro && (
+        <section className="py-16 md:py-24 bg-white border-b border-neutral-100">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
+            <h2
+              className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {data.pageIntro.heading}
+            </h2>
+            <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto">
+              {data.pageIntro.text}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* SUB-SERVICES GRID */}
+      {data.subServices && (
+        <section className="py-20 md:py-28 bg-neutral-50 border-b border-neutral-100">
+          <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+            <div className="text-center mb-16">
+              <h2
+                className="text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {data.title} <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Elements We Create</span>
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {data.subServices.map((service: any, idx: number) => (
+                <div key={idx} className="group cursor-pointer bg-white border border-neutral-100 hover:shadow-xl transition-all duration-500">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
+                  </div>
+                  <div className="p-8 text-center md:text-left">
+                    <h3 className="text-xl font-serif text-brand-dark mb-4">{service.title}</h3>
+                    <p className="text-neutral-500 text-sm font-light leading-relaxed">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      
+
       {/* KEY ELEMENTS / METODOLOGY */}
       <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
@@ -149,35 +202,7 @@ export default function DesignStyleDetailPage() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section className="py-20 md:py-28 bg-neutral-900">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="mb-14 md:w-2/3">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
-            <h2
-              className="text-3xl md:text-5xl font-serif text-white uppercase tracking-tight mb-4"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              Featured {data.title} Work
-            </h2>
-            <p className="text-neutral-400 font-light text-base">
-              Examine the precision and quality of our completed style installations.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {data.gallery.map((imgUrl: string, i: number) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden group border border-neutral-800 bg-black">
-                <img
-                  src={imgUrl}
-                  alt={`${data.title} Example`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
     </div>
   );

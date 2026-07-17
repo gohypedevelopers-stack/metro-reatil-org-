@@ -71,17 +71,17 @@ const SERVICES_LINKS = [
 
 const STYLES_LINKS = [
   { name: 'ALL STYLES', href: '/design-styles' },
-  { name: 'CONTEMPORARY', href: '/design-styles#contemporary' },
-  { name: 'MINIMALIST', href: '/design-styles#minimalist' },
-  { name: 'NEOCLASSICAL', href: '/design-styles#neoclassical' },
-  { name: 'MEDITERRANEAN', href: '/design-styles#mediterranean' },
-  { name: 'JAPANDI', href: '/design-styles#japandi' },
-  { name: 'ARABIAN', href: '/design-styles#arabian' },
-  { name: 'FARMHOUSE', href: '/design-styles#farmhouse' },
-  { name: 'INDUSTRIAL', href: '/design-styles#industrial' },
-  { name: 'ULTRA LUXURY', href: '/design-styles#ultra-luxury' },
-  { name: 'BOHO CHIC', href: '/design-styles#boho-chic' },
-  { name: 'WELLNESS', href: '/design-styles#wellness' }
+  { name: 'CONTEMPORARY', href: '/design-styles/contemporary' },
+  { name: 'MINIMALIST', href: '/design-styles/minimalist' },
+  { name: 'NEOCLASSICAL', href: '/design-styles/neoclassical' },
+  { name: 'MEDITERRANEAN', href: '/design-styles/mediterranean' },
+  { name: 'JAPANDI', href: '/design-styles/japandi' },
+  { name: 'ARABIAN', href: '/design-styles/arabian' },
+  { name: 'FARMHOUSE', href: '/design-styles/farmhouse' },
+  { name: 'INDUSTRIAL', href: '/design-styles/industrial' },
+  { name: 'ULTRA LUXURY', href: '/design-styles/ultra-luxury' },
+  { name: 'BOHO CHIC', href: '/design-styles/boho-chic' },
+  { name: 'WELLNESS', href: '/design-styles/wellness' }
 ];
 
 const MORE_LINKS = [

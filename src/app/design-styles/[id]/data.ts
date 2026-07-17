@@ -4,6 +4,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "contemporary": {
     title: "Contemporary Style",
     tagline: "Current forms, clean lines, and balanced sophistication.",
+    pageIntro: {
+      "heading": "Sleek, Clean & Stylish",
+      "text": "Contemporary design embraces clean lines, open spaces, and a sophisticated blend of materials. Metro creates refined contemporary interiors that feel modern, functional, and timeless."
+    },
+    subServices: [
+      {
+        "title": "Open Spaces",
+        "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80",
+        "description": "Open Spaces tailored for cohesive and refined contemporary interiors."
+      },
+      {
+        "title": "Sophisticated blend of materials",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
+        "description": "Sophisticated blend of materials tailored for cohesive and refined contemporary interiors."
+      },
+      {
+        "title": "Design embraced with clean lines",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        "description": "Design embraced with clean lines tailored for cohesive and refined contemporary interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80",
     desc: [
       "Contemporary design refers to the aesthetics of the present moment. Our approach to contemporary design embraces clean architectural lines, open spaces, and a balanced mix of textures to create environments that feel current yet timeless.",
@@ -30,6 +51,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "minimalist": {
     title: "Minimalist Style",
     tagline: "Clarity, restraint, and purposeful spatial flow.",
+    pageIntro: {
+      "heading": "Calm, Functional & Clutter-Free",
+      "text": "Calm, functional, clutter-free interiors using clean geometry and muted palettes."
+    },
+    subServices: [
+      {
+        "title": "Clean space planning",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
+        "description": "Clean space planning tailored for cohesive and refined minimalist interiors."
+      },
+      {
+        "title": "Minimal Lighting Plan",
+        "image": "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80",
+        "description": "Minimal Lighting Plan tailored for cohesive and refined minimalist interiors."
+      },
+      {
+        "title": "Seamless Finishes",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80",
+        "description": "Seamless Finishes tailored for cohesive and refined minimalist interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
     desc: [
       "Minimalism is about focusing on the essentials. We design minimalist spaces where every form, surface, and object is purposeful, stripping away excess to create calm, breathable, and highly functional environments.",
@@ -56,6 +98,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "neoclassical": {
     title: "Neoclassical Style",
     tagline: "Timeless detailing with modern comfort and proportion.",
+    pageIntro: {
+      "heading": "Timeless Elegance for Luxury Homes",
+      "text": "Soft moulding, subtle ornamentation, and grand proportions define neoclassical interiors. Metro combines classical elements with contemporary craftsmanship to create sophisticated spaces."
+    },
+    subServices: [
+      {
+        "title": "Statement Ceilings",
+        "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80",
+        "description": "Statement Ceilings tailored for cohesive and refined neoclassical interiors."
+      },
+      {
+        "title": "Wall Panneling",
+        "image": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80",
+        "description": "Wall Panneling tailored for cohesive and refined neoclassical interiors."
+      },
+      {
+        "title": "Warm Comfortable Lighting",
+        "image": "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80",
+        "description": "Warm Comfortable Lighting tailored for cohesive and refined neoclassical interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80",
     desc: [
       "Neoclassical design brings the elegance of classical architecture into the modern era. We balance symmetrical layouts, delicate moldings, and classical columns with contemporary colors and furniture.",
@@ -82,6 +145,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "mediterranean": {
     title: "Mediterranean Style",
     tagline: "Earthy palettes, natural textures, and relaxed elegance.",
+    pageIntro: {
+      "heading": "Warm, Textured, and Effortlessly Luxurious",
+      "text": "Mediterranean interiors blend natural textures, soft earthy tones, and organic forms to create warm, serene living spaces inspired by seaside villas and sunlit coastlines. Metro Interiors brings this timeless style to Our luxury homes with authentic craftsmanship and elegant detailing."
+    },
+    subServices: [
+      {
+        "title": "Natural Texture",
+        "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80",
+        "description": "Natural Texture tailored for cohesive and refined mediterranean interiors."
+      },
+      {
+        "title": "Organic Forms",
+        "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80",
+        "description": "Organic Forms tailored for cohesive and refined mediterranean interiors."
+      },
+      {
+        "title": "Soft Earthy Tones",
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80",
+        "description": "Soft Earthy Tones tailored for cohesive and refined mediterranean interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80",
     desc: [
       "Inspired by the southern European coast, Mediterranean design is warm, organic, and relaxed. We blend textured plaster walls, arched doorways, terracotta accents, and rustic wood to create inviting, sunny spaces.",
@@ -108,6 +192,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "japandi": {
     title: "Japandi Style",
     tagline: "Calm minimalism, natural materials, and functional warmth.",
+    pageIntro: {
+      "heading": "Minimal, Natural & Zen-Inspired Living",
+      "text": "Japandi combines Japanese minimalism with Scandinavian warmth, resulting in interiors that are serene, functional, and elegantly simple. Metro specializes in delivering precision-made Japandi interiors using natural materials and clean detailing."
+    },
+    subServices: [
+      {
+        "title": "Balanced Symmetry",
+        "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80",
+        "description": "Balanced Symmetry tailored for cohesive and refined japandi interiors."
+      },
+      {
+        "title": "Clean lines and Calming forms",
+        "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80",
+        "description": "Clean lines and Calming forms tailored for cohesive and refined japandi interiors."
+      },
+      {
+        "title": "Light textured walls",
+        "image": "https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80",
+        "description": "Light textured walls tailored for cohesive and refined japandi interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80",
     desc: [
       "Japandi is the fusion of Japanese rustic minimalism and Scandinavian functional warmth. We craft spaces that combine the simplicity and organic texture of Wabi-Sabi with Scandi comfort and hygge.",
@@ -134,6 +239,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "arabian": {
     title: "Arabian Style",
     tagline: "Ornate craftsmanship, layered textiles, and warm jewel tones.",
+    pageIntro: {
+      "heading": "Heritage Craftsmanship, Refined for Modern Living",
+      "text": "Arabian interiors celebrate the rich heritage and craftsmanship of the region, weaving together ornate detailing, layered textiles, and warm jewel tones to create spaces of timeless hospitality. Metro Interiors brings this authentic style to homes with mashrabiya screens, hand-carved woodwork, plush majlis seating, and considered detailing—rooted in tradition, refined for modern living."
+    },
+    subServices: [
+      {
+        "title": "Mashrabiya & Carved Screens",
+        "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80",
+        "description": "Hand-crafted timber screens and laser-cut metal panels that filter light and define spaces with regional character."
+      },
+      {
+        "title": "Bespoke Majlis Joinery",
+        "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80",
+        "description": "Custom seating, low platforms, and built-in cabinetry tailored to traditional and contemporary majlis layouts."
+      },
+      {
+        "title": "Decorative Plaster & Gypsum",
+        "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
+        "description": "Ornamental gypsum mouldings, arched recesses, and detailed ceiling work that anchor the Arabian aesthetic."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80",
     desc: [
       "Arabian interior design is rich, luxurious, and highly detailed. We integrate intricate geometric patterns (Mashrabiya), arched openings, and layered textiles to create a grand, culturally rich atmosphere.",
@@ -160,6 +286,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "farmhouse": {
     title: "Farmhouse Style",
     tagline: "Natural woods, soft whites, and honest materials.",
+    pageIntro: {
+      "heading": "Rustic Warmth, Lived-in Comfort",
+      "text": "Farmhouse interiors blend rustic charm with relaxed, lived-in comfort, layering natural woods, soft whites, and honest materials to create spaces that feel warm and welcoming. Metro Interiors brings this style to homes with reclaimed timber, shaker joinery, exposed beams, and tactile linens—familiar, comfortable, and quietly beautiful."
+    },
+    subServices: [
+      {
+        "title": "Shaker-Style Joinery",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80",
+        "description": "Crafted shaker cabinetry, panelled doors, and timber detailing that define farmhouse character."
+      },
+      {
+        "title": "Reclaimed & Natural Timber",
+        "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
+        "description": "Reclaimed beams, plank flooring, and natural wood finishes that bring warmth and authenticity."
+      },
+      {
+        "title": "Soft Whites & Lime-Wash Walls",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+        "description": "Breathable lime-wash and matte paint finishes in soft whites and warm neutrals."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80",
     desc: [
       "Modern Farmhouse combines traditional country charm with clean contemporary details. We focus on neutral palettes, warm wood accents, shiplap paneling, and practical, durable fixtures to build cozy, inviting spaces.",
@@ -186,6 +333,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "industrial": {
     title: "Industrial Style",
     tagline: "Raw textures, structural expression, and urban character.",
+    pageIntro: {
+      "heading": "Concrete Textures, Metal Accents & Raw Urban Aesthetics",
+      "text": "Concrete textures, metal accents, exposed elements, and raw, urban aesthetics — crafted with precision."
+    },
+    subServices: [
+      {
+        "title": "Concrete textures",
+        "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
+        "description": "Concrete textures tailored for cohesive and refined industrial interiors."
+      },
+      {
+        "title": "Metal accents",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        "description": "Metal accents tailored for cohesive and refined industrial interiors."
+      },
+      {
+        "title": "Exposed elements",
+        "image": "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80",
+        "description": "Exposed elements tailored for cohesive and refined industrial interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
     desc: [
       "Industrial design celebrates raw structural elements. We highlight exposed brick, steel beams, concrete floors, and exposed ductwork to give retail outlets, cafes, and workspaces an edgy, urban personality.",
@@ -212,6 +380,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "ultra-luxury": {
     title: "Ultra Luxury Style",
     tagline: "Bespoke detailing, premium materials, and statement execution.",
+    pageIntro: {
+      "heading": "Marble, Veneer, Brass & Designer Lighting",
+      "text": "Marble, veneer, brass, designer lighting, custom joinery, and high-end finishes — we create premium interiors with a statement."
+    },
+    subServices: [
+      {
+        "title": "High end designs",
+        "image": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80",
+        "description": "High end designs tailored for cohesive and refined ultra luxury interiors."
+      },
+      {
+        "title": "Signature walls",
+        "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80",
+        "description": "Signature walls tailored for cohesive and refined ultra luxury interiors."
+      },
+      {
+        "title": "Luxury ambience",
+        "image": "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80",
+        "description": "Luxury ambience tailored for cohesive and refined ultra luxury interiors."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80",
     desc: [
       "Ultra Luxury is about creating one-of-a-kind statement environments. We select rare marbles, bespoke brass details, exotic veneers, and designer lighting to deliver spaces that are visually stunning and completely custom.",
@@ -238,6 +427,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "boho-chic": {
     title: "Boho Chic Style",
     tagline: "Layered textures, artistic accents, and eclectic personality.",
+    pageIntro: {
+      "heading": "Layered Textures & Curated Artistic Touches",
+      "text": "Boho chic interiors are free-spirited and richly layered, mixing textures, patterns, and global influences to create eclectic, deeply personal spaces full of warmth and character. Metro Interiors brings this style to homes with earthy palettes, woven textiles, vintage finds, and curated craftsmanship—relaxed in feel, refined in execution."
+    },
+    subServices: [
+      {
+        "title": "Textured Wall Finishes",
+        "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
+        "description": "Lime-wash, micro-textured plaster, and earthy paint finishes that add depth and character."
+      },
+      {
+        "title": "Custom Rattan & Timber Joinery",
+        "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80",
+        "description": "Bespoke joinery in rattan, cane, and warm timbers for a relaxed, crafted aesthetic."
+      },
+      {
+        "title": "Layered Soft Furnishings",
+        "image": "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80",
+        "description": "Curated cushions, throws, kilim rugs, and vintage textiles that bring warmth and personality."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
     desc: [
       "Boho Chic is bright, creative, and full of texture. We combine natural fibers (rattan, jute, cotton), light wood finishes, organic plaster, and abundant indoor greenery to create warm, welcoming spaces.",
@@ -264,6 +474,27 @@ export const STYLE_DETAIL_DATA: Record<string, any> = {
   "wellness": {
     title: "Wellness Style",
     tagline: "Biophilic principles, natural materials, and soft palettes.",
+    pageIntro: {
+      "heading": "Calming, Restorative, Designed for Wellbeing",
+      "text": "Wellness interiors are designed to soothe the senses and support everyday wellbeing, drawing on biophilic principles, natural materials, and soft, restorative palettes. Metro Interiors brings this style to homes with abundant daylight, indoor greenery, tactile finishes, and considered air-quality detailing—creating sanctuaries where comfort, health, and design meet in balance."
+    },
+    subServices: [
+      {
+        "title": "Biophilic Joinery & Built-ins",
+        "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80",
+        "description": "Joinery in natural timber, integrated planters, and built-in greenery that connect indoor life to nature."
+      },
+      {
+        "title": "Air Quality Solutions",
+        "image": "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80",
+        "description": "Integrated ventilation, filtration, and air-quality systems for healthier indoor environments."
+      },
+      {
+        "title": "Natural & Low-VOC Finishes",
+        "image": "https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&q=80",
+        "description": "Lime-wash, mineral paints, and low-VOC finishes that look beautiful and breathe clean."
+      }
+    ],
     heroImage: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80",
     desc: [
       "Wellness-focused design seeks to improve the health and mental peace of occupants. We leverage biophilic elements (plants, water sounds), natural light, low-VOC materials, and calming soundscapes to construct restorative spaces.",

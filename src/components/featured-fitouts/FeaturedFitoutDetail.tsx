@@ -72,6 +72,17 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
   const activeImage = activeImageIndex === null ? null : project.gallery[activeImageIndex];
 
+  const scrollCarousel = (direction: 'left' | 'right') => {
+    if (!carouselRef.current) return;
+    const el = carouselRef.current;
+    const cardButton = el.querySelector('button');
+    const cardWidth = cardButton ? cardButton.clientWidth : (el.clientWidth * 0.3);
+    const gap = 12; // gap-3 = 12px
+    const scrollStep = cardWidth + gap;
+
+    el.scrollBy({ left: direction === 'left' ? -scrollStep : scrollStep, behavior: 'smooth' });
+  };
+
   const handleBackClick = () => {
     const targetUrl = `/portfolio?filter=${getCategoryFilter(project.category)}#filter-section`;
     setIsNavigatingBack(true);
@@ -100,7 +111,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) {
       showNext();
     }
@@ -153,7 +164,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
   return (
     <motion.main
-      className="bg-white pt-14"
+      className="bg-white pt-24 lg:pt-28"
       animate={{ opacity: isNavigatingBack ? 0 : 1 }}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
@@ -200,7 +211,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             </div>
           </div>
 
-          <div className="lg:col-span-7 lg:sticky lg:top-[84px] lg:self-start space-y-8">
+          <div className="lg:col-span-7 lg:sticky lg:top-[84px] lg:self-start space-y-8 lg:pt-8 xl:pt-12">
             {/* Interactive Main Project Image */}
             <button
               type="button"
@@ -233,7 +244,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 {project.name}
               </h1>
             </div>
-            
+
             <p
               className="mb-5 text-lg font-light italic leading-relaxed text-neutral-500"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -309,26 +320,44 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
           </div>
 
           {project.gallery && project.gallery.length > 0 ? (
-            <div
-              ref={carouselRef}
-              className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {project.gallery.map((image, index) => (
-                <button
-                  key={`${project.slug}-gallery-${index}`}
-                  type="button"
-                  onClick={() => setActiveImageIndex(index)}
-                  className="group relative shrink-0 w-[75vw] sm:w-[45vw] md:w-[32vw] lg:w-[28vw] xl:w-[22vw] aspect-[4/3] overflow-hidden bg-neutral-200 snap-start outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
-                >
-                  <img
-                    src={image}
-                    alt={`${project.name} view ${index + 1}`}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition-colors duration-300" />
-                </button>
-              ))}
+            <div className="relative group/carousel">
+              <button
+                onClick={() => scrollCarousel('left')}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-brand-dark p-2 md:p-3 rounded-full shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity focus:opacity-100 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              <button
+                onClick={() => scrollCarousel('right')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-brand-dark p-2 md:p-3 rounded-full shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity focus:opacity-100 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                aria-label="Scroll right"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              <div
+                ref={carouselRef}
+                className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {project.gallery.map((image, index) => (
+                  <button
+                    key={`${project.slug}-gallery-${index}`}
+                    type="button"
+                    onClick={() => setActiveImageIndex(index)}
+                    className="group relative shrink-0 w-[75vw] sm:w-[45vw] md:w-[32vw] lg:w-[28vw] xl:w-[22vw] aspect-[4/3] overflow-hidden bg-neutral-200 snap-start outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.name} view ${index + 1}`}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition-colors duration-300" />
+                  </button>
+                ))}
+              </div>
             </div>
           ) : (
             <div className="flex w-full flex-col items-center justify-center rounded-sm border border-dashed border-neutral-300 bg-neutral-100/50 py-24 text-center">

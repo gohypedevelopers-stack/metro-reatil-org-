@@ -30,6 +30,27 @@ const VALUES = [
   }
 ];
 
+const TEAM = [
+  {
+    name: "James Sterling",
+    role: "Director",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80",
+    desc: "Overseeing the strategic vision and ensuring our legacy of excellence continues."
+  },
+  {
+    name: "Sarah Jenkins",
+    role: "Manager",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
+    desc: "Leading daily operations and ensuring seamless execution across all projects."
+  },
+  {
+    name: "Michael Chen",
+    role: "Lead Craftsman",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80",
+    desc: "Bringing artisanal precision and engineering excellence to every build."
+  }
+];
+
 function AnimatedCounter({ value }: { value: string }) {
   const [count, setCount] = React.useState(0);
   const elementRef = React.useRef<HTMLSpanElement>(null);
@@ -220,6 +241,38 @@ export default function AboutPage() {
                 <val.icon className="text-brand-gold mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
                 <h3 className="text-2xl font-serif text-brand-dark mb-6">{val.title}</h3>
                 <p className="text-neutral-500 text-base font-light leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
+            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
+            </h2>
+            <p className="text-neutral-500 text-lg font-light">The dedicated experts who turn ambitious designs into reality.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {TEAM.map((member, i) => (
+              <div key={i} className="group cursor-pointer">
+                <div className="aspect-[3/4] overflow-hidden mb-6 relative">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+                <div className="text-center md:text-left">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold mb-2">{member.role}</div>
+                  <h3 className="text-2xl font-serif text-brand-dark mb-4">{member.name}</h3>
+                  <p className="text-neutral-500 text-sm font-light leading-relaxed">{member.desc}</p>
+                </div>
               </div>
             ))}
           </div>

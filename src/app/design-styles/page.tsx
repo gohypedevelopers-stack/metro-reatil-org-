@@ -12,67 +12,67 @@ const styles = [
     name: "Contemporary",
     description: "Contemporary interiors with current forms, clean lines, and balanced sophistication.",
     tags: ["Commercial", "Retail"],
-    image: "/images/phase_01_site_audit.png"
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80"
   },
   {
     name: "Minimalist",
     description: "Minimalist interiors centered on clarity, restraint, and purposeful spatial flow.",
     tags: ["Offices", "Retail"],
-    image: "/images/phase_02_prefabrication.png"
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80"
   },
   {
     name: "Neoclassical",
     description: "Neoclassical interiors blending timeless detailing with modern comfort and proportion.",
     tags: ["Boutique", "Showroom"],
-    image: "/images/phase_03_installation.png"
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80"
   },
   {
     name: "Mediterranean",
     description: "Mediterranean interiors with earthy palettes, natural textures, and relaxed elegance.",
     tags: ["F&B", "Hospitality"],
-    image: "/images/phase_04_handover.png"
+    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80"
   },
   {
     name: "Japandi",
     description: "Japandi interiors balancing calm minimalism, natural materials, and functional warmth.",
     tags: ["Wellness", "Retail"],
-    image: "/images/phase_01_site_audit.png"
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80"
   },
   {
     name: "Arabian",
     description: "Arabian interiors with ornate craftsmanship, layered textiles, and warm jewel tones.",
     tags: ["Hospitality", "F&B"],
-    image: "/images/phase_02_prefabrication.png"
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80"
   },
   {
     name: "Farmhouse",
     description: "Farmhouse interiors with natural woods, soft whites, and honest materials.",
     tags: ["Cafes", "Retail"],
-    image: "/images/phase_03_installation.png"
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80"
   },
   {
     name: "Industrial",
     description: "Industrial interiors with raw textures, structural expression, and urban character.",
     tags: ["Offices", "F&B"],
-    image: "/images/phase_04_handover.png"
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80"
   },
   {
     name: "Ultra Luxury",
     description: "Ultra luxury interiors with bespoke detailing, premium materials, and statement execution.",
     tags: ["High-End Retail", "Jewelry"],
-    image: "/images/phase_01_site_audit.png"
+    image: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80"
   },
   {
     name: "Boho Chic",
     description: "Boho Chic interiors with layered textures, artistic accents, and eclectic personality.",
     tags: ["Boutique", "Cafes"],
-    image: "/images/phase_02_prefabrication.png"
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80"
   },
   {
     name: "Wellness",
     description: "Wellness interiors built on biophilic principles, natural materials, and soft palettes.",
     tags: ["Clinics", "Salons"],
-    image: "/images/phase_03_installation.png"
+    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80"
   }
 ];
 
@@ -152,7 +152,12 @@ export default function DesignStylesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {styles.map((style, index) => (
-              <div key={index} id={style.name.toLowerCase().replace(/\s+/g, '-')} className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer">
+              <Link 
+                href={`/design-styles/${style.name.toLowerCase().replace(/\s+/g, '-')}`}
+                key={index} 
+                id={style.name.toLowerCase().replace(/\s+/g, '-')} 
+                className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer"
+              >
                 <Image
                   src={style.image}
                   alt={style.name}
@@ -177,7 +182,7 @@ export default function DesignStylesPage() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

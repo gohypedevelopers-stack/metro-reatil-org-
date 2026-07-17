@@ -219,7 +219,7 @@ export default function ServicesPage() {
             <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="/images/LUXURY-MANSION1-copy.jpg"
+                  src="/images/services_intro.png"
                   alt="Fitout Services Dubai"
                   fill
                   className="object-cover"
@@ -239,7 +239,7 @@ export default function ServicesPage() {
               <div className="w-12 h-[2px] bg-brand-gold mb-8"></div>
 
               <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg text-center lg:text-left">
-                Halo Interiors offers a comprehensive suite of services designed to cover every stage of property improvement — from initial inspection to the final coat of paint. Browse our full range of services for residential, commercial, and F&B spaces.
+                Metro Retail Solutions offers a comprehensive suite of services designed to cover every stage of property improvement — from initial inspection to the final coat of paint. Browse our full range of services for residential, commercial, and F&B spaces.
               </p>
             </div>
             
