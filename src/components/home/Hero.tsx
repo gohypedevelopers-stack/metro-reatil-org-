@@ -72,14 +72,14 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           </motion.h1>
 
 
-          <div className="flex flex-row items-center justify-center gap-6 md:gap-12 mt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 mt-8 md:mt-4">
             <Magnetic>
-              <a href="/portfolio" className="px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="inline-block whitespace-nowrap px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="/contact" className="text-white text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
+              <a href="/contact" className="inline-block whitespace-nowrap text-white text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
                 Start a Conversation
               </a>
             </Magnetic>
