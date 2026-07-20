@@ -77,16 +77,13 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-14 md:mb-20 gap-8 md:gap-10">
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="mobile-heading-balance text-center md:text-left text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
+            <h2 className="mobile-heading-balance text-center md:text-left text-3xl sm:text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-2xl sm:text-3xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
-            <p className="mt-6 text-neutral-500 font-light text-lg md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
+            <p className="mt-4 md:mt-6 text-neutral-500 font-light text-base md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
               From concept to completion, we deliver every aspect of interior design, fitout, and property services under one roof.
             </p>
           </div>
-          <a href="/contact" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-all self-center md:self-auto">
-            Get a Custom Quote
-          </a>
         </div>
 
         {/* Desktop Grid */}
@@ -211,6 +208,13 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
               );
             })}
           </div>
+        </div>
+
+        {/* View All Services Button */}
+        <div className="flex justify-center mt-12 md:mt-16">
+          <a href="/services" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-neutral-300 pb-2 hover:border-brand-dark hover:text-brand-dark transition-all text-neutral-500 whitespace-nowrap">
+            View All Services
+          </a>
         </div>
       </div>
     </section>

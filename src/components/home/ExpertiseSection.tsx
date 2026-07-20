@@ -41,6 +41,14 @@ const VerticalSlider = () => {
     setActive((next + expertise.length) % expertise.length);
   };
 
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setDir(1);
+      setActive((prev) => (prev + 1) % expertise.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   const variants = {
     enter:  (d: number) => ({ y: d > 0 ?  60 : -60, opacity: 0 }),
     center: ()          => ({ y: 0,                   opacity: 1 }),
@@ -161,6 +169,14 @@ const MobileSlider = () => {
     setDir(direction);
     setActive((next + expertise.length) % expertise.length);
   };
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setDir(1);
+      setActive((prev) => (prev + 1) % expertise.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
