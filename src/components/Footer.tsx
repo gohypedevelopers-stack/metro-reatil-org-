@@ -115,8 +115,9 @@ const Footer = () => {
                 type="email"
                 placeholder="EMAIL ADDRESS"
                 className="bg-transparent text-[9px] font-bold tracking-[0.1em] w-full outline-none placeholder:text-neutral-600 text-white"
+                suppressHydrationWarning
               />
-              <button className="text-white/50 hover:text-brand-gold transition-colors">
+              <button className="text-white/50 hover:text-brand-gold transition-colors" suppressHydrationWarning>
                 <ChevronRight size={16} />
               </button>
             </div>
