@@ -27,7 +27,7 @@ const SERVICE_IMAGES = [
 ];
 
 const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolean }) => {
-  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -137,7 +137,11 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
         )}
 
         {/* Mobile/Forced Carousel */}
-        <div className={forceCarousel ? "block" : "block md:hidden"}>
+        <div 
+          className={forceCarousel ? "block" : "block md:hidden"}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
           <Carousel 
             setApi={setApi}
             opts={{ align: "start", loop: true }} 
@@ -188,26 +192,6 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
               ))}
             </CarouselContent>
           </Carousel>
-          
-          {/* Pagination Dots - Mapped to 5 dots for clean UI */}
-          <div className="flex justify-center gap-2.5 mt-10">
-            {Array.from({ length: 5 }).map((_, idx) => {
-              const activeDotIndex = count > 0 ? Math.min(Math.floor((current / count) * 5), 4) : 0;
-              return (
-                <button
-                  key={idx}
-                  aria-label={`Go to slide group ${idx + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${activeDotIndex === idx ? 'bg-brand-gold w-6' : 'bg-neutral-200 w-1.5 hover:bg-neutral-300'}`}
-                  onClick={() => {
-                    if (api && count > 0) {
-                      const slideIndex = Math.floor((idx / 5) * count);
-                      api.scrollTo(slideIndex);
-                    }
-                  }}
-                />
-              );
-            })}
-          </div>
         </div>
 
         {/* View All Services Button */}
