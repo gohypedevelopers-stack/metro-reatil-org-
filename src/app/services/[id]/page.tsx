@@ -150,21 +150,21 @@ export default function SubcategoryDetailPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {data.process.map((p, i) => (
-              <div key={i} className="relative p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group">
+              <div key={i} className="relative p-4 sm:p-6 md:p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group">
                 <div
-                  className="absolute top-4 right-5 text-6xl font-serif text-neutral-100 group-hover:text-brand-gold/10 transition-colors select-none"
+                  className="absolute top-3 right-3 sm:top-4 sm:right-5 text-4xl sm:text-6xl font-serif text-neutral-100 group-hover:text-brand-gold/10 transition-colors select-none"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {i + 1}
                 </div>
                 <div className="relative z-10">
-                  <h3 className="text-sm font-bold text-brand-dark uppercase tracking-widest mb-3 flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-brand-gold shrink-0" />
-                    {p.step}
+                  <h3 className="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                    <CheckCircle2 size={14} className="text-brand-gold shrink-0" />
+                    <span>{p.step}</span>
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed font-light">{p.desc}</p>
+                  <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed font-light">{p.desc}</p>
                 </div>
               </div>
             ))}
