@@ -5,13 +5,6 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Instagram, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 
-const MOBILE_NAV_LINKS = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Contact', href: '/contact' }
-];
 
 const RESIDENTIAL_LINKS = [
   { name: 'OVERVIEW', href: '/portfolio?filter=Residential' },
@@ -91,6 +84,43 @@ const MORE_LINKS = [
   { name: 'CONTACT', href: '/contact' }
 ];
 
+const MOBILE_NAV_LINKS = [
+  { name: 'Home', href: '/' },
+  {
+    name: 'Portfolio', href: '/portfolio',
+    children: [
+      {
+        group: 'Retail',
+        href: '/portfolio?filter=Retail',
+        links: RETAIL_LINKS,
+      },
+      {
+        group: 'Commercial',
+        href: '/portfolio?filter=Commercial',
+        links: COMMERCIAL_LINKS,
+      },
+      {
+        group: 'Residential',
+        href: '/portfolio?filter=Residential',
+        links: RESIDENTIAL_LINKS,
+      },
+    ],
+  },
+  {
+    name: 'Services', href: '/services',
+    links: SERVICES_LINKS,
+  },
+  {
+    name: 'Styles', href: '/design-styles',
+    links: STYLES_LINKS,
+  },
+  {
+    name: 'More', href: '#',
+    links: MORE_LINKS,
+  },
+  { name: 'Contact', href: '/contact' },
+];
+
 export const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === '/';
@@ -99,6 +129,13 @@ export const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
+
+  const toggleMobileMenu = (name: string) =>
+    setOpenMobileMenu(prev => { setOpenMobileGroup(null); return prev === name ? null : name; });
+  const toggleMobileGroup = (group: string) =>
+    setOpenMobileGroup(prev => prev === group ? null : group);
 
   const isSolid = !isHome || isScrolled || activeMenu;
 
@@ -264,18 +301,136 @@ export const Navbar = () => {
                 <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-5 py-3 hover:bg-neutral-50 transition-colors">Close</button>
               </div>
 
-              <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-                {MOBILE_NAV_LINKS.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 group"
-                  >
-                    {item.name}
-                    <ChevronRight size={20} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-brand-gold" />
-                  </a>
-                ))}
+              <div className="flex flex-col">
+                {MOBILE_NAV_LINKS.map((item: any) => {
+                  const hasChildren = !!item.children;
+                  const hasLinks = !!item.links;
+                  const isOpen = openMobileMenu === item.name;
+
+                  if (!hasChildren && !hasLinks) {
+                    // Plain link
+                    return (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 py-4 border-b border-neutral-100"
+                      >
+                        {item.name}
+                        <ChevronRight size={18} className="text-neutral-300" />
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <div key={item.name} className="border-b border-neutral-100">
+                      {/* Parent row */}
+                      <div className="flex items-center justify-between">
+                        <a
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors py-4 flex-1"
+                        >
+                          {item.name}
+                        </a>
+                        <button
+                          onClick={() => toggleMobileMenu(item.name)}
+                          className="p-3 text-brand-dark hover:text-brand-gold transition-colors"
+                          aria-label={`Toggle ${item.name}`}
+                        >
+                          <ChevronDown
+                            size={18}
+                            className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-brand-gold' : ''}`}
+                          />
+                        </button>
+                      </div>
+
+                      {/* Accordion content */}
+                      <AnimatePresence initial={false}>
+                        {isOpen && (
+                          <motion.div
+                            key="content"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pb-4">
+                              {/* Portfolio: nested group accordions */}
+                              {hasChildren && item.children.map((child: any) => {
+                                const isGroupOpen = openMobileGroup === child.group;
+                                return (
+                                  <div key={child.group} className="mb-1">
+                                    <div className="flex items-center justify-between py-2">
+                                      <a
+                                        href={child.href}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-gold transition-colors"
+                                      >
+                                        {child.group}
+                                      </a>
+                                      <button
+                                        onClick={() => toggleMobileGroup(child.group)}
+                                        className="p-2 text-neutral-400 hover:text-brand-gold transition-colors"
+                                      >
+                                        <ChevronDown
+                                          size={14}
+                                          className={`transition-transform duration-300 ${isGroupOpen ? 'rotate-180 text-brand-gold' : ''}`}
+                                        />
+                                      </button>
+                                    </div>
+                                    <AnimatePresence initial={false}>
+                                      {isGroupOpen && (
+                                        <motion.div
+                                          key="group-content"
+                                          initial={{ height: 0, opacity: 0 }}
+                                          animate={{ height: 'auto', opacity: 1 }}
+                                          exit={{ height: 0, opacity: 0 }}
+                                          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                                          className="overflow-hidden pl-3"
+                                        >
+                                          <div className="grid grid-cols-2 gap-x-4 gap-y-3 py-2 border-l border-brand-gold/30 pl-4">
+                                            {child.links.map((link: any, i: number) => (
+                                              <a
+                                                key={i}
+                                                href={link.href}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-500 hover:text-brand-gold transition-colors"
+                                              >
+                                                {link.name}
+                                              </a>
+                                            ))}
+                                          </div>
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </div>
+                                );
+                              })}
+
+                              {/* Single-level links (Services, Styles, More) */}
+                              {hasLinks && (
+                                <div className="grid grid-cols-2 gap-x-4 gap-y-3 pt-2 border-l border-brand-gold/30 pl-4">
+                                  {item.links.map((link: any, i: number) => (
+                                    <a
+                                      key={i}
+                                      href={link.href}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className="text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-500 hover:text-brand-gold transition-colors"
+                                    >
+                                      {link.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
               </div>
 
             </motion.div>
