@@ -19,14 +19,14 @@ export default function SubcategoryDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[60vh] flex flex-col justify-end pt-32 md:pt-40 pb-16 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-32 md:pt-40 pb-20 bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
           className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center justify-center">
           <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
             <PenTool size={12} /> Specialized Capability
           </span>
@@ -45,12 +45,31 @@ export default function SubcategoryDetailPage() {
         </div>
       </section>
 
-      {/* SPLIT SECTION — image left, content + stats right (matches your reference) */}
+      {/* SPLIT SECTION — image left, content + stats right */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          
+          {/* MOBILE ONLY: Title Block above image */}
+          <div className="block lg:hidden space-y-3 mb-8">
+            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
+            <h2
+              className="text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {data.title}
+            </h2>
+            <p
+              className="text-neutral-400 text-lg font-light italic"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              {data.tagline}
+            </p>
+            <div className="w-16 h-[2px] bg-brand-gold mt-4" />
+          </div>
 
-            {/* LEFT: hero image — sticky */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            {/* LEFT: hero image — sticky on desktop */}
             <div className="lg:col-span-6 relative aspect-[16/11] overflow-hidden group shadow-2xl lg:sticky lg:top-28">
               <img
                 src={data.heroImage}
@@ -60,9 +79,11 @@ export default function SubcategoryDetailPage() {
               <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
             </div>
 
-            {/* RIGHT: title, tagline, description, stats */}
+            {/* RIGHT: content + stats */}
             <div className="lg:col-span-6 space-y-8">
-              <div className="space-y-3">
+              
+              {/* DESKTOP ONLY: Title Block */}
+              <div className="hidden lg:block space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
                 <h2
                   className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight"
@@ -76,9 +97,8 @@ export default function SubcategoryDetailPage() {
                 >
                   {data.tagline}
                 </p>
+                <div className="w-16 h-[2px] bg-brand-gold mt-4" />
               </div>
-
-              <div className="w-16 h-[2px] bg-brand-gold" />
 
               {/* Description paragraphs */}
               <div className="space-y-4">
