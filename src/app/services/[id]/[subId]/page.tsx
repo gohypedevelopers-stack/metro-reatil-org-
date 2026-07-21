@@ -17,14 +17,14 @@ export default function NestedServiceDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[60vh] flex flex-col justify-end pt-32 md:pt-40 pb-16 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-32 md:pt-40 pb-20 bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
           className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center justify-center">
           <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
             <PenTool size={12} /> Specialized Solution
           </span>
