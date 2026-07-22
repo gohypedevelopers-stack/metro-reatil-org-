@@ -1527,6 +1527,202 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
+        slug: "custom-consoles",
+        img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
+        title: "Customized Consoles",
+        description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
+        tags: [
+          "CustomConsoles",
+          "BespokeFurniture",
+          "ConsoleDesign"
+        ],
+        bullets: [
+          "Bespoke console table makers in UAE",
+        ],
+        bullets: [],
+        buttonText: "MATTE FINISH →"
+      },
+      {
+        img: "/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp",
+        title: "Textured Venetian",
+        description: "Textured Venetian tailored for reliable and high-quality venetian plasters execution.",
+        tags: [
+          "VenetianPlaster",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "TEXTURED VENETIAN →"
+      }
+    ]
+  },
+  "feature-walls": {
+    title: "Create Feature Walls",
+    tagline: "Premium Create Feature Walls Services",
+    heroImage: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
+    desc: ["Book a free feature wall consultation and let our experts design stunning focal points. We'll provide a detailed proposal with creative solutions and transparent pricing for your walls.", "Create stunning focal points with Metro Retail's custom feature walls. From artistic textures to bold accent walls and statement finishes, we design and execute feature walls that transform your space.", "Textured Feature Walls tailored for reliable and high-quality feature walls execution."],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Create Feature Walls and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Create Feature Walls with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
+    gallery: [
+      {
+        img: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
+        title: "Textured Feature Walls",
+        description: "Textured Feature Walls tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "TEXTURED FEATURE WALLS →"
+      },
+      {
+        img: "/images/decorative_paint_feature_walls_r2/geometric_walls.jpg",
+        title: "Geometric Patterns",
+        description: "Geometric Patterns tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "FeatureWalls",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "GEOMETRIC PATTERNS →"
+      },
+      {
+        img: "/images/decorative_paint_feature_walls_r2/metallic_textures.jpg",
+        title: "Metallic Feature Walls",
+        description: "Metallic Feature Walls tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "METALLIC FEATURE WALLS →"
+      },
+      {
+        img: "/images/decorative_paint_feature_walls_r2/feature-walls-2.png",
+        title: "Wood Effect Walls",
+        description: "Wood Effect Walls tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "BespokeJoinery",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "WOOD EFFECT WALLS →"
+      },
+      {
+        img: "/images/decorative_paint_feature_walls_r2/stone_effect_walls.jpg",
+        title: "Stone Effect Walls",
+        description: "Stone Effect Walls tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "MarbleWorks",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "STONE EFFECT WALLS →"
+      },
+      {
+        img: "/images/decorative_paint_feature_walls_r2/artistic_murals.jpg",
+        title: "Artistic Murals",
+        description: "Artistic Murals tailored for reliable and high-quality feature walls execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Retail"
+        ],
+        bullets: [],
+        buttonText: "ARTISTIC MURALS →"
+      }
+    ]
+  },
+  "artistic-finishes": {
+    title: "Ready to Apply Artistic Finishes?",
+    tagline: "Premium Ready to Apply Artistic Finishes? Services",
+    heroImage: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
+    desc: ["Book a free finishes consultation and let our artisans create unique textures. We'll provide a detailed proposal with decorative techniques and transparent pricing for artistic walls.", "Transform your walls into works of art with Metro Retail's artistic decorative finishes. From metallic effects to faux finishes and custom textures, we create unique surfaces that elevate your interior design to extraordinary levels.", "Metallic Finishes tailored for reliable and high-quality artistic finishes execution."],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Apply Artistic Finishes? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Apply Artistic Finishes? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
+    gallery: [
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
+        title: "Metallic Finishes",
+        description: "Metallic Finishes tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "METALLIC FINISHES →"
+      },
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/faux_finishes.jpg",
+        title: "Faux Finishes",
+        description: "Faux Finishes tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "FAUX FINISHES →"
+      },
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/decorative_plasters.jpg",
+        title: "Decorative Plasters",
+        description: "Decorative Plasters tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "DECORATIVE PLASTERS →"
+      },
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/custom_textures.jpg",
+        title: "Custom Textures",
+        description: "Custom Textures tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "CUSTOM TEXTURES →"
+      },
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/artistic_patterns.jpg",
+        title: "Artistic Patterns",
+        description: "Artistic Patterns tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "DecorativeFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "ARTISTIC PATTERNS →"
+      },
+      {
+        img: "/images/decorative_paint_artistic_finishes_r2/statement_surfaces.jpg",
+        title: "Statement Surfaces",
+        description: "Statement Surfaces tailored for reliable and high-quality artistic finishes execution.",
+        tags: [
+          "ArtisticFinishes",
+          "Home"
+        ],
+        bullets: [],
+        buttonText: "STATEMENT SURFACES →"
+      }
+    ]
+  },
+  "customised-furniture": {
+    title: "Ready to Create Your Custom Furniture?",
+    tagline: "Premium Ready to Create Your Custom Furniture? Services",
+    heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
+    desc: ["Book a free furniture consultation and let our craftsmen design bespoke pieces. We'll provide a detailed proposal with custom joinery and transparent pricing for your furniture project.", "Metro Retail Interiors designs and manufactures bespoke furniture including sofas, tables, consoles, beds, benches, shelving, and more — all tailored to your style and space requirements. Every piece is custom-made in our Al Quoz joinery facility using premium materials and expert craftsmanship.", "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces."],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
+    gallery: [
+      {
+        slug: "custom-consoles",
         img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
         title: "Customized Consoles",
         description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
@@ -1543,6 +1739,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED CONSOLES →"
       },
       {
+        slug: "custom-doors",
         img: "/images/customised_furniture_dubai_r2/Door3.jpg",
         title: "Customized Doors",
         description: "Customized Door design crafted for luxury, security, style and a perfect fit for your home.",
@@ -1559,6 +1756,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED DOORS →"
       },
       {
+        slug: "custom-sofas",
         img: "/images/customised_furniture_dubai_r2/sofa.png",
         title: "Customized Sofas",
         description: "Customized sofa design crafted for comfort, style, and a perfect fit for your living space.",
@@ -1575,6 +1773,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED SOFAS →"
       },
       {
+        slug: "custom-tables",
         img: "/images/customised_furniture_dubai_r2/customized_table.png",
         title: "Customized Tables",
         description: "Customized table design crafted for durability, elegance, and a perfect fit for your living or workspace.",
@@ -1591,6 +1790,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CUSTOMIZED TABLES →"
       },
       {
+        slug: "custom-beds",
         img: "/images/customised_furniture_dubai_r2/customized-bed.png",
         title: "Customized Beds",
         description: "Custom table installation tailored for precision, durability, and high-quality customised furniture execution.",
@@ -2656,6 +2856,371 @@ Object.assign(NESTED_SERVICE_DATA, {
         img: "/images/decorative_paint_r2/artistic_patterns.webp",
         title: "Artistic Finishes",
         tags: ["Hand Painted", "Faux Finish"]
+      }
+    ]
+  },
+  "custom-consoles": {
+    title: "Ready to Create Custom Consoles?",
+    tagline: "Bespoke consoles designed for retail, commercial, restaurant, and residential spaces.",
+    heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
+    contentTitle: "Custom Consoles for Every Sector",
+    contentDesc: "We design and manufacture premium custom consoles tailored to your exact requirements, from retail cash counters and cafe service stations to luxury residential TV and sofa consoles.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80",
+        title: "Display Consoles (Retail)",
+        description: "Premium display consoles crafted for retail environments.",
+        tags: ["Retail", "Display"],
+        bullets: ["Retail display units", "Premium finish", "Custom sizing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
+        title: "Retail Cash Counter",
+        description: "Bespoke cash counters that blend functionality with brand identity.",
+        tags: ["Retail", "Counters"],
+        bullets: ["POS integration", "Durable materials", "Brand matching"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        title: "Office Storage Consoles",
+        description: "Elegant office storage consoles that maximize organization and aesthetics.",
+        tags: ["Commercial", "Storage"],
+        bullets: ["Ergonomic design", "Secure storage", "Modern aesthetics"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1556910103-1c02745a8728?auto=format&fit=crop&q=80",
+        title: "Cafe Service Counter",
+        description: "Custom cafe service counters built for high traffic and aesthetic appeal.",
+        tags: ["Restaurant", "Counters"],
+        bullets: ["Equipment integration", "Hygienic surfaces", "Custom layouts"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1572116469696-31de0f17ce67?auto=format&fit=crop&q=80",
+        title: "Bar Console",
+        description: "Luxury bar consoles for restaurants and hospitality venues.",
+        tags: ["Restaurant", "Bar"],
+        bullets: ["Premium materials", "Lighting integration", "Bespoke joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80",
+        title: "Showroom Display Console",
+        description: "Efficient and stylish display stations for showroom environments.",
+        tags: ["Commercial", "Service"],
+        bullets: ["Hidden storage", "Durable worktops", "Custom finishes"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
+        title: "Sofa Console",
+        description: "Elegant sofa consoles designed to complement luxury residential interiors.",
+        tags: ["Residential", "Furniture"],
+        bullets: ["Custom dimensions", "Premium veneers", "Seamless design"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg",
+        title: "TV Console",
+        description: "Bespoke TV consoles with integrated cable management and modern styling.",
+        tags: ["Residential", "Media"],
+        bullets: ["Cable management", "Floating options", "Integrated lighting"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "custom-doors": {
+    title: "Ready to Create Custom Doors?",
+    tagline: "Bespoke doors designed for retail, commercial, restaurant, and residential spaces.",
+    heroImage: "/images/customised_furniture_dubai_r2/Door3.jpg",
+    contentTitle: "Custom Doors for Every Sector",
+    contentDesc: "We design and manufacture premium custom doors tailored to your exact requirements, from luxury villa entrances to corporate boardroom glass doors.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80",
+        title: "Boutique Entrance Door",
+        description: "Premium entrance doors crafted for high-end retail environments.",
+        tags: ["Retail", "Doors"],
+        bullets: ["Brand matching", "Premium finish", "Custom sizing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        title: "Retail Storefront Door",
+        description: "Bespoke storefront doors that blend security with brand identity.",
+        tags: ["Retail", "Doors"],
+        bullets: ["High visibility", "Durable materials", "Security integration"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80",
+        title: "Corporate Office Door",
+        description: "Elegant office doors that maximize privacy and aesthetics.",
+        tags: ["Commercial", "Doors"],
+        bullets: ["Soundproofing", "Secure access", "Modern aesthetics"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
+        title: "Boardroom Glass Door",
+        description: "Custom glass doors built for corporate boardrooms and meeting spaces.",
+        tags: ["Commercial", "Glass"],
+        bullets: ["Acoustic seals", "Frosted options", "Premium hardware"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80",
+        title: "Restaurant Main Entrance",
+        description: "Luxury entrance doors for restaurants and hospitality venues.",
+        tags: ["Restaurant", "Entrance"],
+        bullets: ["Premium materials", "Welcoming design", "Bespoke joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80",
+        title: "Kitchen Saloon Doors",
+        description: "Efficient and stylish saloon doors for restaurant kitchens.",
+        tags: ["Restaurant", "Service"],
+        bullets: ["Two-way swing", "Durable finish", "Kick plates"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/customised_furniture_dubai_r2/Door3.jpg",
+        title: "Luxury Villa Entrance Door",
+        description: "Elegant main entrance doors designed to complement luxury residential homes.",
+        tags: ["Residential", "Entrance"],
+        bullets: ["Custom dimensions", "Solid wood", "High security"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+        title: "Bedroom Solid Wood Door",
+        description: "Bespoke interior doors with premium styling and sound reduction.",
+        tags: ["Residential", "Interior"],
+        bullets: ["Acoustic core", "Custom finishes", "Luxury hardware"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "custom-sofas": {
+    title: "Ready to Create Custom Sofas?",
+    tagline: "Bespoke sofas designed for retail, commercial, restaurant, and residential spaces.",
+    heroImage: "/images/customised_furniture_dubai_r2/sofa.png",
+    contentTitle: "Custom Sofas for Every Sector",
+    contentDesc: "We design and manufacture premium custom sofas tailored to your exact requirements, from executive lounges to luxury residential sectionals.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&q=80",
+        title: "Boutique Lounge Sofa",
+        description: "Premium lounge sofas crafted for luxury retail environments.",
+        tags: ["Retail", "Lounge"],
+        bullets: ["Brand matching fabrics", "Premium comfort", "Custom sizing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        title: "Fitting Room Seating",
+        description: "Bespoke seating that blends comfort with boutique identity.",
+        tags: ["Retail", "Seating"],
+        bullets: ["Compact design", "Durable upholstery", "Brand aesthetics"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80",
+        title: "Office Reception Sofa",
+        description: "Elegant reception sofas that maximize comfort and corporate aesthetics.",
+        tags: ["Commercial", "Reception"],
+        bullets: ["Ergonomic design", "High-traffic fabrics", "Modern styling"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80",
+        title: "Executive Lounge Sofa",
+        description: "Custom lounge sofas built for corporate boardrooms and VIP spaces.",
+        tags: ["Commercial", "Executive"],
+        bullets: ["Premium leather", "Deep seating", "Luxury finish"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80",
+        title: "Cafe Banquette Seating",
+        description: "Custom banquette seating for restaurants and cafes.",
+        tags: ["Restaurant", "Banquette"],
+        bullets: ["Space optimization", "Easy-clean fabrics", "Bespoke joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80",
+        title: "Restaurant Booth Sofa",
+        description: "Comfortable and stylish booth seating for dining environments.",
+        tags: ["Restaurant", "Booth"],
+        bullets: ["Privacy design", "Durable foam", "Custom layouts"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/customised_furniture_dubai_r2/sofa.png",
+        title: "Living Room Sectional Sofa",
+        description: "Elegant sectional sofas designed to complement luxury residential interiors.",
+        tags: ["Residential", "Sectional"],
+        bullets: ["Custom dimensions", "Premium textiles", "Modular design"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&q=80",
+        title: "Bedroom Chaise Lounge",
+        description: "Bespoke chaise lounges with premium styling and absolute comfort.",
+        tags: ["Residential", "Lounge"],
+        bullets: ["Ergonomic curves", "Custom upholstery", "Luxury detailing"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "custom-tables": {
+    title: "Ready to Create Custom Tables?",
+    tagline: "Bespoke tables designed for retail, commercial, restaurant, and residential spaces.",
+    heroImage: "/images/customised_furniture_dubai_r2/customized_table.png",
+    contentTitle: "Custom Tables for Every Sector",
+    contentDesc: "We design and manufacture premium custom tables tailored to your exact requirements, from retail display tables to luxury dining tables.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1441984904996-e0b6edfe0b14?auto=format&fit=crop&q=80",
+        title: "Retail Display Table",
+        description: "Premium display tables crafted for high-end retail environments.",
+        tags: ["Retail", "Display"],
+        bullets: ["Brand matching", "Premium finish", "Custom sizing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80",
+        title: "Boutique Merchandising Table",
+        description: "Bespoke merchandising tables that blend functionality with brand identity.",
+        tags: ["Retail", "Merchandising"],
+        bullets: ["Tiered display", "Durable materials", "Integrated lighting"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80",
+        title: "Office Conference Table",
+        description: "Elegant conference tables that maximize productivity and aesthetics.",
+        tags: ["Commercial", "Conference"],
+        bullets: ["Power integration", "Cable management", "Modern aesthetics"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
+        title: "Executive Desk Table",
+        description: "Custom executive desks built for corporate leaders and VIP spaces.",
+        tags: ["Commercial", "Executive"],
+        bullets: ["Premium veneers", "Leather inserts", "Bespoke joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80",
+        title: "Restaurant Dining Table",
+        description: "Luxury dining tables for restaurants and hospitality venues.",
+        tags: ["Restaurant", "Dining"],
+        bullets: ["Premium materials", "Durable finish", "Custom sizing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80",
+        title: "Cafe Bistro Table",
+        description: "Efficient and stylish bistro tables for cafe environments.",
+        tags: ["Restaurant", "Cafe"],
+        bullets: ["Metal bases", "Marble tops", "Outdoor options"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/customised_furniture_dubai_r2/customized_table.png",
+        title: "Luxury Dining Table",
+        description: "Elegant dining tables designed to complement luxury residential homes.",
+        tags: ["Residential", "Dining"],
+        bullets: ["Custom dimensions", "Solid wood/marble", "Statement design"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+        title: "Living Room Coffee Table",
+        description: "Bespoke coffee tables with premium styling and functional art appeal.",
+        tags: ["Residential", "Living"],
+        bullets: ["Mixed materials", "Custom finishes", "Unique silhouettes"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "custom-beds": {
+    title: "Ready to Create Custom Beds?",
+    tagline: "Bespoke beds designed for residential, hospitality, and commercial display spaces.",
+    heroImage: "/images/customised_furniture_dubai_r2/customized-bed.png",
+    contentTitle: "Custom Beds for Every Sector",
+    contentDesc: "We design and manufacture premium custom beds tailored to your exact requirements, from luxury hotel suites to master bedroom statements.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80",
+        title: "Furniture Showroom Display Bed",
+        description: "Premium display beds crafted for high-end retail environments.",
+        tags: ["Retail", "Display"],
+        bullets: ["Brand matching", "Premium finish", "Showroom focus"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
+        title: "Boutique Retail Bed",
+        description: "Bespoke retail beds that blend styling with brand identity.",
+        tags: ["Retail", "Boutique"],
+        bullets: ["Visual merchandising", "Durable frame", "Custom headboards"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80",
+        title: "Luxury Hotel Suite Bed",
+        description: "Elegant suite beds that maximize guest comfort and room aesthetics.",
+        tags: ["Commercial", "Hospitality"],
+        bullets: ["Integrated lighting", "Power outlets", "Commercial durability"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80",
+        title: "Boutique Hotel Platform Bed",
+        description: "Custom platform beds built for modern boutique hotels.",
+        tags: ["Commercial", "Hospitality"],
+        bullets: ["Floating design", "Minimalist aesthetic", "Bespoke joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
+        title: "Beach Club Cabana Daybed",
+        description: "Luxury daybeds for resorts and hospitality venues.",
+        tags: ["Restaurant", "Hospitality"],
+        bullets: ["Outdoor fabrics", "Weather resistant", "Oversized comfort"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80",
+        title: "Lounge VIP Sunbed",
+        description: "Efficient and stylish sunbeds for poolside environments.",
+        tags: ["Restaurant", "Lounge"],
+        bullets: ["Premium teak/metal", "Quick-dry foam", "Custom finishes"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "/images/customised_furniture_dubai_r2/customized-bed.png",
+        title: "Master Bedroom King Bed",
+        description: "Elegant king beds designed to complement luxury residential homes.",
+        tags: ["Residential", "Bedroom"],
+        bullets: ["Custom dimensions", "Oversized headboards", "Premium upholstery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80",
+        title: "Upholstered Guest Bed",
+        description: "Bespoke guest beds with premium styling and welcoming comfort.",
+        tags: ["Residential", "Bedroom"],
+        bullets: ["Storage options", "Custom fabrics", "Space-saving design"],
+        buttonText: "VIEW DETAILS →"
       }
     ]
   }
