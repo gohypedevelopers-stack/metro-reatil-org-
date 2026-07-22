@@ -17,29 +17,31 @@ export default function NestedServiceDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[35vh] md:min-h-[60vh] flex flex-col items-center justify-center bg-brand-dark overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <img
           src={data.heroImage}
           alt={data.title}
           className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center justify-center">
-          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
-            <PenTool size={12} /> Specialized Solution
-          </span>
-          <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
-            style={{ fontFamily: 'var(--font-cinzel), serif' }}
-          >
-            {data.title}
-          </h1>
-          <p
-            className="hidden md:block text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            {data.tagline}
-          </p>
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
+            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
+              <PenTool size={12} /> Specialized Solution
+            </span>
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              {data.title}
+            </h1>
+            <p
+              className="hidden md:block text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              {data.tagline}
+            </p>
+          </div>
         </div>
       </section>
 
