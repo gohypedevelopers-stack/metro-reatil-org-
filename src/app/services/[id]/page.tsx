@@ -214,13 +214,6 @@ export default function SubcategoryDetailPage() {
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
-                      {/* MOBILE TITLE */}
-                      <div className="block md:hidden">
-                        <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2 leading-snug drop-shadow-md">
-                          {title}
-                        </h3>
-                      </div>
-
                       <div className="hidden md:block">
                         <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
                           {title}
@@ -267,13 +260,6 @@ export default function SubcategoryDetailPage() {
 
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
-
-                      {/* MOBILE TITLE */}
-                      <div className="block md:hidden">
-                        <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2 leading-snug drop-shadow-md">
-                          {title}
-                        </h3>
-                      </div>
 
                       <div className="hidden md:block">
                         <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
