@@ -97,7 +97,7 @@ export default function NestedServiceDetailPage() {
 
                   <div className="self-end mt-2">
                     <a
-                      href={`https://wa.me/971559693009?text=Hi, I want to get a quote on ${item.title}`}
+                      href={`https://wa.me/8800607967?text=Hi, I want to get a quote on ${item.title}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 group-hover:bg-brand-dark text-white group-hover:text-brand-gold"

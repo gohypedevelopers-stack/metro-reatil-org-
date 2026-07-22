@@ -64,7 +64,7 @@ export default function DesignersArchitectsPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Ready to Partner With <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro?</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
@@ -76,7 +76,7 @@ export default function DesignersArchitectsPage() {
       {/* Intro Section */}
       <section className="py-24 bg-white text-gray-900 text-center">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Flawless Execution <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>for Interior Designers & Architects</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -89,7 +89,7 @@ export default function DesignersArchitectsPage() {
       <section className="py-24 bg-gray-50 text-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Services for <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Designers & Architects</span>
             </h2>
           </div>
@@ -98,7 +98,7 @@ export default function DesignersArchitectsPage() {
             {services.map((service, index) => (
               <a 
                 key={index}
-                href={`https://wa.me/97100000000?text=I am interested in ${service.title}`}
+                href={`https://wa.me/8800607967?text=I am interested in ${service.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative h-80 rounded-2xl overflow-hidden block"
@@ -135,7 +135,7 @@ export default function DesignersArchitectsPage() {
       <section className="py-24 bg-[#0a0a0a] text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Portfolio & <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Certifications</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -235,14 +235,14 @@ export default function DesignersArchitectsPage() {
       <section className="py-24 bg-[#E8A020] text-white text-center">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Let's Build Something <span className="text-brand-dark italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Extraordinary</span>
             </h2>
             <p className="text-white/90 text-lg mb-10 leading-relaxed">
               Book a free site visit and let our experts assess your space. We'll provide a detailed consultation and transparent quote for your property transformation project.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#E8A020] hover:bg-gray-50 font-semibold rounded-lg transition-colors shadow-sm">
+              <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#E8A020] hover:bg-gray-50 font-semibold rounded-lg transition-colors shadow-sm">
                 WhatsApp Now
               </a>
               <Link href="/contact" className="px-8 py-4 bg-black/20 hover:bg-black/30 text-white border border-white/20 font-semibold rounded-lg transition-colors shadow-sm">

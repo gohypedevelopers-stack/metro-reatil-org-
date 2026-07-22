@@ -53,7 +53,7 @@ const CompanyProfile = () => {
   return (
     <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-neutral-50 border-b border-neutral-200">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+        <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
           Metro Retail Solutions
         </h2>
         <p className="text-neutral-600 text-lg md:text-xl font-light leading-relaxed mb-12">
@@ -389,7 +389,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               Metro Portfolio
             </span>
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Selected{" "}

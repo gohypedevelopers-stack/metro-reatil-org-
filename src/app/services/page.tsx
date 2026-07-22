@@ -54,14 +54,7 @@ const services = [
     tags: ["Ceiling Systems", "Commercial"],
     href: "/services/stretch-ceiling",
   },
-  {
-    id: "halo-shield",
-    title: "Halo Shield",
-    description: "Halo Shield delivered with precise execution and authority-ready planning.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600",
-    tags: ["Thermal Protection", "All Sectors"],
-    href: "/services/halo-shield",
-  },
+
   {
     id: "property-inspection",
     title: "Property Inspection",
@@ -111,12 +104,12 @@ const services = [
     href: "/services/artistic-finishes",
   },
   {
-    id: "custom-furniture",
+    id: "customised-furniture",
     title: "Custom Furniture",
     description: "Custom Furniture delivered with precise execution and authority-ready planning.",
     image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600",
     tags: ["Custom Furniture", "Home"],
-    href: "/services/custom-furniture",
+    href: "/services/customised-furniture",
   },
   {
     id: "air-quality",
@@ -200,7 +193,7 @@ export default function ServicesPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
           <div className="max-w-3xl mx-auto text-white text-center">
-            <h1 className="mobile-heading-balance text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase text-center" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h1 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase text-center" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Complete Fitout{" "}<span className="text-brand-gold italic font-normal normal-case whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>& Interior Transformation</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mx-auto text-center">
@@ -214,7 +207,7 @@ export default function ServicesPage() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
-            
+
             {/* Image Section (Left) */}
             <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
@@ -229,7 +222,7 @@ export default function ServicesPage() {
 
             {/* Text Section (Right) */}
             <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Complete Turnkey Fitout
               </h2>
               <div className="text-neutral-400 italic text-xl sm:text-2xl mb-8 font-light text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
@@ -242,7 +235,7 @@ export default function ServicesPage() {
                 Metro Retail Solutions offers a comprehensive suite of services designed to cover every stage of property improvement — from initial inspection to the final coat of paint. Browse our full range of services for residential, commercial, and F&B spaces.
               </p>
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -253,8 +246,8 @@ export default function ServicesPage() {
       <section className="py-24 bg-neutral-950 text-white">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Services We <span className="text-brand-gold italic text-2xl sm:text-4xl md:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Offer</span>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Services We <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Offer</span>
             </h2>
           </div>
 
@@ -271,7 +264,7 @@ export default function ServicesPage() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* Dark Gradient Overlay for readability on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -280,7 +273,7 @@ export default function ServicesPage() {
                   <p className="text-neutral-200 text-[13px] md:text-sm font-light mb-3 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1.5">
                     {service.tags.map((tag, i) => (
                       <span key={i} className="px-2 py-1 border border-white/20 bg-black/50 text-white text-[9px] font-bold uppercase tracking-wider">

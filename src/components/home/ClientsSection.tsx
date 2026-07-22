@@ -34,7 +34,7 @@ const ClientsSection = () => {
             >
               {/* Top Line: OUR CLIENTS (Black) */}
               <div
-                className="text-3xl sm:text-4xl md:text-6xl uppercase tracking-[0.06em] md:tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4 flex-wrap"
+                className="text-2xl sm:text-3xl md:text-6xl uppercase tracking-[0.06em] md:tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4 flex-wrap"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {"OUR CLIENTS".split("").map((char, i) => (

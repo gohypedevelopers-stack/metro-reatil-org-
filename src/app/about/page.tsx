@@ -65,7 +65,7 @@ function AnimatedCounter({ value }: { value: string }) {
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimatedRef.current) {
           hasAnimatedRef.current = true;
-          
+
           let start = 0;
           const end = numericValue;
           const duration = 3000; // 3 seconds
@@ -74,7 +74,7 @@ function AnimatedCounter({ value }: { value: string }) {
           const updateCount = (currentTime: number) => {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
-            
+
             // Easing: easeOutCubic (slower and extremely smooth deceleration)
             const easeProgress = 1 - Math.pow(1 - progress, 3);
             const currentValue = Math.floor(easeProgress * (end - start) + start);
@@ -117,7 +117,7 @@ export default function AboutPage() {
     <div className="bg-white pt-[54px] md:pt-[62px]">
       {/* Hero Section - Cinematic */}
       <section className="relative min-h-[620px] md:h-[70vh] flex items-center overflow-hidden bg-brand-dark">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.5 }}
           transition={{
@@ -126,24 +126,24 @@ export default function AboutPage() {
           }}
           className="absolute inset-0"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
-            alt="About Metro Retail" 
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+            alt="About Metro Retail"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent" />
         </motion.div>
-        
+
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 w-full">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block text-center"
             >
               Retail Excellence
             </motion.span>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
@@ -152,7 +152,7 @@ export default function AboutPage() {
             >
               THE END-TO-END{" "}<span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
@@ -180,7 +180,7 @@ export default function AboutPage() {
                   Our USP is total operational readiness. We handle in-house manufacturing, MEP works, and full civil execution. When we hand over the keys, you only need to bring your products.
                 </p>
               </div>
-              
+
               <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
@@ -192,12 +192,12 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="lg:col-span-6 relative">
               <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
-                  alt="Craftsmanship" 
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
+                  alt="Craftsmanship"
                   className="w-full h-full object-cover transition-all duration-1000"
                 />
               </div>
@@ -257,21 +257,21 @@ export default function AboutPage() {
             <p className="text-neutral-500 text-lg font-light">The dedicated experts who turn ambitious designs into reality.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-3 gap-8 md:gap-12">
             {TEAM.map((member, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="aspect-[3/4] overflow-hidden mb-6 relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
+                  <img
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
                 <div className="text-center md:text-left">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold mb-2">{member.role}</div>
-                  <h3 className="text-2xl font-serif text-brand-dark mb-4">{member.name}</h3>
-                  <p className="text-neutral-500 text-sm font-light leading-relaxed">{member.desc}</p>
+                  <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-brand-gold mb-1 md:mb-2">{member.role}</div>
+                  <h3 className="text-xs md:text-2xl font-serif text-brand-dark mb-2 md:mb-4">{member.name}</h3>
+                  <p className="hidden md:block text-neutral-500 text-sm font-light leading-relaxed">{member.desc}</p>
                 </div>
               </div>
             ))}
@@ -284,16 +284,16 @@ export default function AboutPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-gold blur-[200px] -translate-y-1/2 translate-x-1/2" />
         </div>
-        
+
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
-          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            READY TO COLLABORATE <span className="text-brand-gold italic ml-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            READY TO COLLABORATE <span className="text-brand-gold italic ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
           </h2>
           <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-10 md:mb-16">
             Let's collaborate to build a space that defines your brand and exceeds your operational expectations.
           </p>
-          <a 
-            href="/contact" 
+          <a
+            href="/contact"
             className="inline-flex items-center justify-center gap-3 md:gap-4 px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
           >
             Get in Touch <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />

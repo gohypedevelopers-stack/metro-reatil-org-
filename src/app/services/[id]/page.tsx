@@ -48,7 +48,7 @@ export default function SubcategoryDetailPage() {
       {/* SPLIT SECTION — image left, content + stats right */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          
+
           {/* MOBILE ONLY: Title Block above image */}
           <div className="block lg:hidden space-y-3 mb-8">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
@@ -81,7 +81,7 @@ export default function SubcategoryDetailPage() {
 
             {/* RIGHT: content + stats */}
             <div className="lg:col-span-6 space-y-8">
-              
+
               {/* DESKTOP ONLY: Title Block */}
               <div className="hidden lg:block space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
@@ -211,15 +211,15 @@ export default function SubcategoryDetailPage() {
 
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
-                      
+
                       <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
                         {title}
                       </h3>
-                      
+
                       <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
                         {description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-4">
                         {tags.map((tag, idx) => (
                           <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
@@ -236,7 +236,7 @@ export default function SubcategoryDetailPage() {
                           </li>
                         ))}
                       </ul>
-                      
+
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
                           {buttonText}
@@ -256,15 +256,15 @@ export default function SubcategoryDetailPage() {
 
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
-                      
+
                       <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
                         {title}
                       </h3>
-                      
+
                       <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
                         {description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-4">
                         {tags.map((tag, idx) => (
                           <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
@@ -281,7 +281,7 @@ export default function SubcategoryDetailPage() {
                           </li>
                         ))}
                       </ul>
-                      
+
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
                           {buttonText}

@@ -81,7 +81,7 @@ export default function CareersPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Team</span>
           </h1>
           <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
@@ -98,7 +98,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-              <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Careers Will Be <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
               </h2>
             </div>
@@ -132,7 +132,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-              <h2 className="text-3xl md:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Our Hiring <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
               </h2>
             </div>
@@ -164,7 +164,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-start gap-16">
             <div className="w-full lg:w-1/2 lg:sticky lg:top-32">
-              <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
               </h2>
               <p className="text-neutral-400 text-base mb-8 leading-relaxed">
@@ -199,7 +199,7 @@ export default function CareersPage() {
                 </div>
                 <div>
                   <h3 className="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-1.5">Careers Hotline</h3>
-                  <a href="tel:+97100000000" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors whitespace-nowrap">+971 (0) 4 123 4567</a>
+                  <a href="tel:8800607967" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors whitespace-nowrap">+91 8800607967</a>
                 </div>
               </div>
             </div>
@@ -213,14 +213,14 @@ export default function CareersPage() {
       {/* CTA Section */}
       <section className="py-20 bg-brand-gold text-white text-center">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif tracking-wide uppercase mb-6">
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-serif tracking-wide uppercase mb-6">
             Ready to Discuss a Project?
           </h2>
           <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
             For project enquiries, book a site visit with our fitout and joinery specialists.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/97100000000" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
+            <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
               WhatsApp Now
             </a>
             <Link href="/contact" className="px-8 py-3 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-sm transition-colors border border-white/20">

@@ -101,8 +101,8 @@ const FeaturedFitouts = () => {
     <section id="featured-fitouts" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
           </h2>
           
           <div className="flex justify-center gap-x-6 gap-y-4 md:gap-12 flex-wrap">

@@ -54,7 +54,7 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
     { title: "Landscaping & Pools", image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=600", category: "LANDSCAPE POOLS", id: "landscaping-pools" },
     { title: "Automation", image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=600", category: "SMART AUTOMATION", id: "automation" },
     { title: "Stretch Ceiling", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600", category: "CEILING SYSTEMS", id: "stretch-ceiling" },
-    { title: "Halo Shield", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600", category: "THERMAL PROTECTION", id: "halo-shield" },
+
     { title: "Property Inspection", image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=600", category: "PROPERTY INSPECTION", id: "property-inspection" },
     { title: "MEP & HVAC", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600", category: "MEP SYSTEMS", id: "mep-hvac" },
     { title: "Project Management", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600", category: "PROJECT MANAGEMENT", id: "project-management" },
@@ -77,8 +77,8 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-14 md:mb-20 gap-8 md:gap-10">
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="mobile-heading-balance text-center md:text-left text-3xl sm:text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-2xl sm:text-3xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
+            <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
             <p className="mt-4 md:mt-6 text-neutral-500 font-light text-base md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
               From concept to completion, we deliver every aspect of interior design, fitout, and property services under one roof.
@@ -88,63 +88,63 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
 
         {/* Desktop Grid */}
         {!forceCarousel && (
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
-          {services.map((s, i) => (
-            <motion.a
-              key={i}
-              href={`/services/${s.id}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
-            >
-              {/* Image Container */}
-              <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
+            {services.map((s, i) => (
+              <motion.a
+                key={i}
+                href={`/services/${s.id}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.05 }}
+                className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
+              >
+                {/* Image Container */}
+                <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-brand-dark/5 group-hover:bg-transparent transition-colors duration-500" />
 
-                {/* Category Tag Overlay */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
-                  {s.category}
+                  {/* Category Tag Overlay */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest text-brand-dark shadow-sm">
+                    {s.category}
+                  </div>
+
+                  {/* Hover Indicator */}
+                  <div className="absolute bottom-4 right-4 bg-brand-dark text-white p-2 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                    <ArrowUpRight size={14} className="text-brand-gold" />
+                  </div>
                 </div>
 
-                {/* Hover Indicator */}
-                <div className="absolute bottom-4 right-4 bg-brand-dark text-white p-2 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
-                  <ArrowUpRight size={14} className="text-brand-gold" />
+                {/* Text Info */}
+                <div className="flex flex-col flex-grow">
+                  <span className="text-[7.5px] font-bold text-brand-gold uppercase tracking-[0.3em] mb-1.5">
+                    Service Sector
+                  </span>
+                  <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.15em] leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                    {s.title}
+                  </h4>
+                  <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2.5 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
+                    Learn More <span>→</span>
+                  </p>
                 </div>
-              </div>
-
-              {/* Text Info */}
-              <div className="flex flex-col flex-grow">
-                <span className="text-[7.5px] font-bold text-brand-gold uppercase tracking-[0.3em] mb-1.5">
-                  Service Sector
-                </span>
-                <h4 className="text-brand-dark font-bold text-xs uppercase tracking-[0.15em] leading-snug group-hover:text-brand-gold transition-colors duration-300">
-                  {s.title}
-                </h4>
-                <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-2.5 flex items-center gap-1 group-hover:text-neutral-500 transition-colors">
-                  Learn More <span>→</span>
-                </p>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+              </motion.a>
+            ))}
+          </div>
         )}
 
         {/* Mobile/Forced Carousel */}
-        <div 
+        <div
           className={forceCarousel ? "block" : "block md:hidden"}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <Carousel 
+          <Carousel
             setApi={setApi}
-            opts={{ align: "start", loop: true }} 
+            opts={{ align: "start", loop: true }}
             plugins={[plugin.current]}
             className="w-full"
           >

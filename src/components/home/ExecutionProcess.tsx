@@ -166,8 +166,8 @@ const ExecutionProcess = () => {
             <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center md:text-left">
               Rigorous Execution Blueprint
             </span>
-            <h2 className="mobile-heading-balance text-center md:text-left text-4xl md:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
+            <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
             </h2>
           </div>
           <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-md text-center md:text-left">

@@ -69,8 +69,8 @@ const ServicesSlider = () => {
     <section id="services-slider" className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="mobile-heading-balance text-4xl md:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR CORE <span className="text-brand-gold italic font-normal ml-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            OUR CORE <span className="text-brand-gold italic font-normal ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-14 md:mb-20">

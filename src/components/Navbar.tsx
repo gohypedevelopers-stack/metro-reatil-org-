@@ -115,7 +115,7 @@ const MOBILE_NAV_LINKS = [
     links: STYLES_LINKS,
   },
   {
-    name: 'More', href: '#',
+    name: 'More', href: '/about',
     links: MORE_LINKS,
   },
   { name: 'Contact', href: '/contact' },
@@ -241,7 +241,7 @@ export const Navbar = () => {
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('more')}>
-              <a href="#" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/about" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 More <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'more' ? 'rotate-180' : ''}`} />
               </a>
             </div>

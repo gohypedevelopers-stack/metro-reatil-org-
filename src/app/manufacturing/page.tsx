@@ -57,7 +57,7 @@ const ManufacturingPage = () => {
           <div className="max-w-4xl text-center mx-auto">
             <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center">Our Facility</span>
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1] text-center"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1] text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               In-House Manufacturing
@@ -78,7 +78,7 @@ const ManufacturingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Precision Engineered</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Craftsmanship at Scale
               </h2>
               <p className="text-neutral-500 text-lg leading-relaxed font-light mb-8">
@@ -129,7 +129,7 @@ const ManufacturingPage = () => {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Equipment</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Advanced Machinery
             </h2>
           </div>
@@ -154,7 +154,7 @@ const ManufacturingPage = () => {
           <div className="flex justify-between items-end mb-16">
             <div>
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
-              <h2 className="text-3xl md:text-5xl font-serif uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl font-serif uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Factory Tour
               </h2>
             </div>
