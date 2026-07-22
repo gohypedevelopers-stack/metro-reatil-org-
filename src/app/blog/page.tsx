@@ -72,9 +72,9 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[50vh] min-h-[300px] md:min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
           src="/wide_mall_hero.png"
           alt="Metro Retail Solutions Blog"
@@ -82,27 +82,47 @@ export default function BlogPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Insights & <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Inspiration</span>
-          </h1>
-          <p className="hidden md:block text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
-            Expert advice, design trends, and project insights from Metro Retail Solutions' leading fitout and joinery specialists.
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Metro Blog
+            </span>
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Insights &{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Inspiration
+              </span>
+            </h1>
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
+              Expert advice, design trends, and project insights from Metro Retail Solutions' leading fitout and joinery specialists.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Blog Listing Section */}
       <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="mb-16">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8 text-center md:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Latest <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Articles</span>
+          <div className="mb-16 text-center">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Latest <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Articles</span>
             </h2>
             
             {/* Search */}
-            <div className="max-w-2xl mx-auto md:mx-0 mb-10">
+            <div className="max-w-2xl mx-auto mb-10">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
                 <input 
@@ -114,7 +134,7 @@ export default function BlogPage() {
             </div>
 
             {/* Filters */}
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-3 justify-center">
               {['All', 'Retail Design', 'Turnkey Fit Out', 'Manufacturing', 'Store Inspection'].map((filter, i) => (
                 <button 
                   key={filter}
@@ -187,10 +207,10 @@ export default function BlogPage() {
       <section className="py-24 bg-neutral-50 border-t border-neutral-100 text-center">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Ready to Transform <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Space?</span>
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Ready to Transform <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Space?</span>
             </h2>
-            <p className="text-neutral-600 text-lg mb-10 leading-relaxed">
+            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-10 max-w-lg mx-auto">
               Book a free site visit and let our experts assess your space. We'll provide a detailed consultation and transparent quote for your property transformation project.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -204,6 +224,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

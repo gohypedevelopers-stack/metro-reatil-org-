@@ -54,7 +54,7 @@ export default function DesignersArchitectsPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
           src="/redtape_hero.png"
           alt="Metro Retail Solutions Partnership"
@@ -62,14 +62,34 @@ export default function DesignersArchitectsPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Ready to Partner With <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro?</span>
-          </h1>
-          <p className="hidden md:block text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
-            Book a partnership consultation and let's discuss collaboration opportunities. We'll provide detailed information about our services for designers and architects.
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Partnership
+            </span>
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Ready to Partner With{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Metro?
+              </span>
+            </h1>
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
+              Book a partnership consultation and let's discuss collaboration opportunities. We'll provide detailed information about our services for designers and architects.
+            </p>
+          </div>
         </div>
       </section>
 

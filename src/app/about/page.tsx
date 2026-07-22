@@ -116,7 +116,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white pt-[54px] md:pt-[62px]">
       {/* Hero Section - Cinematic */}
-      <section className="relative h-[35vh] md:h-[70vh] min-h-[300px] md:min-h-[620px] flex items-center overflow-hidden bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <motion.div
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.5 }}
@@ -131,15 +131,15 @@ export default function AboutPage() {
             alt="About Metro Retail"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
         </motion.div>
 
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 w-full">
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block text-center"
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
             >
               Retail Excellence
             </motion.span>
@@ -147,16 +147,20 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="mobile-heading-balance text-[22px] md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase tracking-tighter xs:tracking-tight md:tracking-normal text-center"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              THE END-TO-END{" "}<span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Partner</span>
+              THE END-TO-END{" "}
+              <span className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
+                Retail Partner
+              </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="hidden md:block text-neutral-300 text-base font-light leading-relaxed max-w-xl mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
             </motion.p>

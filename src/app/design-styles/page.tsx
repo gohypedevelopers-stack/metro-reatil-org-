@@ -93,9 +93,9 @@ const testimonials = [
 
 export default function DesignStylesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
           src="/wide_mall_hero.png"
           alt="Interior Design Styles"
@@ -103,39 +103,71 @@ export default function DesignStylesPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Discover Your Perfect <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Design Style</span>
-          </h1>
-          <p className="hidden md:block text-base sm:text-lg md:text-xl px-4 text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed mb-8">
-            Book a free design consultation and let our experts help you choose the perfect style for your space. We'll create a tailored design proposal that reflects your brand.
-          </p>
-          <Link href="/contact" className="hidden md:inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm transition-colors shadow-lg">
-            Book Consultation
-          </Link>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Styles
+            </span>
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Discover Your Perfect{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Design Style
+              </span>
+            </h1>
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center mb-8"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
+              Book a free design consultation and let our experts help you choose the perfect style for your space. We'll create a tailored design proposal that reflects your brand.
+            </p>
+            <Link href="/contact" className="hidden md:inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm transition-colors shadow-lg">
+              Book Consultation
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Intro Section */}
-      <section className="py-24 bg-neutral-50 border-b border-neutral-100">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Every Style <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executed to Perfection</span>
+      <section className="py-24 bg-white overflow-hidden border-b border-neutral-100">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
+
+            {/* Image Section (Left) */}
+            <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
+              <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                <Image
+                  src="/images/phase_02_prefabrication.png"
+                  alt="Execution to perfection"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Text Section (Right) */}
+            <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                Every Style
               </h2>
-              <p className="text-lg text-neutral-600 leading-relaxed text-center lg:text-left">
+              <div className="text-neutral-400 italic text-xl sm:text-2xl mb-8 font-light text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
+                Executed to Perfection
+              </div>
+
+              <div className="w-12 h-[2px] bg-brand-gold mb-8"></div>
+
+              <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg text-center lg:text-left">
                 From warm Mediterranean venues to ultra-luxury modern retail spaces, Metro Retail Solutions is trusted to bring every design style to life with accuracy and finesse. Explore our portfolio of executed styles and discover the perfect aesthetic for your next project.
               </p>
-            </div>
-            <div className="lg:w-1/2 w-full relative h-[400px] rounded-sm overflow-hidden shadow-2xl">
-              <Image
-                src="/images/phase_02_prefabrication.png"
-                alt="Execution to perfection"
-                fill
-                className="object-cover"
-              />
             </div>
           </div>
         </div>
@@ -144,9 +176,9 @@ export default function DesignStylesPage() {
       {/* Design Styles Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Interior Design Styles <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>
+          <div className="mb-16 text-center">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Interior Design Styles <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>
             </h2>
           </div>
 
@@ -191,9 +223,9 @@ export default function DesignStylesPage() {
       {/* Testimonials Section */}
       <section className="py-24 bg-neutral-50 border-t border-neutral-100 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              What Our <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Clients Say</span>
+          <div className="mb-16 text-center">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              What Our <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Clients Say</span>
             </h2>
           </div>
 
@@ -234,6 +266,6 @@ export default function DesignStylesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -181,22 +181,39 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600"
-            alt="Hero Background"
-            fill
-            className="object-cover brightness-[0.4]"
-            priority
-          />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 max-w-6xl">
-          <div className="max-w-3xl mx-auto text-white text-center">
-            <h1 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase text-center" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Complete Fitout{" "}<span className="text-brand-gold italic font-normal normal-case whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>& Interior Transformation</span>
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+        <Image
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600"
+          alt="Hero Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Services
+            </span>
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Complete Fitout{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                & Interior Transformation
+              </span>
             </h1>
-            <p className="hidden md:block text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mx-auto text-center">
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
               Book a free consultation and let our experts assess your project requirements. We'll provide a comprehensive proposal with transparent timelines and pricing for your transformation.
             </p>
           </div>

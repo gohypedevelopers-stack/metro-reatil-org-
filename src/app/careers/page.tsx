@@ -69,9 +69,9 @@ const processSteps = [
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
           src="/high_res_mall_hero.png"
           alt="Metro Retail Solutions Team"
@@ -79,14 +79,34 @@ export default function CareersPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Team</span>
-          </h1>
-          <p className="hidden md:block text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
-            Future openings at Metro Retail Solutions will be posted soon. Explore the teams behind our premium fitout, joinery and interior design work.
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Careers
+            </span>
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Join the{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Metro Team
+              </span>
+            </h1>
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
+              Future openings at Metro Retail Solutions will be posted soon. Explore the teams behind our premium fitout, joinery and interior design work.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -96,17 +116,13 @@ export default function CareersPage() {
       {/* Open Roles */}
       <section className="py-24 bg-neutral-50 text-brand-dark" id="open-positions">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
-            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Careers Will Be <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
-              </h2>
-            </div>
-            <div className="w-full md:w-1/2">
-              <p className="text-neutral-600 text-lg text-center md:text-left">
-                We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, carpentry and project delivery teams.
-              </p>
-            </div>
+          <div className="mb-16 text-center">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Careers Will Be <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
+            </h2>
+            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light max-w-2xl mx-auto">
+              We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, carpentry and project delivery teams.
+            </p>
           </div>
 
           {/* Banner */}
@@ -130,17 +146,13 @@ export default function CareersPage() {
       {/* Hiring Process */}
       <section className="py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-12 md:items-end mb-16">
-            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Our Hiring <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
-              </h2>
-            </div>
-            <div className="w-full md:w-1/2">
-              <p className="text-neutral-600 text-lg text-center md:text-left">
-                While current roles are being prepared, here is the process candidates can expect once openings are published.
-              </p>
-            </div>
+          <div className="mb-16 text-center">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Our Hiring <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
+            </h2>
+            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light max-w-2xl mx-auto">
+              While current roles are being prepared, here is the process candidates can expect once openings are published.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
@@ -164,8 +176,8 @@ export default function CareersPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-start gap-16">
             <div className="w-full lg:w-1/2 lg:sticky lg:top-32">
-              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Join the <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
+              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                Join the <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
               </h2>
               <p className="text-neutral-400 text-base mb-8 leading-relaxed">
                 If your experience aligns with Metro Retail Solutions, submit your profile here. We hire exceptional designers, detail-oriented project managers, expert carpenters, and technical engineers.
@@ -211,24 +223,26 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-gold text-white text-center">
+      <section className="py-24 bg-neutral-50 border-t border-neutral-100 text-center">
         <div className="container mx-auto px-6">
-          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-serif tracking-wide uppercase mb-6">
-            Ready to Discuss a Project?
-          </h2>
-          <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
-            For project enquiries, book a site visit with our fitout and joinery specialists.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-brand-gold hover:bg-neutral-50 font-semibold rounded-sm transition-colors">
-              WhatsApp Now
-            </a>
-            <Link href="/contact" className="px-8 py-3 bg-black/20 hover:bg-black/30 text-white font-semibold rounded-sm transition-colors border border-white/20">
-              Book a Free Consultation
-            </Link>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Ready to Discuss <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>a Project?</span>
+            </h2>
+            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-10 max-w-lg mx-auto">
+              For project enquiries, book a site visit with our fitout and joinery specialists.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm">
+                WhatsApp Now
+              </a>
+              <Link href="/contact" className="px-8 py-4 bg-white hover:bg-neutral-50 text-brand-dark border border-neutral-200 font-semibold rounded-sm transition-colors shadow-sm">
+                Book a Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

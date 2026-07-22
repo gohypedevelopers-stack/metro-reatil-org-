@@ -36,25 +36,32 @@ export default function ContactPage() {
     <div className="bg-brand-dark pt-20">
 
       {/* Page Header */}
-      <section className="py-16 md:py-24 bg-brand-dark border-b border-white/5">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
+        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
               Get In Touch
             </span>
             <h1
-              className="mobile-heading-balance text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase"
-              style={{ fontFamily: "var(--font-cinzel), serif" }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              {"LET'S DISCUSS YOUR "}
+              LET'S DISCUSS YOUR{" "}
               <span
-                className="text-brand-gold italic font-normal normal-case whitespace-nowrap"
-                style={{ fontFamily: "var(--font-playfair), serif", textTransform: "none" }}
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Next Project
               </span>
             </h1>
-            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-xl mx-auto text-center">
+            <p
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
+            >
               Whether you have a specific project in mind or just want to learn more about our services, we are here to help.
             </p>
           </div>

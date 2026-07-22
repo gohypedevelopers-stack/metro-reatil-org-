@@ -40,7 +40,7 @@ const ManufacturingPage = () => {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[55vh] min-h-[300px] md:min-h-[400px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <motion.img
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.25 }}
@@ -52,18 +52,29 @@ const ManufacturingPage = () => {
           alt="In-House Manufacturing"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-brand-dark/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
-          <div className="max-w-4xl text-center mx-auto">
-            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center">Our Facility</span>
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+            >
+              Our Facility
+            </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1] text-center"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              In-House Manufacturing
+              In-House{" "}
+              <span
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
+              >
+                Manufacturing
+              </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Our 9,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
