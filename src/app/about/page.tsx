@@ -131,6 +131,7 @@ export default function AboutPage() {
             alt="About Metro Retail"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
         </motion.div>
 
