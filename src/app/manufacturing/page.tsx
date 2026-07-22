@@ -96,7 +96,7 @@ const ManufacturingPage = () => {
               <p className="text-neutral-500 text-lg leading-relaxed font-light mb-8">
                 Having our own manufacturing facility allows us to maintain strict quality control, optimize production timelines, and deliver bespoke carpentry that perfectly matches the design intent. We eliminate third-party dependencies to ensure your project is completed flawlessly.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={24} className="text-brand-gold shrink-0 mt-1" />
@@ -121,7 +121,7 @@ const ManufacturingPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
                 <img src={gallery[0]} alt="Factory Floor" className="w-full aspect-[4/5] object-cover rounded-sm shadow-lg" />
@@ -145,7 +145,7 @@ const ManufacturingPage = () => {
               Advanced Machinery
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {machinery.map((item, i) => (
               <div key={i} className="bg-white p-6 border border-neutral-100 rounded-sm hover:shadow-xl transition-shadow group">
@@ -159,7 +159,7 @@ const ManufacturingPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Photo Gallery */}
       <section className="py-20 md:py-28 bg-brand-dark text-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
