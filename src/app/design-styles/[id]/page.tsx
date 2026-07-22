@@ -147,7 +147,13 @@ export default function DesignStyleDetailPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {data.subServices.map((service: any, idx: number) => (
-                <div key={idx} className="group cursor-pointer bg-white border border-neutral-100 hover:shadow-xl transition-all duration-500">
+                <a 
+                  href={`https://wa.me/918800607967?text=Hi, I want to get a quote on ${service.title}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={idx} 
+                  className="group cursor-pointer bg-white border border-neutral-100 hover:shadow-xl transition-all duration-500 block"
+                >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
                       src={service.image}
@@ -160,7 +166,7 @@ export default function DesignStyleDetailPage() {
                     <h3 className="text-xl font-serif text-brand-dark mb-4">{service.title}</h3>
                     <p className="text-neutral-500 text-sm font-light leading-relaxed">{service.description}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
