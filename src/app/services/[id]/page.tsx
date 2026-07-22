@@ -303,7 +303,7 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* FULL SERVICES */}
-      <FullServicesSection forceCarousel={true} />
+      <FullServicesSection forceCarousel={true} hideViewAllButton={true} />
 
       {/* JOINERY TEAM SECTION */}
       <JoineryTeamSection />

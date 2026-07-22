@@ -128,7 +128,7 @@ export default function NestedServiceDetailPage() {
       </section>
 
       {/* FULL SERVICES */}
-      <FullServicesSection forceCarousel={true} />
+      <FullServicesSection forceCarousel={true} hideViewAllButton={true} />
     </div>
   );
 }

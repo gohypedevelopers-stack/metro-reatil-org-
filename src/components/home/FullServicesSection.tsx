@@ -26,7 +26,7 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600"  // Automation
 ];
 
-const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolean }) => {
+const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false }: { forceCarousel?: boolean, hideViewAllButton?: boolean }) => {
   const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -195,11 +195,13 @@ const FullServicesSection = ({ forceCarousel = false }: { forceCarousel?: boolea
         </div>
 
         {/* View All Services Button */}
-        <div className="flex justify-center mt-12 md:mt-16">
-          <a href="/services" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-neutral-300 pb-2 hover:border-brand-dark hover:text-brand-dark transition-all text-neutral-500 whitespace-nowrap">
-            View All Services
-          </a>
-        </div>
+        {!hideViewAllButton && (
+          <div className="flex justify-center mt-12 md:mt-16">
+            <a href="/services" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-neutral-300 pb-2 hover:border-brand-dark hover:text-brand-dark transition-all text-neutral-500 whitespace-nowrap">
+              View All Services
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
