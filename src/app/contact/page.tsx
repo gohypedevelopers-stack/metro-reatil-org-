@@ -15,7 +15,7 @@ const CONTACT_INFO = [
     title: "Call Us",
     details: ["+91 8800607967"],
     icon: Phone,
-    link: "tel:8800607967",
+    link: "tel:+918800607967",
   },
   {
     title: "Email Us",

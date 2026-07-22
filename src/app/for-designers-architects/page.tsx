@@ -119,7 +119,7 @@ export default function DesignersArchitectsPage() {
             {services.map((service, index) => (
               <a 
                 key={index}
-                href={`https://wa.me/8800607967?text=I am interested in ${service.title}`}
+                href={`https://wa.me/918800607967?text=I am interested in ${service.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative h-80 rounded-2xl overflow-hidden block"
@@ -263,7 +263,7 @@ export default function DesignersArchitectsPage() {
               Book a free site visit and let our experts assess your space. We'll provide a detailed consultation and transparent quote for your property transformation project.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#E8A020] hover:bg-gray-50 font-semibold rounded-lg transition-colors shadow-sm">
+              <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#E8A020] hover:bg-gray-50 font-semibold rounded-lg transition-colors shadow-sm">
                 WhatsApp Now
               </a>
               <Link href="/contact" className="px-8 py-4 bg-black/20 hover:bg-black/30 text-white border border-white/20 font-semibold rounded-lg transition-colors shadow-sm">

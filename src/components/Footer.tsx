@@ -83,7 +83,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone size={15} className="text-brand-gold shrink-0" />
-                <a href="tel:8800607967" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-white transition-colors">
+                <a href="tel:+918800607967" className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-white transition-colors">
                   +91 8800607967
                 </a>
               </li>
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li className="pt-2">
                 <a
-                  href="https://wa.me/8800607967"
+                  href="https://wa.me/918800607967"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 border border-brand-gold text-brand-gold text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 whitespace-nowrap"

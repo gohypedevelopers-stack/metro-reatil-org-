@@ -256,7 +256,7 @@ export default function SubcategoryDetailPage() {
                     </div>
                   </Link>
                 ) : (
-                  <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" key={i} className="relative block aspect-[4/5] overflow-hidden group border border-neutral-800 cursor-pointer">
+                  <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" key={i} className="relative block aspect-[4/5] overflow-hidden group border border-neutral-800 cursor-pointer">
                     <img
                       src={img}
                       alt={title}

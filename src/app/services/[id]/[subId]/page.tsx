@@ -68,7 +68,7 @@ export default function NestedServiceDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.gallery.map((item: any, i: number) => (
               <a 
-                href={`https://wa.me/8800607967?text=Hi, I want to get a quote on ${item.title}`}
+                href={`https://wa.me/918800607967?text=Hi, I want to get a quote on ${item.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={i} 

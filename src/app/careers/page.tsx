@@ -212,7 +212,7 @@ export default function CareersPage() {
                 </div>
                 <div>
                   <h3 className="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-1.5">Careers Hotline</h3>
-                  <a href="tel:8800607967" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors whitespace-nowrap">+91 8800607967</a>
+                  <a href="tel:+918800607967" className="text-sm font-serif tracking-wide uppercase hover:text-brand-gold transition-colors whitespace-nowrap">+91 8800607967</a>
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@ export default function CareersPage() {
               For project enquiries, book a site visit with our fitout and joinery specialists.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/8800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm">
+              <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm">
                 WhatsApp Now
               </a>
               <Link href="/contact" className="px-8 py-4 bg-white hover:bg-neutral-50 text-brand-dark border border-neutral-200 font-semibold rounded-sm transition-colors shadow-sm">
