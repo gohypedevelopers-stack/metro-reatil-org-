@@ -116,7 +116,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white pt-[54px] md:pt-[62px]">
       {/* Hero Section - Cinematic */}
-      <section className="relative min-h-[620px] md:h-[70vh] flex items-center overflow-hidden bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[70vh] min-h-[300px] md:min-h-[620px] flex items-center overflow-hidden bg-brand-dark">
         <motion.div
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.5 }}
@@ -156,7 +156,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-neutral-300 text-base font-light leading-relaxed max-w-xl mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base font-light leading-relaxed max-w-xl mx-auto text-center"
             >
               Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
             </motion.p>

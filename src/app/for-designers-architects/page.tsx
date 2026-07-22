@@ -54,7 +54,7 @@ export default function DesignersArchitectsPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
         <Image
           src="/redtape_hero.png"
           alt="Metro Retail Solutions Partnership"
@@ -67,7 +67,7 @@ export default function DesignersArchitectsPage() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Ready to Partner With <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro?</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="hidden md:block text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-sans leading-relaxed">
             Book a partnership consultation and let's discuss collaboration opportunities. We'll provide detailed information about our services for designers and architects.
           </p>
         </div>

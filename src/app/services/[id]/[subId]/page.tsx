@@ -17,7 +17,7 @@ export default function NestedServiceDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-32 md:pt-40 pb-20 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[35vh] md:min-h-[60vh] flex flex-col items-center justify-center bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
@@ -35,7 +35,7 @@ export default function NestedServiceDetailPage() {
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
+            className="hidden md:block text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}

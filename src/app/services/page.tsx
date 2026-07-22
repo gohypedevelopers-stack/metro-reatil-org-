@@ -181,7 +181,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600"
@@ -196,7 +196,7 @@ export default function ServicesPage() {
             <h1 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 leading-tight uppercase text-center" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Complete Fitout{" "}<span className="text-brand-gold italic font-normal normal-case whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>& Interior Transformation</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mx-auto text-center">
+            <p className="hidden md:block text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mx-auto text-center">
               Book a free consultation and let our experts assess your project requirements. We'll provide a comprehensive proposal with transparent timelines and pricing for your transformation.
             </p>
           </div>

@@ -16,11 +16,11 @@ export default function DesignStyleDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[35vh] flex flex-col items-center justify-center pt-16 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[35vh] flex flex-col items-center justify-center bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[40%] scale-105"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
         <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 w-full text-center">
@@ -28,13 +28,13 @@ export default function DesignStyleDetailPage() {
             <PenTool size={12} /> Design Execution Style
           </span>
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
+            className="text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}
@@ -62,7 +62,7 @@ export default function DesignStyleDetailPage() {
               <div className="space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Aesthetic Overview</span>
                 <h2
-                  className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {data.title}
@@ -87,7 +87,7 @@ export default function DesignStyleDetailPage() {
               </div>
 
               {/* Stats grid */}
-              <div className="grid grid-cols-3 gap-5 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 pt-4">
                 {data.stats.map((stat: any, i: number) => {
                   const Icon = stat.icon;
                   return (
@@ -119,7 +119,7 @@ export default function DesignStyleDetailPage() {
         <section className="py-16 md:py-24 bg-white border-b border-neutral-100">
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
             <h2
-              className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.pageIntro.heading}
@@ -137,7 +137,7 @@ export default function DesignStyleDetailPage() {
           <div className="max-w-[1600px] mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2
-                className="text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+                className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {data.title} <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Elements We Create</span>
@@ -150,7 +150,7 @@ export default function DesignStyleDetailPage() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
@@ -173,7 +173,7 @@ export default function DesignStyleDetailPage() {
           <div className="text-center mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Execution</span>
             <h2
-              className="text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               How We Deliver This Style
@@ -189,12 +189,12 @@ export default function DesignStyleDetailPage() {
                 >
                   {i + 1}
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-sm font-bold text-brand-dark uppercase tracking-widest mb-3 flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-brand-gold shrink-0" />
-                    {p.step}
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <h3 className="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-2 sm:mb-3 flex items-center justify-center gap-1.5 sm:gap-2">
+                    <CheckCircle2 size={14} className="text-brand-gold shrink-0" />
+                    <span>{p.step}</span>
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed font-light">{p.desc}</p>
+                  <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed font-light">{p.desc}</p>
                 </div>
               </div>
             ))}

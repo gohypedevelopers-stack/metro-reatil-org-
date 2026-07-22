@@ -74,7 +74,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[35vh] md:h-[50vh] min-h-[300px] md:min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image
           src="/wide_mall_hero.png"
           alt="Metro Retail Solutions Blog"
@@ -87,7 +87,7 @@ export default function BlogPage() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 uppercase font-light tracking-tight leading-[1.1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Insights & <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Inspiration</span>
           </h1>
-          <p className="text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="hidden md:block text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto font-sans leading-relaxed">
             Expert advice, design trends, and project insights from Metro Retail Solutions' leading fitout and joinery specialists.
           </p>
         </div>

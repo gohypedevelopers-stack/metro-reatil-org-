@@ -19,7 +19,7 @@ export default function SubcategoryDetailPage() {
     <div className="bg-white">
 
       {/* HERO — dark banner */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-32 md:pt-40 pb-20 bg-brand-dark overflow-hidden">
+      <section className="relative min-h-[35vh] md:min-h-[60vh] flex flex-col items-center justify-center bg-brand-dark overflow-hidden">
         <img
           src={data.heroImage}
           alt={data.title}
@@ -37,7 +37,7 @@ export default function SubcategoryDetailPage() {
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
+            className="hidden md:block text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}

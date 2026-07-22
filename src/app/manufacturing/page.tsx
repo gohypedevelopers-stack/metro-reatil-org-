@@ -40,7 +40,7 @@ const ManufacturingPage = () => {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="relative h-[55vh] min-h-[400px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[55vh] min-h-[300px] md:min-h-[400px] overflow-hidden flex items-center bg-brand-dark">
         <motion.img
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.25 }}
@@ -63,7 +63,7 @@ const ManufacturingPage = () => {
               In-House Manufacturing
             </h1>
             <p
-              className="text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-200 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Our 9,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
