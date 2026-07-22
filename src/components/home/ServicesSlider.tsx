@@ -36,32 +36,32 @@ const ServicesSlider = () => {
   
   const services = [
     {
-      title: "Carpentry & Carpentry",
+      title: "Carpentry",
       desc: "Our state-of-the-art carpentry facility delivers bespoke wooden solutions with artisan precision.",
       features: ["Custom Furniture", "Wall Paneling", "High-End Cabinetry", "Premium Wood Finishes"],
       img: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop",
-      link: "/services/bespoke-carpentry"
+      link: "/services/carpentry"
     },
     {
       title: "Turnkey Fit-out",
       desc: "Comprehensive project management from shell-and-core to final handover.",
       features: ["Spatial Planning", "Material Sourcing", "On-site Supervision", "Quality Assurance"],
       img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
-      link: "/services/turnkey-execution"
+      link: "/services/fitout"
     },
     {
       title: "MEP Services",
       desc: "Precision engineering for electrical, plumbing, and mechanical systems.",
       features: ["HVAC Systems", "Electrical Engineering", "Fire Safety Systems", "Smart Automation"],
       img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
-      link: "/services/technical-infrastructure"
+      link: "/services/mep-hvac"
     },
     {
       title: "Design Hub",
       desc: "Where creative vision meets technical feasibility.",
       features: ["3D Visualization", "Mood Boards", "Technical Drafting", "Concept Development"],
       img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2062&auto=format&fit=crop",
-      link: "/services/retail-design"
+      link: "/services/artistic-finishes"
     }
   ];
 
