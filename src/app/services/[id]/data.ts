@@ -1527,30 +1527,49 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Create Your Custom Furniture? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Create Your Custom Furniture? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        slug: "custom-consoles",
-        img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
-        title: "Customized Consoles",
-        description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
-        tags: [
-          "CustomConsoles",
-          "BespokeFurniture",
-          "ConsoleDesign"
-        ],
-        bullets: [
-          "Bespoke console table makers in UAE",
-        ],
-        buttonText: "MATTE FINISH →"
+        slug: "custom-sofas",
+        img: "/images/customised_furniture_dubai_r2/sofa.png",
+        title: "Custom Sofas & Seating",
+        description: "Luxurious, bespoke sofas tailored to your exact comfort preferences and spatial requirements.",
+        tags: ["CustomSofas", "BespokeFurniture", "Seating"],
+        bullets: ["Premium upholstery options", "Custom dimensions for perfect fit"],
+        buttonText: "CUSTOM SOFAS →"
       },
       {
-        img: "/images/decorative_paint_venetian_plasters_r2/textured_venetian.webp",
-        title: "Textured Venetian",
-        description: "Textured Venetian tailored for reliable and high-quality venetian plasters execution.",
-        tags: [
-          "VenetianPlaster",
-          "Home"
-        ],
-        bullets: [],
-        buttonText: "TEXTURED VENETIAN →"
+        slug: "custom-tables",
+        img: "/images/customised_furniture_dubai_r2/customized_table.png",
+        title: "Customized Tables",
+        description: "Handcrafted dining and center tables designed to be the centerpiece of any room.",
+        tags: ["CustomTables", "BespokeFurniture", "Dining"],
+        bullets: ["Exotic wood and stone finishes", "Unique base designs"],
+        buttonText: "CUSTOM TABLES →"
+      },
+      {
+        slug: "custom-beds",
+        img: "/images/customised_furniture_dubai_r2/customized-bed.png",
+        title: "Bespoke Beds",
+        description: "Custom-designed bed frames and headboards crafted for ultimate relaxation and style.",
+        tags: ["CustomBeds", "Bedroom", "BespokeFurniture"],
+        bullets: ["Integrated lighting options", "Premium fabric headboards"],
+        buttonText: "BESPOKE BEDS →"
+      },
+      {
+        slug: "custom-consoles",
+        img: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
+        title: "Customized TV Units & Consoles",
+        description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
+        tags: ["CustomConsoles", "BespokeFurniture", "ConsoleDesign"],
+        bullets: ["Seamless cable management", "Bespoke console table makers in UAE"],
+        buttonText: "CUSTOM CONSOLES →"
+      },
+      {
+        slug: "custom-doors",
+        img: "/images/customised_furniture_dubai_r2/Door3.jpg",
+        title: "Premium Custom Doors",
+        description: "Elegant, solid wood custom doors engineered for security, soundproofing, and aesthetic appeal.",
+        tags: ["CustomDoors", "Joinery", "BespokeFurniture"],
+        bullets: ["Intricate carving details", "High-quality hardware integration"],
+        buttonText: "CUSTOM DOORS →"
       }
     ]
   },
