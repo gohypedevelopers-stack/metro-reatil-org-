@@ -65,7 +65,13 @@ export default function NestedServiceDetailPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.gallery.map((item: any, i: number) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden group border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+              <a 
+                href={`https://wa.me/8800607967?text=Hi, I want to get a quote on ${item.title}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={i} 
+                className="relative block aspect-[4/3] overflow-hidden group border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+              >
                 <img
                   src={item.img}
                   alt={item.title}
@@ -74,7 +80,7 @@ export default function NestedServiceDetailPage() {
                 {/* Dark Gradient Overlay for readability on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
-                <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10">
+                <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
                   <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2">
                     {item.title}
                   </h3>
@@ -96,17 +102,14 @@ export default function NestedServiceDetailPage() {
                   )}
 
                   <div className="self-end mt-2">
-                    <a
-                      href={`https://wa.me/8800607967?text=Hi, I want to get a quote on ${item.title}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 group-hover:bg-brand-dark text-white group-hover:text-brand-gold"
+                    <span
+                      className="inline-flex items-center gap-2 bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 group-hover:bg-brand-dark text-white group-hover:text-brand-gold pointer-events-auto"
                     >
                       Get a Quote <ChevronRight size={12} />
-                    </a>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
