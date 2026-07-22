@@ -32,7 +32,7 @@ export default function SubcategoryDetailPage() {
               <PenTool size={12} /> Specialized Capability
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
+              className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
@@ -55,7 +55,7 @@ export default function SubcategoryDetailPage() {
           <div className="block lg:hidden space-y-3 mb-8">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
             <h2
-              className="text-2xl sm:text-3xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
+              className="mobile-heading-balance text-xl sm:text-2xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
@@ -88,7 +88,7 @@ export default function SubcategoryDetailPage() {
               <div className="hidden lg:block space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
                 <h2
-                  className="text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
+                  className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {data.title}
@@ -145,7 +145,7 @@ export default function SubcategoryDetailPage() {
           <div className="text-center mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="mobile-heading-balance text-xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Our Execution Process
@@ -180,7 +180,7 @@ export default function SubcategoryDetailPage() {
           <div className="mb-14 md:w-2/3">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
             <h2
-              className="text-2xl sm:text-3xl md:text-5xl font-serif text-white uppercase tracking-tight mb-4 break-words hyphens-auto"
+              className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl font-serif text-white uppercase tracking-tight mb-4 break-words hyphens-auto"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Featured {data.title} Work
@@ -213,6 +213,13 @@ export default function SubcategoryDetailPage() {
 
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+
+                      {/* MOBILE TITLE */}
+                      <div className="block md:hidden">
+                        <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2 leading-snug drop-shadow-md">
+                          {title}
+                        </h3>
+                      </div>
 
                       <div className="hidden md:block">
                         <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
@@ -260,6 +267,13 @@ export default function SubcategoryDetailPage() {
 
                     {/* Hover Content */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+
+                      {/* MOBILE TITLE */}
+                      <div className="block md:hidden">
+                        <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2 leading-snug drop-shadow-md">
+                          {title}
+                        </h3>
+                      </div>
 
                       <div className="hidden md:block">
                         <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
