@@ -139,12 +139,12 @@ export default function DesignStylesPage() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-24 bg-white overflow-hidden border-b border-neutral-100">
+      <section className="pt-20 md:pt-24 pb-4 md:pb-8 bg-white overflow-hidden border-b border-neutral-100">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
 
-            {/* Image Section (Left) */}
-            <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
+            {/* Image Section (Desktop Only) */}
+            <div className="hidden lg:block lg:col-span-6 xl:col-span-7">
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/phase_02_prefabrication.png"
@@ -155,8 +155,8 @@ export default function DesignStylesPage() {
               </div>
             </div>
 
-            {/* Text Section (Right) */}
-            <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 lg:pr-8 flex flex-col items-center text-center lg:items-start lg:text-left">
+            {/* Text Section */}
+            <div className="lg:col-span-6 xl:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-8">
               <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-3 text-center lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Every Style
               </h2>
@@ -165,6 +165,18 @@ export default function DesignStylesPage() {
               </div>
 
               <div className="w-12 h-[2px] bg-brand-gold mb-8"></div>
+
+              {/* Image Section (Mobile Only) */}
+              <div className="block lg:hidden w-full mb-8">
+                <div className="relative h-[300px] sm:h-[400px] w-full shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+                  <Image
+                    src="/images/phase_02_prefabrication.png"
+                    alt="Execution to perfection"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
               <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg text-center lg:text-left">
                 From warm Mediterranean venues to ultra-luxury modern retail spaces, Metro Retail Solutions is trusted to bring every design style to life with accuracy and finesse. Explore our portfolio of executed styles and discover the perfect aesthetic for your next project.
@@ -175,7 +187,7 @@ export default function DesignStylesPage() {
       </section>
 
       {/* Design Styles Grid */}
-      <section className="py-24 bg-white">
+      <section className="pt-8 md:pt-12 pb-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -203,11 +215,11 @@ export default function DesignStylesPage() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                     {style.name}
                   </h3>
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-6 opacity-100 h-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:h-0 md:group-hover:h-auto overflow-hidden">
+                  <p className="hidden md:block text-neutral-300 text-sm leading-relaxed mb-6 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 h-0 md:group-hover:h-auto overflow-hidden">
                     {style.description}
                   </p>
                   
-                  <div className="flex gap-2">
+                  <div className="hidden md:flex gap-2">
                     {style.tags.map((tag, i) => (
                       <span key={i} className="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
                         {tag}
