@@ -31,13 +31,13 @@ export default function SubcategoryDetailPage() {
             <PenTool size={12} /> Specialized Capability
           </span>
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             {data.title}
           </h1>
           <p
-            className="text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
+            className="text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             {data.tagline}
@@ -53,7 +53,7 @@ export default function SubcategoryDetailPage() {
           <div className="block lg:hidden space-y-3 mb-8">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
             <h2
-              className="text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-2xl sm:text-3xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
@@ -86,7 +86,7 @@ export default function SubcategoryDetailPage() {
               <div className="hidden lg:block space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
                 <h2
-                  className="text-4xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight"
+                  className="text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {data.title}
@@ -110,7 +110,7 @@ export default function SubcategoryDetailPage() {
               </div>
 
               {/* Stats grid */}
-              <div className="grid grid-cols-3 gap-5 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 pt-4">
                 {data.stats.map((stat, i) => {
                   const Icon = stat.icon;
                   return (
@@ -143,14 +143,14 @@ export default function SubcategoryDetailPage() {
           <div className="text-center mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
             <h2
-              className="text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Our Execution Process
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {data.process.map((p, i) => (
               <div key={i} className="relative p-4 sm:p-6 md:p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group">
                 <div
@@ -159,8 +159,8 @@ export default function SubcategoryDetailPage() {
                 >
                   {i + 1}
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <h3 className="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-2 sm:mb-3 flex items-center justify-center gap-1.5 sm:gap-2">
                     <CheckCircle2 size={14} className="text-brand-gold shrink-0" />
                     <span>{p.step}</span>
                   </h3>
@@ -178,7 +178,7 @@ export default function SubcategoryDetailPage() {
           <div className="mb-14 md:w-2/3">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
             <h2
-              className="text-3xl md:text-5xl font-serif text-white uppercase tracking-tight mb-4"
+              className="text-2xl sm:text-3xl md:text-5xl font-serif text-white uppercase tracking-tight mb-4 break-words hyphens-auto"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Featured {data.title} Work
@@ -207,35 +207,37 @@ export default function SubcategoryDetailPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     {/* Dark Gradient Overlay for readability on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                     {/* Hover Content */}
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
-                      <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
-                        {title}
-                      </h3>
+                      <div className="hidden md:block">
+                        <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                          {title}
+                        </h3>
 
-                      <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
-                        {description}
-                      </p>
+                        <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
+                          {description}
+                        </p>
 
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {tags.map((tag, idx) => (
-                          <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
-                            {tag}
-                          </span>
-                        ))}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {tags.map((tag, idx) => (
+                            <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <ul className="mb-6 space-y-1.5">
+                          {bullets.map((bullet, idx) => (
+                            <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
+                              <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-
-                      <ul className="mb-6 space-y-1.5">
-                        {bullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
-                            <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
-                            {bullet}
-                          </li>
-                        ))}
-                      </ul>
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
@@ -252,35 +254,37 @@ export default function SubcategoryDetailPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     {/* Dark Gradient Overlay for readability on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                     {/* Hover Content */}
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
-                      <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
-                        {title}
-                      </h3>
+                      <div className="hidden md:block">
+                        <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                          {title}
+                        </h3>
 
-                      <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
-                        {description}
-                      </p>
+                        <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
+                          {description}
+                        </p>
 
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {tags.map((tag, idx) => (
-                          <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
-                            {tag}
-                          </span>
-                        ))}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {tags.map((tag, idx) => (
+                            <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <ul className="mb-6 space-y-1.5">
+                          {bullets.map((bullet, idx) => (
+                            <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
+                              <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-
-                      <ul className="mb-6 space-y-1.5">
-                        {bullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-center text-[11px] md:text-xs font-bold text-neutral-300">
-                            <span className="mr-2 w-[3px] h-[3px] bg-brand-gold rounded-full flex-shrink-0" />
-                            {bullet}
-                          </li>
-                        ))}
-                      </ul>
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">

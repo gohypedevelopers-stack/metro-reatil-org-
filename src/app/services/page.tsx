@@ -266,10 +266,10 @@ export default function ServicesPage() {
                 />
 
                 {/* Dark Gradient Overlay for readability on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Hover Content */}
-                <div className="absolute inset-x-0 top-0 bottom-[72px] p-5 md:p-6 flex flex-col justify-end translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
+                <div className="absolute inset-x-0 top-0 bottom-[72px] p-5 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
                   <p className="text-neutral-200 text-[13px] md:text-sm font-light mb-3 leading-relaxed">
                     {service.description}
                   </p>

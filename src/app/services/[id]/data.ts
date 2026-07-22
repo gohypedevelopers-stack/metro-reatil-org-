@@ -1030,14 +1030,14 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     ]
   },
   "property-inspection": {
-    title: "Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE",
-    tagline: "Premium Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE Services",
+    title: "Expert Property Inspection Services in Dubai & UAE",
+    tagline: "Certified Dubai property inspectors. We uncover hidden structural, MEP, and safety issues before you buy or move in with a 300-point check.",
     heroImage: "/images/property_inspection_dubai_r2/local-insights.jpg",
-    desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Metro Retail's certified inspectors deliver a detailed property inspection and photo-backed snagging report covering structural, MEP, HVAC, waterproofing, finishing, and safety defects.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession. Our comprehensive 300-point inspection ensures you know exactly what you're buying and helps you avoid costly surprises."],
+    desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Our certified inspectors deliver detailed photo-backed snagging reports.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession, ensuring you avoid costly surprises."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
-    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Property Inspection Services in DubaiPalm JumeirahDowntown DubaiDubai MarinaBusiness Baythe UAE and across the UAE with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for property inspection and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions and precise technical planning for the inspection." }, { "step": "Execution Phase", "desc": "Our expert technicians conduct a thorough inspection with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive snagging report delivery and final handover to ensure absolute transparency." }],
     gallery: [
       {
         img: "/images/property_inspection_dubai_r2/professional-inspection-1.jpg",
@@ -1539,7 +1539,6 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Bespoke console table makers in UAE",
         ],
-        bullets: [],
         buttonText: "MATTE FINISH →"
       },
       {
@@ -1555,7 +1554,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       }
     ]
   },
-  "feature-walls": {
+  "feature-walls-copy": {
     title: "Create Feature Walls",
     tagline: "Premium Create Feature Walls Services",
     heroImage: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
@@ -1633,7 +1632,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       }
     ]
   },
-  "artistic-finishes": {
+  "artistic-finishes-copy": {
     title: "Ready to Apply Artistic Finishes?",
     tagline: "Premium Ready to Apply Artistic Finishes? Services",
     heroImage: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
@@ -1711,7 +1710,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
       }
     ]
   },
-  "customised-furniture": {
+  "customised-furniture-copy": {
     title: "Ready to Create Your Custom Furniture?",
     tagline: "Premium Ready to Create Your Custom Furniture? Services",
     heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
