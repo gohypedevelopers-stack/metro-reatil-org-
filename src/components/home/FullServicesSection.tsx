@@ -47,9 +47,9 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
   const services = [
     { title: "Fitout", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600", category: "FITOUT EXECUTION", id: "fitout" },
     { title: "Carpentry", image: "https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&q=80&w=600", category: "bespoke carpentry", id: "carpentry" },
-    { title: "Kitchens & Wardrobes", image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600", category: "KITCHEN WARDROBE", id: "kitchens" },
+    { title: "Kitchens & Wardrobes", image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600", category: "KITCHEN WARDROBE", id: "kitchens-wardrobes" },
     { title: "Decorative Paints", image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80&w=600", category: "DECORATIVE FINISHES", id: "decorative-paint" },
-    { title: "Microcement", image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=600", category: "MICROCEMENT FINISHES", id: "microcement" },
+
     { title: "Terrazzo Floors", image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=600", category: "TERRAZZO CRAFT", id: "terrazzo" },
     { title: "Landscaping & Pools", image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=600", category: "LANDSCAPE POOLS", id: "landscaping-pools" },
     { title: "Automation", image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=600", category: "SMART AUTOMATION", id: "automation" },

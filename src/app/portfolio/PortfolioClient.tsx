@@ -517,7 +517,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                       <a href={`/featured-fitouts/${proj.slug}`} className="block">
                         <h3 className="text-xs sm:text-lg md:text-xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors duration-500 uppercase">{proj.name}</h3>
                       </a>
-                      <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location || "UAE"}</span>
+                      <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location || "India"}</span>
                     </div>
                     <p className="text-neutral-500 text-[10px] sm:text-sm font-light leading-relaxed line-clamp-2">
                       {proj.intro}

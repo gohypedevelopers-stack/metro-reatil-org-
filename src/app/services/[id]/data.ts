@@ -361,7 +361,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "carpentry": {
     title: "Bespoke In-House Joinery",
     tagline: "Premium Bespoke In-House Joinery Services",
-    heroImage: "/images/joinery_r2/Living-Room31-copy.jpg",
+    heroImage: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free joinery consultation and let our craftsmen assess your requirements. We'll provide detailed designs and transparent pricing for your custom joinery project", "Introducing the Metro Retail SIGNATURE range of Luxury Wardrobes, Kitchens, Cabinets, Vanities and Wall Panels", "Custom bar counters and vanity units crafted for function and style."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -383,7 +383,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Feature walls",
         description: "Bespoke feature wall joinery that adds depth and character.",
         tags: ["Slatted Walls", "Accent Walls", "Textured Panels"],
-        bullets: ["Feature wall ideas for bedroom Dubai", "Tile feature wall design UAE", "Vertical garden wall Dubai", "Interior feature wall contractor UAE"],
+        bullets: ["Feature wall ideas for bedroom Dubai", "Tile feature wall design India", "Vertical garden wall Dubai", "Interior feature wall contractor India"],
         buttonText: "FEATURE WALLS →"
       },
       {
@@ -392,7 +392,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Kitchens",
         description: "Tailor-made kitchens with smart storage and premium finishes.",
         tags: ["Modular Kitchens", "Luxury Kitchens", "Custom Cabinets"],
-        bullets: ["Modern kitchen cabinet manufacturer in UAE", "Luxury modular kitchen design Dubai", "Best kitchen cabinets company Dubai"],
+        bullets: ["Modern kitchen cabinet manufacturer in India", "Luxury modular kitchen design Dubai", "Best kitchen cabinets company Dubai"],
         buttonText: "KITCHENS →"
       },
       {
@@ -419,7 +419,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Residential furniture",
         description: "Made-to-measure residential furniture for elegant everyday living.",
         tags: ["Sofas", "Dining Tables", "Bedroom Furniture"],
-        bullets: ["Luxury bespoke residential furniture Dubai", "Custom made sofas dining tables Dubai", "Handcrafted bespoke wardrobes beds Dubai UAE"],
+        bullets: ["Luxury bespoke residential furniture Dubai", "Custom made sofas dining tables Dubai", "Handcrafted bespoke wardrobes beds Dubai India"],
         buttonText: "RESIDENTIAL FURNITURE →"
       },
       {
@@ -428,7 +428,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Tv-units",
         description: "Custom TV units with integrated storage and clean detailing.",
         tags: ["Media Consoles", "Floating TV Units", "Entertainment Units"],
-        bullets: ["Modern minimalist TV unit buy online Dubai", "TV unit with cable management Dubai", "Minimalist modern TV unit apartment living room Dubai", "Compact TV unit for small living room UAE"],
+        bullets: ["Modern minimalist TV unit buy online Dubai", "TV unit with cable management Dubai", "Minimalist modern TV unit apartment living room Dubai", "Compact TV unit for small living room India"],
         buttonText: "TV UNITS →"
       },
       {
@@ -437,7 +437,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Wall panels",
         description: "Decorative wall panels crafted to enhance interiors with texture.",
         tags: ["Acoustic Panels", "Decorative Panels", "3D Wall Panels"],
-        bullets: ["V-Groove engraved acoustic wall panels office UAE", "PVC waterproof wall panels Dubai", "3D decorative wall panels for living room Dubai", "Fluted wall panels Dubai supplier"],
+        bullets: ["V-Groove engraved acoustic wall panels office India", "PVC waterproof wall panels Dubai", "3D decorative wall panels for living room Dubai", "Fluted wall panels Dubai supplier"],
         buttonText: "WALL PANELS →"
       },
       {
@@ -455,7 +455,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Wood ceilings",
         description: "Precision wood ceiling systems for warmth and visual impact.",
         tags: ["Coffered Ceilings", "Slatted Ceilings", "Carved Ceilings"],
-        bullets: ["Luxury carved wood ceiling design villa Dubai", "Traditional and contemporary wooden ceiling UAE", "Arabic style wooden ceiling design Dubai", "Modern wooden ceiling design for office Dubai"],
+        bullets: ["Luxury carved wood ceiling design villa Dubai", "Traditional and contemporary wooden ceiling India", "Arabic style wooden ceiling design Dubai", "Modern wooden ceiling design for office Dubai"],
         buttonText: "WOOD CEILINGS →"
       }
     ]
@@ -463,7 +463,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "kitchens-wardrobes": {
     title: "Ready to Build Your Kitchens & Wardrobes?",
     tagline: "Premium Ready to Build Your Kitchens & Wardrobes? Services",
-    heroImage: "/images/kitchens_wardrobes_dubai_r2/Kitchen1_HALO.webp",
+    heroImage: "https://images.unsplash.com/photo-1672137233327-37b0c1049e77?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free joinery consultation and let our craftsmen design custom kitchens and wardrobes. We'll provide a detailed proposal with in-house manufacturing and transparent pricing.", "From elegant European-style wardrobes to modern functional kitchens, Metro Retail Interiors combines custom joinery, intelligent space planning, and high-quality materials to create beautiful, durable, and fully integrated storage and cooking solutions.", "Bespoke kitchen cabinets designed and manufactured in our Al Quoz joinery facility with premium materials."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -471,52 +471,52 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Build Your Kitchens & Wardrobes? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Build Your Kitchens & Wardrobes? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_built_in_appliances.webp",
-        title: "Built-in Appliances",
-        description: "Seamless integration of premium appliances including ovens, dishwashers, and refrigerators.",
-        tags: [],
-        bullets: [],
-        buttonText: "BUILT-IN APPLIANCES →"
+        img: "https://images.unsplash.com/photo-1610733374054-59454fe657cd?auto=format&fit=crop&q=80&w=800",
+        title: "CUSTOM CABINETRY",
+        description: "Bespoke custom cabinetry designed for maximum storage and visual appeal.",
+        tags: ["Kitchens", "Cabinetry"]
       },
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_backsplash_installation.webp",
-        title: "Backsplash Installation",
-        description: "Beautiful backsplash designs using tiles, marble, or decorative materials.",
-        tags: [],
-        bullets: [],
-        buttonText: "BACKSPLASH INSTALLATION →"
+        img: "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&q=80&w=800",
+        title: "BUILT-IN APPLIANCES",
+        description: "Seamlessly integrated built-in appliances for a sleek, modern kitchen finish.",
+        tags: ["Kitchens", "Appliances"]
       },
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_soft_closing_hardware.webp",
-        title: "Soft-Closing Hardware",
-        description: "Premium German and Italian hardware with soft-closing drawers and doors.",
-        tags: [],
-        bullets: [],
-        buttonText: "SOFT-CLOSING HARDWARE →"
+        img: "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?auto=format&fit=crop&q=80&w=800",
+        title: "QUARTZ, GRANITE & MARBLE COUNTERTOPS",
+        description: "High-quality stone countertops providing durability and elegant aesthetics.",
+        tags: ["Kitchens", "Countertops"]
       },
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_integrated_lighting.webp",
-        title: "Integrated Lighting",
-        description: "LED lighting integrated into cabinets, drawers, and under-counter areas.",
-        tags: [],
-        bullets: [],
-        buttonText: "INTEGRATED LIGHTING →"
+        img: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=800",
+        title: "BACKSPLASH INSTALLATION",
+        description: "Expert backsplash installation that protects walls while enhancing the kitchen design.",
+        tags: ["Kitchens", "Backsplash"]
       },
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_kitchens_island_and_breakfast_counters.webp",
-        title: "Island and Breakfast Counters",
-        description: "Custom-designed kitchen islands and breakfast counters for functional and social spaces.",
-        tags: [],
-        bullets: [],
-        buttonText: "ISLAND AND BREAKFAST COUNTERS →"
+        img: "https://images.unsplash.com/photo-1600422086908-72be2c8f5f3f?auto=format&fit=crop&q=80&w=800",
+        title: "SOFT-CLOSING HARDWARE",
+        description: "Premium soft-closing hardware for smooth, quiet, and reliable cabinet operation.",
+        tags: ["Kitchens", "Hardware"]
       },
       {
-        img: "/images/kitchens_wardrobes_dubai_r2/services_joinery_wardrobes_walkin_wardrobes.webp",
-        title: "Walk-in Wardrobes",
-        description: "Spacious walk-in wardrobe systems with custom shelving, hanging areas, and storage solutions.",
-        tags: [],
-        bullets: [],
-        buttonText: "WALK-IN WARDROBES →"
+        img: "https://images.unsplash.com/photo-1772567732993-3c546ee1a52c?auto=format&fit=crop&q=80&w=800",
+        title: "INTEGRATED LIGHTING",
+        description: "Beautiful integrated lighting solutions for better visibility and a warm ambiance.",
+        tags: ["Kitchens", "Lighting"]
+      },
+      {
+        img: "https://images.unsplash.com/photo-1617228069096-4638a7ffc906?auto=format&fit=crop&q=80&w=800",
+        title: "ISLAND AND BREAKFAST COUNTERS",
+        description: "Spacious kitchen islands and breakfast counters for dining, cooking, and socializing.",
+        tags: ["Kitchens", "Islands"]
+      },
+      {
+        img: "https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&q=80&w=800",
+        title: "PLUMBING & ELECTRICAL",
+        description: "Safe and reliable plumbing and electrical services for a fully functional kitchen.",
+        tags: ["Kitchens", "Services"]
       }
     ]
   },
@@ -543,7 +543,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Texture paint application",
           "Luxury sand texture wall finish villa",
-          "Stucco wall finish contractor UAE"
+          "Stucco wall finish contractor India"
         ],
         buttonText: "TEXTURE PAINTS →"
       },
@@ -560,7 +560,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Venetian plaster wall finish",
           "Italian polished plaster villa",
-          "Luxury tadelakt finish contractor UAE"
+          "Luxury tadelakt finish contractor India"
         ],
         buttonText: "VENETIAN PLASTERS →"
       },
@@ -577,7 +577,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Decorative feature wall",
           "Luxury accent wall design villa",
-          "Statement feature wall contractor UAE"
+          "Statement feature wall contractor India"
         ],
         buttonText: "FEATURE WALLS →"
       },
@@ -594,7 +594,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Limewash wall paint",
           "Matte limewash finish villa",
-          "Natural limewash application contractor UAE"
+          "Natural limewash application contractor India"
         ],
         buttonText: "LIMEWASH →"
       },
@@ -611,7 +611,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Decorative brick wall finish",
           "Faux brick effect wall villa",
-          "Exposed brick finish contractor UAE"
+          "Exposed brick finish contractor India"
         ],
         buttonText: "BRICK FINISH →"
       },
@@ -628,7 +628,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Custom stencil painting",
           "Moroccan pattern wall stencil villa",
-          "Decorative stencil painter contractor UAE"
+          "Decorative stencil painter contractor India"
         ],
         buttonText: "STENCIL PAINTING →"
       },
@@ -638,7 +638,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Pearl Finish",
         description: "Subtle pearl sheen that creates elegant light play and sophistication on walls.",
         tags: ["Pearl Sheen", "Iridescent Finish", "Shimmer Coat"],
-        bullets: ["Pearl finish wall paint Dubai", "Iridescent wall coating villa", "Luxury pearl sheen paint contractor UAE"],
+        bullets: ["Pearl finish wall paint Dubai", "Iridescent wall coating villa", "Luxury pearl sheen paint contractor India"],
         buttonText: "PEARL FINISH →"
       },
       {
@@ -647,7 +647,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Artistic Finishes",
         description: "Bespoke decorative finishes crafted by artisan painters for unique premium interiors.",
         tags: ["Hand Painted", "Faux Finish", "Artisan Craft"],
-        bullets: ["Artistic wall finish Dubai", "Hand painted decorative wall villa", "Bespoke faux finish contractor UAE"],
+        bullets: ["Artistic wall finish Dubai", "Hand painted decorative wall villa", "Bespoke faux finish contractor India"],
         buttonText: "ARTISTIC FINISHES →"
       }
     ]
@@ -656,7 +656,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     title: "Ready to Apply Microcement?",
     tagline: "Premium Ready to Apply Microcement? Services",
     heroImage: "/images/H-Living10.jpg",
-    desc: ["Book a free microcement consultation and let our specialists create seamless surfaces. We'll provide a detailed proposal with modern finishes and transparent pricing for microcement applications.", "At Metro Retail, we provide one of the UAE's most extensive and advanced ranges of decorative microcement and seamless surface coatings. Our applications are;", "We Have 50 Specialist Applicators50 Specialist Applicators10 Years Experience100 Shades and FinishesEU Standard Protocols"],
+    desc: ["Book a free microcement consultation and let our specialists create seamless surfaces. We'll provide a detailed proposal with modern finishes and transparent pricing for microcement applications.", "At Metro Retail, we provide one of the India's most extensive and advanced ranges of decorative microcement and seamless surface coatings. Our applications are;", "We Have 50 Specialist Applicators50 Specialist Applicators10 Years Experience100 Shades and FinishesEU Standard Protocols"],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
     ],
@@ -902,137 +902,65 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Stretch Ceilings? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Stretch Ceilings? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "/images/stretch_ceiling_dubai_r2/featured_stretch_ceilings.webp",
+        slug: "feature-ceilings",
+        img: "https://images.unsplash.com/photo-1582203423341-64b918240e25?auto=format&fit=crop&q=80&w=800",
         title: "Feature Ceilings",
         description: "Feature Ceilings tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "FeatureCeilings",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Ceiling Design", "Acoustics", "Interiors"],
+        bullets: ["Seamless finish", "Quick installation", "Lightweight material"],
         buttonText: "FEATURE CEILINGS →"
       },
       {
-        img: "/images/stretch_ceiling_dubai_r2/ceiling_backlit.webp",
+        slug: "backlit-effects",
+        img: "https://images.unsplash.com/photo-1718011584347-02301c9c5431?auto=format&fit=crop&q=80&w=800",
         title: "Backlit Effects",
         description: "Backlit Effects tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "BacklitCeilings",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Lighting", "Ambiance", "Interiors"],
+        bullets: ["Uniform illumination", "Energy efficient", "Customizable brightness"],
         buttonText: "BACKLIT EFFECTS →"
       },
       {
-        img: "/images/stretch_ceiling_dubai_r2/moisture_resistance.webp",
+        slug: "moisture-resistance",
+        img: "https://images.unsplash.com/photo-1637847522219-ef24dd4445fe?auto=format&fit=crop&q=80&w=800",
         title: "Moisture Resistance",
         description: "Moisture Resistance tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "MoistureResistantCeilings",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Wet Areas", "Bathrooms", "Pools"],
+        bullets: ["Waterproof", "Prevents condensation", "Mold resistant"],
         buttonText: "MOISTURE RESISTANCE →"
       },
       {
-        img: "/images/stretch_ceiling_dubai_r2/custom-ceilings.webp",
+        slug: "custom-designs",
+        img: "https://images.unsplash.com/photo-1711107796112-e5b4fe9aa075?auto=format&fit=crop&q=80&w=800",
         title: "Custom Designs",
         description: "Custom Designs tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "CustomCeilingDesign",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Printed Ceilings", "3D Shapes", "Interiors"],
+        bullets: ["Custom graphics", "Unique shapes", "Endless possibilities"],
         buttonText: "CUSTOM DESIGNS →"
       },
       {
-        img: "/images/stretch_ceiling_dubai_r2/quick-installation.webp",
+        slug: "quick-installation",
+        img: "https://images.unsplash.com/photo-1482731215275-a1f151646268?auto=format&fit=crop&q=80&w=800",
         title: "Quick Installation",
         description: "Quick Installation tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "FastTrackFitout",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Efficiency", "Clean Process", "Interiors"],
+        bullets: ["No debris", "Fast process", "Minimal disruption"],
         buttonText: "QUICK INSTALLATION →"
       },
       {
-        img: "/images/stretch_ceiling_dubai_r2/ceiling-maintenance.webp",
+        slug: "easy-maintenance",
+        img: "https://images.unsplash.com/photo-1482731215275-a1f151646268?auto=format&fit=crop&q=80&w=800",
         title: "Easy Maintenance",
         description: "Easy Maintenance tailored for reliable and high-quality stretch ceiling execution.",
-        tags: [
-          "LowMaintenanceCeilings",
-          "Commercial"
-        ],
-        bullets: [],
+        tags: ["Durability", "Cleaning", "Interiors"],
+        bullets: ["Washable surface", "Dust repellent", "Long-lasting finish"],
         buttonText: "EASY MAINTENANCE →"
       }
     ]
   },
-  "halo-shield": {
-    title: "UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield.",
-    tagline: "Premium UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. Services",
-    heroImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800",
-    desc: ["Engineering-led property protection designed for heavy rains, extreme heat, humidity, movement — built for million-dirham properties across the UAE.", "Our clients include Property Owners, Interior Designers, Consultants and Contractors", "From luxury villas on Palm Jumeirah to exclusive estates in Emirates Hills — our engineering team delivers precision waterproofing for discerning homeowners."],
-    stats: [
-      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
-    ],
-    process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the UAE's Waterproofing Problem Has a Permanent Fix: Metro Retail Shield. with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
-    gallery: [
-      {
-        img: "https://images.unsplash.com/photo-1595841696660-181c4fd3587e?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      },
-      {
-        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      },
-      {
-        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      },
-      {
-        img: "https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      },
-      {
-        img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      },
-      {
-        img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800",
-        title: "",
-        description: "",
-        tags: [],
-        bullets: [],
-        buttonText: "VIEW DETAILS →"
-      }
-    ]
-  },
   "property-inspection": {
-    title: "Expert Property Inspection Services in Dubai & UAE",
+    title: "Expert Property Inspection Services in Dubai & India",
     tagline: "Certified Dubai property inspectors. We uncover hidden structural, MEP, and safety issues before you buy or move in with a 300-point check.",
-    heroImage: "/images/property_inspection_dubai_r2/local-insights.jpg",
+    heroImage: "https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&fit=crop&q=80&w=1200",
     desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Our certified inspectors deliver detailed photo-backed snagging reports.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession, ensuring you avoid costly surprises."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1040,23 +968,23 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for property inspection and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions and precise technical planning for the inspection." }, { "step": "Execution Phase", "desc": "Our expert technicians conduct a thorough inspection with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive snagging report delivery and final handover to ensure absolute transparency." }],
     gallery: [
       {
-        img: "/images/property_inspection_dubai_r2/professional-inspection-1.jpg",
+        img: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=800",
         title: "Professional Inspection",
         description: "On-site professional property inspection for handover and resale checks.",
         tags: [
           "PropertyInspection",
           "VillaInspection",
-          "OfficeInspectionUAE"
+          "OfficeInspectionIndia"
         ],
         bullets: [
           "Professional villa inspection",
-          "Office property inspection UAE",
+          "Office property inspection India",
           "Bedroom and living room inspection"
         ],
         buttonText: "PROFESSIONAL INSPECTION →"
       },
       {
-        img: "/images/property_inspection_dubai_r2/detailed%20assesment-1.jpg",
+        img: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=800",
         title: "Detailed Assessment",
         description: "Detailed visual and technical assessment to identify defects before move-in.",
         tags: [
@@ -1066,13 +994,13 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         ],
         bullets: [
           "Apartment detailed assessment",
-          "Bedroom defect assessment UAE",
+          "Bedroom defect assessment India",
           "Pre-handover villa inspection"
         ],
         buttonText: "DETAILED ASSESSMENT →"
       },
       {
-        img: "/images/property_inspection_dubai_r2/technical-testing.jpg",
+        img: "https://images.unsplash.com/photo-1621511075938-f03482369feb?auto=format&fit=crop&q=80&w=800",
         title: "Technical Testing",
         description: "Detailed MEP and HVAC systems inspection for compliance and performance verification.",
         tags: [
@@ -1083,12 +1011,12 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "MEP inspection service",
           "HVAC performance testing villa",
-          "Plumbing pressure test contractor UAE"
+          "Plumbing pressure test contractor India"
         ],
         buttonText: "TECHNICAL TESTING →"
       },
       {
-        img: "/images/property_inspection_dubai_r2/ai-powered-detection.jpg",
+        img: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?auto=format&fit=crop&q=80&w=800",
         title: "AI-Powered Detection",
         description: "AI-assisted detection workflow for faster and more accurate defect discovery.",
         tags: [
@@ -1098,39 +1026,39 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         ],
         bullets: [
           "AI villa defect detection",
-          "Smart apartment inspection UAE",
+          "Smart apartment inspection India",
           "Technology-driven office snagging"
         ],
         buttonText: "AI-POWERED DETECTION →"
       },
       {
-        img: "/images/property_inspection_dubai_r2/quality-inspection.jpg",
+        img: "https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&fit=crop&q=80&w=800",
         title: "Quality Inspection",
         description: "Quality-focused inspection process aligned with practical handover standards.",
         tags: [
           "QualityInspection",
           "KitchenInspection",
-          "BathroomInspectionUAE"
+          "BathroomInspectionIndia"
         ],
         bullets: [
           "Kitchen and bathroom inspection",
-          "Villa quality audit UAE",
+          "Villa quality audit India",
           "Handover quality check for apartments"
         ],
         buttonText: "QUALITY INSPECTION →"
       },
       {
-        img: "/images/property_inspection_dubai_r2/expert-analysis.jpg",
+        img: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?auto=format&fit=crop&q=80&w=800",
         title: "Expert Analysis",
         description: "Expert-led analysis with actionable recommendations for property owners and buyers.",
         tags: [
           "ExpertInspection",
           "PenthouseInspection",
-          "TownhouseInspectionUAE"
+          "TownhouseInspectionIndia"
         ],
         bullets: [
           "Expert villa inspection analysis",
-          "Office and retail inspection experts UAE",
+          "Office and retail inspection experts India",
           "Property risk assessment for penthouses"
         ],
         buttonText: "EXPERT ANALYSIS →"
@@ -1559,7 +1487,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Customized TV Units & Consoles",
         description: "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces.",
         tags: ["CustomConsoles", "BespokeFurniture", "ConsoleDesign"],
-        bullets: ["Seamless cable management", "Bespoke console table makers in UAE"],
+        bullets: ["Seamless cable management", "Bespoke console table makers in India"],
         buttonText: "CUSTOM CONSOLES →"
       },
       {
@@ -1750,9 +1678,9 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
           "ConsoleDesign"
         ],
         bullets: [
-          "Bespoke console table makers in UAE",
+          "Bespoke console table makers in India",
           "Premium custom console tables",
-          "Modern luxury console tables UAE"
+          "Modern luxury console tables India"
         ],
         buttonText: "CUSTOMIZED CONSOLES →"
       },
@@ -1767,9 +1695,9 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
           "DoorDesign"
         ],
         bullets: [
-          "Bespoke Door makers in UAE",
+          "Bespoke Door makers in India",
           "Premium custom made doors",
-          "Modern luxury doors UAE"
+          "Modern luxury doors India"
         ],
         buttonText: "CUSTOMIZED DOORS →"
       },
@@ -1784,9 +1712,9 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
           "SofaDesign"
         ],
         bullets: [
-          "Bespoke sofa makers in UAE",
+          "Bespoke sofa makers in India",
           "Premium custom made sofas",
-          "Modern luxury sofas UAE"
+          "Modern luxury sofas India"
         ],
         buttonText: "CUSTOMIZED SOFAS →"
       },
@@ -1801,9 +1729,9 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
           "TableDesign"
         ],
         bullets: [
-          "Bespoke table makers in UAE",
+          "Bespoke table makers in India",
           "Premium custom made tables",
-          "Modern luxury tables UAE"
+          "Modern luxury tables India"
         ],
         buttonText: "CUSTOMIZED TABLES →"
       },
@@ -1818,9 +1746,9 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
           "TableDesign"
         ],
         bullets: [
-          "Bespoke table installation services in UAE",
+          "Bespoke table installation services in India",
           "Premium custom table makers and installers",
-          "Luxury custom dining and office tables UAE"
+          "Luxury custom dining and office tables India"
         ],
         buttonText: "CUSTOMIZED BEDS →"
       }
@@ -1848,7 +1776,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "HEPA air purification system",
           "UV air purifier installation villa",
-          "Commercial air purification system UAE"
+          "Commercial air purification system India"
         ],
         buttonText: "AIR PURIFICATION SYSTEMS →"
       },
@@ -1864,7 +1792,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Environmental probiotics air treatment",
           "Probiotic cleaning system villa",
-          "Biofilm prevention solution UAE"
+          "Biofilm prevention solution India"
         ],
         buttonText: "ENVIRONMENT PROBIOTICS →"
       },
@@ -1880,7 +1808,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Dehumidification system installation",
           "Humidity control solution villa",
-          "Vapor barrier moisture control UAE"
+          "Vapor barrier moisture control India"
         ],
         buttonText: "HUMIDITY CONTROL SOLUTIONS →"
       },
@@ -1896,7 +1824,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         bullets: [
           "Indoor air quality testing",
           "IAQ assessment luxury villa",
-          "VOC air quality analysis UAE"
+          "VOC air quality analysis India"
         ],
         buttonText: "AIR QUALITY TESTING AND ASSESSMENT →"
       },
@@ -1963,7 +1891,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "window-glazing": {
     title: "Ready to Install Window Glazing?",
     tagline: "Premium Ready to Install Window Glazing? Services",
-    heroImage: "/images/window_glazing_dubai_r2/window-glazing.jpg",
+    heroImage: "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free glazing consultation and let our specialists install energy-efficient windows. We'll provide a detailed proposal with quality materials and transparent pricing.", "Expert window installation, replacement, low-E glass, sliding systems, folding doors, and thermal performance upgrades for residential and commercial properties.", "Window installation & replacement tailored for reliable and high-quality window glazing execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1971,7 +1899,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Window Glazing? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Window Glazing? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "/images/window_glazing_dubai_r2/services_window_glazing_low_e_solutions.webp",
+        img: "https://images.unsplash.com/photo-1751486403820-7cf45ebec080?auto=format&fit=crop&q=80&w=800",
         title: "Low-e solutions",
         description: "Low-e solutions tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1982,7 +1910,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "LOW-E SOLUTIONS →"
       },
       {
-        img: "/images/window_glazing_dubai_r2/sliding_windows.jpg",
+        img: "https://images.unsplash.com/photo-1613324061338-19d4528a5be9?auto=format&fit=crop&q=80&w=800",
         title: "Sliding window systems",
         description: "Sliding window systems tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -1993,7 +1921,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "SLIDING WINDOW SYSTEMS →"
       },
       {
-        img: "/images/window_glazing_dubai_r2/foldable_doors.jpg",
+        img: "https://images.unsplash.com/photo-1667659360692-30640504b396?auto=format&fit=crop&q=80&w=800",
         title: "Folding doors and Bi fold systems",
         description: "Folding doors and Bi fold systems tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -2004,7 +1932,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FOLDING DOORS AND BI FOLD SYSTEMS →"
       },
       {
-        img: "/images/window_glazing_dubai_r2/thermal_window.jpg",
+        img: "https://images.unsplash.com/photo-1559219432-1962fcaa2752?auto=format&fit=crop&q=80&w=800",
         title: "Thermal performance upgrades",
         description: "Thermal performance upgrades tailored for reliable and high-quality window glazing execution.",
         tags: [
@@ -2281,7 +2209,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free wood ceiling consultation and let our craftsmen create stunning overhead features. We'll provide a detailed proposal with custom designs and transparent pricing.",
     heroImage: "/images/joinery_wood_ceilings_r2/veneer_panels.jpg",
     contentTitle: "Premium Custom Wood Ceilings for Luxury Interiors",
-    contentDesc: "Wood ceilings add warmth, depth, and architectural character to any space. Halo Interiors designs and manufactures bespoke wood ceiling systems in our in-house joinery facility, ensuring perfect alignment, clean detailing, and flawless installation. Whether for a villa, office, restaurant, or majlis, we craft statement ceilings that elevate your interiors.",
+    contentDesc: "Wood ceilings add warmth, depth, and architectural character to any space. Metro Retail Solutions Interiors designs and manufactures bespoke wood ceiling systems in our in-house joinery facility, ensuring perfect alignment, clean detailing, and flawless installation. Whether for a villa, office, restaurant, or majlis, we craft statement ceilings that elevate your interiors.",
     gallery: [
       {
         img: "/images/joinery_wood_ceilings_r2/wood-ceilings-5.webp",
@@ -2338,7 +2266,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free wardrobe consultation and let our experts assess your space. We'll provide a detailed proposal with custom walk-in wardrobes and transparent pricing for your storage solutions.",
     heroImage: "/images/wardrobes_r2/Ward8_HALO.webp",
     contentTitle: "Bespoke Walk-In Wardrobes Made to Fit Your Lifestyle",
-    contentDesc: "A walk-in wardrobe should be functional, elegant, and meticulously organized. Halo designs and manufactures custom wardrobe systems tailored to your needs.",
+    contentDesc: "A walk-in wardrobe should be functional, elegant, and meticulously organized. Metro Retail Solutions designs and manufactures custom wardrobe systems tailored to your needs.",
     gallery: [
       {
         img: "/images/wardrobes_r2/Ward1_HALO.webp",
@@ -2383,7 +2311,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free wall panel consultation and let our craftsmen create elegant wall treatments. We'll provide a detailed proposal with custom designs and transparent pricing.",
     heroImage: "/images/joinery_wall_panels_r2/fabric_panels.jpg",
     contentTitle: "Custom Wall Panels & Decorative Cladding",
-    contentDesc: "Transform your walls with Halo's custom wall panels. From fluted wood panels and veneer cladding to fabric panels and PU-painted designs, we create stunning feature walls for living rooms, bedrooms, lobbies, and offices. All panels are precision-crafted in our Al Quoz joinery facility.",
+    contentDesc: "Transform your walls with Metro Retail Solutions's custom wall panels. From fluted wood panels and veneer cladding to fabric panels and PU-painted designs, we create stunning feature walls for living rooms, bedrooms, lobbies, and offices. All panels are precision-crafted in our Al Quoz joinery facility.",
     gallery: [
       {
         img: "/images/joinery_wall_panels_r2/fluted%20wood%20panels.jpg",
@@ -2428,7 +2356,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free TV unit consultation and let our craftsmen design custom entertainment centers. We'll provide a detailed proposal with integrated solutions and transparent pricing.",
     heroImage: "/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg",
     contentTitle: "Custom TV Units & Media Walls",
-    contentDesc: "Halo creates stunning custom TV units and media walls with veneer cladding, PU-painted finishes, LED backlighting, integrated shelving, concealed wiring, and floating designs. Every unit is custom-built to your specifications in our joinery facility.",
+    contentDesc: "Metro Retail Solutions creates stunning custom TV units and media walls with veneer cladding, PU-painted finishes, LED backlighting, integrated shelving, concealed wiring, and floating designs. Every unit is custom-built to your specifications in our joinery facility.",
     gallery: [
       {
         img: "/images/joinery_tv_units_r2/services_joinery_tv_units_vaneer_cladding.webp",
@@ -2473,7 +2401,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free furniture consultation and let our craftsmen design bespoke home pieces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
     heroImage: "/images/joinery_residential_furniture_r2/shelving.jpg",
     contentTitle: "Bespoke Residential Furniture Crafted for Your Home",
-    contentDesc: "Halo designs and manufactures custom residential furniture including bed frames & headboards, custom consoles, dining tables & benches, sideboards, shelving units, and coffee tables. Every piece is tailored to your style and space.",
+    contentDesc: "Metro Retail Solutions designs and manufactures custom residential furniture including bed frames & headboards, custom consoles, dining tables & benches, sideboards, shelving units, and coffee tables. Every piece is tailored to your style and space.",
     gallery: [
       {
         img: "/images/joinery_residential_furniture_r2/bed_headboards.jpg",
@@ -2563,7 +2491,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
     tagline: "Book a free office furniture consultation and let our craftsmen design functional workspaces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
     heroImage: "/images/joinery_office_furniture_r2/conference_tables.jpg",
     contentTitle: "Custom Office Furniture for Professional Spaces",
-    contentDesc: "Halo creates bespoke office furniture including workstations, executive desks, filing cabinets, reception counters, conference tables, and storage walls. Designed for functionality and style, manufactured in our joinery facility.",
+    contentDesc: "Metro Retail Solutions creates bespoke office furniture including workstations, executive desks, filing cabinets, reception counters, conference tables, and storage walls. Designed for functionality and style, manufactured in our joinery facility.",
     gallery: [
       {
         img: "/images/joinery_office_furniture_r2/executive_workspace.jpg",
@@ -2606,42 +2534,42 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   "kitchens": {
     title: "Ready to Transform Your Kitchens?",
     tagline: "Book a free kitchen design consultation and let our experts assess your space. We'll provide a detailed proposal with custom joinery and transparent pricing for your kitchen renovation.",
-    heroImage: "/images/kitchens_r2/kitchen_12.webp",
+    heroImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Custom Luxury Kitchens Built With Precision & Durability",
-    contentDesc: "Your kitchen should be beautiful, functional, and built to last. Halo designs and manufactures custom kitchens in our in-house joinery facility, integrating premium materials, appliances, and intelligent storage.",
+    contentDesc: "Your kitchen should be beautiful, functional, and built to last. Metro Retail Solutions designs and manufactures custom kitchens in our in-house joinery facility, integrating premium materials, appliances, and intelligent storage.",
     gallery: [
       {
-        img: "/images/kitchens_r2/Kitchen1_HALO.webp",
+        img: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&q=80&w=800",
         title: "Modern Kitchen Design",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "/images/kitchens_r2/Kitchen2_HALO.webp",
+        img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
         title: "Contemporary Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "/images/kitchens_r2/Kitchen3_HALO.webp",
+        img: "https://images.unsplash.com/photo-1701421047855-d7bafd8d6f69?auto=format&fit=crop&q=80&w=800",
         title: "Bespoke Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "/images/kitchens_r2/Kitchen4_HALO.webp",
+        img: "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
         title: "Luxury Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "/images/kitchens_r2/Kitchen5_HALO.webp",
+        img: "https://images.unsplash.com/photo-1610276173132-c47d148ab626?auto=format&fit=crop&q=80&w=800",
         title: "Minimalist Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]
       },
       {
-        img: "/images/kitchens_r2/Kitchen6_HALO.webp",
+        img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800",
         title: "Classic Kitchen",
         description: "Custom luxury kitchens built with precision and high-quality materials.",
         tags: ["Kitchens", "Residential"]

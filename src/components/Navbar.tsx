@@ -41,25 +41,28 @@ const SERVICES_LINKS = [
   { name: 'ALL SERVICES', href: '/services' },
   { name: 'FITOUT', href: '/services/fitout' },
   { name: 'CARPENTRY', href: '/services/carpentry' },
-  { name: 'CUSTOMISED FURNITURE', href: '/services/customised-furniture' },
+  { name: 'KITCHENS & WARDROBES', href: '/services/kitchens' },
   { name: 'DECORATIVE PAINTS', href: '/services/decorative-paint' },
   { name: 'MICROCEMENT', href: '/services/microcement' },
   { name: 'TERRAZZO FLOORS', href: '/services/terrazzo' },
   { name: 'LANDSCAPING & POOLS', href: '/services/landscaping-pools' },
   { name: 'AUTOMATION', href: '/services/automation' },
-  { name: 'SPECIALITY SERVICES', href: '/services/interior-design' },
   { name: 'STRETCH CEILING', href: '/services/stretch-ceiling' },
-  { name: 'VILLA WATERPROOFING', href: '/services/halo-shield' },
+  { name: 'PROPERTY INSPECTION', href: '/services/property-inspection' },
+  { name: 'MEP & HVAC', href: '/services/mep-hvac' },
+  { name: 'PROJECT MANAGEMENT', href: '/services/project-management' },
+  { name: 'VENETIAN PLASTERS', href: '/services/venetian-plasters' },
+  { name: 'FEATURE WALLS', href: '/services/feature-walls' },
+  { name: 'ARTISTIC FINISHES', href: '/services/artistic-finishes' },
+  { name: 'CUSTOM FURNITURE', href: '/services/customised-furniture' },
   { name: 'AIR QUALITY', href: '/services/air-quality' },
+  { name: 'CONTRACTING', href: '/services/contracting' },
   { name: 'WINDOW GLAZING', href: '/services/window-glazing' },
   { name: 'TILE INSTALLATION', href: '/services/tile-installation' },
   { name: 'MARBLE INSTALLATION', href: '/services/marble-installation' },
   { name: 'GYPSUM WORKS', href: '/services/gypsum-works' },
-  { name: 'CONTRACTING', href: '/services/contracting' },
-  { name: 'PROPERTY INSPECTION', href: '/services/property-inspection' },
-  { name: 'AUTHORITY APPROVALS', href: '/services/authority-approvals' },
-  { name: 'MEP & HVAC', href: '/services/mep-hvac' },
-  { name: 'PROJECT MANAGEMENT', href: '/services/project-management' }
+  { name: 'PROPERTY AUDITS', href: '/services/property-audits' },
+  { name: 'AUTHORITY APPROVALS', href: '/services/authority-approvals' }
 ];
 
 const STYLES_LINKS = [
@@ -174,10 +177,10 @@ export const Navbar = () => {
         </div>
         {/* Right Side Image Placeholder */}
         <div className="col-span-4 bg-neutral-100 relative overflow-hidden">
-          <img 
-            src={imageSrc} 
-            alt={title} 
-            className="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply" 
+          <img
+            src={imageSrc}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply"
           />
         </div>
       </div>
