@@ -1947,7 +1947,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "tile-installation": {
     title: "Ready to Install Premium Tiles?",
     tagline: "Premium Ready to Install Premium Tiles? Services",
-    heroImage: "/images/tile_installation_dubai_r2/porcellain.jpg",
+    heroImage: "https://images.unsplash.com/photo-1561817223-f67e69e6bd6a?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free tile consultation and let our specialists install precision flooring and walls. We'll provide a detailed proposal with quality materials and transparent pricing.", "Professional installation of porcelain, ceramic, marble, mosaic, outdoor tiles, and large-format slabs with precision and quality craftsmanship.", "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -1955,7 +1955,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Premium Tiles? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Premium Tiles? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "/images/tile_installation_dubai_r2/porcellain.jpg",
+        img: "https://images.unsplash.com/photo-1706629503586-2731f65587ae?auto=format&fit=crop&q=80&w=800",
         title: "Porcelain Tile Installation",
         description: "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1966,7 +1966,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "PORCELAIN TILE INSTALLATION →"
       },
       {
-        img: "/images/tile_installation_dubai_r2/12.jpg",
+        img: "https://images.unsplash.com/photo-1523413307857-ef24c53571ae?auto=format&fit=crop&q=80&w=800",
         title: "Ceramic Tile Installation",
         description: "Ceramic Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1977,7 +1977,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "CERAMIC TILE INSTALLATION →"
       },
       {
-        img: "/images/tile_installation_dubai_r2/marble_tile.jpg",
+        img: "https://images.unsplash.com/photo-1706629503586-2731f65587ae?auto=format&fit=crop&q=80&w=800",
         title: "Marble Tile Installation",
         description: "Marble Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1988,7 +1988,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MARBLE TILE INSTALLATION →"
       },
       {
-        img: "/images/tile_installation_dubai_r2/mosaic_tile.jpg",
+        img: "https://images.unsplash.com/photo-1622227920933-7fcd7377703f?auto=format&fit=crop&q=80&w=800",
         title: "Mosaic Tile Installation",
         description: "Mosaic Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -1999,7 +1999,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "MOSAIC TILE INSTALLATION →"
       },
       {
-        img: "/images/tile_installation_dubai_r2/outdoor_tile_installation.jpg",
+        img: "https://images.unsplash.com/photo-1617887021567-fe8d2480bd96?auto=format&fit=crop&q=80&w=800",
         title: "Outdoor Tile Installation",
         description: "Outdoor Tile Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -2010,7 +2010,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "OUTDOOR TILE INSTALLATION →"
       },
       {
-        img: "/images/tile_installation_dubai_r2/large-slab-tile.jpg",
+        img: "https://images.unsplash.com/photo-1774514580467-6492a3b54049?auto=format&fit=crop&q=80&w=800",
         title: "Large-Format Slab Installation",
         description: "Large-Format Slab Installation tailored for reliable and high-quality tile installation execution.",
         tags: [
@@ -2025,7 +2025,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   "gypsum-works": {
     title: "Ready to Install Gypsum Works?",
     tagline: "Premium Ready to Install Gypsum Works? Services",
-    heroImage: "/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
+    heroImage: "https://images.unsplash.com/photo-1582203423341-64b918240e25?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free gypsum consultation and let our craftsmen create custom ceilings and partitions. We'll provide a detailed proposal with precision work and transparent pricing for gypsum installations.", "Expert false ceilings, partitions, bulkheads, coves, niches, and detailed gypsum design for residential and commercial spaces.", "False Ceiling Installation tailored for reliable and high-quality gypsum works execution."],
     stats: [
       { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Specialists", value: "25+", icon: ShieldCheck }
@@ -2033,7 +2033,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     process: [{ "step": "Initial Consultation", "desc": "Understanding your specific requirements for Ready to Install Gypsum Works? and assessing the space." }, { "step": "Design & Planning", "desc": "Developing tailored solutions, material selection, and precise technical planning." }, { "step": "Execution Phase", "desc": "Our expert technicians install and implement the Ready to Install Gypsum Works? with meticulous attention to detail." }, { "step": "Final Handover", "desc": "Comprehensive quality checks and final handover to ensure absolute perfection." }],
     gallery: [
       {
-        img: "/images/gypsum_works_dubai_r2/false_ceiling_installation.jpg",
+        img: "https://images.unsplash.com/photo-1711107796112-e5b4fe9aa075?auto=format&fit=crop&q=80&w=800",
         title: "False Ceiling Installation",
         description: "False Ceiling Installation tailored for reliable and high-quality gypsum works execution.",
         tags: [
@@ -2044,7 +2044,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "FALSE CEILING INSTALLATION →"
       },
       {
-        img: "/images/gypsum_works_dubai_r2/gypsum_partitions.jpg",
+        img: "https://images.unsplash.com/photo-1718816281207-3b253cff549a?auto=format&fit=crop&q=80&w=800",
         title: "Gypsum Partitions",
         description: "Gypsum Partitions tailored for reliable and high-quality gypsum works execution.",
         tags: [
@@ -2055,7 +2055,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         buttonText: "GYPSUM PARTITIONS →"
       },
       {
-        img: "/images/gypsum_works_dubai_r2/services_gypsum_works_detailed_gypsum_design.webp",
+        img: "https://images.unsplash.com/photo-1603525689518-1d8c608e5cbe?auto=format&fit=crop&q=80&w=800",
         title: "Detailed Gypsum Design",
         description: "Detailed Gypsum Design tailored for reliable and high-quality gypsum works execution.",
         tags: [
