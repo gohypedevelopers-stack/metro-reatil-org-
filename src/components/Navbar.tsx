@@ -208,17 +208,17 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-1 justify-center items-center gap-3 xl:gap-6 2xl:gap-8 whitespace-nowrap">
-            <a href="/" className={`shrink-0 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
-            <a href="/portfolio" className={`shrink-0 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
+            <a href="/" className={`shrink-0 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Home</a>
+            <a href="/portfolio" className={`shrink-0 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>Portfolio</a>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('retail')}>
-              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/portfolio?filter=Retail" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Retail <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'retail' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('commercial')}>
-              <a href="/portfolio?filter=Commercial" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/portfolio?filter=Commercial" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Commercial <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'commercial' ? 'rotate-180' : ''}`} />
               </a>
             </div>
@@ -226,25 +226,25 @@ export const Navbar = () => {
 
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('residential')}>
-              <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/portfolio?filter=Residential" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Residential <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'residential' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('services')}>
-              <a href="/services" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/services" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'services' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('styles')}>
-              <a href="/design-styles" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/design-styles" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 Styles <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'styles' ? 'rotate-180' : ''}`} />
               </a>
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('more')}>
-              <a href="/about" className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <a href="/about" className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.15em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 More <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'more' ? 'rotate-180' : ''}`} />
               </a>
             </div>
