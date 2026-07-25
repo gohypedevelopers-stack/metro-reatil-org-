@@ -37,6 +37,10 @@ body {
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* GLOBAL SCALING MAGIC:
+       This automatically scales EVERY Tailwind rem value (fonts, spacing, padding) 
+       up and down between 12px on mobile to 16px on desktop. */
+    font-size: clamp(12px, 0.75rem + 1vw, 16px);
   }
 
   html.lenis,

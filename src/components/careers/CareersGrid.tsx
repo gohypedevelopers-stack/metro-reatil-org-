@@ -67,7 +67,7 @@ export default function CareersGrid({ initialRoles }: CareersGridProps) {
   return (
     <div>
       {/* Filters & Search */}
-      <div className="flex flex-col lg:flex-row gap-6 justify-between lg:items-start mb-12">
+      <div className="flex flex-col lg:flex-row gap-6 justify-between lg:items-start mb-6 md:mb-12">
         {/* Search Bar */}
         <div className="relative w-full lg:w-96 shrink-0">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={18} />

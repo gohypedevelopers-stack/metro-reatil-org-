@@ -115,15 +115,15 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Listing Section */}
-      <section className="py-24 bg-white text-brand-dark">
+      <section className="py-12 md:py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
+          <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Latest <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Articles</span>
             </h2>
             
             {/* Search */}
-            <div className="max-w-2xl mx-auto mb-10">
+            <div className="max-w-2xl mx-auto mb-6 md:mb-10">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
                 <input 
@@ -150,7 +150,7 @@ export default function BlogPage() {
           </div>
 
           {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
             {blogPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-sm overflow-hidden border border-neutral-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
                 <Link href={`/blog/${post.slug}`} className="relative h-64 overflow-hidden block shrink-0">
@@ -205,13 +205,13 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-neutral-50 border-t border-neutral-100 text-center">
+      <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 text-center">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Ready to Transform <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Space?</span>
             </h2>
-            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-10 max-w-lg mx-auto">
+            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-6 md:mb-10 max-w-lg mx-auto">
               Book a free site visit and let our experts assess your space. We'll provide a detailed consultation and transparent quote for your property transformation project.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

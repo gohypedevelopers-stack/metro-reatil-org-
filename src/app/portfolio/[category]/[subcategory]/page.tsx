@@ -107,7 +107,7 @@ export default function SubcategoryDetailPage() {
 
   return (
     <div className="bg-white pt-20">
-      
+
       {/* Back Button Grid */}
       <section className="py-8 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -124,10 +124,10 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* Main Content & Intro */}
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-28">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
+
             {/* Left Column: Rich Description */}
             <div className="lg:col-span-7 space-y-8">
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">
@@ -154,7 +154,7 @@ export default function SubcategoryDetailPage() {
             {/* Right Column: Custom Inquiry/Consultation Form */}
             <div className="lg:col-span-5 bg-neutral-50 p-8 md:p-10 border border-neutral-100 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-brand-gold" />
-              
+
               <div className="flex items-center gap-4 mb-8">
                 <Calendar className="text-brand-gold" size={24} strokeWidth={1.5} />
                 <div>
@@ -254,9 +254,9 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* Premium Multi-image Project Gallery */}
-      <section className="py-20 md:py-28 bg-neutral-50/50">
+      <section className="py-12 md:py-28 bg-neutral-50/50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-8 md:mb-16">
             <ImageIcon className="text-brand-gold font-light" size={28} strokeWidth={1.5} />
             <div>
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-1 block">Inspiring Spaces</span>
@@ -289,7 +289,7 @@ export default function SubcategoryDetailPage() {
         </div>
         <FullServicesSection />
       </div>
-      
+
     </div>
   );
 }

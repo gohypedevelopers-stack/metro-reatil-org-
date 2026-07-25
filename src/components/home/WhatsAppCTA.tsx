@@ -6,7 +6,7 @@ import { Phone, ArrowRight } from 'lucide-react';
 
 const WhatsAppCTA = () => {
   return (
-    <section className="py-20 bg-brand-gold relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-brand-gold relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>

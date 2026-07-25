@@ -132,7 +132,7 @@ export default function CategoryLandingPage() {
   return (
     <div className="bg-white pt-20">
       {/* Dynamic Header */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-b border-neutral-100">
+      <section className="py-12 md:py-28 bg-neutral-50 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="max-w-3xl text-center mx-auto">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center">Metro Portfolio</span>
@@ -157,7 +157,7 @@ export default function CategoryLandingPage() {
       </section>
 
       {/* Subcategories Grid */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-32">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
             {data.subcategories.map((sub, i) => (
@@ -178,7 +178,7 @@ export default function CategoryLandingPage() {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors duration-500" />
-                  
+
                   {/* Visual Indicator */}
                   <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
                     <ChevronRight size={18} className="text-brand-dark" />

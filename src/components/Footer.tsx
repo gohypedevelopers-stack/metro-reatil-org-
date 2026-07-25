@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-20 mb-16 md:mb-24 lg:mb-32">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-6 md:gap-16 lg:gap-20 mb-8 md:mb-24 lg:mb-32">
           
           {/* Brand Info */}
           <div className="col-span-2 lg:col-span-4 flex flex-col justify-between">
             <div>
-              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert" />
+              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert -ml-2 sm:-ml-3" />
               <p className="text-neutral-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
                 Pioneering excellence in retail and commercial fit-outs across the GCC. We deliver turnkey environments through architectural precision, bespoke carpentry, and technical MEP mastery.
               </p>
@@ -128,9 +128,9 @@ const Footer = () => {
         {/* Bottom copyright */}
         <div className="pt-10 md:pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
           <p>© 2026 Metro Retail Solutions. All Rights Reserved.</p>
-          <div className="flex gap-8 md:gap-12 mt-8 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex gap-4 md:gap-12 mt-8 md:mt-0">
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

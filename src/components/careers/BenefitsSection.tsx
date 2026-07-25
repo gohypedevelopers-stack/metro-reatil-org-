@@ -59,10 +59,10 @@ export default function BenefitsSection() {
   }, [api]);
 
   return (
-    <section className="py-24 bg-brand-dark text-white">
+    <section className="py-12 md:py-24 bg-brand-dark text-white">
       <div className="container mx-auto px-6">
         {/* Title Block */}
-        <div className="flex flex-col md:flex-row gap-12 items-start md:items-end mb-16">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-end mb-8 md:mb-16">
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-5xl text-white uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Build Your Career <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>With Us</span>
@@ -76,7 +76,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* Desktop View: Grid layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {BENEFITS.map((benefit, index) => (
             <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:bg-white/10 transition-colors group">
               <div className="w-14 h-14 bg-brand-gold/20 rounded-sm flex items-center justify-center mb-6 text-brand-gold group-hover:scale-110 transition-transform">

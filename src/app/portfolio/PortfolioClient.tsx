@@ -56,11 +56,11 @@ const CompanyProfile = () => {
         <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
           Metro Retail Solutions
         </h2>
-        <p className="text-neutral-600 text-lg md:text-xl font-light leading-relaxed mb-12">
+        <p className="text-neutral-600 text-lg md:text-xl font-light leading-relaxed mb-6 md:mb-12">
           We are a turnkey fit-out company handling complete MEP, civil, and interior works, with over 25+ years of experience and having in-house manufacturing of complete modular fixtures (wooden, metal, powder coat units, etc.).
         </p>
 
-        <div className="grid grid-cols-2 gap-4 sm:gap-12">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-12">
           {/* Under One Roof */}
           <div>
             <h3 className="text-brand-dark font-bold mb-2 md:mb-4 tracking-widest uppercase text-[10px] md:text-sm border-b border-neutral-200 pb-2 text-center md:text-left">
@@ -112,7 +112,7 @@ const CompanyProfile = () => {
           </div>
         </div>
 
-        <div className="mt-12 bg-white p-8 border border-neutral-100 shadow-sm rounded-sm">
+        <div className="mt-6 md:mt-12 bg-white p-8 border border-neutral-100 shadow-sm rounded-sm">
           <h3 className="text-brand-dark font-bold uppercase tracking-widest text-xs mb-4 text-center">
             Our Manufacturing Facility & Team
           </h3>
@@ -123,8 +123,9 @@ const CompanyProfile = () => {
           </p>
         </div>
 
-        <div className="mt-16 text-center overflow-hidden w-full relative">
-          <style dangerouslySetInnerHTML={{__html: `
+        <div className="mt-8 md:mt-16 text-center overflow-hidden w-full relative">
+          <style dangerouslySetInnerHTML={{
+            __html: `
             @keyframes marquee {
               0% { transform: translateX(0%); }
               100% { transform: translateX(-50%); }
@@ -145,11 +146,11 @@ const CompanyProfile = () => {
             {/* Fade gradients on sides for premium look */}
             <div className="absolute inset-y-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-neutral-50 to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
-            
-            <div className="animate-marquee gap-4 md:gap-8 py-2">
+
+            <div className="animate-marquee gap-3 md:gap-8 py-2">
               {['Safari', 'Uppercase', 'IT Luggage', 'Peach Mode', 'Cashify', 'Van Heusen', 'Safari', 'Uppercase', 'IT Luggage', 'Peach Mode', 'Cashify', 'Van Heusen'].map((brand, idx) => (
-                <span 
-                  key={`${brand}-${idx}`} 
+                <span
+                  key={`${brand}-${idx}`}
                   className="px-6 py-3 bg-neutral-100 text-neutral-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 whitespace-nowrap"
                 >
                   {brand}
@@ -242,7 +243,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
         const navbarHeight = 100; // Offset for fixed navbar + breathing room
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-        
+
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
@@ -254,7 +255,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
   const handleFilterChange = (cat: string) => {
     setFilter(cat);
     setSubFilter("OVERVIEW");
-    
+
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (cat === "All") {
@@ -271,7 +272,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
 
   const handleSubFilterChange = (sub: string) => {
     setSubFilter(sub);
-    
+
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (sub === "OVERVIEW") {
@@ -461,7 +462,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <motion.div
             layout
@@ -540,7 +541,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       </section>
 
       {/* Stats Banner */}
-      <section className="py-10 md:py-16 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-8 md:py-16 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-12">
             {[

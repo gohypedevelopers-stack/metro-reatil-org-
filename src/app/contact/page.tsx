@@ -72,13 +72,13 @@ export default function ContactPage() {
       {/* Contact Content */}
       <section className="pt-10 pb-20 md:py-32 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24">
 
             {/* Form Column */}
             <div className="lg:col-span-7">
               <div className="bg-brand-dark p-5 md:p-12">
                 <h2
-                  className="text-2xl md:text-3xl font-serif text-white mb-10 md:mb-16 uppercase tracking-tight text-center md:text-left"
+                  className="text-2xl md:text-3xl font-serif text-white mb-6 md:mb-16 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Send Us a Message
@@ -93,7 +93,7 @@ export default function ContactPage() {
               {/* Info Cards */}
               <div className="bg-neutral-50 px-4 py-8 md:p-12 border border-neutral-100">
                 <h2
-                  className="text-xl font-serif text-brand-dark mb-10 uppercase tracking-tight text-center md:text-left"
+                  className="text-xl font-serif text-brand-dark mb-6 md:mb-10 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Contact Information

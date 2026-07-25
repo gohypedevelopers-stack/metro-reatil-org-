@@ -141,7 +141,7 @@ export default function DesignStylesPage() {
       {/* Intro Section */}
       <section className="pt-20 md:pt-24 pb-4 md:pb-8 bg-white overflow-hidden border-b border-neutral-100">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-12 md:gap-24 items-center">
 
             {/* Image Section (Desktop Only) */}
             <div className="hidden lg:block lg:col-span-6 xl:col-span-7">
@@ -189,7 +189,7 @@ export default function DesignStylesPage() {
       {/* Design Styles Grid */}
       <section className="pt-8 md:pt-12 pb-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
+          <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Interior Design Styles <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>
             </h2>
@@ -234,16 +234,16 @@ export default function DesignStylesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-neutral-50 border-t border-neutral-100 overflow-hidden">
+      <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
+          <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               What Our <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Clients Say</span>
             </h2>
           </div>
 
           {/* Simple Grid (as a proxy for slider for responsiveness) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {testimonials.map((testi, index) => (
               <div key={index} className="bg-white p-8 rounded-sm shadow-sm border border-neutral-100 relative">
                 <Quote className="absolute top-6 right-6 text-neutral-100 w-12 h-12 rotate-180" />

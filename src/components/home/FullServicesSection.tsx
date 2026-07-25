@@ -73,14 +73,14 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
   ];
 
   return (
-    <section className="pt-20 pb-10 bg-white border-y border-neutral-100 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-white border-y border-neutral-100 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-14 md:mb-20 gap-8 md:gap-10">
+        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-8 md:mb-20 gap-4 md:gap-10">
           <div className="flex flex-col items-center md:items-start">
             <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
-            <p className="mt-4 md:mt-6 text-neutral-500 font-light text-base md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
+            <p className="mt-3 md:mt-6 text-neutral-500 font-light text-base md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
               From concept to completion, we deliver every aspect of interior design, fitout, and property services under one roof.
             </p>
           </div>
@@ -196,7 +196,7 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
 
         {/* View All Services Button */}
         {!hideViewAllButton && (
-          <div className="flex justify-center mt-12 md:mt-16">
+          <div className="flex justify-center mt-8 md:mt-16">
             <a href="/services" className="text-[10px] font-bold uppercase tracking-widest border-b-2 border-neutral-300 pb-2 hover:border-brand-dark hover:text-brand-dark transition-all text-neutral-500 whitespace-nowrap">
               View All Services
             </a>

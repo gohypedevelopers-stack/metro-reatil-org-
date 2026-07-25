@@ -85,9 +85,9 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Precision Engineered</span>
               <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -137,16 +137,16 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Machinery Section */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Equipment</span>
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Advanced Machinery
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {machinery.map((item, i) => (
               <div key={i} className="bg-white p-6 border border-neutral-100 rounded-sm hover:shadow-xl transition-shadow group">
                 <div className="aspect-[4/3] overflow-hidden rounded-sm mb-6 bg-neutral-100">
@@ -161,9 +161,9 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 md:py-28 bg-brand-dark text-white">
+      <section className="py-12 md:py-28 bg-brand-dark text-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="flex justify-between items-end mb-16">
+          <div className="flex justify-between items-end mb-8 md:mb-16">
             <div>
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
               <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl font-serif uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>

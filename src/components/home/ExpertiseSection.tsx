@@ -251,7 +251,7 @@ const MobileSlider = () => {
 /* ─── Main Section ─── */
 const ExpertiseSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="pt-12 pb-0 md:pt-20 md:pb-0 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
         {/* ── Desktop / Laptop: split layout ── */}
@@ -301,14 +301,14 @@ const ExpertiseSection = () => {
 
         {/* ── Mobile: heading + horizontal slider ── */}
         <div className="block md:hidden">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2
-              className="text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-2xl sm:text-3xl font-serif text-brand-dark uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               OUR CORE <br />
               <span
-                className="block mt-2 text-3xl"
+                className="block mt-1 text-xl sm:text-2xl"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
               >
                 <em>Technical Expertise</em>

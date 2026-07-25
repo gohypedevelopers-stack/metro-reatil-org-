@@ -164,7 +164,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
 
   return (
     <motion.main
-      className="bg-white pt-24 lg:pt-28"
+      className="bg-white pt-16 lg:pt-20"
       animate={{ opacity: isNavigatingBack ? 0 : 1 }}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
@@ -184,10 +184,10 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       </section>
 
       <section className="pb-8 md:pb-12">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 md:gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
 
           {/* ── Mobile-only Title + Back Button (shows above image on mobile) ── */}
-          <div className="block lg:hidden pt-5 space-y-4">
+          <div className="block lg:hidden pt-0 space-y-4">
             {/* Back button — left aligned */}
             <div className="text-left">
               <button
@@ -360,7 +360,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               </div>
             </div>
           ) : (
-            <div className="flex w-full flex-col items-center justify-center rounded-sm border border-dashed border-neutral-300 bg-neutral-100/50 py-24 text-center">
+            <div className="flex w-full flex-col items-center justify-center rounded-sm border border-dashed border-neutral-300 bg-neutral-100/50 py-12 md:py-24 text-center">
               <span className="mb-2 text-2xl">📸</span>
               <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">
                 No Gallery Images Uploaded
@@ -383,18 +383,15 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-12 md:py-24">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-          <div className="mb-8 flex items-center justify-between gap-4">
-            <div>
-              <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-brand-gold">
-                Suggested Products
-              </span>
-              <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
-                Continue Exploring
-              </h2>
-            </div>
-            <ArrowRight className="hidden text-brand-gold sm:block" size={28} strokeWidth={1.5} />
+          <div className="mb-8 flex flex-col items-center text-center">
+            <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-brand-gold">
+              Suggested Products
+            </span>
+            <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
+              Continue Exploring
+            </h2>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
@@ -470,7 +467,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               <ChevronRight size={32} strokeWidth={1.5} />
             </button>
 
-            <div className="relative z-20 flex min-h-screen items-center justify-center px-5 py-16">
+            <div className="relative z-20 flex min-h-screen items-center justify-center px-5 py-12 md:py-16">
               <div className="w-full max-w-4xl">
                 <div className="mb-4 text-center sm:text-left">
                   <span className="block text-[9px] font-bold uppercase tracking-[0.35em] text-white/45">

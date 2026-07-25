@@ -45,9 +45,9 @@ export default function DesignStyleDetailPage() {
       </section>
 
       {/* SPLIT SECTION — image left, content + stats right */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
 
             {/* LEFT: hero image — sticky */}
             <div className="lg:col-span-6 relative aspect-[16/11] overflow-hidden group shadow-2xl lg:sticky lg:top-28">
@@ -118,7 +118,7 @@ export default function DesignStyleDetailPage() {
 
       {/* PAGE INTRO SECTION */}
       {data.pageIntro && (
-        <section className="py-16 md:py-24 bg-white border-b border-neutral-100">
+        <section className="py-12 md:py-24 bg-white border-b border-neutral-100">
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
@@ -135,9 +135,9 @@ export default function DesignStyleDetailPage() {
 
       {/* SUB-SERVICES GRID */}
       {data.subServices && (
-        <section className="py-20 md:py-28 bg-neutral-50 border-b border-neutral-100">
+        <section className="py-12 md:py-28 bg-neutral-50 border-b border-neutral-100">
           <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 md:mb-16">
               <h2
                 className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
@@ -145,7 +145,7 @@ export default function DesignStyleDetailPage() {
                 {data.title} <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Elements We Create</span>
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               {data.subServices.map((service: any, idx: number) => (
                 <a 
                   href={`https://wa.me/918800607967?text=Hi, I want to get a quote on ${service.title}`}
@@ -176,9 +176,9 @@ export default function DesignStyleDetailPage() {
       
 
       {/* KEY ELEMENTS / METODOLOGY */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Execution</span>
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"

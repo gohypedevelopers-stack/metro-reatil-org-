@@ -170,14 +170,14 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section - Sharpened */}
-      <section className="py-20 md:py-32 lg:py-48 border-b border-neutral-100">
+      <section className="py-12 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
             <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-8 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-5xl lg:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-16 text-center lg:text-left">
+              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
                 </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-8 md:gap-12">
+              <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-4 md:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
                     <div className="text-4xl font-serif text-brand-dark mb-2">
@@ -212,7 +212,7 @@ export default function AboutPage() {
               </div>
 
               {/* Stats displayed below the image on mobile */}
-              <div className="grid grid-cols-4 gap-2 mt-12 lg:hidden text-center">
+              <div className="grid grid-cols-4 gap-2 mt-6 md:mt-12 lg:hidden text-center">
                 {STATS.map((stat, i) => (
                   <div key={i} className="flex flex-col items-center">
                     <div className="text-2xl font-serif text-brand-dark mb-1">
@@ -231,7 +231,7 @@ export default function AboutPage() {
       <AboutSummary />
 
       {/* Values Section - Sharpened */}
-      <section className="py-20 md:py-32 lg:py-48 bg-neutral-50">
+      <section className="py-12 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
             <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -243,7 +243,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
             {VALUES.map((val, i) => (
               <div key={i} className="bg-white p-8 md:p-12 lg:p-16 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-center text-center md:items-start md:text-left">
-                <val.icon className="text-brand-gold mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
+                <val.icon className="text-brand-gold mb-6 md:mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
                 <h3 className="text-2xl font-serif text-brand-dark mb-6">{val.title}</h3>
                 <p className="text-neutral-500 text-base font-light leading-relaxed">{val.desc}</p>
               </div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
+      <section className="py-12 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
             <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -262,7 +262,7 @@ export default function AboutPage() {
             <p className="text-neutral-500 text-lg font-light">The dedicated experts who turn ambitious designs into reality.</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-3 gap-4 md:gap-12">
             {TEAM.map((member, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="aspect-[3/4] overflow-hidden mb-6 relative">
@@ -285,7 +285,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section - Sharpened */}
-      <section className="py-20 md:py-32 lg:py-48 bg-brand-dark relative overflow-hidden">
+      <section className="py-12 md:py-32 lg:py-48 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-gold blur-[200px] -translate-y-1/2 translate-x-1/2" />
         </div>
@@ -294,7 +294,7 @@ export default function AboutPage() {
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             READY TO COLLABORATE <span className="text-brand-gold italic ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
           </h2>
-          <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-10 md:mb-16">
+          <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-6 md:mb-16">
             Let's collaborate to build a space that defines your brand and exceeds your operational expectations.
           </p>
           <a

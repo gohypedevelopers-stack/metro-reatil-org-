@@ -255,7 +255,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center justify-center py-16 md:py-24 text-center gap-8">
+      <div className="flex flex-col items-center justify-center py-12 md:py-24 text-center gap-4 md:gap-8">
         <div className="w-20 h-20 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center animate-in zoom-in duration-500">
           <CheckCircle size={36} className="text-brand-gold" strokeWidth={1.5} />
         </div>

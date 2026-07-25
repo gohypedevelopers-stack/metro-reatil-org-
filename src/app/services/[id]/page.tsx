@@ -1,13 +1,37 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { CheckCircle2, ChevronRight, PenTool, Award, ShieldCheck } from 'lucide-react';
 import FullServicesSection from '../../../components/home/FullServicesSection';
 import JoineryTeamSection from '../../../components/services/JoineryTeamSection';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 
 import { SUBCATEGORY_DATA } from './data';
+
+function AnimatedNumber({ value }: { value: string }) {
+  const numericMatch = value.match(/\d+/);
+  const numericValue = numericMatch ? parseInt(numericMatch[0], 10) : 0;
+  const prefix = value.substring(0, numericMatch ? value.indexOf(numericMatch[0]) : 0);
+  const suffix = value.substring(numericMatch ? value.indexOf(numericMatch[0]) + numericMatch[0].length : value.length);
+
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const controls = animate(count, numericValue, { duration: 2, ease: "easeOut" });
+    return controls.stop;
+  }, [numericValue, count]);
+
+  return (
+    <span>
+      {prefix}
+      <motion.span>{rounded}</motion.span>
+      {suffix}
+    </span>
+  );
+}
 
 export default function SubcategoryDetailPage() {
   const params = useParams();
@@ -48,11 +72,11 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* SPLIT SECTION — image left, content + stats right */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
           {/* MOBILE ONLY: Title Block above image */}
-          <div className="block lg:hidden space-y-3 mb-8">
+          <div className="flex lg:hidden flex-col items-center text-center space-y-3 mb-8">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
             <h2
               className="mobile-heading-balance text-xl sm:text-2xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
@@ -66,7 +90,7 @@ export default function SubcategoryDetailPage() {
             >
               {data.tagline}
             </p>
-            <div className="w-16 h-[2px] bg-brand-gold mt-4" />
+            <div className="w-16 h-[2px] bg-brand-gold mt-4 mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -82,10 +106,10 @@ export default function SubcategoryDetailPage() {
             </div>
 
             {/* RIGHT: content + stats */}
-            <div className="lg:col-span-6 space-y-8">
+            <div className="lg:col-span-6 space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
 
               {/* DESKTOP ONLY: Title Block */}
-              <div className="hidden lg:block space-y-3">
+              <div className="hidden lg:flex flex-col items-center lg:items-start text-center lg:text-left space-y-3 w-full">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
                 <h2
                   className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
@@ -99,7 +123,7 @@ export default function SubcategoryDetailPage() {
                 >
                   {data.tagline}
                 </p>
-                <div className="w-16 h-[2px] bg-brand-gold mt-4" />
+                <div className="w-16 h-[2px] bg-brand-gold mt-4 mx-auto lg:mx-0" />
               </div>
 
               {/* Description paragraphs */}
@@ -112,27 +136,31 @@ export default function SubcategoryDetailPage() {
               </div>
 
               {/* Stats grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 pt-4">
+              <div className="flex flex-row justify-center lg:justify-start items-center gap-2 sm:gap-4 pt-4 w-full">
                 {data.stats.map((stat, i) => {
                   const Icon = stat.icon;
                   return (
-                    <div key={i} className="flex flex-col p-5 bg-neutral-50/70 border border-neutral-100">
-                      <div className="text-brand-gold mb-3">
-                        <Icon size={20} strokeWidth={1.5} />
+                    <div key={i} className="flex flex-col items-center justify-center p-2 sm:p-4 bg-neutral-50/70 border border-neutral-100 flex-1 text-center min-w-[30%]">
+                      <div className="text-brand-gold mb-1 sm:mb-2">
+                        <Icon size={16} strokeWidth={1.5} />
                       </div>
-                      <div className="text-xl font-serif text-brand-dark leading-tight">{stat.value}</div>
-                      <div className="text-[9px] font-bold uppercase tracking-wider text-neutral-400 mt-1">{stat.label}</div>
+                      <div className="text-sm sm:text-base font-serif text-brand-dark leading-tight">
+                        <AnimatedNumber value={stat.value} />
+                      </div>
+                      <div className="text-[7px] sm:text-[9px] font-bold uppercase tracking-wider text-neutral-400 mt-1">{stat.label}</div>
                     </div>
                   );
                 })}
               </div>
 
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
-              >
-                Request a Consultation <ChevronRight size={14} />
-              </a>
+              <div className="flex justify-center lg:justify-start w-full">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
+                >
+                  Request a Consultation <ChevronRight size={12} />
+                </a>
+              </div>
             </div>
 
           </div>
@@ -140,9 +168,9 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* EXECUTION PROCESS */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
             <h2
               className="mobile-heading-balance text-xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
@@ -175,7 +203,7 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* GALLERY */}
-      <section className="py-20 md:py-28 bg-neutral-900">
+      <section className="py-12 md:py-28 bg-neutral-900">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-14 md:w-2/3">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>

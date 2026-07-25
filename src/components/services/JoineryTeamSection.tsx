@@ -6,7 +6,7 @@ const JoineryTeamSection = () => {
   return (
     <section className="pt-12 md:pt-16 pb-20 md:pb-28 bg-white border-t border-neutral-100">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2
             className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}

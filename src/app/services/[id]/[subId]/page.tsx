@@ -46,7 +46,7 @@ export default function NestedServiceDetailPage() {
       </section>
 
       {/* INTRO CONTENT SECTION */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-[1000px] mx-auto px-6 md:px-12 text-center">
           <h2
             className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6 break-words hyphens-auto"
@@ -54,7 +54,7 @@ export default function NestedServiceDetailPage() {
           >
             {data.contentTitle}
           </h2>
-          <p className="text-neutral-500 text-lg leading-relaxed font-light mb-10">
+          <p className="text-neutral-500 text-lg leading-relaxed font-light mb-6 md:mb-10">
             {data.contentDesc}
           </p>
           <div className="w-24 h-[2px] bg-brand-gold mx-auto" />
@@ -62,10 +62,10 @@ export default function NestedServiceDetailPage() {
       </section>
 
       {/* GALLERY */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {data.gallery.map((item: any, i: number) => (
               <a 
                 href={`https://wa.me/918800607967?text=Hi, I want to get a quote on ${item.title}`}

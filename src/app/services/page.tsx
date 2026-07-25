@@ -236,9 +236,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-12 md:py-24 bg-white overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-12 md:gap-24 items-center">
 
             {/* Image Section (Left) */}
             <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
@@ -275,9 +275,9 @@ export default function ServicesPage() {
 
 
       {/* Services Grid Section */}
-      <section className="py-24 bg-neutral-950 text-white">
+      <section className="py-12 md:py-24 bg-neutral-950 text-white">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
+          <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Services We <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Offer</span>
             </h2>

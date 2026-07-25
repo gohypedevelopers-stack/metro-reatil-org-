@@ -98,9 +98,9 @@ const FeaturedFitouts = () => {
   }
 
   return (
-    <section id="featured-fitouts" className="py-20 bg-white relative overflow-hidden">
+    <section id="featured-fitouts" className="py-12 md:py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
           </h2>
@@ -125,7 +125,7 @@ const FeaturedFitouts = () => {
         {/* Carousel / Grid Container */}
         <div className="relative w-full">
           {!shouldShowCarousel ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {filtered.map((project) => (
                 <a
                   key={project.slug}
@@ -158,7 +158,7 @@ const FeaturedFitouts = () => {
           ) : (
             <>
               <div 
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 touch-pan-y"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 touch-pan-y"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -204,24 +204,24 @@ const FeaturedFitouts = () => {
                 type="button"
                 onClick={showPrevious}
                 aria-label="Previous projects"
-                className="absolute top-1/2 -left-4 sm:-left-8 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
+                className="absolute top-1/2 -left-4 sm:-left-8 -translate-y-1/2 z-30 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
               >
-                <ArrowLeft size={20} />
+                <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
               </button>
               <button
                 type="button"
                 onClick={showNext}
                 aria-label="Next projects"
-                className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
+                className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 z-30 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
               >
-                <ArrowRight size={20} />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>
             </>
           )}
         </div>
 
         {shouldShowCarousel && (
-          <div className="mt-12 flex items-center justify-center gap-3">
+          <div className="mt-8 md:mt-12 flex items-center justify-center gap-3">
             {Array.from({ length: filtered.length }).map((_, index) => {
               const isActive = index === activeIndex;
               return (

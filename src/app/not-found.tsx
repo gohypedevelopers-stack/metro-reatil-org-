@@ -11,7 +11,7 @@ export default function NotFound() {
         >
           This Page Is Not Available
         </h1>
-        <p className="mx-auto mb-10 max-w-xl text-base font-light leading-relaxed text-neutral-500 md:text-lg">
+        <p className="mx-auto mb-6 md:mb-10 max-w-xl text-base font-light leading-relaxed text-neutral-500 md:text-lg">
           The page you are looking for may have moved or no longer exists.
         </p>
         <a

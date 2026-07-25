@@ -66,9 +66,9 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-12 md:mb-32 relative">
+        <div className="text-center mb-8 md:mb-32 relative">
           <motion.h2
             initial="hidden"
             whileInView="visible"
@@ -187,7 +187,7 @@ const Testimonials = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="mt-6 md:mt-8 flex justify-center gap-4">
             {testimonials.map((_, i) => (
               <button
                 key={i}
