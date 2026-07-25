@@ -162,7 +162,7 @@ const ExecutionProcess = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-10 md:mb-20 gap-6 md:gap-12">
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start w-full">
             <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center md:text-left">
               Rigorous Execution Blueprint
             </span>
@@ -170,9 +170,6 @@ const ExecutionProcess = () => {
               OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
             </h2>
           </div>
-          <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-md text-center md:text-left">
-            We handle everything from bare concrete to brand loading. Our rigorous 4-phase execution eliminates multi-vendor friction and guarantees flawless commercial Handover.
-          </p>
         </div>
 
         {/* Dynamic Grid Layout */}

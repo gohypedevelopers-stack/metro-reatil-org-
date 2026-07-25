@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState, useRef } from 'react';
-import { HardHat, Paintbrush, Building2, CheckCircle, ChevronUp, ChevronDown } from 'lucide-react';
+import { HardHat, Paintbrush, Building2, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const expertise = [
   {
@@ -58,102 +58,100 @@ const VerticalSlider = () => {
   const card = expertise[active];
 
   return (
-    <div className="flex gap-8 items-stretch h-full">
+    <div className="flex flex-col h-full w-full gap-6">
 
-      {/* Side dot/step indicators */}
-      <div className="flex flex-col items-center justify-center gap-3 py-4">
-        {expertise.map((e, i) => (
-          <button
-            key={i}
-            onClick={() => go(i, i > active ? 1 : -1)}
-            className="group flex flex-col items-center gap-1"
-            aria-label={`Go to ${e.title}`}
+      {/* Animated card */}
+      <div className="flex-1 overflow-hidden" style={{ minHeight: '320px' }}>
+        <AnimatePresence mode="wait" custom={dir}>
+          <motion.div
+            key={active}
+            custom={dir}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            className="h-full rounded-2xl p-10 flex flex-col justify-between"
+            style={{
+              backgroundColor: '#2A1E17',
+              border: '1px solid rgba(232,160,32,0.2)',
+              minHeight: '320px',
+            }}
           >
-            <div
-              className="rounded-full transition-all duration-500"
-              style={{
-                width:  '8px',
-                height: i === active ? '32px' : '8px',
-                backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.25)',
-              }}
-            />
-          </button>
-        ))}
+            {/* top: number + icon */}
+            <div className="flex items-start justify-between">
+              <span
+                className="text-6xl font-serif leading-none select-none"
+                style={{ color: 'rgba(232,160,32,0.15)', fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {card.num}
+              </span>
+              <div
+                className="p-3 rounded-full"
+                style={{ backgroundColor: 'rgba(232,160,32,0.1)', boxShadow: '0 0 0 1px rgba(232,160,32,0.25)' }}
+              >
+                {card.icon}
+              </div>
+            </div>
+
+            {/* bottom: divider + title + desc */}
+            <div>
+              <div className="w-10 h-[1px] mb-5" style={{ backgroundColor: '#E8A020' }} />
+              <h3
+                className="text-xl uppercase tracking-widest mb-4 font-serif"
+                style={{ color: '#ffffff', fontFamily: 'var(--font-cinzel), serif' }}
+              >
+                {card.title}
+              </h3>
+              <p className="text-sm font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                {card.desc}
+              </p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Card + controls column */}
-      <div className="flex-1 flex flex-col gap-4">
-        {/* Up arrow */}
+      {/* Bottom controls */}
+      <div className="flex items-center justify-between mt-2 px-2">
         <button
           onClick={() => go(active - 1, -1)}
-          className="self-start flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
+          className="flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
           style={{ borderColor: 'rgba(232,160,32,0.4)', color: '#E8A020' }}
           aria-label="Previous"
         >
-          <ChevronUp size={18} />
+          <ChevronLeft size={18} />
         </button>
 
-        {/* Animated card */}
-        <div className="flex-1 overflow-hidden" style={{ minHeight: '320px' }}>
-          <AnimatePresence mode="wait" custom={dir}>
-            <motion.div
-              key={active}
-              custom={dir}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="h-full rounded-2xl p-10 flex flex-col justify-between"
-              style={{
-                backgroundColor: '#2A1E17',
-                border: '1px solid rgba(232,160,32,0.2)',
-                minHeight: '320px',
-              }}
+        <div className="flex items-center justify-center gap-3">
+          {expertise.map((e, i) => (
+            <button
+              key={i}
+              onClick={() => go(i, i > active ? 1 : -1)}
+              className="group flex flex-col items-center gap-1"
+              aria-label={`Go to ${e.title}`}
             >
-              {/* top: number + icon */}
-              <div className="flex items-start justify-between">
-                <span
-                  className="text-6xl font-serif leading-none select-none"
-                  style={{ color: 'rgba(232,160,32,0.15)', fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  {card.num}
-                </span>
-                <div
-                  className="p-3 rounded-full"
-                  style={{ backgroundColor: 'rgba(232,160,32,0.1)', boxShadow: '0 0 0 1px rgba(232,160,32,0.25)' }}
-                >
-                  {card.icon}
-                </div>
-              </div>
-
-              {/* bottom: divider + title + desc */}
-              <div>
-                <div className="w-10 h-[1px] mb-5" style={{ backgroundColor: '#E8A020' }} />
-                <h3
-                  className="text-xl uppercase tracking-widest mb-4 font-serif"
-                  style={{ color: '#ffffff', fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  {card.title}
-                </h3>
-                <p className="text-sm font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                  {card.desc}
-                </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              <div
+                className="rounded-full transition-all duration-500"
+                style={{
+                  height: '8px',
+                  width: i === active ? '32px' : '8px',
+                  backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.25)',
+                }}
+              />
+            </button>
+          ))}
         </div>
 
-        {/* Down arrow */}
         <button
           onClick={() => go(active + 1, 1)}
-          className="self-start flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
+          className="flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
           style={{ borderColor: 'rgba(232,160,32,0.4)', color: '#E8A020' }}
           aria-label="Next"
         >
-          <ChevronDown size={18} />
+          <ChevronRight size={18} />
         </button>
       </div>
+
     </div>
   );
 };
