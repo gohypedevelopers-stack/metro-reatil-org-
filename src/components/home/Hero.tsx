@@ -19,7 +19,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
       >
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop"
+          src="/hero.webp"
           alt="Luxury Mall Retail Interior"
           className="w-full h-full object-cover object-center"
         />
