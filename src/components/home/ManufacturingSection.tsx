@@ -30,7 +30,7 @@ const CountUp = ({ end, suffix = "", duration = 2 }: { end: number, suffix?: str
 
 const ManufacturingSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-[#f9f9f8]">
+    <section className="py-12 md:py-12 bg-[#f9f9f8]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

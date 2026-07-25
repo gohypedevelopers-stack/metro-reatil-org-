@@ -203,7 +203,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 {project.category}
               </span>
               <h1
-                className="text-4xl font-serif uppercase leading-tight tracking-tight text-brand-dark"
+                className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {project.name}
@@ -238,7 +238,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 {project.category}
               </span>
               <h1
-                className="text-4xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-6xl lg:text-7xl"
+                className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-4xl lg:text-5xl"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {project.name}

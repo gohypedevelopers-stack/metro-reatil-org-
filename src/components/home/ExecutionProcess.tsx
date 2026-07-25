@@ -153,7 +153,7 @@ const ExecutionProcess = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-12 md:py-24 bg-brand-dark text-white relative overflow-hidden">
+    <section className="py-12 md:py-12 bg-brand-dark text-white relative overflow-hidden">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] -z-10" />
@@ -161,7 +161,7 @@ const ExecutionProcess = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-10 md:mb-20 gap-6 md:gap-12">
+        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-10 md:mb-12 gap-6 md:gap-12">
           <div className="flex flex-col items-center md:items-start w-full">
             <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center md:text-left">
               Rigorous Execution Blueprint

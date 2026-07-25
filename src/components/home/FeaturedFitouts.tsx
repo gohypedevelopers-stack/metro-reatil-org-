@@ -98,7 +98,7 @@ const FeaturedFitouts = () => {
   }
 
   return (
-    <section id="featured-fitouts" className="py-12 md:py-20 bg-white relative overflow-hidden">
+    <section id="featured-fitouts" className="py-12 md:py-12 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>

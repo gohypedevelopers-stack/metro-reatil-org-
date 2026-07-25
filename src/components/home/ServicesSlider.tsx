@@ -66,14 +66,14 @@ const ServicesSlider = () => {
   ];
 
   return (
-    <section id="services-slider" className="pt-12 pb-12 md:pt-20 md:pb-20 bg-white overflow-hidden">
+    <section id="services-slider" className="pt-12 pb-12 md:pt-12 md:pb-12 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-6 md:mb-14">
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <span className="text-brand-gold italic font-normal ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-8 md:mb-20">
+        <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-8 md:mb-12">
           {services.map((s, i) => (
             <button
               key={i}
@@ -103,25 +103,25 @@ const ServicesSlider = () => {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center"
             >
-              <div className="aspect-[16/10] overflow-hidden rounded-sm shadow-2xl">
+              <div className="aspect-video md:aspect-[16/10] overflow-hidden rounded-sm shadow-lg md:shadow-2xl">
                 <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
               </div>
-              <div className="lg:pl-10">
-                <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-4 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <div className="lg:pl-10 mt-6 md:mt-0">
+                <h3 className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-dark mb-3 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                   {services[activeTab].title}
                 </h3>
-                <p className="text-neutral-500 text-lg font-light leading-relaxed mb-6 md:mb-12">
+                <p className="text-neutral-500 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-6 md:mb-12">
                   {services[activeTab].desc}
                 </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6 mb-8 md:mb-12">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-8 md:mb-12">
                   {services[activeTab].features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-4 text-brand-dark text-xs font-bold uppercase tracking-widest">
-                      <CheckCircle size={16} className="text-brand-gold" />
+                    <li key={j} className="flex items-center gap-3 text-brand-dark text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                      <CheckCircle size={14} className="text-brand-gold md:w-4 md:h-4 shrink-0" />
                       {f}
                     </li>
                   ))}
                 </ul>
-                <a href={services[activeTab].link} className="inline-flex items-center gap-4 px-8 py-3 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+                <a href={services[activeTab].link} className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-8 py-3 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full w-[max-content]">
                   Learn More <ArrowRight size={14} />
                 </a>
               </div>

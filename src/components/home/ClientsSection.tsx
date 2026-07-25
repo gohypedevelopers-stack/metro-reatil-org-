@@ -56,7 +56,7 @@ const ClientsSection = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-hidden border-y border-brand-dark/5 py-12 md:py-20 bg-white flex">
+      <div className="w-full overflow-hidden border-y border-brand-dark/5 py-12 md:py-12 bg-white flex">
         <div className="flex w-max animate-marquee hover-pause">
           {displayClients.map((client, index) => (
             <div

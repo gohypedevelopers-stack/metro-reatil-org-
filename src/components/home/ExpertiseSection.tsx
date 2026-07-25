@@ -249,7 +249,7 @@ const MobileSlider = () => {
 /* ─── Main Section ─── */
 const ExpertiseSection = () => {
   return (
-    <section className="pt-12 pb-0 md:pt-20 md:pb-0 bg-white">
+    <section className="pt-12 pb-0 md:pt-12 md:pb-0 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
         {/* ── Desktop / Laptop: split layout ── */}

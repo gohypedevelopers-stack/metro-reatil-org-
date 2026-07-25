@@ -66,7 +66,7 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="py-12 md:py-20 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-12 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-8 md:mb-32 relative">
           <motion.h2
