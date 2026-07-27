@@ -19,8 +19,8 @@ const FeaturedFitouts = () => {
 
   const filtered = activeFilter === 'ALL'
     ? filterCategories.flatMap((category) =>
-        featuredFitouts.filter((project) => project.category === category).slice(0, 3)
-      )
+      featuredFitouts.filter((project) => project.category === category).slice(0, 3)
+    )
     : featuredFitouts.filter((project) => project.category === activeFilter);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ const FeaturedFitouts = () => {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) {
       showNext();
     }
@@ -98,20 +98,21 @@ const FeaturedFitouts = () => {
   }
 
   return (
-    <section id="featured-fitouts" className="py-12 md:py-12 bg-white relative overflow-hidden">
+    <section id="featured-fitouts" className="py-12 md:py-16 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
-        <div className="text-center mb-6 md:mb-10">
-          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-4 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
+        <div className="text-center mb-6 md:mb-8">
+          <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-4 block text-center">Inspiring Spaces</span>
+          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight mb-6 md:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
           </h2>
-          
-          <div className="flex justify-center gap-x-6 gap-y-4 md:gap-12 flex-wrap">
+
+          <div className="flex justify-center gap-x-2 sm:gap-x-4 md:gap-12 flex-wrap">
             {['ALL', ...filterCategories].map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative pb-2 ${activeFilter === filter ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
+                className={`text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.5em] transition-all relative pb-2 ${activeFilter === filter ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
               >
                 {filter}
                 {activeFilter === filter && (
@@ -157,7 +158,7 @@ const FeaturedFitouts = () => {
             </div>
           ) : (
             <>
-              <div 
+              <div
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 touch-pan-y"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
@@ -230,9 +231,8 @@ const FeaturedFitouts = () => {
                   type="button"
                   onClick={() => setActiveIndex(index)}
                   aria-label={`Show project set starting at ${index + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    isActive ? 'w-8 bg-brand-gold' : 'w-2 bg-brand-dark/20 hover:bg-brand-dark/40'
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${isActive ? 'w-8 bg-brand-gold' : 'w-2 bg-brand-dark/20 hover:bg-brand-dark/40'
+                    }`}
                 />
               );
             })}

@@ -5,20 +5,20 @@ import React from 'react';
 
 const AboutSummary = () => {
   return (
-    <section className="py-20 bg-brand-dark text-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-brand-dark text-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative flex flex-col items-center text-center lg:items-start lg:text-left"
+            className="lg:col-span-5 relative flex flex-col items-center text-center lg:items-start lg:text-left"
           >
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-brand-gold mb-8 block text-center lg:text-left">Our Legacy</span>
-            <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Precision in Every <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-[22px] md:text-5xl lg:text-6xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-8 block text-center lg:text-left">Our Legacy</span>
+            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Precision in Every <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
             </h2>
-            <div className="space-y-6 md:space-y-8 text-neutral-400 font-light leading-relaxed text-base text-center lg:text-left">
+            <div className="space-y-8 text-neutral-400 font-light leading-relaxed text-lg md:text-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               <p>
                 Metro Retail Solutions has established itself as a beacon of excellence in the Middle East's fit-out industry. We don't just execute blueprints; we understand the commercial pulse of retail and the ergonomic needs of modern workplaces.
               </p>
@@ -32,7 +32,7 @@ const AboutSummary = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="lg:col-span-7 relative"
           >
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
               <div className="sm:col-span-5 relative">

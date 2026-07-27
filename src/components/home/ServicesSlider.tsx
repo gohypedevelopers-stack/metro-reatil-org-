@@ -25,7 +25,7 @@ const ServicesSlider = () => {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) {
       setActiveTab((prev) => (prev + 1) % services.length);
     }
@@ -33,7 +33,7 @@ const ServicesSlider = () => {
       setActiveTab((prev) => (prev - 1 + services.length) % services.length);
     }
   };
-  
+
   const services = [
     {
       title: "Carpentry",
@@ -66,19 +66,19 @@ const ServicesSlider = () => {
   ];
 
   return (
-    <section id="services-slider" className="pt-12 pb-12 md:pt-12 md:pb-12 bg-white overflow-hidden">
+    <section id="services-slider" className="pt-4 pb-12 md:pt-4 md:pb-16 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-6 md:mb-14">
-          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR CORE <span className="text-brand-gold italic font-normal ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
+        <div className="text-center mb-6 md:mb-10">
+          <h2 className="mobile-heading-balance text-2xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            OUR CORE <span className="text-brand-gold italic font-normal ml-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 md:gap-12 mb-8 md:mb-12">
+        <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-4 md:gap-12 mb-8 md:mb-10">
           {services.map((s, i) => (
             <button
               key={i}
               onClick={() => setActiveTab(i)}
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] md:tracking-[0.4em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
+              className={`text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.5em] pb-4 transition-all relative ${activeTab === i ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
             >
               {s.title}
               {activeTab === i && (
@@ -101,16 +101,16 @@ const ServicesSlider = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center"
+              className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center"
             >
-              <div className="aspect-video md:aspect-[16/10] overflow-hidden rounded-sm shadow-lg md:shadow-2xl">
+              <div className="lg:col-span-7 aspect-video md:aspect-[16/10] overflow-hidden rounded-sm shadow-lg md:shadow-2xl">
                 <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
               </div>
-              <div className="lg:pl-10 mt-6 md:mt-0">
-                <h3 className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-dark mb-3 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <div className="lg:col-span-5 lg:pl-10 mt-6 md:mt-0">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-brand-dark mb-3 md:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                   {services[activeTab].title}
                 </h3>
-                <p className="text-neutral-500 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-6 md:mb-12">
+                <p className="text-neutral-500 text-base font-light leading-relaxed mb-6 md:mb-12">
                   {services[activeTab].desc}
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-8 md:mb-12">

@@ -30,14 +30,14 @@ const CountUp = ({ end, suffix = "", duration = 2 }: { end: number, suffix?: str
 
 const ManufacturingSection = () => {
   return (
-    <section className="py-12 md:py-12 bg-[#f9f9f8]">
+    <section className="py-12 md:py-16 bg-[#f9f9f8]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-4 md:mb-10 uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
+          <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
+            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light leading-relaxed mb-8 md:mb-12 max-w-xl text-center lg:text-left">
+            <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               India's Most trusted Fitout and In-house manufacturing specialist. Our 9,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
             </p>
             <div className="grid grid-cols-3 gap-3 md:gap-8 text-center lg:text-left w-full">
@@ -60,7 +60,7 @@ const ManufacturingSection = () => {
               </a>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 md:gap-6 mt-8 md:mt-0">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-2 md:gap-6 mt-8 md:mt-0">
             <div className="space-y-2 md:space-y-6">
               <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[3/4] object-cover rounded-sm" />
               <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-square object-cover rounded-sm" />

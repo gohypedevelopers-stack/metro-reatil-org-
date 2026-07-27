@@ -2,17 +2,17 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 md:py-32 bg-[#FAFAFA] text-brand-dark relative overflow-hidden">
+    <section id="about" className="py-12 md:py-16 bg-[#FAFAFA] text-brand-dark relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Content Column */}
-          <div className="lg:col-span-5 lg:col-start-2 relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
+          <div className="lg:col-span-6 relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
 
 
-            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark mb-6 md:mb-10 uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               EXECUTING <br />
-              <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
+              <span className="text-brand-gold italic block mt-2 text-xl md:text-2xl lg:text-3xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
             </h2>
 
             {/* Mobile Image (hidden on lg) */}
@@ -25,11 +25,11 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700"></div>
             </div>
 
-            <p className="text-base md:text-xl text-neutral-800 mb-6 md:mb-8 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               At Metro Retail Solutions, we are master builders of turnkey physical environments. More than just design, our focus is absolute execution: transforming raw shell-and-core spaces into fully operational, premium brand showcases.
             </p>
 
-            <p className="text-sm md:text-base text-neutral-500 mb-8 md:mb-12 leading-relaxed">
+            <p className="text-base text-neutral-500 leading-relaxed font-light">
               By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke carpentry fabrication—under a single command, we guarantee a flawless handover.
             </p>
 
@@ -37,9 +37,9 @@ const AboutSection = () => {
           </div>
 
           {/* Image Column */}
-          <div className="hidden lg:block lg:col-span-5 relative group">
+          <div className="hidden lg:block lg:col-span-6 relative group">
             <div className="absolute inset-0 bg-brand-gold/10 transform translate-x-4 translate-y-4 md:translate-x-8 md:translate-y-8 -z-10 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-            <div className="w-full aspect-[4/5] relative overflow-hidden bg-neutral-200">
+            <div className="w-full aspect-square relative overflow-hidden bg-neutral-200">
               <img
                 src="/high_res_mall_hero.png"
                 alt="Retail Design Excellence"

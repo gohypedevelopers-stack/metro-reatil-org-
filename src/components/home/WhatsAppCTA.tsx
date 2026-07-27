@@ -6,7 +6,7 @@ import { Phone, ArrowRight } from 'lucide-react';
 
 const WhatsAppCTA = () => {
   return (
-    <section className="py-12 md:py-12 bg-brand-gold relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-brand-gold relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
@@ -14,16 +14,16 @@ const WhatsAppCTA = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-10 md:mb-12 uppercase leading-tight"
+          className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-10 md:mb-12 uppercase leading-tight"
           style={{ fontFamily: 'var(--font-cinzel), serif' }}
         >
-          READY TO TRANSFORM <br /> <span className="text-white italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Property?</span>
+          READY TO TRANSFORM <br /> <span className="text-white italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Property?</span>
         </motion.h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <a href="https://wa.me/918800607967" className="bg-white text-brand-gold px-7 md:px-12 py-5 rounded-full text-xs font-bold uppercase tracking-[0.16em] md:tracking-[0.2em] flex items-center justify-center gap-3 md:gap-4 hover:bg-brand-dark hover:text-white transition-all shadow-xl group">
+          <a href="https://wa.me/918800607967" className="bg-white text-brand-gold px-7 md:px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-3 md:gap-4 hover:bg-brand-dark hover:text-white transition-all shadow-xl group">
             <Phone size={18} /> WhatsApp Now <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </a>
-          <a href="tel:+918800607967" className="bg-brand-dark text-white px-7 md:px-12 py-5 rounded-full text-xs font-bold uppercase tracking-[0.16em] md:tracking-[0.2em] flex items-center justify-center gap-3 md:gap-4 hover:bg-white hover:text-brand-dark transition-all shadow-xl group">
+          <a href="tel:+918800607967" className="bg-brand-dark text-white px-7 md:px-12 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-3 md:gap-4 hover:bg-white hover:text-brand-dark transition-all shadow-xl group">
             Call Us Today <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </a>
         </div>

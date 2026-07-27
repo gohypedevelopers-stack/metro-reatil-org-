@@ -73,14 +73,14 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
   ];
 
   return (
-    <section className="py-12 md:py-12 bg-white border-y border-neutral-100 relative overflow-hidden">
+    <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-white border-b border-neutral-100 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-8 md:mb-12 gap-4 md:gap-10">
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
+            <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
-            <p className="mt-3 md:mt-6 text-neutral-500 font-light text-base md:text-xl max-w-2xl leading-relaxed text-center md:text-left">
+            <p className="mt-3 md:mt-6 text-lg md:text-xl font-light leading-relaxed text-neutral-500 max-w-2xl text-center md:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               From concept to completion, we deliver every aspect of interior design, fitout, and property services under one roof.
             </p>
           </div>

@@ -81,7 +81,7 @@ const VerticalSlider = () => {
             {/* top: number + icon */}
             <div className="flex items-start justify-between">
               <span
-                className="text-6xl font-serif leading-none select-none"
+                className="text-5xl font-serif leading-none select-none"
                 style={{ color: 'rgba(232,160,32,0.15)', fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {card.num}
@@ -249,14 +249,14 @@ const MobileSlider = () => {
 /* ─── Main Section ─── */
 const ExpertiseSection = () => {
   return (
-    <section className="pt-12 pb-0 md:pt-12 md:pb-0 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
         {/* ── Desktop / Laptop: split layout ── */}
-        <div className="hidden md:grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="hidden md:grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Left: heading block */}
-          <div className="flex flex-col justify-center">
+          <div className="lg:col-span-5 flex flex-col justify-center">
             <span
               className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6"
               style={{ color: '#E8A020' }}
@@ -264,7 +264,7 @@ const ExpertiseSection = () => {
               What Sets Us Apart
             </span>
             <h2
-              className="text-5xl lg:text-6xl xl:text-7xl font-serif text-brand-dark uppercase leading-tight mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight mb-8"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               OUR CORE <br />
@@ -275,7 +275,7 @@ const ExpertiseSection = () => {
                 <em>Technical Expertise</em>
               </span>
             </h2>
-            <p className="text-neutral-400 text-base font-light leading-relaxed max-w-md">
+            <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-500 max-w-md" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               Three decades of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
             </p>
 
@@ -292,7 +292,7 @@ const ExpertiseSection = () => {
           </div>
 
           {/* Right: vertical slider */}
-          <div style={{ minHeight: '420px' }}>
+          <div className="lg:col-span-7" style={{ minHeight: '420px' }}>
             <VerticalSlider />
           </div>
         </div>
@@ -301,12 +301,12 @@ const ExpertiseSection = () => {
         <div className="block md:hidden">
           <div className="text-center mb-6">
             <h2
-              className="text-2xl sm:text-3xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-2xl font-serif text-brand-dark uppercase tracking-tight mb-4"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               OUR CORE <br />
               <span
-                className="block mt-1 text-xl sm:text-2xl"
+                className="block mt-1 whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
               >
                 <em>Technical Expertise</em>

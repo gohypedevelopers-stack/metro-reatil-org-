@@ -31,11 +31,11 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-8 block">
+          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block">
             Crafting Exceptional Environments
           </span>
           <motion.h1
-            className="text-[2.45rem] xs:text-5xl md:text-7xl lg:text-8xl mb-10 md:mb-12 leading-[0.98] md:leading-[0.95]"
+            className="text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 leading-[0.98] md:leading-[0.95]"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
@@ -61,7 +61,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isLoaded ? { y: 0 } : {}}
                     transition={{ duration: 1, delay: 1.2 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
-                    className="inline-block text-brand-gold italic text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal"
+                    className="inline-block text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal"
                     style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
                   >
                     {char === " " ? "\u00A0" : char}

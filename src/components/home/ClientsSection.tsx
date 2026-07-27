@@ -22,7 +22,7 @@ const ClientsSection = () => {
   const displayClients = [...repeatedClients, ...repeatedClients];
 
   return (
-    <section className="pt-16 pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
+    <section className="pt-12 pb-0 md:pt-16 md:pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex justify-center mb-8 relative">
           <div className="text-center">
@@ -34,7 +34,7 @@ const ClientsSection = () => {
             >
               {/* Top Line: OUR CLIENTS (Black) */}
               <div
-                className="text-2xl sm:text-3xl md:text-6xl uppercase tracking-[0.06em] md:tracking-[0.1em] text-brand-dark flex justify-center items-center font-light mb-4 flex-wrap"
+                className="text-2xl sm:text-3xl md:text-5xl font-serif uppercase tracking-tight text-brand-dark flex justify-center items-center mb-4 flex-wrap"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {"OUR CLIENTS".split("").map((char, i) => (
@@ -56,7 +56,7 @@ const ClientsSection = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-hidden border-y border-brand-dark/5 py-12 md:py-12 bg-white flex">
+      <div className="w-full overflow-hidden border-y border-brand-dark/5 pt-12 pb-4 md:pt-12 md:pb-6 bg-white flex">
         <div className="flex w-max animate-marquee hover-pause">
           {displayClients.map((client, index) => (
             <div

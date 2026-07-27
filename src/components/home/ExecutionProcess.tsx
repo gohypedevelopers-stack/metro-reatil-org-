@@ -87,14 +87,14 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
   return (
     <div className="space-y-8 flex-grow">
       {/* Visual Image Header */}
-      <div className="relative aspect-[16/8] overflow-hidden rounded-sm bg-neutral-900 border border-white/5 shadow-inner">
-        <img 
-          src={phase.img} 
-          alt={phase.title} 
+      <div className="relative aspect-[16/7] overflow-hidden rounded-sm bg-neutral-900 border border-white/5 shadow-inner">
+        <img
+          src={phase.img}
+          alt={phase.title}
           className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-[1500ms]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent" />
-        
+
         {/* Floating Icon Tag */}
         <div className="absolute bottom-6 left-6 bg-brand-gold text-white p-3.5 rounded-full shadow-lg border border-brand-gold/20 flex items-center justify-center">
           {phase.icon}
@@ -104,14 +104,14 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
       {/* Details Section */}
       <div className="space-y-5">
         <div className="flex flex-col gap-1">
-          <span className="text-[10px] font-bold text-brand-gold uppercase tracking-[0.4em]">
+          <span className="text-[9px] xl:text-[10px] font-bold text-brand-gold uppercase tracking-[0.4em]">
             Detailed Execution Log
           </span>
-          <h4 className="text-2xl font-serif text-white uppercase tracking-wider" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h4 className="text-xl xl:text-2xl font-serif text-white uppercase tracking-wider" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             {phase.title}
           </h4>
         </div>
-        <p className="text-neutral-400 text-sm font-light leading-relaxed">
+        <p className="text-neutral-400 text-xs xl:text-sm font-light leading-relaxed">
           {phase.desc}
         </p>
       </div>
@@ -123,7 +123,7 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
         </span>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3.5">
           {phase.highlights.map((h, i) => (
-            <li key={i} className="flex items-center gap-3 text-neutral-200 text-xs font-medium">
+            <li key={i} className="flex items-center gap-3 text-neutral-200 text-[11px] xl:text-xs font-medium">
               <CheckCircle2 size={15} className="text-brand-gold shrink-0" />
               <span>{h}</span>
             </li>
@@ -133,16 +133,16 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
 
       <div className="hidden sm:grid pt-8 border-t border-white/5 grid-cols-3 gap-6 text-left">
         <div>
-          <span className="text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Timeline</span>
-          <span className="text-brand-gold font-serif text-sm uppercase tracking-wide font-medium">{phase.stats.duration}</span>
+          <span className="text-[7px] xl:text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Timeline</span>
+          <span className="text-brand-gold font-serif text-xs xl:text-sm uppercase tracking-wide font-medium">{phase.stats.duration}</span>
         </div>
         <div>
-          <span className="text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Human Resource</span>
-          <span className="text-brand-gold font-serif text-sm uppercase tracking-wide font-medium">{phase.stats.crew || phase.stats.artisans || phase.stats.officers}</span>
+          <span className="text-[7px] xl:text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Human Resource</span>
+          <span className="text-brand-gold font-serif text-xs xl:text-sm uppercase tracking-wide font-medium">{phase.stats.crew || phase.stats.artisans || phase.stats.officers}</span>
         </div>
         <div>
-          <span className="text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Standard Vetted</span>
-          <span className="text-brand-gold font-serif text-sm uppercase tracking-wide font-medium">{phase.stats.precision || phase.stats.compliance || phase.stats.inspections || phase.stats.snags}</span>
+          <span className="text-[7px] xl:text-[7.5px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-1">Standard Vetted</span>
+          <span className="text-brand-gold font-serif text-xs xl:text-sm uppercase tracking-wide font-medium">{phase.stats.precision || phase.stats.compliance || phase.stats.inspections || phase.stats.snags}</span>
         </div>
       </div>
     </div>
@@ -153,97 +153,95 @@ const ExecutionProcess = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-12 md:py-12 bg-brand-dark text-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-brand-dark text-white relative overflow-hidden">
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] -z-10" />
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-end md:text-left mb-10 md:mb-12 gap-6 md:gap-12">
-          <div className="flex flex-col items-center md:items-start w-full">
-            <span className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center md:text-left">
-              Rigorous Execution Blueprint
-            </span>
-            <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
-            </h2>
-          </div>
-        </div>
 
         {/* Dynamic Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
-          
-          {/* Left Column: Interactive Step Selector */}
-          <div className="lg:col-span-5 space-y-4">
-            {PROCESS_PHASES.map((p, idx) => {
-              const isActive = activeStep === idx;
-              return (
-                <div key={p.phase} className="space-y-4">
-                  <button
-                    type="button"
-                    onClick={() => setActiveStep(idx)}
-                    className={`w-full text-left p-6 md:p-8 rounded-sm transition-all duration-500 border flex gap-6 items-center outline-none relative overflow-hidden group ${
-                      isActive 
-                        ? 'bg-white/5 border-brand-gold/40 shadow-xl' 
-                        : 'bg-transparent border-white/5 hover:border-white/15'
-                    }`}
-                  >
-                    {/* Left Golden Accent Line on Active */}
-                    {isActive && (
-                      <motion.div 
-                        layoutId="activeBorder" 
-                        className="absolute left-0 top-0 bottom-0 w-[3px] bg-brand-gold" 
-                      />
-                    )}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-start relative">
 
-                    {/* Circle Number */}
-                    <div className={`w-12 h-12 rounded-full border flex items-center justify-center font-bold text-xs shrink-0 tracking-wider transition-all duration-500 ${
-                      isActive 
-                        ? 'bg-brand-gold border-brand-gold text-white shadow-lg' 
-                        : 'border-white/10 text-neutral-400 group-hover:border-white/30 group-hover:text-white'
-                    }`}>
-                      {p.phase}
-                    </div>
+          {/* Left Column: Heading + Interactive Step Selector */}
+          <div className="lg:col-span-5 flex flex-col gap-8 lg:sticky lg:top-32 lg:self-start z-10">
+            {/* Section Header */}
+            <div className="flex flex-col items-center md:items-start w-full">
+              <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center md:text-left">
+                Rigorous Execution Blueprint
+              </span>
+              <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-white uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
+              </h2>
+            </div>
 
-                    {/* Title Info */}
-                    <div className="flex-grow">
-                      <span className={`text-[8.5px] font-bold uppercase tracking-[0.25em] block mb-1 transition-colors duration-500 ${isActive ? 'text-brand-gold' : 'text-neutral-500 group-hover:text-neutral-400'}`}>
-                        {p.subtitle}
-                      </span>
-                      <h3 className={`text-base font-serif uppercase tracking-widest transition-colors duration-500 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`} style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                        {p.title}
-                      </h3>
-                    </div>
+            <div className="space-y-4">
+              {PROCESS_PHASES.map((p, idx) => {
+                const isActive = activeStep === idx;
+                return (
+                  <div key={p.phase} className="space-y-4">
+                    <button
+                      type="button"
+                      onClick={() => setActiveStep(idx)}
+                      className={`w-full text-left p-5 lg:p-6 xl:p-8 rounded-sm transition-all duration-500 border flex gap-4 xl:gap-6 items-center outline-none relative overflow-hidden group ${isActive
+                          ? 'bg-white/5 border-brand-gold/40 shadow-xl'
+                          : 'bg-transparent border-white/5 hover:border-white/15'
+                        }`}
+                    >
+                      {/* Left Golden Accent Line on Active */}
+                      {isActive && (
+                        <motion.div
+                          layoutId="activeBorder"
+                          className="absolute left-0 top-0 bottom-0 w-[3px] bg-brand-gold"
+                        />
+                      )}
 
-                    {/* Arrow Indicator */}
-                    <div className={`transition-all duration-300 shrink-0 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-40'}`}>
-                      <ArrowRight size={18} className="text-brand-gold" />
-                    </div>
-                  </button>
+                      {/* Circle Number */}
+                      <div className={`w-10 h-10 xl:w-12 xl:h-12 rounded-full border flex items-center justify-center font-bold text-[10px] xl:text-xs shrink-0 tracking-wider transition-all duration-500 ${isActive
+                          ? 'bg-brand-gold border-brand-gold text-white shadow-lg'
+                          : 'border-white/10 text-neutral-400 group-hover:border-white/30 group-hover:text-white'
+                        }`}>
+                        {p.phase}
+                      </div>
 
-                  {/* Mobile Detail Accordion (Only shows on mobile, directly under the active section button) */}
-                  <AnimatePresence initial={false}>
-                    {isActive && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:hidden overflow-hidden bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-sm shadow-xl"
-                      >
-                        <ProcessDetailContent phase={p} />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
+                      {/* Title Info */}
+                      <div className="flex-grow">
+                        <span className={`text-[8px] xl:text-[8.5px] font-bold uppercase tracking-[0.25em] block mb-1 transition-colors duration-500 ${isActive ? 'text-brand-gold' : 'text-neutral-500 group-hover:text-neutral-400'}`}>
+                          {p.subtitle}
+                        </span>
+                        <h3 className={`text-sm xl:text-base font-serif uppercase tracking-widest transition-colors duration-500 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`} style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                          {p.title}
+                        </h3>
+                      </div>
+
+                      {/* Arrow Indicator */}
+                      <div className={`transition-all duration-300 shrink-0 ${isActive ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-40'}`}>
+                        <ArrowRight size={18} className="text-brand-gold" />
+                      </div>
+                    </button>
+
+                    {/* Mobile Detail Accordion (Only shows on mobile, directly under the active section button) */}
+                    <AnimatePresence initial={false}>
+                      {isActive && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                          className="lg:hidden overflow-hidden bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-sm shadow-xl"
+                        >
+                          <ProcessDetailContent phase={p} />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Right Column: Slide Panel Detail view */}
-          <div className="hidden lg:flex lg:col-span-7 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-sm shadow-2xl min-h-[580px] flex-col justify-between">
+          <div className="hidden lg:flex lg:col-span-7 bg-white/[0.02] border border-white/5 p-6 lg:p-8 xl:p-12 rounded-sm shadow-2xl min-h-[500px] flex-col justify-between">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStep}
