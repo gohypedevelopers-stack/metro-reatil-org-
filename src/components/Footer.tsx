@@ -52,10 +52,10 @@ const Footer = () => {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Services</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Retail Design', href: '/services/retail-design' },
-                { name: 'Turnkey Execution', href: '/services/turnkey-execution' },
-                { name: 'MEP Infrastructure', href: '/services/technical-infrastructure' },
-                { name: 'Bespoke Carpentry', href: '/services/bespoke-carpentry' }
+                { name: 'Fitouts', href: '/services/fitout' },
+                { name: 'Turnkey Execution', href: '/portfolio' },
+                { name: 'MEP Infrastructure', href: '/services/mep-hvac' },
+                { name: 'Bespoke Carpentry', href: '/services/carpentry' }
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.href} className="text-neutral-400 text-[11px] font-bold uppercase tracking-widest hover:text-brand-gold transition-all duration-300">
