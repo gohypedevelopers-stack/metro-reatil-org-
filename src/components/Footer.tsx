@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-6 md:gap-16 lg:gap-20 mb-8 md:mb-24 lg:mb-32">
-          
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-6 md:gap-12 xl:gap-16 mb-8 md:mb-16 lg:mb-20">
+
           {/* Brand Info */}
-          <div className="col-span-2 lg:col-span-4 flex flex-col justify-between">
+          <div className="col-span-2 lg:col-span-6 xl:col-span-4 flex flex-col justify-between">
             <div>
               <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert -ml-2 sm:-ml-3" />
               <p className="text-neutral-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-3 xl:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Quick Links</h4>
             <ul className="space-y-4">
               {[
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-3 xl:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Services</h4>
             <ul className="space-y-4">
               {[
@@ -67,12 +67,12 @@ const Footer = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-2 lg:mt-8 xl:mt-0">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Contact Info</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-3 group">
                 <MapPin size={15} className="text-brand-gold shrink-0 mt-0.5" />
-                <a 
+                <a
                   href="https://www.google.com/maps/search/?api=1&query=F-1,+SITE-5+KASNA,+Greater+Noida,+Uttar+Pradesh+201312"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-2 lg:mt-8 xl:mt-0">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Newsletter</h4>
             <p className="text-neutral-400 text-[11px] font-light mb-6 leading-relaxed">Join our circle for exclusive design insights and architectural project updates.</p>
             <div className="flex border-b border-white/20 focus-within:border-brand-gold transition-colors pb-2">
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-10 md:pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
+        <div className="pt-8 md:pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
           <p>© 2026 Metro Retail Solutions. All Rights Reserved.</p>
           <div className="flex gap-4 md:gap-12 mt-8 md:mt-0">
             <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>

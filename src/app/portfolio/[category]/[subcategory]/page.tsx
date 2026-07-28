@@ -259,7 +259,6 @@ export default function SubcategoryDetailPage() {
           <div className="flex items-center gap-4 mb-8 md:mb-16">
             <ImageIcon className="text-brand-gold font-light" size={28} strokeWidth={1.5} />
             <div>
-              <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-1 block">Inspiring Spaces</span>
               <h2 className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Delivered Projects & Inspirations
               </h2>

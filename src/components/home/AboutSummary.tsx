@@ -15,7 +15,7 @@ const AboutSummary = () => {
             className="lg:col-span-5 relative flex flex-col items-center text-center lg:items-start lg:text-left"
           >
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-8 block text-center lg:text-left">Our Legacy</span>
-            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif mb-8 md:mb-12 uppercase leading-tight text-white tracking-tighter xs:tracking-tight md:tracking-normal whitespace-nowrap lg:whitespace-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Precision in Every <br className="hidden md:inline" /> <span className="text-brand-gold italic inline md:block mt-0 md:mt-2 ml-1.5 md:ml-0 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
             </h2>
             <div className="space-y-8 text-neutral-400 font-light leading-relaxed text-lg md:text-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>

@@ -164,13 +164,10 @@ const ExecutionProcess = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-start relative">
 
           {/* Left Column: Heading + Interactive Step Selector */}
-          <div className="lg:col-span-5 flex flex-col gap-8 lg:sticky lg:top-32 lg:self-start z-10">
+          <div className="lg:col-span-5 flex flex-col gap-8 z-10">
             {/* Section Header */}
-            <div className="flex flex-col items-center md:items-start w-full">
-              <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center md:text-left">
-                Rigorous Execution Blueprint
-              </span>
-              <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-white uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <div className="flex flex-col items-center md:items-start w-full lg:-mt-3">
+              <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-white uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
               </h2>
             </div>
@@ -184,8 +181,8 @@ const ExecutionProcess = () => {
                       type="button"
                       onClick={() => setActiveStep(idx)}
                       className={`w-full text-left p-5 lg:p-6 xl:p-8 rounded-sm transition-all duration-500 border flex gap-4 xl:gap-6 items-center outline-none relative overflow-hidden group ${isActive
-                          ? 'bg-white/5 border-brand-gold/40 shadow-xl'
-                          : 'bg-transparent border-white/5 hover:border-white/15'
+                        ? 'bg-white/5 border-brand-gold/40 shadow-xl'
+                        : 'bg-transparent border-white/5 hover:border-white/15'
                         }`}
                     >
                       {/* Left Golden Accent Line on Active */}
@@ -198,15 +195,15 @@ const ExecutionProcess = () => {
 
                       {/* Circle Number */}
                       <div className={`w-10 h-10 xl:w-12 xl:h-12 rounded-full border flex items-center justify-center font-bold text-[10px] xl:text-xs shrink-0 tracking-wider transition-all duration-500 ${isActive
-                          ? 'bg-brand-gold border-brand-gold text-white shadow-lg'
-                          : 'border-white/10 text-neutral-400 group-hover:border-white/30 group-hover:text-white'
+                        ? 'bg-brand-gold border-brand-gold text-white shadow-lg'
+                        : 'border-white/10 text-neutral-400 group-hover:border-white/30 group-hover:text-white'
                         }`}>
                         {p.phase}
                       </div>
 
                       {/* Title Info */}
                       <div className="flex-grow">
-                        <span className={`text-[8px] xl:text-[8.5px] font-bold uppercase tracking-[0.25em] block mb-1 transition-colors duration-500 ${isActive ? 'text-brand-gold' : 'text-neutral-500 group-hover:text-neutral-400'}`}>
+                        <span className={`hidden md:block text-[8px] xl:text-[8.5px] font-bold uppercase tracking-[0.25em] mb-1 transition-colors duration-500 ${isActive ? 'text-brand-gold' : 'text-neutral-500 group-hover:text-neutral-400'}`}>
                           {p.subtitle}
                         </span>
                         <h3 className={`text-sm xl:text-base font-serif uppercase tracking-widest transition-colors duration-500 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`} style={{ fontFamily: 'var(--font-cinzel), serif' }}>

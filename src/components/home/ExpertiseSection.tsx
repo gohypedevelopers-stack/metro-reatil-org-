@@ -34,7 +34,7 @@ const expertise = [
 /* ─── Vertical Slider (desktop) ─── */
 const VerticalSlider = () => {
   const [active, setActive] = useState(0);
-  const [dir, setDir]       = useState<1 | -1>(1); // 1 = down, -1 = up
+  const [dir, setDir] = useState<1 | -1>(1); // 1 = down, -1 = up
 
   const go = (next: number, direction: 1 | -1) => {
     setDir(direction);
@@ -50,9 +50,9 @@ const VerticalSlider = () => {
   }, []);
 
   const variants = {
-    enter:  (d: number) => ({ y: d > 0 ?  60 : -60, opacity: 0 }),
-    center: ()          => ({ y: 0,                   opacity: 1 }),
-    exit:   (d: number) => ({ y: d > 0 ? -60 :  60,  opacity: 0 }),
+    enter: (d: number) => ({ y: d > 0 ? 60 : -60, opacity: 0 }),
+    center: () => ({ y: 0, opacity: 1 }),
+    exit: (d: number) => ({ y: d > 0 ? -60 : 60, opacity: 0 }),
   };
 
   const card = expertise[active];
@@ -159,9 +159,9 @@ const VerticalSlider = () => {
 /* ─── Mobile Horizontal Swipe Slider ─── */
 const MobileSlider = () => {
   const [active, setActive] = useState(0);
-  const [dir, setDir]       = useState<1 | -1>(1);
-  const touchStartX         = useRef<number>(0);
-  const touchStartY         = useRef<number>(0);
+  const [dir, setDir] = useState<1 | -1>(1);
+  const touchStartX = useRef<number>(0);
+  const touchStartY = useRef<number>(0);
 
   const go = (next: number, direction: 1 | -1) => {
     setDir(direction);
@@ -190,9 +190,9 @@ const MobileSlider = () => {
   };
 
   const variants = {
-    enter:  (d: number) => ({ x: d > 0 ?  60 : -60, opacity: 0 }),
-    center: ()          => ({ x: 0,                   opacity: 1 }),
-    exit:   (d: number) => ({ x: d > 0 ? -60 :  60,  opacity: 0 }),
+    enter: (d: number) => ({ x: d > 0 ? 60 : -60, opacity: 0 }),
+    center: () => ({ x: 0, opacity: 1 }),
+    exit: (d: number) => ({ x: d > 0 ? -60 : 60, opacity: 0 }),
   };
 
   const card = expertise[active];
@@ -234,7 +234,7 @@ const MobileSlider = () => {
             onClick={() => go(i, i > active ? 1 : -1)}
             className="rounded-full transition-all duration-300"
             style={{
-              width:  i === active ? '24px' : '8px',
+              width: i === active ? '24px' : '8px',
               height: '8px',
               backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.3)',
             }}
@@ -257,14 +257,8 @@ const ExpertiseSection = () => {
 
           {/* Left: heading block */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <span
-              className="text-[10px] font-bold uppercase tracking-[0.5em] mb-6"
-              style={{ color: '#E8A020' }}
-            >
-              What Sets Us Apart
-            </span>
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase leading-tight mb-8"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               OUR CORE <br />

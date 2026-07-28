@@ -10,9 +10,9 @@ const AboutSection = () => {
           <div className="lg:col-span-6 relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
 
 
-            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="mobile-heading-balance text-center lg:text-left text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase leading-tight w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               EXECUTING <br />
-              <span className="text-brand-gold italic block mt-2 text-xl md:text-2xl lg:text-3xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
+              <span className="text-brand-gold italic block mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
             </h2>
 
             {/* Mobile Image (hidden on lg) */}
