@@ -95,10 +95,7 @@ const ProcessDetailContent = ({ phase }: { phase: typeof PROCESS_PHASES[0] }) =>
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent" />
 
-        {/* Floating Icon Tag */}
-        <div className="absolute bottom-6 left-6 bg-brand-gold text-white p-3.5 rounded-full shadow-lg border border-brand-gold/20 flex items-center justify-center">
-          {phase.icon}
-        </div>
+
       </div>
 
       {/* Details Section */}

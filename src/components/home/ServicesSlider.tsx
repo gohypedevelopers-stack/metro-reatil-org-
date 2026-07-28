@@ -68,12 +68,12 @@ const ServicesSlider = () => {
   return (
     <section id="services-slider" className="pt-4 pb-12 md:pt-4 md:pb-16 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-6 md:mb-10">
+        <div className="text-center mb-4 md:mb-6">
           <h2 className="mobile-heading-balance text-2xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <span className="text-brand-gold italic font-normal ml-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-4 md:gap-12 mb-8 md:mb-10">
+        <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 md:gap-12 mb-8 md:mb-10">
           {services.map((s, i) => (
             <button
               key={i}

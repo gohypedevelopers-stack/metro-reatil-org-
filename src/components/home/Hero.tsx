@@ -17,7 +17,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
         }}
         className="absolute inset-0 z-0 bg-brand-dark"
       >
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/60 z-10" />
         <img
           src="/hero.webp"
           alt="Luxury Mall Retail Interior"
@@ -31,7 +31,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8 block">
+          <span className="hidden md:block text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8">
             Crafting Exceptional Environments
           </span>
           <motion.h1

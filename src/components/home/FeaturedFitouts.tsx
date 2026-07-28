@@ -102,10 +102,10 @@ const FeaturedFitouts = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6 md:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            OUR TURNKEY FITOUT <br /> <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Executions</span>
+            OUR TURNKEY <span className="text-brand-gold italic whitespace-nowrap ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Fitout</span>
           </h2>
 
-          <div className="flex justify-center gap-x-2 sm:gap-x-4 md:gap-12 flex-wrap">
+          <div className="flex justify-center gap-x-6 sm:gap-x-8 md:gap-12 flex-wrap">
             {['ALL', ...filterCategories].map((filter) => (
               <button
                 key={filter}
