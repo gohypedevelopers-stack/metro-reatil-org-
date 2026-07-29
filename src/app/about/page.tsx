@@ -172,12 +172,12 @@ export default function AboutPage() {
       {/* Philosophy Section - Sharpened */}
       <section className="py-12 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
-            <div className="xl:col-span-6 flex flex-col items-center text-center xl:items-start xl:text-left">
-              <h2 className="mobile-heading-balance text-center xl:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
+            <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center xl:text-left">
+              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Metro Retail Solutions provides expert boutique interior design and retail fitout services for global brands. As leading retail space design experts, our shop interior design company covers every facet of the commercial landscape.
                 </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="hidden xl:grid grid-cols-1 xs:grid-cols-2 gap-4 lg:gap-8 xl:gap-12">
+              <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-4 lg:gap-8 xl:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
                     <div className="text-4xl font-serif text-brand-dark mb-2">
@@ -198,7 +198,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="xl:col-span-6 relative mt-12 xl:mt-0">
+            <div className="lg:col-span-6 relative mt-12 lg:mt-0">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
@@ -206,13 +206,13 @@ export default function AboutPage() {
                   className="w-full h-full object-cover transition-all duration-1000"
                 />
               </div>
-              <div className="absolute -bottom-12 -left-12 bg-brand-dark p-12 text-white max-w-xs hidden xl:block shadow-2xl">
+              <div className="absolute -bottom-12 -left-12 bg-brand-dark p-12 text-white max-w-xs hidden lg:block shadow-2xl">
                 <h3 className="text-xl font-serif mb-4 italic">"Precision is our standard."</h3>
                 <p className="text-neutral-400 text-sm font-light leading-relaxed">Every joint, finish, and installation is a testament to our commitment to architectural excellence.</p>
               </div>
 
               {/* Stats displayed below the image on mobile */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 xl:hidden text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 lg:hidden text-center">
                 {STATS.map((stat, i) => (
                   <div key={i} className="flex flex-col items-center">
                     <div className="text-2xl font-serif text-brand-dark mb-1">
