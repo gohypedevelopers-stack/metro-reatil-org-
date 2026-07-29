@@ -22,6 +22,7 @@ import Footer from "../components/Footer";
 import CustomCursor from "../components/CustomCursor";
 import ScrollProgress from "../components/ScrollProgress";
 import GlobalSpinner from "../components/GlobalSpinner";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Metro Retail Solutions | Premium Interior Design & Fit-out",
@@ -36,7 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} antialiased`} suppressHydrationWarning>
-        <GlobalSpinner />
+        <Suspense fallback={null}>
+          <GlobalSpinner />
+        </Suspense>
         <CustomCursor />
         <ScrollProgress />
         <SmoothScroll>
