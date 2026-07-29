@@ -310,7 +310,10 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               <span className="mb-1 block text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-400">
                 Project Photos
               </span>
-              <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
+              <h2 
+                className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-5xl"
+                style={{ fontFamily: 'var(--font-cinzel), serif' }}
+              >
                 Detailed Views
               </h2>
             </div>
@@ -389,7 +392,10 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
             <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-brand-gold">
               Suggested Products
             </span>
-            <h2 className="text-3xl font-serif uppercase text-brand-dark md:text-5xl">
+            <h2 
+              className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-5xl"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
               Continue Exploring
             </h2>
           </div>

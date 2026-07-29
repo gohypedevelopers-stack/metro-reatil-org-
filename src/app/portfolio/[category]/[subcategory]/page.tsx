@@ -134,7 +134,7 @@ export default function SubcategoryDetailPage() {
                 Inspire & Transform
               </span>
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-dark leading-tight uppercase"
+                className="text-4xl md:text-4xl lg:text-6xl font-serif text-brand-dark leading-tight uppercase"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {data.title}

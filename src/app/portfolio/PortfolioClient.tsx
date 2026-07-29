@@ -391,7 +391,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               Metro Portfolio
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Selected{" "}
@@ -520,7 +520,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                       </a>
                       <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location || "India"}</span>
                     </div>
-                    <p className="text-neutral-500 text-[10px] sm:text-sm font-light leading-relaxed line-clamp-2">
+                    <p className="hidden sm:block text-neutral-500 text-[10px] sm:text-sm font-light leading-relaxed line-clamp-2">
                       {proj.intro}
                     </p>
                   </div>
@@ -551,7 +551,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               { label: "Hospitality Outlets", value: 25 }
             ].map((stat, i) => (
               <div key={i} className="text-left border-l border-neutral-200 pl-2 sm:pl-4 md:pl-8">
-                <div className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-dark mb-2 md:mb-4">
+                <div className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-serif text-brand-dark mb-2 md:mb-4">
                   <CountUpNumber end={stat.value} />+
                 </div>
                 <div className="text-[7px] sm:text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-tight md:leading-loose">{stat.label}</div>

@@ -137,7 +137,7 @@ export default function CategoryLandingPage() {
           <div className="max-w-3xl text-center mx-auto">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center">Metro Portfolio</span>
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark mb-4 leading-tight uppercase text-center"
+              className="text-3xl md:text-3xl lg:text-5xl font-serif text-brand-dark mb-4 leading-tight uppercase text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}

@@ -5,14 +5,14 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ChevronRight, Messa
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-8 md:pb-12 lg:pb-16 border-t border-white/5">
+    <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-4 lg:pb-6 border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-6 md:gap-12 xl:gap-16 mb-8 md:mb-16 lg:mb-20">
 
           {/* Brand Info */}
           <div className="col-span-2 lg:col-span-6 xl:col-span-4 flex flex-col justify-between">
             <div>
-              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-8 brightness-0 invert -ml-2 sm:-ml-3" />
+              <img src="/logo.png" alt="Metro Retail Solutions" className="h-[30px] w-auto mb-4 brightness-0 invert -ml-2 sm:-ml-3" />
               <p className="text-neutral-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
                 Pioneering excellence in retail and commercial fit-outs across the GCC. We deliver turnkey environments through architectural precision, bespoke carpentry, and technical MEP mastery.
               </p>
@@ -28,7 +28,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="col-span-1 lg:col-span-3 xl:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Quick Links</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-4 border-b border-white/10 pb-2">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Home', href: '/' },
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="col-span-1 lg:col-span-3 xl:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Services</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-4 border-b border-white/10 pb-2">Services</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Fitouts', href: '/services/fitout' },
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Contact Details */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-2 lg:mt-8 xl:mt-0">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Contact Info</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-4 border-b border-white/10 pb-2">Contact Info</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-3 group">
                 <MapPin size={15} className="text-brand-gold shrink-0 mt-0.5" />
@@ -108,7 +108,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-6 xl:col-span-2 lg:mt-8 xl:mt-0">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-8 border-b border-white/10 pb-4">Newsletter</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.5em] text-white mb-4 border-b border-white/10 pb-2">Newsletter</h4>
             <p className="text-neutral-400 text-[11px] font-light mb-6 leading-relaxed">Join our circle for exclusive design insights and architectural project updates.</p>
             <div className="flex border-b border-white/20 focus-within:border-brand-gold transition-colors pb-2">
               <input
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 md:pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
+        <div className="pt-4 lg:pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-[9px] font-bold uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-500 leading-relaxed">
           <p>© 2026 Metro Retail Solutions. All Rights Reserved.</p>
           <div className="flex gap-4 md:gap-12 mt-8 md:mt-0">
             <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
