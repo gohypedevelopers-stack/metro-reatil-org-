@@ -1,9 +1,13 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
+import { usePathname } from 'next/navigation'
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -15,12 +19,12 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 2,
       infinite: false,
     })
+    
+    lenisRef.current = lenis;
 
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    window.scrollTo(0, 0);
-    lenis.scrollTo(0, { immediate: true });
 
     function raf(time: number) {
       lenis.raf(time)
@@ -33,6 +37,13 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       lenis.destroy()
     }
   }, [])
+
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return <>{children}</>
 }

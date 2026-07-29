@@ -118,7 +118,7 @@ const MOBILE_NAV_LINKS = [
     links: STYLES_LINKS,
   },
   {
-    name: 'More', href: '/about',
+    name: 'More', href: '#',
     links: MORE_LINKS,
   },
   { name: 'Contact', href: '/contact' },
@@ -244,9 +244,9 @@ export const Navbar = () => {
             </div>
 
             <div className="relative py-2 shrink-0" onMouseEnter={() => setActiveMenu('more')}>
-              <a href="/about" className={`flex items-center gap-1 text-[9.5px] xl:text-[11px] font-bold tracking-[0.05em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
+              <button onClick={(e) => e.preventDefault()} className={`flex items-center gap-1 text-[9.5px] xl:text-[11px] font-bold tracking-[0.05em] xl:tracking-[0.2em] 2xl:tracking-[0.3em] uppercase transition-colors hover:text-brand-gold ${isSolid ? 'text-brand-dark' : 'text-white'}`}>
                 More <ChevronDown size={14} className={`transition-transform duration-300 ${activeMenu === 'more' ? 'rotate-180' : ''}`} />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -331,7 +331,14 @@ export const Navbar = () => {
                       <div className="flex items-center justify-between">
                         <a
                           href={item.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
+                          onClick={(e) => {
+                            if (item.href === '#') {
+                              e.preventDefault();
+                              toggleMobileMenu(item.name);
+                            } else {
+                              setIsMobileMenuOpen(false);
+                            }
+                          }}
                           className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors py-4 flex-1"
                         >
                           {item.name}

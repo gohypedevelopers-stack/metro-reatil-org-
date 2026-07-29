@@ -76,20 +76,6 @@ const styles = [
   }
 ];
 
-const testimonials = [
-  {
-    name: "Timur G",
-    review: "We engaged Metro Retail Solutions for a turnkey project in Dubai. They handled the entire process including design, procurement, and execution. The quality of execution was head and shoulders above anything else, with attention to every detail and very thorough quality control. I cannot recommend them highly enough.",
-  },
-  {
-    name: "AJ Boelens",
-    review: "I am so thankful to the team from Metro for their help to conduct an inspection and support us in how to handle a project. They are the most honest people you can rely on. I would give them 6 stars if I could!",
-  },
-  {
-    name: "Limelight Interiors",
-    review: "We have had the pleasure of working with Metro on three different projects, and the experience has been nothing short of exceptional. Our clients have praised the quality and service provided. Their premium quality joinery speaks for itself.",
-  }
-];
 
 export default function DesignStylesPage() {
   return (
@@ -103,7 +89,7 @@ export default function DesignStylesPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
@@ -129,11 +115,8 @@ export default function DesignStylesPage() {
               className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center mb-8"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Book a free design consultation and let our experts help you choose the perfect style for your space. We'll create a tailored design proposal that reflects your brand.
+              Book a free design consultation and let our experts help you choose the perfect style for your space. We create tailored proposals reflecting your brand vision.
             </p>
-            <Link href="/contact" className="hidden md:inline-block px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm transition-colors shadow-lg">
-              Book Consultation
-            </Link>
           </div>
         </div>
       </section>
@@ -190,8 +173,8 @@ export default function DesignStylesPage() {
       <section className="pt-8 md:pt-12 pb-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="mb-8 md:mb-16 text-center">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Interior Design Styles <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>
+            <h2 className="mobile-heading-balance text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Interior Design Styles <span className="text-brand-gold italic text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>
             </h2>
           </div>
 
@@ -212,10 +195,10 @@ export default function DesignStylesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                 
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                  <h3 className="text-xl md:text-2xl lg:text-lg xl:text-xl font-bold text-white mb-2 leading-snug group-hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                     {style.name}
                   </h3>
-                  <p className="hidden md:block text-neutral-300 text-sm leading-relaxed mb-6 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 h-0 md:group-hover:h-auto overflow-hidden">
+                  <p className="hidden md:block text-neutral-300 text-sm md:text-base lg:text-xs xl:text-sm leading-relaxed mb-4 font-medium opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 h-0 md:group-hover:h-auto overflow-hidden">
                     {style.description}
                   </p>
                   
@@ -228,53 +211,6 @@ export default function DesignStylesPage() {
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="mb-8 md:mb-16 text-center">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              What Our <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Clients Say</span>
-            </h2>
-          </div>
-
-          {/* Simple Grid (as a proxy for slider for responsiveness) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-            {testimonials.map((testi, index) => (
-              <div key={index} className="bg-white p-8 rounded-sm shadow-sm border border-neutral-100 relative">
-                <Quote className="absolute top-6 right-6 text-neutral-100 w-12 h-12 rotate-180" />
-                
-                {/* Google-style Header */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    {testi.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-dark">{testi.name}</h4>
-                    <p className="text-xs text-neutral-500 font-medium">Google Review</p>
-                  </div>
-                </div>
-
-                {/* Stars */}
-                <div className="flex text-brand-gold mb-6 gap-1">
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                </div>
-
-                {/* Review Text */}
-                <p className="text-neutral-600 leading-relaxed text-sm mb-4 relative z-10">
-                  "{testi.review}"
-                </p>
-                
-                <a href="#" className="text-xs font-bold text-blue-600 hover:underline">See full Google review</a>
-              </div>
             ))}
           </div>
         </div>

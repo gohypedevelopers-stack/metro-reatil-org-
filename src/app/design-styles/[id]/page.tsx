@@ -116,22 +116,7 @@ export default function DesignStyleDetailPage() {
         </div>
       </section>
 
-      {/* PAGE INTRO SECTION */}
-      {data.pageIntro && (
-        <section className="py-12 md:py-24 bg-white border-b border-neutral-100">
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              {data.pageIntro.heading}
-            </h2>
-            <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto">
-              {data.pageIntro.text}
-            </p>
-          </div>
-        </section>
-      )}
+
 
       {/* SUB-SERVICES GRID */}
       {data.subServices && (
@@ -139,10 +124,10 @@ export default function DesignStyleDetailPage() {
           <div className="max-w-[1600px] mx-auto px-6 md:px-12">
             <div className="text-center mb-8 md:mb-16">
               <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-serif text-brand-dark uppercase tracking-tight"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
-                {data.title} <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Elements We Create</span>
+                {data.title} <span className="text-brand-gold italic font-normal text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Elements We Create</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
@@ -163,8 +148,8 @@ export default function DesignStyleDetailPage() {
                     <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
                   <div className="p-8 text-center md:text-left">
-                    <h3 className="text-xl font-serif text-brand-dark mb-4">{service.title}</h3>
-                    <p className="text-neutral-500 text-sm font-light leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg md:text-xl lg:text-lg xl:text-xl font-serif text-brand-dark mb-3 leading-snug">{service.title}</h3>
+                    <p className="text-neutral-500 text-sm md:text-base lg:text-xs xl:text-sm font-light leading-relaxed">{service.description}</p>
                   </div>
                 </a>
               ))}
@@ -181,7 +166,7 @@ export default function DesignStyleDetailPage() {
           <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Execution</span>
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-serif text-brand-dark uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               How We Deliver This Style
@@ -191,12 +176,7 @@ export default function DesignStyleDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.process.map((p: any, i: number) => (
               <div key={i} className="relative p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group">
-                <div
-                  className="absolute top-4 right-5 text-6xl font-serif text-neutral-100 group-hover:text-brand-gold/10 transition-colors select-none"
-                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  {i + 1}
-                </div>
+
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <h3 className="text-xs sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-2 sm:mb-3 flex items-center justify-center gap-1.5 sm:gap-2">
                     <CheckCircle2 size={14} className="text-brand-gold shrink-0" />

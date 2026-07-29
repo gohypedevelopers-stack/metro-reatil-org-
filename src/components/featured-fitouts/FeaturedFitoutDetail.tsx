@@ -187,7 +187,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 md:gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
 
           {/* ── Mobile-only Title + Back Button (shows above image on mobile) ── */}
-          <div className="block lg:hidden pt-0 space-y-4">
+          <div className="block lg:hidden pt-4 md:pt-8 space-y-4">
             {/* Back button — left aligned */}
             <div className="text-left">
               <button
@@ -231,14 +231,14 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               </div>
             </button>
           </div>
-          <div className="lg:col-span-5 space-y-6 pt-0 md:pt-0 lg:pt-8 xl:pt-12 text-center lg:text-left">
+          <div className="lg:col-span-5 pt-0 md:pt-0 lg:pt-8 xl:pt-12 text-center lg:text-left">
             {/* Desktop-only title (hidden on mobile, shown on lg+) */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block lg:mb-2">
               <span className="mb-4 block text-[9px] font-bold uppercase tracking-[0.5em] text-brand-gold">
                 {project.category}
               </span>
               <h1
-                className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-4xl lg:text-5xl"
+                className="mobile-heading-balance text-2xl sm:text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-4xl lg:text-4xl"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {project.name}
@@ -311,7 +311,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                 Project Photos
               </span>
               <h2 
-                className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-5xl"
+                className="mobile-heading-balance text-2xl sm:text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-4xl lg:text-4xl"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 Detailed Views
@@ -386,14 +386,14 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
         </div>
       </section>
 
-      <section className="py-12 md:py-12 md:py-24">
+      <section className="pt-4 pb-12 md:pt-8 md:pb-24">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
           <div className="mb-8 flex flex-col items-center text-center">
             <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-brand-gold">
               Suggested Products
             </span>
-            <h2 
-              className="text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-5xl"
+              <h2 
+                className="mobile-heading-balance text-2xl sm:text-3xl font-serif uppercase leading-tight tracking-tight text-brand-dark md:text-4xl lg:text-4xl"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Continue Exploring
@@ -405,7 +405,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
               <a
                 key={suggested.slug}
                 href={`/featured-fitouts/${suggested.slug}`}
-                className="group block text-left outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                className="group block text-center md:text-left outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
                   <img
@@ -415,10 +415,10 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
                   />
                   <div className="absolute inset-0 bg-brand-dark/10 transition-colors group-hover:bg-brand-dark/30" />
                 </div>
-                <span className="mt-3 block text-[8px] font-bold uppercase tracking-[0.3em] text-brand-gold">
+                <span className="mt-3 block text-[7px] md:text-[8px] font-medium md:font-bold uppercase tracking-[0.3em] text-brand-gold">
                   {suggested.category}
                 </span>
-                <span className="mt-1 block text-xs font-bold uppercase tracking-[0.16em] text-brand-dark transition-colors group-hover:text-brand-gold">
+                <span className="mt-1 block text-[10px] md:text-xs font-medium md:font-bold uppercase tracking-[0.16em] text-brand-dark transition-colors group-hover:text-brand-gold">
                   {suggested.name}
                 </span>
               </a>

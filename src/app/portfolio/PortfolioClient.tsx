@@ -380,7 +380,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
           alt="Metro Portfolio"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
@@ -391,7 +391,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               Metro Portfolio
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Selected{" "}
@@ -490,18 +490,18 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-brand-dark/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-10">
                         <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                          <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.3em] mb-2 block">{proj.subcategory || "OVERVIEW"}</span>
-                          <h3 className="text-2xl text-white font-serif uppercase tracking-tight mb-2 leading-snug">{proj.name}</h3>
+                          <span className="text-brand-gold text-[9px] lg:text-[7px] font-bold uppercase tracking-[0.3em] mb-1 lg:mb-2 block">{proj.subcategory || "OVERVIEW"}</span>
+                          <h3 className="text-2xl lg:text-lg text-white font-serif uppercase tracking-tight mb-1 lg:mb-2 leading-snug">{proj.name}</h3>
 
                           {proj.executionTime && (
-                            <span className="text-white/70 text-[8px] uppercase tracking-[0.15em] block mb-4 font-bold">
+                            <span className="text-white/70 text-[8px] lg:text-[6px] uppercase tracking-[0.15em] block mb-3 lg:mb-4 font-bold">
                               Executed: <span className="text-brand-gold">{proj.executionTime}</span> • Scale: {proj.projectScale}
                             </span>
                           )}
 
-                          <div className="w-12 h-[1px] bg-white/30 mb-6" />
-                          <button className="flex items-center gap-4 text-white text-[9px] font-bold uppercase tracking-widest">
-                            Explore Detailed Views <ChevronRight size={14} className="text-brand-gold" />
+                          <div className="w-12 h-[1px] bg-white/30 mb-4 lg:mb-6" />
+                          <button className="flex items-center gap-2 lg:gap-4 text-white text-[9px] lg:text-[7px] font-bold uppercase tracking-widest">
+                            Explore Detailed Views <ChevronRight size={14} className="text-brand-gold w-3 h-3 lg:w-4 lg:h-4" />
                           </button>
                         </div>
                       </div>
@@ -513,14 +513,14 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
                     </div>
                   </a>
 
-                  <div className="space-y-1.5 sm:space-y-3 text-center sm:text-left">
-                    <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-2">
-                      <a href={`/featured-fitouts/${proj.slug}`} className="block">
+                  <div className="space-y-1.5 sm:space-y-3 text-center">
+                    <div className="flex flex-col items-center gap-1 sm:gap-2">
+                      <a href={`/featured-fitouts/${proj.slug}`} className="block text-center">
                         <h3 className="text-xs sm:text-lg md:text-xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors duration-500 uppercase">{proj.name}</h3>
                       </a>
-                      <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-neutral-400">{proj.location || "India"}</span>
+                      <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-neutral-400 text-center">{proj.location || "India"}</span>
                     </div>
-                    <p className="hidden sm:block text-neutral-500 text-[10px] sm:text-sm font-light leading-relaxed line-clamp-2">
+                    <p className="hidden sm:block lg:hidden text-neutral-500 text-[10px] sm:text-sm font-light leading-relaxed line-clamp-2">
                       {proj.intro}
                     </p>
                   </div>

@@ -131,7 +131,7 @@ export default function AboutPage() {
             alt="About Metro Retail"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
         </motion.div>
 
@@ -172,12 +172,12 @@ export default function AboutPage() {
       {/* Philosophy Section - Sharpened */}
       <section className="py-12 md:py-32 lg:py-48 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
-            <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-5xl lg:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
+            <div className="xl:col-span-6 flex flex-col items-center text-center xl:items-start xl:text-left">
+              <h2 className="mobile-heading-balance text-center xl:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
               </h2>
-              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center lg:text-left">
+              <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center xl:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
                   Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
                 </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="hidden lg:grid grid-cols-1 xs:grid-cols-2 gap-4 md:gap-12">
+              <div className="hidden xl:grid grid-cols-1 xs:grid-cols-2 gap-4 lg:gap-8 xl:gap-12">
                 {STATS.map((stat, i) => (
                   <div key={i} className="border-l border-neutral-200 pl-8">
                     <div className="text-4xl font-serif text-brand-dark mb-2">
@@ -198,7 +198,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative">
+            <div className="xl:col-span-6 relative mt-12 xl:mt-0">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
@@ -212,7 +212,7 @@ export default function AboutPage() {
               </div>
 
               {/* Stats displayed below the image on mobile */}
-              <div className="grid grid-cols-4 gap-2 mt-6 md:mt-12 lg:hidden text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 xl:hidden text-center">
                 {STATS.map((stat, i) => (
                   <div key={i} className="flex flex-col items-center">
                     <div className="text-2xl font-serif text-brand-dark mb-1">
@@ -234,8 +234,8 @@ export default function AboutPage() {
       <section className="py-12 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              THE PRINCIPLES <span className="text-brand-gold italic ml-2 text-[22px] md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
+            <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              THE PRINCIPLES <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
           </div>
@@ -256,8 +256,8 @@ export default function AboutPage() {
       <section className="py-12 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-[22px] md:text-6xl font-serif text-brand-dark mb-8 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-5xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
+            <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
             </h2>
             <p className="text-neutral-500 text-lg font-light">The dedicated experts who turn ambitious designs into reality.</p>
           </div>
@@ -284,27 +284,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section - Sharpened */}
-      <section className="py-12 md:py-32 lg:py-48 bg-brand-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-gold blur-[200px] -translate-y-1/2 translate-x-1/2" />
-        </div>
 
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
-          <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-8 md:mb-10 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-            READY TO COLLABORATE <span className="text-brand-gold italic ml-2 text-xl sm:text-2xl md:text-4xl lg:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>with Metro Retail?</span>
-          </h2>
-          <p className="text-neutral-400 text-base md:text-xl font-light max-w-2xl mx-auto mb-6 md:mb-16">
-            Let's collaborate to build a space that defines your brand and exceeds your operational expectations.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center gap-3 md:gap-4 px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-brand-dark transition-all duration-500 group"
-          >
-            Get in Touch <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
-          </a>
-        </div>
-      </section>
     </div>
   );
 }

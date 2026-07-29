@@ -82,7 +82,7 @@ export default function BlogPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">

@@ -72,7 +72,7 @@ export default function SubcategoryDetailPage() {
       </section>
 
       {/* SPLIT SECTION — image left, content + stats right */}
-      <section className="py-12 md:py-28 bg-white">
+      <section className="pt-6 pb-12 md:py-28 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
           {/* MOBILE ONLY: Title Block above image */}
@@ -243,11 +243,11 @@ export default function SubcategoryDetailPage() {
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
                       <div className="hidden md:block">
-                        <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                        <h3 className="text-lg md:text-xl lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
                           {title}
                         </h3>
 
-                        <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
+                        <p className="text-xs md:text-sm lg:text-[10px] xl:text-xs 2xl:text-sm font-medium mb-3 lg:mb-4 leading-relaxed text-neutral-200">
                           {description}
                         </p>
 
@@ -271,7 +271,8 @@ export default function SubcategoryDetailPage() {
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                          {buttonText}
+                          {buttonText.replace(' →', '').replace('→', '')}
+                          {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
                         </span>
                       </div>
                     </div>
@@ -290,11 +291,11 @@ export default function SubcategoryDetailPage() {
                     <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
                       <div className="hidden md:block">
-                        <h3 className="text-xl md:text-2xl font-serif text-white uppercase tracking-tight mb-2 leading-snug">
+                        <h3 className="text-lg md:text-xl lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
                           {title}
                         </h3>
 
-                        <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
+                        <p className="text-xs md:text-sm lg:text-[10px] xl:text-xs 2xl:text-sm font-medium mb-3 lg:mb-4 leading-relaxed text-neutral-200">
                           {description}
                         </p>
 
@@ -318,7 +319,8 @@ export default function SubcategoryDetailPage() {
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                          {buttonText}
+                          {buttonText.replace(' →', '').replace('→', '')}
+                          {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
                         </span>
                       </div>
                     </div>

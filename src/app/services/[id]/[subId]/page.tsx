@@ -79,47 +79,13 @@ export default function NestedServiceDetailPage() {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
-                {/* Dark Gradient Overlay for readability on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                {/* Permanent Dark Gradient Overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-100 pointer-events-none" />
                 
-                <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
-                  
-                  {/* MOBILE TITLE */}
-                  <div className="block md:hidden">
-                    <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2 drop-shadow-md">
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  <div className="hidden md:block">
-                    <h3 className="text-xl font-serif text-white uppercase tracking-tight mb-2">
-                      {item.title}
-                    </h3>
-                    
-                    {item.description && (
-                      <p className="text-sm md:text-base font-medium mb-4 leading-relaxed text-neutral-200">
-                        {item.description}
-                      </p>
-                    )}
-                    
-                    {item.tags && item.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {item.tags.map((tag: string, idx: number) => (
-                          <span key={idx} className="border border-white/30 bg-black/40 px-2.5 py-1 text-[10px] md:text-xs font-bold tracking-wider text-white">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="self-end mt-2">
-                      <span
-                        className="inline-flex items-center gap-2 bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 group-hover:bg-brand-dark text-white group-hover:text-brand-gold pointer-events-auto"
-                      >
-                        Get a Quote <ChevronRight size={12} />
-                      </span>
-                    </div>
-                  </div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 pointer-events-none">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md">
+                    {item.title}
+                  </h3>
                 </div>
               </a>
             ))}

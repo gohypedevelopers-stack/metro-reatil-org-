@@ -203,7 +203,7 @@ export default function ServicesPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
@@ -229,16 +229,16 @@ export default function ServicesPage() {
               className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Book a free consultation and let our experts assess your project requirements. We'll provide a comprehensive proposal with transparent timelines and pricing for your transformation.
+              Book a free consultation and let our experts assess your project. We'll provide a comprehensive proposal with transparent timelines and pricing for your fitout.
             </p>
           </div>
         </div>
       </section>
 
       {/* Intro Section */}
-      <section className="py-12 md:py-24 bg-white overflow-hidden">
+      <section className="pt-6 pb-12 md:py-24 bg-white overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-12 md:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-24 lg:gap-12 xl:gap-12 items-center">
 
             {/* Image Section (Left) */}
             <div className="lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
@@ -263,7 +263,7 @@ export default function ServicesPage() {
 
               <div className="w-12 h-[2px] bg-brand-gold mb-8"></div>
 
-              <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-8 max-w-lg text-center lg:text-left">
+              <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-4 md:mb-8 max-w-lg text-center lg:text-left">
                 Metro Retail Solutions offers a comprehensive suite of services designed to cover every stage of property improvement — from initial inspection to the final coat of paint. Browse our full range of services for residential, commercial, and F&B spaces.
               </p>
             </div>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-[400px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 auto-rows-[400px]">
             {services.map((service) => (
               <Link
                 key={service.id}
@@ -302,7 +302,7 @@ export default function ServicesPage() {
 
                 {/* Hover Content */}
                 <div className="absolute inset-x-0 top-0 bottom-[72px] p-5 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
-                  <p className="text-neutral-200 text-[13px] md:text-sm font-light mb-3 leading-relaxed">
+                  <p className="text-neutral-200 text-xs md:text-[13px] lg:text-[11px] xl:text-xs font-light mb-3 leading-relaxed">
                     {service.description}
                   </p>
 
@@ -317,7 +317,7 @@ export default function ServicesPage() {
 
                 {/* Bottom Title / Button */}
                 <div className="absolute bottom-4 left-4 right-4 h-12 bg-[#222222] text-white px-4 flex items-center justify-between transition-all duration-300 z-20 group-hover:bg-[#111111]">
-                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest truncate mr-2">{service.title}</span>
+                  <span className="text-[9px] md:text-[10px] lg:text-[9px] xl:text-[10px] font-bold uppercase tracking-widest truncate mr-2">{service.title}</span>
                   <ChevronRight size={14} className="text-white opacity-80 shrink-0 group-hover:translate-x-1 group-hover:text-brand-gold transition-all duration-300" />
                 </div>
               </Link>
