@@ -26,11 +26,11 @@ const AboutSection = () => {
             </div>
 
             <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
-              At Metro Retail Solutions, we are master builders of turnkey physical environments. More than just design, our focus is absolute execution: transforming raw shell-and-core spaces into fully operational, premium brand showcases.
+              At Metro Retail Solutions, we are master builders of turnkey physical environments. We offer interior design & build services and commercial interior design, transforming raw shell-and-core spaces into premium showcases.
             </p>
 
             <p className="text-base text-neutral-500 leading-relaxed font-light">
-              By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke carpentry fabrication—under a single command, we guarantee a flawless handover.
+              By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke carpentry fabrication—under a single command as commercial fitout company experts, we guarantee a flawless handover.
             </p>
 
 

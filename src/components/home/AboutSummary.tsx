@@ -20,10 +20,10 @@ const AboutSummary = () => {
             </h2>
             <div className="space-y-6 md:space-y-8 text-neutral-400 font-light leading-relaxed text-sm md:text-base lg:text-lg text-center xl:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               <p>
-                Metro Retail Solutions has established itself as a beacon of excellence in the Middle East's fit-out industry. We don't just execute blueprints; we understand the commercial pulse of retail and the ergonomic needs of modern workplaces.
+                Metro Retail Solutions has established itself as a premier retail space design expert in the Middle East. We offer turnkey interior solutions and luxury retail interior design, understanding the commercial pulse and the ergonomic needs of modern spaces.
               </p>
               <p>
-                Our journey is defined by a commitment to quality that transcends standard industry practices. From our 9,000 sq.ft state-of-the-art carpentry to our elite team of on-site engineers, every element of our operation is tuned to deliver turnkey perfection.
+                Our journey is defined by a commitment to quality that transcends industry standards. As trusted commercial interior contractors offering retail & commercial fitout, every element of our operation is tuned to deliver turnkey perfection.
               </p>
             </div>
           </motion.div>

@@ -38,7 +38,7 @@ const ManufacturingSection = () => {
               VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
             <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
-              India's Most trusted Fitout and In-house manufacturing specialist. Our 9,000 sq.ft facility is equipped with the latest machinery to bring complex designs to life.
+              The Middle East's most trusted interior design & build and in-house manufacturing specialist. We bring complex turnkey interior solutions to life.
             </p>
             <div className="grid grid-cols-3 gap-3 md:gap-8 text-center lg:text-left w-full">
               <div>

@@ -163,7 +163,7 @@ export default function AboutPage() {
               className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Specializing in the execution of high-end retail environments. We deliver complete turnkey solutions so your brand is ready to operate from day one.
+              Specializing in luxury retail interior design and flagship store design. As a premier store fitout company, we deliver turnkey interior solutions.
             </motion.p>
           </div>
         </div>
@@ -179,10 +179,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center xl:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
-                  Metro Retail Solutions specializes in creating world-class environments for global fashion, apparel, and lifestyle brands. From prestigious mall boutiques to specialized airport retail, our expertise covers every facet of the retail landscape.
+                  Metro Retail Solutions provides expert boutique interior design and retail fitout services for global brands. As leading retail space design experts, our shop interior design company covers every facet of the commercial landscape.
                 </p>
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
-                  Our USP is total operational readiness. We handle in-house manufacturing, MEP works, and full civil execution. When we hand over the keys, you only need to bring your products.
+                  Our USP is total operational readiness. We offer turnkey office fitout, retail & commercial fitout, and pop up store design services. When we hand over the keys, you only need to bring your products.
                 </p>
               </div>
 
