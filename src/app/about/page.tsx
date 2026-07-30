@@ -35,16 +35,22 @@ const CAPABILITIES = [
   }
 ];
 
-const SERVICES = [
-  "Retail Fixtures",
-  "Turnkey Solutions",
-  "Custom Furniture",
-  "3D Signages / Logo Kiosk",
-  "Display Counters",
-  "POP Display",
-  "Acrylic Items",
-  "LIT and Non-Lit Branding",
-  "Interiors & Customized Fixtures"
+const PROFESSIONALS = [
+  {
+    name: "John Doe",
+    post: "Managing Director",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    name: "Jane Smith",
+    post: "Lead Architect",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    name: "Michael Chen",
+    post: "Project Manager",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800"
+  }
 ];
 
 function AnimatedCounter({ value }: { value: string }) {
@@ -248,21 +254,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Professionals Section */}
       <section className="py-12 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
             <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
+              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light">We invite you to experience our exceptional solutions and client services.</p>
+            <p className="text-neutral-500 text-lg font-light">Meet the experts behind our exceptional solutions.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
-            {SERVICES.map((service, i) => (
-              <div key={i} className="flex items-center gap-4 group bg-neutral-50 p-6 md:p-8 rounded-lg hover:bg-brand-dark hover:text-white transition-all duration-300">
-                <CheckCircle2 className="text-brand-gold flex-shrink-0" size={24} strokeWidth={1.5} />
-                <span className="text-lg font-serif text-brand-dark group-hover:text-white transition-colors duration-300">{service}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {PROFESSIONALS.map((pro, i) => (
+              <div key={i} className="group flex flex-col items-center text-center">
+                <div className="w-full aspect-[3/4] overflow-hidden mb-6 bg-neutral-100">
+                  <img 
+                    src={pro.image} 
+                    alt={pro.name} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="text-2xl font-serif text-brand-dark mb-2" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{pro.name}</h3>
+                <p className="text-brand-gold text-sm md:text-base font-bold uppercase tracking-widest">{pro.post}</p>
               </div>
             ))}
           </div>

@@ -374,7 +374,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Bar counters & vanities",
         description: "Custom bar counters and vanity units crafted for function and style.",
         tags: ["Bar Counters", "Vanities", "Home Bar"],
-        bullets: ["Bar furniture Dubai", "Home bar cabinet Dubai", "Bar counter table Dubai"],
+        bullets: ["Bar furniture India", "Home bar cabinet India", "Bar counter table India"],
         buttonText: "BAR COUNTERS & VANITIES →"
       },
       {
@@ -383,7 +383,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Feature walls",
         description: "Bespoke feature wall joinery that adds depth and character.",
         tags: ["Slatted Walls", "Accent Walls", "Textured Panels"],
-        bullets: ["Feature wall ideas for bedroom Dubai", "Tile feature wall design India", "Vertical garden wall Dubai", "Interior feature wall contractor India"],
+        bullets: ["Feature wall ideas for bedroom India", "Tile feature wall design India", "Vertical garden wall India", "Interior feature wall contractor India"],
         buttonText: "FEATURE WALLS →"
       },
       {
@@ -392,7 +392,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Kitchens",
         description: "Tailor-made kitchens with smart storage and premium finishes.",
         tags: ["Modular Kitchens", "Luxury Kitchens", "Custom Cabinets"],
-        bullets: ["Modern kitchen cabinet manufacturer in India", "Luxury modular kitchen design Dubai", "Best kitchen cabinets company Dubai"],
+        bullets: ["Modern kitchen cabinet manufacturer in India", "Luxury modular kitchen design India", "Best kitchen cabinets company India"],
         buttonText: "KITCHENS →"
       },
       {
@@ -401,7 +401,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Office furniture",
         description: "Custom office furniture designed for productivity and durability.",
         tags: ["Desks", "Workstations", "Ergonomic Furniture"],
-        bullets: ["Modern ergonomic office chair Dubai", "Height adjustable standing desk Dubai", "Office furniture supplier Abu Dhabi", "Modular office workstations Dubai"],
+        bullets: ["Modern ergonomic office chair India", "Height adjustable standing desk India", "Office furniture supplier Abu Dhabi", "Modular office workstations India"],
         buttonText: "OFFICE FURNITURE →"
       },
       {
@@ -410,7 +410,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Reception desks",
         description: "Custom reception desks built to elevate first impressions.",
         tags: ["Modern Reception", "Marble Counters", "Custom Desks"],
-        bullets: ["Custom made modern reception desk Dubai", "Wooden contemporary reception desk Dubai", "Italian marble finish reception counter Dubai", "Modern reception counter supplier Abu Dhabi"],
+        bullets: ["Custom made modern reception desk India", "Wooden contemporary reception desk India", "Italian marble finish reception counter India", "Modern reception counter supplier Abu Dhabi"],
         buttonText: "RECEPTION DESKS →"
       },
       {
@@ -419,7 +419,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Residential furniture",
         description: "Made-to-measure residential furniture for elegant everyday living.",
         tags: ["Sofas", "Dining Tables", "Bedroom Furniture"],
-        bullets: ["Luxury bespoke residential furniture Dubai", "Custom made sofas dining tables Dubai", "Handcrafted bespoke wardrobes beds Dubai India"],
+        bullets: ["Luxury bespoke residential furniture India", "Custom made sofas dining tables India", "Handcrafted bespoke wardrobes beds India India"],
         buttonText: "RESIDENTIAL FURNITURE →"
       },
       {
@@ -428,7 +428,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Tv-units",
         description: "Custom TV units with integrated storage and clean detailing.",
         tags: ["Media Consoles", "Floating TV Units", "Entertainment Units"],
-        bullets: ["Modern minimalist TV unit buy online Dubai", "TV unit with cable management Dubai", "Minimalist modern TV unit apartment living room Dubai", "Compact TV unit for small living room India"],
+        bullets: ["Modern minimalist TV unit buy online India", "TV unit with cable management India", "Minimalist modern TV unit apartment living room India", "Compact TV unit for small living room India"],
         buttonText: "TV UNITS →"
       },
       {
@@ -437,7 +437,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Wall panels",
         description: "Decorative wall panels crafted to enhance interiors with texture.",
         tags: ["Acoustic Panels", "Decorative Panels", "3D Wall Panels"],
-        bullets: ["V-Groove engraved acoustic wall panels office India", "PVC waterproof wall panels Dubai", "3D decorative wall panels for living room Dubai", "Fluted wall panels Dubai supplier"],
+        bullets: ["V-Groove engraved acoustic wall panels office India", "PVC waterproof wall panels India", "3D decorative wall panels for living room India", "Fluted wall panels India supplier"],
         buttonText: "WALL PANELS →"
       },
       {
@@ -446,7 +446,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Wardrobes",
         description: "Walk-in wardrobes, built-in closets, and dressing rooms tailored to your storage needs.",
         tags: ["Walk In Wardrobes", "Built In Closets", "Dressing Rooms"],
-        bullets: ["Modern bedroom wardrobe cabinet Dubai", "Kids room wardrobe custom made Dubai", "Affordable sliding door wardrobe", "Walk-in wardrobe system IKEA"],
+        bullets: ["Modern bedroom wardrobe cabinet India", "Kids room wardrobe custom made India", "Affordable sliding door wardrobe", "Walk-in wardrobe system IKEA"],
         buttonText: "WARDROBES →"
       },
       {
@@ -455,7 +455,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Wood ceilings",
         description: "Precision wood ceiling systems for warmth and visual impact.",
         tags: ["Coffered Ceilings", "Slatted Ceilings", "Carved Ceilings"],
-        bullets: ["Luxury carved wood ceiling design villa Dubai", "Traditional and contemporary wooden ceiling India", "Arabic style wooden ceiling design Dubai", "Modern wooden ceiling design for office Dubai"],
+        bullets: ["Luxury carved wood ceiling design villa India", "Traditional and contemporary wooden ceiling India", "Arabic style wooden ceiling design India", "Modern wooden ceiling design for office India"],
         buttonText: "WOOD CEILINGS →"
       }
     ]
@@ -638,7 +638,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Pearl Finish",
         description: "Subtle pearl sheen that creates elegant light play and sophistication on walls.",
         tags: ["Pearl Sheen", "Iridescent Finish", "Shimmer Coat"],
-        bullets: ["Pearl finish wall paint Dubai", "Iridescent wall coating villa", "Luxury pearl sheen paint contractor India"],
+        bullets: ["Pearl finish wall paint India", "Iridescent wall coating villa", "Luxury pearl sheen paint contractor India"],
         buttonText: "PEARL FINISH →"
       },
       {
@@ -647,8 +647,17 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
         title: "Artistic Finishes",
         description: "Bespoke decorative finishes crafted by artisan painters for unique premium interiors.",
         tags: ["Hand Painted", "Faux Finish", "Artisan Craft"],
-        bullets: ["Artistic wall finish Dubai", "Hand painted decorative wall villa", "Bespoke faux finish contractor India"],
+        bullets: ["Artistic wall finish India", "Hand painted decorative wall villa", "Bespoke faux finish contractor India"],
         buttonText: "ARTISTIC FINISHES →"
+      },
+      {
+        slug: "microcement-flooring-services",
+        img: "https://images.unsplash.com/photo-1612404730960-5c71577fca11?auto=format&fit=crop&q=80&w=800",
+        title: "Microcement Flooring Services",
+        description: "Seamless microcement flooring for premium aesthetics.",
+        tags: ["Microcement", "Flooring", "Seamless"],
+        bullets: ["Seamless application", "Durable finish", "Modern aesthetics"],
+        buttonText: "MICROCEMENT FLOORING →"
       }
     ]
   },
@@ -958,8 +967,8 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
     ]
   },
   "property-inspection": {
-    title: "Expert Property Inspection Services in Dubai & India",
-    tagline: "Certified Dubai property inspectors. We uncover hidden structural, MEP, and safety issues before you buy or move in with a 300-point check.",
+    title: "Expert Property Inspection Services in India",
+    tagline: "Certified India property inspectors. We uncover hidden structural, MEP, and safety issues before you buy or move in with a 300-point check.",
     heroImage: "https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&fit=crop&q=80&w=1200",
     desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Our certified inspectors deliver detailed photo-backed snagging reports.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession, ensuring you avoid costly surprises."],
     stats: [
@@ -2689,6 +2698,351 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
         tags: ["Bespoke Joinery", "Quality"]
       }
     ]
+  },
+  "retail-fitout": {
+    title: "Ready to Transform Your Retail Space?",
+    tagline: "Book a free consultation and let our experts design your immersive retail experience. We'll provide transparent pricing and timeline.",
+    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
+    desc: ["From flagship stores to boutique pop-ups, Metro Retail delivers comprehensive retail fitout solutions that elevate brand presence and maximize customer engagement.", "We handle every aspect of retail interior design and fitout."],
+    stats: [
+      { label: "Projects Completed", value: "150+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Design Experts", value: "20+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your brand guidelines and space requirements." }, { "step": "Design & Planning", "desc": "Creating retail layouts and 3D visual merchandising plans." }, { "step": "Execution Phase", "desc": "Our team executes the fitout flawlessly." }, { "step": "Final Handover", "desc": "Quality checks and handover for launch." }],
+    gallery: [
+      {
+        slug: "retail-store-design",
+        img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=800",
+        title: "Retail Store Design",
+        description: "Retail Store Design services",
+        tags: ["Retail", "Design"],
+        bullets: ["Store layout planning", "Brand integration", "Custom fixtures"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "luxury-retail-interior-design",
+        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+        title: "Luxury Retail Interior Design",
+        description: "Luxury Retail Interior Design services",
+        tags: ["Luxury", "Retail"],
+        bullets: ["Premium finishes", "High-end fixtures", "Lighting design"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "store-fitout-company",
+        img: "https://images.unsplash.com/photo-1555529902-5261145633bf?auto=format&fit=crop&q=80&w=800",
+        title: "Store Fitout Company",
+        description: "Store Fitout Company services",
+        tags: ["Fitout", "Retail"],
+        bullets: ["Turnkey fitout", "MEP works", "Joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "retail-fitout-services",
+        img: "https://images.unsplash.com/photo-1581373449483-374456832f05?auto=format&fit=crop&q=80&w=800",
+        title: "Retail Fitout Services",
+        description: "Retail Fitout Services",
+        tags: ["Fitout", "Services"],
+        bullets: ["Comprehensive solutions", "Fast execution", "Quality control"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "boutique-interior-design",
+        img: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=800",
+        title: "Boutique Interior Design",
+        description: "Boutique Interior Design services",
+        tags: ["Boutique", "Design"],
+        bullets: ["Unique concepts", "Bespoke furniture", "Intimate spaces"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "flagship-store-design",
+        img: "https://images.unsplash.com/photo-1558769132-cb1fac08b14b?auto=format&fit=crop&q=80&w=800",
+        title: "Flagship Store Design",
+        description: "Flagship Store Design services",
+        tags: ["Flagship", "Design"],
+        bullets: ["Iconic spaces", "Brand storytelling", "Innovative materials"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "pop-up-store-design-services",
+        img: "https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?auto=format&fit=crop&q=80&w=800",
+        title: "Pop-Up Store Design Services",
+        description: "Pop-Up Store Design Services",
+        tags: ["Pop-Up", "Design"],
+        bullets: ["Modular fixtures", "Quick installation", "High impact"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "retail-space-design-experts",
+        img: "https://images.unsplash.com/photo-1556740738-f6a46e114ece?auto=format&fit=crop&q=80&w=800",
+        title: "Retail Space Design Experts",
+        description: "Retail Space Design Experts services",
+        tags: ["Retail", "Experts"],
+        bullets: ["Strategic planning", "Customer flow", "Conversion optimization"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "retail-commercial-fitout",
+        img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=800",
+        title: "Retail & Commercial Fitout",
+        description: "Retail & Commercial Fitout services",
+        tags: ["Commercial", "Fitout"],
+        bullets: ["End-to-end execution", "Authority approvals", "Project management"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "office-fitout": {
+    title: "Ready to Transform Your Office?",
+    tagline: "Book a free consultation and let our experts design your productive workspace. We'll provide transparent pricing and timeline.",
+    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+    desc: ["We create modern, inspiring office interiors that boost productivity and reflect your corporate identity.", "From open-plan workspaces to luxury executive suites, we handle turnkey office fitouts."],
+    stats: [
+      { label: "Projects Completed", value: "200+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Design Experts", value: "20+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your workspace requirements." }, { "step": "Design & Planning", "desc": "Creating office layouts and 3D designs." }, { "step": "Execution Phase", "desc": "Our team executes the fitout flawlessly." }, { "step": "Final Handover", "desc": "Quality checks and handover." }],
+    gallery: [
+      {
+        slug: "office-interior-design",
+        img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800",
+        title: "Office Interior Design",
+        description: "Office Interior Design services",
+        tags: ["Office", "Design"],
+        bullets: ["Space planning", "Ergonomic furniture", "Lighting"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "modern-office-interior-design",
+        img: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=800",
+        title: "Modern Office Interior Design",
+        description: "Modern Office Interior Design services",
+        tags: ["Modern", "Office"],
+        bullets: ["Contemporary aesthetics", "Smart tech integration", "Collaborative zones"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "commercial-office-design",
+        img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800",
+        title: "Commercial Office Design",
+        description: "Commercial Office Design services",
+        tags: ["Commercial", "Office"],
+        bullets: ["Corporate identity", "Efficient layouts", "Acoustic solutions"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "corporate-office-interior",
+        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+        title: "Corporate Office Interior",
+        description: "Corporate Office Interior services",
+        tags: ["Corporate", "Interior"],
+        bullets: ["Executive suites", "Boardrooms", "Reception areas"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "turnkey-office-fitout",
+        img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800",
+        title: "Turnkey Office Fitout",
+        description: "Turnkey Office Fitout services",
+        tags: ["Turnkey", "Fitout"],
+        bullets: ["End-to-end execution", "MEP & IT", "Joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "office-renovation-services",
+        img: "https://images.unsplash.com/photo-1531973486364-5fa64260d752?auto=format&fit=crop&q=80&w=800",
+        title: "Office Renovation Services",
+        description: "Office Renovation Services",
+        tags: ["Renovation", "Office"],
+        bullets: ["Workspace upgrades", "Minimal disruption", "Modernization"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "luxury-office-design",
+        img: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800",
+        title: "Luxury Office Design",
+        description: "Luxury Office Design services",
+        tags: ["Luxury", "Office"],
+        bullets: ["Premium materials", "Bespoke furniture", "Executive comfort"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "office-space-planning",
+        img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+        title: "Office Space Planning",
+        description: "Office Space Planning services",
+        tags: ["Space Planning", "Office"],
+        bullets: ["Workflow optimization", "Zoning", "Compliance"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "workspace-interior-solutions",
+        img: "https://images.unsplash.com/photo-1582653291997-059a56958d4a?auto=format&fit=crop&q=80&w=800",
+        title: "Workspace Interior Solutions",
+        description: "Workspace Interior Solutions",
+        tags: ["Workspace", "Solutions"],
+        bullets: ["Flexible seating", "Wellness focus", "Biophilic design"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "restaurant-fitout": {
+    title: "Ready to Transform Your Restaurant?",
+    tagline: "Book a free consultation and let our experts design your dining experience. We'll provide transparent pricing and timeline.",
+    heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80",
+    desc: ["We specialize in creating immersive F&B environments, from cozy cafes to luxury fine dining restaurants.", "Our turnkey restaurant fitout services cover everything from front-of-house aesthetics to commercial kitchen MEP."],
+    stats: [
+      { label: "Projects Completed", value: "100+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Design Experts", value: "20+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your culinary concept." }, { "step": "Design & Planning", "desc": "Creating layouts and 3D designs." }, { "step": "Execution Phase", "desc": "Our team executes the fitout flawlessly." }, { "step": "Final Handover", "desc": "Quality checks and handover." }],
+    gallery: [
+      {
+        slug: "restaurant-interior-design",
+        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+        title: "Restaurant Interior Design",
+        description: "Restaurant Interior Design services",
+        tags: ["Restaurant", "Design"],
+        bullets: ["Concept development", "Dining flow", "Lighting"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "cafe-interior-design-services",
+        img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800",
+        title: "Cafe Interior Design Services",
+        description: "Cafe Interior Design Services",
+        tags: ["Cafe", "Design"],
+        bullets: ["Cozy atmosphere", "Counter design", "Seating layouts"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "restaurant-fitout-company",
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800",
+        title: "Restaurant Fitout Company",
+        description: "Restaurant Fitout Company services",
+        tags: ["Fitout", "Restaurant"],
+        bullets: ["Kitchen MEP", "Turnkey execution", "Joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "fine-dining-interior-design",
+        img: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=800",
+        title: "Fine Dining Interior Design",
+        description: "Fine Dining Interior Design services",
+        tags: ["Fine Dining", "Design"],
+        bullets: ["Luxury finishes", "Acoustic comfort", "Ambient lighting"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "luxury-restaurant-design",
+        img: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=800",
+        title: "Luxury Restaurant Design",
+        description: "Luxury Restaurant Design services",
+        tags: ["Luxury", "Restaurant"],
+        bullets: ["Premium materials", "Bespoke furniture", "Exclusive atmosphere"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "fast-food-restaurant-design",
+        img: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=800",
+        title: "Fast Food Restaurant Design",
+        description: "Fast Food Restaurant Design services",
+        tags: ["Fast Food", "Design"],
+        bullets: ["High traffic flow", "Durable materials", "Vibrant branding"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "food-court-interior-design",
+        img: "https://images.unsplash.com/photo-1525648199593-ce5cafe386d8?auto=format&fit=crop&q=80&w=800",
+        title: "Food Court Interior Design",
+        description: "Food Court Interior Design services",
+        tags: ["Food Court", "Design"],
+        bullets: ["Space optimization", "Shared seating", "Vendor integration"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "restaurant-renovation-experts",
+        img: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=800",
+        title: "Restaurant Renovation Experts",
+        description: "Restaurant Renovation Experts",
+        tags: ["Renovation", "Restaurant"],
+        bullets: ["Quick turnaround", "Concept refresh", "Kitchen upgrades"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "f-b-interior-design",
+        img: "https://images.unsplash.com/photo-1551632436-421b5b4cc601?auto=format&fit=crop&q=80&w=800",
+        title: "F&B Interior Design",
+        description: "F&B Interior Design services",
+        tags: ["F&B", "Design"],
+        bullets: ["Beverage stations", "Bar design", "Dining flow"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "turnkey-restaurant-fitout",
+        img: "https://images.unsplash.com/photo-1528605248644-14bf524458f3?auto=format&fit=crop&q=80&w=800",
+        title: "Turnkey Restaurant Fitout",
+        description: "Turnkey Restaurant Fitout services",
+        tags: ["Turnkey", "Fitout"],
+        bullets: ["End-to-end solutions", "Authority approvals", "Project management"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "commercial-contractors": {
+    title: "Ready for your Turnkey Project?",
+    tagline: "Book a free consultation and let our experts manage your commercial fitout. We'll provide transparent pricing and timeline.",
+    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
+    desc: ["We offer complete turnkey interior solutions and commercial contracting for a seamless project delivery.", "From concept to handover, our team ensures quality, compliance, and timely execution."],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Design Experts", value: "20+", icon: ShieldCheck }
+    ],
+    process: [{ "step": "Initial Consultation", "desc": "Understanding your project scope." }, { "step": "Design & Planning", "desc": "Creating layouts and engineering plans." }, { "step": "Execution Phase", "desc": "Our team executes the fitout flawlessly." }, { "step": "Final Handover", "desc": "Quality checks and handover." }],
+    gallery: [
+      {
+        slug: "commercial-interior-design",
+        img: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=800",
+        title: "Commercial Interior Design",
+        description: "Commercial Interior Design services",
+        tags: ["Commercial", "Design"],
+        bullets: ["Space planning", "Aesthetics", "Functionality"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "commercial-fitout-company",
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
+        title: "Commercial Fitout Company",
+        description: "Commercial Fitout Company services",
+        tags: ["Fitout", "Commercial"],
+        bullets: ["Turnkey execution", "MEP works", "Joinery"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "interior-design-build",
+        img: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=800",
+        title: "Interior Design & Build",
+        description: "Interior Design & Build services",
+        tags: ["Design", "Build"],
+        bullets: ["Single point of contact", "Seamless delivery", "Cost control"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "turnkey-interior-solutions",
+        img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
+        title: "Turnkey Interior Solutions",
+        description: "Turnkey Interior Solutions",
+        tags: ["Turnkey", "Solutions"],
+        bullets: ["End-to-end management", "Procurement", "Installation"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "commercial-interior-contractors",
+        img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800",
+        title: "Commercial Interior Contractors",
+        description: "Commercial Interior Contractors services",
+        tags: ["Contractors", "Commercial"],
+        bullets: ["Civil works", "MEP", "Quality assurance"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
   }
 };
 
@@ -3166,6 +3520,365 @@ Object.assign(NESTED_SERVICE_DATA, {
         description: "Bespoke guest beds with premium styling and welcoming comfort.",
         tags: ["Residential", "Bedroom"],
         bullets: ["Storage options", "Custom fabrics", "Space-saving design"],
+        buttonText: "VIEW DETAILS →"
+      }
+    ]
+  },
+  "microcement-flooring-services": {
+    title: "Ready for Microcement Flooring?",
+    tagline: "Book a free consultation for seamless microcement flooring services.",
+    heroImage: "https://images.unsplash.com/photo-1612404730960-5c71577fca11?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Microcement Flooring Services",
+    contentDesc: "Seamless microcement flooring for premium aesthetics.",
+    gallery: [
+      {
+        img: "https://images.unsplash.com/photo-1612404730960-5c71577fca11?auto=format&fit=crop&q=80&w=800",
+        title: "Microcement Flooring",
+        tags: ["Microcement", "Flooring"]
+      }
+    ]
+  },
+  "retail-store-design": {
+    title: "Ready for Retail Store Design?",
+    tagline: "Book a free consultation for retail store design services.",
+    heroImage: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Retail Store Design",
+    contentDesc: "Retail Store Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=800", title: "Retail Store Design" }]
+  },
+  "luxury-retail-interior-design": {
+    title: "Ready for Luxury Retail Interior Design?",
+    tagline: "Book a free consultation for luxury retail interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Luxury Retail Interior Design",
+    contentDesc: "Luxury Retail Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800", title: "Luxury Retail Interior Design" }]
+  },
+  "store-fitout-company": {
+    title: "Ready for a Store Fitout Company?",
+    tagline: "Book a free consultation for store fitout company services.",
+    heroImage: "https://images.unsplash.com/photo-1555529902-5261145633bf?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Store Fitout Company",
+    contentDesc: "Store Fitout Company services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1555529902-5261145633bf?auto=format&fit=crop&q=80&w=800", title: "Store Fitout Company" }]
+  },
+  "retail-fitout-services": {
+    title: "Ready for Retail Fitout Services?",
+    tagline: "Book a free consultation for retail fitout services.",
+    heroImage: "https://images.unsplash.com/photo-1581373449483-374456832f05?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Retail Fitout Services",
+    contentDesc: "Retail Fitout Services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1581373449483-374456832f05?auto=format&fit=crop&q=80&w=800", title: "Retail Fitout Services" }]
+  },
+  "boutique-interior-design": {
+    title: "Ready for Boutique Interior Design?",
+    tagline: "Book a free consultation for boutique interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Boutique Interior Design",
+    contentDesc: "Boutique Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=800", title: "Boutique Interior Design" }]
+  },
+  "flagship-store-design": {
+    title: "Ready for Flagship Store Design?",
+    tagline: "Book a free consultation for flagship store design services.",
+    heroImage: "https://images.unsplash.com/photo-1558769132-cb1fac08b14b?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Flagship Store Design",
+    contentDesc: "Flagship Store Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1558769132-cb1fac08b14b?auto=format&fit=crop&q=80&w=800", title: "Flagship Store Design" }]
+  },
+  "pop-up-store-design-services": {
+    title: "Ready for Pop-Up Store Design Services?",
+    tagline: "Book a free consultation for pop-up store design services.",
+    heroImage: "https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Pop-Up Store Design Services",
+    contentDesc: "Pop-Up Store Design Services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?auto=format&fit=crop&q=80&w=800", title: "Pop-Up Store Design Services" }]
+  },
+  "retail-space-design-experts": {
+    title: "Ready for Retail Space Design Experts?",
+    tagline: "Book a free consultation for retail space design experts services.",
+    heroImage: "https://images.unsplash.com/photo-1556740738-f6a46e114ece?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Retail Space Design Experts",
+    contentDesc: "Retail Space Design Experts services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1556740738-f6a46e114ece?auto=format&fit=crop&q=80&w=800", title: "Retail Space Design Experts" }]
+  },
+  "retail-commercial-fitout": {
+    title: "Ready for Retail & Commercial Fitout?",
+    tagline: "Book a free consultation for retail & commercial fitout services.",
+    heroImage: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Retail & Commercial Fitout",
+    contentDesc: "Retail & Commercial Fitout services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=800", title: "Retail & Commercial Fitout" }]
+  },
+  "office-interior-design": {
+    title: "Ready for Office Interior Design?",
+    tagline: "Book a free consultation for office interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Office Interior Design",
+    contentDesc: "Office Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800", title: "Office Interior Design" }]
+  },
+  "modern-office-interior-design": {
+    title: "Ready for Modern Office Interior Design?",
+    tagline: "Book a free consultation for modern office interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Modern Office Interior Design",
+    contentDesc: "Modern Office Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=800", title: "Modern Office Interior Design" }]
+  },
+  "commercial-office-design": {
+    title: "Ready for Commercial Office Design?",
+    tagline: "Book a free consultation for commercial office design services.",
+    heroImage: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Commercial Office Design",
+    contentDesc: "Commercial Office Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800", title: "Commercial Office Design" }]
+  },
+  "corporate-office-interior": {
+    title: "Ready for Corporate Office Interior?",
+    tagline: "Book a free consultation for corporate office interior services.",
+    heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Corporate Office Interior",
+    contentDesc: "Corporate Office Interior services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800", title: "Corporate Office Interior" }]
+  },
+  "turnkey-office-fitout": {
+    title: "Ready for Turnkey Office Fitout?",
+    tagline: "Book a free consultation for turnkey office fitout services.",
+    heroImage: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Turnkey Office Fitout",
+    contentDesc: "Turnkey Office Fitout services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800", title: "Turnkey Office Fitout" }]
+  },
+  "office-renovation-services": {
+    title: "Ready for Office Renovation Services?",
+    tagline: "Book a free consultation for office renovation services.",
+    heroImage: "https://images.unsplash.com/photo-1531973486364-5fa64260d752?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Office Renovation Services",
+    contentDesc: "Office Renovation Services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1531973486364-5fa64260d752?auto=format&fit=crop&q=80&w=800", title: "Office Renovation Services" }]
+  },
+  "luxury-office-design": {
+    title: "Ready for Luxury Office Design?",
+    tagline: "Book a free consultation for luxury office design services.",
+    heroImage: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Luxury Office Design",
+    contentDesc: "Luxury Office Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=800", title: "Luxury Office Design" }]
+  },
+  "office-space-planning": {
+    title: "Ready for Office Space Planning?",
+    tagline: "Book a free consultation for office space planning services.",
+    heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Office Space Planning",
+    contentDesc: "Office Space Planning services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800", title: "Office Space Planning" }]
+  },
+  "workspace-interior-solutions": {
+    title: "Ready for Workspace Interior Solutions?",
+    tagline: "Book a free consultation for workspace interior solutions.",
+    heroImage: "https://images.unsplash.com/photo-1582653291997-059a56958d4a?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Workspace Interior Solutions",
+    contentDesc: "Workspace Interior Solutions",
+    gallery: [{ img: "https://images.unsplash.com/photo-1582653291997-059a56958d4a?auto=format&fit=crop&q=80&w=800", title: "Workspace Interior Solutions" }]
+  },
+  "restaurant-interior-design": {
+    title: "Ready for Restaurant Interior Design?",
+    tagline: "Book a free consultation for restaurant interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Restaurant Interior Design",
+    contentDesc: "Restaurant Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800", title: "Restaurant Interior Design" }]
+  },
+  "cafe-interior-design-services": {
+    title: "Ready for Cafe Interior Design Services?",
+    tagline: "Book a free consultation for cafe interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Cafe Interior Design Services",
+    contentDesc: "Cafe Interior Design Services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800", title: "Cafe Interior Design Services" }]
+  },
+  "restaurant-fitout-company": {
+    title: "Ready for a Restaurant Fitout Company?",
+    tagline: "Book a free consultation for restaurant fitout company services.",
+    heroImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Restaurant Fitout Company",
+    contentDesc: "Restaurant Fitout Company services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800", title: "Restaurant Fitout Company" }]
+  },
+  "fine-dining-interior-design": {
+    title: "Ready for Fine Dining Interior Design?",
+    tagline: "Book a free consultation for fine dining interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Fine Dining Interior Design",
+    contentDesc: "Fine Dining Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=800", title: "Fine Dining Interior Design" }]
+  },
+  "luxury-restaurant-design": {
+    title: "Ready for Luxury Restaurant Design?",
+    tagline: "Book a free consultation for luxury restaurant design services.",
+    heroImage: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Luxury Restaurant Design",
+    contentDesc: "Luxury Restaurant Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=800", title: "Luxury Restaurant Design" }]
+  },
+  "fast-food-restaurant-design": {
+    title: "Ready for Fast Food Restaurant Design?",
+    tagline: "Book a free consultation for fast food restaurant design services.",
+    heroImage: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Fast Food Restaurant Design",
+    contentDesc: "Fast Food Restaurant Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=800", title: "Fast Food Restaurant Design" }]
+  },
+  "food-court-interior-design": {
+    title: "Ready for Food Court Interior Design?",
+    tagline: "Book a free consultation for food court interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1525648199593-ce5cafe386d8?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Food Court Interior Design",
+    contentDesc: "Food Court Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1525648199593-ce5cafe386d8?auto=format&fit=crop&q=80&w=800", title: "Food Court Interior Design" }]
+  },
+  "restaurant-renovation-experts": {
+    title: "Ready for Restaurant Renovation Experts?",
+    tagline: "Book a free consultation for restaurant renovation experts.",
+    heroImage: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Restaurant Renovation Experts",
+    contentDesc: "Restaurant Renovation Experts",
+    gallery: [{ img: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=800", title: "Restaurant Renovation Experts" }]
+  },
+  "f-b-interior-design": {
+    title: "Ready for F&B Interior Design?",
+    tagline: "Book a free consultation for F&B interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1551632436-421b5b4cc601?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "F&B Interior Design",
+    contentDesc: "F&B Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1551632436-421b5b4cc601?auto=format&fit=crop&q=80&w=800", title: "F&B Interior Design" }]
+  },
+  "turnkey-restaurant-fitout": {
+    title: "Ready for Turnkey Restaurant Fitout?",
+    tagline: "Book a free consultation for turnkey restaurant fitout services.",
+    heroImage: "https://images.unsplash.com/photo-1528605248644-14bf524458f3?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Turnkey Restaurant Fitout",
+    contentDesc: "Turnkey Restaurant Fitout services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1528605248644-14bf524458f3?auto=format&fit=crop&q=80&w=800", title: "Turnkey Restaurant Fitout" }]
+  },
+  "commercial-interior-design": {
+    title: "Ready for Commercial Interior Design?",
+    tagline: "Book a free consultation for commercial interior design services.",
+    heroImage: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Commercial Interior Design",
+    contentDesc: "Commercial Interior Design services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=800", title: "Commercial Interior Design" }]
+  },
+  "commercial-fitout-company": {
+    title: "Ready for a Commercial Fitout Company?",
+    tagline: "Book a free consultation for commercial fitout company services.",
+    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Commercial Fitout Company",
+    contentDesc: "Commercial Fitout Company services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800", title: "Commercial Fitout Company" }]
+  },
+  "interior-design-build": {
+    title: "Ready for Interior Design & Build?",
+    tagline: "Book a free consultation for interior design & build services.",
+    heroImage: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Interior Design & Build",
+    contentDesc: "Interior Design & Build services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=800", title: "Interior Design & Build" }]
+  },
+  "turnkey-interior-solutions": {
+    title: "Ready for Turnkey Interior Solutions?",
+    tagline: "Book a free consultation for turnkey interior solutions.",
+    heroImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Turnkey Interior Solutions",
+    contentDesc: "Turnkey Interior Solutions",
+    gallery: [{ img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800", title: "Turnkey Interior Solutions" }]
+  },
+  "commercial-interior-contractors": {
+    title: "Ready for Commercial Interior Contractors?",
+    tagline: "Book a free consultation for commercial interior contractors services.",
+    heroImage: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Commercial Interior Contractors",
+    contentDesc: "Commercial Interior Contractors services",
+    gallery: [{ img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=800", title: "Commercial Interior Contractors" }]
+  }
+});
+
+Object.assign(NESTED_SERVICE_DATA, {
+  "marble-flooring": {
+    title: "Ready for Marble Flooring?",
+    tagline: "Book a free consultation for premium marble flooring installation.",
+    heroImage: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Marble Flooring Services",
+    contentDesc: "We provide expert marble flooring installation, ensuring seamless joints and perfect leveling for luxury spaces.",
+    gallery: [{ img: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80&w=800", title: "Marble Flooring" }]
+  },
+  "marble-wall-cladding": {
+    title: "Ready for Marble Wall Cladding?",
+    tagline: "Book a free consultation for bespoke marble wall features.",
+    heroImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Marble Wall Cladding",
+    contentDesc: "Elevate your interiors with stunning bookmatched marble walls and mechanically fixed stone cladding.",
+    gallery: [{ img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", title: "Marble Wall Cladding" }]
+  },
+  "custom-marble-counters": {
+    title: "Ready for Custom Marble Counters?",
+    tagline: "Book a free consultation for bespoke marble vanities and countertops.",
+    heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200",
+    contentTitle: "Custom Marble Counters",
+    contentDesc: "Precision fabricated marble countertops for kitchens, bathrooms, and reception desks.",
+    gallery: [{ img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800", title: "Custom Marble Counters" }]
+  }
+});
+
+Object.assign(SUBCATEGORY_DATA, {
+  "retail-fitout": NESTED_SERVICE_DATA["retail-fitout"],
+  "office-fitout": NESTED_SERVICE_DATA["office-fitout"],
+  "restaurant-fitout": NESTED_SERVICE_DATA["restaurant-fitout"],
+  "commercial-contractors": NESTED_SERVICE_DATA["commercial-contractors"],
+  "marble-installation": {
+    title: "Marble Installation",
+    tagline: "Premium marble installation services for luxury interiors.",
+    heroImage: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80",
+    desc: [
+      "Our specialized marble installation team delivers flawless stone work for floors, walls, and bespoke features.",
+      "From bookmatched marble cladding to intricate waterjet patterns and custom countertops, we ensure precision and luxury in every detail."
+    ],
+    stats: [
+      { label: "Projects Completed", value: "300+", icon: Award }, { label: "Client Satisfaction", value: "100%", icon: CheckCircle2 }, { label: "Expert Craftsmen", value: "45+", icon: ShieldCheck }
+    ],
+    process: [
+      { step: "Initial Consultation", desc: "Material selection and site assessment." }, 
+      { step: "Design & Planning", desc: "Detailed shop drawings and pattern layouts." }, 
+      { step: "Execution Phase", desc: "Precision cutting and flawless installation." }, 
+      { step: "Final Handover", desc: "Polishing, sealing, and final quality checks." }
+    ],
+    gallery: [
+      {
+        slug: "marble-flooring",
+        img: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80",
+        title: "Marble Flooring",
+        description: "Premium marble flooring installation.",
+        tags: ["Flooring", "Marble"],
+        bullets: ["Large format slabs", "Bookmatched designs", "Seamless joints"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "marble-wall-cladding",
+        img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80",
+        title: "Marble Wall Cladding",
+        description: "Bespoke marble wall features.",
+        tags: ["Wall Cladding", "Marble"],
+        bullets: ["Feature walls", "Bathroom cladding", "Mechanical fixing"],
+        buttonText: "VIEW DETAILS →"
+      },
+      {
+        slug: "custom-marble-counters",
+        img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80",
+        title: "Custom Marble Counters",
+        description: "Bespoke marble counters and vanities.",
+        tags: ["Counters", "Marble"],
+        bullets: ["Kitchen islands", "Bathroom vanities", "Reception desks"],
         buttonText: "VIEW DETAILS →"
       }
     ]

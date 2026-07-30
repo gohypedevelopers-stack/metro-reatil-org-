@@ -45,6 +45,10 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
     });
   }, [api]);
   const services = [
+    { title: "Retail Fitout", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600", category: "RETAIL FITOUT", id: "retail-fitout" },
+    { title: "Office Fitout", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout" },
+    { title: "Restaurant & F&B Fitout", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600", category: "RESTAURANT FITOUT", id: "restaurant-fitout" },
+    { title: "Commercial & Turnkey Solutions", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors" },
     { title: "Fitout", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600", category: "FITOUT EXECUTION", id: "fitout" },
     { title: "Carpentry", image: "https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&q=80&w=600", category: "bespoke carpentry", id: "carpentry" },
     { title: "Kitchens & Wardrobes", image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600", category: "KITCHEN WARDROBE", id: "kitchens-wardrobes" },

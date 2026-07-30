@@ -39,6 +39,10 @@ const RETAIL_LINKS = [
 
 const SERVICES_LINKS = [
   { name: 'ALL SERVICES', href: '/services' },
+  { name: 'RETAIL FITOUT', href: '/services/retail-fitout' },
+  { name: 'OFFICE FITOUT', href: '/services/office-fitout' },
+  { name: 'RESTAURANT FITOUT', href: '/services/restaurant-fitout' },
+  { name: 'COMMERCIAL SOLUTIONS', href: '/services/commercial-contractors' },
   { name: 'FITOUT', href: '/services/fitout' },
   { name: 'CARPENTRY', href: '/services/carpentry' },
   { name: 'KITCHENS & WARDROBES', href: '/services/kitchens' },

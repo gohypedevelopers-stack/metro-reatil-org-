@@ -36,6 +36,7 @@ function AnimatedNumber({ value }: { value: string }) {
 export default function SubcategoryDetailPage() {
   const params = useParams();
   const id = params?.id as string;
+  console.log("Current ID:", id);
 
   const data = SUBCATEGORY_DATA[id] || SUBCATEGORY_DATA["interior-design"];
 
@@ -271,8 +272,11 @@ export default function SubcategoryDetailPage() {
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                          {buttonText.replace(' →', '').replace('→', '')}
-                          {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
+                          <span className="md:hidden truncate">{title}</span>
+                          <span className="hidden md:inline">
+                            {buttonText.replace(' →', '').replace('→', '')}
+                            {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -319,8 +323,11 @@ export default function SubcategoryDetailPage() {
 
                       <div className="self-end mt-2">
                         <span className="bg-[#111] px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                          {buttonText.replace(' →', '').replace('→', '')}
-                          {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
+                          <span className="md:hidden truncate">{title}</span>
+                          <span className="hidden md:inline">
+                            {buttonText.replace(' →', '').replace('→', '')}
+                            {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
+                          </span>
                         </span>
                       </div>
                     </div>

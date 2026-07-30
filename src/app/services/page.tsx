@@ -5,6 +5,38 @@ import FullServicesSection from "@/components/home/FullServicesSection";
 
 const services = [
   {
+    id: 'retail-fitout',
+    title: 'Retail Fitout',
+    description: 'Complete retail fitout solutions transforming spaces into immersive brand experiences.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600',
+    tags: ['Retail Fitout', 'Commercial'],
+    href: '/services/retail-fitout',
+  },
+  {
+    id: 'office-fitout',
+    title: 'Office Fitout',
+    description: 'Modern office interior design and turnkey fitout for productive workspaces.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600',
+    tags: ['Office Fitout', 'Corporate'],
+    href: '/services/office-fitout',
+  },
+  {
+    id: 'restaurant-fitout',
+    title: 'Restaurant & F&B Fitout',
+    description: 'Bespoke restaurant interior design and turnkey fitout for culinary spaces.',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600',
+    tags: ['F&B Fitout', 'Hospitality'],
+    href: '/services/restaurant-fitout',
+  },
+  {
+    id: 'commercial-contractors',
+    title: 'Commercial & Turnkey Solutions',
+    description: 'Comprehensive commercial interior design and turnkey contracting services.',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600',
+    tags: ['Turnkey Solutions', 'Commercial'],
+    href: '/services/commercial-contractors',
+  },
+  {
     id: 'fitout',
     title: 'Fitout',
     description: 'Fitout delivered with precise execution and authority-ready planning.',
@@ -245,7 +277,7 @@ export default function ServicesPage() {
               <div className="relative h-[400px] md:h-[550px] lg:h-[650px] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/services_intro.png"
-                  alt="Fitout Services Dubai"
+                  alt="Fitout Services India"
                   fill
                   className="object-cover"
                 />
