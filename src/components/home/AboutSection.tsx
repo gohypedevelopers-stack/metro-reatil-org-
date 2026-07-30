@@ -26,11 +26,11 @@ const AboutSection = () => {
             </div>
 
             <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
-              At Metro Retail Solutions, we are master builders of turnkey physical environments. We offer interior design & build services and commercial interior design, transforming raw shell-and-core spaces into premium showcases.
+              Metro Retail Solutions is a turnkey fit-out company handling complete MEP, civil, and interior works, with over 25+ years of experience.
             </p>
 
             <p className="text-base text-neutral-500 leading-relaxed font-light">
-              By managing every engineering trade—civil works, certified MEP systems, HVAC networks, and in-house bespoke carpentry fabrication—under a single command as commercial fitout company experts, we guarantee a flawless handover.
+              We feature in-house manufacturing of complete modular fixtures (wooden, metal, and powder coat units) at our dedicated facilities in Delhi and Greater Noida. Equipped with the latest machinery and a skilled technical workforce operating 24x7, we provide exceptional retail fixtures and everything under one roof.
             </p>
 
 
@@ -51,8 +51,8 @@ const AboutSection = () => {
             {/* Floating Badge */}
             <div className="absolute -left-6 md:-left-12 bottom-12 bg-white p-6 shadow-2xl flex items-center gap-4 border-l-4 border-brand-gold hidden sm:flex">
               <div>
-                <div className="text-3xl font-light" style={{ fontFamily: 'var(--font-playfair), serif' }}>45</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-neutral-500">Days<br />Delivery</div>
+                <div className="text-3xl font-light" style={{ fontFamily: 'var(--font-playfair), serif' }}>25+</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-neutral-500">Years<br />Excellence</div>
               </div>
             </div>
           </div>
@@ -64,3 +64,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

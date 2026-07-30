@@ -270,7 +270,7 @@ const ExpertiseSection = () => {
               </span>
             </h2>
             <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-500 max-w-md" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
-              Three decades of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
+              Over 25 years of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
             </p>
 
             {/* progress bar */}

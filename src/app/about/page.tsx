@@ -2,53 +2,49 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Award, Users, Target, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Settings, Hammer, Paintbrush, Layers, CheckCircle2 } from 'lucide-react';
 import AboutSummary from '../../components/home/AboutSummary';
 
 const STATS = [
-  { label: "Years Excellence", value: "15+" },
-  { label: "Projects Completed", value: "250+" },
-  { label: "Expert Craftsmen", value: "120+" },
-  { label: "Client Satisfaction", value: "99%" }
+  { label: "Years Experience", value: "25+" },
+  { label: "Projects Completed", value: "500+" },
+  { label: "Skilled Staff", value: "200+" },
+  { label: "Client Satisfaction", value: "100%" }
 ];
 
-const VALUES = [
+const CAPABILITIES = [
   {
-    title: "Precision Engineering",
-    desc: "We approach every project with mathematical accuracy and technical excellence.",
-    icon: Target
+    title: "Metal Work",
+    desc: "Complete setup including laser machines and advanced equipment for precise metal fabrication.",
+    icon: Settings
   },
   {
-    title: "Artisanal Craft",
-    desc: "Blending traditional craftsmanship with modern manufacturing techniques.",
-    icon: Award
+    title: "Wooden Work",
+    desc: "Complete setup for all bespoke carpentry and wooden modular fixtures.",
+    icon: Hammer
   },
   {
-    title: "Client-Centric",
-    desc: "Your vision is our blueprint. We build spaces that reflect your unique identity.",
-    icon: Users
+    title: "Paint Work",
+    desc: "Complete setup for high-quality finishing and painting of retail fixtures.",
+    icon: Paintbrush
+  },
+  {
+    title: "Powder Coating",
+    desc: "Complete setup for durable and premium powder coating work.",
+    icon: Layers
   }
 ];
 
-const TEAM = [
-  {
-    name: "James Sterling",
-    role: "Director",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80",
-    desc: "Overseeing the strategic vision and ensuring our legacy of excellence continues."
-  },
-  {
-    name: "Sarah Jenkins",
-    role: "Manager",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
-    desc: "Leading daily operations and ensuring seamless execution across all projects."
-  },
-  {
-    name: "Michael Chen",
-    role: "Lead Craftsman",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80",
-    desc: "Bringing artisanal precision and engineering excellence to every build."
-  }
+const SERVICES = [
+  "Retail Fixtures",
+  "Turnkey Solutions",
+  "Custom Furniture",
+  "3D Signages / Logo Kiosk",
+  "Display Counters",
+  "POP Display",
+  "Acrylic Items",
+  "LIT and Non-Lit Branding",
+  "Interiors & Customized Fixtures"
 ];
 
 function AnimatedCounter({ value }: { value: string }) {
@@ -106,8 +102,8 @@ function AnimatedCounter({ value }: { value: string }) {
 
   return (
     <span ref={elementRef}>
-      {count}
-      {suffix}
+      {count > 0 ? count : ''}
+      {count > 0 ? suffix : value}
     </span>
   );
 }
@@ -142,7 +138,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
             >
-              Retail Excellence
+              Metro Retail Solutions
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -151,9 +147,9 @@ export default function AboutPage() {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
-              THE END-TO-END{" "}
+              TURNKEY FIT-OUT{" "}
               <span className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
-                Retail Partner
+                Excellence
               </span>
             </motion.h1>
             <motion.p
@@ -163,7 +159,7 @@ export default function AboutPage() {
               className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Specializing in luxury retail interior design and flagship store design. As a premier store fitout company, we deliver turnkey interior solutions.
+              Over 25+ years of experience handling complete MEP, civil, and interior works with in-house manufacturing of modular fixtures.
             </motion.p>
           </div>
         </div>
@@ -175,14 +171,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
             <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
               <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                BUILDING SPACES <span className="text-brand-gold italic text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>That Define Brands</span>
+                EXCEPTIONAL <span className="text-brand-gold italic text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Fixtures</span>
               </h2>
               <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
-                  Metro Retail Solutions provides expert boutique interior design and retail fitout services for global brands. As leading retail space design experts, our shop interior design company covers every facet of the commercial landscape.
+                  Metro Retail Solutions is a turnkey fit-out company handling complete MEP, civil, and interior works. We bring over 25+ years of experience and feature in-house manufacturing of complete modular fixtures including wooden, metal, and powder coat units.
                 </p>
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
-                  Our USP is total operational readiness. We offer turnkey office fitout, retail & commercial fitout, and pop up store design services. When we hand over the keys, you only need to bring your products.
+                  We have a manufacturing facility based in Delhi and Greater Noida with many skilled technical manpower (Carpenters, Painters, Electrician, Welders, etc.), and many more supporting staffs with full of all latest machineries and skilled/experienced manpower who works in many shift 24x7 days as per client's need and satisfaction.
                 </p>
               </div>
 
@@ -207,8 +203,8 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-12 -left-12 bg-brand-dark p-12 text-white max-w-xs hidden lg:block shadow-2xl">
-                <h3 className="text-xl font-serif mb-4 italic">"Precision is our standard."</h3>
-                <p className="text-neutral-400 text-sm font-light leading-relaxed">Every joint, finish, and installation is a testament to our commitment to architectural excellence.</p>
+                <h3 className="text-xl font-serif mb-4 italic">"In-house Manufacturing."</h3>
+                <p className="text-neutral-400 text-sm font-light leading-relaxed">Handling complete MEP, civil, and interior works with dedicated facilities in Delhi & Greater Noida.</p>
               </div>
 
               {/* Stats displayed below the image on mobile */}
@@ -230,61 +226,49 @@ export default function AboutPage() {
       {/* Legacy and Visionary Section */}
       <AboutSummary />
 
-      {/* Values Section - Sharpened */}
+      {/* Capabilities Section */}
       <section className="py-12 md:py-32 lg:py-48 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
             <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              THE PRINCIPLES <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Metro Retail</span>
+              EVERYTHING <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Under One Roof</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light">Our culture is built on transparency, technical mastery, and an unwavering focus on our clients' success.</p>
+            <p className="text-neutral-500 text-lg font-light">Complete setups equipped with the latest machinery and skilled craftsmen for every requirement.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
-            {VALUES.map((val, i) => (
-              <div key={i} className="bg-white p-8 md:p-12 lg:p-16 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-center text-center md:items-start md:text-left">
-                <val.icon className="text-brand-gold mb-6 md:mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
-                <h3 className="text-2xl font-serif text-brand-dark mb-6">{val.title}</h3>
-                <p className="text-neutral-500 text-base font-light leading-relaxed">{val.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200">
+            {CAPABILITIES.map((cap, i) => (
+              <div key={i} className="bg-white p-8 md:p-12 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-center text-center md:items-start md:text-left h-full">
+                <cap.icon className="text-brand-gold mb-6 md:mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
+                <h3 className="text-2xl font-serif text-brand-dark mb-4">{cap.title}</h3>
+                <p className="text-neutral-500 text-base font-light leading-relaxed">{cap.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Services Section */}
       <section className="py-12 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
             <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
+              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light">The dedicated experts who turn ambitious designs into reality.</p>
+            <p className="text-neutral-500 text-lg font-light">We invite you to experience our exceptional solutions and client services.</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 md:gap-12">
-            {TEAM.map((member, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-[3/4] overflow-hidden mb-6 relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
-                <div className="text-center md:text-left">
-                  <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-brand-gold mb-1 md:mb-2">{member.role}</div>
-                  <h3 className="text-xs md:text-2xl font-serif text-brand-dark mb-2 md:mb-4">{member.name}</h3>
-                  <p className="hidden md:block text-neutral-500 text-sm font-light leading-relaxed">{member.desc}</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+            {SERVICES.map((service, i) => (
+              <div key={i} className="flex items-center gap-4 group bg-neutral-50 p-6 md:p-8 rounded-lg hover:bg-brand-dark hover:text-white transition-all duration-300">
+                <CheckCircle2 className="text-brand-gold flex-shrink-0" size={24} strokeWidth={1.5} />
+                <span className="text-lg font-serif text-brand-dark group-hover:text-white transition-colors duration-300">{service}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }
+
