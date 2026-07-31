@@ -1,76 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Search, ChevronRight, ChevronLeft } from "lucide-react";
+import { fetchAPI } from "@/lib/api";
+import { GET_ALL_POSTS_QUERY, mapWordPressPostToLocal } from "@/lib/queries";
 
 export const metadata = {
   title: "Blog | Metro Retail Solutions",
   description: "Expert advice, design trends, and project insights from Metro Retail Solutions.",
 };
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Exploring Elegance: The Top 5 Most Popular Retail Design Styles",
-    excerpt: "From contemporary chic to industrial luxe, the five interior design styles defining retail spaces — and how to use each one in your next fitout.",
-    category: "Retail Design",
-    date: "May 5, 2026",
-    readTime: "4 min read",
-    image: "/images/phase_01_site_audit.png",
-    slug: "top-5-most-popular-retail-design-styles",
-  },
-  {
-    id: 2,
-    title: "TRANSFORMING SPACES: The Metro Approach",
-    excerpt: "With a team of skilled designers, architects, and craftsmen, we are here to transform your commercial space into a masterpiece that drives footfall.",
-    category: "Turnkey Fit Out",
-    date: "March 4, 2026",
-    readTime: "3 min read",
-    image: "/images/phase_02_prefabrication.png",
-    slug: "transforming-spaces-metro-approach",
-  },
-  {
-    id: 3,
-    title: "Why it's essential to manage your manufacturing process locally",
-    excerpt: "A look into how having local manufacturing and joinery facilities ensures quality control and faster delivery times for retail rollouts.",
-    category: "Manufacturing",
-    date: "December 20, 2025",
-    readTime: "4 min read",
-    image: "/images/phase_03_installation.png",
-    slug: "local-manufacturing-process",
-  },
-  {
-    id: 4,
-    title: "How Much Does It Cost to Fit Out a Retail Store?",
-    excerpt: "Cost of fitting out a commercial space per square foot. For a simple and budget-friendly renovation that includes flooring, ceiling, and bespoke joinery.",
-    category: "Turnkey Fit Out",
-    date: "December 12, 2025",
-    readTime: "3 min read",
-    image: "/images/phase_04_handover.png",
-    slug: "cost-to-fit-out-retail-store",
-  },
-  {
-    id: 5,
-    title: "A Comprehensive Guide to Finding the Best Fitout Companies",
-    excerpt: "Best-in-Class Fit-Out Services. Metro Retail Solutions is a high-quality, reliable, and leading fit-out company in the region.",
-    category: "Retail Design",
-    date: "December 8, 2025",
-    readTime: "5 min read",
-    image: "/images/phase_01_site_audit.png",
-    slug: "best-fitout-companies-guide",
-  },
-  {
-    id: 6,
-    title: "Unlocking the Potential: Why Renovate Your Commercial Space",
-    excerpt: "In general, renovations increase brand value and boost potential sales. A look into why top brands continually update their physical stores.",
-    category: "Turnkey Fit Out",
-    date: "December 7, 2025",
-    readTime: "4 min read",
-    image: "/images/phase_02_prefabrication.png",
-    slug: "why-renovate-commercial-space",
-  },
-];
+export default async function BlogPage() {
+  const wpData = await fetchAPI(GET_ALL_POSTS_QUERY);
+  const displayPosts = wpData?.posts?.nodes?.map(mapWordPressPostToLocal) || [];
 
-export default function BlogPage() {
   return (
     <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
@@ -93,12 +35,12 @@ export default function BlogPage() {
               Metro Blog
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-white text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 uppercase tracking-tight leading-[0.98] md:leading-[0.95]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Insights &{" "}
               <span
-                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                className="text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal block md:inline mt-2 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Inspiration
@@ -121,27 +63,26 @@ export default function BlogPage() {
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Latest <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Articles</span>
             </h2>
-            
+
             {/* Search */}
             <div className="max-w-2xl mx-auto mb-6 md:mb-10">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
-                <input 
-                  type="search" 
-                  placeholder="Search articles..." 
+                <input
+                  type="search"
+                  placeholder="Search articles..."
                   className="w-full pl-12 pr-4 py-4 rounded-sm border border-neutral-200 focus:outline-none focus:border-[#E8A020] focus:ring-1 focus:ring-brand-gold transition-all bg-neutral-50 text-lg"
                 />
               </div>
             </div>
 
             {/* Filters */}
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex overflow-x-auto gap-3 pb-4 md:pb-0 justify-start md:justify-center md:flex-wrap snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 md:mx-0">
               {['All', 'Retail Design', 'Turnkey Fit Out', 'Manufacturing', 'Store Inspection'].map((filter, i) => (
-                <button 
+                <button
                   key={filter}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                    i === 0 ? 'bg-brand-gold text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-gray-200 hover:text-brand-dark'
-                  }`}
+                  className={`shrink-0 snap-start px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-colors first:ml-6 last:mr-6 md:first:ml-0 md:last:mr-0 ${i === 0 ? 'bg-brand-gold text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-gray-200 hover:text-brand-dark'
+                    }`}
                 >
                   {filter}
                 </button>
@@ -150,42 +91,46 @@ export default function BlogPage() {
           </div>
 
           {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
-            {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-sm overflow-hidden border border-neutral-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
-                <Link href={`/blog/${post.slug}`} className="relative h-64 overflow-hidden block shrink-0">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-brand-gold uppercase tracking-wider shadow-sm">
-                    {post.category}
-                  </span>
-                </Link>
-                <div className="p-8 flex flex-col grow">
-                  <div className="flex items-center text-sm text-neutral-500 mb-4 font-medium">
-                    <span>{post.date}</span>
-                    <span className="mx-2 text-neutral-300">•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-brand-gold transition-colors leading-snug" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                    <Link href={`/blog/${post.slug}`}>
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className="text-neutral-600 leading-relaxed mb-6 flex-grow">
-                    {post.excerpt}
-                  </p>
-                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-brand-gold font-bold text-sm uppercase tracking-wider group/link mt-auto">
-                    Read More 
-                    <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
+          {displayPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
+              {displayPosts.map((post: any) => (
+                <article key={post.id} className="bg-white rounded-sm overflow-hidden border border-neutral-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
+                  <Link href={`/blog/${post.slug}`} className="relative h-64 overflow-hidden block shrink-0">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-brand-gold uppercase tracking-wider shadow-sm">
+                      {post.category}
+                    </span>
                   </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+                  <div className="p-8 flex flex-col grow">
+                    <div className="flex items-center text-sm text-neutral-500 mb-4 font-medium">
+                      <span>{post.date}</span>
+                      <span className="mx-2 text-neutral-300">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-6 group-hover:text-brand-gold transition-colors leading-snug flex-grow" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                      <Link href={`/blog/${post.slug}`}>
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-brand-gold font-bold text-sm uppercase tracking-wider group/link mt-auto">
+                      Read More
+                      <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="py-20 text-center bg-neutral-100 rounded-sm border border-neutral-200 mb-16">
+              <h3 className="text-2xl font-serif text-brand-dark mb-2" style={{ fontFamily: 'var(--font-cinzel), serif' }}>No articles found</h3>
+              <p className="text-neutral-500">Please check back later for new insights and inspiration.</p>
+            </div>
+          )}
 
           {/* Pagination */}
           <div className="flex justify-center items-center gap-2 pt-8 border-t border-neutral-100">

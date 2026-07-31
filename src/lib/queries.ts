@@ -122,3 +122,123 @@ export function mapWordPressProjectToFitout(wpProject: any): FeaturedFitout {
     scopeOfWork: []
   };
 }
+
+export const GET_ALL_POSTS_QUERY = `
+  query AllPosts {
+    posts(first: 100) {
+      nodes {
+        id
+        slug
+        title
+        excerpt
+        date
+        categories {
+          nodes {
+            name
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        blogPostDetails {
+          readingTime
+          authorName
+          secondaryImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const GET_POST_BY_SLUG_QUERY = `
+  query PostBySlug($id: ID!) {
+    post(id: $id, idType: URI) {
+      id
+      slug
+      title
+      content
+      date
+      categories {
+        nodes {
+          name
+        }
+      }
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      blogPostDetails {
+        readingTime
+        authorName
+        secondaryImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
+
+export function mapWordPressPostToLocal(wpPost: any) {
+  // Strip HTML tags from excerpt if present
+  const rawExcerpt = wpPost.excerpt || '';
+  const cleanExcerpt = rawExcerpt.replace(/<[^>]*>?/gm, '');
+  
+  // Format the date
+  const dateObj = new Date(wpPost.date);
+  const formattedDate = dateObj.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  });
+
+  return {
+    id: wpPost.id,
+    title: wpPost.title,
+    excerpt: cleanExcerpt,
+    category: wpPost.categories?.nodes?.[0]?.name || 'Blog',
+    date: formattedDate,
+    readTime: wpPost.blogPostDetails?.readingTime || '3 min read',
+    author: wpPost.blogPostDetails?.authorName || 'Metro Team',
+    secondaryImage: wpPost.blogPostDetails?.secondaryImage?.node?.sourceUrl || null,
+    image: wpPost.featuredImage?.node?.sourceUrl || '/images/phase_01_site_audit.png',
+    slug: wpPost.slug,
+  };
+}
+
+// ---------------------------------------------------------
+// CAREERS
+// ---------------------------------------------------------
+
+export const GET_ALL_CAREERS_QUERY = `
+  query GetAllCareers {
+    careers(first: 100, where: { orderby: { field: DATE, order: DESC } }) {
+      nodes {
+        id
+        title
+        careerDetails {
+          jobCategory
+          jobLocation
+          jobDescription
+        }
+      }
+    }
+  }
+`;
+
+export function mapWordPressCareerToLocal(wpCareer: any) {
+  return {
+    title: wpCareer.title,
+    category: wpCareer.careerDetails?.jobCategory || 'General',
+    location: wpCareer.careerDetails?.jobLocation || 'Remote / Hybrid',
+    description: wpCareer.careerDetails?.jobDescription || 'We are looking for talented individuals to join our team.',
+  };
+}

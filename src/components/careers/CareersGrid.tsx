@@ -28,7 +28,9 @@ export default function CareersGrid({ initialRoles }: CareersGridProps) {
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
-  const filterCategories = ['All', 'Design', 'Projects', 'Operations', 'Carpentry', 'Engineering', 'Procurement', 'Sales', 'Admin'];
+  // Dynamically extract unique categories from the roles that were fetched
+  const uniqueCategories = Array.from(new Set(initialRoles.map(role => role.category))).filter(Boolean);
+  const filterCategories = ['All', ...uniqueCategories];
 
   // Filtering Logic
   const filteredRoles = initialRoles.filter((role) => {
@@ -81,12 +83,12 @@ export default function CareersGrid({ initialRoles }: CareersGridProps) {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center lg:justify-end gap-1.5 md:gap-2 max-w-full lg:max-w-[620px]">
+        <div className="flex overflow-x-auto gap-2 pb-4 md:pb-0 justify-start lg:justify-end md:flex-wrap snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] w-full lg:max-w-[620px] -mx-6 md:mx-0">
           {filterCategories.map((filter) => (
             <button 
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-3 py-2 md:px-4 md:py-3 rounded-sm text-[9px] md:text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
+              className={`shrink-0 snap-start px-4 py-2.5 md:px-4 md:py-3 rounded-sm text-xs md:text-[10px] font-bold uppercase tracking-widest transition-all duration-300 first:ml-6 last:mr-6 md:first:ml-0 md:last:mr-0 ${
                 activeFilter === filter 
                   ? 'bg-brand-gold text-white shadow-sm' 
                   : 'bg-white border border-neutral-200 text-neutral-600 hover:border-brand-gold hover:text-brand-gold shadow-sm'
@@ -115,9 +117,6 @@ export default function CareersGrid({ initialRoles }: CareersGridProps) {
                     {role.description}
                   </p>
                 </div>
-                <div className="text-sm font-semibold text-neutral-400 pt-4 border-t border-neutral-100 mt-auto">
-                  Roles coming soon
-                </div>
               </div>
             ))}
           </div>
@@ -143,9 +142,6 @@ export default function CareersGrid({ initialRoles }: CareersGridProps) {
                         <p className="text-neutral-600 text-xs leading-relaxed mb-6">
                           {role.description}
                         </p>
-                      </div>
-                      <div className="text-xs font-semibold text-neutral-400 pt-4 border-t border-neutral-100 mt-auto">
-                        Roles coming soon
                       </div>
                     </div>
                   </CarouselItem>

@@ -9,56 +9,7 @@ export const metadata = {
   description: "Join the Metro Retail Solutions team. Explore career opportunities in interior design, project management, operations, and more.",
 };
 
-const roles = [
-  {
-    category: "Design",
-    location: "Studio",
-    title: "Interior Design",
-    description: "Concept design, space planning, material palettes, FF&E coordination and presentation work for retail and commercial interiors.",
-  },
-  {
-    category: "Projects",
-    location: "Sites",
-    title: "Project Management",
-    description: "End-to-end delivery roles covering fitout planning, client coordination, approvals, scheduling, budgeting and site progress control.",
-  },
-  {
-    category: "Operations",
-    location: "Sites",
-    title: "Site Operations",
-    description: "Site supervision, quality checks, subcontractor coordination, health and safety, handover support and daily execution.",
-  },
-  {
-    category: "Carpentry",
-    location: "Factory",
-    title: "Carpentry & Manufacturing",
-    description: "Factory and installation roles for bespoke carpentry, cabinetry, CNC production, finishing, and technical shop drawings.",
-  },
-  {
-    category: "Engineering",
-    location: "Office & Sites",
-    title: "MEP & Engineering",
-    description: "Mechanical, electrical and plumbing coordination, technical review, authority compliance and engineering support.",
-  },
-  {
-    category: "Procurement",
-    location: "Office",
-    title: "Procurement & Estimation",
-    description: "Supplier coordination, quotation analysis, cost planning, BOQ preparation, purchasing and material availability.",
-  },
-  {
-    category: "Sales",
-    location: "Office",
-    title: "Sales & Client Relations",
-    description: "Client enquiry handling, consultation follow-up, proposal coordination and relationship management.",
-  },
-  {
-    category: "Admin",
-    location: "Office",
-    title: "Administration & Finance",
-    description: "Administrative, HR, accounts, documentation and office coordination roles that support the wider teams.",
-  },
-];
+// Dummy roles are replaced by dynamic data from WordPress
 
 const processSteps = [
   { step: "01", title: "Watch for Openings", desc: "Published roles will appear on this page with the department, location and application details." },
@@ -67,7 +18,13 @@ const processSteps = [
   { step: "04", title: "Interview & Offer", desc: "Shortlisted candidates meet the team before final selection, offer and onboarding." },
 ];
 
-export default function CareersPage() {
+import { fetchAPI } from "@/lib/api";
+import { GET_ALL_CAREERS_QUERY, mapWordPressCareerToLocal } from "@/lib/queries";
+
+export default async function CareersPage() {
+  const wpData = await fetchAPI(GET_ALL_CAREERS_QUERY);
+  const rawCareers = wpData?.careers?.nodes || [];
+  const roles = rawCareers.map(mapWordPressCareerToLocal);
   return (
     <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
@@ -90,12 +47,12 @@ export default function CareersPage() {
               Careers
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-white text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 uppercase tracking-tight leading-[0.98] md:leading-[0.95]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Join the{" "}
               <span
-                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                className="text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal block md:inline mt-2 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Metro Team
@@ -127,18 +84,33 @@ export default function CareersPage() {
           </div>
 
           {/* Banner */}
-          <div className="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-8 md:mb-16">
-            <div>
-              <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-sm font-semibold rounded-sm mb-4">
-                No live vacancies yet
-              </span>
-              <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Current openings will be announced soon.</h3>
-              <p className="text-neutral-600">Until then, you can review the types of roles we usually hire for and send your CV for future consideration.</p>
+          {roles.length === 0 ? (
+            <div className="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-8 md:mb-16">
+              <div>
+                <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-sm font-semibold rounded-sm mb-4">
+                  No live vacancies yet
+                </span>
+                <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Current openings will be announced soon.</h3>
+                <p className="text-neutral-600">Until then, you can review our application process and send your CV for future consideration.</p>
+              </div>
+              <a href="#apply" className="shrink-0 px-8 py-3 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
+                Apply Now
+              </a>
             </div>
-            <a href="#apply" className="shrink-0 px-8 py-3 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
-              Apply Now
-            </a>
-          </div>
+          ) : (
+            <div className="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-8 md:mb-16">
+              <div>
+                <span className="inline-block px-3 py-1 bg-brand-gold/10 text-brand-gold text-sm font-semibold rounded-sm mb-4">
+                  We are hiring!
+                </span>
+                <h3 className="text-2xl font-bold mb-2 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>Join our growing team.</h3>
+                <p className="text-neutral-600">Review the open positions below and submit your application through the form.</p>
+              </div>
+              <a href="#apply" className="shrink-0 px-8 py-3 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors">
+                Apply Now
+              </a>
+            </div>
+          )}
 
           <CareersGrid initialRoles={roles} />
         </div>
@@ -183,7 +155,7 @@ export default function CareersPage() {
               <p className="text-neutral-400 text-base mb-8 leading-relaxed">
                 If your experience aligns with Metro Retail Solutions, submit your profile here. We hire exceptional designers, detail-oriented project managers, expert carpenters, and technical engineers.
               </p>
-              
+
               <div className="space-y-6 mb-6 md:mb-10">
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center text-brand-gold shrink-0 mt-0.5 font-sans font-bold">
