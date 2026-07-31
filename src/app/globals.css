@@ -89,6 +89,26 @@ body {
     text-wrap: balance;
     overflow-wrap: anywhere;
   }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/60 z-10;
+  }
+
+  .hero-title-1 {
+    @apply text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl leading-[0.98] md:leading-[0.95];
+  }
+
+  .hero-title-2 {
+    @apply text-4xl sm:text-6xl md:text-6xl lg:text-7xl;
+  }
+
+  .hero-eyebrow {
+    @apply text-[10px] font-bold uppercase tracking-[0.5em];
+  }
+
+  .hero-btn-text {
+    @apply text-[9px] sm:text-[10px];
+  }
 }
 
 @media (max-width: 639px) {

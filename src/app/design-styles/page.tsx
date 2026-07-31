@@ -89,8 +89,8 @@ export default function DesignStylesPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+        <div className="hero-overlay" />
+
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
@@ -180,10 +180,10 @@ export default function DesignStylesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {styles.map((style, index) => (
-              <Link 
+              <Link
                 href={`/design-styles/${style.name.toLowerCase().replace(/\s+/g, '-')}`}
-                key={index} 
-                id={style.name.toLowerCase().replace(/\s+/g, '-')} 
+                key={index}
+                id={style.name.toLowerCase().replace(/\s+/g, '-')}
                 className="group relative h-96 rounded-sm overflow-hidden block bg-brand-dark cursor-pointer"
               >
                 <Image
@@ -193,7 +193,7 @@ export default function DesignStylesPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-40"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                
+
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <h3 className="text-xl md:text-2xl lg:text-lg xl:text-xl font-bold text-white mb-2 leading-snug group-hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                     {style.name}
@@ -201,7 +201,7 @@ export default function DesignStylesPage() {
                   <p className="hidden md:block text-neutral-300 text-sm md:text-base lg:text-xs xl:text-sm leading-relaxed mb-4 font-medium opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 h-0 md:group-hover:h-auto overflow-hidden">
                     {style.description}
                   </p>
-                  
+
                   <div className="hidden md:flex gap-2">
                     {style.tags.map((tag, i) => (
                       <span key={i} className="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">

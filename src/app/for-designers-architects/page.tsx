@@ -62,8 +62,8 @@ export default function DesignersArchitectsPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+        <div className="hero-overlay" />
+
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
@@ -117,7 +117,7 @@ export default function DesignersArchitectsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((service, index) => (
-              <a 
+              <a
                 key={index}
                 href={`https://wa.me/918800607967?text=I am interested in ${service.title}`}
                 target="_blank"
@@ -131,7 +131,7 @@ export default function DesignersArchitectsPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                
+
                 {/* Content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <h3 className="text-xl font-bold font-serif text-white mb-2 group-hover:text-[#E8A020] transition-colors">

@@ -133,8 +133,8 @@ export default function AboutPage() {
             alt="About Metro Retail"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+          <div className="hero-overlay" />
+
         </motion.div>
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
@@ -268,9 +268,9 @@ export default function AboutPage() {
             {PROFESSIONALS.map((pro, i) => (
               <div key={i} className="group flex flex-col items-center text-center">
                 <div className="w-full aspect-[3/4] overflow-hidden mb-6 bg-neutral-100">
-                  <img 
-                    src={pro.image} 
-                    alt={pro.name} 
+                  <img
+                    src={pro.image}
+                    alt={pro.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   />
                 </div>

@@ -20,9 +20,9 @@ export default function DesignStyleDetailPage() {
         <img
           src={data.heroImage}
           alt={data.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent" />
+        <div className="hero-overlay" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">

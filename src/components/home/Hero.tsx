@@ -17,7 +17,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
         }}
         className="absolute inset-0 z-0 bg-brand-dark"
       >
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="hero-overlay" />
         <img
           src="/hero.webp"
           alt="Luxury Mall Retail Interior"
@@ -31,11 +31,11 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="hidden md:block text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8">
+          <span className="hidden md:block text-brand-gold hero-eyebrow mb-8">
             Crafting Exceptional Environments
           </span>
           <motion.h1
-            className="text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 leading-[0.98] md:leading-[0.95]"
+            className="hero-title-1 mb-10 md:mb-12"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
@@ -61,7 +61,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
                     initial={{ y: "100%" }}
                     animate={isLoaded ? { y: 0 } : {}}
                     transition={{ duration: 1, delay: 1.2 + (i * 0.03), ease: [0.16, 1, 0.3, 1] }}
-                    className="inline-block text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal"
+                    className="inline-block text-brand-gold italic hero-title-2 font-normal"
                     style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
                   >
                     {char === " " ? "\u00A0" : char}
@@ -74,12 +74,12 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
 
           <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-12 mt-8 md:mt-4">
             <Magnetic>
-              <a href="/portfolio" className="inline-block whitespace-nowrap px-6 sm:px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="inline-block whitespace-nowrap px-6 sm:px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white hero-btn-text font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="/contact" className="inline-block whitespace-nowrap text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
+              <a href="/contact" className="inline-block whitespace-nowrap text-white hero-btn-text font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
                 Start a Conversation
               </a>
             </Magnetic>

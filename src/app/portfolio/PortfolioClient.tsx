@@ -371,17 +371,17 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <motion.img
           initial={{ scale: 1.15, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.3 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{
             opacity: { duration: 1.8, ease: "easeOut" },
             scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
           }}
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+          src="/wide_mall_hero.png"
           alt="Metro Portfolio"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/70" />
+        <div className="hero-overlay" />
+
 
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
