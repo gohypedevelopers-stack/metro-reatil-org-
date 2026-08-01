@@ -43,24 +43,24 @@ export default function ContactPage() {
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
-              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+              className="text-brand-gold hero-eyebrow mb-4 block text-center"
             >
               Get In Touch
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               LET'S DISCUSS YOUR{" "}
               <span
-                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                className="text-brand-gold hero-title-2 italic font-normal normal-case block md:inline mt-1 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Next Project
               </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-sm md:text-base font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Whether you have a specific project in mind or just want to learn more about our services, we are here to help.

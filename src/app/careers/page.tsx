@@ -42,17 +42,17 @@ export default async function CareersPage() {
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
-              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+              className="text-brand-gold hero-eyebrow mb-4 block text-center"
             >
               Careers
             </span>
             <h1
-              className="text-white text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 uppercase tracking-tight leading-[0.98] md:leading-[0.95]"
+              className="hero-title-1 font-serif text-white mb-10 md:mb-12 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Join the{" "}
               <span
-                className="text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal block md:inline mt-2 md:mt-0"
+                className="text-brand-gold hero-title-2 italic font-normal block md:inline mt-2 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Metro Team
@@ -206,10 +206,10 @@ export default async function CareersPage() {
               For project enquiries, book a site visit with our fitout and joinery specialists.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm">
+              <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" className="px-6 py-3 md:px-8 md:py-4 bg-brand-gold hover:bg-yellow-600 text-white font-semibold rounded-sm transition-colors shadow-sm text-sm md:text-base">
                 WhatsApp Now
               </a>
-              <Link href="/contact" className="px-8 py-4 bg-white hover:bg-neutral-50 text-brand-dark border border-neutral-200 font-semibold rounded-sm transition-colors shadow-sm">
+              <Link href="/contact" className="px-6 py-3 md:px-8 md:py-4 bg-white hover:bg-neutral-50 text-brand-dark border border-neutral-200 font-semibold rounded-sm transition-colors shadow-sm text-sm md:text-base">
                 Book a Free Consultation
               </Link>
             </div>

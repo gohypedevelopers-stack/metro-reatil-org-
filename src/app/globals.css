@@ -95,11 +95,11 @@ body {
   }
 
   .hero-title-1 {
-    @apply text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl leading-[0.98] md:leading-[0.95];
+    @apply text-3xl xs:text-4xl md:text-5xl lg:text-6xl leading-[0.98] md:leading-[0.95];
   }
 
   .hero-title-2 {
-    @apply text-4xl sm:text-6xl md:text-6xl lg:text-7xl;
+    @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl;
   }
 
   .hero-eyebrow {
@@ -108,6 +108,16 @@ body {
 
   .hero-btn-text {
     @apply text-[9px] sm:text-[10px];
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif uppercase tracking-tight leading-tight;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .section-subtitle {
+    @apply text-xl sm:text-2xl xl:text-3xl font-serif uppercase tracking-tight leading-tight;
   }
 }
 

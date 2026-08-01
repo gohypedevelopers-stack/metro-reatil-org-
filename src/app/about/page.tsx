@@ -142,7 +142,7 @@ export default function AboutPage() {
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+              className="text-brand-gold hero-eyebrow mb-4 block text-center"
             >
               Metro Retail Solutions
             </motion.span>
@@ -150,11 +150,11 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               TURNKEY FIT-OUT{" "}
-              <span className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
+              <span className="text-brand-gold hero-title-2 italic font-normal normal-case block md:inline mt-1 md:mt-0" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>
                 Excellence
               </span>
             </motion.h1>
@@ -162,7 +162,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-sm md:text-base font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Over 25+ years of experience handling complete MEP, civil, and interior works with in-house manufacturing of modular fixtures.
@@ -172,12 +172,12 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section - Sharpened */}
-      <section className="py-12 md:py-32 lg:py-48 border-b border-neutral-100">
+      <section className="py-12 md:py-20 lg:py-24 border-b border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
             <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
               <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                EXCEPTIONAL <span className="text-brand-gold italic text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Fixtures</span>
+                EXCEPTIONAL <span className="text-brand-gold italic text-[18px] md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Retail Fixtures</span>
               </h2>
               <div className="space-y-6 md:space-y-8 mb-0 lg:mb-8 md:mb-16 text-center lg:text-left">
                 <p className="text-neutral-500 text-base leading-relaxed font-light">
@@ -233,13 +233,13 @@ export default function AboutPage() {
       <AboutSummary />
 
       {/* Capabilities Section */}
-      <section className="py-12 md:py-32 lg:py-48 bg-neutral-50">
+      <section className="py-12 md:py-20 lg:py-24 bg-neutral-50">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              EVERYTHING <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Under One Roof</span>
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="section-title 2xl:text-6xl text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              EVERYTHING <span className="text-brand-gold italic ml-2 text-[18px] md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Under One Roof</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light">Complete setups equipped with the latest machinery and skilled craftsmen for every requirement.</p>
+            <p className="text-neutral-500 text-sm md:text-lg font-light">Complete setups equipped with the latest machinery and skilled craftsmen for every requirement.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200">
@@ -255,27 +255,27 @@ export default function AboutPage() {
       </section>
 
       {/* Professionals Section */}
-      <section className="py-12 md:py-32 lg:py-48 bg-white border-t border-neutral-100">
+      <section className="py-12 md:py-20 lg:py-24 bg-white border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-24 lg:mb-32">
-            <h2 className="mobile-heading-balance text-2xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR <span className="text-brand-gold italic ml-2 text-[22px] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="section-title 2xl:text-6xl text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              OUR <span className="text-brand-gold italic ml-2 text-[18px] md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>
             </h2>
-            <p className="text-neutral-500 text-lg font-light">Meet the experts behind our exceptional solutions.</p>
+            <p className="text-neutral-500 text-sm md:text-lg font-light">Meet the experts behind our exceptional solutions.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8 lg:gap-12">
             {PROFESSIONALS.map((pro, i) => (
               <div key={i} className="group flex flex-col items-center text-center">
-                <div className="w-full aspect-[3/4] overflow-hidden mb-6 bg-neutral-100">
+                <div className="w-full aspect-[3/4] overflow-hidden mb-2 md:mb-6 bg-neutral-100">
                   <img
                     src={pro.image}
                     alt={pro.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="text-2xl font-serif text-brand-dark mb-2" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{pro.name}</h3>
-                <p className="text-brand-gold text-sm md:text-base font-bold uppercase tracking-widest">{pro.post}</p>
+                <h3 className="text-[10px] xs:text-xs sm:text-sm md:text-2xl font-serif text-brand-dark mb-1 md:mb-2" style={{ fontFamily: 'var(--font-cinzel), serif' }}>{pro.name}</h3>
+                <p className="text-brand-gold text-[6px] xs:text-[8px] sm:text-[10px] md:text-sm lg:text-base font-bold uppercase tracking-wider md:tracking-widest">{pro.post}</p>
               </div>
             ))}
           </div>

@@ -69,7 +69,7 @@ const ServicesSlider = () => {
     <section id="services-slider" className="pt-4 pb-12 md:pt-4 md:pb-16 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center mb-4 md:mb-6">
-          <h2 className="mobile-heading-balance text-2xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          <h2 className="section-title text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <span className="text-brand-gold italic font-normal ml-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
           </h2>
         </div>
@@ -107,7 +107,7 @@ const ServicesSlider = () => {
                 <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
               </div>
               <div className="lg:col-span-5 lg:pl-6 xl:pl-10 mt-6 md:mt-0">
-                <h3 className="text-xl md:text-2xl xl:text-3xl font-serif text-brand-dark mb-3 md:mb-6 xl:mb-8 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                <h3 className="section-subtitle text-brand-dark mb-3 md:mb-6 xl:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                   {services[activeTab].title}
                 </h3>
                 <p className="text-neutral-500 text-sm xl:text-base font-light leading-relaxed mb-6 md:mb-8 xl:mb-12">

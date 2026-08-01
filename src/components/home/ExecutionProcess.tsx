@@ -164,7 +164,7 @@ const ExecutionProcess = () => {
           <div className="lg:col-span-5 flex flex-col gap-8 z-10">
             {/* Section Header */}
             <div className="flex flex-col items-center md:items-start w-full lg:-mt-3">
-              <h2 className="mobile-heading-balance text-center md:text-left text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-white uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="section-title text-white" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 OUR TURNKEY FIT-OUT <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Execution Process</span>
               </h2>
             </div>

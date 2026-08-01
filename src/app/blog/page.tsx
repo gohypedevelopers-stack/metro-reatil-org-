@@ -30,17 +30,17 @@ export default async function BlogPage() {
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
-              className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
+              className="text-brand-gold hero-eyebrow mb-4 block text-center"
             >
               Metro Blog
             </span>
             <h1
-              className="text-white text-[2.45rem] xs:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-12 uppercase tracking-tight leading-[0.98] md:leading-[0.95]"
+              className="hero-title-1 font-serif text-white mb-10 md:mb-12 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Insights &{" "}
               <span
-                className="text-brand-gold italic text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-normal block md:inline mt-2 md:mt-0"
+                className="text-brand-gold hero-title-2 italic font-normal block md:inline mt-2 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Inspiration
@@ -92,34 +92,34 @@ export default async function BlogPage() {
 
           {/* Blog Grid */}
           {displayPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-8 mb-8 md:mb-16">
               {displayPosts.map((post: any) => (
                 <article key={post.id} className="bg-white rounded-sm overflow-hidden border border-neutral-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
-                  <Link href={`/blog/${post.slug}`} className="relative h-64 overflow-hidden block shrink-0">
+                  <Link href={`/blog/${post.slug}`} className="relative h-32 sm:h-48 md:h-64 overflow-hidden block shrink-0">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-brand-gold uppercase tracking-wider shadow-sm">
+                    <span className="absolute top-2 left-2 md:top-4 md:left-4 bg-white/90 backdrop-blur-sm px-2 py-1 md:px-4 md:py-1.5 rounded-full text-[8px] md:text-xs font-bold text-brand-gold uppercase tracking-wider shadow-sm">
                       {post.category}
                     </span>
                   </Link>
-                  <div className="p-8 flex flex-col grow">
-                    <div className="flex items-center text-sm text-neutral-500 mb-4 font-medium">
+                  <div className="p-3 sm:p-4 md:p-8 flex flex-col grow">
+                    <div className="flex flex-wrap items-center text-[9px] sm:text-xs md:text-sm text-neutral-500 mb-2 md:mb-4 font-medium">
                       <span>{post.date}</span>
-                      <span className="mx-2 text-neutral-300">•</span>
+                      <span className="mx-1 md:mx-2 text-neutral-300">•</span>
                       <span>{post.readTime}</span>
                     </div>
-                    <h3 className="text-xl font-bold mb-6 group-hover:text-brand-gold transition-colors leading-snug flex-grow" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                    <h3 className="text-[10px] xs:text-xs sm:text-sm md:text-xl font-bold mb-3 md:mb-6 group-hover:text-brand-gold transition-colors leading-snug flex-grow" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
-                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-brand-gold font-bold text-sm uppercase tracking-wider group/link mt-auto">
+                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-brand-gold font-bold text-[8px] sm:text-[10px] md:text-sm uppercase tracking-wider group/link mt-auto">
                       Read More
-                      <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
+                      <ChevronRight size={12} className="ml-1 md:w-4 md:h-4 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </article>

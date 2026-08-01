@@ -81,7 +81,7 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center mb-8 md:mb-12 gap-4 md:gap-10">
           <div className="flex flex-col items-center">
-            <h2 className="mobile-heading-balance text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase leading-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="section-title text-center text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
             </h2>
           </div>
