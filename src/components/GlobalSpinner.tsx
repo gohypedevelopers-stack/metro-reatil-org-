@@ -32,6 +32,8 @@ export default function GlobalSpinner() {
 
   // Intercept link clicks to show the spinner
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest("a");
@@ -56,6 +58,12 @@ export default function GlobalSpinner() {
             (currentUrl.pathname !== destinationUrl.pathname || currentUrl.search !== destinationUrl.search)
           ) {
             setIsLoading(true);
+            
+            // Failsafe: if navigation gets stuck, clear spinner after 3 seconds
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              setIsLoading(false);
+            }, 3000);
           }
         } catch (error) {
           // Ignore invalid URLs
@@ -63,8 +71,18 @@ export default function GlobalSpinner() {
       }
     };
 
+    const handlePopState = () => {
+      setIsLoading(false);
+    };
+
     document.addEventListener("click", handleClick, true);
-    return () => document.removeEventListener("click", handleClick, true);
+    window.addEventListener("popstate", handlePopState);
+    
+    return () => {
+      document.removeEventListener("click", handleClick, true);
+      window.removeEventListener("popstate", handlePopState);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, []);
 
   if (!isLoading) return null;

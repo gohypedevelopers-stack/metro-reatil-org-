@@ -27,7 +27,11 @@ export default async function PortfolioPage() {
   }
 
   return (
-    <Suspense fallback={<div className="min-h-screen bg-brand-dark pt-32 text-center text-white">Loading...</div>}>
+    <Suspense fallback={
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-[#C89B3C] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    }>
       <PortfolioClient initialProjects={projects} />
     </Suspense>
   );
