@@ -64,14 +64,14 @@ export default function NestedServiceDetailPage() {
       {/* GALLERY */}
       <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
             {data.gallery.map((item: any, i: number) => (
-              <a 
+              <a
                 href={`https://wa.me/918800607967?text=Hi, I want to get a quote on ${item.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                key={i} 
+                key={i}
                 className="relative block aspect-[4/3] overflow-hidden group border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
               >
                 <img
@@ -81,7 +81,7 @@ export default function NestedServiceDetailPage() {
                 />
                 {/* Permanent Dark Gradient Overlay for readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-100 pointer-events-none" />
-                
+
                 <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 pointer-events-none">
                   <h3 className="text-base sm:text-lg md:text-xl lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md">
                     {item.title}
@@ -94,7 +94,7 @@ export default function NestedServiceDetailPage() {
       </section>
 
       {/* FULL SERVICES */}
-      <FullServicesSection forceCarousel={true} hideViewAllButton={true} />
+      <FullServicesSection forceCarousel={true} hideViewAllButton={true} title="RECOMMENDED" subtitle="Services" showTabs={true} />
     </div>
   );
 }

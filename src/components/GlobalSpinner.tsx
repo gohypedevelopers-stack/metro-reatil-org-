@@ -59,11 +59,11 @@ export default function GlobalSpinner() {
           ) {
             setIsLoading(true);
             
-            // Failsafe: if navigation gets stuck, clear spinner after 3 seconds
+            // Failsafe: if navigation gets stuck, clear spinner after 15 seconds
             if (timeoutId) clearTimeout(timeoutId);
             timeoutId = setTimeout(() => {
               setIsLoading(false);
-            }, 3000);
+            }, 15000);
           }
         } catch (error) {
           // Ignore invalid URLs

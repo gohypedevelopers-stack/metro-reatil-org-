@@ -225,7 +225,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-neutral-50 pb-20">
+    <div className="min-h-screen bg-neutral-50 pb-0">
       {/* Hero Section */}
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
@@ -315,12 +315,12 @@ export default function ServicesPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 auto-rows-[400px]">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-6 auto-rows-[280px] sm:auto-rows-[400px]">
             {services.map((service) => (
               <Link
                 key={service.id}
                 href={service.href}
-                className="group relative overflow-hidden block rounded-none h-full min-h-[400px]"
+                className="group relative overflow-hidden block rounded-none h-full min-h-[280px] sm:min-h-[400px]"
               >
                 <Image
                   src={service.image}
@@ -331,16 +331,15 @@ export default function ServicesPage() {
 
                 {/* Dark Gradient Overlay for readability on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
                 {/* Hover Content */}
-                <div className="absolute inset-x-0 top-0 bottom-[72px] p-5 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
-                  <p className="text-neutral-200 text-xs md:text-[13px] lg:text-[11px] xl:text-xs font-light mb-3 leading-relaxed">
+                <div className="absolute inset-x-0 top-0 bottom-[44px] md:bottom-[56px] px-3 pt-3 pb-2 sm:p-4 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
+                  <p className="text-neutral-200 text-[9px] sm:text-[10px] md:text-[13px] lg:text-[11px] xl:text-xs font-light mb-1.5 md:mb-3 leading-relaxed">
                     {service.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-row gap-1 md:gap-1.5 overflow-hidden">
                     {service.tags.map((tag, i) => (
-                      <span key={i} className="px-2 py-1 border border-white/20 bg-black/50 text-white text-[9px] font-bold uppercase tracking-wider">
+                      <span key={i} className="whitespace-nowrap px-1 py-0.5 md:px-2 md:py-1 border border-white/20 bg-black/50 text-white text-[6px] sm:text-[7px] md:text-[9px] font-bold uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}
@@ -348,9 +347,9 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Bottom Title / Button */}
-                <div className="absolute bottom-4 left-4 right-4 h-12 bg-[#222222] text-white px-4 flex items-center justify-between transition-all duration-300 z-20 group-hover:bg-[#111111]">
-                  <span className="text-[9px] md:text-[10px] lg:text-[9px] xl:text-[10px] font-bold uppercase tracking-widest truncate mr-2">{service.title}</span>
-                  <ChevronRight size={14} className="text-white opacity-80 shrink-0 group-hover:translate-x-1 group-hover:text-brand-gold transition-all duration-300" />
+                <div className="absolute bottom-2 md:bottom-4 left-2 right-2 md:left-4 md:right-4 h-10 md:h-12 bg-[#222222] text-white px-3 md:px-4 flex items-center justify-between transition-all duration-300 z-20 group-hover:bg-[#111111]">
+                  <span className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-[9px] xl:text-[10px] font-bold uppercase tracking-widest truncate mr-2">{service.title}</span>
+                  <ChevronRight size={12} className="text-white opacity-80 shrink-0 md:w-3.5 md:h-3.5 group-hover:translate-x-1 group-hover:text-brand-gold transition-all duration-300" />
                 </div>
               </Link>
             ))}
@@ -360,7 +359,7 @@ export default function ServicesPage() {
 
 
       {/* Complete Range of Services */}
-      <FullServicesSection forceCarousel={true} />
+      <FullServicesSection forceCarousel={true} title="RECOMMENDED" subtitle="Services" showTabs={true} />
     </div>
   );
 }

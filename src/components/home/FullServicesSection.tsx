@@ -26,11 +26,24 @@ const SERVICE_IMAGES = [
   "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600"  // Automation
 ];
 
-const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false }: { forceCarousel?: boolean, hideViewAllButton?: boolean }) => {
+const FullServicesSection = ({
+  forceCarousel = false,
+  hideViewAllButton = false,
+  title = "OUR COMPLETE RANGE",
+  subtitle = "of Services",
+  showTabs = false
+}: {
+  forceCarousel?: boolean;
+  hideViewAllButton?: boolean;
+  title?: string;
+  subtitle?: string;
+  showTabs?: boolean;
+}) => {
   const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState<"office" | "retail" | "commercial">("office");
 
   React.useEffect(() => {
     if (!api) {
@@ -44,7 +57,26 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-  const services = [
+
+  const RECOMMENDED_SERVICES_MAP = {
+    office: [
+      { title: "Office Interior Design", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/office-interior-design" },
+      { title: "Modern Office Interior Design", image: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/modern-office-interior-design" },
+      { title: "Turnkey Office Fitout", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/turnkey-office-fitout" }
+    ],
+    retail: [
+      { title: "Retail Store Design", image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=600", category: "RETAIL FITOUT", id: "retail-fitout/retail-store-design" },
+      { title: "Luxury Retail Interior Design", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600", category: "RETAIL FITOUT", id: "retail-fitout/luxury-retail-interior-design" },
+      { title: "Store Fitout Company", image: "https://images.unsplash.com/photo-1555529902-5261145633bf?auto=format&fit=crop&q=80&w=600", category: "RETAIL FITOUT", id: "retail-fitout/store-fitout-company" }
+    ],
+    commercial: [
+      { title: "Commercial Interior Design", image: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/commercial-interior-design" },
+      { title: "Interior Design & Build", image: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/interior-design-build" },
+      { title: "Turnkey Interior Solutions", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/turnkey-interior-solutions" }
+    ]
+  };
+
+  const defaultServices = [
     { title: "Retail Fitout", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600", category: "RETAIL FITOUT", id: "retail-fitout" },
     { title: "Office Fitout", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout" },
     { title: "Restaurant & F&B Fitout", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600", category: "RESTAURANT FITOUT", id: "restaurant-fitout" },
@@ -76,15 +108,38 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
     { title: "Authority Approvals", image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600", category: "AUTHORITY APPROVALS", id: "authority-approvals" }
   ];
 
+  const services = showTabs ? RECOMMENDED_SERVICES_MAP[activeTab] : defaultServices;
+
   return (
-    <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-white border-b border-neutral-100 relative overflow-hidden">
+    <section className="pt-8 pb-0 md:pt-10 md:pb-0 bg-white border-b border-neutral-100 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col items-center text-center mb-8 md:mb-12 gap-4 md:gap-10">
+        <div className="flex flex-col items-center text-center mb-4 md:mb-6 gap-1 md:gap-2">
           <div className="flex flex-col items-center">
-            <h2 className="section-title text-center text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              OUR COMPLETE RANGE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>of Services</span>
+            <h2 className="section-title text-center text-brand-dark flex items-center justify-center flex-wrap gap-2 sm:gap-3" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <span>{title}</span> <span className="text-brand-gold italic inline-block text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>{subtitle}</span>
             </h2>
           </div>
+          
+          {showTabs && (
+            <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 md:gap-12 mt-1 md:mt-2">
+              {[
+                { id: "office", label: "Office Fitout" },
+                { id: "retail", label: "Retail Fitout" },
+                { id: "commercial", label: "Commercial & Turnkey" }
+              ].map((tab) => (
+                <button 
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)} 
+                  className={`text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.5em] pb-4 transition-all relative ${activeTab === tab.id ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
+                >
+                  {tab.label}
+                  {activeTab === tab.id && (
+                    <motion.div layoutId="fullServicesTab" className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-dark" />
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Desktop Grid */}
@@ -197,7 +252,7 @@ const FullServicesSection = ({ forceCarousel = false, hideViewAllButton = false 
 
         {/* View All Services Button */}
         {!hideViewAllButton && (
-          <div className="flex justify-center mt-8 md:mt-16">
+          <div className="flex justify-center mt-8 md:mt-16 mb-8 md:mb-12">
             <a href="/services" className="text-[10px] font-bold uppercase tracking-wide border-b-2 border-brand-gold pb-2 hover:border-black transition-all text-black whitespace-nowrap">
               View All Services
             </a>

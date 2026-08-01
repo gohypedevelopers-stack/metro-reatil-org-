@@ -242,12 +242,14 @@ export default function AboutPage() {
             <p className="text-neutral-500 text-sm md:text-lg font-light">Complete setups equipped with the latest machinery and skilled craftsmen for every requirement.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200">
             {CAPABILITIES.map((cap, i) => (
-              <div key={i} className="bg-white p-8 md:p-12 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-center text-center md:items-start md:text-left h-full">
-                <cap.icon className="text-brand-gold mb-6 md:mb-12 group-hover:translate-y-[-8px] transition-transform duration-500" size={48} strokeWidth={1} />
-                <h3 className="text-2xl font-serif text-brand-dark mb-4">{cap.title}</h3>
-                <p className="text-neutral-500 text-base font-light leading-relaxed">{cap.desc}</p>
+              <div key={i} className="bg-white p-4 sm:p-6 md:p-12 hover:bg-neutral-50 transition-colors duration-500 group flex flex-col items-start text-left h-full">
+                <div className="flex flex-row items-center gap-2 md:gap-4 mb-1 md:mb-2">
+                  <cap.icon className="text-brand-gold shrink-0 group-hover:scale-110 transition-transform duration-500 w-6 h-6 md:w-10 md:h-10" strokeWidth={1} />
+                  <h3 className="text-[11px] xs:text-xs sm:text-sm md:text-2xl font-serif text-brand-dark">{cap.title}</h3>
+                </div>
+                <p className="text-neutral-500 text-[8px] xs:text-[9px] sm:text-xs md:text-base font-light leading-relaxed">{cap.desc}</p>
               </div>
             ))}
           </div>
