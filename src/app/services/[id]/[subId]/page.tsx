@@ -25,18 +25,18 @@ export default function NestedServiceDetailPage() {
         />
         <div className="hero-overlay" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center text-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
               <PenTool size={12} /> Specialized Solution
             </span>
             <h1
-              className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.1] text-center break-words hyphens-auto w-full"
+              className="mobile-heading-balance hero-title-1 font-serif text-white uppercase tracking-tight text-center break-words hyphens-auto w-full"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center"
+              className="text-neutral-300 text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               {data.tagline}
@@ -49,7 +49,7 @@ export default function NestedServiceDetailPage() {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-[1000px] mx-auto px-6 md:px-12 text-center">
           <h2
-            className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight mb-6 break-words hyphens-auto"
+            className="mobile-heading-balance hero-title-1 font-serif text-brand-dark uppercase tracking-tight mb-6 break-words hyphens-auto"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             {data.contentTitle}
@@ -83,7 +83,7 @@ export default function NestedServiceDetailPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-100 pointer-events-none" />
 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 pointer-events-none">
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md">
+                  <h3 className="text-[18px] lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md">
                     {item.title}
                   </h3>
                 </div>

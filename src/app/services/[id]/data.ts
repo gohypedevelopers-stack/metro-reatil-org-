@@ -4,7 +4,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
 
   "interior-design": {
     title: "Interior Design",
-    tagline: "Crafting Environments that Inspire",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80",
     desc: [
       "Our interior design service focuses on balancing high-end aesthetics, everyday functionality, and deep brand identity. We do not just decorate spaces; we engineer environments that resonate with your vision and fundamentally enhance the user experience. Whether it is a luxury corporate headquarters, a high-traffic retail boutique, or an exclusive residential villa, our approach is deeply rooted in spatial psychology and modern architectural principles.",
@@ -31,7 +31,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "3d-visualization": {
     title: "3D Visualization",
-    tagline: "Bringing Your Vision to Life Before Construction",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80",
     desc: [
       "Our advanced 3D visualization and rendering services allow you to step inside your space before a single brick is laid. By utilizing industry-leading rendering engines and physical light simulation, we create hyper-realistic representations of your project. This critical phase removes the guesswork from the design process, enabling precise design decisions and immediate stakeholder approvals.",
@@ -53,7 +53,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "space-planning": {
     title: "Space Planning",
-    tagline: "Optimizing Layouts for Flow and Function",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
     desc: [
       "Effective space planning is the foundation of any successful interior. We meticulously analyze your volumetric requirements, daily foot traffic, and operational workflows to create layouts that maximize usable area while ensuring ergonomic comfort. A well-planned space naturally guides movement, encourages collaboration, and reduces operational bottlenecks.",
@@ -75,7 +75,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "moodboards": {
     title: "Moodboards & Concept",
-    tagline: "Curating the Visual Language of Your Space",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80",
     desc: [
       "We help you define the soul of your project through carefully curated moodboards and concept development. This highly collaborative process explores color palettes, material textures, lighting concepts, and furniture styles to align perfectly with your brand identity or personal taste. It is the crucial bridge between abstract ideas and tangible design.",
@@ -97,7 +97,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "carpentry-works": {
     title: "Custom Carpentry Works",
-    tagline: "Precision Woodcraft Manufactured In-House",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "/images/phase_02_prefabrication.png",
     desc: [
       "Our private, state-of-the-art carpentry facility enables us to produce highly bespoke, premium wood products without relying on third-party vendors. From complex curved reception desks to intricate acoustic wall paneling and custom commercial cabinetry, our master artisans deliver flawless finishes that elevate the entire interior.",
@@ -119,7 +119,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "flooring": {
     title: "Premium Flooring Solutions",
-    tagline: "Foundations of Elegance and Durability",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
     desc: [
       "We offer comprehensive flooring supply and installation services, engineered to handle everything from luxurious residential spaces to ultra-high-traffic commercial environments. A flawless floor requires more than just beautiful materials; it demands expert sub-floor preparation, precise leveling, and meticulous installation techniques.",
@@ -141,7 +141,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "partition-systems": {
     title: "Partition Systems",
-    tagline: "Defining Spaces with Style and Function",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
     desc: [
       "We expertly design, engineer, and install a wide spectrum of partition systems to define and optimize your interior volumes. Whether you require seamless, frameless structural glass for an open-concept feel or high-density acoustic drywall for absolute boardroom privacy, we construct sturdy, perfectly finished dividers.",
@@ -163,7 +163,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "acoustic-solutions": {
     title: "Acoustic Solutions",
-    tagline: "Engineering the Perfect Soundscape",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80",
     desc: [
       "In modern architecture, noise control is critical for focus, comfort, and productivity. Our specialized acoustic engineering team integrates advanced acoustic treatments seamlessly into your design, utilizing high-performance panels, baffles, and structural insulation to absorb, block, or diffuse sound waves effectively.",
@@ -185,7 +185,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "electro-mechanical": {
     title: "Electro-Mechanical (MEP)",
-    tagline: "The Invisible Lifeline of Your Space",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80",
     desc: [
       "A stunning interior is useless if the infrastructure fails. Our certified in-house MEP engineers provide comprehensive mechanical, electrical, and plumbing services that serve as the invisible lifeline of your space. From high-capacity HVAC ducting and smart load distribution to robust sanitary plumbing, we ensure absolute operational reliability.",
@@ -207,7 +207,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "lighting-design": {
     title: "Lighting Design",
-    tagline: "Sculpting Space with Light",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80",
     desc: [
       "Lighting is a transformative architectural element. Our lighting specialists design and implement highly layered lighting schemes—combining ambient, task, and accent lighting—that dramatically enhance architecture, improve occupant well-being, and perfectly highlight key features or retail products within your environment.",
@@ -229,7 +229,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "wall-covering": {
     title: "Wall Coverings & Finishes",
-    tagline: "Textures and Tones that Define Character",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80",
     desc: [
       "We provide an extensive array of premium wall treatments designed to elevate any interior beyond standard paint. From specialized decorative plasters and seamless microcement to luxury commercial wallpapers and 3D architectural cladding, our master applicators ensure a flawless, highly durable finish every single time.",
@@ -252,7 +252,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   ,
   "fitout": {
     title: "Ready to Complete Your Fitout Project?",
-    tagline: "Premium Ready to Complete Your Fitout Project? Services",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "/images/intro-image.png",
     desc: ["Book a free fitout consultation and let our experts transform your space. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete fitout execution.", "At Metro Retail Interiors, fitout is more than construction — it is a seamless orchestration of engineering, craftsmanship, and design execution. Our certified teams deliver end-to-end fitout with unmatched precision, from demolition to final finishing. We manage every element — structural works, MEP, joinery, flooring, ceilings, glazing, and decorative finishes — ensuring consistency, quality, and perfect alignment with the design intent.", "Precision structural modifications to reconfigure layouts for residential and commercial spaces."],
     stats: [
@@ -360,7 +360,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "carpentry": {
     title: "Bespoke In-House Joinery",
-    tagline: "Premium Bespoke In-House Joinery Services",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free joinery consultation and let our craftsmen assess your requirements. We'll provide detailed designs and transparent pricing for your custom joinery project", "Introducing the Metro Retail SIGNATURE range of Luxury Wardrobes, Kitchens, Cabinets, Vanities and Wall Panels", "Custom bar counters and vanity units crafted for function and style."],
     stats: [
@@ -462,7 +462,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "kitchens-wardrobes": {
     title: "Ready to Build Your Kitchens & Wardrobes?",
-    tagline: "Premium Ready to Build Your Kitchens & Wardrobes? Services",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1672137233327-37b0c1049e77?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free joinery consultation and let our craftsmen design custom kitchens and wardrobes. We'll provide a detailed proposal with in-house manufacturing and transparent pricing.", "From elegant European-style wardrobes to modern functional kitchens, Metro Retail Interiors combines custom joinery, intelligent space planning, and high-quality materials to create beautiful, durable, and fully integrated storage and cooking solutions.", "Bespoke kitchen cabinets designed and manufactured in our Al Quoz joinery facility with premium materials."],
     stats: [
@@ -522,7 +522,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "decorative-paint": {
     title: "Ready To Transform Your Walls With Premium Decorative Finishes",
-    tagline: "Premium Ready To Transform Your Walls With Premium Decorative Finishes Services",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "/images/decorative_paint/finishes/marmorino.png",
     desc: ["Book a free consultation and let our decorative specialists assess your space. We'll provide expert recommendations and transparent pricing for your decorative finishing project.", "Transform your walls into works of art with Metro Retail's high-end decorative finishes — texture paints, Venetian plasters, microcement, metallic finishes, stone effects, and more.", "Executed by trained artisans, our finishes bring depth, warmth, and luxury to any space."],
     stats: [
@@ -663,7 +663,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "microcement": {
     title: "Ready to Apply Microcement?",
-    tagline: "Premium Ready to Apply Microcement? Services",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "/images/H-Living10.jpg",
     desc: ["Book a free microcement consultation and let our specialists create seamless surfaces. We'll provide a detailed proposal with modern finishes and transparent pricing for microcement applications.", "At Metro Retail, we provide one of the India's most extensive and advanced ranges of decorative microcement and seamless surface coatings. Our applications are;", "We Have 50 Specialist Applicators50 Specialist Applicators10 Years Experience100 Shades and FinishesEU Standard Protocols"],
     stats: [
@@ -723,7 +723,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "terrazzo": {
     title: "Ready to Install Terrazzo?",
-    tagline: "Premium Ready to Install Terrazzo? Services",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "/images/terrazzo_dubai_r2/showroom.webp",
     desc: ["Book a free terrazzo consultation and let our craftsmen create timeless floors. We'll provide a detailed proposal with custom patterns and transparent pricing for terrazzo installations.", "We create durable, decorative terrazzo floors with stunning aggregates, colours, and finishes. Perfect for luxury homes, restaurants, and retail spaces. Our terrazzo installations combine timeless elegance with modern durability.", "Choose from our range of terrazzo options to create stunning floors, countertops, and feature walls that match your design vision."],
     stats: [
@@ -801,7 +801,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "landscaping-pools": {
     title: "Ready to Create Your Landscape & Pool?",
-    tagline: "Premium Ready to Create Your Landscape & Pool? Services",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "/images/landscaping_pools_dubai_r2/ALP1_HALO.webp",
     desc: ["Book a free landscaping consultation and let our experts design outdoor paradises. We'll provide a detailed proposal with pools, gardens, and transparent pricing for outdoor living.", "From outdoor seating areas to custom pools, pergolas, and lush greenery, Metro Retail designs and builds outdoor spaces for modern living in . Transform your outdoor areas into beautiful, functional extensions of your home.", "Custom Pools tailored for reliable and high-quality landscaping & pools execution."],
     stats: [
@@ -857,7 +857,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "automation": {
     title: "Ready to Automate Your Smart Home?",
-    tagline: "Premium Ready to Automate Your Smart Home? Services",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "/images/automation_dubai_r2/lighting_control.webp",
     desc: ["Book a free automation consultation and let our experts design your smart systems. We'll provide a detailed proposal with integrated solutions and transparent pricing for home automation.", "Smart home automation for lighting, AC, speakers, curtains, and security — integrated neatly into your fitout. Control your entire home with ease and convenience through advanced automation systems.", "Lighting Control tailored for reliable and high-quality home automation execution."],
     stats: [
@@ -902,7 +902,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "stretch-ceiling": {
     title: "Ready to Install Stretch Ceilings?",
-    tagline: "Premium Ready to Install Stretch Ceilings? Services",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "/images/stretch_ceiling_dubai_r2/streitch_ceiling_1.jpg",
     desc: ["Book a free stretch ceiling consultation and let our specialists create modern overhead solutions. We'll provide a detailed proposal with innovative designs and transparent pricing.", "Stylish, modern, and perfect for feature ceilings, backlit effects, and moisture resistance. Stretch ceilings offer a sleek, seamless finish that transforms any space with elegance and functionality.", "Feature Ceilings tailored for reliable and high-quality stretch ceiling execution."],
     stats: [
@@ -968,7 +968,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "property-inspection": {
     title: "Expert Property Inspection Services in India",
-    tagline: "Certified India property inspectors. We uncover hidden structural, MEP, and safety issues before you buy or move in with a 300-point check.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&fit=crop&q=80&w=1200",
     desc: ["Certified property inspection engineers", "Find hidden property issues before you buy, accept handover, or move in. Our certified inspectors deliver detailed photo-backed snagging reports.", "We identify structural, MEP, HVAC, finishing, waterproofing, and safety issues before you take possession, ensuring you avoid costly surprises."],
     stats: [
@@ -1076,7 +1076,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "mep-hvac": {
     title: "Ready to Install MEP & HVAC?",
-    tagline: "Premium Ready to Install MEP & HVAC? Services",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "/images/mep_hvac_dubai_r2/electrical.webp",
     desc: ["Book a free MEP consultation and let our DEWA-certified engineers design your systems. We'll provide a detailed proposal with technical solutions and transparent pricing for MEP works.", "Certified mechanical, electrical, plumbing, and air conditioning works — from rewiring to full MEP installations. Our certified engineers ensure all systems meet Municipality and DEWA standards.", "Electrical Works tailored for reliable and high-quality mep & hvac execution."],
     stats: [
@@ -1143,7 +1143,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "project-management": {
     title: "Ready to Manage Your Project?",
-    tagline: "Premium Ready to Manage Your Project? Services",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "/images/project_management_dubai_r2/services_project_management_timeline_management.webp",
     desc: ["Book a free project management consultation and let our experts coordinate your renovation. We'll provide a detailed proposal with timelines, milestones, and transparent pricing.", "Dedicated project managers oversee quality, timelines, subcontractors, inspections, and coordination. Ensure your project runs smoothly from start to finish with our professional project management services.", "Timeline Management tailored for reliable and high-quality project management execution."],
     stats: [
@@ -1221,7 +1221,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "venetian-plasters": {
     title: "Ready to Apply Venetian Plasters?",
-    tagline: "Premium Ready to Apply Venetian Plasters? Services",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "/images/decorative_paint_venetian_plasters_r2/polished_plaster.jpg",
     desc: ["Book a free Venetian plaster consultation and let our artisans create luxury finishes. We'll provide a detailed proposal with premium techniques and transparent pricing for elegant walls.", "Metro Retail's artisans apply authentic Venetian plasters including polished plaster, Marmorino, Travertino, and satin & matte finishes using traditional Italian-style application techniques for luxurious wall finishes.", "Polished Plaster tailored for reliable and high-quality venetian plasters execution."],
     stats: [
@@ -1299,7 +1299,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "feature-walls": {
     title: "Create Feature Walls",
-    tagline: "Premium Create Feature Walls Services",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
     desc: ["Book a free feature wall consultation and let our experts design stunning focal points. We'll provide a detailed proposal with creative solutions and transparent pricing for your walls.", "Create stunning focal points with Metro Retail's custom feature walls. From artistic textures to bold accent walls and statement finishes, we design and execute feature walls that transform your space.", "Textured Feature Walls tailored for reliable and high-quality feature walls execution."],
     stats: [
@@ -1377,7 +1377,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "artistic-finishes": {
     title: "Ready to Apply Artistic Finishes?",
-    tagline: "Premium Ready to Apply Artistic Finishes? Services",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
     desc: ["Book a free finishes consultation and let our artisans create unique textures. We'll provide a detailed proposal with decorative techniques and transparent pricing for artistic walls.", "Transform your walls into works of art with Metro Retail's artistic decorative finishes. From metallic effects to faux finishes and custom textures, we create unique surfaces that elevate your interior design to extraordinary levels.", "Metallic Finishes tailored for reliable and high-quality artistic finishes execution."],
     stats: [
@@ -1455,7 +1455,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "customised-furniture": {
     title: "Ready to Create Your Custom Furniture?",
-    tagline: "Premium Ready to Create Your Custom Furniture? Services",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
     desc: ["Book a free furniture consultation and let our craftsmen design bespoke pieces. We'll provide a detailed proposal with custom joinery and transparent pricing for your furniture project.", "Metro Retail Interiors designs and manufactures bespoke furniture including sofas, tables, consoles, beds, benches, shelving, and more — all tailored to your style and space requirements. Every piece is custom-made in our Al Quoz joinery facility using premium materials and expert craftsmanship.", "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces."],
     stats: [
@@ -1512,7 +1512,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "feature-walls-copy": {
     title: "Create Feature Walls",
-    tagline: "Premium Create Feature Walls Services",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "/images/decorative_paint_feature_walls_r2/concrete_textures.jpg",
     desc: ["Book a free feature wall consultation and let our experts design stunning focal points. We'll provide a detailed proposal with creative solutions and transparent pricing for your walls.", "Create stunning focal points with Metro Retail's custom feature walls. From artistic textures to bold accent walls and statement finishes, we design and execute feature walls that transform your space.", "Textured Feature Walls tailored for reliable and high-quality feature walls execution."],
     stats: [
@@ -1590,7 +1590,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "artistic-finishes-copy": {
     title: "Ready to Apply Artistic Finishes?",
-    tagline: "Premium Ready to Apply Artistic Finishes? Services",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "/images/decorative_paint_artistic_finishes_r2/metallic_finishes.jpg",
     desc: ["Book a free finishes consultation and let our artisans create unique textures. We'll provide a detailed proposal with decorative techniques and transparent pricing for artistic walls.", "Transform your walls into works of art with Metro Retail's artistic decorative finishes. From metallic effects to faux finishes and custom textures, we create unique surfaces that elevate your interior design to extraordinary levels.", "Metallic Finishes tailored for reliable and high-quality artistic finishes execution."],
     stats: [
@@ -1668,7 +1668,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "customised-furniture-copy": {
     title: "Ready to Create Your Custom Furniture?",
-    tagline: "Premium Ready to Create Your Custom Furniture? Services",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
     desc: ["Book a free furniture consultation and let our craftsmen design bespoke pieces. We'll provide a detailed proposal with custom joinery and transparent pricing for your furniture project.", "Metro Retail Interiors designs and manufactures bespoke furniture including sofas, tables, consoles, beds, benches, shelving, and more — all tailored to your style and space requirements. Every piece is custom-made in our Al Quoz joinery facility using premium materials and expert craftsmanship.", "Customized console design crafted for elegance, functionality, and a perfect fit for modern living spaces."],
     stats: [
@@ -1765,7 +1765,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "air-quality": {
     title: "Ready to Improve Your Air Quality?",
-    tagline: "Premium Ready to Improve Your Air Quality? Services",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "/images/air_quality_dubai_r2/envirobiotics_family.png",
     desc: ["Book a free air quality consultation and let our experts assess your space. We'll provide a detailed proposal with ventilation solutions and transparent pricing for healthier indoor.", "Metro Retail provides advanced air purification, mold removal, environmental probiotics, HVAC cleaning, and humidity control solutions to ensure healthy indoor environments for your home or business.", "Advanced air purification systems for healthier indoor environments in homes and offices."],
     stats: [
@@ -1865,7 +1865,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "contracting": {
     title: "Ready to Complete Your Contracting Project?",
-    tagline: "Premium Ready to Complete Your Contracting Project? Services",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "/images/contracting_dubai_r2/services_contracting_dubai_c_1_construction.webp",
     desc: ["Book a free contracting consultation and let our experts manage your project. We'll provide a detailed proposal with turnkey solutions and transparent pricing for complete execution.", "Expert structural work, additions, modifications, extensions, and G+1 construction with full authority-approved engineering and compliance.", "G+1 Construction tailored for reliable and high-quality contracting execution."],
     stats: [
@@ -1899,7 +1899,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "window-glazing": {
     title: "Ready to Install Window Glazing?",
-    tagline: "Premium Ready to Install Window Glazing? Services",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free glazing consultation and let our specialists install energy-efficient windows. We'll provide a detailed proposal with quality materials and transparent pricing.", "Expert window installation, replacement, low-E glass, sliding systems, folding doors, and thermal performance upgrades for residential and commercial properties.", "Window installation & replacement tailored for reliable and high-quality window glazing execution."],
     stats: [
@@ -1955,7 +1955,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "tile-installation": {
     title: "Ready to Install Premium Tiles?",
-    tagline: "Premium Ready to Install Premium Tiles? Services",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1561817223-f67e69e6bd6a?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free tile consultation and let our specialists install precision flooring and walls. We'll provide a detailed proposal with quality materials and transparent pricing.", "Professional installation of porcelain, ceramic, marble, mosaic, outdoor tiles, and large-format slabs with precision and quality craftsmanship.", "Porcelain Tile Installation tailored for reliable and high-quality tile installation execution."],
     stats: [
@@ -2033,7 +2033,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "gypsum-works": {
     title: "Ready to Install Gypsum Works?",
-    tagline: "Premium Ready to Install Gypsum Works? Services",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1582203423341-64b918240e25?auto=format&fit=crop&q=80&w=1200",
     desc: ["Book a free gypsum consultation and let our craftsmen create custom ceilings and partitions. We'll provide a detailed proposal with precision work and transparent pricing for gypsum installations.", "Expert false ceilings, partitions, bulkheads, coves, niches, and detailed gypsum design for residential and commercial spaces.", "False Ceiling Installation tailored for reliable and high-quality gypsum works execution."],
     stats: [
@@ -2078,7 +2078,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "property-audits": {
     title: "Ready to Audit Your Property?",
-    tagline: "Premium Ready to Audit Your Property? Services",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "/images/property_audits_dubai_r2/residential_outdoor_living_pool_decking_and_water_features.webp",
     desc: ["Book a free property audit and let our engineers assess your space. We'll provide a detailed inspection report with recommendations and transparent pricing for audit services.", "Comprehensive technical audits for ongoing projects, renovation oversight, and quality verification to ensure your project meets the highest standards.", "Technical Audits tailored for reliable and high-quality property audits execution."],
     stats: [
@@ -2145,7 +2145,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
   },
   "authority-approvals": {
     title: "Ready to Get Your Authority Approvals?",
-    tagline: "Premium Ready to Get Your Authority Approvals? Services",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "/images/authority_approvals_dubai_r2/services_authority_approvals_dubai_municipality_approvals.webp",
     desc: ["Book a free approvals consultation and let our DM-certified engineers handle your permits. We'll provide a detailed proposal with timelines and transparent pricing for all authority submissions.", "Navigating 's regulatory landscape requires expertise and precision. Metro Retail Interiors handles all drawings, submissions, and NOCs for Municipality, Development Authority (DDA), RERA, Civil Defense, and utilities. Whether you're opening an F&B venue, renovating a commercial space, or developing a residential project, we ensure full compliance and timely approvals so your project moves forward without delays.", "Municipality Approvals tailored for reliable and high-quality authority approvals execution."],
     stats: [
@@ -2215,7 +2215,7 @@ export const SUBCATEGORY_DATA: Record<string, any> = {
 export const NESTED_SERVICE_DATA: Record<string, any> = {
   "wood-ceilings": {
     title: "Ready to Install Wood Ceilings?",
-    tagline: "Book a free wood ceiling consultation and let our craftsmen create stunning overhead features. We'll provide a detailed proposal with custom designs and transparent pricing.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "/images/joinery_wood_ceilings_r2/veneer_panels.jpg",
     contentTitle: "Premium Custom Wood Ceilings for Luxury Interiors",
     contentDesc: "Wood ceilings add warmth, depth, and architectural character to any space. Metro Retail Solutions Interiors designs and manufactures bespoke wood ceiling systems in our in-house joinery facility, ensuring perfect alignment, clean detailing, and flawless installation. Whether for a villa, office, restaurant, or majlis, we craft statement ceilings that elevate your interiors.",
@@ -2272,7 +2272,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "wardrobes": {
     title: "Ready to Transform Your Wardrobes?",
-    tagline: "Book a free wardrobe consultation and let our experts assess your space. We'll provide a detailed proposal with custom walk-in wardrobes and transparent pricing for your storage solutions.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "/images/wardrobes_r2/Ward8_HALO.webp",
     contentTitle: "Bespoke Walk-In Wardrobes Made to Fit Your Lifestyle",
     contentDesc: "A walk-in wardrobe should be functional, elegant, and meticulously organized. Metro Retail Solutions designs and manufactures custom wardrobe systems tailored to your needs.",
@@ -2317,7 +2317,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "wall-panels": {
     title: "Ready to Install Wall Panels?",
-    tagline: "Book a free wall panel consultation and let our craftsmen create elegant wall treatments. We'll provide a detailed proposal with custom designs and transparent pricing.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "/images/joinery_wall_panels_r2/fabric_panels.jpg",
     contentTitle: "Custom Wall Panels & Decorative Cladding",
     contentDesc: "Transform your walls with Metro Retail Solutions's custom wall panels. From fluted wood panels and veneer cladding to fabric panels and PU-painted designs, we create stunning feature walls for living rooms, bedrooms, lobbies, and offices. All panels are precision-crafted in our Al Quoz joinery facility.",
@@ -2362,7 +2362,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "tv-units": {
     title: "Ready to Build Your TV Units?",
-    tagline: "Book a free TV unit consultation and let our craftsmen design custom entertainment centers. We'll provide a detailed proposal with integrated solutions and transparent pricing.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "/images/joinery_tv_units_r2/tv_unit_led_backlight.jpg",
     contentTitle: "Custom TV Units & Media Walls",
     contentDesc: "Metro Retail Solutions creates stunning custom TV units and media walls with veneer cladding, PU-painted finishes, LED backlighting, integrated shelving, concealed wiring, and floating designs. Every unit is custom-built to your specifications in our joinery facility.",
@@ -2407,7 +2407,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "residential-furniture": {
     title: "Ready to Create Your Residential Furniture?",
-    tagline: "Book a free furniture consultation and let our craftsmen design bespoke home pieces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "/images/joinery_residential_furniture_r2/shelving.jpg",
     contentTitle: "Bespoke Residential Furniture Crafted for Your Home",
     contentDesc: "Metro Retail Solutions designs and manufactures custom residential furniture including bed frames & headboards, custom consoles, dining tables & benches, sideboards, shelving units, and coffee tables. Every piece is tailored to your style and space.",
@@ -2452,7 +2452,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "reception-desks": {
     title: "Ready to Create Your Bespoke Reception Desk?",
-    tagline: "Book a free consultation for custom reception desks. We'll design and manufacture impressive reception counters that make a lasting first impression.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "/images/joinery_reception_desks_r2/reception_counter.jpg",
     contentTitle: "Custom Reception Desks Crafted in Al Quoz",
     contentDesc: "Custom reception desks designed and manufactured in our in-house joinery facility. From corporate offices to luxury hotels, we create reception counters that make powerful first impressions. Every desk is crafted with premium materials, integrated technology, and flawless finishes to reflect your brand identity.",
@@ -2497,7 +2497,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "office-furniture": {
     title: "Ready to Create Your Office Furniture?",
-    tagline: "Book a free office furniture consultation and let our craftsmen design functional workspaces. We'll provide a detailed proposal with custom joinery and transparent pricing.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "/images/joinery_office_furniture_r2/conference_tables.jpg",
     contentTitle: "Custom Office Furniture for Professional Spaces",
     contentDesc: "Metro Retail Solutions creates bespoke office furniture including workstations, executive desks, filing cabinets, reception counters, conference tables, and storage walls. Designed for functionality and style, manufactured in our joinery facility.",
@@ -2542,7 +2542,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "kitchens": {
     title: "Ready to Transform Your Kitchens?",
-    tagline: "Book a free kitchen design consultation and let our experts assess your space. We'll provide a detailed proposal with custom joinery and transparent pricing for your kitchen renovation.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Custom Luxury Kitchens Built With Precision & Durability",
     contentDesc: "Your kitchen should be beautiful, functional, and built to last. Metro Retail Solutions designs and manufactures custom kitchens in our in-house joinery facility, integrating premium materials, appliances, and intelligent storage.",
@@ -2587,7 +2587,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "feature-walls": {
     title: "Ready to Create Your Statement Feature Wall?",
-    tagline: "Book a free consultation for custom feature walls. We'll design and manufacture stunning accent walls with premium materials, textures, and integrated lighting.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "/images/LUXURY-MANSION1-copy.jpg",
     contentTitle: "Bespoke Feature Walls Crafted in Al Quoz",
     contentDesc: "Custom feature walls designed and manufactured in our in-house joinery facility. From fluted wood panels to geometric designs, we create statement walls that transform spaces. Every feature wall is crafted with premium materials, precision engineering, and integrated lighting for maximum impact.",
@@ -2632,7 +2632,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "bar-counters-vanities": {
     title: "Ready to Create Your Custom Bar or Vanity?",
-    tagline: "Book a free consultation for custom bar counters and vanities. We'll design and manufacture premium joinery pieces with integrated lighting and luxury finishes.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "/images/LUXURY-MANSION1-copy.jpg",
     contentTitle: "Bespoke Bar Counters & Vanities Crafted in Al Quoz",
     contentDesc: "Custom bar counters and bathroom vanities designed and manufactured in our in-house joinery facility. From luxury home bars to elegant bathroom vanities, we create statement pieces with premium materials, integrated lighting, and flawless finishes. Every piece is crafted to your exact specifications.",
@@ -2677,7 +2677,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "default": {
     title: "Ready to Create Your Custom Space?",
-    tagline: "Book a free consultation today. We'll design and manufacture premium bespoke pieces with flawless finishes.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "/images/joinery/HALO-intro-section.webp",
     contentTitle: "Bespoke Solutions Crafted in Al Quoz",
     contentDesc: "Custom pieces designed and manufactured in our in-house joinery facility. We create statement pieces with premium materials, integrated lighting, and flawless finishes. Every piece is crafted to your exact specifications.",
@@ -2701,7 +2701,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "retail-fitout": {
     title: "Ready to Transform Your Retail Space?",
-    tagline: "Book a free consultation and let our experts design your immersive retail experience. We'll provide transparent pricing and timeline.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
     desc: ["From flagship stores to boutique pop-ups, Metro Retail delivers comprehensive retail fitout solutions that elevate brand presence and maximize customer engagement.", "We handle every aspect of retail interior design and fitout."],
     stats: [
@@ -2794,7 +2794,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "office-fitout": {
     title: "Ready to Transform Your Office?",
-    tagline: "Book a free consultation and let our experts design your productive workspace. We'll provide transparent pricing and timeline.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
     desc: ["We create modern, inspiring office interiors that boost productivity and reflect your corporate identity.", "From open-plan workspaces to luxury executive suites, we handle turnkey office fitouts."],
     stats: [
@@ -2887,7 +2887,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "restaurant-fitout": {
     title: "Ready to Transform Your Restaurant?",
-    tagline: "Book a free consultation and let our experts design your dining experience. We'll provide transparent pricing and timeline.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80",
     desc: ["We specialize in creating immersive F&B environments, from cozy cafes to luxury fine dining restaurants.", "Our turnkey restaurant fitout services cover everything from front-of-house aesthetics to commercial kitchen MEP."],
     stats: [
@@ -2989,7 +2989,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
   },
   "commercial-contractors": {
     title: "Ready for your Turnkey Project?",
-    tagline: "Book a free consultation and let our experts manage your commercial fitout. We'll provide transparent pricing and timeline.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
     desc: ["We offer complete turnkey interior solutions and commercial contracting for a seamless project delivery.", "From concept to handover, our team ensures quality, compliance, and timely execution."],
     stats: [
@@ -3049,7 +3049,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
 Object.assign(NESTED_SERVICE_DATA, {
   "texture-paints": {
     title: "Ready to Add Texture to Your Walls?",
-    tagline: "Book a free consultation and let our specialists design luxury textured finishes. We'll provide transparent pricing and timeline.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "/images/decorative_paint_r2/services_decorative_paint_texture_paints_stucco_finishes.webp",
     contentTitle: "Luxury Textured Finishes",
     contentDesc: "Add depth, movement, and visual character to premium interiors with our luxury textured finishes.",
@@ -3063,7 +3063,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "venetian-plasters": {
     title: "Ready to Apply Venetian Plaster?",
-    tagline: "Book a free consultation to explore smooth polished plaster finishes that bring timeless Italian elegance.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "/images/decorative_paint_r2/textured_venetian.webp",
     contentTitle: "Timeless Italian Elegance",
     contentDesc: "Smooth polished plaster finishes that bring timeless Italian elegance to any space.",
@@ -3077,7 +3077,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "feature-walls-paint": {
     title: "Ready to Create a Feature Wall?",
-    tagline: "Book a free consultation for statement feature walls designed to anchor and elevate your interiors.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "/images/decorative_paint_r2/services_decorative_paint_lime_wash_feature_wall_lime_wash.webp",
     contentTitle: "Statement Feature Walls",
     contentDesc: "Statement feature walls designed to anchor and elevate residential and commercial interiors.",
@@ -3091,7 +3091,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "limewash": {
     title: "Ready to Apply Limewash?",
-    tagline: "Book a free consultation for soft matte limewash finishes with natural tone variation.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "/images/decorative_paint_r2/colored_lime_wash.webp",
     contentTitle: "Soft Matte Limewash Finishes",
     contentDesc: "Soft matte limewash finishes with natural tone variation and warmth for organic aesthetics.",
@@ -3105,7 +3105,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "brick-finish": {
     title: "Ready for a Brick Finish?",
-    tagline: "Book a free consultation for decorative brick-effect finishes.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "/images/decorative_paint_r2/services_decorative_paint_brick_finishes_colored_brick.webp",
     contentTitle: "Decorative Brick-Effect Finishes",
     contentDesc: "Decorative brick-effect finishes that add raw texture and urban charm to interiors.",
@@ -3119,7 +3119,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "stencil-painting": {
     title: "Ready for Stencil Painting?",
-    tagline: "Book a free consultation for custom stencil patterns for artistic walls.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "/images/decorative_paint_r2/custom_stencils.webp",
     contentTitle: "Custom Stencil Patterns",
     contentDesc: "Custom stencil patterns for artistic walls with precise repeat detailing and visual impact.",
@@ -3133,7 +3133,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "pearl-finish": {
     title: "Ready for a Pearl Finish?",
-    tagline: "Book a free consultation for subtle pearl sheen finishes.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "/images/decorative_paint_r2/soft_pearl.webp",
     contentTitle: "Subtle Pearl Sheen",
     contentDesc: "Subtle pearl sheen that creates elegant light play and sophistication on walls.",
@@ -3147,7 +3147,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "artistic-finishes": {
     title: "Ready for Artistic Finishes?",
-    tagline: "Book a free consultation for bespoke decorative finishes crafted by artisan painters.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "/images/decorative_paint_r2/artistic_patterns.webp",
     contentTitle: "Bespoke Decorative Finishes",
     contentDesc: "Bespoke decorative finishes crafted by artisan painters for unique premium interiors.",
@@ -3161,7 +3161,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-consoles": {
     title: "Ready to Create Custom Consoles?",
-    tagline: "Bespoke consoles designed for retail, commercial, restaurant, and residential spaces.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "/images/customised_furniture_dubai_r2/tv-units-3.webp",
     contentTitle: "Custom Consoles for Every Sector",
     contentDesc: "We design and manufacture premium custom consoles tailored to your exact requirements, from retail cash counters and cafe service stations to luxury residential TV and sofa consoles.",
@@ -3234,7 +3234,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-doors": {
     title: "Ready to Create Custom Doors?",
-    tagline: "Bespoke doors designed for retail, commercial, restaurant, and residential spaces.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "/images/customised_furniture_dubai_r2/Door3.jpg",
     contentTitle: "Custom Doors for Every Sector",
     contentDesc: "We design and manufacture premium custom doors tailored to your exact requirements, from luxury villa entrances to corporate boardroom glass doors.",
@@ -3307,7 +3307,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-sofas": {
     title: "Ready to Create Custom Sofas?",
-    tagline: "Bespoke sofas designed for retail, commercial, restaurant, and residential spaces.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "/images/customised_furniture_dubai_r2/sofa.png",
     contentTitle: "Custom Sofas for Every Sector",
     contentDesc: "We design and manufacture premium custom sofas tailored to your exact requirements, from executive lounges to luxury residential sectionals.",
@@ -3380,7 +3380,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-tables": {
     title: "Ready to Create Custom Tables?",
-    tagline: "Bespoke tables designed for retail, commercial, restaurant, and residential spaces.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "/images/customised_furniture_dubai_r2/customized_table.png",
     contentTitle: "Custom Tables for Every Sector",
     contentDesc: "We design and manufacture premium custom tables tailored to your exact requirements, from retail display tables to luxury dining tables.",
@@ -3453,7 +3453,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-beds": {
     title: "Ready to Create Custom Beds?",
-    tagline: "Bespoke beds designed for residential, hospitality, and commercial display spaces.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "/images/customised_furniture_dubai_r2/customized-bed.png",
     contentTitle: "Custom Beds for Every Sector",
     contentDesc: "We design and manufacture premium custom beds tailored to your exact requirements, from luxury hotel suites to master bedroom statements.",
@@ -3526,7 +3526,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "microcement-flooring-services": {
     title: "Ready for Microcement Flooring?",
-    tagline: "Book a free consultation for seamless microcement flooring services.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1612404730960-5c71577fca11?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Microcement Flooring Services",
     contentDesc: "Seamless microcement flooring for premium aesthetics.",
@@ -3540,7 +3540,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "retail-store-design": {
     title: "Ready for Retail Store Design?",
-    tagline: "Book a free consultation for retail store design services.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Retail Store Design",
     contentDesc: "Retail Store Design services",
@@ -3548,7 +3548,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "luxury-retail-interior-design": {
     title: "Ready for Luxury Retail Interior Design?",
-    tagline: "Book a free consultation for luxury retail interior design services.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Luxury Retail Interior Design",
     contentDesc: "Luxury Retail Interior Design services",
@@ -3556,7 +3556,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "store-fitout-company": {
     title: "Ready for a Store Fitout Company?",
-    tagline: "Book a free consultation for store fitout company services.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1555529902-5261145633bf?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Store Fitout Company",
     contentDesc: "Store Fitout Company services",
@@ -3564,7 +3564,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "retail-fitout-services": {
     title: "Ready for Retail Fitout Services?",
-    tagline: "Book a free consultation for retail fitout services.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "https://images.unsplash.com/photo-1581373449483-374456832f05?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Retail Fitout Services",
     contentDesc: "Retail Fitout Services",
@@ -3572,7 +3572,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "boutique-interior-design": {
     title: "Ready for Boutique Interior Design?",
-    tagline: "Book a free consultation for boutique interior design services.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Boutique Interior Design",
     contentDesc: "Boutique Interior Design services",
@@ -3580,7 +3580,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "flagship-store-design": {
     title: "Ready for Flagship Store Design?",
-    tagline: "Book a free consultation for flagship store design services.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "https://images.unsplash.com/photo-1558769132-cb1fac08b14b?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Flagship Store Design",
     contentDesc: "Flagship Store Design services",
@@ -3588,7 +3588,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "pop-up-store-design-services": {
     title: "Ready for Pop-Up Store Design Services?",
-    tagline: "Book a free consultation for pop-up store design services.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Pop-Up Store Design Services",
     contentDesc: "Pop-Up Store Design Services",
@@ -3596,7 +3596,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "retail-space-design-experts": {
     title: "Ready for Retail Space Design Experts?",
-    tagline: "Book a free consultation for retail space design experts services.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "https://images.unsplash.com/photo-1556740738-f6a46e114ece?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Retail Space Design Experts",
     contentDesc: "Retail Space Design Experts services",
@@ -3604,7 +3604,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "retail-commercial-fitout": {
     title: "Ready for Retail & Commercial Fitout?",
-    tagline: "Book a free consultation for retail & commercial fitout services.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Retail & Commercial Fitout",
     contentDesc: "Retail & Commercial Fitout services",
@@ -3612,7 +3612,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "office-interior-design": {
     title: "Ready for Office Interior Design?",
-    tagline: "Book a free consultation for office interior design services.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Office Interior Design",
     contentDesc: "Office Interior Design services",
@@ -3620,7 +3620,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "modern-office-interior-design": {
     title: "Ready for Modern Office Interior Design?",
-    tagline: "Book a free consultation for modern office interior design services.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Modern Office Interior Design",
     contentDesc: "Modern Office Interior Design services",
@@ -3628,7 +3628,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "commercial-office-design": {
     title: "Ready for Commercial Office Design?",
-    tagline: "Book a free consultation for commercial office design services.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Commercial Office Design",
     contentDesc: "Commercial Office Design services",
@@ -3636,7 +3636,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "corporate-office-interior": {
     title: "Ready for Corporate Office Interior?",
-    tagline: "Book a free consultation for corporate office interior services.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Corporate Office Interior",
     contentDesc: "Corporate Office Interior services",
@@ -3644,7 +3644,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "turnkey-office-fitout": {
     title: "Ready for Turnkey Office Fitout?",
-    tagline: "Book a free consultation for turnkey office fitout services.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Turnkey Office Fitout",
     contentDesc: "Turnkey Office Fitout services",
@@ -3652,7 +3652,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "office-renovation-services": {
     title: "Ready for Office Renovation Services?",
-    tagline: "Book a free consultation for office renovation services.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "https://images.unsplash.com/photo-1531973486364-5fa64260d752?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Office Renovation Services",
     contentDesc: "Office Renovation Services",
@@ -3660,7 +3660,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "luxury-office-design": {
     title: "Ready for Luxury Office Design?",
-    tagline: "Book a free consultation for luxury office design services.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Luxury Office Design",
     contentDesc: "Luxury Office Design services",
@@ -3668,7 +3668,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "office-space-planning": {
     title: "Ready for Office Space Planning?",
-    tagline: "Book a free consultation for office space planning services.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Office Space Planning",
     contentDesc: "Office Space Planning services",
@@ -3676,7 +3676,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "workspace-interior-solutions": {
     title: "Ready for Workspace Interior Solutions?",
-    tagline: "Book a free consultation for workspace interior solutions.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1582653291997-059a56958d4a?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Workspace Interior Solutions",
     contentDesc: "Workspace Interior Solutions",
@@ -3684,7 +3684,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "restaurant-interior-design": {
     title: "Ready for Restaurant Interior Design?",
-    tagline: "Book a free consultation for restaurant interior design services.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Restaurant Interior Design",
     contentDesc: "Restaurant Interior Design services",
@@ -3692,7 +3692,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "cafe-interior-design-services": {
     title: "Ready for Cafe Interior Design Services?",
-    tagline: "Book a free consultation for cafe interior design services.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Cafe Interior Design Services",
     contentDesc: "Cafe Interior Design Services",
@@ -3700,7 +3700,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "restaurant-fitout-company": {
     title: "Ready for a Restaurant Fitout Company?",
-    tagline: "Book a free consultation for restaurant fitout company services.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Restaurant Fitout Company",
     contentDesc: "Restaurant Fitout Company services",
@@ -3708,7 +3708,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "fine-dining-interior-design": {
     title: "Ready for Fine Dining Interior Design?",
-    tagline: "Book a free consultation for fine dining interior design services.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Fine Dining Interior Design",
     contentDesc: "Fine Dining Interior Design services",
@@ -3716,7 +3716,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "luxury-restaurant-design": {
     title: "Ready for Luxury Restaurant Design?",
-    tagline: "Book a free consultation for luxury restaurant design services.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Luxury Restaurant Design",
     contentDesc: "Luxury Restaurant Design services",
@@ -3724,7 +3724,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "fast-food-restaurant-design": {
     title: "Ready for Fast Food Restaurant Design?",
-    tagline: "Book a free consultation for fast food restaurant design services.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Fast Food Restaurant Design",
     contentDesc: "Fast Food Restaurant Design services",
@@ -3732,7 +3732,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "food-court-interior-design": {
     title: "Ready for Food Court Interior Design?",
-    tagline: "Book a free consultation for food court interior design services.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1525648199593-ce5cafe386d8?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Food Court Interior Design",
     contentDesc: "Food Court Interior Design services",
@@ -3740,7 +3740,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "restaurant-renovation-experts": {
     title: "Ready for Restaurant Renovation Experts?",
-    tagline: "Book a free consultation for restaurant renovation experts.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Restaurant Renovation Experts",
     contentDesc: "Restaurant Renovation Experts",
@@ -3748,7 +3748,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "f-b-interior-design": {
     title: "Ready for F&B Interior Design?",
-    tagline: "Book a free consultation for F&B interior design services.",
+    tagline: "Metro Retail specializes in office & showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1551632436-421b5b4cc601?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "F&B Interior Design",
     contentDesc: "F&B Interior Design services",
@@ -3756,7 +3756,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "turnkey-restaurant-fitout": {
     title: "Ready for Turnkey Restaurant Fitout?",
-    tagline: "Book a free consultation for turnkey restaurant fitout services.",
+    tagline: "Expert office fitouts & retail showrooms by Metro.",
     heroImage: "https://images.unsplash.com/photo-1528605248644-14bf524458f3?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Turnkey Restaurant Fitout",
     contentDesc: "Turnkey Restaurant Fitout services",
@@ -3764,7 +3764,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "commercial-interior-design": {
     title: "Ready for Commercial Interior Design?",
-    tagline: "Book a free consultation for commercial interior design services.",
+    tagline: "Metro Retail builds premium office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Commercial Interior Design",
     contentDesc: "Commercial Interior Design services",
@@ -3772,7 +3772,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "commercial-fitout-company": {
     title: "Ready for a Commercial Fitout Company?",
-    tagline: "Book a free consultation for commercial fitout company services.",
+    tagline: "Expert retail fitout works for showrooms and malls.",
     heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Commercial Fitout Company",
     contentDesc: "Commercial Fitout Company services",
@@ -3780,7 +3780,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "interior-design-build": {
     title: "Ready for Interior Design & Build?",
-    tagline: "Book a free consultation for interior design & build services.",
+    tagline: "Metro Retail delivers office and showroom fitouts.",
     heroImage: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Interior Design & Build",
     contentDesc: "Interior Design & Build services",
@@ -3788,7 +3788,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "turnkey-interior-solutions": {
     title: "Ready for Turnkey Interior Solutions?",
-    tagline: "Book a free consultation for turnkey interior solutions.",
+    tagline: "Metro Retail creates premium offices and showrooms.",
     heroImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Turnkey Interior Solutions",
     contentDesc: "Turnkey Interior Solutions",
@@ -3796,7 +3796,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "commercial-interior-contractors": {
     title: "Ready for Commercial Interior Contractors?",
-    tagline: "Book a free consultation for commercial interior contractors services.",
+    tagline: "Expert retail and office fitouts by Metro Retail!",
     heroImage: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Commercial Interior Contractors",
     contentDesc: "Commercial Interior Contractors services",
@@ -3807,7 +3807,7 @@ Object.assign(NESTED_SERVICE_DATA, {
 Object.assign(NESTED_SERVICE_DATA, {
   "marble-flooring": {
     title: "Ready for Marble Flooring?",
-    tagline: "Book a free consultation for premium marble flooring installation.",
+    tagline: "Metro Retail specializes in office & mall fitouts.",
     heroImage: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Marble Flooring Services",
     contentDesc: "We provide expert marble flooring installation, ensuring seamless joints and perfect leveling for luxury spaces.",
@@ -3815,7 +3815,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "marble-wall-cladding": {
     title: "Ready for Marble Wall Cladding?",
-    tagline: "Book a free consultation for bespoke marble wall features.",
+    tagline: "Premium retail showrooms & office fitouts by Metro.",
     heroImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Marble Wall Cladding",
     contentDesc: "Elevate your interiors with stunning bookmatched marble walls and mechanically fixed stone cladding.",
@@ -3823,7 +3823,7 @@ Object.assign(NESTED_SERVICE_DATA, {
   },
   "custom-marble-counters": {
     title: "Ready for Custom Marble Counters?",
-    tagline: "Book a free consultation for bespoke marble vanities and countertops.",
+    tagline: "Metro Retail: Expert office and retail fitout works.",
     heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Custom Marble Counters",
     contentDesc: "Precision fabricated marble countertops for kitchens, bathrooms, and reception desks.",
@@ -3838,7 +3838,7 @@ Object.assign(SUBCATEGORY_DATA, {
   "commercial-contractors": NESTED_SERVICE_DATA["commercial-contractors"],
   "marble-installation": {
     title: "Marble Installation",
-    tagline: "Premium marble installation services for luxury interiors.",
+    tagline: "Delivering premium retail showrooms & office fitouts.",
     heroImage: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80",
     desc: [
       "Our specialized marble installation team delivers flawless stone work for floors, walls, and bespoke features.",

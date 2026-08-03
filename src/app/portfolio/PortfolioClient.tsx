@@ -368,7 +368,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
     >
 
       {/* ── Hero Banner ── */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <motion.img
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -391,7 +391,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               Metro Portfolio
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Selected{" "}
@@ -403,7 +403,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke carpentry execution.
@@ -542,19 +542,19 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
 
       {/* Stats Banner */}
       <section className="py-8 md:py-16 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-12">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="grid grid-cols-4 gap-1 sm:gap-4 md:gap-12">
             {[
               { label: "Retail Spaces", value: 85 },
               { label: "Corporate Offices", value: 120 },
               { label: "Luxury Residences", value: 40 },
               { label: "Hospitality Outlets", value: 25 }
             ].map((stat, i) => (
-              <div key={i} className="text-left border-l border-neutral-200 pl-2 sm:pl-4 md:pl-8">
-                <div className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-serif text-brand-dark mb-2 md:mb-4">
+              <div key={i} className="flex flex-col items-center justify-start text-center border-l border-neutral-200 px-1 sm:px-4 md:px-8">
+                <div className="text-[23.625px] sm:text-[36px] font-serif text-brand-dark mb-1 sm:mb-2 md:mb-4 leading-none mt-2">
                   <CountUpNumber end={stat.value} />+
                 </div>
-                <div className="text-[7px] sm:text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-tight md:leading-loose">{stat.label}</div>
+                <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-brand-gold leading-tight md:leading-loose text-center mt-1">{stat.label}</div>
               </div>
             ))}
           </div>

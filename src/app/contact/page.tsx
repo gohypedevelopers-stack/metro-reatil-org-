@@ -36,7 +36,7 @@ export default function ContactPage() {
     <div className="bg-brand-dark pt-20">
 
       {/* Page Header */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <div className="hero-overlay" />
 
 
@@ -48,7 +48,7 @@ export default function ContactPage() {
               Get In Touch
             </span>
             <h1
-              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               LET'S DISCUSS YOUR{" "}
@@ -60,10 +60,10 @@ export default function ContactPage() {
               </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-sm md:text-base font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-[18px] font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Whether you have a specific project in mind or just want to learn more about our services, we are here to help.
+              Contact Metro Retail for office and showroom fitouts.
             </p>
           </div>
         </div>

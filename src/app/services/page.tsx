@@ -227,7 +227,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-neutral-50 pb-0">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <Image
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600"
           alt="Hero Background"
@@ -246,7 +246,7 @@ export default function ServicesPage() {
               Services
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Complete Fitout{" "}
@@ -258,7 +258,7 @@ export default function ServicesPage() {
               </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-base md:text-lg font-light max-w-4xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Book a free consultation and let our experts assess your project. We'll provide a comprehensive proposal with transparent timelines and pricing for your fitout.

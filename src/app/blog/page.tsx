@@ -16,7 +16,7 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen bg-neutral-50 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
+      <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <Image
           src="/wide_mall_hero.png"
           alt="Metro Retail Solutions Blog"
@@ -35,7 +35,7 @@ export default async function BlogPage() {
               Metro Blog
             </span>
             <h1
-              className="hero-title-1 font-serif text-white mb-10 md:mb-12 uppercase tracking-tight"
+              className="hero-title-1 font-serif text-white mb-4 uppercase tracking-tight text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Insights &{" "}
@@ -47,10 +47,10 @@ export default async function BlogPage() {
               </span>
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
-              Expert advice, design trends, and project insights from Metro Retail Solutions' leading fitout and joinery specialists.
+              Insights on retail and office fitouts from Metro Retail.
             </p>
           </div>
         </div>

@@ -83,18 +83,18 @@ export default function SubcategoryDetailPage() {
         />
         <div className="hero-overlay" />
         <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center text-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
               <PenTool size={12} /> Specialized Capability
             </span>
             <h1
-              className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
+              className="mobile-heading-balance hero-title-1 font-serif text-white uppercase tracking-tight text-center break-words hyphens-auto w-full"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
+              className="text-neutral-300 text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               {data.tagline}
@@ -144,7 +144,7 @@ export default function SubcategoryDetailPage() {
               <div className="hidden lg:flex flex-col items-center lg:items-start text-center lg:text-left space-y-3 w-full">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Active Service</span>
                 <h2
-                  className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
+                  className="mobile-heading-balance hero-title-1 font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {data.title}
@@ -278,7 +278,7 @@ export default function SubcategoryDetailPage() {
                         <div className="absolute inset-0 px-3 pt-3 pb-3 sm:p-4 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
                           <div className="hidden md:block">
-                            <h3 className="text-base sm:text-lg md:text-xl lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
+                            <h3 className="text-[18px] lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
                               {title}
                             </h3>
 
@@ -329,7 +329,7 @@ export default function SubcategoryDetailPage() {
                         <div className="absolute inset-0 px-3 pt-3 pb-3 sm:p-4 md:p-6 flex flex-col justify-end translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-white z-10 pointer-events-none">
 
                           <div className="hidden md:block">
-                            <h3 className="text-base sm:text-lg md:text-xl lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
+                            <h3 className="text-[18px] lg:text-[15px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight mb-1 lg:mb-2 leading-snug">
                               {title}
                             </h3>
 

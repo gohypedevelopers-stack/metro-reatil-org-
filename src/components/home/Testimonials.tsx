@@ -97,7 +97,7 @@ const Testimonials = () => {
 
             {/* Bottom Line: Say About Us (Gold, Italic) */}
             <div
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
+              className="text-[23.635px] sm:text-4xl md:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
               style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
             >
               {"Say About Us".split("").map((char, i) => (

@@ -31,11 +31,11 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="hidden md:block text-brand-gold hero-eyebrow mb-8">
+          <span className="hidden md:block w-full text-center whitespace-nowrap text-brand-gold md:text-sm lg:text-base tracking-widest hero-eyebrow mb-8 px-0">
             Crafting Exceptional Environments
           </span>
           <motion.h1
-            className="hero-title-1 mb-10 md:mb-12"
+            className="hero-title-1 mb-8"
             style={{ fontFamily: 'var(--font-cinzel), serif' }}
           >
             <div className="overflow-hidden block">
@@ -72,14 +72,14 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           </motion.h1>
 
 
-          <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 md:gap-12 mt-8 md:mt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-12 mt-0">
             <Magnetic>
-              <a href="/portfolio" className="inline-block whitespace-nowrap px-6 sm:px-8 md:px-10 py-3 md:py-3.5 bg-brand-gold text-white hero-btn-text font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="flex items-center justify-center w-[260px] sm:w-auto whitespace-nowrap px-4 py-2.5 sm:px-8 md:px-10 sm:py-3 md:py-3.5 bg-brand-gold text-white text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="/contact" className="inline-block whitespace-nowrap text-white hero-btn-text font-bold uppercase tracking-widest border-b border-white/20 pb-2 hover:border-brand-gold transition-all">
+              <a href="/contact" className="flex items-center justify-center w-[260px] sm:w-auto whitespace-nowrap px-4 py-2.5 sm:px-8 md:px-10 sm:py-3 md:py-3.5 bg-white/5 backdrop-blur-md border border-white/30 text-white text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-lg">
                 Start a Conversation
               </a>
             </Magnetic>
