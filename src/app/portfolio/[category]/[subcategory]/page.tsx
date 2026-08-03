@@ -134,13 +134,13 @@ export default function SubcategoryDetailPage() {
                 Inspire & Transform
               </span>
               <h1
-                className="text-4xl md:text-4xl lg:text-6xl font-serif text-brand-dark leading-tight uppercase"
+                className="hero-title-1 font-serif text-brand-dark leading-tight uppercase"
                 style={{ fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {data.title}
               </h1>
               <p
-                className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed"
+                className="text-neutral-500 text-lg font-light leading-relaxed"
                 style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
               >
                 {data.intro}
@@ -259,7 +259,7 @@ export default function SubcategoryDetailPage() {
           <div className="flex items-center gap-4 mb-8 md:mb-16">
             <ImageIcon className="text-brand-gold font-light" size={28} strokeWidth={1.5} />
             <div>
-              <h2 className="text-3xl md:text-5xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              <h2 className="section-title text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                 Delivered Projects & Inspirations
               </h2>
             </div>

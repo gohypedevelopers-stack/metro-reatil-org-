@@ -15,8 +15,8 @@ const AboutSummary = () => {
             className="lg:col-span-6 relative flex flex-col items-center text-center lg:items-start lg:text-left"
           >
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-brand-gold mb-8 block text-center lg:text-left">Our Legacy</span>
-            <h2 className="section-title text-left mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Precision in Every <br className="hidden lg:inline" /> <span className="text-brand-gold italic inline lg:block mt-0 lg:mt-2 ml-1.5 lg:ml-0 text-2xl md:text-3xl lg:text-4xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
+            <h2 className="section-title text-center lg:text-left mb-8 md:mb-12 text-white" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Precision in Every <br className="hidden lg:inline" /> <span className="text-brand-gold italic inline lg:block mt-0 lg:mt-2 ml-1.5 lg:ml-0 font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Square Foot</span>
             </h2>
             <div className="space-y-6 md:space-y-8 text-neutral-400 font-light leading-relaxed text-sm md:text-base lg:text-lg text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               <p>

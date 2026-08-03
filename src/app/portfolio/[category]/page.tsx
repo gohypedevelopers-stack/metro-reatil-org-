@@ -137,13 +137,13 @@ export default function CategoryLandingPage() {
           <div className="max-w-3xl text-center mx-auto">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center">Metro Portfolio</span>
             <h1
-              className="text-3xl md:text-3xl lg:text-5xl font-serif text-brand-dark mb-4 leading-tight uppercase text-center"
+              className="section-title text-brand-dark mb-4 text-center"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
             </h1>
             <p
-              className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed mb-6 text-center mx-auto max-w-2xl"
+              className="text-neutral-500 text-lg font-light leading-relaxed mb-6 text-center mx-auto max-w-2xl"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               {data.tagline}

@@ -35,7 +35,7 @@ const ManufacturingSection = () => {
         <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
             <h2 className="section-title text-brand-dark w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
+              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
             <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               India's most trusted interior design & build and in-house manufacturing specialist. We bring complex turnkey interior solutions to life.

@@ -52,14 +52,14 @@ export default async function CareersPage() {
             >
               Join the{" "}
               <span
-                className="text-brand-gold hero-title-2 italic font-normal block md:inline mt-2 md:mt-0"
+                className="text-brand-gold italic font-normal block md:inline mt-2 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Metro Team
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Future openings at Metro Retail Solutions will be posted soon. Explore the teams behind our premium fitout, joinery and interior design work.
@@ -75,10 +75,10 @@ export default async function CareersPage() {
       <section className="py-12 md:py-24 bg-neutral-50 text-brand-dark" id="open-positions">
         <div className="container mx-auto px-6">
           <div className="mb-8 md:mb-16 text-center">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Careers Will Be <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
+            <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Careers Will Be <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
             </h2>
-            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light max-w-2xl mx-auto">
+            <p className="text-neutral-500 leading-[1.8] text-lg font-light max-w-2xl mx-auto">
               We are preparing the next set of vacancies for Metro Retail Solutions. Use the search and filters below to explore the career areas most relevant to our design, fitout, carpentry and project delivery teams.
             </p>
           </div>
@@ -120,10 +120,10 @@ export default async function CareersPage() {
       <section className="py-12 md:py-24 bg-white text-brand-dark">
         <div className="container mx-auto px-6">
           <div className="mb-8 md:mb-16 text-center">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Our Hiring <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
+            <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Our Hiring <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
             </h2>
-            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light max-w-2xl mx-auto">
+            <p className="text-neutral-500 leading-[1.8] text-lg font-light max-w-2xl mx-auto">
               While current roles are being prepared, here is the process candidates can expect once openings are published.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default async function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 text-center md:text-left">
             {processSteps.map((step, index) => (
               <div key={index} className="relative flex flex-col items-center md:items-start">
-                <div className="text-5xl md:text-7xl font-bold text-neutral-100 mb-6 font-serif tracking-wide uppercase">
+                <div className="text-6xl font-bold text-neutral-100 mb-6 font-serif tracking-wide uppercase">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold mb-4 font-serif tracking-wide uppercase text-brand-dark">{step.title}</h3>
@@ -149,8 +149,8 @@ export default async function CareersPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-16">
             <div className="w-full lg:w-1/2 lg:sticky lg:top-32">
-              <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-                Join the <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
+              <h2 className="section-title text-white mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+                Join the <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Metro Legacy</span>
               </h2>
               <p className="text-neutral-400 text-base mb-8 leading-relaxed">
                 If your experience aligns with Metro Retail Solutions, submit your profile here. We hire exceptional designers, detail-oriented project managers, expert carpenters, and technical engineers.
@@ -199,10 +199,10 @@ export default async function CareersPage() {
       <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 text-center">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              Ready to Discuss <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>a Project?</span>
+            <h2 className="section-title text-brand-dark mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              Ready to Discuss <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>a Project?</span>
             </h2>
-            <p className="text-neutral-500 leading-[1.8] text-base md:text-lg font-light mb-6 md:mb-10 max-w-lg mx-auto">
+            <p className="text-neutral-500 leading-[1.8] text-lg font-light mb-6 md:mb-10 max-w-lg mx-auto">
               For project enquiries, book a site visit with our fitout and joinery specialists.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

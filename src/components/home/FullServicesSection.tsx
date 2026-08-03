@@ -116,7 +116,7 @@ const FullServicesSection = ({
         <div className="flex flex-col items-center text-center mb-4 md:mb-6 gap-1 md:gap-2">
           <div className="flex flex-col items-center">
             <h2 className="section-title text-center text-brand-dark flex items-center justify-center flex-wrap gap-2 sm:gap-3" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              <span>{title}</span> <span className="text-brand-gold italic inline-block text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>{subtitle}</span>
+              <span>{title}</span> <span className="text-brand-gold italic inline-block whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>{subtitle}</span>
             </h2>
           </div>
           

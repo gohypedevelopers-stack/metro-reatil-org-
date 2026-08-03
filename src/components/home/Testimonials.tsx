@@ -77,7 +77,7 @@ const Testimonials = () => {
           >
             {/* Top Line: WHAT OUR CLIENTS (Black) */}
             <div
-              className="text-2xl sm:text-3xl md:text-5xl font-serif uppercase tracking-tight text-brand-dark flex justify-center items-center mb-4 flex-wrap"
+              className="section-title text-brand-dark flex justify-center items-center mb-4 flex-wrap"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {"WHAT OUR CLIENTS".split("").map((char, i) => (
@@ -97,7 +97,7 @@ const Testimonials = () => {
 
             {/* Bottom Line: Say About Us (Gold, Italic) */}
             <div
-              className="text-[23.635px] sm:text-4xl md:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
+              className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
               style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
             >
               {"Say About Us".split("").map((char, i) => (

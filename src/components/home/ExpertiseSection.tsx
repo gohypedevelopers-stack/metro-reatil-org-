@@ -257,10 +257,7 @@ const ExpertiseSection = () => {
 
           {/* Left: heading block */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-brand-dark uppercase leading-tight mb-8"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
+            <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR CORE <br />
               <span
                 className="block mt-2"
@@ -294,10 +291,7 @@ const ExpertiseSection = () => {
         {/* ── Mobile: heading + horizontal slider ── */}
         <div className="block md:hidden">
           <div className="text-center mb-6">
-            <h2
-              className="text-2xl font-serif text-brand-dark uppercase tracking-tight mb-4"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
+            <h2 className="section-title text-brand-dark mb-4" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR CORE <br />
               <span
                 className="block mt-1 whitespace-nowrap"

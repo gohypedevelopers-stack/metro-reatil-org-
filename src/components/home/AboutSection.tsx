@@ -12,7 +12,7 @@ const AboutSection = () => {
 
             <h2 className="section-title text-brand-dark w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               EXECUTING <br />
-              <span className="text-brand-gold italic block mt-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
+              <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Turnkey Fit-Outs</span>
             </h2>
 
             {/* Mobile Image (hidden on lg) */}

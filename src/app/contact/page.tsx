@@ -53,14 +53,14 @@ export default function ContactPage() {
             >
               LET'S DISCUSS YOUR{" "}
               <span
-                className="text-brand-gold hero-title-2 italic font-normal normal-case block md:inline mt-1 md:mt-0"
+                className="text-brand-gold italic font-normal normal-case block md:inline mt-1 md:mt-0"
                 style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
               >
                 Next Project
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-[18px] font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="text-neutral-300 text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Contact Metro Retail for office and showroom fitouts.
@@ -78,7 +78,7 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <div className="bg-brand-dark p-6 md:p-8 xl:p-12">
                 <h2
-                  className="text-2xl md:text-3xl font-serif text-white mb-6 md:mb-10 xl:mb-16 uppercase tracking-tight text-center md:text-left"
+                  className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-white mb-6 md:mb-10 xl:mb-16 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Send Us a Message

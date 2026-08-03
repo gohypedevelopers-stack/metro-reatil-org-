@@ -14,10 +14,10 @@ const WhatsAppCTA = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-10 md:mb-12 uppercase leading-tight"
+          className="mobile-heading-balance section-title text-white mb-10 md:mb-12"
           style={{ fontFamily: 'var(--font-cinzel), serif' }}
         >
-          READY TO TRANSFORM <br /> <span className="text-white italic block mt-2 text-2xl md:text-3xl lg:text-4xl whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Property?</span>
+          READY TO TRANSFORM <br /> <span className="text-white italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Property?</span>
         </motion.h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
           <a href="https://wa.me/918800607967" className="bg-white text-brand-gold px-7 md:px-12 py-5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-3 md:gap-4 hover:bg-brand-dark hover:text-white transition-all shadow-xl group">
