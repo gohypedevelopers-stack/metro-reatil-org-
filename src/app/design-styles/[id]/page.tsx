@@ -23,19 +23,19 @@ export default function DesignStyleDetailPage() {
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay" />
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
               <PenTool size={12} /> Design Execution Style
             </span>
             <h1
-              className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
+              className="mobile-heading-balance text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-tight leading-[1.2] text-center break-words hyphens-auto w-full"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               {data.title}
             </h1>
             <p
-              className="hidden md:block text-neutral-300 text-base sm:text-lg md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
+              className="hidden md:block text-neutral-300 text-base sm:text-sm md:text-xl font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               {data.tagline}
@@ -46,7 +46,7 @@ export default function DesignStyleDetailPage() {
 
       {/* SPLIT SECTION — image left, content + stats right */}
       <section className="py-12 md:py-28 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
 
             {/* LEFT: hero image — sticky */}
@@ -64,13 +64,13 @@ export default function DesignStyleDetailPage() {
               <div className="space-y-3">
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] block">Aesthetic Overview</span>
                 <h2
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight"
+                  className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif text-brand-dark uppercase tracking-tight"
                   style={{ fontFamily: 'var(--font-cinzel), serif' }}
                 >
                   {data.title}
                 </h2>
                 <p
-                  className="text-neutral-400 text-lg md:text-xl font-light italic"
+                  className="hidden md:block text-neutral-400 text-sm md:text-xl font-light italic"
                   style={{ fontFamily: 'var(--font-playfair), serif' }}
                 >
                   {data.tagline}
@@ -106,7 +106,7 @@ export default function DesignStyleDetailPage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
+                className="inline-flex items-center gap-3 bg-brand-dark text-white px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
               >
                 Request a Consultation <ChevronRight size={14} />
               </Link>
@@ -121,7 +121,7 @@ export default function DesignStyleDetailPage() {
       {/* SUB-SERVICES GRID */}
       {data.subServices && (
         <section className="py-12 md:py-28 bg-neutral-50 border-b border-neutral-100">
-          <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="w-full px-6 md:px-12">
             <div className="text-center mb-8 md:mb-16">
               <h2
                 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-serif text-brand-dark uppercase tracking-tight"
@@ -162,7 +162,7 @@ export default function DesignStyleDetailPage() {
 
       {/* KEY ELEMENTS / METODOLOGY */}
       <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Execution</span>
             <h2

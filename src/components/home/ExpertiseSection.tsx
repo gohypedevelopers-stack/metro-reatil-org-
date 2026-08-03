@@ -250,7 +250,7 @@ const MobileSlider = () => {
 const ExpertiseSection = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
 
         {/* ── Desktop / Laptop: split layout ── */}
         <div className="hidden md:grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
@@ -266,7 +266,7 @@ const ExpertiseSection = () => {
                 <em>Technical Expertise</em>
               </span>
             </h2>
-            <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-500 max-w-md" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
+            <p className="text-sm md:text-xl font-light leading-relaxed text-neutral-500 max-w-md" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               Over 25 years of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
             </p>
 

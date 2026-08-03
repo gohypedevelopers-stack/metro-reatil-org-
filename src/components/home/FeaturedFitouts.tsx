@@ -99,7 +99,7 @@ const FeaturedFitouts = () => {
 
   return (
     <section id="featured-fitouts" className="py-12 md:py-16 bg-white relative overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-16 relative">
+      <div className="w-full px-6 md:px-16 relative">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="section-title text-brand-dark mb-6 md:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR TURNKEY <span className="text-brand-gold italic whitespace-nowrap ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Fitout</span>

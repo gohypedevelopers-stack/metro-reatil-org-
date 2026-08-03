@@ -238,7 +238,7 @@ export default function ServicesPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
@@ -258,7 +258,7 @@ export default function ServicesPage() {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-4xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-4xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Book a free consultation and let our experts assess your project. We'll provide a comprehensive proposal with transparent timelines and pricing for your fitout.
@@ -269,7 +269,7 @@ export default function ServicesPage() {
 
       {/* Intro Section */}
       <section className="pt-6 pb-12 md:py-24 bg-white overflow-hidden">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-24 lg:gap-12 xl:gap-12 items-center">
 
             {/* Image Section (Left) */}

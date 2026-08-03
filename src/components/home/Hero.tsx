@@ -72,14 +72,14 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
           </motion.h1>
 
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-12 mt-0">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mt-0">
             <Magnetic>
-              <a href="/portfolio" className="flex items-center justify-center w-[260px] sm:w-auto whitespace-nowrap px-4 py-2.5 sm:px-8 md:px-10 sm:py-3 md:py-3.5 bg-brand-gold text-white text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
+              <a href="/portfolio" className="flex items-center justify-center w-[220px] sm:w-auto whitespace-nowrap px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 bg-brand-gold text-white text-[8px] sm:text-[9px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-2xl">
                 Explore Portfolio
               </a>
             </Magnetic>
             <Magnetic>
-              <a href="/contact" className="flex items-center justify-center w-[260px] sm:w-auto whitespace-nowrap px-4 py-2.5 sm:px-8 md:px-10 sm:py-3 md:py-3.5 bg-white/5 backdrop-blur-md border border-white/30 text-white text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-lg">
+              <a href="/contact" className="flex items-center justify-center w-[220px] sm:w-auto whitespace-nowrap px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 bg-white/5 backdrop-blur-md border border-white/30 text-white text-[8px] sm:text-[9px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all rounded-full shadow-lg">
                 Start a Conversation
               </a>
             </Magnetic>

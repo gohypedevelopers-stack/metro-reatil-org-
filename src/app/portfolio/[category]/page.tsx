@@ -133,7 +133,7 @@ export default function CategoryLandingPage() {
     <div className="bg-white pt-20">
       {/* Dynamic Header */}
       <section className="py-12 md:py-28 bg-neutral-50 border-b border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="max-w-3xl text-center mx-auto">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block text-center">Metro Portfolio</span>
             <h1
@@ -158,7 +158,7 @@ export default function CategoryLandingPage() {
 
       {/* Subcategories Grid */}
       <section className="py-12 md:py-32">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
             {data.subcategories.map((sub, i) => (
               <motion.a

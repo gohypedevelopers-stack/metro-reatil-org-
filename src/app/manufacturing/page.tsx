@@ -55,7 +55,7 @@ const ManufacturingPage = () => {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
@@ -75,7 +75,7 @@ const ManufacturingPage = () => {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Our 9,000 sq.ft state-of-the-art facility is equipped with advanced machinery to bring complex designs to life with unmatched precision and speed.
@@ -86,7 +86,7 @@ const ManufacturingPage = () => {
 
       {/* Intro Section */}
       <section className="py-12 md:py-28 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Precision Engineered</span>
@@ -138,7 +138,7 @@ const ManufacturingPage = () => {
 
       {/* Machinery Section */}
       <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Equipment</span>
             <h2 className="mobile-heading-balance hero-title-1 font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -162,7 +162,7 @@ const ManufacturingPage = () => {
 
       {/* Photo Gallery */}
       <section className="py-12 md:py-28 bg-brand-dark text-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="flex justify-between items-end mb-8 md:mb-16">
             <div>
               <span className="text-brand-gold text-[9px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>

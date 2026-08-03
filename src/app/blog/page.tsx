@@ -27,7 +27,7 @@ export default async function BlogPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold hero-eyebrow mb-4 block text-center"
@@ -47,7 +47,7 @@ export default async function BlogPage() {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Insights on retail and office fitouts from Metro Retail.
@@ -58,7 +58,7 @@ export default async function BlogPage() {
 
       {/* Blog Listing Section */}
       <section className="py-12 md:py-24 bg-white text-brand-dark">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Latest <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Articles</span>
@@ -151,7 +151,7 @@ export default async function BlogPage() {
 
       {/* CTA Section */}
       <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 text-center">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-brand-dark uppercase tracking-tight mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Ready to Transform <span className="text-brand-gold italic text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Space?</span>

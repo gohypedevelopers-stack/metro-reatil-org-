@@ -162,7 +162,7 @@ export const Navbar = () => {
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       className="absolute top-full left-0 w-full bg-white text-brand-dark border-b border-neutral-100 shadow-2xl max-h-[calc(100vh-110px)] overflow-y-auto"
     >
-      <div className="max-w-[1600px] mx-auto grid grid-cols-12 min-h-[300px]">
+      <div className="w-full grid grid-cols-12 min-h-[300px]">
         {/* Left Side Links */}
         <div className="col-span-8 py-8 px-12 lg:py-10 lg:px-16 flex flex-col justify-center">
           <h3 className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-6 lg:mb-8">{title}</h3>
@@ -200,7 +200,7 @@ export const Navbar = () => {
           }`}
         onMouseLeave={() => setActiveMenu(null)}
       >
-        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-4 xl:px-12 flex justify-between items-center">
+        <div className="w-full px-5 sm:px-6 lg:px-4 xl:px-12 flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center shrink-0">
             <img

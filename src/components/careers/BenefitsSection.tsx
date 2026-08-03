@@ -60,7 +60,7 @@ export default function BenefitsSection() {
 
   return (
     <section className="py-12 md:py-24 bg-brand-dark text-white">
-      <div className="container mx-auto px-6">
+      <div className="w-full px-6">
         {/* Title Block */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-end mb-8 md:mb-16">
           <div className="md:w-1/2">

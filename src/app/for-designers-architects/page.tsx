@@ -65,7 +65,7 @@ export default function DesignersArchitectsPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
@@ -85,7 +85,7 @@ export default function DesignersArchitectsPage() {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Book a partnership consultation and let's discuss collaboration opportunities. We'll provide detailed information about our services for designers and architects.
@@ -96,7 +96,7 @@ export default function DesignersArchitectsPage() {
 
       {/* Intro Section */}
       <section className="py-12 md:py-24 bg-white text-gray-900 text-center">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             Flawless Execution <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>for Interior Designers & Architects</span>
           </h2>
@@ -108,7 +108,7 @@ export default function DesignersArchitectsPage() {
 
       {/* Services Grid Section */}
       <section className="py-12 md:py-24 bg-gray-50 text-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1]" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Services for <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Designers & Architects</span>
@@ -154,7 +154,7 @@ export default function DesignersArchitectsPage() {
 
       {/* Portfolio & Certifications Section */}
       <section className="py-12 md:py-24 bg-[#0a0a0a] text-white">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="text-center mb-10 md:mb-20">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Portfolio & <span className="text-brand-gold italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Certifications</span>
@@ -254,7 +254,7 @@ export default function DesignersArchitectsPage() {
 
       {/* CTA Section */}
       <section className="py-12 md:py-24 bg-[#E8A020] text-white text-center">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-brand-dark uppercase font-light tracking-tight leading-[1] mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Let's Build Something <span className="text-brand-dark italic font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Extraordinary</span>

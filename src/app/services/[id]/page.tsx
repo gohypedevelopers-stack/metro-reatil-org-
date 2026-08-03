@@ -82,7 +82,7 @@ export default function SubcategoryDetailPage() {
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay" />
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center text-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
               <PenTool size={12} /> Specialized Capability
@@ -94,7 +94,7 @@ export default function SubcategoryDetailPage() {
               {data.title}
             </h1>
             <p
-              className="text-neutral-300 text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
+              className="hidden md:block text-neutral-300 text-sm md:text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center px-4"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               {data.tagline}
@@ -105,7 +105,7 @@ export default function SubcategoryDetailPage() {
 
       {/* SPLIT SECTION — image left, content + stats right */}
       <section className="pt-6 pb-12 md:py-28 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
 
           {/* MOBILE ONLY: Title Block above image */}
           <div className="flex lg:hidden flex-col items-center text-center space-y-3 mb-8">
@@ -150,7 +150,7 @@ export default function SubcategoryDetailPage() {
                   {data.title}
                 </h2>
                 <p
-                  className="text-neutral-400 text-lg md:text-xl font-light italic"
+                  className="hidden md:block text-neutral-400 text-sm md:text-xl font-light italic"
                   style={{ fontFamily: 'var(--font-playfair), serif' }}
                 >
                   {data.tagline}
@@ -189,7 +189,7 @@ export default function SubcategoryDetailPage() {
               <div className="flex justify-center lg:justify-start w-full">
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
+                  className="inline-flex items-center gap-2 bg-brand-dark text-white px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors duration-300"
                 >
                   Request a Consultation <ChevronRight size={12} />
                 </a>
@@ -202,7 +202,7 @@ export default function SubcategoryDetailPage() {
 
       {/* EXECUTION PROCESS */}
       <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="text-center mb-8 md:mb-16">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
             <h2
@@ -237,7 +237,7 @@ export default function SubcategoryDetailPage() {
 
       {/* GALLERY */}
       <section className="py-12 md:py-28 bg-neutral-900">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="mb-14 md:w-2/3 mx-auto text-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Visuals</span>
             <h2

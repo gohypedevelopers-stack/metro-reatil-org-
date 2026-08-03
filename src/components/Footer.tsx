@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ChevronRight, Messa
 const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white pt-16 md:pt-24 lg:pt-32 pb-4 lg:pb-6 border-t border-white/5">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-6 md:gap-12 xl:gap-16 mb-8 md:mb-16 lg:mb-20">
 
           {/* Brand Info */}

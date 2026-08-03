@@ -23,7 +23,7 @@ const ClientsSection = () => {
 
   return (
     <section className="pt-12 pb-0 md:pt-16 md:pb-0 bg-white relative overflow-hidden border-t border-brand-gold/5">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="flex justify-center mb-8 relative">
           <div className="text-center">
             <motion.h2

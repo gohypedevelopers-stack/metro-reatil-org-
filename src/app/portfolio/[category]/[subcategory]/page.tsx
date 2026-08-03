@@ -110,7 +110,7 @@ export default function SubcategoryDetailPage() {
 
       {/* Back Button Grid */}
       <section className="py-8 bg-neutral-50 border-b border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="w-full px-6 md:px-12 flex items-center justify-between">
           <a
             href={`/portfolio/${category}`}
             className="inline-flex items-center gap-3 text-neutral-400 hover:text-brand-dark text-[10px] font-bold uppercase tracking-widest transition-colors"
@@ -125,7 +125,7 @@ export default function SubcategoryDetailPage() {
 
       {/* Main Content & Intro */}
       <section className="py-12 md:py-28">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
 
             {/* Left Column: Rich Description */}
@@ -215,7 +215,7 @@ export default function SubcategoryDetailPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] bg-brand-dark text-white hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 flex items-center justify-center gap-3"
+                      className="w-full text-center px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest bg-brand-dark text-white hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 flex items-center justify-center gap-3"
                     >
                       {isSubmitting ? (
                         "Submitting..."
@@ -255,7 +255,7 @@ export default function SubcategoryDetailPage() {
 
       {/* Premium Multi-image Project Gallery */}
       <section className="py-12 md:py-28 bg-neutral-50/50">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="flex items-center gap-4 mb-8 md:mb-16">
             <ImageIcon className="text-brand-gold font-light" size={28} strokeWidth={1.5} />
             <div>
@@ -282,7 +282,7 @@ export default function SubcategoryDetailPage() {
 
       {/* Looping Section back to core Services */}
       <div className="relative border-t border-neutral-100 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 pt-16 text-center">
+        <div className="w-full px-6 pt-16 text-center">
           <span className="text-neutral-400 text-[10px] font-bold uppercase tracking-[0.3em] block mb-2">Continue Exploring</span>
           <p className="text-neutral-400 text-sm font-serif italic mb-2">Loop back into our complete services range below</p>
         </div>

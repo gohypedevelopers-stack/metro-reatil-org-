@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         
         <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-16">
-          <div className="container mx-auto px-6 max-w-4xl">
+          <div className="w-full px-6 max-w-4xl">
             <Link href="/blog" className="inline-flex items-center text-white/80 hover:text-brand-gold transition-colors mb-6 text-sm font-medium uppercase tracking-wider">
               <ChevronLeft size={16} className="mr-1" /> Back to Blog
             </Link>
@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Content Section */}
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="w-full px-6 max-w-4xl">
           <div 
             className="prose prose-lg prose-neutral max-w-none prose-headings:font-serif prose-headings:text-brand-dark prose-a:text-brand-gold hover:prose-a:text-yellow-600 prose-img:rounded-sm"
             style={{ 

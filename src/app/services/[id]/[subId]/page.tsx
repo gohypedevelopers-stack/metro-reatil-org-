@@ -24,7 +24,7 @@ export default function NestedServiceDetailPage() {
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay" />
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full h-full flex flex-col items-center justify-center pt-16 md:pt-24">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center text-center">
             <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-3 flex items-center justify-center gap-2">
               <PenTool size={12} /> Specialized Solution
@@ -36,7 +36,7 @@ export default function NestedServiceDetailPage() {
               {data.title}
             </h1>
             <p
-              className="text-neutral-300 text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-sm md:text-[18px] font-light italic mt-2 max-w-2xl mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               {data.tagline}
@@ -63,7 +63,7 @@ export default function NestedServiceDetailPage() {
 
       {/* GALLERY */}
       <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
             {data.gallery.map((item: any, i: number) => (

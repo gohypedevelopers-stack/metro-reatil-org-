@@ -10,7 +10,7 @@ const WhatsAppCTA = () => {
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 text-center">
+      <div className="w-full px-6 md:px-12 relative z-10 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,10 +20,10 @@ const WhatsAppCTA = () => {
           READY TO TRANSFORM <br /> <span className="text-white italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Your Property?</span>
         </motion.h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <a href="https://wa.me/918800607967" className="bg-white text-brand-gold px-7 md:px-12 py-5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-3 md:gap-4 hover:bg-brand-dark hover:text-white transition-all shadow-xl group">
+          <a href="https://wa.me/918800607967" className="bg-white text-brand-gold px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-3 md:gap-4 hover:bg-brand-dark hover:text-white transition-all shadow-xl group">
             <Phone size={18} /> WhatsApp Now <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </a>
-          <a href="tel:+918800607967" className="bg-brand-dark text-white px-7 md:px-12 py-5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-3 md:gap-4 hover:bg-white hover:text-brand-dark transition-all shadow-xl group">
+          <a href="tel:+918800607967" className="bg-brand-dark text-white px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-3 md:gap-4 hover:bg-white hover:text-brand-dark transition-all shadow-xl group">
             Call Us Today <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </a>
         </div>

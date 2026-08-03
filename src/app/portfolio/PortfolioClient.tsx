@@ -52,11 +52,11 @@ const getPortfolioSector = (category: string): string => {
 const CompanyProfile = () => {
   return (
     <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-neutral-50 border-b border-neutral-200">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center md:text-left">
-        <h2 className="mobile-heading-balance text-2xl sm:text-3xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+      <div className="w-full px-6 md:px-12 text-center md:text-left">
+        <h2 className="mobile-heading-balance text-xl sm:text-2xl md:text-4xl font-serif text-brand-dark mb-6 uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
           Metro Retail Solutions
         </h2>
-        <p className="text-neutral-600 text-lg md:text-xl font-light leading-relaxed mb-6 md:mb-12">
+        <p className="text-neutral-600 text-sm md:text-xl font-light leading-relaxed mb-6 md:mb-12">
           We are a turnkey fit-out company handling complete MEP, civil, and interior works, with over 25+ years of experience and having in-house manufacturing of complete modular fixtures (wooden, metal, powder coat units, etc.).
         </p>
 
@@ -383,7 +383,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block"
@@ -403,7 +403,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-base md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               A premium showcase of our completed turnkey fit-out projects, delivered with absolute civil, MEP, and bespoke carpentry execution.
@@ -417,7 +417,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
 
       {/* ── Filter Controls ── */}
       <section id="filter-section" className="py-2.5 md:py-6 border-b border-neutral-100 bg-white sticky top-20 z-20 shadow-sm">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-8">
 
             {/* Main Sector Pills */}
@@ -463,7 +463,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
 
       {/* Projects Grid */}
       <section className="py-12 md:py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <motion.div
             layout
             className="grid grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-8 gap-y-8 lg:gap-12"
@@ -542,7 +542,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
 
       {/* Stats Banner */}
       <section className="py-8 md:py-16 bg-neutral-50 border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12">
+        <div className="w-full px-4 sm:px-6 md:px-12">
           <div className="grid grid-cols-4 gap-1 sm:gap-4 md:gap-12">
             {[
               { label: "Retail Spaces", value: 85 },

@@ -6,7 +6,7 @@ import React from 'react';
 const AboutSummary = () => {
   return (
     <section className="py-12 md:py-16 bg-brand-dark text-white overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

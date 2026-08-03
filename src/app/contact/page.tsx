@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold hero-eyebrow mb-4 block text-center"
@@ -60,7 +60,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-sm md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Contact Metro Retail for office and showroom fitouts.
@@ -71,14 +71,14 @@ export default function ContactPage() {
 
       {/* Contact Content */}
       <section className="pt-10 pb-20 md:py-20 lg:py-16 xl:py-32 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-24">
 
             {/* Form Column */}
             <div className="lg:col-span-7">
               <div className="bg-brand-dark p-6 md:p-8 xl:p-12">
                 <h2
-                  className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-serif text-white mb-6 md:mb-10 xl:mb-16 uppercase tracking-tight text-center md:text-left"
+                  className="text-xl sm:text-2xl md:text-4xl xl:text-5xl font-serif text-white mb-6 md:mb-10 xl:mb-16 uppercase tracking-tight text-center md:text-left"
                   style={{ fontFamily: "var(--font-cinzel), serif" }}
                 >
                   Send Us a Message

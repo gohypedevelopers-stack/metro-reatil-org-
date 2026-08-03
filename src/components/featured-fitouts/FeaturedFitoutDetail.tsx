@@ -170,7 +170,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
     >
       {/* Desktop-only breadcrumb bar */}
       <section className="hidden lg:flex border-b border-neutral-100 bg-neutral-50 py-3">
-        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-6 md:px-12">
+        <div className="mx-auto flex w-full w-full items-center justify-between gap-6 px-6 md:px-12">
           <button
             onClick={handleBackClick}
             className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-neutral-400 transition-colors hover:text-brand-dark"
@@ -184,7 +184,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       </section>
 
       <section className="pb-8 md:pb-12">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 md:gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
+        <div className="mx-auto grid w-full grid-cols-1 gap-6 md:gap-10 px-6 md:px-12 lg:grid-cols-12 lg:items-start">
 
           {/* ── Mobile-only Title + Back Button (shows above image on mobile) ── */}
           <div className="block lg:hidden pt-4 md:pt-8 space-y-4">
@@ -304,7 +304,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       </section>
 
       <section className="bg-neutral-50/60 py-6 md:py-10">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+        <div className="mx-auto w-full px-6 md:px-12">
           <div className="mb-2 flex flex-col items-center justify-between gap-2 border-b border-neutral-200 pb-2 md:flex-row md:items-end md:text-left">
             <div className="text-center md:text-left">
               <span className="mb-1 block text-[9px] font-bold uppercase tracking-[0.35em] text-neutral-400">
@@ -387,7 +387,7 @@ const FeaturedFitoutDetail = ({ project, suggestedProjects }: FeaturedFitoutDeta
       </section>
 
       <section className="pt-4 pb-12 md:pt-8 md:pb-24">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+        <div className="mx-auto w-full px-6 md:px-12">
           <div className="mb-8 flex flex-col items-center text-center">
             <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.35em] text-brand-gold">
               Suggested Products

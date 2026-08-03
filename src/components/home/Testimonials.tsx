@@ -67,7 +67,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-12 md:py-16 bg-white relative overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="text-center mb-8 md:mb-16 relative">
           <motion.h2
             initial="hidden"
@@ -97,7 +97,7 @@ const Testimonials = () => {
 
             {/* Bottom Line: Say About Us (Gold, Italic) */}
             <div
-              className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
+              className="text-xl sm:text-2xl md:text-4xl xl:text-5xl text-brand-gold italic flex justify-center items-center flex-wrap"
               style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}
             >
               {"Say About Us".split("").map((char, i) => (

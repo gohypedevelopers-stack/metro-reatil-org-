@@ -67,7 +67,7 @@ const ServicesSlider = () => {
 
   return (
     <section id="services-slider" className="pt-4 pb-12 md:pt-4 md:pb-16 bg-white overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="text-center mb-4 md:mb-6">
           <h2 className="section-title text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
             OUR CORE <span className="text-brand-gold italic font-normal ml-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Services</span>
@@ -121,7 +121,7 @@ const ServicesSlider = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={services[activeTab].link} className="inline-flex items-center gap-2 md:gap-3 xl:gap-4 px-5 md:px-6 xl:px-8 py-2 md:py-3 bg-brand-dark text-white text-[9px] xl:text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full w-[max-content]">
+                <a href={services[activeTab].link} className="inline-flex items-center gap-2 md:gap-3 xl:gap-4 px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest bg-brand-dark text-white hover:bg-brand-gold transition-all rounded-full w-[max-content]">
                   Learn More <ArrowRight size={14} className="w-3 h-3 xl:w-4 xl:h-4" />
                 </a>
               </div>

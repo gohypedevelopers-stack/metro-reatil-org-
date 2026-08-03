@@ -31,13 +31,13 @@ const CountUp = ({ end, suffix = "", duration = 2 }: { end: number, suffix?: str
 const ManufacturingSection = () => {
   return (
     <section className="py-12 md:py-16 bg-[#f9f9f8]">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
             <h2 className="section-title text-brand-dark w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
-            <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
+            <p className="text-neutral-500 text-sm md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
               India's most trusted interior design & build and in-house manufacturing specialist. We bring complex turnkey interior solutions to life.
             </p>
             <div className="grid grid-cols-3 gap-3 md:gap-8 text-center lg:text-left w-full">
@@ -55,7 +55,7 @@ const ManufacturingSection = () => {
               </div>
             </div>
             <div className="mt-4 md:mt-3 self-center lg:self-auto">
-              <a href="/manufacturing" className="inline-flex items-center gap-4 px-8 py-3 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold transition-all rounded-full">
+              <a href="/manufacturing" className="inline-flex items-center gap-4 px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest bg-brand-dark text-white hover:bg-brand-gold transition-all rounded-full">
                 Learn More
               </a>
             </div>

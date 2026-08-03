@@ -9,7 +9,7 @@ export default function TermsAndConditions() {
   return (
     <div className="pt-32 pb-24 min-h-screen bg-brand-dark text-white">
       <div className="max-w-[800px] mx-auto px-6 md:px-12">
-        <h1 className="text-4xl md:text-5xl font-light mb-12">Terms & Conditions</h1>
+        <h1 className="text-2xl md:text-5xl font-light mb-12">Terms & Conditions</h1>
         
         <div className="space-y-12 text-neutral-300 font-light leading-relaxed">
           <section>

@@ -92,7 +92,7 @@ export default function DesignStylesPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-4 block text-center"
@@ -100,7 +100,7 @@ export default function DesignStylesPage() {
               Styles
             </span>
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-serif text-white mb-4 uppercase tracking-tight leading-[1.1]"
               style={{ fontFamily: 'var(--font-cinzel), serif' }}
             >
               Discover Your Perfect{" "}
@@ -123,7 +123,7 @@ export default function DesignStylesPage() {
 
       {/* Intro Section */}
       <section className="pt-20 md:pt-24 pb-4 md:pb-8 bg-white overflow-hidden border-b border-neutral-100">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 max-w-[1800px]">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-8 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-12 md:gap-24 items-center">
 
             {/* Image Section (Desktop Only) */}
@@ -171,7 +171,7 @@ export default function DesignStylesPage() {
 
       {/* Design Styles Grid */}
       <section className="pt-8 md:pt-12 pb-24 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="mb-8 md:mb-16 text-center">
             <h2 className="mobile-heading-balance text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-serif text-brand-dark uppercase tracking-tight" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Interior Design Styles <span className="text-brand-gold italic text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>We Execute</span>

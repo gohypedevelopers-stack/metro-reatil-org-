@@ -39,7 +39,7 @@ export default async function CareersPage() {
         <div className="hero-overlay" />
 
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <span
               className="text-brand-gold hero-eyebrow mb-4 block text-center"
@@ -59,7 +59,7 @@ export default async function CareersPage() {
               </span>
             </h1>
             <p
-              className="text-neutral-300 text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
+              className="hidden md:block text-neutral-300 text-sm md:text-lg font-light max-w-2xl leading-relaxed mx-auto text-center"
               style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}
             >
               Future openings at Metro Retail Solutions will be posted soon. Explore the teams behind our premium fitout, joinery and interior design work.
@@ -73,7 +73,7 @@ export default async function CareersPage() {
 
       {/* Open Roles */}
       <section className="py-12 md:py-24 bg-neutral-50 text-brand-dark" id="open-positions">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="mb-8 md:mb-16 text-center">
             <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Careers Will Be <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Posted Soon</span>
@@ -118,7 +118,7 @@ export default async function CareersPage() {
 
       {/* Hiring Process */}
       <section className="py-12 md:py-24 bg-white text-brand-dark">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="mb-8 md:mb-16 text-center">
             <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Our Hiring <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Process</span>
@@ -146,7 +146,7 @@ export default async function CareersPage() {
 
       {/* Speculative Application */}
       <section className="py-12 md:py-24 bg-brand-dark text-white" id="apply">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-16">
             <div className="w-full lg:w-1/2 lg:sticky lg:top-32">
               <h2 className="section-title text-white mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -197,7 +197,7 @@ export default async function CareersPage() {
 
       {/* CTA Section */}
       <section className="py-12 md:py-24 bg-neutral-50 border-t border-neutral-100 text-center">
-        <div className="container mx-auto px-6">
+        <div className="w-full px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="section-title text-brand-dark mb-6" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               Ready to Discuss <span className="text-brand-gold italic font-normal ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>a Project?</span>

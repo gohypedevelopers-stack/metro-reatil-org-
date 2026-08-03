@@ -3,7 +3,7 @@ import React from 'react';
 const AboutSection = () => {
   return (
     <section id="about" className="py-12 md:py-16 bg-[#FAFAFA] text-brand-dark relative overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <div className="w-full px-6 md:px-12">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Content Column */}

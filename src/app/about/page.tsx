@@ -137,7 +137,7 @@ export default function AboutPage() {
 
         </motion.div>
 
-        <div className="relative max-w-[1600px] mx-auto px-6 md:px-12 z-10 w-full">
+        <div className="relative w-full px-6 md:px-12 z-10 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
       {/* Philosophy Section - Sharpened */}
       <section className="py-12 md:py-20 lg:py-24 border-b border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
             <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left">
               <h2 className="mobile-heading-balance text-center lg:text-left text-[22px] md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-serif text-brand-dark mb-4 md:mb-12 uppercase tracking-tighter xs:tracking-tight md:tracking-normal" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
@@ -234,7 +234,7 @@ export default function AboutPage() {
 
       {/* Capabilities Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-neutral-50">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="section-title 2xl:text-6xl text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               EVERYTHING <span className="text-brand-gold italic ml-2 text-[18px] md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Under One Roof</span>
@@ -258,7 +258,7 @@ export default function AboutPage() {
 
       {/* Professionals Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-white border-t border-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="section-title 2xl:text-6xl text-brand-dark" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR <span className="text-brand-gold italic ml-2 text-[18px] md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Professionals</span>

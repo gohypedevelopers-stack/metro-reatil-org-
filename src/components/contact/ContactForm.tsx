@@ -390,7 +390,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="group flex items-center justify-center gap-4 px-8 py-3 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-brand-dark transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed w-full sm:w-auto"
+          className="group flex items-center justify-center gap-4 px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest bg-brand-gold text-white hover:bg-white hover:text-brand-dark transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed w-full sm:w-auto"
         >
           {status === "loading" ? (
             <>

@@ -253,7 +253,7 @@ export default function CareerForm() {
         <h3 className="text-2xl font-serif text-white uppercase tracking-wider mb-4" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
           Application Submitted
         </h3>
-        <p className="text-neutral-300 text-sm leading-relaxed max-w-sm mb-8">
+        <p className="hidden md:block text-neutral-300 text-sm leading-relaxed max-w-sm mb-8">
           Thank you for applying! Our HR and department heads will review your profile. If your skills match our requirements, we'll get in touch soon.
         </p>
         <button
