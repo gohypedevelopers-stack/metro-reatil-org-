@@ -18,7 +18,7 @@ export default async function BlogPage() {
       {/* Hero Section */}
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <Image
-          src="/wide_mall_hero.png"
+          src="/hero/fine_dining_restaurant_1785750888145.png"
           alt="Metro Retail Solutions Blog"
           fill
           className="object-cover object-center"

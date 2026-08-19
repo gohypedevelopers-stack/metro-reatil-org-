@@ -229,7 +229,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <Image
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600"
+          src="/hero/modern_office_space_1785750868176.png"
           alt="Hero Background"
           fill
           className="object-cover object-center"

@@ -376,7 +376,7 @@ export default function PortfolioClient({ initialProjects }: { initialProjects: 
             opacity: { duration: 1.8, ease: "easeOut" },
             scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
           }}
-          src="/wide_mall_hero.png"
+          src="/hero/contemporary_commercial_fitout_1785750899227.png"
           alt="Metro Portfolio"
           className="absolute inset-0 w-full h-full object-cover"
         />

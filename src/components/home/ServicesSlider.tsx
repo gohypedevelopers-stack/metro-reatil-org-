@@ -106,18 +106,18 @@ const ServicesSlider = () => {
               <div className="lg:col-span-7 aspect-video md:aspect-[16/10] overflow-hidden rounded-sm shadow-lg md:shadow-2xl">
                 <img src={services[activeTab].img} alt={services[activeTab].title} className="w-full h-full object-cover" />
               </div>
-              <div className="lg:col-span-5 lg:pl-6 xl:pl-10 mt-6 md:mt-0">
+              <div className="lg:col-span-5 lg:pl-6 xl:pl-10 mt-6 md:mt-0 flex flex-col items-center text-center lg:items-start lg:text-left">
                 <h3 className="section-subtitle text-brand-dark mb-3 md:mb-6 xl:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
                   {services[activeTab].title}
                 </h3>
                 <p className="text-neutral-500 text-sm xl:text-base font-light leading-relaxed mb-6 md:mb-8 xl:mb-12">
                   {services[activeTab].desc}
                 </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 xl:gap-6 mb-8 md:mb-8 xl:mb-12">
+                <ul className="grid grid-cols-2 gap-3 md:gap-4 xl:gap-6 mb-8 md:mb-8 xl:mb-12 w-full text-left">
                   {services[activeTab].features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-2 xl:gap-3 text-brand-dark text-[10px] xl:text-xs font-bold uppercase tracking-widest">
-                      <CheckCircle size={14} className="text-brand-gold w-3 h-3 xl:w-4 xl:h-4 shrink-0" />
-                      {f}
+                    <li key={j} className="flex items-start justify-start gap-2 xl:gap-3 text-brand-dark text-[8px] sm:text-[10px] xl:text-xs font-bold uppercase tracking-widest w-full">
+                      <CheckCircle size={14} className="text-brand-gold w-3 h-3 xl:w-4 xl:h-4 shrink-0 mt-[1px] md:mt-0" />
+                      <span className="text-left">{f}</span>
                     </li>
                   ))}
                 </ul>

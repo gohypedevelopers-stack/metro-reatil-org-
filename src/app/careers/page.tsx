@@ -30,7 +30,7 @@ export default async function CareersPage() {
       {/* Hero Section */}
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center justify-center bg-brand-dark">
         <Image
-          src="/high_res_mall_hero.png"
+          src="/hero/retail_mall_showroom_1785750848833.png"
           alt="Metro Retail Solutions Team"
           fill
           className="object-cover object-center"

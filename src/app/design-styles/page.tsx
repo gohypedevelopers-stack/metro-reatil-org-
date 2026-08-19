@@ -83,7 +83,7 @@ export default function DesignStylesPage() {
       {/* Hero Section */}
       <section className="relative h-[35vh] md:h-[60vh] min-h-[300px] md:min-h-[440px] overflow-hidden flex items-center bg-brand-dark">
         <Image
-          src="/wide_mall_hero.png"
+          src="/hero/luxury_fashion_boutique_1785750858524.png"
           alt="Interior Design Styles"
           fill
           className="object-cover object-center"

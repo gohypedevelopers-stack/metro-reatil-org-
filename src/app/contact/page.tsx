@@ -169,7 +169,7 @@ export default function ContactPage() {
       {/* Map Section with Floating Address Card */}
       <section className="relative h-[450px] md:h-[550px] w-full border-t border-neutral-200">
         <iframe
-          src="https://maps.google.com/maps?q=F-1,%20SITE-5%20KASNA,%20Greater%20Noida,%20Uttar%20Pradesh%20201312&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          src="/hero/minimalist_jewelry_store_1785750921653.png"
           width="100%"
           height="100%"
           style={{ border: 0 }}

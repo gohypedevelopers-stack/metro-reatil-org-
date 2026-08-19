@@ -61,7 +61,7 @@ const VerticalSlider = () => {
     <div className="flex flex-col h-full w-full gap-6">
 
       {/* Animated card */}
-      <div className="flex-1 overflow-hidden" style={{ minHeight: '320px' }}>
+      <div className="w-full aspect-video md:aspect-[16/10] overflow-hidden relative shadow-lg md:shadow-2xl rounded-sm">
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div
             key={active}
@@ -71,39 +71,38 @@ const VerticalSlider = () => {
             animate="center"
             exit="exit"
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="h-full rounded-2xl p-10 flex flex-col justify-between"
+            className="absolute inset-0 w-full h-full p-8 md:p-12 xl:p-16 flex flex-col justify-between"
             style={{
               backgroundColor: '#2A1E17',
               border: '1px solid rgba(232,160,32,0.2)',
-              minHeight: '320px',
             }}
           >
             {/* top: number + icon */}
             <div className="flex items-start justify-between">
               <span
-                className="text-5xl font-serif leading-none select-none"
+                className="text-5xl md:text-7xl font-serif leading-none select-none"
                 style={{ color: 'rgba(232,160,32,0.15)', fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {card.num}
               </span>
               <div
-                className="p-3 rounded-full"
+                className="p-3 md:p-4 rounded-full"
                 style={{ backgroundColor: 'rgba(232,160,32,0.1)', boxShadow: '0 0 0 1px rgba(232,160,32,0.25)' }}
               >
-                {card.icon}
+                {React.cloneElement(card.icon as React.ReactElement, { className: 'w-8 h-8 md:w-12 md:h-12 xl:w-14 xl:h-14' })}
               </div>
             </div>
 
             {/* bottom: divider + title + desc */}
             <div>
-              <div className="w-10 h-[1px] mb-5" style={{ backgroundColor: '#E8A020' }} />
+              <div className="w-12 h-[2px] mb-5 xl:mb-8" style={{ backgroundColor: '#E8A020' }} />
               <h3
-                className="text-xl uppercase tracking-widest mb-4 font-serif"
+                className="text-2xl xl:text-3xl uppercase tracking-widest mb-4 xl:mb-6 font-serif"
                 style={{ color: '#ffffff', fontFamily: 'var(--font-cinzel), serif' }}
               >
                 {card.title}
               </h3>
-              <p className="text-sm font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              <p className="text-sm xl:text-base font-light leading-relaxed max-w-xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {card.desc}
               </p>
             </div>
@@ -112,7 +111,7 @@ const VerticalSlider = () => {
       </div>
 
       {/* Bottom controls */}
-      <div className="flex items-center justify-between mt-2 px-2">
+      <div className="flex items-center justify-between mt-4 px-2">
         <button
           onClick={() => go(active - 1, -1)}
           className="flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300 hover:scale-110"
@@ -122,7 +121,7 @@ const VerticalSlider = () => {
           <ChevronLeft size={18} />
         </button>
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-4">
           {expertise.map((e, i) => (
             <button
               key={i}
@@ -133,8 +132,8 @@ const VerticalSlider = () => {
               <div
                 className="rounded-full transition-all duration-500"
                 style={{
-                  height: '8px',
-                  width: i === active ? '32px' : '8px',
+                  height: '6px',
+                  width: i === active ? '32px' : '6px',
                   backgroundColor: i === active ? '#E8A020' : 'rgba(232,160,32,0.25)',
                 }}
               />
@@ -255,50 +254,39 @@ const ExpertiseSection = () => {
         {/* ── Desktop / Laptop: split layout ── */}
         <div className="hidden md:grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
-          {/* Left: heading block */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
-            <h2 className="section-title text-brand-dark mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+          {/* Left: vertical slider */}
+          <div className="lg:col-span-7 w-full aspect-video md:aspect-[16/10]">
+            <VerticalSlider />
+          </div>
+
+          {/* Right: heading block */}
+          <div className="lg:col-span-5 lg:pl-6 xl:pl-10 flex flex-col justify-center items-start text-left">
+            <h2 className="section-title text-brand-dark w-full mb-6 md:mb-8 text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR CORE <br />
-              <span
-                className="block mt-2"
-                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
-              >
-                <em>Technical Expertise</em>
-              </span>
+              <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
             </h2>
-            <p className="text-sm md:text-xl font-light leading-relaxed text-neutral-500 max-w-md" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
+            <p className="text-neutral-500 text-sm xl:text-base font-light leading-relaxed max-w-md text-left">
               Over 25 years of fitout mastery, fused with in-house manufacturing and end-to-end project management — delivered by a single elite team.
             </p>
 
-            {/* progress bar */}
-            <div className="mt-10 space-y-3">
+            {/* pointers */}
+            <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 xl:gap-6 w-full text-left justify-items-start">
               {expertise.map((e, i) => (
-                <div key={i} className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold"
-                  style={{ color: '#2A1E17', opacity: 0.35 }}>
-                  <span>{e.num}</span>
-                  <span>{e.title}</span>
-                </div>
+                <li key={i} className="flex items-center justify-start gap-2 xl:gap-3 text-brand-dark text-[10px] xl:text-xs font-bold uppercase tracking-widest w-full">
+                  <CheckCircle size={14} className="text-brand-gold w-3 h-3 xl:w-4 xl:h-4 shrink-0" />
+                  {e.title}
+                </li>
               ))}
-            </div>
-          </div>
-
-          {/* Right: vertical slider */}
-          <div className="lg:col-span-7" style={{ minHeight: '420px' }}>
-            <VerticalSlider />
+            </ul>
           </div>
         </div>
 
         {/* ── Mobile: heading + horizontal slider ── */}
         <div className="block md:hidden">
           <div className="text-center mb-6">
-            <h2 className="section-title text-brand-dark mb-4" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+            <h2 className="section-title text-brand-dark w-full mb-6 md:mb-8" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
               OUR CORE <br />
-              <span
-                className="block mt-1 whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none', color: '#E8A020' }}
-              >
-                <em>Technical Expertise</em>
-              </span>
+              <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Technical Expertise</span>
             </h2>
           </div>
           <MobileSlider />

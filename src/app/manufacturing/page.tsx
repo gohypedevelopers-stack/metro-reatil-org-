@@ -48,7 +48,7 @@ const ManufacturingPage = () => {
             opacity: { duration: 1.8, ease: "easeOut" },
             scale: { duration: 8, ease: [0.25, 1, 0.5, 1] }
           }}
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600"
+          src="/hero/premium_cosmetic_store_1785750909676.png"
           alt="In-House Manufacturing"
           className="absolute inset-0 w-full h-full object-cover"
         />
