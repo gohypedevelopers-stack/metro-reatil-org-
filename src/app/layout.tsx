@@ -23,6 +23,7 @@ import CustomCursor from "../components/CustomCursor";
 import ScrollProgress from "../components/ScrollProgress";
 import GlobalSpinner from "../components/GlobalSpinner";
 import { Suspense } from "react";
+import { Spinner } from "../components/ui/spinner";
 
 export const metadata: Metadata = {
   title: "Metro Retail Solutions | Premium Interior Design & Fit-out",
@@ -39,7 +40,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} antialiased`} suppressHydrationWarning>
         <Suspense fallback={
           <div className="fixed inset-0 z-[99999] bg-white flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-[#C89B3C] border-t-transparent rounded-full animate-spin"></div>
+            <Spinner className="w-16 h-16 text-brand-gold" />
           </div>
         }>
           <GlobalSpinner />
