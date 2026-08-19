@@ -61,7 +61,7 @@ const VerticalSlider = () => {
     <div className="flex flex-col h-full w-full gap-6">
 
       {/* Animated card */}
-      <div className="w-full aspect-video md:aspect-[16/10] overflow-hidden relative shadow-lg md:shadow-2xl rounded-sm">
+      <div className="w-full h-[380px] md:h-[480px] lg:h-[520px] overflow-hidden relative shadow-lg md:shadow-2xl rounded-sm">
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div
             key={active}
@@ -89,7 +89,7 @@ const VerticalSlider = () => {
                 className="p-3 md:p-4 rounded-full"
                 style={{ backgroundColor: 'rgba(232,160,32,0.1)', boxShadow: '0 0 0 1px rgba(232,160,32,0.25)' }}
               >
-                {React.cloneElement(card.icon as React.ReactElement, { className: 'w-8 h-8 md:w-12 md:h-12 xl:w-14 xl:h-14' })}
+                {React.cloneElement(card.icon as React.ReactElement<any>, { className: 'w-8 h-8 md:w-12 md:h-12 xl:w-14 xl:h-14' })}
               </div>
             </div>
 
@@ -255,7 +255,7 @@ const ExpertiseSection = () => {
         <div className="hidden md:grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Left: vertical slider */}
-          <div className="lg:col-span-7 w-full aspect-video md:aspect-[16/10]">
+          <div className="lg:col-span-7 w-full h-[380px] md:h-[480px] lg:h-[520px]">
             <VerticalSlider />
           </div>
 

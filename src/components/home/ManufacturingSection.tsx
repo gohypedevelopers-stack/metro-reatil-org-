@@ -33,14 +33,33 @@ const ManufacturingSection = () => {
     <section className="py-12 md:py-16 bg-[#f9f9f8]">
       <div className="w-full px-6 md:px-12">
         <div className="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
-          <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
-            <h2 className="section-title text-brand-dark w-full" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
-              VISIT OUR IN-HOUSE <br /> <span className="text-brand-gold italic block mt-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
+          {/* Left: Images */}
+          <div className="lg:col-span-6 grid grid-cols-2 gap-3 md:gap-6 mt-8 md:mt-0">
+            <div className="space-y-3 md:space-y-6">
+              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[4/3] object-cover rounded-2xl" />
+            </div>
+            <div className="space-y-3 md:space-y-6">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[4/3] object-cover rounded-2xl" />
+              <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+            </div>
+          </div>
+
+          {/* Right: Content */}
+          <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left space-y-4 md:space-y-6">
+            <h2 className="section-title text-brand-dark w-full lg:text-left" style={{ fontFamily: 'var(--font-cinzel), serif' }}>
+              VISIT OUR IN-HOUSE <br className="block lg:hidden" />
+              <span className="text-brand-gold italic font-normal lg:ml-2 mt-2 lg:mt-0 inline-block lg:inline whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Manufacturing Unit</span>
             </h2>
-            <p className="text-neutral-500 text-sm md:text-xl font-light leading-relaxed max-w-xl text-center lg:text-left" style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'italic' }}>
-              India's most trusted interior design & build and in-house manufacturing specialist. We bring complex turnkey interior solutions to life.
-            </p>
-            <div className="grid grid-cols-3 gap-3 md:gap-8 text-center lg:text-left w-full">
+            <div className="text-neutral-500 text-sm xl:text-base font-light leading-relaxed max-w-xl text-center lg:text-left space-y-4">
+              <p>
+                Metro Retail has 25+ years of experience, a 9K square feet factory size, and 100+ master artisans, guaranteeing delivery within 45 days.
+              </p>
+              <p>
+                Having our own manufacturing facility allows us to maintain strict quality control, optimize production timelines, and deliver bespoke carpentry that perfectly matches the design intent. We eliminate third-party dependencies to ensure your project is completed flawlessly.
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-3 md:gap-8 text-center lg:text-left w-full mt-4">
               <div>
                 <span className="text-2xl md:text-4xl font-serif text-brand-gold mb-2 block"><CountUp end={25} suffix="+" /></span>
                 <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-dark">Years of Experience</span>
@@ -54,20 +73,10 @@ const ManufacturingSection = () => {
                 <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-dark">Master Artisans</span>
               </div>
             </div>
-            <div className="mt-4 md:mt-3 self-center lg:self-auto">
+            <div className="mt-4 md:mt-3 self-center lg:self-start">
               <a href="/manufacturing" className="inline-flex items-center gap-4 px-4 py-2 sm:px-6 md:px-8 sm:py-2.5 md:py-3 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest bg-brand-dark text-white hover:bg-brand-gold transition-all rounded-full">
                 Learn More
               </a>
-            </div>
-          </div>
-          <div className="lg:col-span-6 grid grid-cols-2 gap-2 md:gap-6 mt-8 md:mt-0">
-            <div className="space-y-2 md:space-y-6">
-              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[3/4] object-cover rounded-sm" />
-              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-square object-cover rounded-sm" />
-            </div>
-            <div className="pt-0 md:pt-12 space-y-2 md:space-y-6">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-square object-cover rounded-sm" />
-              <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop" className="w-full aspect-[3/4] object-cover rounded-sm" />
             </div>
           </div>
         </div>
