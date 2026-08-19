@@ -292,7 +292,7 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-white/95 backdrop-blur-md z-[150] lg:hidden"
+            className="fixed inset-0 bg-brand-dark/95 backdrop-blur-md z-[150] lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <motion.div
@@ -300,12 +300,12 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: "tween", duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute right-0 top-0 w-[min(90vw,420px)] h-full bg-white p-6 sm:p-10 md:p-12 flex flex-col overflow-y-auto border-l border-neutral-100"
+              className="absolute right-0 top-0 w-[min(90vw,420px)] h-full bg-brand-dark p-6 sm:p-10 md:p-12 flex flex-col overflow-y-auto border-l border-neutral-800"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center gap-4 mb-12 sm:mb-20 md:mb-24">
-                <img src="/logo.png" alt="Metro Retail" className="h-[30px] w-auto" />
-                <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark text-[9px] font-bold uppercase tracking-widest border border-neutral-200 px-5 py-3 hover:bg-neutral-50 transition-colors">Close</button>
+                <img src="/logo.png" alt="Metro Retail" className="h-[30px] w-auto brightness-0 invert" />
+                <button onClick={() => setIsMobileMenuOpen(false)} className="text-white text-[9px] font-bold uppercase tracking-widest border border-neutral-700 px-5 py-3 hover:bg-neutral-800 transition-colors">Close</button>
               </div>
 
               <div className="flex flex-col">
@@ -321,16 +321,16 @@ export const Navbar = () => {
                         key={item.name}
                         href={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors flex items-center justify-between gap-4 py-4 border-b border-neutral-100"
+                        className="text-[11px] sm:text-[12px] font-bold tracking-[0.2em] uppercase text-white hover:text-brand-gold transition-colors flex items-center justify-between gap-4 py-5 border-b border-neutral-800"
                       >
                         {item.name}
-                        <ChevronRight size={18} className="text-neutral-300" />
+                        <ChevronRight size={16} className="text-neutral-600" />
                       </a>
                     );
                   }
 
                   return (
-                    <div key={item.name} className="border-b border-neutral-100">
+                    <div key={item.name} className="border-b border-neutral-800">
                       {/* Parent row */}
                       <div className="flex items-center justify-between">
                         <a
@@ -343,18 +343,18 @@ export const Navbar = () => {
                               setIsMobileMenuOpen(false);
                             }
                           }}
-                          className="text-2xl sm:text-3xl font-serif text-brand-dark hover:text-brand-gold transition-colors py-4 flex-1"
+                          className="text-[11px] sm:text-[12px] font-bold tracking-[0.2em] uppercase text-white hover:text-brand-gold transition-colors py-5 flex-1"
                         >
                           {item.name}
                         </a>
                         <button
                           onClick={() => toggleMobileMenu(item.name)}
-                          className="p-3 text-brand-dark hover:text-brand-gold transition-colors"
+                          className="p-3 text-white hover:text-brand-gold transition-colors"
                           aria-label={`Toggle ${item.name}`}
                         >
                           <ChevronDown
-                            size={18}
-                            className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-brand-gold' : ''}`}
+                            size={16}
+                            className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-brand-gold' : 'text-neutral-500'}`}
                           />
                         </button>
                       </div>
@@ -380,7 +380,7 @@ export const Navbar = () => {
                                       <a
                                         href={child.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-gold transition-colors"
+                                        className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-300 hover:text-brand-gold transition-colors"
                                       >
                                         {child.group}
                                       </a>
@@ -410,7 +410,7 @@ export const Navbar = () => {
                                                 key={i}
                                                 href={link.href}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className="text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-500 hover:text-brand-gold transition-colors"
+                                                className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-300 hover:text-brand-gold transition-colors"
                                               >
                                                 {link.name}
                                               </a>
@@ -431,7 +431,7 @@ export const Navbar = () => {
                                       key={i}
                                       href={link.href}
                                       onClick={() => setIsMobileMenuOpen(false)}
-                                      className="text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-500 hover:text-brand-gold transition-colors"
+                                      className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-300 hover:text-brand-gold transition-colors"
                                     >
                                       {link.name}
                                     </a>

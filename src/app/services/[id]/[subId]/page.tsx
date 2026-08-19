@@ -82,8 +82,8 @@ export default function NestedServiceDetailPage() {
                 {/* Permanent Dark Gradient Overlay for readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-100 pointer-events-none" />
 
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 pointer-events-none">
-                  <h3 className="text-[18px] lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md">
+                <div className="absolute inset-0 p-3 sm:p-4 md:p-6 flex flex-col justify-end text-white z-10 pointer-events-none">
+                  <h3 className="text-[11px] sm:text-[14px] md:text-[18px] lg:text-[17px] xl:text-lg 2xl:text-xl font-serif text-white uppercase tracking-tight drop-shadow-md leading-snug">
                     {item.title}
                   </h3>
                 </div>

@@ -200,41 +200,6 @@ export default function SubcategoryDetailPage() {
         </div>
       </section>
 
-      {/* EXECUTION PROCESS */}
-      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="w-full px-6 md:px-12">
-          <div className="text-center mb-8 md:mb-16">
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
-            <h2
-              className="mobile-heading-balance text-xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
-              style={{ fontFamily: 'var(--font-cinzel), serif' }}
-            >
-              Our Execution Process
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6">
-            {data.process.map((p, i) => (
-              <div key={i} className="relative p-3 sm:p-6 md:p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group flex flex-col justify-center min-h-[140px] sm:min-h-[200px]">
-                <div
-                  className="absolute top-2 right-2 sm:top-4 sm:right-5 text-3xl sm:text-6xl font-serif text-neutral-100 group-hover:text-brand-gold/10 transition-colors select-none"
-                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
-                >
-                  {i + 1}
-                </div>
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  <h3 className="text-[9px] sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-1.5 sm:mb-3 flex items-center justify-center gap-1 sm:gap-2">
-                    <CheckCircle2 size={12} className="text-brand-gold shrink-0 sm:w-3.5 sm:h-3.5 w-[10px] h-[10px]" />
-                    <span>{p.step}</span>
-                  </h3>
-                  <p className="text-neutral-500 text-[9px] sm:text-sm leading-snug sm:leading-relaxed font-light">{p.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* GALLERY */}
       <section className="py-12 md:py-28 bg-neutral-900">
         <div className="w-full px-6 md:px-12">
@@ -251,8 +216,8 @@ export default function SubcategoryDetailPage() {
             </p>
           </div>
 
-          <div className="overflow-hidden md:overflow-visible" ref={emblaRef}>
-            <div className="flex md:grid -ml-4 md:ml-0 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+          <div>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
               {data.gallery.map((item, i) => {
                 const isObject = typeof item === 'object';
                 const img = isObject ? item.img : item;
@@ -263,7 +228,7 @@ export default function SubcategoryDetailPage() {
                 const buttonText = isObject && item.buttonText ? item.buttonText : 'VIEW DETAILS →';
 
                 return (
-                  <div key={i} className="flex-[0_0_85%] min-w-0 pl-4 md:pl-0 md:flex-none">
+                  <div key={i} className="min-w-0">
                     {item.slug ? (
                       <Link href={`/services/${id}/${item.slug}`} className="relative aspect-[4/5] overflow-hidden group border border-neutral-800 block cursor-pointer">
                         <img
@@ -306,7 +271,7 @@ export default function SubcategoryDetailPage() {
 
                           <div className="mt-1 sm:mt-2 w-full flex justify-start">
                             <span className="bg-[#111] px-3 py-2 sm:px-5 sm:py-3 text-[8px] sm:text-[9px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-1 sm:gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                              <span className="md:hidden line-clamp-1">{title}</span>
+                              <span className="md:hidden">{title}</span>
                               <span className="hidden md:inline">
                                 {buttonText.replace(' →', '').replace('→', '')}
                                 {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
@@ -316,7 +281,7 @@ export default function SubcategoryDetailPage() {
                         </div>
                       </Link>
                     ) : (
-                      <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" key={i} className="relative block aspect-[4/5] overflow-hidden group border border-neutral-800 cursor-pointer">
+                      <a href="https://wa.me/918800607967" target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/5] overflow-hidden group border border-neutral-800 cursor-pointer">
                         <img
                           src={img}
                           alt={title}
@@ -357,7 +322,7 @@ export default function SubcategoryDetailPage() {
 
                           <div className="mt-1 sm:mt-2 w-full flex justify-start">
                             <span className="bg-[#111] px-3 py-2 sm:px-5 sm:py-3 text-[8px] sm:text-[9px] md:text-xs font-bold uppercase tracking-widest transition-colors border border-white/10 flex items-center gap-1 sm:gap-2 group-hover:bg-brand-dark group-hover:text-brand-gold">
-                              <span className="md:hidden line-clamp-1">{title}</span>
+                              <span className="md:hidden">{title}</span>
                               <span className="hidden md:inline">
                                 {buttonText.replace(' →', '').replace('→', '')}
                                 {buttonText.includes('→') && <span className="hidden md:inline">→</span>}
@@ -372,19 +337,39 @@ export default function SubcategoryDetailPage() {
               })}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Mobile Carousel Dots */}
-          <div className="flex md:hidden justify-center items-center gap-1.5 sm:gap-2 mt-6">
-            {scrollSnaps.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => scrollTo(index)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex
-                    ? 'bg-brand-gold w-4 sm:w-5'
-                    : 'bg-neutral-300 w-1.5 hover:bg-brand-gold/70'
-                  }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+      {/* EXECUTION PROCESS */}
+      <section className="py-12 md:py-28 bg-neutral-50 border-t border-neutral-100">
+        <div className="w-full px-6 md:px-12">
+          <div className="text-center mb-8 md:mb-16">
+            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Methodology</span>
+            <h2
+              className="mobile-heading-balance text-xl sm:text-3xl md:text-4xl font-serif text-brand-dark uppercase tracking-tight break-words hyphens-auto"
+              style={{ fontFamily: 'var(--font-cinzel), serif' }}
+            >
+              Our Execution Process
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6">
+            {data.process.map((p, i) => (
+              <div key={i} className="relative p-3 sm:p-6 md:p-8 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-500 group flex flex-col justify-center min-h-[140px] sm:min-h-[200px]">
+                <div
+                  className="absolute top-2 right-2 sm:top-4 sm:right-5 text-3xl sm:text-6xl font-serif text-neutral-100 group-hover:text-brand-gold/10 transition-colors select-none"
+                  style={{ fontFamily: 'var(--font-cinzel), serif' }}
+                >
+                  {i + 1}
+                </div>
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <h3 className="text-[9px] sm:text-sm font-bold text-brand-dark uppercase tracking-wider sm:tracking-widest mb-1.5 sm:mb-3 flex items-center justify-center gap-1 sm:gap-2">
+                    <CheckCircle2 size={12} className="text-brand-gold shrink-0 sm:w-3.5 sm:h-3.5 w-[10px] h-[10px]" />
+                    <span>{p.step}</span>
+                  </h3>
+                  <p className="text-neutral-500 text-[9px] sm:text-sm leading-snug sm:leading-relaxed font-light">{p.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
