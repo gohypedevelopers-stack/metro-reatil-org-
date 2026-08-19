@@ -111,7 +111,7 @@ const FullServicesSection = ({
   const services = showTabs ? RECOMMENDED_SERVICES_MAP[activeTab] : defaultServices;
 
   return (
-    <section className="pt-8 pb-0 md:pt-10 md:pb-0 bg-white border-b border-neutral-100 relative overflow-hidden">
+    <section className="pt-8 pb-12 md:pt-10 md:pb-20 bg-white border-b border-neutral-100 relative overflow-hidden">
       <div className="w-full px-6 md:px-12">
         <div className="flex flex-col items-center text-center mb-4 md:mb-6 gap-1 md:gap-2">
           <div className="flex flex-col items-center">
@@ -144,7 +144,7 @@ const FullServicesSection = ({
 
         {/* Desktop Grid */}
         {!forceCarousel && (
-          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16">
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-16 py-6 -my-6">
             {services.map((s, i) => (
               <motion.a
                 key={i}
@@ -153,7 +153,7 @@ const FullServicesSection = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
+                className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 pb-6 border border-transparent hover:border-brand-gold/30 hover:shadow-2xl hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-500"
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
@@ -204,12 +204,12 @@ const FullServicesSection = ({
             plugins={[plugin.current]}
             className="w-full"
           >
-            <CarouselContent className="py-10 -my-10">
+            <CarouselContent className="py-12 -my-12">
               {services.map((s, i) => (
                 <CarouselItem key={i} className={`pl-6 ${forceCarousel ? 'basis-full sm:basis-1/2 md:basis-1/3' : 'basis-[85%]'}`}>
                   <a
                     href={`/services/${s.id}`}
-                    className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 border border-neutral-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
+                    className="group flex flex-col h-full bg-neutral-50/50 hover:bg-white p-4 pb-6 border border-transparent hover:border-brand-gold/30 hover:shadow-2xl hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-500"
                   >
                     {/* Image Container */}
                     <div className="relative aspect-[4/3] overflow-hidden w-full mb-6 bg-neutral-100">
