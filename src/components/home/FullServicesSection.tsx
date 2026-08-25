@@ -61,7 +61,7 @@ const FullServicesSection = ({
   const RECOMMENDED_SERVICES_MAP = {
     office: [
       { title: "Office Interior Design", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/office-interior-design" },
-      { title: "Modern Office Interior Design", image: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/modern-office-interior-design" },
+      { title: "Modern Office Interior Design", image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/modern-office-interior-design" },
       { title: "Turnkey Office Fitout", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=600", category: "OFFICE FITOUT", id: "office-fitout/turnkey-office-fitout" }
     ],
     retail: [
@@ -71,7 +71,7 @@ const FullServicesSection = ({
     ],
     commercial: [
       { title: "Commercial Interior Design", image: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/commercial-interior-design" },
-      { title: "Interior Design & Build", image: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/interior-design-build" },
+      { title: "Interior Design & Build", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/interior-design-build" },
       { title: "Turnkey Interior Solutions", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=600", category: "COMMERCIAL FITOUT", id: "commercial-contractors/turnkey-interior-solutions" }
     ]
   };
@@ -119,9 +119,9 @@ const FullServicesSection = ({
               <span>{title}</span> <span className="text-brand-gold italic inline-block whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>{subtitle}</span>
             </h2>
           </div>
-          
           {showTabs && (
-            <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 md:gap-12 mt-1 md:mt-2">
+            /* Filter Tabs */
+            <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar whitespace-nowrap gap-1.5 sm:gap-4 md:gap-8 mb-6 md:mb-10 border-b border-neutral-200 w-full pb-0.5 mt-2 md:mt-4">
               {[
                 { id: "office", label: "Office Fitout" },
                 { id: "retail", label: "Retail Fitout" },
@@ -130,11 +130,13 @@ const FullServicesSection = ({
                 <button 
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)} 
-                  className={`text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.5em] pb-4 transition-all relative ${activeTab === tab.id ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
+                  className={`shrink-0 whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider sm:tracking-widest transition-all relative ${
+                    activeTab === tab.id ? 'text-brand-gold' : 'text-neutral-400 hover:text-brand-dark'
+                  }`}
                 >
                   {tab.label}
                   {activeTab === tab.id && (
-                    <motion.div layoutId="fullServicesTab" className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-dark" />
+                    <motion.div layoutId="fullServicesTab" className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-brand-gold" />
                   )}
                 </button>
               ))}

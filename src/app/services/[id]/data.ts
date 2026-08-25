@@ -2813,7 +2813,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
       },
       {
         slug: "modern-office-interior-design",
-        img: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=800",
+        img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
         title: "Modern Office Interior Design",
         description: "Modern Office Interior Design services",
         tags: ["Modern", "Office"],
@@ -3017,7 +3017,7 @@ export const NESTED_SERVICE_DATA: Record<string, any> = {
       },
       {
         slug: "interior-design-build",
-        img: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=800",
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
         title: "Interior Design & Build",
         description: "Interior Design & Build services",
         tags: ["Design", "Build"],
@@ -3621,10 +3621,10 @@ Object.assign(NESTED_SERVICE_DATA, {
   "modern-office-interior-design": {
     title: "Ready for Modern Office Interior Design?",
     tagline: "Expert retail and office fitouts by Metro Retail!",
-    heroImage: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Modern Office Interior Design",
     contentDesc: "Modern Office Interior Design services",
-    gallery: [{ img: "https://images.unsplash.com/photo-1497211417189-d411553015ed?auto=format&fit=crop&q=80&w=800", title: "Modern Office Interior Design" }]
+    gallery: [{ img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800", title: "Modern Office Interior Design" }]
   },
   "commercial-office-design": {
     title: "Ready for Commercial Office Design?",
@@ -3781,10 +3781,10 @@ Object.assign(NESTED_SERVICE_DATA, {
   "interior-design-build": {
     title: "Ready for Interior Design & Build?",
     tagline: "Metro Retail delivers office and showroom fitouts.",
-    heroImage: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=1200",
+    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
     contentTitle: "Interior Design & Build",
     contentDesc: "Interior Design & Build services",
-    gallery: [{ img: "https://images.unsplash.com/photo-1581452715108-014fea111204?auto=format&fit=crop&q=80&w=800", title: "Interior Design & Build" }]
+    gallery: [{ img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800", title: "Interior Design & Build" }]
   },
   "turnkey-interior-solutions": {
     title: "Ready for Turnkey Interior Solutions?",

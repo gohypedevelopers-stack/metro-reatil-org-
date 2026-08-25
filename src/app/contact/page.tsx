@@ -98,25 +98,25 @@ export default function ContactPage() {
                 >
                   Contact Information
                 </h2>
-                <div className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 md:gap-x-8 gap-y-6 lg:gap-y-0 lg:space-y-6 xl:space-y-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-8 lg:gap-0 lg:space-y-8 xl:space-y-10">
                   {CONTACT_INFO.map((info, i) => {
                     const Inner = (
-                      <div className="flex items-start text-left gap-3 md:gap-4 group">
-                        <div className="w-8 h-8 md:w-11 md:h-11 bg-white border border-neutral-200 flex items-center justify-center shrink-0 group-hover:border-brand-gold group-hover:bg-brand-gold/5 transition-all duration-300">
-                          <info.icon className="text-brand-gold w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
+                      <div className="flex items-start text-left gap-3.5 sm:gap-4 group">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 bg-white border border-neutral-200 flex items-center justify-center shrink-0 group-hover:border-brand-gold group-hover:bg-brand-gold/5 transition-all duration-300 shadow-xs">
+                          <info.icon className="text-brand-gold w-4 h-4 md:w-[18px] md:h-[18px]" />
                         </div>
-                        <div>
-                          <h4 className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-brand-dark mb-1 md:mb-2">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-brand-dark mb-1 md:mb-1.5">
                             {info.title}
                           </h4>
                           {info.details.map((line, j) => (
-                            <p key={j} className="text-neutral-500 font-light text-[9px] md:text-[11px] xl:text-sm leading-relaxed">{line}</p>
+                            <p key={j} className="text-neutral-600 font-light text-xs sm:text-sm leading-relaxed">{line}</p>
                           ))}
                         </div>
                       </div>
                     );
                     return info.link ? (
-                      <a key={i} href={info.link} className="block">{Inner}</a>
+                      <a key={i} href={info.link} className="block transition-transform duration-200 hover:translate-x-1">{Inner}</a>
                     ) : (
                       <div key={i}>{Inner}</div>
                     );

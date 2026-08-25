@@ -105,17 +105,23 @@ const FeaturedFitouts = () => {
             OUR TURNKEY <span className="text-brand-gold italic whitespace-nowrap ml-2" style={{ fontFamily: 'var(--font-playfair), serif', textTransform: 'none' }}>Fitout</span>
           </h2>
 
-          <div className="flex justify-center gap-x-6 sm:gap-x-8 md:gap-12 flex-wrap">
+          {/* Filter Tabs */}
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar whitespace-nowrap gap-1.5 sm:gap-4 md:gap-8 mb-8 md:mb-12 border-b border-neutral-200 w-full pb-0.5">
             {['ALL', ...filterCategories].map((filter) => (
               <button
                 key={filter}
                 type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={`text-[7px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.5em] transition-all relative pb-2 ${activeFilter === filter ? 'text-brand-dark' : 'text-neutral-400 hover:text-brand-dark'}`}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setActiveIndex(0);
+                }}
+                className={`shrink-0 whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider sm:tracking-widest transition-all relative ${
+                  activeFilter === filter ? 'text-brand-gold' : 'text-neutral-400 hover:text-brand-dark'
+                }`}
               >
                 {filter}
                 {activeFilter === filter && (
-                  <motion.span layoutId="filterUnderline" className="absolute bottom-0 left-0 right-0 h-[1px] bg-brand-dark" />
+                  <motion.span layoutId="featuredFitoutUnderline" className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-brand-gold" />
                 )}
               </button>
             ))}
@@ -204,7 +210,7 @@ const FeaturedFitouts = () => {
                 type="button"
                 onClick={showPrevious}
                 aria-label="Previous projects"
-                className="absolute top-1/2 -left-4 sm:-left-8 -translate-y-1/2 z-30 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
+                className="hidden sm:flex absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
               >
                 <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
               </button>
@@ -212,7 +218,7 @@ const FeaturedFitouts = () => {
                 type="button"
                 onClick={showNext}
                 aria-label="Next projects"
-                className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 z-30 flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
+                className="hidden sm:flex absolute top-1/2 -right-4 md:-right-8 -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-dark shadow-xl transition-all hover:bg-brand-dark hover:text-white hover:border-brand-dark active:scale-95"
               >
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>

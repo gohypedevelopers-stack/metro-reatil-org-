@@ -175,3 +175,11 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #E8A020 #1a1209;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

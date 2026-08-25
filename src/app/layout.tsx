@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter, Playfair_Display, Cinzel, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
@@ -25,7 +24,7 @@ import GlobalSpinner from "../components/GlobalSpinner";
 import { Suspense } from "react";
 import { Spinner } from "../components/ui/spinner";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Metro Retail Solutions | Premium Interior Design & Fit-out",
   description: "Metro Retail Solutions defines the standard for high-performance interiors and retail spaces.",
 };
